@@ -1,0 +1,140 @@
+{
+	"title": "Ende - Das Erwachen",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Ich versuche es. Mit aller Kraft, allem Willen, allem Wissen, das ich gesammelt habe. Aber es reicht nicht.",
+			"next": "snd_cosmic"
+		},
+		"effect_failure": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 10.0,
+				"duration": 2.0
+			},
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Der Boden reißt auf. Nicht wie Stein reißt - wie Haut. Darunter ist Licht, aber kein Licht, das Augen sehen sollten. Es ist zu hell und zu dunkel gleichzeitig.",
+			"next": "effect_awakening"
+		},
+		"effect_awakening": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "effect_corruption"
+		},
+		"effect_corruption": {
+			"type": "effect",
+			"effect": "bg_corruption",
+			"params": {
+				"intensity": 0.8,
+				"duration": 2.0
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Das Singen wird zum Brüllen. Ein Laut jenseits von Klang, der die Luft selbst verbiegt. Die Spiralen lösen sich von den Wänden und schweben.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "effect",
+			"effect": "text_glitch",
+			"params": {
+				"intensity": 0.6,
+				"duration": 2.0
+			},
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Es wacht auf. Nicht langsam, nicht sanft. Es REISST sich aus dem Schlaf wie ein Ertrinkender an die Oberfläche. Sechshundert Jahre komprimierter Hunger entladen sich.",
+			"next": "effect_ui_break"
+		},
+		"effect_ui_break": {
+			"type": "effect",
+			"effect": "ui_degradation",
+			"params": {
+				"duration": 3.0
+			},
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "Die Kammer bricht auseinander. Die Kirche darüber. Das Dorf. Die Realität selbst bekommt Risse, durch die etwas Anderes durchschimmert.",
+			"next": "bg_corrupted"
+		},
+		"bg_corrupted": {
+			"type": "background",
+			"background": "village_corrupted",
+			"transition": "fade",
+			"next": "effect_final_glitch"
+		},
+		"effect_final_glitch": {
+			"type": "effect",
+			"effect": "sprite_distortion",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Ich stehe im Zentrum des Zusammenbruchs. Die Dorfbewohner rennen, aber wohin? Der Wald ist keine Grenze mehr - er ist Teil des Wesens geworden.",
+			"next": "narration_8"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Otto schreit Befehle, die niemand hört. Voss betet, aber seine Worte lösen sich in der Luft auf. Anna steht still und lächelt. Sie hat es kommen sehen.",
+			"next": "effect_text_corrupt"
+		},
+		"effect_text_corrupt": {
+			"type": "effect",
+			"effect": "text_glitch",
+			"params": {
+				"intensity": 0.8,
+				"duration": 3.0
+			},
+			"next": "narration_9"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Das Letzte, was ich sehe, bevor die Realität endgültig zerbricht: der Himmel oeffnet sich. Nicht wie Wolken sich teilen. Wie Augen sich oeffnen.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Es sieht mich an. Es sieht alles an. Und alles sieht zurück.",
+			"next": "effect_final"
+		},
+		"effect_final": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 3.0
+			},
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Da̷n̸n̵ ̶i̸s̵t̷ ̶n̷u̴r̶ ̵n̸o̴c̵h̵ ̸S̸i̸n̷g̵e̶n̶.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:awakening"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_failure",
+			"path": "cosmic_horror.wav"
+		}
+	}
+}

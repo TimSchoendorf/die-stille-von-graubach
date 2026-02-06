@@ -1,0 +1,17 @@
+# Godot
+.godot/
+
+# Audio backups (originals before preprocessing)
+assets/audio/backup/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Accidental NUL file
+nul

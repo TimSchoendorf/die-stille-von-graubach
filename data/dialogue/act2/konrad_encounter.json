@@ -1,0 +1,381 @@
+{
+	"title": "Akt 2 - Der Lehrer",
+	"start": "bg_village",
+	"nodes": {
+		"bg_village": {
+			"type": "background",
+			"background": "village_square",
+			"transition": "fade",
+			"next": "snd_village"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Tag vier. Auf dem Dorfplatz begegne ich Konrad zufällig - oder was sich als Zufall tarnt. Er sitzt auf dem Brunnenrand und liest.",
+			"next": "show_konrad"
+		},
+		"show_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_1"
+		},
+		"konrad_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Fräulein Brandt! Was für eine angenehme Überraschung. Setzen Sie sich doch. Ich habe frischen Kaffee - echten, nicht diesen Ersatz.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Sein Lächeln ist warm, einladend. Aber Großmutters Worte hallen nach: 'Seine Augen waren nicht seine eigenen.'",
+			"next": "check_journal_read"
+		},
+		"check_journal_read": {
+			"type": "flag_check",
+			"flag": "journal_read",
+			"value": 1,
+			"true_next": "narration_suspicious",
+			"false_next": "narration_charmed"
+		},
+		"narration_suspicious": {
+			"type": "narration",
+			"text": "Ich weiß, was Großmutter ueber ihn geschrieben hat. Das Gefäss. Ich muss vorsichtig sein.",
+			"next": "konrad_2"
+		},
+		"narration_charmed": {
+			"type": "narration",
+			"text": "Etwas an ihm zieht mich an. Er ist anders als die anderen Dorfbewohner - gebildet, offen, neugierig.",
+			"next": "konrad_2"
+		},
+		"konrad_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"text": "Ich habe ueber Ihre Großmutter nachgedacht. Margarethe war eine bemerkenswerte Frau. Wussten Sie, dass sie mich Lesen beigebracht hat?",
+			"next": "konrad_3"
+		},
+		"konrad_3": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_4"
+		},
+		"konrad_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Als ich ein Kind war, kam sie jeden Mittwoch. Hat mir vorgelesen, mir die Welt gezeigt jenseits dieser Berge. Ohne sie wäre ich nie Lehrer geworden.",
+			"next": "konrad_5"
+		},
+		"konrad_5": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_6"
+		},
+		"konrad_6": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "suspicious",
+			"text": "Sie hatte immer ein Geheimnis, Ihre Großmutter. Etwas, das sie nie teilte. Haben Sie es herausgefunden?",
+			"next": "choice_konrad_trust"
+		},
+		"choice_konrad_trust": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Ihm vertrauen und von der Tradition erzählen",
+					"set_flags": {
+						"trusted_konrad": 1,
+						"konrad_knows_plan": 1
+					},
+					"require_flags": {
+						"knows_tradition": 1
+					},
+					"next": "konrad_trusted"
+				},
+				{
+					"text": "Misstrauen: Ausweichend antworten",
+					"set_flags": {
+						"distrusted_konrad": 1
+					},
+					"next": "konrad_distrusted"
+				},
+				{
+					"text": "Ihn testen: Von den Spiralen erzählen und seine Reaktion beobachten",
+					"set_flags": {
+						"tested_konrad": 1
+					},
+					"next": "konrad_tested"
+				}
+			]
+		},
+		"konrad_trusted": {
+			"type": "narration",
+			"text": "Ich erzähle ihm alles. Von der Tradition, dem Buch, der Fütterung. Er hört zu, ohne zu unterbrechen.",
+			"next": "konrad_trusted_2"
+		},
+		"konrad_trusted_2": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_trusted_3"
+		},
+		"konrad_trusted_3": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Ich weiß es. Ich habe es immer gewusst, glaube ich. Nicht die Details, aber... das Gefühl. Dass etwas nicht stimmt in diesem Dorf. Dass ich etwas nicht stimme.",
+			"next": "konrad_trusted_4"
+		},
+		"konrad_trusted_4": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.2
+			},
+			"next": "konrad_trusted_5"
+		},
+		"konrad_trusted_5": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Manchmal träume ich Dinge, die nicht meine Träume sind. Ich sehe... tiefer. Älter. Als wäre ich nur eine Hülle.",
+			"next": "konrad_trusted_6"
+		},
+		"konrad_trusted_6": {
+			"type": "narration",
+			"text": "Er sagt es so ruhig, so nüchtert. Als rede er ueber das Wetter.",
+			"next": "konrad_converge"
+		},
+		"konrad_distrusted": {
+			"type": "narration",
+			"text": "'Nichts Besonderes', sage ich. 'Alte Briefe, Rezepte, Erinnerungen.' Die Lüge schmeckt bitter.",
+			"next": "konrad_distrusted_2"
+		},
+		"konrad_distrusted_2": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "suspicious",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_distrusted_3"
+		},
+		"konrad_distrusted_3": {
+			"type": "narration",
+			"text": "Er lächelt, aber das Lächeln erreicht seine Augen nicht. Für einen Moment - nur einen Moment - scheint etwas hinter seinen Pupillen zu gleiten. Etwas Altes.",
+			"next": "effect_konrad_eyes"
+		},
+		"effect_konrad_eyes": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.15
+			},
+			"next": "konrad_distrusted_4"
+		},
+		"konrad_distrusted_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Natürlich. Nur Erinnerungen. Graubach ist schließlich ein ganz normales Dorf.",
+			"next": "konrad_converge"
+		},
+		"konrad_tested": {
+			"type": "narration",
+			"text": "Ich erwähne beiläufig die Spiralen in der Kirche. 'Seltsame Muster', sage ich. 'Kennen Sie die?'",
+			"next": "konrad_tested_2"
+		},
+		"konrad_tested_2": {
+			"type": "narration",
+			"text": "Seine Hand zuckt. Unwillkürlich greift er sich ans Handgelenk - dort, wo ich letztens die schwachen Spiralenmuster auf seiner Haut gesehen habe.",
+			"next": "effect_konrad_spiral"
+		},
+		"effect_konrad_spiral": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "konrad_tested_3"
+		},
+		"konrad_tested_3": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "dark",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_tested_4"
+		},
+		"konrad_tested_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Spiralen? Nein, ich... ich kenne keine Spiralen.",
+			"next": "konrad_tested_5"
+		},
+		"konrad_tested_5": {
+			"type": "narration",
+			"text": "Er lügt. Und er weiß, dass ich es weiß. Die Luft zwischen uns wird schwer.",
+			"next": "set_konrad_suspicious"
+		},
+		"set_konrad_suspicious": {
+			"type": "set_flag",
+			"flag": "konrad_is_suspicious",
+			"value": 1,
+			"next": "konrad_converge"
+		},
+		"konrad_converge": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "smiling",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_walk"
+		},
+		"konrad_walk": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "smiling",
+			"text": "Kommen Sie. Lassen Sie mich Ihnen etwas zeigen. Den Wald hinter der Schule - dort gibt es einen Ort, den Ihre Großmutter geliebt hat.",
+			"next": "bg_forest"
+		},
+		"bg_forest": {
+			"type": "background",
+			"background": "forest_path",
+			"transition": "fade",
+			"next": "snd_forest_amb"
+		},
+		"effect_forest_mood": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.8,
+				"max": 1.0,
+				"cycle": 6.0
+			},
+			"next": "narration_forest_1"
+		},
+		"narration_forest_1": {
+			"type": "narration",
+			"text": "Der Waldweg führt tiefer als erwartet. Die Bäume stehen hier so dicht, dass kaum Licht durchdringt. Konrad geht voraus, sicher, als kennte er jeden Wurzelstock.",
+			"next": "narration_forest_2"
+		},
+		"narration_forest_2": {
+			"type": "narration",
+			"text": "Er bleibt an einer Lichtung stehen. In der Mitte steht ein einzelner, uralter Baum. Sein Stamm ist verdreht, spiralförmig gewachsen.",
+			"next": "effect_tree_glitch"
+		},
+		"effect_tree_glitch": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "konrad_tree_1"
+		},
+		"konrad_tree_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"text": "Die Dorfbewohner nennen ihn den Wächterbaum. Er steht schon seit Jahrhunderten hier. Ihre Großmutter kam oft hierher.",
+			"next": "snd_whispers"
+		},
+		"konrad_tree_2": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "dark",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_tree_3"
+		},
+		"konrad_tree_3": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Fühlen Sie es? Der Boden hier... er atmet.",
+			"next": "narration_tree"
+		},
+		"narration_tree": {
+			"type": "narration",
+			"text": "Er hat Recht. Unter meinen Füssen ist ein schwaches Pulsieren. Wie ein Herzschlag, tief in der Erde. Derselbe Rhythmus wie unter dem Altar.",
+			"next": "set_found_tree"
+		},
+		"set_found_tree": {
+			"type": "set_flag",
+			"flag": "found_guardian_tree",
+			"value": 1,
+			"next": "journal_konrad"
+		},
+		"journal_konrad": {
+			"type": "journal",
+			"entry_id": "konrad_and_tree",
+			"title": "Konrad und der Wächterbaum",
+			"content": "Konrad zeigte mir den Wächterbaum im Wald - spiralförmig gewachsen. Der Boden dort pulsiert wie unter dem Altar. Konrad verhielt sich seltsam - seine Hand zuckt bei Spiralen, seine Augen verändern sich. Großmutters Journal bestätigte: Er ist das Gefäss.",
+			"next": "hide_konrad"
+		},
+		"hide_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "hide",
+			"next": "narration_return"
+		},
+		"narration_return": {
+			"type": "narration",
+			"text": "Wir gehen schweigend zurück ins Dorf. Konrad pfeift leise vor sich hin. Die Melodie kommt mir bekannt vor - es ist das Singen aus der Tiefe.",
+			"next": "effect_return_flicker"
+		},
+		"effect_return_flicker": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 2,
+				"interval": 0.15
+			},
+			"next": "effect_clear"
+		},
+		"effect_clear": {
+			"type": "effect",
+			"effect": "clear",
+			"params": {},
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act2/hilde_ritual.json"
+		},
+		"snd_village": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_1",
+			"path": "village_day.wav"
+		},
+		"snd_forest_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "snd_forest",
+			"path": "forest_night.wav"
+		},
+		"snd_forest": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_forest_mood",
+			"path": "forest.wav"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "konrad_tree_2",
+			"path": "whispers.wav"
+		}
+	}
+}

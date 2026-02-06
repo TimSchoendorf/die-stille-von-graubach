@@ -1,0 +1,185 @@
+{
+	"title": "Ende - Das Opfer",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Ich schaue Konrad an. Er zittert. Schweißtropfen auf seiner Stirn. Hinter seinen Augen kämpft ein Mann gegen einen Ozean.",
+			"next": "snd_dark"
+		},
+		"show_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "right",
+			"action": "show",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Er hat mich lesen gelehrt - nein, das war Großmutter. Er hat mir den Wächterbaum gezeigt. Er hat um Hilfe gebeten, als niemand sonst es tat.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Und ich habe in Großmutters Journal gelesen, was das Gefäss ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäss kann es nicht hier bleiben.",
+			"next": "effect_decision"
+		},
+		"effect_decision": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.5,
+				"duration": 1.0
+			},
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Konrad war nie freiwillig das Gefäss. Er wurde gewählt, bevor er geboren wurde. Ausgesucht wie ein Opferlamm.",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Ich trete auf das Zeichen der Erde. Ich oeffne meinen Geist - nicht um das Wesen zu binden oder zu verstehen, sondern um es einzuladen. In mich.",
+			"next": "effect_invitation"
+		},
+		"effect_invitation": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "konrad_1"
+		},
+		"konrad_1": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "konrad_2"
+		},
+		"konrad_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Elise, NEIN! Was tust du?!",
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "'Ich gebe dir dein Leben zurück, Konrad.' Meine Stimme klingt ruhig. Ruhiger als ich mich fühle.",
+			"next": "effect_transfer"
+		},
+		"effect_transfer": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.2,
+				"max": 1.0,
+				"cycle": 1.5
+			},
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Das Wesen bewegt sich. Ich spüre es - wie Wasser, das von einem Gefäss ins andere fließt. Aus Konrad heraus, durch den Stein, in mich hinein.",
+			"next": "effect_sprite_distort"
+		},
+		"effect_sprite_distort": {
+			"type": "effect",
+			"effect": "sprite_distortion",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "narration_8"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Es ist... nicht wie erwartet. Kein Schmerz. Kein Horror. Es ist wie ein Meer, das sich in einen Teich ergießt. Zu groß, zu alt, zu anders. Aber es passt. Irgendwie.",
+			"next": "konrad_free"
+		},
+		"konrad_free": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "konrad_3"
+		},
+		"konrad_3": {
+			"type": "narration",
+			"text": "Konrads Augen werden klar. Zum ersten Mal in seinem Leben vollständig klar. Und sie füllen sich mit Tränen.",
+			"next": "konrad_4"
+		},
+		"konrad_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Elise... warum?",
+			"next": "narration_9"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "'Weil du es verdienst, frei zu sein. Weil Großmutter es so gewollt hätte. Und weil...'",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Ich beende den Satz nicht. Die Worte gehören nicht mehr mir allein. In meinem Kopf, neben meinen Gedanken, beginnt leise das Singen.",
+			"next": "effect_final"
+		},
+		"effect_final": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Konrad nimmt meine Hand. Er weint. Ich lächle. Es ist nicht mein Lächeln allein - aber es ist echt.",
+			"next": "hide_konrad"
+		},
+		"hide_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "hide",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "Ich werde in Graubach bleiben. Ich werde Konrads Platz einnehmen - als Lehrerin, als Hüterin, als Gefäss. Aber nicht als Gefangene. Als Gastgeberin.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Das Wesen und ich werden lernen, zusammen zu existieren. Zwei Bewusstseine in einem Körper. Es wird nicht einfach sein. Aber es ist besser als sechshundert Jahre Blut.",
+			"next": "narration_14"
+		},
+		"narration_14": {
+			"type": "narration",
+			"text": "Großmutter, du hast mir beigebracht, das Unbekannte nicht zu fürchten. Jetzt lebe ich mit dem Unbekannten. Buchstäblich.",
+			"next": "narration_15"
+		},
+		"narration_15": {
+			"type": "narration",
+			"text": "Das Singen in meinem Kopf wird leiser. Sanfter. Fast wie ein Wiegenlied. Vielleicht ist es eines.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:sacrifice"
+		},
+		"snd_dark": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "show_konrad",
+			"path": "ending_dark.wav"
+		}
+	}
+}

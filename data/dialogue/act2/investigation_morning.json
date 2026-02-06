@@ -1,0 +1,221 @@
+{
+	"title": "Akt 2 - Großmutters Geheimnisse",
+	"start": "bg_grandmother_morning",
+	"nodes": {
+		"bg_grandmother_morning": {
+			"type": "background",
+			"background": "grandmother_house",
+			"transition": "fade",
+			"next": "snd_invest"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Tag drei. Die Morgensonne fällt durch die staubigen Gardinen, aber sie wärmt nicht. Ich habe kaum geschlafen.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Großmutters Haus birgt Antworten. Sie hat dreißig Jahre an einem alternativen Ritual gearbeitet - irgendwo hier müssen ihre Aufzeichnungen sein.",
+			"next": "choice_search"
+		},
+		"choice_search": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Das Arbeitszimmer durchsuchen",
+					"set_flags": {
+						"searched_study": 1
+					},
+					"next": "search_study"
+				},
+				{
+					"text": "Den Keller untersuchen",
+					"set_flags": {
+						"searched_cellar": 1
+					},
+					"next": "search_cellar"
+				},
+				{
+					"text": "Ihr Schlafzimmer gründlich durchsehen",
+					"set_flags": {
+						"searched_bedroom": 1
+					},
+					"next": "search_bedroom"
+				}
+			]
+		},
+		"search_study": {
+			"type": "narration",
+			"text": "Das Arbeitszimmer ist ein Chaos aus Büchern und Papieren. Großmutter war besessen - Dutzende Bücher ueber Folklore, Okkultismus, vorchristliche Rituale im Schwarzwald.",
+			"next": "search_study_2"
+		},
+		"search_study_2": {
+			"type": "narration",
+			"text": "Zwischen den Seiten eines zerlesenen Buches ueber germanische Bindungsrituale finde ich lose Blätter. Großmutters Handschrift, eng und hastig.",
+			"next": "effect_study_find"
+		},
+		"effect_study_find": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.2,
+				"duration": 0.5
+			},
+			"next": "find_notes_study"
+		},
+		"find_notes_study": {
+			"type": "narration",
+			"text": "'Das Siegel muss erneuert werden, nicht mit Blut, sondern mit Willen. Drei Komponenten: das Zeichen der Erde, den Gesang der Alten und einen Anker - jemanden, der das Wesen kennt aber nicht fürchtet.'",
+			"next": "set_found_journal"
+		},
+		"search_cellar": {
+			"type": "narration",
+			"text": "Der Keller riecht nach feuchter Erde und etwas Süsserem, Kräutern vielleicht. An der Wand hängen getrocknete Pflanzenbündel, sorgfältig beschriftet.",
+			"next": "search_cellar_2"
+		},
+		"search_cellar_2": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.2
+			},
+			"next": "search_cellar_3"
+		},
+		"search_cellar_3": {
+			"type": "narration",
+			"text": "Hinter einem losen Stein in der Wand finde ich eine Blechdose. Darin: ein ledergebundenes Heft, ein kleiner Beutel mit Krätern und ein gefalteter Zettel.",
+			"next": "search_cellar_4"
+		},
+		"search_cellar_4": {
+			"type": "narration",
+			"text": "'Für Elise, wenn die Zeit kommt. Du wirst verstehen. - M.' Großmutters Initialen. Das Heft ist ihr Journal.",
+			"next": "set_found_journal"
+		},
+		"search_bedroom": {
+			"type": "narration",
+			"text": "Großmutters Schlafzimmer sieht aus wie am Tag ihres Todes. Das Bett ordentlich gemacht, als hätte sie gewusst, dass sie nicht zurückkehren würde.",
+			"next": "search_bedroom_2"
+		},
+		"search_bedroom_2": {
+			"type": "narration",
+			"text": "Unter der losen Diele neben dem Bett - dort, wo sie früher Süssigkeiten für mich versteckt hat - liegt ein in Wachstuch gewickeltes Paket.",
+			"next": "search_bedroom_3"
+		},
+		"search_bedroom_3": {
+			"type": "narration",
+			"text": "Ein altes Heft, vollgeschrieben. Auf der ersten Seite steht: 'Aufzeichnungen ueber das Wesen unter Graubach. Begonnen 1893, fortgesetzt bis heute.'",
+			"next": "set_found_journal"
+		},
+		"set_found_journal": {
+			"type": "set_flag",
+			"flag": "found_journal",
+			"value": 1,
+			"next": "journal_entry_found"
+		},
+		"journal_entry_found": {
+			"type": "journal",
+			"entry_id": "grandmother_journal",
+			"title": "Großmutters Journal",
+			"content": "Großmutters Aufzeichnungen gefunden. Sie dokumentierte 30 Jahre Forschung ueber das Wesen unter der Kirche und ein alternatives Bindungsritual. Drei Komponenten nötig: Zeichen der Erde, Gesang der Alten, ein Anker.",
+			"next": "read_journal_1"
+		},
+		"read_journal_1": {
+			"type": "narration",
+			"text": "Ich blättere durch das Journal. Die ersten Einträge sind nüchtern, wissenschaftlich fast. Aber mit den Jahren wird die Handschrift unruhiger.",
+			"next": "read_journal_2"
+		},
+		"read_journal_2": {
+			"type": "narration",
+			"text": "'1903: Die Spirale taucht ueberall auf. In der Rinde der Bäume, im Muster des Frostes, in meinen Träumen. Es weiß, dass ich forsche.'",
+			"next": "read_journal_3"
+		},
+		"read_journal_3": {
+			"type": "narration",
+			"text": "'1915: Hilde hat mir einen alten Gesang beigebracht. Er stammt aus der Zeit vor den Römern. Wenn ich ihn summe, wird die Luft schwer und das Singen aus der Tiefe verstummt für Stunden.'",
+			"next": "read_journal_4"
+		},
+		"read_journal_4": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.3
+			},
+			"next": "read_journal_5"
+		},
+		"read_journal_5": {
+			"type": "narration",
+			"text": "'1921: Konrads Augen. Ich habe es gesehen. Für einen Moment, als die Sonne tief stand, waren seine Augen nicht seine eigenen. Das Wesen hat ein Gefäss gefunden.'",
+			"next": "set_journal_read"
+		},
+		"set_journal_read": {
+			"type": "set_flag",
+			"flag": "journal_read",
+			"value": 1,
+			"next": "narration_midmorning"
+		},
+		"narration_midmorning": {
+			"type": "narration",
+			"text": "Ich klappe das Journal zu. Meine Hände zittern. Großmutter wusste ueber Konrad Bescheid. Sie wusste alles.",
+			"next": "effect_morning_vignette"
+		},
+		"effect_morning_vignette": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.3,
+				"duration": 1.0
+			},
+			"next": "narration_plan"
+		},
+		"narration_plan": {
+			"type": "narration",
+			"text": "Was hat sie noch geschrieben? Drei Komponenten für das Siegel. Hilde kennt den Gesang. Das Zeichen der Erde - vielleicht in der Kirche? Und der Anker...",
+			"next": "choice_next_step"
+		},
+		"choice_next_step": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Zur Kirche gehen - das Zeichen suchen",
+					"set_flags": {
+						"investigation_church_first": 1
+					},
+					"next": "narration_to_church"
+				},
+				{
+					"text": "Hilde aufsuchen - nach dem Gesang fragen",
+					"set_flags": {
+						"investigation_hilde_first": 1
+					},
+					"next": "narration_to_hilde"
+				}
+			]
+		},
+		"narration_to_church": {
+			"type": "narration",
+			"text": "Die Kirche. Dort liegt die Kammer, dort werden die Rituale durchgeführt. Wenn irgendwo Hinweise auf das Zeichen der Erde zu finden sind, dann dort.",
+			"next": "scene_end"
+		},
+		"narration_to_hilde": {
+			"type": "narration",
+			"text": "Hilde war Großmutters Verbündete. Sie kennt den Gesang. Vielleicht weiß sie auch mehr ueber die anderen Komponenten.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act2/church_secrets.json"
+		},
+		"snd_invest": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "snd_village_amb",
+			"path": "investigation.wav"
+		},
+		"snd_village_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "narration_1",
+			"path": "village_ambience.wav"
+		}
+	}
+}

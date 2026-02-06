@@ -1,0 +1,299 @@
+{
+	"title": "Akt 3 - Der Abstieg",
+	"start": "bg_church_night",
+	"nodes": {
+		"bg_church_night": {
+			"type": "background",
+			"background": "church_corrupted",
+			"transition": "fade",
+			"next": "snd_tension"
+		},
+		"effect_church_corrupt": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 0.6
+			},
+			"next": "effect_vignette_heavy"
+		},
+		"effect_vignette_heavy": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.5,
+				"duration": 1.0
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Tag sieben. Abend. Die Kirche sieht nicht mehr aus wie eine Kirche. Die Bänke sind verschoben, manche schweben Zentimeter ueber dem Boden. Die Kirchenfenster zeigen Bilder, die nicht in Glas gehören.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Das Singen ist ueberall. Nicht mehr nur aus der Tiefe - es kommt aus den Wänden, aus der Luft, aus meinem eigenen Kopf. Hildes Amulett pulst warm an meiner Brust.",
+			"next": "effect_singing_pulse"
+		},
+		"effect_singing_pulse": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.5,
+				"max": 1.0,
+				"cycle": 3.0
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Ich stehe vor der Treppe zur Kammer. Der Schlüssel in meiner Hand ist warm - nicht von meiner Körperhitze. Eigene Wärme.",
+			"next": "check_otto_hostile"
+		},
+		"check_otto_hostile": {
+			"type": "flag_check",
+			"flag": "otto_hostile",
+			"value": 1,
+			"true_next": "otto_confrontation",
+			"false_next": "otto_surprise"
+		},
+		"otto_confrontation": {
+			"type": "narration",
+			"text": "Die Kirchentür fliegt auf. Otto Reinhardt steht im Eingang, flankiert von zwei Männern mit Fackeln. Seine Miene ist kalt.",
+			"next": "show_otto_conf"
+		},
+		"show_otto_conf": {
+			"type": "character",
+			"character": "otto",
+			"expression": "angry",
+			"position": "right",
+			"action": "show",
+			"next": "otto_conf_1"
+		},
+		"otto_conf_1": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "angry",
+			"text": "Ich habe Sie gewarnt, Fräulein Brandt. Die Tradition ist aelter als Sie, aelter als ich, aelter als dieses Dorf. Und Sie werden sie nicht brechen.",
+			"next": "check_ally_georg"
+		},
+		"check_ally_georg": {
+			"type": "flag_check",
+			"flag": "ally_georg",
+			"value": 1,
+			"true_next": "georg_defends",
+			"false_next": "otto_blocks"
+		},
+		"georg_defends": {
+			"type": "character",
+			"character": "georg",
+			"expression": "angry",
+			"position": "left",
+			"action": "show",
+			"next": "georg_defends_1"
+		},
+		"georg_defends_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "angry",
+			"text": "Genug, Otto. Dreißig Jahre habe ich zugesehen. Dreißig Jahre habe ich geschwiegen. Das ist vorbei.",
+			"next": "georg_defends_2"
+		},
+		"georg_defends_2": {
+			"type": "narration",
+			"text": "Georg stellt sich zwischen mich und Otto. In seiner Hand der Schmiedehammer. Otto weicht zurück - er kennt Georg, kennt seine Stärke.",
+			"next": "georg_defends_3"
+		},
+		"georg_defends_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Geh, Elise. Ich halte sie auf. Tu, was Margarethe geplant hat.",
+			"next": "hide_otto_georg"
+		},
+		"hide_otto_georg": {
+			"type": "character",
+			"character": "otto",
+			"expression": "angry",
+			"position": "right",
+			"action": "hide",
+			"next": "hide_georg_def"
+		},
+		"hide_georg_def": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "left",
+			"action": "hide",
+			"next": "descent_start"
+		},
+		"otto_blocks": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "angry",
+			"text": "Treten Sie zurück. Sofort. Oder es wird Ihnen ergehen wie allen, die sich gegen die Tradition gestellt haben.",
+			"next": "narration_dodge"
+		},
+		"narration_dodge": {
+			"type": "narration",
+			"text": "Aber die Kirche ist auf meiner Seite - oder das Wesen unter ihr. Die Steinplatten unter Ottos Füssen erzittern, und er stolpert. Ich nutze den Moment und renne zur Treppe.",
+			"next": "effect_escape_shake"
+		},
+		"effect_escape_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 5.0,
+				"duration": 0.8
+			},
+			"next": "hide_otto_block"
+		},
+		"hide_otto_block": {
+			"type": "character",
+			"character": "otto",
+			"expression": "angry",
+			"position": "right",
+			"action": "hide",
+			"next": "descent_start"
+		},
+		"otto_surprise": {
+			"type": "narration",
+			"text": "Niemand hat mich aufgehalten. Vielleicht weiß Otto nichts. Vielleicht ist er anderswo beschäftigt. Oder vielleicht lässt mich etwas absichtlich durch.",
+			"next": "descent_start"
+		},
+		"descent_start": {
+			"type": "background",
+			"background": "church_basement",
+			"transition": "fade",
+			"next": "snd_underground"
+		},
+		"effect_descent_1": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "effect_descent_2"
+		},
+		"effect_descent_2": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.6,
+				"duration": 1.0
+			},
+			"next": "narration_descent_1"
+		},
+		"narration_descent_1": {
+			"type": "narration",
+			"text": "Die Treppe windet sich spiralförmig nach unten. Natürlich. Alles hier ist Spirale. Jeder Schritt bringt mich näher an das Singen. Es wird nicht lauter - es wird wahrer.",
+			"next": "narration_descent_2"
+		},
+		"narration_descent_2": {
+			"type": "narration",
+			"text": "Die Luft ist dick und süss. Mein Kerzenlicht flackert, obwohl kein Luftzug weht. Die Spiralen an den Wänden scheinen sich zu bewegen, wenn ich nicht direkt hinsehe.",
+			"next": "effect_text_glitch"
+		},
+		"effect_text_glitch": {
+			"type": "effect",
+			"effect": "text_glitch",
+			"params": {
+				"intensity": 0.3,
+				"duration": 1.5
+			},
+			"next": "narration_descent_3"
+		},
+		"narration_descent_3": {
+			"type": "narration",
+			"text": "Dann: die Kammer. Grösser als erwartet. Der Stein ist hier nicht gemauert - er ist gewachsen. Organisch, wie das Innere eines riesigen Wesens.",
+			"next": "bg_ritual"
+		},
+		"bg_ritual": {
+			"type": "background",
+			"background": "ritual_chamber",
+			"transition": "fade",
+			"next": "snd_ritual"
+		},
+		"effect_ritual_chamber": {
+			"type": "effect",
+			"effect": "bg_corruption",
+			"params": {
+				"intensity": 0.5,
+				"duration": 2.0
+			},
+			"next": "narration_chamber_1"
+		},
+		"narration_chamber_1": {
+			"type": "narration",
+			"text": "In der Mitte der Kammer liegt das Buch. Daneben: ein Kreis aus alten Symbolen, eingeritzt in den Stein. Und in der Mitte des Kreises: eine Stelle, wo der Boden pulsiert.",
+			"next": "narration_chamber_2"
+		},
+		"narration_chamber_2": {
+			"type": "narration",
+			"text": "Das Zeichen der Erde. Hier ist es. Ich spüre den Herzschlag durch meine Schuhsohlen, stärker als je zuvor. Es lebt. Es wartet.",
+			"next": "set_in_chamber"
+		},
+		"set_in_chamber": {
+			"type": "set_flag",
+			"flag": "reached_chamber",
+			"value": 1,
+			"next": "journal_descent"
+		},
+		"journal_descent": {
+			"type": "journal",
+			"entry_id": "the_descent",
+			"title": "Der Abstieg",
+			"content": "Ich bin in der Kammer unter der Kirche. Der Boden pulsiert, die Wände leben, das Singen füllt alles. Das Buch der Namen liegt hier. Das Zeichen der Erde - der pulsierende Punkt - ist in der Mitte. Morgen führe ich das Ritual durch. Oder sterbe beim Versuch.",
+			"next": "narration_end_1"
+		},
+		"narration_end_1": {
+			"type": "narration",
+			"text": "Ich stehe in der Kammer, und das Wesen weiß, dass ich hier bin. Zwischen uns liegt nur dünner Stein und Jahrhunderte des Wartens.",
+			"next": "effect_end_corruption"
+		},
+		"effect_end_corruption": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.2
+			},
+			"next": "narration_end_2"
+		},
+		"narration_end_2": {
+			"type": "narration",
+			"text": "Morgen endet es. So oder so.",
+			"next": "effect_end_vignette"
+		},
+		"effect_end_vignette": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.7,
+				"duration": 2.0
+			},
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act3/preparation.json"
+		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_church_corrupt",
+			"path": "tension.wav"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_descent_1",
+			"path": "underground.wav"
+		},
+		"snd_ritual": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_ritual_chamber",
+			"path": "ritual.wav"
+		}
+	}
+}

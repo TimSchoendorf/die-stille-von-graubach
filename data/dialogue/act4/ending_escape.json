@@ -1,0 +1,176 @@
+{
+	"title": "Ende - Die Flucht",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Es geht schief. Alles geht schief. Der Boden reißt, die Spiralen explodieren in blendendem Licht, und das Singen wird zum Schrei.",
+			"next": "snd_tension"
+		},
+		"effect_chaos": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.5
+			},
+			"next": "effect_shake"
+		},
+		"effect_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 8.0,
+				"duration": 1.5
+			},
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Georg ist plötzlich da. Er hat sich durch Ottos Männer gekämpft, die Treppe hinunter, in die bebende Kammer.",
+			"next": "show_georg"
+		},
+		"show_georg": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "center",
+			"action": "show",
+			"next": "georg_1"
+		},
+		"georg_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "ELISE! RAUS HIER! SOFORT!",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Ich versuche zu sprechen, ihm zu sagen, dass ich es noch schaffen kann. Aber er packt mich am Arm und zerrt mich zur Treppe.",
+			"next": "georg_2"
+		},
+		"georg_2": {
+			"type": "character",
+			"character": "georg",
+			"expression": "protective",
+			"position": "center",
+			"action": "show",
+			"next": "georg_3"
+		},
+		"georg_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Es ist zu spät für das Siegel. Aber nicht für dich. Geh. Lauf. Ich halte es auf.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "'Georg, nein -' Aber er hat sich bereits umgedreht. Er steht breitbeinig auf dem pulsierenden Boden, den Schmiedehammer in beiden Händen.",
+			"next": "georg_4"
+		},
+		"georg_4": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
+			"next": "effect_georg_stand"
+		},
+		"effect_georg_stand": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.7,
+				"duration": 1.0
+			},
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Er schlägt den Hammer auf den Boden. Einmal. Der Stein bricht. Das Singen wird zur Stille - nicht friedlich, sondern erschrocken. Verwirrt.",
+			"next": "hide_georg"
+		},
+		"hide_georg": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "center",
+			"action": "hide",
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir bricht der Boden ein. Staub und Licht und ein Laut, der kein Laut sein sollte.",
+			"next": "effect_escape"
+		},
+		"effect_escape": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 6.0,
+				"duration": 2.0
+			},
+			"next": "snd_peaceful"
+		},
+		"bg_village": {
+			"type": "background",
+			"background": "village_night",
+			"transition": "fade",
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald oeffnet sich - zum ersten Mal oeffnet er sich.",
+			"next": "narration_8"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Ich drehe mich ein letztes Mal um. Graubach versinkt. Die Häuser sacken ein, die Kirche neigt sich, der Wald verschluckt alles. In Sekunden ist nichts mehr da.",
+			"next": "effect_village_gone"
+		},
+		"effect_village_gone": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "narration_9"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Nur Wald. Als hätte es Graubach nie gegeben.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Georg. Mein Onkel. Der Mann, der dreißig Jahre lang vor Schuld gebeugt ging und am Ende aufrecht stand.",
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Ich gehe. Durch den Wald, in die Nacht, zurück in eine Welt, die nichts von Graubach weiß. Die nie von Graubach wissen wird.",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "In meiner Tasche liegt Großmutters Journal. Der Beweis, dass es real war. Dass Georg real war. Dass sein Opfer etwas bedeutet hat.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:escape"
+		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_chaos",
+			"path": "tension.wav"
+		},
+		"snd_peaceful": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "bg_village",
+			"path": "ending_peaceful.wav"
+		}
+	}
+}

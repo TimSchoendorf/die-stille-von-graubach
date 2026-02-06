@@ -1,0 +1,262 @@
+{
+	"title": "Akt 4 - Die Ritualnacht",
+	"start": "bg_ritual",
+	"nodes": {
+		"bg_ritual": {
+			"type": "background",
+			"background": "ritual_chamber",
+			"transition": "fade",
+			"next": "snd_ritual"
+		},
+		"effect_opening": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "effect_vignette"
+		},
+		"effect_vignette": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.6,
+				"duration": 1.5
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Tag acht. Sonnenuntergang. Die Kammer unter der Kirche pulsiert wie ein Herz. Die Spiralen an den Wänden drehen sich. Das Singen füllt alles.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füssen spüre ich es: riesig, alt, erwachend.",
+			"next": "effect_breathing"
+		},
+		"effect_breathing": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.4,
+				"max": 1.0,
+				"cycle": 2.0
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Georgs Schlüssel hat die letzte Tür geoeffnet. Hildes Kräter brennen in einer Schale neben mir, ihr Rauch steigt spiralförmig auf. Großmutters Journal liegt aufgeschlagen.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Jetzt gibt es kein Zurück. Das Wesen weiß, dass ich hier bin. Es wartet.",
+			"next": "effect_text_glitch"
+		},
+		"effect_text_glitch": {
+			"type": "effect",
+			"effect": "text_glitch",
+			"params": {
+				"intensity": 0.3,
+				"duration": 1.5
+			},
+			"next": "check_konrad_sacrifice"
+		},
+		"check_konrad_sacrifice": {
+			"type": "flag_check",
+			"flag": "sought_konrad",
+			"value": 1,
+			"true_next": "check_konrad_trust",
+			"false_next": "check_approach"
+		},
+		"check_konrad_trust": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "konrad_appears",
+			"false_next": "check_approach"
+		},
+		"konrad_appears": {
+			"type": "narration",
+			"text": "Schritte auf der Treppe. Konrad. Er steht im Eingang der Kammer, halb im Schatten. Seine Augen flackern zwischen braun und etwas Bodenlosem.",
+			"next": "show_konrad"
+		},
+		"show_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "right",
+			"action": "show",
+			"next": "konrad_1"
+		},
+		"konrad_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Elise... ich bin gekommen. Es... es hat mich hergebracht. Aber ein Teil von mir ist noch da. Noch.",
+			"next": "effect_konrad_glitch"
+		},
+		"effect_konrad_glitch": {
+			"type": "effect",
+			"effect": "sprite_distortion",
+			"params": {
+				"duration": 1.5
+			},
+			"next": "konrad_2"
+		},
+		"konrad_2": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "konrad_3"
+		},
+		"konrad_3": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Du hast die Wahl, Elise. Du hattest immer die Wahl. Ich... ich nicht.",
+			"next": "choice_sacrifice_override"
+		},
+		"choice_sacrifice_override": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Konrads Platz einnehmen - ihn befreien, koste es, was es wolle",
+					"set_flags": {
+						"chose_sacrifice": 1
+					},
+					"next": "hide_konrad_sacrifice"
+				},
+				{
+					"text": "Am ursprünglichen Plan festhalten",
+					"next": "hide_konrad_plan"
+				}
+			]
+		},
+		"hide_konrad_sacrifice": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "hide",
+			"next": "route_sacrifice"
+		},
+		"route_sacrifice": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_sacrifice.json"
+		},
+		"hide_konrad_plan": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "right",
+			"action": "hide",
+			"next": "check_approach"
+		},
+		"check_approach": {
+			"type": "flag_check",
+			"flag": "approach_seal",
+			"value": 1,
+			"true_next": "check_seal_ready",
+			"false_next": "check_understand"
+		},
+		"check_seal_ready": {
+			"type": "flag_check",
+			"flag": "learned_chant",
+			"value": 1,
+			"true_next": "route_seal",
+			"false_next": "seal_fails"
+		},
+		"route_seal": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_seal.json"
+		},
+		"seal_fails": {
+			"type": "narration",
+			"text": "Ich beginne das Ritual, aber die Worte fehlen. Der Gesang - ich kenne ihn nicht vollständig. Die Luft vibriert, das Wesen reagiert, aber das Siegel schließt sich nicht.",
+			"next": "effect_seal_fail"
+		},
+		"effect_seal_fail": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "check_escape_possible"
+		},
+		"check_escape_possible": {
+			"type": "flag_check",
+			"flag": "ally_georg",
+			"value": 1,
+			"true_next": "route_escape",
+			"false_next": "route_awakening"
+		},
+		"route_escape": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_escape.json"
+		},
+		"check_understand": {
+			"type": "flag_check",
+			"flag": "approach_understand",
+			"value": 1,
+			"true_next": "check_knowledge",
+			"false_next": "check_pact"
+		},
+		"check_knowledge": {
+			"type": "flag_check",
+			"flag": "journal_read",
+			"value": 1,
+			"true_next": "route_truth",
+			"false_next": "route_awakening"
+		},
+		"route_truth": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_truth.json"
+		},
+		"check_pact": {
+			"type": "flag_check",
+			"flag": "approach_pact",
+			"value": 1,
+			"true_next": "route_pact",
+			"false_next": "check_destroy"
+		},
+		"route_pact": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_pact.json"
+		},
+		"check_destroy": {
+			"type": "flag_check",
+			"flag": "approach_destroy",
+			"value": 1,
+			"true_next": "route_awakening",
+			"false_next": "route_fallback"
+		},
+		"route_awakening": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ending_awakening.json"
+		},
+		"route_fallback": {
+			"type": "flag_check",
+			"flag": "ally_georg",
+			"value": 1,
+			"true_next": "route_escape",
+			"false_next": "route_awakening"
+		},
+		"snd_ritual": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "snd_underground",
+			"path": "ritual.wav"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_opening",
+			"path": "underground.wav"
+		}
+	}
+}

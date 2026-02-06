@@ -1,0 +1,511 @@
+{
+	"title": "Akt 1 - Die erste Nacht",
+	"start": "bg_house_night",
+	"nodes": {
+		"bg_house_night": {
+			"type": "background",
+			"background": "grandmother_house_night",
+			"transition": "fade",
+			"next": "snd_night"
+		},
+		"effect_dark": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.4
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Stunden vergehen. Oder Minuten. Im Schein der unmenschlichen Kerze verliert die Zeit ihre Bedeutung.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Ich sitze am Küchentisch und starre auf das Notizbuch meiner Großmutter. Es liegt im Schlafzimmer. Georgs Worte klingen in meinem Kopf nach.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "\"Ich habe reingesehen. Einmal. Es hat mir Albträume gemacht.\"",
+			"next": "choice_notebook"
+		},
+		"choice_notebook": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Das Notizbuch holen und lesen",
+					"set_flags": {
+						"read_journal_night1": 1
+					},
+					"next": "read_notebook"
+				},
+				{
+					"text": "Lieber nicht. Morgen ist auch ein Tag.",
+					"set_flags": {
+						"read_journal_night1": 0
+					},
+					"next": "skip_notebook"
+				}
+			]
+		},
+		"read_notebook": {
+			"type": "narration",
+			"text": "Ich gehe zurück ins Schlafzimmer. Die Kerze flackert, als ich mich nähere. Großmutters Gesicht ist im tanzenden Licht fast lebendig.",
+			"next": "read_notebook_2"
+		},
+		"read_notebook_2": {
+			"type": "narration",
+			"text": "Das Notizbuch ist dünn, aber vollgeschrieben. Die Schrift wird von Seite zu Seite hastiger, aufgelöster. Manche Einträge sind in einer Sprache, die ich nicht kenne.",
+			"next": "read_notebook_3"
+		},
+		"read_notebook_3": {
+			"type": "narration",
+			"text": "Auf der ersten Seite steht, sauber und deutlich: \"Für Elise. Wenn ich nicht mehr da bin.\"",
+			"next": "read_notebook_4"
+		},
+		"read_notebook_4": {
+			"type": "narration",
+			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, aelter als die Bäume, aelter als die Berge. Wir nennen es den Schläfenden. Meine Großmutter nannte es den Atem der Erde.\"",
+			"next": "read_notebook_5"
+		},
+		"read_notebook_5": {
+			"type": "narration",
+			"text": "\"Alle dreißig Jahre braucht es... Nahrung. Das letzte Mal war 1893. Das nächste Mal ist jetzt. November 1923.\"",
+			"next": "effect_shake_read"
+		},
+		"effect_shake_read": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 2.0,
+				"duration": 0.4
+			},
+			"next": "read_notebook_6"
+		},
+		"read_notebook_6": {
+			"type": "narration",
+			"text": "Meine Hände zittern. Ich blättere weiter. Die Schrift wird chaotischer.",
+			"next": "read_notebook_7"
+		},
+		"read_notebook_7": {
+			"type": "narration",
+			"text": "\"Konrad ist nicht Konrad. Nicht mehr. Seit dem Frühjahr sehe ich es in seinen Augen. Er lächelt anders. Er bewegt sich anders. Etwas trägt ihn wie einen Mantel.\"",
+			"next": "read_notebook_8"
+		},
+		"read_notebook_8": {
+			"type": "narration",
+			"text": "\"Sie wollen dich, Elise. Dein Name steht im Buch unter der Kirche. Ich habe versucht ihn auszustreichen, aber die Tinte kehrt zurück. Immer wieder.\"",
+			"next": "set_knowledge"
+		},
+		"set_knowledge": {
+			"type": "set_flag",
+			"flag": "knowledge_entity",
+			"value": 2,
+			"next": "journal_notebook"
+		},
+		"journal_notebook": {
+			"type": "journal",
+			"entry_id": "grandmother_notebook",
+			"title": "Großmutters Notizbuch",
+			"content": "Großmutter schreibt von etwas unter der Kirche - dem 'Schläfenden'. Alle 30 Jahre braucht es 'Nahrung'. Der Dorflehrer Konrad sei 'nicht mehr Konrad'. Und mein Name steht in einem Buch unter der Kirche. Was bedeutet das alles?",
+			"next": "notebook_converge"
+		},
+		"skip_notebook": {
+			"type": "narration",
+			"text": "Nein. Nicht heute Nacht. Nicht allein mit einer Leiche und einer Kerze, die nicht ausgehen will.",
+			"next": "skip_notebook_2"
+		},
+		"skip_notebook_2": {
+			"type": "narration",
+			"text": "Morgen. Im Tageslicht. Wenn die Welt wieder Sinn ergibt.",
+			"next": "notebook_converge"
+		},
+		"notebook_converge": {
+			"type": "narration",
+			"text": "Irgendwann muss ich eingeschlafen sein. Am Küchentisch, den Kopf auf den verschränkten Armen.",
+			"next": "effect_dream_enter"
+		},
+		"effect_dream_enter": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "effect_dream_desat"
+		},
+		"effect_dream_desat": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.6
+			},
+			"next": "narration_dream_1"
+		},
+		"narration_dream_1": {
+			"type": "narration",
+			"text": "Im Traum stehe ich auf dem Dorfplatz. Es ist Nacht, aber das Dorf ist hell erleuchtet - von Fackeln, die in einer Spirale angeordnet sind.",
+			"next": "snd_whispers"
+		},
+		"narration_dream_2": {
+			"type": "narration",
+			"text": "Menschen stehen im Kreis. Alle Dorfbewohner. Sie singen - dieselbe Melodie, die ich im Zug gehört habe. Tief und resonant, als käme der Klang aus der Erde selbst.",
+			"next": "narration_dream_3"
+		},
+		"narration_dream_3": {
+			"type": "narration",
+			"text": "In der Mitte des Kreises steht ein Mann. Jung, mit dunklem Haar und einem Lächeln, das nicht zu seinen Augen passt. Er streckt mir die Hand entgegen.",
+			"next": "narration_dream_4"
+		},
+		"narration_dream_4": {
+			"type": "narration",
+			"text": "\"Willkommen zurück, Elise\", sagt er. \"Wir haben auf dich gewartet.\"",
+			"next": "narration_dream_5"
+		},
+		"narration_dream_5": {
+			"type": "narration",
+			"text": "Dann höre ich es. Nicht den Gesang, sondern etwas darunter. Ein tiefes, rhythmisches Pochen. Wie ein Herzschlag. Aber viel zu groß für ein menschliches Herz.",
+			"next": "effect_dream_shake"
+		},
+		"effect_dream_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 5.0,
+				"duration": 1.0
+			},
+			"next": "narration_dream_6"
+		},
+		"narration_dream_6": {
+			"type": "narration",
+			"text": "Der Boden unter meinen Füssen beginnt zu vibrieren. Risse ziehen sich durch das Kopfsteinpflaster. Durch die Risse dringt Licht - kein warmes Licht. Etwas Kaltes, Bläuliches, das sich bewegt wie etwas Lebendiges.",
+			"next": "narration_dream_7"
+		},
+		"narration_dream_7": {
+			"type": "narration",
+			"text": "Und dann oeffne ich die Augen.",
+			"next": "transition_wake"
+		},
+		"transition_wake": {
+			"type": "effect",
+			"effect": "flash",
+			"params": {
+				"duration": 0.3
+			},
+			"next": "narration_wake_1"
+		},
+		"narration_wake_1": {
+			"type": "narration",
+			"text": "Ich schrecke hoch. Es ist noch dunkel. Mein Herz hämmert.",
+			"next": "narration_wake_2"
+		},
+		"narration_wake_2": {
+			"type": "narration",
+			"text": "Und dann höre ich es. Nicht im Traum. Im Wachen.",
+			"next": "snd_underground"
+		},
+		"narration_wake_3": {
+			"type": "narration",
+			"text": "Singen. Leise, gedämpft, als käme es von weit unter dem Haus. Viele Stimmen, verwoben zu etwas, das nicht ganz Musik ist und nicht ganz Sprache.",
+			"next": "set_heard_singing"
+		},
+		"set_heard_singing": {
+			"type": "set_flag",
+			"flag": "heard_singing",
+			"value": 1,
+			"next": "effect_singing_flicker"
+		},
+		"effect_singing_flicker": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 4,
+				"interval": 0.2
+			},
+			"next": "narration_singing_2"
+		},
+		"narration_singing_2": {
+			"type": "narration",
+			"text": "Die Dielen vibrieren leicht unter meinen nackten Füssen. Das Glas auf dem Tisch klirrt leise. Die Kerze im Schlafzimmer - ich kann sie von hier aus sehen - brennt höher, heller.",
+			"next": "snd_glass"
+		},
+		"narration_singing_3": {
+			"type": "narration",
+			"text": "Dann - ein Klopfen an der Tür.",
+			"next": "snd_heartbeat"
+		},
+		"effect_knock": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 4.0,
+				"duration": 0.3
+			},
+			"next": "narration_knock_1"
+		},
+		"narration_knock_1": {
+			"type": "narration",
+			"text": "Drei Schläge. Langsam. Bedächtig. Wie jemand, der weiß, dass er eingelassen wird.",
+			"next": "narration_knock_2"
+		},
+		"narration_knock_2": {
+			"type": "narration",
+			"text": "\"Wenn es klopft, dann oeffne nicht.\"",
+			"next": "narration_knock_3"
+		},
+		"narration_knock_3": {
+			"type": "narration",
+			"text": "Stille. Dann, leise, eine Stimme. Warm, freundlich, besorgt:",
+			"next": "narration_knock_4"
+		},
+		"narration_knock_4": {
+			"type": "narration",
+			"text": "\"Hallo? Ist da jemand? Ich habe Licht gesehen. Brauchen Sie Hilfe?\"",
+			"next": "narration_knock_5"
+		},
+		"narration_knock_5": {
+			"type": "narration",
+			"text": "Eine Männerstimme. Jung, freundlich. Nicht bedrohlich. Aber Georg hat gesagt...",
+			"next": "choice_door"
+		},
+		"choice_door": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Die Tür oeffnen",
+					"set_flags": {
+						"opened_door": 1
+					},
+					"next": "open_door"
+				},
+				{
+					"text": "Nicht oeffnen. Georg hat es gesagt.",
+					"set_flags": {
+						"opened_door": 0
+					},
+					"next": "dont_open"
+				}
+			]
+		},
+		"open_door": {
+			"type": "narration",
+			"text": "Meine Hand liegt auf dem Riegel. Ich zaudere. Dann schiebe ich ihn zurück.",
+			"next": "open_door_2"
+		},
+		"open_door_2": {
+			"type": "narration",
+			"text": "Vor der Tür steht ein Mann. Etwa dreißig, mit welligem dunklem Haar und braunen Augen, die im Mondlicht warm schimmern. Er trägt einen Mantel ueber einem Pullover und lächelt besorgt.",
+			"next": "show_konrad"
+		},
+		"show_konrad": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "show",
+			"next": "set_met_konrad"
+		},
+		"set_met_konrad": {
+			"type": "set_flag",
+			"flag": "met_konrad",
+			"value": 1,
+			"next": "konrad_1"
+		},
+		"konrad_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"text": "Oh - Sie müssen Elise sein. Margarethes Enkelin, nicht wahr? Ich bin Konrad. Konrad Müller, der Dorflehrer.",
+			"next": "konrad_2"
+		},
+		"konrad_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Es tut mir schrecklich leid wegen Ihrer Großmutter. Sie war... eine bemerkenswerte Frau. Hat mir oft beim Unterricht geholfen.",
+			"next": "konrad_3"
+		},
+		"konrad_3": {
+			"type": "narration",
+			"text": "Er klingt aufrichtig. Sein Lächeln ist warm, seine Augen freundlich. Und doch - wenn ich genau hinsehe, ist da etwas in seinem Blick. Etwas, das nicht ganz...",
+			"next": "effect_konrad_glitch"
+		},
+		"effect_konrad_glitch": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.2
+			},
+			"next": "konrad_4"
+		},
+		"konrad_4": {
+			"type": "narration",
+			"text": "Nein. Ich bin müde und verängstigt. Ich sehe Gespenster.",
+			"next": "flag_check_notebook_konrad"
+		},
+		"flag_check_notebook_konrad": {
+			"type": "flag_check",
+			"flag": "read_journal_night1",
+			"value": 1,
+			"true_next": "konrad_notebook_reaction",
+			"false_next": "konrad_continue"
+		},
+		"konrad_notebook_reaction": {
+			"type": "narration",
+			"text": "\"Konrad ist nicht Konrad. Nicht mehr.\" Großmutters Worte schlagen in mir ein wie ein Blitz. Dieser Mann - dieser freundliche, lächelnde Mann - soll ein Gefäss sein?",
+			"next": "konrad_continue"
+		},
+		"konrad_continue": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"text": "Ich wollte nur sichergehen, dass alles in Ordnung ist. Es ist spät, und dieses Haus... nun, es steht seit Tagen leer. Wenn Sie irgendetwas brauchen - ich wohne am Schulhaus, gleich neben der Kirche.",
+			"next": "konrad_5"
+		},
+		"konrad_5": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "smiling",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_6"
+		},
+		"konrad_6": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"text": "Schlafen Sie gut, Elise. Und machen Sie sich keine Sorgen. Graubach ist ein ruhiges Dorf. Hier passiert nie etwas.",
+			"next": "konrad_leave"
+		},
+		"konrad_leave": {
+			"type": "narration",
+			"text": "Er lächelt noch einmal, dreht sich um und verschwindet im Nebel. Seine Schritte machen kein Geräusch auf dem Kopfsteinpflaster.",
+			"next": "konrad_gone"
+		},
+		"konrad_gone": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "hide",
+			"next": "narration_after_door"
+		},
+		"narration_after_door": {
+			"type": "narration",
+			"text": "Ich schließe die Tür. Mein Herz klopft. Ich weiß nicht, ob vor Erleichterung oder vor etwas Anderem.",
+			"next": "narration_after_door_2"
+		},
+		"narration_after_door_2": {
+			"type": "narration",
+			"text": "Das Singen hat aufgehört. Wann genau, weiß ich nicht. Aber jetzt ist es still.",
+			"next": "narration_after_door_3"
+		},
+		"narration_after_door_3": {
+			"type": "narration",
+			"text": "Zu still.",
+			"next": "converge_night"
+		},
+		"dont_open": {
+			"type": "narration",
+			"text": "Nein. Georg hat es gesagt. Ich presse die Hand auf den Mund, um keinen Laut von mir zu geben.",
+			"next": "dont_open_2"
+		},
+		"dont_open_2": {
+			"type": "narration",
+			"text": "Stille. Dann, drei weitere Schläge. Langsamer diesmal. Geduldiger.",
+			"next": "dont_open_3"
+		},
+		"dont_open_3": {
+			"type": "narration",
+			"text": "\"Ich weiß, dass Sie da sind, Elise.\"",
+			"next": "effect_knows_name"
+		},
+		"effect_knows_name": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.4
+			},
+			"next": "dont_open_4"
+		},
+		"dont_open_4": {
+			"type": "narration",
+			"text": "Mein Name. Er kennt meinen Namen.",
+			"next": "dont_open_5"
+		},
+		"dont_open_5": {
+			"type": "narration",
+			"text": "Durch den Spalt unter der Tür sehe ich einen Schatten. Er steht dort, geduldig, wartend. Minuten vergehen. Oder Stunden.",
+			"next": "dont_open_6"
+		},
+		"dont_open_6": {
+			"type": "narration",
+			"text": "Dann höre ich Schritte, die sich entfernen. Und leise, kaum hörbar, ein Summen. Die gleiche Melodie.",
+			"next": "dont_open_7"
+		},
+		"dont_open_7": {
+			"type": "narration",
+			"text": "Als die Schritte verklingen, bemerke ich, dass auch das Singen unter dem Boden verstummt ist.",
+			"next": "converge_night"
+		},
+		"converge_night": {
+			"type": "narration",
+			"text": "Der Rest der Nacht vergeht in erzwungener Wachheit. Ich sitze mit dem Rücken zur Wand und starre auf die Tür.",
+			"next": "converge_night_2"
+		},
+		"converge_night_2": {
+			"type": "narration",
+			"text": "Irgendwann wird der Himmel draußen grau. Fahles Novemberlicht sickert durch die Ritzen der Fensterläden. Die Nacht ist vorbei.",
+			"next": "snd_stop_underground"
+		},
+		"converge_night_3": {
+			"type": "narration",
+			"text": "Ich bin am Leben. Alles andere kann warten, bis der Kaffee kocht.",
+			"next": "journal_night"
+		},
+		"journal_night": {
+			"type": "journal",
+			"entry_id": "first_night",
+			"title": "Die erste Nacht",
+			"content": "Singen aus dem Untergrund. Klopfen an der Tür. Das Dorf hat ein Geheimnis. Großmutter hat es gewusst. Georg weiß es. Und wer immer vor meiner Tür stand - er kannte meinen Namen.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act1/village_exploration.json"
+		},
+		"snd_night": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_dark",
+			"path": "village_night.wav"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "narration_dream_2",
+			"path": "whispers.wav"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "narration_wake_3",
+			"path": "underground.wav"
+		},
+		"snd_glass": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "narration_singing_3",
+			"path": "glass_break.wav"
+		},
+		"snd_heartbeat": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "effect_knock",
+			"path": "heartbeat.wav"
+		},
+		"snd_stop_underground": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "converge_night_3"
+		}
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"elise": {
+		"name": "Elise",
+		"full_name": "Elise Brandt",
+		"age": 24,
+		"color": "#C8B896",
+		"description": "Folkloristik-Studentin aus Berlin. Rational, neugierig, dunkles Bob-Haar, Brille.",
+		"expressions": [
+			"neutral",
+			"happy",
+			"sad",
+			"afraid",
+			"angry",
+			"shocked",
+			"thinking",
+			"determined"
+		]
+	},
+	"voss": {
+		"name": "Pfarrer Voss",
+		"full_name": "Emil Voss",
+		"age": 55,
+		"color": "#8B8FA3",
+		"description": "Ausgemergelter Pfarrer, weiß um die Entität, vom Wissen gebrochen.",
+		"expressions": [
+			"neutral",
+			"worried",
+			"angry",
+			"afraid",
+			"praying",
+			"broken",
+			"warning"
+		]
+	},
+	"konrad": {
+		"name": "Konrad",
+		"full_name": "Konrad Mueller",
+		"age": 30,
+		"color": "#A89070",
+		"description": "Charmanter Dorflehrer, Gefäss der Entität.",
+		"expressions": [
+			"neutral",
+			"charming",
+			"suspicious",
+			"dark",
+			"possessed",
+			"sad",
+			"smiling"
+		]
+	},
+	"hilde": {
+		"name": "Hilde",
+		"full_name": "Hilde Falkenberg",
+		"age": 68,
+		"color": "#7A9B6D",
+		"description": "Kräuterfrau, praktiziert vorchristliche Wege.",
+		"expressions": [
+			"neutral",
+			"wise",
+			"warning",
+			"kind",
+			"mysterious",
+			"ritual",
+			"angry"
+		]
+	},
+	"georg": {
+		"name": "Georg",
+		"full_name": "Georg Brandt",
+		"age": 45,
+		"color": "#B08860",
+		"description": "Elises Onkel, Schmied, schuldbewusst, hat Schlüssel zur Kammer.",
+		"expressions": [
+			"neutral",
+			"guilty",
+			"angry",
+			"sad",
+			"determined",
+			"afraid",
+			"protective"
+		]
+	},
+	"anna": {
+		"name": "Anna",
+		"full_name": "Anna Voss",
+		"age": 19,
+		"color": "#9BAAB8",
+		"description": "Pfarrers Tochter, teilweise von der Entität berührt, zeichnet Spiralen.",
+		"expressions": [
+			"neutral",
+			"dreamy",
+			"afraid",
+			"drawing",
+			"possessed",
+			"lucid",
+			"crying"
+		]
+	},
+	"otto": {
+		"name": "Bürgermeister",
+		"full_name": "Otto Reinhardt",
+		"age": 60,
+		"color": "#8B7355",
+		"description": "Organisiert die Tradition - Opferrituale alle 30 Jahre.",
+		"expressions": [
+			"neutral",
+			"authoritative",
+			"threatening",
+			"jovial",
+			"angry",
+			"desperate"
+		]
+	},
+	"margarethe": {
+		"name": "Großmutter",
+		"full_name": "Margarethe Brandt",
+		"age": 78,
+		"color": "#A09080",
+		"description": "Elises Großmutter, tot bei Ankunft. Erscheint in Flashbacks und durch Notizen.",
+		"expressions": [
+			"neutral",
+			"kind",
+			"warning",
+			"young",
+			"ghostly"
+		]
+	}
+}

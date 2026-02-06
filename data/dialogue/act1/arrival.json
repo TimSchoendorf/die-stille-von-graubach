@@ -1,0 +1,538 @@
+{
+	"title": "Akt 1 - Großmutters Haus",
+	"start": "bg_house",
+	"nodes": {
+		"bg_house": {
+			"type": "background",
+			"background": "grandmother_house",
+			"transition": "fade",
+			"next": "snd_tension"
+		},
+		"effect_dark": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.3
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Das Innere von Großmutters Haus hat sich kaum verändert. Dieselben dunklen Holzmöbel, dieselben gehäkelten Decken.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Aber der Geruch ist anders. Unter dem vertrauten Duft von Kamillentee und Bienenwachs liegt etwas Süssliches. Etwas, das ich nicht einordnen kann.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Im Schlafzimmer liegt sie. Großmutter Margarethe. Die Decke ist bis zum Kinn hochgezogen, als hätte jemand sie sorgfältig zugedeckt.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Ihre Augen sind geschlossen. Ihr Mund lächelt leicht. Aber ihre Haut hat die Farbe von altem Pergament, und als ich ihre Hand berühre, ist sie kalt wie Stein.",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Auf dem Nachttisch stehen drei Dinge: eine Kerze, die brennt. Ein Glas mit trübem Wasser. Und ein kleines Notizbuch mit Ledereinband.",
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "Die Kerze. Sie brennt. Seit drei Tagen, wenn die Nachbarn Recht haben.",
+			"next": "effect_candle_flicker"
+		},
+		"effect_candle_flicker": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 2,
+				"interval": 0.15
+			},
+			"next": "flag_check_item"
+		},
+		"flag_check_item": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "books_reaction",
+			"false_next": "flag_check_cross"
+		},
+		"flag_check_cross": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "cross_reaction",
+			"false_next": "flag_check_camera"
+		},
+		"flag_check_camera": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "camera_reaction",
+			"false_next": "general_reaction"
+		},
+		"books_reaction": {
+			"type": "narration",
+			"text": "In meinen Büchern steht, dass brennende Kerzen neben Toten den Übergang markieren. Manche Traditionen glauben, die Flamme hält die Seele am Ort fest, bis das Unerledigte getan ist.",
+			"next": "books_reaction_2"
+		},
+		"books_reaction_2": {
+			"type": "narration",
+			"text": "Aber keine Kerze brennt drei Tage lang, ohne nachgefüllt zu werden. Diese ist kaum kürzer als eine neue.",
+			"next": "meet_georg"
+		},
+		"cross_reaction": {
+			"type": "narration",
+			"text": "Instinktiv greife ich an die Kette um meinen Hals, an der Mutters Kruzifix hängt. Das Holz ist warm unter meinen Fingern - wärmer als es sein sollte.",
+			"next": "cross_reaction_2"
+		},
+		"cross_reaction_2": {
+			"type": "narration",
+			"text": "Neben dem Bett murmele ich ein Gebet. Die Worte fühlen sich fremd an in diesem Raum. Als gehörten sie nicht hierher.",
+			"next": "meet_georg"
+		},
+		"camera_reaction": {
+			"type": "narration",
+			"text": "Mein erster Instinkt ist, die Kamera zu heben. Die Szene festzuhalten. Aber dann senke ich sie wieder. Manche Dinge gehören nicht auf Film.",
+			"next": "camera_reaction_2"
+		},
+		"camera_reaction_2": {
+			"type": "narration",
+			"text": "Trotzdem - die Kerze. Ich fotografiere sie aus der Nähe. Im Sucher sehe ich etwas, das ich mit bloßem Auge nicht bemerkt habe: Das Wachs tropft nicht nach unten. Es spiralt sich um die Kerze herum.",
+			"next": "meet_georg"
+		},
+		"general_reaction": {
+			"type": "narration",
+			"text": "Ein Schauer läuft mir ueber den Rücken. Die Kerze flackert, obwohl kein Luftzug im Raum ist. Die Flamme beugt sich - in meine Richtung.",
+			"next": "meet_georg"
+		},
+		"meet_georg": {
+			"type": "narration",
+			"text": "Hinter mir knarrt der Holzboden. Ich fahre herum.",
+			"next": "show_georg"
+		},
+		"show_georg": {
+			"type": "character",
+			"character": "georg",
+			"expression": "guilty",
+			"position": "right",
+			"action": "show",
+			"next": "set_met_georg"
+		},
+		"set_met_georg": {
+			"type": "set_flag",
+			"flag": "met_georg",
+			"value": 1,
+			"next": "narration_georg_1"
+		},
+		"narration_georg_1": {
+			"type": "narration",
+			"text": "Ein Mann steht im Türrahmen. Groß, breitschultrig, mit Händen wie Schaufeln. Sein Gesicht ist wettergegerbt, die Augen müde.",
+			"next": "narration_georg_2"
+		},
+		"narration_georg_2": {
+			"type": "narration",
+			"text": "Onkel Georg. Großmutters einziger Sohn. Der Schmied von Graubach.",
+			"next": "georg_1"
+		},
+		"georg_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Elise.",
+			"next": "georg_2"
+		},
+		"georg_2": {
+			"type": "narration",
+			"text": "Er sagt nur meinen Namen. Aber in diesem einen Wort liegt so viel - Erleichterung, Schuld, und etwas, das wie Angst klingt.",
+			"next": "georg_3"
+		},
+		"georg_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Du bist gekommen. Ich hatte gehofft... und gleichzeitig gefürchtet, dass du es tun würdest.",
+			"next": "georg_4"
+		},
+		"georg_4": {
+			"type": "character",
+			"character": "georg",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "georg_5"
+		},
+		"georg_5": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Deine Großmutter... es tut mir leid, Kind. Wir haben sie vor drei Tagen so gefunden. Friedlich, sagen die Leute. Im Schlaf.",
+			"next": "georg_6"
+		},
+		"georg_6": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Aber ihr Gesicht... sie hat gelächelt, Elise. Als hätte sie etwas gewusst, das wir nicht wissen.",
+			"next": "choice_georg"
+		},
+		"choice_georg": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Wer hat den Brief geschickt? Er wurde heute abgestempelt.",
+					"set_flags": {
+						"questioned_letter": 1
+					},
+					"next": "georg_letter"
+				},
+				{
+					"text": "Warum brennt die Kerze noch nach drei Tagen?",
+					"set_flags": {
+						"questioned_candle": 1
+					},
+					"next": "georg_candle"
+				},
+				{
+					"text": "Was sind das für Notizen auf dem Nachttisch?",
+					"set_flags": {
+						"questioned_notes": 1
+					},
+					"next": "georg_notes"
+				}
+			]
+		},
+		"georg_letter": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "georg_letter_1"
+		},
+		"georg_letter_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Brief? Was für ein Brief?",
+			"next": "georg_letter_2"
+		},
+		"georg_letter_2": {
+			"type": "narration",
+			"text": "Ich zeige ihm den Umschlag. Georg wird blass. Seine großen Hände zittern, als er ihn berührt.",
+			"next": "georg_letter_3"
+		},
+		"georg_letter_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Das ist... das ist ihre Schrift. Aber Elise - wir haben kein Postamt in Graubach. Nicht mehr. Und der nächste ist zwei Tagesreisen entfernt.",
+			"next": "georg_letter_4"
+		},
+		"georg_letter_4": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "georg_letter_5"
+		},
+		"georg_letter_5": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Dieser Brief... er kann nicht existieren.",
+			"next": "georg_converge"
+		},
+		"georg_candle": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "georg_candle_1"
+		},
+		"georg_candle_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Die Kerze... Ja. Wir haben versucht sie zu löschen. Am ersten Tag schon.",
+			"next": "georg_candle_2"
+		},
+		"georg_candle_2": {
+			"type": "narration",
+			"text": "Georg schluckt schwer. Er sieht die Kerze an wie einen Feind, den er nicht besiegen kann.",
+			"next": "georg_candle_3"
+		},
+		"georg_candle_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Sie geht nicht aus, Elise. Wir haben gepustet, Wasser drüber geschüttet, den Docht abgeschnitten. Am nächsten Morgen brannte sie wieder.",
+			"next": "georg_candle_4"
+		},
+		"georg_candle_4": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Löscht sie nicht. Bitte. Ich weiß nicht warum, aber... löscht sie nicht.",
+			"next": "georg_converge"
+		},
+		"georg_notes": {
+			"type": "character",
+			"character": "georg",
+			"expression": "guilty",
+			"position": "right",
+			"action": "show",
+			"next": "georg_notes_1"
+		},
+		"georg_notes_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "angry",
+			"text": "Rühr die nicht an! Nicht... nicht jetzt.",
+			"next": "georg_notes_2"
+		},
+		"georg_notes_2": {
+			"type": "narration",
+			"text": "Georg fährt erschrocken zusammen, als hätte er selbst nicht erwartet, so heftig zu reagieren. Er fährt sich ueber das Gesicht.",
+			"next": "georg_notes_3"
+		},
+		"georg_notes_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Verzeih mir. Es ist... deine Großmutter hat in den letzten Wochen viel geschrieben. Tag und Nacht. Als würde ihr die Zeit davonlaufen.",
+			"next": "georg_notes_4"
+		},
+		"georg_notes_4": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Ich habe reingesehen. Einmal. Es hat mir... es hat mir Albträume gemacht, Elise. Aber vielleicht bist du diejenige, die es lesen muss.",
+			"next": "georg_converge"
+		},
+		"georg_converge": {
+			"type": "narration",
+			"text": "Draußen wird es dunkel. Die Schatten in den Zimmerecken werden tiefer. Die Kerze wirft zuckende Lichter an die Wand.",
+			"next": "effect_evening_vignette"
+		},
+		"effect_evening_vignette": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.5,
+				"duration": 1.5
+			},
+			"next": "effect_evening_desat"
+		},
+		"effect_evening_desat": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.3
+			},
+			"next": "snd_bells"
+		},
+		"sound_bells": {
+			"type": "narration",
+			"text": "Dann höre ich es. Die Kirchenglocke. Einmal. Zweimal. Dreimal.",
+			"next": "narration_bells_2"
+		},
+		"narration_bells_2": {
+			"type": "narration",
+			"text": "Es ist keine volle Stunde. Und der Klang ist... falsch. Zu tief. Als käme er nicht vom Turm, sondern von unter der Erde.",
+			"next": "effect_shake"
+		},
+		"effect_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 3.0,
+				"duration": 0.8
+			},
+			"next": "georg_react"
+		},
+		"georg_react": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "georg_react_1"
+		},
+		"georg_react_1": {
+			"type": "narration",
+			"text": "Georg erstarrt. Alle Farbe weicht aus seinem Gesicht. Er greift nach dem Türrahmen, als brauchte er Halt.",
+			"next": "georg_react_2"
+		},
+		"georg_react_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Ich muss gehen. Sofort.",
+			"next": "georg_react_3"
+		},
+		"georg_react_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Elise, hör mir zu. Bleib heute Nacht hier. Schließ die Tür ab. Leg den Riegel vor. Und wenn es klopft - wenn es klopft, dann oeffne nicht.",
+			"next": "choice_georg_leave"
+		},
+		"choice_georg_leave": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Was geht hier vor, Georg? Sag mir die Wahrheit!",
+					"set_flags": {
+						"demanded_truth": 1
+					},
+					"next": "georg_demand"
+				},
+				{
+					"text": "Wohin gehst du? Kann ich mitkommen?",
+					"set_flags": {
+						"wanted_to_follow": 1
+					},
+					"next": "georg_follow"
+				},
+				{
+					"text": "...Gut. Ich bleibe hier.",
+					"set_flags": {
+						"stayed_quiet": 1
+					},
+					"next": "georg_quiet"
+				}
+			]
+		},
+		"georg_demand": {
+			"type": "character",
+			"character": "georg",
+			"expression": "guilty",
+			"position": "right",
+			"action": "show",
+			"next": "georg_demand_1"
+		},
+		"georg_demand_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Die Wahrheit? Die Wahrheit ist, dass ich dir nicht alles sagen kann. Noch nicht. Es würde keinen Sinn ergeben.",
+			"next": "georg_demand_2"
+		},
+		"georg_demand_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Morgen. Morgen früstücken wir zusammen, und ich erzähle dir... so viel ich kann. Aber heute Nacht - bitte, Elise. Vertrau mir.",
+			"next": "georg_leave"
+		},
+		"georg_follow": {
+			"type": "character",
+			"character": "georg",
+			"expression": "protective",
+			"position": "right",
+			"action": "show",
+			"next": "georg_follow_1"
+		},
+		"georg_follow_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"text": "Nein! Auf keinen Fall. Nicht in der Nacht. Nicht... du darfst nachts nicht nach draußen, Elise. Versprich es mir.",
+			"next": "georg_follow_2"
+		},
+		"georg_follow_2": {
+			"type": "narration",
+			"text": "Die Angst in seinen Augen ist echt. Georg war nie ein Mann, der leicht Angst zeigte. Als Kind habe ich ihn einmal gesehen, wie er mit bloßen Händen ein durchgehendes Pferd zum Stehen brachte.",
+			"next": "georg_leave"
+		},
+		"georg_quiet": {
+			"type": "narration",
+			"text": "Georg sieht mich an. Einen langen Moment. Dann nickt er, und ich sehe Erleichterung in seinen Augen - und gleichzeitig tiefe Traurigkeit.",
+			"next": "georg_quiet_2"
+		},
+		"georg_quiet_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Du bist wie deine Großmutter. Stärker als du weißt.",
+			"next": "georg_leave"
+		},
+		"georg_leave": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "hide",
+			"next": "narration_alone_1"
+		},
+		"narration_alone_1": {
+			"type": "narration",
+			"text": "Die Tür fällt ins Schloss. Ich schiebe den Riegel vor, wie Georg gesagt hat.",
+			"next": "narration_alone_2"
+		},
+		"narration_alone_2": {
+			"type": "narration",
+			"text": "Allein. Mit der Leiche meiner Großmutter. Und einer Kerze, die nicht ausgehen will.",
+			"next": "narration_alone_3"
+		},
+		"narration_alone_3": {
+			"type": "narration",
+			"text": "Draußen ist es jetzt völlig dunkel. Durch die Fensterläden dringt kein Licht. Kein Mond, keine Sterne. Nur die schwere, satte Schwärze eines Novemberabends im Schwarzwald.",
+			"next": "effect_alone_dark"
+		},
+		"effect_alone_dark": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.6,
+				"duration": 2.0
+			},
+			"next": "narration_alone_4"
+		},
+		"narration_alone_4": {
+			"type": "narration",
+			"text": "Ich setze mich an den Küchentisch. Großmutters Teekanne steht noch da, halb voll. Daneben ein angebissenes Stück Brot, hart wie Holz.",
+			"next": "narration_alone_5"
+		},
+		"narration_alone_5": {
+			"type": "narration",
+			"text": "Drei Tage. Sie ist seit drei Tagen tot, aber der Brief wurde heute abgestempelt. Die Kerze brennt noch. Und die Kirchenglocken läuten zu keiner Stunde.",
+			"next": "journal_grandmother"
+		},
+		"journal_grandmother": {
+			"type": "journal",
+			"entry_id": "grandmother_death",
+			"title": "Großmutter Margarethe",
+			"content": "Großmutter ist tot. Seit drei Tagen, sagt Georg. Aber der Brief kam heute. Die Kerze neben ihrem Bett lässt sich nicht löschen. Georg hat Angst - echte, tiefe Angst. Was verschweigt er?",
+			"next": "journal_georg_entry"
+		},
+		"journal_georg_entry": {
+			"type": "journal",
+			"entry_id": "first_meeting_georg",
+			"title": "Onkel Georg",
+			"content": "Georg ist verändert. Älter, müder, schuldbewusst. Er warnte mich vor der Nacht, wollte nicht sagen warum. Die Kirchenglocken haben ihn erschreckt - als wären sie ein Signal.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act1/first_night.json"
+		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "snd_clock",
+			"path": "tension.wav"
+		},
+		"snd_clock": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "effect_dark",
+			"path": "clock_ticking.wav"
+		},
+		"snd_bells": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "sound_bells",
+			"path": "church_bell.wav"
+		}
+	}
+}

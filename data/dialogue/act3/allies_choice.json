@@ -1,0 +1,331 @@
+{
+	"title": "Akt 3 - Verbündete",
+	"start": "bg_village",
+	"nodes": {
+		"bg_village": {
+			"type": "background",
+			"background": "village_corrupted",
+			"transition": "fade",
+			"next": "snd_tension"
+		},
+		"effect_mood": {
+			"type": "effect",
+			"effect": "bg_corruption",
+			"params": {
+				"intensity": 0.3,
+				"duration": 1.5
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Tag sechs, Nachmittag. Morgen ist der Jahrestag. Ich brauche Hilfe - und ich muss mich entscheiden, wem ich vertraue.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer. Und Konrad... Konrad ist der Schlüssel zu allem - oder die grösste Gefahr.",
+			"next": "choice_primary_ally"
+		},
+		"choice_primary_ally": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Georg als Hauptverbündeten wählen - Stärke und Loyalität",
+					"set_flags": {
+						"ally_georg": 1,
+						"georg_trust": 10
+					},
+					"next": "ally_georg"
+				},
+				{
+					"text": "Hilde als Hauptverbündete wählen - Wissen und Erfahrung",
+					"set_flags": {
+						"ally_hilde": 1,
+						"hilde_trust": 10
+					},
+					"next": "ally_hilde"
+				},
+				{
+					"text": "Voss als Hauptverbündeten wählen - Zugang und Reue",
+					"set_flags": {
+						"ally_voss": 1,
+						"voss_trust": 10
+					},
+					"next": "ally_voss"
+				}
+			]
+		},
+		"ally_georg": {
+			"type": "background",
+			"background": "blacksmith_shop",
+			"transition": "fade",
+			"next": "show_georg_ally"
+		},
+		"show_georg_ally": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "right",
+			"action": "show",
+			"next": "georg_ally_1"
+		},
+		"georg_ally_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Du willst es wirklich durchziehen. Margarethes Ritual. Ich habe gehofft, dass du gehst, Elise. Aber ich habe auch gewusst, dass du bleibst.",
+			"next": "georg_ally_2"
+		},
+		"georg_ally_2": {
+			"type": "character",
+			"character": "georg",
+			"expression": "protective",
+			"position": "right",
+			"action": "show",
+			"next": "georg_ally_3"
+		},
+		"georg_ally_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Ich bin dabei. Ich werde Otto aufhalten, wenn er kommt. Er wird kommen - er hat Männer, aber ich habe Hämmer. Und dreißig Jahre aufgestaute Wut.",
+			"next": "georg_ally_4"
+		},
+		"georg_ally_4": {
+			"type": "narration",
+			"text": "Georg nimmt einen schweren Schmiedehammer von der Wand. In seinen Augen brennt ein Feuer, das ich noch nie gesehen habe. Vielleicht das Feuer, das dreißig Jahre lang nur geglüht hat.",
+			"next": "hide_georg_ally"
+		},
+		"hide_georg_ally": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "right",
+			"action": "hide",
+			"next": "ally_converge"
+		},
+		"ally_hilde": {
+			"type": "background",
+			"background": "hilde_cottage",
+			"transition": "fade",
+			"next": "show_hilde_ally"
+		},
+		"show_hilde_ally": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_ally_1"
+		},
+		"hilde_ally_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Morgen also. Der Gesang muss bei Sonnenuntergang beginnen, wenn das Wesen zwischen Schlaf und Wachen liegt. Dann ist es am verwundbarsten.",
+			"next": "hilde_ally_2"
+		},
+		"hilde_ally_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Ich werde dir helfen, den Gesang zu stärken. Meine Stimme mag alt sein, aber zusammen - vielleicht reicht es. Die alten Völker haben immer im Chor gesungen.",
+			"next": "hilde_ally_3"
+		},
+		"hilde_ally_3": {
+			"type": "narration",
+			"text": "Hilde beginnt, Kräuterbündel zusammenzubinden und Zeichen auf Stoffstreifen zu malen. Sie murmelt dabei leise den Gesang. Die Luft in der Hütte verdichtet sich.",
+			"next": "hide_hilde_ally"
+		},
+		"hide_hilde_ally": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "center",
+			"action": "hide",
+			"next": "ally_converge"
+		},
+		"ally_voss": {
+			"type": "background",
+			"background": "church_interior",
+			"transition": "fade",
+			"next": "show_voss_ally"
+		},
+		"show_voss_ally": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "right",
+			"action": "show",
+			"next": "voss_ally_1"
+		},
+		"voss_ally_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "angry",
+			"text": "Dreißig Jahre habe ich geschwiegen. Dreißig Jahre habe ich zugesehen. Das endet morgen.",
+			"next": "voss_ally_2"
+		},
+		"voss_ally_2": {
+			"type": "character",
+			"character": "voss",
+			"expression": "broken",
+			"position": "right",
+			"action": "show",
+			"next": "voss_ally_3"
+		},
+		"voss_ally_3": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "warning",
+			"text": "Ich kenne jeden Stein in dieser Kammer. Ich weiß, wo die Fallen sind, wo der Boden dünn ist, wo das Singen am lautesten wird. Ich werde Sie führen.",
+			"next": "voss_ally_4"
+		},
+		"voss_ally_4": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Und wenn es schiefgeht... dann gehe ich als Erster. Das bin ich Friedrich Meier schuldig. Allen bin ich das schuldig.",
+			"next": "hide_voss_ally"
+		},
+		"hide_voss_ally": {
+			"type": "character",
+			"character": "voss",
+			"expression": "broken",
+			"position": "right",
+			"action": "hide",
+			"next": "ally_converge"
+		},
+		"ally_converge": {
+			"type": "narration",
+			"text": "Ich habe einen Verbündeten. Aber reicht das? Der Abend bricht herein, und mit ihm wird die Welt noch seltsamer.",
+			"next": "choice_konrad_final"
+		},
+		"choice_konrad_final": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Konrad aufsuchen - vielleicht kann er dem Wesen widerstehen",
+					"set_flags": {
+						"sought_konrad": 1
+					},
+					"next": "konrad_final"
+				},
+				{
+					"text": "Konrad meiden - er ist zu gefährlich",
+					"set_flags": {
+						"avoided_konrad": 1
+					},
+					"next": "avoided_konrad"
+				}
+			]
+		},
+		"konrad_final": {
+			"type": "background",
+			"background": "village_school",
+			"transition": "fade",
+			"next": "show_konrad_final"
+		},
+		"show_konrad_final": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_final_1"
+		},
+		"konrad_final_1": {
+			"type": "narration",
+			"text": "Konrad sitzt allein im Klassenzimmer. Er hat Spiralen an die Tafel gezeichnet - Dutzende, ineinander verschlungen. Als ich eintrete, wischt er sie hastig ab.",
+			"next": "konrad_final_2"
+		},
+		"konrad_final_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Elise. Ich... es wird schlimmer. Ich verliere mich. Nachts wache ich an Orten auf, an die ich nicht gegangen bin. Meine Hände tun Dinge, die ich nicht will.",
+			"next": "effect_konrad_glitch"
+		},
+		"effect_konrad_glitch": {
+			"type": "effect",
+			"effect": "sprite_distortion",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "konrad_final_3"
+		},
+		"konrad_final_3": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_final_4"
+		},
+		"konrad_final_4": {
+			"type": "narration",
+			"text": "Seine Augen flackern - braun, dann etwas anderes, tiefer, aelter. Für einen Moment sehe ich etwas Riesiges hinter seinen Pupillen, wie einen Ozean hinter einer Glasscheibe.",
+			"next": "effect_possession"
+		},
+		"effect_possession": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 0.8
+			},
+			"next": "konrad_final_5"
+		},
+		"konrad_final_5": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_final_6"
+		},
+		"konrad_final_6": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Hilf mir, Elise. Bitte. Bevor es mich ganz hat. Ich will nicht sein Werkzeug sein.",
+			"next": "set_konrad_plea"
+		},
+		"set_konrad_plea": {
+			"type": "set_flag",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"next": "hide_konrad_final"
+		},
+		"hide_konrad_final": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "hide",
+			"next": "ally_final_converge"
+		},
+		"avoided_konrad": {
+			"type": "narration",
+			"text": "Konrad ist nicht mehr Konrad. Nicht ganz. Ich kann das Risiko nicht eingehen, dass das Wesen durch ihn von meinem Plan erfährt.",
+			"next": "ally_final_converge"
+		},
+		"ally_final_converge": {
+			"type": "journal",
+			"entry_id": "allies_chosen",
+			"title": "Verbündete gewählt",
+			"content": "Morgen ist der Tag der Fütterung. Ich habe meine Verbündeten gewählt und den Plan besprochen. Großmutters Bindungsritual statt des Blutrituals. Anna sagt, das Wesen hat Angst vor mir. Das macht zwei von uns.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act3/descent.json"
+		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_mood",
+			"path": "tension.wav"
+		}
+	}
+}

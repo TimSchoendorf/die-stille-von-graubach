@@ -1,0 +1,131 @@
+{
+	"title": "Ende - Das Siegel",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Ich beginne den Gesang. Die Worte, die Hilde mich gelehrt hat - aelter als jede Sprache, die ich kenne. Sie fließen aus mir heraus, als hätte ich sie immer gekannt.",
+			"next": "snd_ritual_cont"
+		},
+		"effect_chant_start": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.4
+			},
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Die Kammer reagiert. Die Spiralen an den Wänden beginnen zu leuchten, schwach zürst, dann stärker. Ein bläuliches Licht, kalt wie Mondschein.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Das Singen aus der Tiefe verändert sich. Es kämpft nicht gegen meinen Gesang - es antwortet. Zwei Melodien, die sich verflechten wie die Spiralen an den Wänden.",
+			"next": "effect_merge"
+		},
+		"effect_merge": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.3,
+				"max": 1.0,
+				"cycle": 2.0
+			},
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Der Boden unter mir pulsiert schneller. Ich spüre das Wesen - seine Aufmerksamkeit, sein Alter, seine unendliche Müdigkeit. Es WILL schlafen. Es hat nur vergessen, wie.",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Großmutters Worte: 'Es ist nicht böse. Es ist nur alt und hungrig und allein.' Ich verstehe jetzt. Die Fütterung war nie nötig. Es brauchte nur jemanden, der es zurück in den Schlaf singt.",
+			"next": "effect_seal_forming"
+		},
+		"effect_seal_forming": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "Die Spiralen verdichten sich zu einem Muster auf dem Boden. Ein Siegel. Nicht aus Stein oder Tinte - aus Klang, aus Willen, aus der Verbindung zwischen meiner Stimme und dem Wesen.",
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Das Pulsieren wird langsamer. Ruhiger. Wie ein Kind, das endlich einschläft. Das bläuliche Licht verblasst zu einem sanften Schimmer.",
+			"next": "effect_calm"
+		},
+		"effect_calm": {
+			"type": "effect",
+			"effect": "clear",
+			"params": {},
+			"next": "snd_stop_amb"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Stille. Echte Stille. Zum ersten Mal seit ich Graubach betreten habe, ist es wirklich still. Kein Singen, kein Pulsieren, kein Flüstern in meinem Kopf.",
+			"next": "narration_9"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Ich steige die Treppe hinauf, durch die Kirche, ins Morgenlicht. Es ist ein neuer Tag. Der Himmel ist blau. Richtig blau.",
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Georg wartet draußen, Hilde neben ihm. Sie sehen mein Gesicht und wissen Bescheid. Hilde nickt. Georg weint.",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. In dreißig Jahren, wenn das Siegel erneuert werden muss. Oder früher, um jemanden zu finden, der nach mir singt.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Großmutter, ich habe es geschafft. Dein Lebenswerk ist vollendet.",
+			"next": "journal_seal"
+		},
+		"journal_seal": {
+			"type": "journal",
+			"entry_id": "ending_seal",
+			"title": "Das Siegel",
+			"content": "Das Bindungsritual gelang. Das Wesen schläft wieder, gehalten durch Gesang statt durch Blut. Kein Opfer mehr. Großmutters dreißig Jahre Forschung haben sich bewährt.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:seal"
+		},
+		"snd_ritual_cont": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_chant_start",
+			"path": "ritual.wav"
+		},
+		"snd_stop_amb": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "snd_peaceful"
+		},
+		"snd_peaceful": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_8",
+			"path": "ending_peaceful.wav"
+		}
+	}
+}

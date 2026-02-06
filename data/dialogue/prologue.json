@@ -1,0 +1,534 @@
+{
+	"title": "Prolog - Der Brief",
+	"start": "bg_berlin",
+	"nodes": {
+		"bg_berlin": {
+			"type": "background",
+			"background": "berlin_apartment",
+			"transition": "fade",
+			"next": "snd_rain"
+		},
+		"wait_start": {
+			"type": "wait",
+			"duration": 1.0,
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Berlin, November 1923.",
+			"next": "narration_1b"
+		},
+		"narration_1b": {
+			"type": "narration",
+			"text": "Der Regen trommelt gegen das Fenster meiner kleinen Wohnung in Charlottenburg. Draußen läuft eine Frau mit gesenktem Kopf durch die Pfützen. Sie sieht nicht auf.",
+			"next": "narration_1c"
+		},
+		"narration_1c": {
+			"type": "narration",
+			"text": "Niemand sieht in diesen Tagen auf. Die Inflation frisst das Land. Ein Brot kostet Milliarden. Aber das ist nicht der Grund, warum meine Hände zittern.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Zwischen Stapeln von Folklore-Büchern und halbfertigen Seminararbeiten liegt ein Brief. Der Umschlag ist feucht vom Regen, aber die Tinte hat gehalten.",
+			"next": "narration_2b"
+		},
+		"narration_2b": {
+			"type": "narration",
+			"text": "Der Poststempel ist von heute. Die Handschrift gehört meiner Großmutter Margarethe.",
+			"next": "narration_2c"
+		},
+		"narration_2c": {
+			"type": "narration",
+			"text": "Großmutter hat mir seit fünf Monaten nicht geschrieben. Meine letzten drei Briefe blieben unbeantwortet. Ich hatte angefangen mir Sorgen zu machen.",
+			"next": "show_elise"
+		},
+		"show_elise": {
+			"type": "character",
+			"character": "elise",
+			"expression": "thinking",
+			"position": "center",
+			"action": "show",
+			"next": "elise_1"
+		},
+		"elise_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Diese Handschrift... ja, das ist sie. Aber sie zittert stärker als früher. Und die Tinte - sie hat mit etwas Dunklerem geschrieben als sonst.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Ich oeffne den Brief vorsichtig. Das Papier riecht nach... Krautern? Und nach etwas Anderem. Erde, vielleicht. Oder Asche.",
+			"next": "narration_3b"
+		},
+		"narration_3b": {
+			"type": "narration",
+			"text": "Der Brief ist kurz. Nur drei Sätze, in zittriger Schrift:",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "\"Liebste Elise, komm nach Graubach. Es ist an der Zeit, dass du die Wahrheit erfährst. Bring etwas mit, das dich schützt.\"",
+			"next": "elise_2"
+		},
+		"elise_2": {
+			"type": "character",
+			"character": "elise",
+			"expression": "worried",
+			"position": "center",
+			"action": "show",
+			"next": "elise_3"
+		},
+		"elise_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "\"Etwas, das mich schützt\"? Großmutter, was soll das bedeuten?",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Ich drehe den Brief um. Auf der Rückseite ist etwas eingeritzt - kein geschriebenes Wort, sondern ein Symbol. Eine Spirale, die sich nach innen windet.",
+			"next": "narration_5b"
+		},
+		"narration_5b": {
+			"type": "narration",
+			"text": "In meinen Folklore-Studien habe ich dieses Symbol gesehen. Es ist alt. Älter als das Christentum in diesen Ländern. Ein Schutzzeichen - oder eine Warnung.",
+			"next": "elise_4"
+		},
+		"elise_4": {
+			"type": "character",
+			"character": "elise",
+			"expression": "determined",
+			"position": "center",
+			"action": "show",
+			"next": "elise_5"
+		},
+		"elise_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Der nächste Zug nach Süden fährt morgen früh um sechs. Ich muss packen.",
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "narration",
+			"text": "Mein Blick wandert durch die Wohnung. Ich kann nicht viel mitnehmen - nur das Wichtigste. Aber Großmutters Worte lassen mich zögern.",
+			"next": "narration_6b"
+		},
+		"narration_6b": {
+			"type": "narration",
+			"text": "\"Bring etwas mit, das dich schützt.\"",
+			"next": "choice_pack"
+		},
+		"choice_pack": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Meine Folklore-Bücher - Wissen ist Schutz",
+					"set_flags": {
+						"packed_item": 1
+					},
+					"next": "pack_books"
+				},
+				{
+					"text": "Mutters altes Kruzifix - Glaube ist Schutz",
+					"set_flags": {
+						"packed_item": 2
+					},
+					"next": "pack_cross"
+				},
+				{
+					"text": "Meine Kamera - Wahrheit ist Schutz",
+					"set_flags": {
+						"packed_item": 3
+					},
+					"next": "pack_camera"
+				}
+			]
+		},
+		"pack_books": {
+			"type": "narration",
+			"text": "Ich packe drei Bücher ein: Grimms Sagen, eine Abhandlung ueber germanische Schutzrituale und meine eigenen Notizen zur Schwarzwälder Folklore.",
+			"next": "pack_books_2"
+		},
+		"pack_books_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Wissen hat mich noch nie im Stich gelassen. Was immer Großmutter meint - ich werde es in den Büchern finden.",
+			"next": "pack_books_3"
+		},
+		"pack_books_3": {
+			"type": "narration",
+			"text": "Zwischen den Seiten meines Notizbuches finde ich gepresste Blumen aus Graubach. Arnika und Eisenhut. Großmutter hatte sie mir beim letzten Besuch in die Hand gedrückt.",
+			"next": "journal_pack"
+		},
+		"pack_cross": {
+			"type": "narration",
+			"text": "Das Kruzifix liegt in einer Schublade, eingewickelt in ein Tuch. Es ist aus dunklem Holz, handgeschnitzt. Meine Mutter trug es bis zu ihrem Tod.",
+			"next": "pack_cross_2"
+		},
+		"pack_cross_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich bin keine gläubige Frau. Aber Mutter war es - und Großmutter ist es auch. Vielleicht liegt darin ein Schutz, den ich nicht verstehe.",
+			"next": "pack_cross_3"
+		},
+		"pack_cross_3": {
+			"type": "narration",
+			"text": "Als ich es in die Hand nehme, fühlt das Holz warm an. Fast zu warm für ein Stück, das monatelang in einer Schublade lag.",
+			"next": "journal_pack"
+		},
+		"pack_camera": {
+			"type": "narration",
+			"text": "Meine Leica. Gebraucht gekauft von einem Fotografen, der das Land verließ. Sechs Rollen Film dazu - mehr kann ich mir nicht leisten.",
+			"next": "pack_camera_2"
+		},
+		"pack_camera_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Was immer in Graubach geschieht - ich werde es dokumentieren. Bilder lügen nicht. Im Gegensatz zu Menschen.",
+			"next": "pack_camera_3"
+		},
+		"pack_camera_3": {
+			"type": "narration",
+			"text": "Ich lade den ersten Film ein und mache ein Testbild von dem Brief. Durch den Sucher wirkt die Spirale auf der Rückseite grösser, als sie sein sollte.",
+			"next": "journal_pack"
+		},
+		"journal_pack": {
+			"type": "journal",
+			"entry_id": "brief",
+			"title": "Der Brief aus Graubach",
+			"content": "Großmutter schreibt nach fünf Monaten Schweigen. Drei rätselhafte Sätze und eine eingeritzte Spirale. Der Poststempel ist von heute - wie kann ein Brief aus dem Schwarzwald an einem einzigen Tag nach Berlin kommen?",
+			"next": "set_prologue_pack"
+		},
+		"set_prologue_pack": {
+			"type": "set_flag",
+			"flag": "prologue_complete",
+			"value": 1,
+			"next": "narration_night"
+		},
+		"narration_night": {
+			"type": "narration",
+			"text": "Ich schlafe schlecht in dieser Nacht. Im Traum höre ich Singen - einen Chor aus vielen Stimmen, tief und alt. Die Melodie kenne ich nicht, aber mein Körper kennt sie.",
+			"next": "narration_night_2"
+		},
+		"narration_night_2": {
+			"type": "narration",
+			"text": "Als der Wecker um halb fünf klingelt, bin ich bereits wach. Meine Finger sind kalt. An der beschlagenen Fensterscheibe hat jemand - oder etwas - eine Spirale gezeichnet.",
+			"next": "narration_night_3"
+		},
+		"narration_night_3": {
+			"type": "narration",
+			"text": "Von innen.",
+			"next": "effect_flash"
+		},
+		"effect_flash": {
+			"type": "effect",
+			"effect": "flash",
+			"params": {
+				"duration": 0.2
+			},
+			"next": "transition_train"
+		},
+		"transition_train": {
+			"type": "transition",
+			"transition": "fade_out",
+			"duration": 1.5,
+			"next": "bg_train"
+		},
+		"bg_train": {
+			"type": "background",
+			"background": "train_interior",
+			"transition": "fade",
+			"next": "transition_train_in"
+		},
+		"transition_train_in": {
+			"type": "transition",
+			"transition": "fade_in",
+			"duration": 1.0,
+			"next": "snd_stop_rain"
+		},
+		"show_elise_train": {
+			"type": "character",
+			"character": "elise",
+			"expression": "neutral",
+			"position": "center",
+			"action": "show",
+			"next": "narration_train_1"
+		},
+		"narration_train_1": {
+			"type": "narration",
+			"text": "Der Zug rattert durch die Novemberlandschaft. Berlin liegt drei Stunden hinter mir. Die Städte werden kleiner, die Wälder dichter.",
+			"next": "narration_train_2"
+		},
+		"narration_train_2": {
+			"type": "narration",
+			"text": "Gegenüber sitzt eine aeltere Frau mit einem Korb auf dem Schoss. Sie strickt und summt leise. Die Melodie...",
+			"next": "narration_train_3"
+		},
+		"narration_train_3": {
+			"type": "narration",
+			"text": "Es ist dieselbe Melodie aus meinem Traum.",
+			"next": "snd_whispers"
+		},
+		"effect_vignette_train": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.15
+			},
+			"next": "elise_train_1"
+		},
+		"elise_train_1": {
+			"type": "character",
+			"character": "elise",
+			"expression": "worried",
+			"position": "center",
+			"action": "show",
+			"next": "elise_train_2"
+		},
+		"elise_train_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Entschuldigung... dieses Lied, das Sie summen. Woher kennen Sie es?",
+			"next": "narration_train_old"
+		},
+		"narration_train_old": {
+			"type": "narration",
+			"text": "Die Frau sieht mich an. Ihre Augen sind milchig, fast blind. Sie lächelt.",
+			"next": "narration_train_old_2"
+		},
+		"narration_train_old_2": {
+			"type": "narration",
+			"text": "\"Das singt man im Schwarzwald, wenn der November kommt. Damit die, die unten schlafen, nicht aufwachen.\"",
+			"next": "narration_train_old_3"
+		},
+		"narration_train_old_3": {
+			"type": "narration",
+			"text": "Sie strickt weiter. Ich sage nichts mehr. Aber ich bemerke, dass ihr Strickmuster Spiralen formt.",
+			"next": "narration_train_4"
+		},
+		"narration_train_4": {
+			"type": "narration",
+			"text": "In Freiburg steige ich um. Der Anschlusszug ist kleiner, aelter. Er riecht nach Kohlerauch und nassem Holz.",
+			"next": "elise_train_3"
+		},
+		"elise_train_3": {
+			"type": "character",
+			"character": "elise",
+			"expression": "thinking",
+			"position": "center",
+			"action": "show",
+			"next": "elise_train_4"
+		},
+		"elise_train_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Graubach... Ich war zuletzt als Kind dort. Zehn Jahre ist das her. Damals roch es nach Tannennadeln und Großmutters Kuchen.",
+			"next": "narration_train_5"
+		},
+		"narration_train_5": {
+			"type": "narration",
+			"text": "Ich erinnere mich an den Dorfbrunnen, an die Kirche mit dem schiefen Turm. An den Wald, der das Dorf umschließt wie eine geballte Faust.",
+			"next": "narration_train_6"
+		},
+		"narration_train_6": {
+			"type": "narration",
+			"text": "Und ich erinnere mich an etwas, das ich lange verdrängt habe. An die letzte Nacht in Graubach, als ich vierzehn war.",
+			"next": "narration_train_7"
+		},
+		"narration_train_7": {
+			"type": "narration",
+			"text": "Ich war aufgewacht, weil ich Gesang gehört hatte. Aus dem Boden. Großmutter sass neben meinem Bett und hielt meine Hand. \"Schlaf weiter\", hatte sie gesagt. \"Es singt nur der Wind.\"",
+			"next": "narration_train_8"
+		},
+		"narration_train_8": {
+			"type": "narration",
+			"text": "Aber es war kein Wind gewesen. Und Großmutter hatte geweint.",
+			"next": "narration_kutsche"
+		},
+		"narration_kutsche": {
+			"type": "narration",
+			"text": "Die Zugstrecke endet in Waldkirch. Von dort sind es noch zwei Stunden mit der Kutsche.",
+			"next": "hide_elise_train"
+		},
+		"hide_elise_train": {
+			"type": "character",
+			"character": "elise",
+			"expression": "neutral",
+			"position": "center",
+			"action": "hide",
+			"next": "narration_kutsche_2"
+		},
+		"narration_kutsche_2": {
+			"type": "narration",
+			"text": "Der Kutscher ist ein schweigsamer Mann mit einem vernarbten Gesicht. Als ich \"Graubach\" sage, hält er kurz inne.",
+			"next": "narration_kutsche_3"
+		},
+		"narration_kutsche_3": {
+			"type": "narration",
+			"text": "\"Ich fahr' Sie bis zum Dorfrand\", sagt er. \"Weiter geh' ich nicht. Nicht im November.\"",
+			"next": "narration_kutsche_4"
+		},
+		"narration_kutsche_4": {
+			"type": "narration",
+			"text": "Die Straße wird enger. Die Tannen rücken zusammen, als wollten sie den Weg versperren. Das letzte Tageslicht kämpft sich durch die Äste.",
+			"next": "narration_kutsche_5"
+		},
+		"narration_kutsche_5": {
+			"type": "narration",
+			"text": "Am Dorfrand hält der Kutscher abrupt. Er nimmt mein Geld, ohne mich anzusehen. Die Kutsche verschwindet im Nebel, bevor ich mich umdrehe.",
+			"next": "transition_arrival"
+		},
+		"transition_arrival": {
+			"type": "transition",
+			"transition": "fade_out",
+			"duration": 2.0,
+			"next": "bg_village"
+		},
+		"bg_village": {
+			"type": "background",
+			"background": "village_entrance",
+			"transition": "fade",
+			"next": "transition_village_in"
+		},
+		"transition_village_in": {
+			"type": "transition",
+			"transition": "fade_in",
+			"duration": 1.5,
+			"next": "snd_village_amb"
+		},
+		"effect_vignette": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.25
+			},
+			"next": "narration_arrival_1"
+		},
+		"narration_arrival_1": {
+			"type": "narration",
+			"text": "Graubach.",
+			"next": "wait_arrival"
+		},
+		"wait_arrival": {
+			"type": "wait",
+			"duration": 1.5,
+			"next": "narration_arrival_2"
+		},
+		"narration_arrival_2": {
+			"type": "narration",
+			"text": "Der Nebel hängt zwischen den Fachwerkhäusern wie graue Leichentücher. Die Fensterläden sind geschlossen - alle. An einem Nachmittag.",
+			"next": "narration_arrival_3"
+		},
+		"narration_arrival_3": {
+			"type": "narration",
+			"text": "Kein Hund bellt. Kein Kind spielt auf der Straße. Kein Rauch steigt aus den Schornsteinen, obwohl es bitterkalt ist.",
+			"next": "narration_arrival_4"
+		},
+		"narration_arrival_4": {
+			"type": "narration",
+			"text": "Die Stille ist nicht leer. Sie ist voll. Wie ein Mund, der sich zum Schreien oeffnet, aber keinen Ton herausbringt.",
+			"next": "narration_arrival_5"
+		},
+		"narration_arrival_5": {
+			"type": "narration",
+			"text": "Meine Schritte auf dem Kopfsteinpflaster sind das einzige Geräusch. Jeder Schritt ein Eindringling in diese erstickende Ruhe.",
+			"next": "snd_footsteps"
+		},
+		"narration_arrival_6": {
+			"type": "narration",
+			"text": "Ich kenne den Weg zu Großmutters Haus. Links am Brunnen vorbei, die Gasse hinauf, bis zur letzten Tür vor dem Wald.",
+			"next": "narration_arrival_7"
+		},
+		"narration_arrival_7": {
+			"type": "narration",
+			"text": "Am Brunnen bleibe ich stehen. Im trüben Wasser treiben tote Blätter. Und etwas Anderes - ein Stück Stoff? Nein. Es ist ein schwarzes Band.",
+			"next": "narration_arrival_8"
+		},
+		"narration_arrival_8": {
+			"type": "narration",
+			"text": "Trauerband.",
+			"next": "narration_arrival_9"
+		},
+		"narration_arrival_9": {
+			"type": "narration",
+			"text": "An Großmutters Zaun hängt ein weiteres. Die Tür steht einen Spalt offen. Aus dem Inneren dringt der süssliche Geruch von verwelkten Blumen.",
+			"next": "effect_shake_door"
+		},
+		"effect_shake_door": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 2.0,
+				"duration": 0.3
+			},
+			"next": "snd_door"
+		},
+		"narration_arrival_10": {
+			"type": "narration",
+			"text": "Die Tür knarrt, als der Wind sie bewegt. Oder ist es der Wind?",
+			"next": "journal_arrival"
+		},
+		"journal_arrival": {
+			"type": "journal",
+			"entry_id": "arrival",
+			"title": "Ankunft in Graubach",
+			"content": "Graubach ist still. Zu still. Alle Läden geschlossen, kein Rauch, keine Menschen. Trauerband am Brunnen und an Großmutters Zaun. Die Tür steht offen. Etwas stimmt hier nicht.",
+			"next": "scene_end_prologue"
+		},
+		"scene_end_prologue": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act1/arrival.json"
+		},
+		"snd_rain": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "snd_main_theme",
+			"path": "rain.wav"
+		},
+		"snd_main_theme": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "wait_start",
+			"path": "main_theme.wav"
+		},
+		"snd_stop_rain": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "snd_train_music"
+		},
+		"snd_train_music": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "show_elise_train",
+			"path": "village_day.wav"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "effect_vignette_train",
+			"path": "whispers.wav"
+		},
+		"snd_village_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_vignette",
+			"path": "village_ambience.wav"
+		},
+		"snd_footsteps": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "narration_arrival_6",
+			"path": "footsteps_wood.wav"
+		},
+		"snd_door": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "narration_arrival_10",
+			"path": "door_creak.wav"
+		}
+	}
+}

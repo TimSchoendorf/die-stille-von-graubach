@@ -1,0 +1,232 @@
+{
+	"title": "Akt 3 - Vorbereitung",
+	"start": "bg_grandmother_night",
+	"nodes": {
+		"bg_grandmother_night": {
+			"type": "background",
+			"background": "grandmother_house_night",
+			"transition": "fade",
+			"next": "snd_grandmother"
+		},
+		"effect_mood": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.4,
+				"duration": 1.5
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Die letzte Nacht vor dem Ritual. Ich sitze am Tisch meiner Großmutter, ihr Journal aufgeschlagen, ihre Kerze brennend. Wie oft hat sie hier gesessen?",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Draußen ist der Himmel falsch. Sterne, die es nicht geben sollte, in Mustern, die an Spiralen erinnern. Der Mond ist zu groß und zu nah.",
+			"next": "effect_sky_glitch"
+		},
+		"effect_sky_glitch": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Ich lese Großmutters letzte Einträge noch einmal. Die letzten Seiten, geschrieben in den Tagen vor ihrem Tod.",
+			"next": "narration_journal_1"
+		},
+		"narration_journal_1": {
+			"type": "narration",
+			"text": "'Ich bin zu alt. Mein Körper gibt nach. Aber Elise wird kommen. Das Wesen zeigt es mir in seinen Träumen - nicht als Drohung, als Prophezeiung.'",
+			"next": "narration_journal_2"
+		},
+		"narration_journal_2": {
+			"type": "narration",
+			"text": "'Sie hat mein Blut. Sie hat meinen Willen. Und sie hat etwas, das ich nie hatte: die Fähigkeit, das Unbekannte zu akzeptieren, ohne es zu fürchten.'",
+			"next": "narration_journal_3"
+		},
+		"narration_journal_3": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 2,
+				"interval": 0.2
+			},
+			"next": "narration_journal_4"
+		},
+		"narration_journal_4": {
+			"type": "narration",
+			"text": "'Das Ritual hat sechs Wege. Sechs mögliche Enden. Nicht alle sind gut. Aber alle sind besser als die Fütterung.'",
+			"next": "narration_journal_5"
+		},
+		"narration_journal_5": {
+			"type": "narration",
+			"text": "'Elise, wenn du das liest: Vertrau deinem Instinkt. Das Wesen ist nicht böse. Es ist nur alt und hungrig und allein. Manchmal ist das schlimmer als Bosheit.'",
+			"next": "set_read_final_entries"
+		},
+		"set_read_final_entries": {
+			"type": "set_flag",
+			"flag": "read_final_entries",
+			"value": 1,
+			"next": "narration_approach"
+		},
+		"narration_approach": {
+			"type": "narration",
+			"text": "Ich klappe das Journal zu. Meine Hände sind ruhig. Merkwürdig ruhig für jemanden, der morgen einem uralten Wesen gegenübertritt.",
+			"next": "choice_approach"
+		},
+		"choice_approach": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Das Siegel erneuern - Großmutters Weg. Es binden, nicht töten.",
+					"set_flags": {
+						"approach_seal": 1
+					},
+					"require_flags": {
+						"found_journal": 1
+					},
+					"next": "approach_seal"
+				},
+				{
+					"text": "Es verstehen versuchen - kommunizieren statt kämpfen",
+					"set_flags": {
+						"approach_understand": 1
+					},
+					"next": "approach_understand"
+				},
+				{
+					"text": "Es zerstören - was auch immer es kostet",
+					"set_flags": {
+						"approach_destroy": 1,
+						"courage": 15
+					},
+					"next": "approach_destroy"
+				},
+				{
+					"text": "Einen Pakt schließen - Verhandeln statt Gewalt",
+					"set_flags": {
+						"approach_pact": 1
+					},
+					"next": "approach_pact"
+				}
+			]
+		},
+		"approach_seal": {
+			"type": "narration",
+			"text": "Großmutters Weg. Das Siegel erneuern, das Wesen zurück in den tiefen Schlaf singen. Nicht für immer - aber für weitere dreißig Jahre. Genug Zeit für die nächste Generation.",
+			"next": "narration_preparation"
+		},
+		"approach_understand": {
+			"type": "narration",
+			"text": "Was ist es? Warum ist es hier? Sechshundert Jahre opfern wir ihm, ohne es jemals zu fragen, was es will. Vielleicht gibt es einen Weg, den niemand gesehen hat.",
+			"next": "narration_preparation"
+		},
+		"approach_destroy": {
+			"type": "narration",
+			"text": "Genug. Keine Kompromisse, keine Verhandlungen, kein Siegel, das in dreißig Jahren erneuert werden muss. Es endet hier. Heute. Für immer.",
+			"next": "narration_preparation"
+		},
+		"approach_pact": {
+			"type": "narration",
+			"text": "Verhandeln. Es ist intelligent genug, um einen Pakt zu verstehen. Vielleicht gibt es etwas, das es will, das kein Menschenopfer kostet. Einen Handel.",
+			"next": "narration_preparation"
+		},
+		"narration_preparation": {
+			"type": "narration",
+			"text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräter. Großmutters Journal. Die Kerze meiner Großmutter.",
+			"next": "check_has_items"
+		},
+		"check_has_items": {
+			"type": "flag_check",
+			"flag": "has_amulet",
+			"value": 1,
+			"true_next": "narration_ready",
+			"false_next": "narration_unprepared"
+		},
+		"narration_ready": {
+			"type": "narration",
+			"text": "Hildes Amulett wärmt meine Hand. Der Stein pulsiert im gleichen Rhythmus wie der Boden in der Kammer. Zwei Herzen, die im Takt schlagen.",
+			"next": "narration_dawn"
+		},
+		"narration_unprepared": {
+			"type": "narration",
+			"text": "Mir fehlen Dinge. Aber die Zeit läuft ab. Ich werde mit dem arbeiten müssen, was ich habe. Mut und Verzweiflung müssen reichen.",
+			"next": "narration_dawn"
+		},
+		"narration_dawn": {
+			"type": "effect",
+			"effect": "ui_degradation",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "snd_tension_dawn"
+		},
+		"narration_dawn_2": {
+			"type": "narration",
+			"text": "Die Morgendämmerung bricht an. Sie ist rot. Blutrot. Nicht der Sonnenaufgang, der Himmel selbst scheint zu bluten.",
+			"next": "effect_dawn_corrupt"
+		},
+		"effect_dawn_corrupt": {
+			"type": "effect",
+			"effect": "bg_corruption",
+			"params": {
+				"intensity": 0.6,
+				"duration": 2.0
+			},
+			"next": "narration_dawn_3"
+		},
+		"narration_dawn_3": {
+			"type": "narration",
+			"text": "Heute endet die Geschichte von Graubach. Sechshundert Jahre Tradition, sechshundert Jahre Angst, sechshundert Jahre Blut. Heute entscheide ich, wie.",
+			"next": "set_act3_complete"
+		},
+		"set_act3_complete": {
+			"type": "set_flag",
+			"flag": "act3_complete",
+			"value": 1,
+			"next": "journal_preparation"
+		},
+		"journal_preparation": {
+			"type": "journal",
+			"entry_id": "final_preparation",
+			"title": "Die letzte Nacht",
+			"content": "Großmutters letzte Journaleinträge gelesen. Das Ritual hat sechs mögliche Enden. Sie schrieb: 'Das Wesen ist nicht böse. Es ist nur alt und hungrig und allein.' Morgen bei Sonnenuntergang beginnt es. Ich bin so bereit, wie ich je sein werde.",
+			"next": "narration_end"
+		},
+		"narration_end": {
+			"type": "narration",
+			"text": "Ende Akt 3",
+			"next": "effect_end_glitch"
+		},
+		"effect_end_glitch": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act4/ritual_night.json"
+		},
+		"snd_grandmother": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_mood",
+			"path": "grandmother.wav"
+		},
+		"snd_tension_dawn": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_dawn_2",
+			"path": "tension.wav"
+		}
+	}
+}

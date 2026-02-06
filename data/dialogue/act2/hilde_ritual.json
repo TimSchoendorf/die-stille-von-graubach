@@ -1,0 +1,363 @@
+{
+	"title": "Akt 2 - Die alten Wege",
+	"start": "bg_hilde",
+	"nodes": {
+		"bg_hilde": {
+			"type": "background",
+			"background": "hilde_cottage",
+			"transition": "fade",
+			"next": "snd_grandmother"
+		},
+		"effect_hilde_mood": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.2,
+				"duration": 1.0
+			},
+			"next": "narration_1"
+		},
+		"narration_1": {
+			"type": "narration",
+			"text": "Hildes Hütte liegt am Waldrand, halb verborgen zwischen alten Eichen. Es riecht nach Salbei, Kamille und etwas, das ich nicht benennen kann - erdiger, aelter.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Sie oeffnet die Tür, bevor ich klopfe. Als hätte sie mich erwartet.",
+			"next": "show_hilde"
+		},
+		"show_hilde": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "wise",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_1"
+		},
+		"hilde_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Da bist du endlich. Margarethe hat gesagt, du würdest kommen. Setz dich. Der Tee ist fertig.",
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "In der Hütte hängen ueberall Kräuterbündel, Wurzeln, kleine Beutel. An den Wänden stehen Zeichen, die ich aus dem Folklore-Studium kenne: Schutzrunen, aelter als jede Kirche.",
+			"next": "hilde_2"
+		},
+		"hilde_2": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_3"
+		},
+		"hilde_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "Deine Großmutter und ich haben dreißig Jahre zusammengearbeitet. Sie war die Kluge, ich die Geduldige. Zusammen haben wir fast alles herausgefunden.",
+			"next": "hilde_4"
+		},
+		"hilde_4": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Fast. Ein Stück fehlt noch. Dafür bist du hier, Kind.",
+			"next": "choice_hilde"
+		},
+		"choice_hilde": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Nach dem Gesang der Alten fragen",
+					"set_flags": {
+						"asked_about_chant": 1
+					},
+					"next": "hilde_chant"
+				},
+				{
+					"text": "Nach dem Zeichen der Erde fragen",
+					"set_flags": {
+						"asked_about_sign": 1
+					},
+					"next": "hilde_sign"
+				},
+				{
+					"text": "Nach dem Anker fragen",
+					"set_flags": {
+						"asked_about_anchor": 1
+					},
+					"next": "hilde_anchor"
+				}
+			]
+		},
+		"hilde_chant": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_chant_1"
+		},
+		"hilde_chant_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "Der Gesang. Ja. Die alten Völker, die vor den Kelten hier lebten, kannten Töne, die das Wesen beruhigen. Nicht besiegen - beruhigen. Es zurück in den Schlaf singen.",
+			"next": "hilde_chant_2"
+		},
+		"hilde_chant_2": {
+			"type": "narration",
+			"text": "Hilde beginnt leise zu summen. Die Melodie ist einfach, fast ein Wiegenlied. Aber sie fühlt sich anders an - die Luft wird schwerer, wärmer.",
+			"next": "effect_chant"
+		},
+		"effect_chant": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.3
+			},
+			"next": "hilde_chant_3"
+		},
+		"hilde_chant_3": {
+			"type": "narration",
+			"text": "Und dann - für einen kurzen Moment - hört das ferne Singen aus der Tiefe auf. Völlige Stille. Als würde die Erde den Atem anhalten.",
+			"next": "hilde_chant_4"
+		},
+		"hilde_chant_4": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Hörst du? Stille. Der Gesang wirkt. Aber ich bin alt. Meine Stimme wird nicht mehr reichen für das volle Ritual. Du musst ihn lernen.",
+			"next": "set_learned_chant"
+		},
+		"set_learned_chant": {
+			"type": "set_flag",
+			"flag": "learned_chant",
+			"value": 1,
+			"next": "hilde_converge"
+		},
+		"hilde_sign": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "mysterious",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_sign_1"
+		},
+		"hilde_sign_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Das Zeichen der Erde ist keine Markierung, die man zeichnet. Es ist ein Ort. Dort, wo das Wesen am nächsten an die Oberfläche kommt.",
+			"next": "hilde_sign_2"
+		},
+		"hilde_sign_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "In der Kammer unter der Kirche gibt es einen Punkt, wo der Stein dünner ist. Dort spürt man den Herzschlag am deutlichsten. Das ist das Zeichen - nicht von Menschenhand geschaffen.",
+			"next": "hilde_sign_3"
+		},
+		"hilde_sign_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "Deine Großmutter hat es gefunden. Man muss genau dort stehen, wenn man den Gesang anstimmt. Sonst verpufft die Wirkung.",
+			"next": "set_knows_sign"
+		},
+		"set_knows_sign": {
+			"type": "set_flag",
+			"flag": "knows_earth_sign",
+			"value": 1,
+			"next": "hilde_converge"
+		},
+		"hilde_anchor": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "warning",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_anchor_1"
+		},
+		"hilde_anchor_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Der Anker. Das ist der schwierigste Teil. Jemand muss als Verbindung zwischen unserer Welt und dem Wesen dienen. Jemand, der es kennt, aber nicht fürchtet.",
+			"next": "hilde_anchor_2"
+		},
+		"hilde_anchor_2": {
+			"type": "effect",
+			"effect": "vignette",
+			"params": {
+				"intensity": 0.4,
+				"duration": 0.8
+			},
+			"next": "hilde_anchor_3"
+		},
+		"hilde_anchor_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "Margarethe wollte es selbst tun. Aber sie wurde zu alt, zu schwach. Als Anker muss man stark sein - im Geist, nicht im Körper.",
+			"next": "hilde_anchor_4"
+		},
+		"hilde_anchor_4": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_anchor_5"
+		},
+		"hilde_anchor_5": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Elise... Margarethe glaubte, dass du der Anker sein könntest. Dein Name im Buch - es ist kein Fluch. Es ist eine Verbindung. Du bist dem Wesen schon nah.",
+			"next": "set_knows_anchor"
+		},
+		"set_knows_anchor": {
+			"type": "set_flag",
+			"flag": "knows_anchor_role",
+			"value": 1,
+			"next": "hilde_converge"
+		},
+		"hilde_converge": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "warning",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_warning_1"
+		},
+		"hilde_warning_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"text": "Aber höre mir gut zu, Kind. Es gibt jemanden, dem du nicht vertrauen darfst.",
+			"next": "hilde_warning_2"
+		},
+		"hilde_warning_2": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 3,
+				"interval": 0.15
+			},
+			"next": "hilde_warning_3"
+		},
+		"hilde_warning_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "angry",
+			"text": "Otto Reinhardt. Der Bürgermeister. Er ist der Hüter der alten Tradition. Er wird alles tun, um die Fütterung durchzusetzen. Und er hat Helfer.",
+			"next": "hilde_warning_4"
+		},
+		"hilde_warning_4": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "angry",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_warning_5"
+		},
+		"hilde_warning_5": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Wenn er erfährt, was du vorhast - wenn er merkt, dass du Margarethes Arbeit fortsetzt - wird er handeln. Schnell und ohne Gewissen.",
+			"next": "hilde_gift"
+		},
+		"hilde_gift": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "center",
+			"action": "show",
+			"next": "hilde_gift_1"
+		},
+		"hilde_gift_1": {
+			"type": "narration",
+			"text": "Hilde greift in ihre Schürze und drückt mir einen kleinen Beutel in die Hand. Darin sind getrocknete Kräuter und ein rundes Steinamulett mit einer eingeritzten Spirale.",
+			"next": "hilde_gift_2"
+		},
+		"hilde_gift_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Trag das bei dir. Es schützt nicht vor dem Wesen - nichts tut das. Aber es schützt vor seinen Träumen. Du wirst klarer denken können.",
+			"next": "set_has_amulet"
+		},
+		"set_has_amulet": {
+			"type": "set_flag",
+			"flag": "has_amulet",
+			"value": 1,
+			"next": "journal_hilde"
+		},
+		"journal_hilde": {
+			"type": "journal",
+			"entry_id": "hilde_teaching",
+			"title": "Hildes Lehren",
+			"content": "Hilde kannte Großmutters Plan. Das Bindungsritual benötigt: den alten Gesang (beruhigt das Wesen), das Zeichen der Erde (ein Ort in der Kammer), und einen Anker (eine Person mit Verbindung zum Wesen). Großmutter glaubte, ich könnte der Anker sein. Hilde warnte vor dem Bürgermeister.",
+			"next": "hide_hilde"
+		},
+		"hide_hilde": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "center",
+			"action": "hide",
+			"next": "narration_evening"
+		},
+		"narration_evening": {
+			"type": "narration",
+			"text": "Als ich Hildes Hütte verlasse, fällt die Dämmerung ein. Der Wald ist näher als heute Morgen. Ich bin mir sicher.",
+			"next": "snd_forest_amb"
+		},
+		"effect_evening": {
+			"type": "effect",
+			"effect": "bg_corruption",
+			"params": {
+				"intensity": 0.2,
+				"duration": 2.0
+			},
+			"next": "narration_evening_2"
+		},
+		"narration_evening_2": {
+			"type": "narration",
+			"text": "Auf dem Rückweg höre ich Schritte hinter mir. Schwer, bedächtig. Ich drehe mich um - niemand da. Aber zwischen den Bäumen hängt ein süsslicher Geruch, wie verwelkte Blumen.",
+			"next": "effect_stalked"
+		},
+		"effect_stalked": {
+			"type": "effect",
+			"effect": "flicker",
+			"params": {
+				"count": 4,
+				"interval": 0.12
+			},
+			"next": "snd_footsteps"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "res://data/dialogue/act2/the_book.json"
+		},
+		"snd_grandmother": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_hilde_mood",
+			"path": "grandmother.wav"
+		},
+		"snd_forest_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_evening",
+			"path": "forest_night.wav"
+		},
+		"snd_footsteps": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"next": "scene_end",
+			"path": "footsteps_wood.wav"
+		}
+	}
+}

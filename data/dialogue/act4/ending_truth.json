@@ -1,0 +1,127 @@
+{
+	"title": "Ende - Die Wahrheit",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Ich oeffne meinen Geist. Nicht um zu binden, nicht um zu zerstören. Um zu verstehen. Großmutters Journal hat mich gelehrt, dass Wissen die stärkste Waffe ist.",
+			"next": "snd_cosmic"
+		},
+		"effect_opening": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.5
+			},
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Das Wesen spürt meine Absicht. Es zögert. Dann, wie eine Tür, die nach Jahrhunderten geoeffnet wird, zeigt es mir alles.",
+			"next": "effect_visions"
+		},
+		"effect_visions": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.5
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Bilder. Tausende Bilder. Die Erde, wie sie war, bevor Menschen sie betraten. Dinge, die unter der Oberfläche leben, aelter als Stein, aelter als Wasser.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Graubach ist nicht einzigartig. Es gibt Hunderte solcher Stellen. Dünne Stellen, wo die Grenze zwischen oben und unten, zwischen unserer Welt und dem, was darunter liegt, fast nicht existiert.",
+			"next": "effect_revelation"
+		},
+		"effect_revelation": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.8
+			},
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Unter dem Schwarzwald. Unter den Alpen. Unter den Meeren. Überall. Eine Welt unter der Welt, voll von Wesen wie diesem - und aeteren, grösseren, anderen.",
+			"next": "narration_6"
+		},
+		"narration_6": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.2,
+				"max": 1.0,
+				"cycle": 3.0
+			},
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Das Wesen unter Graubach ist klein. Ein Kind, verglichen mit dem, was in den Tiefen des Ozeans schläft. Es ist nicht unser Feind. Es ist ein Nachbar, der zu nah lebt.",
+			"next": "narration_8"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Und die Erkenntnis, die schwerste: Wir haben nie die Wahl gehabt, sie zu bekämpfen. Wir können nur lernen, neben ihnen zu existieren.",
+			"next": "effect_understanding"
+		},
+		"effect_understanding": {
+			"type": "effect",
+			"effect": "clear",
+			"params": {},
+			"next": "snd_stop_amb"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Das Wesen zieht sich zurück. Zufrieden. Zum ersten Mal in Jahrhunderten hat jemand es angesehen, ohne wegzulaufen. Es schläft ein - nicht aus Zwang, sondern aus Frieden.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Ich stehe auf und steige hinauf ins Licht. Aber die Welt sieht anders aus. Ich spüre die dünnen Stellen - ueberall. Unter meinen Füssen, in der Ferne, am Horizont.",
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Ich werde nie wieder unwissend sein. Das ist der Preis der Wahrheit.",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "Die Welt ist grösser als wir dachten. Tiefer. Älter. Und unter jeder Stadt, unter jedem Wald, unter jedem Ozean schläft etwas, das wir nicht verstehen. Noch nicht.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Aber ich bin die Erste, die es versucht.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:truth"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_opening",
+			"path": "cosmic_horror.wav"
+		},
+		"snd_stop_amb": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "snd_peaceful"
+		},
+		"snd_peaceful": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_9",
+			"path": "ending_peaceful.wav"
+		}
+	}
+}
