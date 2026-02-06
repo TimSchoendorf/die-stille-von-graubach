@@ -20,8 +20,17 @@ var current_node_id: String = ""
 # Journal entries collected by the player
 var journal_entries: Array[String] = []
 
+# Full journal data: entry_id → {title, content}
+var journal_data: Dictionary = {}
+
 # Endings unlocked (for completion tracker)
 var endings_unlocked: Array[String] = []
+
+# Visual state (tracked for save/load)
+var current_background: String = ""
+var active_characters: Dictionary = {} # char_id → {expression, position}
+var current_music: String = ""
+var current_ambience: String = ""
 
 # Game state enum-like
 var game_state: String = "title" # title, playing, paused, ending
@@ -84,9 +93,11 @@ func check_flags(required_flags: Dictionary) -> bool:
 	return true
 
 
-func add_journal_entry(entry_id: String) -> void:
+func add_journal_entry(entry_id: String, title: String = "", content: String = "") -> void:
 	if entry_id not in journal_entries:
 		journal_entries.append(entry_id)
+	if not title.is_empty():
+		journal_data[entry_id] = {"title": title, "content": content}
 
 
 func has_journal_entry(entry_id: String) -> bool:
@@ -115,10 +126,15 @@ func start_new_game() -> void:
 	flags.clear()
 	_load_default_flags()
 	journal_entries.clear()
+	journal_data.clear()
 	current_act = "prologue"
 	current_scene = ""
 	current_dialogue_file = ""
 	current_node_id = ""
+	current_background = ""
+	active_characters.clear()
+	current_music = ""
+	current_ambience = ""
 	set_game_state("playing")
 
 
@@ -130,7 +146,12 @@ func get_save_data() -> Dictionary:
 		"current_dialogue_file": current_dialogue_file,
 		"current_node_id": current_node_id,
 		"journal_entries": journal_entries.duplicate(),
+		"journal_data": journal_data.duplicate(true),
 		"endings_unlocked": endings_unlocked.duplicate(),
+		"current_background": current_background,
+		"active_characters": active_characters.duplicate(true),
+		"current_music": current_music,
+		"current_ambience": current_ambience,
 	}
 
 
@@ -141,5 +162,10 @@ func load_save_data(data: Dictionary) -> void:
 	current_dialogue_file = data.get("current_dialogue_file", "")
 	current_node_id = data.get("current_node_id", "")
 	journal_entries.assign(data.get("journal_entries", []))
+	journal_data = data.get("journal_data", {})
 	endings_unlocked.assign(data.get("endings_unlocked", []))
+	current_background = data.get("current_background", "")
+	active_characters = data.get("active_characters", {})
+	current_music = data.get("current_music", "")
+	current_ambience = data.get("current_ambience", "")
 	set_game_state("playing")

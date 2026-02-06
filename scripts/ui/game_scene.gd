@@ -26,8 +26,13 @@ func _ready() -> void:
 	_setup_dialogue_player()
 	_connect_signals()
 
-	# Start the dialogue if we have one to play
-	if not GameManager.current_dialogue_file.is_empty():
+	# Detect if we're loading a save (node_id set means resuming)
+	var is_loading := not GameManager.current_node_id.is_empty()
+
+	if is_loading:
+		_restore_visual_state()
+		_dialogue_player.load_and_start(GameManager.current_dialogue_file, GameManager.current_node_id)
+	elif not GameManager.current_dialogue_file.is_empty():
 		_dialogue_player.load_and_start(GameManager.current_dialogue_file)
 	else:
 		# Default: start prologue
@@ -192,6 +197,7 @@ func _on_choices_requested(choices: Array) -> void:
 
 
 func _on_background_requested(bg_path: String, transition: String) -> void:
+	GameManager.current_background = bg_path
 	_background.change_background(bg_path, transition)
 
 
@@ -199,14 +205,20 @@ func _on_character_requested(char_id: String, expression: String, pos: String, a
 	match action:
 		"show":
 			_character_display.show_character(char_id, expression, pos)
+			GameManager.active_characters[char_id] = {"expression": expression, "position": pos}
 		"hide":
 			_character_display.hide_character(char_id)
+			GameManager.active_characters.erase(char_id)
 		"move":
 			_character_display.show_character(char_id, expression, pos)
+			GameManager.active_characters[char_id] = {"expression": expression, "position": pos}
 		"update_expression":
 			_character_display.update_expression(char_id, expression)
+			if char_id in GameManager.active_characters:
+				GameManager.active_characters[char_id]["expression"] = expression
 		_:
 			_character_display.show_character(char_id, expression, pos)
+			GameManager.active_characters[char_id] = {"expression": expression, "position": pos}
 
 
 func _on_effect_requested(effect_name: String, params: Dictionary) -> void:
@@ -255,14 +267,18 @@ func _on_sound_requested(sound_type: String, path: String) -> void:
 	match sound_type:
 		"music":
 			AudioManager.play_music(path)
+			GameManager.current_music = path
 		"sfx":
 			AudioManager.play_sfx(path)
 		"ambience":
 			AudioManager.play_ambience(path)
+			GameManager.current_ambience = path
 		"stop_music":
 			AudioManager.stop_music()
+			GameManager.current_music = ""
 		"stop_ambience":
 			AudioManager.stop_ambience()
+			GameManager.current_ambience = ""
 
 
 func _on_transition_requested(transition_type: String, duration: float) -> void:
@@ -289,6 +305,28 @@ func _highlight_speaker(speaker_id: String) -> void:
 		tween.tween_property(sprite, "modulate:a", target_alpha, 0.2)
 
 
+func _restore_visual_state() -> void:
+	# Restore background instantly (no fade)
+	if not GameManager.current_background.is_empty():
+		_background.change_background(GameManager.current_background, "instant")
+
+	# Restore characters instantly
+	for char_id in GameManager.active_characters:
+		var data: Dictionary = GameManager.active_characters[char_id]
+		_character_display.show_character(char_id, data.get("expression", "neutral"), data.get("position", "center"))
+
+	# Restore audio
+	if not GameManager.current_music.is_empty():
+		AudioManager.play_music(GameManager.current_music, 0.0)
+	if not GameManager.current_ambience.is_empty():
+		AudioManager.play_ambience(GameManager.current_ambience, 0.0)
+
+	# Restore journal data into journal_ui
+	for entry_id in GameManager.journal_data:
+		var data: Dictionary = GameManager.journal_data[entry_id]
+		_journal_ui.add_entry(entry_id, data.get("title", ""), data.get("content", ""))
+
+
 func _on_scene_ended(next_file: String) -> void:
 	# Auto-save at scene transitions
 	SaveManager.quick_save()
@@ -302,11 +340,13 @@ func _on_scene_ended(next_file: String) -> void:
 		var ending_id := next_file.substr(7)
 		_textbox.hide_textbox()
 		_character_display.hide_all_characters()
+		GameManager.active_characters.clear()
 		_ending_screen.show_ending(ending_id)
 		return
 
 	# Clear characters when transitioning to next file
 	_character_display.hide_all_characters()
+	GameManager.active_characters.clear()
 
 	# Load next dialogue file
 	GameManager.current_dialogue_file = next_file

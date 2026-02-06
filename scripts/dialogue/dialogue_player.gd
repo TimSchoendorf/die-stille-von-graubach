@@ -24,13 +24,16 @@ var _is_waiting_for_choice: bool = false
 var _is_processing: bool = false
 
 
-func load_and_start(file_path: String) -> void:
+func load_and_start(file_path: String, start_node: String = "") -> void:
 	_dialogue_data = DialogueLoader.load_dialogue(file_path)
 	if _dialogue_data.is_empty():
 		push_error("Failed to load dialogue: " + file_path)
 		return
 
-	_current_node_id = DialogueLoader.get_start_node_id(_dialogue_data)
+	if not start_node.is_empty() and not DialogueLoader.get_node(_dialogue_data, start_node).is_empty():
+		_current_node_id = start_node
+	else:
+		_current_node_id = DialogueLoader.get_start_node_id(_dialogue_data)
 	_is_processing = true
 	_process_current_node()
 
@@ -242,7 +245,7 @@ func _handle_journal(node: Dictionary) -> void:
 	var entry_id: String = node.get("entry_id", "")
 	var title: String = node.get("title", "")
 	var content: String = node.get("content", "")
-	GameManager.add_journal_entry(entry_id)
+	GameManager.add_journal_entry(entry_id, title, content)
 	journal_requested.emit(entry_id, title, content)
 
 
