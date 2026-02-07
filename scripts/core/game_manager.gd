@@ -106,7 +106,8 @@ func has_journal_entry(entry_id: String) -> bool:
 
 func get_character_name(char_id: String) -> String:
 	if char_id in characters:
-		return characters[char_id].get("name", char_id)
+		var default_name: String = characters[char_id].get("name", char_id)
+		return Locale.tc(char_id, default_name)
 	return char_id
 
 

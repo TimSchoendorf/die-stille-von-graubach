@@ -1,6 +1,6 @@
 extends Control
 
-## Settings screen for audio, text speed, and display options.
+## Settings screen for audio, text speed, display, and language options.
 ## Settings are persisted to user://settings.json.
 
 const SETTINGS_PATH := "user://settings.json"
@@ -15,6 +15,10 @@ func _ready() -> void:
 
 
 func _setup_ui() -> void:
+	# Clear all children (needed for language-switch rebuild)
+	for child in get_children():
+		child.queue_free()
+
 	var bg := ColorRect.new()
 	bg.color = Color(0.02, 0.02, 0.05)
 	bg.set_anchors_preset(PRESET_FULL_RECT)
@@ -37,44 +41,71 @@ func _setup_ui() -> void:
 
 	# Title
 	var title := Label.new()
-	title.text = "Einstellungen"
+	title.text = Locale.t("SETTINGS_TITLE")
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.add_theme_font_size_override("font_size", 40)
 	title.add_theme_color_override("font_color", Color(0.8, 0.75, 0.65))
 	vbox.add_child(title)
 
-	_add_section_label(vbox, "Audio")
+	# ── Language ──
+	_add_section_label(vbox, Locale.t("LANGUAGE"))
 
-	# Master Volume
-	_create_slider(vbox, "Lautstärke", AudioManager.master_volume, func(val: float):
+	var lang_hbox := HBoxContainer.new()
+	lang_hbox.add_theme_constant_override("separation", 16)
+	vbox.add_child(lang_hbox)
+
+	var lang_label := Label.new()
+	lang_label.text = Locale.t("LANGUAGE")
+	lang_label.custom_minimum_size.x = 150
+	lang_label.add_theme_font_size_override("font_size", 22)
+	lang_label.add_theme_color_override("font_color", Color(0.7, 0.65, 0.6))
+	lang_hbox.add_child(lang_label)
+
+	var lang_option := OptionButton.new()
+	lang_option.custom_minimum_size = Vector2(250, 36)
+	lang_option.add_theme_font_size_override("font_size", 20)
+	var current_idx := 0
+	for i in Locale.LOCALES.size():
+		var code: String = Locale.LOCALES[i]
+		lang_option.add_item(Locale.get_locale_display_name(code), i)
+		if code == Locale.current_locale:
+			current_idx = i
+	lang_option.selected = current_idx
+	lang_option.item_selected.connect(func(idx: int):
+		Locale.set_locale(Locale.LOCALES[idx])
+		_save_settings()
+		# Rebuild UI with new language
+		_setup_ui())
+	lang_hbox.add_child(lang_option)
+
+	# ── Audio ──
+	_add_section_label(vbox, Locale.t("AUDIO"))
+
+	_create_slider(vbox, Locale.t("MASTER_VOLUME"), AudioManager.master_volume, func(val: float):
 		AudioManager.set_master_volume(val)
 		_save_settings())
 
-	# Music Volume
-	_create_slider(vbox, "Musik", AudioManager.music_volume, func(val: float):
+	_create_slider(vbox, Locale.t("MUSIC"), AudioManager.music_volume, func(val: float):
 		AudioManager.set_music_volume(val)
 		_save_settings())
 
-	# SFX Volume
-	_create_slider(vbox, "Effekte", AudioManager.sfx_volume, func(val: float):
+	_create_slider(vbox, Locale.t("EFFECTS"), AudioManager.sfx_volume, func(val: float):
 		AudioManager.set_sfx_volume(val)
 		_save_settings())
 
-	# Ambience Volume
-	_create_slider(vbox, "Ambiente", AudioManager.ambience_volume, func(val: float):
+	_create_slider(vbox, Locale.t("AMBIENCE"), AudioManager.ambience_volume, func(val: float):
 		AudioManager.set_ambience_volume(val)
 		_save_settings())
 
-	_add_section_label(vbox, "Text")
+	# ── Text ──
+	_add_section_label(vbox, Locale.t("TEXT"))
 
-	# Text Speed
-	_text_speed_slider = _create_slider_raw(vbox, "Textgeschw.", GameManager.text_speed, 20.0, 80.0, 5.0, func(val: float):
+	_text_speed_slider = _create_slider_raw(vbox, Locale.t("TEXT_SPEED"), GameManager.text_speed, 20.0, 80.0, 5.0, func(val: float):
 		GameManager.text_speed = val
 		_save_settings())
 
-	# Auto-Advance
 	_auto_advance_check = CheckButton.new()
-	_auto_advance_check.text = "  Auto-Weiter (3 Sek.)"
+	_auto_advance_check.text = Locale.t("AUTO_ADVANCE")
 	_auto_advance_check.button_pressed = GameManager.auto_advance
 	_auto_advance_check.add_theme_font_size_override("font_size", 22)
 	_auto_advance_check.add_theme_color_override("font_color", Color(0.7, 0.65, 0.6))
@@ -83,11 +114,11 @@ func _setup_ui() -> void:
 		_save_settings())
 	vbox.add_child(_auto_advance_check)
 
-	_add_section_label(vbox, "Anzeige")
+	# ── Display ──
+	_add_section_label(vbox, Locale.t("DISPLAY"))
 
-	# Fullscreen
 	_fullscreen_check = CheckButton.new()
-	_fullscreen_check.text = "  Vollbild"
+	_fullscreen_check.text = Locale.t("FULLSCREEN")
 	_fullscreen_check.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	_fullscreen_check.add_theme_font_size_override("font_size", 22)
 	_fullscreen_check.add_theme_color_override("font_color", Color(0.7, 0.65, 0.6))
@@ -105,7 +136,7 @@ func _setup_ui() -> void:
 
 	# Back button
 	var back_btn := Button.new()
-	back_btn.text = "Zurück"
+	back_btn.text = Locale.t("BACK")
 	back_btn.custom_minimum_size = Vector2(200, 50)
 	back_btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	back_btn.add_theme_font_size_override("font_size", 24)
@@ -178,6 +209,7 @@ func _save_settings() -> void:
 		"text_speed": GameManager.text_speed,
 		"auto_advance": GameManager.auto_advance,
 		"fullscreen": DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN,
+		"language": Locale.current_locale,
 	}
 	var file := FileAccess.open(SETTINGS_PATH, FileAccess.WRITE)
 	if file:
@@ -202,6 +234,8 @@ static func load_settings() -> void:
 	GameManager.auto_advance = data.get("auto_advance", false)
 	if data.get("fullscreen", false):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	var lang: String = data.get("language", "de")
+	Locale.set_locale(lang)
 
 
 func _style_button(btn: Button) -> void:

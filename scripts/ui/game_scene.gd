@@ -26,7 +26,10 @@ func _ready() -> void:
 	_setup_dialogue_player()
 	_connect_signals()
 
-	# Detect if we're loading a save (node_id set means resuming)
+	# Always restore journal data into JournalUI
+	_restore_journal_data()
+
+	# Detect if we're loading a save (node_id set means resuming mid-dialogue)
 	var is_loading := not GameManager.current_node_id.is_empty()
 
 	if is_loading:
@@ -75,14 +78,14 @@ func _setup_layers() -> void:
 	# Quick menu (top right)
 	_quick_menu = HBoxContainer.new()
 	_quick_menu.name = "QuickMenu"
-	_quick_menu.position = Vector2(1580, 10)
+	_quick_menu.position = Vector2(1920 - 4 * 120 - 3 * 8 - 20, 10)
 	_quick_menu.add_theme_constant_override("separation", 8)
 	ui_layer.add_child(_quick_menu)
 
-	_create_quick_button("Speichern", _on_save)
-	_create_quick_button("Laden", _on_load)
-	_create_quick_button("Verlauf", _on_history)
-	_create_quick_button("Tagebuch", _on_journal)
+	_create_quick_button(Locale.t("SAVE"), _on_save)
+	_create_quick_button(Locale.t("LOAD_SHORT"), _on_load)
+	_create_quick_button(Locale.t("HISTORY"), _on_history)
+	_create_quick_button(Locale.t("JOURNAL"), _on_journal)
 
 	# Textbox (bottom) — explicit position for CanvasLayer children
 	_textbox = preload("res://scripts/ui/textbox.gd").new()
@@ -123,35 +126,8 @@ func _setup_layers() -> void:
 func _create_quick_button(text: String, callback: Callable) -> void:
 	var btn := Button.new()
 	btn.text = text
-	btn.custom_minimum_size = Vector2(80, 30)
-	btn.add_theme_font_size_override("font_size", 16)
-
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.1, 0.1, 0.12, 0.6)
-	style.corner_radius_top_left = 2
-	style.corner_radius_top_right = 2
-	style.corner_radius_bottom_left = 2
-	style.corner_radius_bottom_right = 2
-	style.content_margin_left = 8
-	style.content_margin_right = 8
-	style.content_margin_top = 4
-	style.content_margin_bottom = 4
-	btn.add_theme_stylebox_override("normal", style)
-
-	var hover := style.duplicate()
-	hover.bg_color = Color(0.2, 0.18, 0.15, 0.8)
-	btn.add_theme_stylebox_override("hover", hover)
-
-	var pressed := style.duplicate()
-	pressed.bg_color = Color(0.05, 0.05, 0.08, 0.8)
-	btn.add_theme_stylebox_override("pressed", pressed)
-
-	var focus := style.duplicate()
-	btn.add_theme_stylebox_override("focus", focus)
-
-	btn.add_theme_color_override("font_color", Color(0.6, 0.55, 0.5))
-	btn.add_theme_color_override("font_hover_color", Color(0.9, 0.85, 0.8))
-
+	btn.custom_minimum_size = Vector2(120, 44)
+	UITheme.style_quick_button(btn)
 	btn.pressed.connect(callback)
 	_quick_menu.add_child(btn)
 
@@ -305,6 +281,12 @@ func _highlight_speaker(speaker_id: String) -> void:
 		tween.tween_property(sprite, "modulate:a", target_alpha, 0.2)
 
 
+func _restore_journal_data() -> void:
+	for entry_id in GameManager.journal_data:
+		var data: Dictionary = GameManager.journal_data[entry_id]
+		_journal_ui.add_entry(entry_id, data.get("title", ""), data.get("content", ""))
+
+
 func _restore_visual_state() -> void:
 	# Restore background instantly (no fade)
 	if not GameManager.current_background.is_empty():
@@ -321,16 +303,8 @@ func _restore_visual_state() -> void:
 	if not GameManager.current_ambience.is_empty():
 		AudioManager.play_ambience(GameManager.current_ambience, 0.0)
 
-	# Restore journal data into journal_ui
-	for entry_id in GameManager.journal_data:
-		var data: Dictionary = GameManager.journal_data[entry_id]
-		_journal_ui.add_entry(entry_id, data.get("title", ""), data.get("content", ""))
-
 
 func _on_scene_ended(next_file: String) -> void:
-	# Auto-save at scene transitions
-	SaveManager.quick_save()
-
 	if next_file.is_empty():
 		_on_dialogue_finished()
 		return
@@ -348,8 +322,12 @@ func _on_scene_ended(next_file: String) -> void:
 	_character_display.hide_all_characters()
 	GameManager.active_characters.clear()
 
-	# Load next dialogue file
+	# Update dialogue file and reset node_id before auto-save
 	GameManager.current_dialogue_file = next_file
+	GameManager.current_node_id = ""
+	SaveManager.quick_save()
+
+	# Load next dialogue file
 	_dialogue_player.load_and_start(next_file)
 
 
@@ -386,17 +364,25 @@ func _apply_shake(intensity: float, duration: float) -> void:
 	tween.tween_property(self, "position", original_pos, 0.05)
 
 
+func _is_any_overlay_open() -> bool:
+	return _save_load_ui.visible or _history_log.visible or _journal_ui.visible
+
+
 func _on_save() -> void:
-	_save_load_ui.open_save()
+	if not _is_any_overlay_open():
+		_save_load_ui.open_save()
 
 func _on_load() -> void:
-	_save_load_ui.open_load()
+	if not _is_any_overlay_open():
+		_save_load_ui.open_load()
 
 func _on_history() -> void:
-	_history_log.open_log()
+	if not _is_any_overlay_open():
+		_history_log.open_log()
 
 func _on_journal() -> void:
-	_journal_ui.open_journal()
+	if not _is_any_overlay_open():
+		_journal_ui.open_journal()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -410,10 +396,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("quick_save"):
-		SaveManager.quick_save()
+		if not _is_any_overlay_open():
+			SaveManager.quick_save()
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("quick_load"):
-		if SaveManager.has_save(0):
+		if not _is_any_overlay_open() and SaveManager.has_save(0):
 			SaveManager.quick_load()
 			SceneManager.change_scene("res://scenes/GameScene.tscn")
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("toggle_history"):
+		if not _is_any_overlay_open():
+			_history_log.open_log()
 		get_viewport().set_input_as_handled()

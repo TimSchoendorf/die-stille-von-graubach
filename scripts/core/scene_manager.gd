@@ -22,7 +22,8 @@ func _setup_transition_layer() -> void:
 
 	_color_rect = ColorRect.new()
 	_color_rect.color = Color.BLACK
-	_color_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_color_rect.position = Vector2(0, 0)
+	_color_rect.size = Vector2(1920, 1080)
 	_color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_color_rect.modulate.a = 0.0
 	_transition_layer.add_child(_color_rect)

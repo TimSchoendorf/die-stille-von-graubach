@@ -28,11 +28,11 @@ func _ready() -> void:
 func _setup_ui() -> void:
 	custom_minimum_size = Vector2(1920, 250)
 
-	# Dark semi-transparent background
+	# Dark semi-transparent background with golden border
 	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.05, 0.05, 0.08, 0.85)
-	style.border_color = Color(0.3, 0.25, 0.2, 0.6)
-	style.border_width_top = 2
+	style.bg_color = Color(0.04, 0.04, 0.07, 0.88)
+	style.border_color = UITheme.BORDER
+	style.border_width_top = 3
 	style.corner_radius_top_left = 4
 	style.corner_radius_top_right = 4
 	style.content_margin_left = 60
@@ -45,30 +45,32 @@ func _setup_ui() -> void:
 	vbox.add_theme_constant_override("separation", 8)
 	add_child(vbox)
 
-	# Speaker name
+	# Speaker name (serif font)
 	_speaker_label = RichTextLabel.new()
 	_speaker_label.bbcode_enabled = true
 	_speaker_label.fit_content = true
 	_speaker_label.custom_minimum_size.y = 32
 	_speaker_label.add_theme_font_size_override("normal_font_size", 28)
+	_speaker_label.add_theme_font_override("normal_font", UITheme.font_title())
 	_speaker_label.scroll_active = false
 	vbox.add_child(_speaker_label)
 
-	# Text body
+	# Text body (serif font for readability)
 	_text_label = RichTextLabel.new()
 	_text_label.bbcode_enabled = true
 	_text_label.fit_content = true
 	_text_label.custom_minimum_size.y = 120
 	_text_label.add_theme_font_size_override("normal_font_size", 24)
+	_text_label.add_theme_font_override("normal_font", UITheme.font_body())
 	_text_label.scroll_active = false
 	vbox.add_child(_text_label)
 
-	# Continue indicator
+	# Continue indicator (gold)
 	_continue_indicator = Label.new()
 	_continue_indicator.text = "▼"
 	_continue_indicator.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	_continue_indicator.add_theme_font_size_override("font_size", 20)
-	_continue_indicator.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7, 0.8))
+	_continue_indicator.add_theme_color_override("font_color", UITheme.GOLD)
 	_continue_indicator.hide()
 	vbox.add_child(_continue_indicator)
 
