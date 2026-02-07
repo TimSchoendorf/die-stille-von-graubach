@@ -4,8 +4,14 @@
 	"nodes": {
 		"narration_1": {
 			"type": "narration",
-			"text": "Ich beginne den Gesang. Die Worte, die Hilde mich gelehrt hat - aelter als jede Sprache, die ich kenne. Sie fließen aus mir heraus, als hätte ich sie immer gekannt.",
+			"text": "Ich beginne den Gesang. Die Worte, die Hilde mich gelehrt hat - älter als jede Sprache, die ich kenne. Sie fließen aus mir heraus, als hätte ich sie immer gekannt.",
 			"next": "snd_ritual_cont"
+		},
+		"snd_ritual_cont": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_chant_start",
+			"path": "ritual.wav"
 		},
 		"effect_chant_start": {
 			"type": "effect",
@@ -17,12 +23,17 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Die Kammer reagiert. Die Spiralen an den Wänden beginnen zu leuchten, schwach zürst, dann stärker. Ein bläuliches Licht, kalt wie Mondschein.",
+			"text": "Die Kammer reagiert. Die Spiralen an den Wänden beginnen zu leuchten, schwach zuerst, dann stärker. Ein bläuliches Licht, kalt wie Mondschein.",
 			"next": "narration_3"
 		},
 		"narration_3": {
 			"type": "narration",
 			"text": "Das Singen aus der Tiefe verändert sich. Es kämpft nicht gegen meinen Gesang - es antwortet. Zwei Melodien, die sich verflechten wie die Spiralen an den Wänden.",
+			"next": "narration_creature_seal"
+		},
+		"narration_creature_seal": {
+			"type": "narration",
+			"text": "DEIN GESANG IST WIE IHRER. ABER JÜNGER. WÄRMER. SIE HAT MIT PFLICHT GESUNGEN. DU SINGST MIT... ETWAS ANDEREM.",
 			"next": "effect_merge"
 		},
 		"effect_merge": {
@@ -38,6 +49,18 @@
 		"narration_4": {
 			"type": "narration",
 			"text": "Der Boden unter mir pulsiert schneller. Ich spüre das Wesen - seine Aufmerksamkeit, sein Alter, seine unendliche Müdigkeit. Es WILL schlafen. Es hat nur vergessen, wie.",
+			"next": "elise_seal_1"
+		},
+		"elise_seal_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Dann lass mich dir helfen. Schlaf. Nicht aus Zwang. Weil du müde bist.",
+			"next": "narration_creature_seal_2"
+		},
+		"narration_creature_seal_2": {
+			"type": "narration",
+			"text": "ICH BIN... SO MÜDE. SO LANGE WACH. SO LANGE HUNGRIG. DEIN GESANG MACHT DEN HUNGER LEISER.",
 			"next": "narration_5"
 		},
 		"narration_5": {
@@ -56,6 +79,25 @@
 		"narration_6": {
 			"type": "narration",
 			"text": "Die Spiralen verdichten sich zu einem Muster auf dem Boden. Ein Siegel. Nicht aus Stein oder Tinte - aus Klang, aus Willen, aus der Verbindung zwischen meiner Stimme und dem Wesen.",
+			"next": "elise_seal_2"
+		},
+		"elise_seal_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Schlaf gut. Ich komme wieder. In dreißig Jahren. Oder früher.",
+			"next": "narration_creature_seal_3"
+		},
+		"narration_creature_seal_3": {
+			"type": "narration",
+			"text": "VERSPROCHEN?",
+			"next": "elise_seal_3"
+		},
+		"elise_seal_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Versprochen.",
 			"next": "narration_7"
 		},
 		"narration_7": {
@@ -69,53 +111,6 @@
 			"params": {},
 			"next": "snd_stop_amb"
 		},
-		"narration_8": {
-			"type": "narration",
-			"text": "Stille. Echte Stille. Zum ersten Mal seit ich Graubach betreten habe, ist es wirklich still. Kein Singen, kein Pulsieren, kein Flüstern in meinem Kopf.",
-			"next": "narration_9"
-		},
-		"narration_9": {
-			"type": "narration",
-			"text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit.",
-			"next": "narration_10"
-		},
-		"narration_10": {
-			"type": "narration",
-			"text": "Ich steige die Treppe hinauf, durch die Kirche, ins Morgenlicht. Es ist ein neuer Tag. Der Himmel ist blau. Richtig blau.",
-			"next": "narration_11"
-		},
-		"narration_11": {
-			"type": "narration",
-			"text": "Georg wartet draußen, Hilde neben ihm. Sie sehen mein Gesicht und wissen Bescheid. Hilde nickt. Georg weint.",
-			"next": "narration_12"
-		},
-		"narration_12": {
-			"type": "narration",
-			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. In dreißig Jahren, wenn das Siegel erneuert werden muss. Oder früher, um jemanden zu finden, der nach mir singt.",
-			"next": "narration_13"
-		},
-		"narration_13": {
-			"type": "narration",
-			"text": "Großmutter, ich habe es geschafft. Dein Lebenswerk ist vollendet.",
-			"next": "journal_seal"
-		},
-		"journal_seal": {
-			"type": "journal",
-			"entry_id": "ending_seal",
-			"title": "Das Siegel",
-			"content": "Das Bindungsritual gelang. Das Wesen schläft wieder, gehalten durch Gesang statt durch Blut. Kein Opfer mehr. Großmutters dreißig Jahre Forschung haben sich bewährt.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "ending:seal"
-		},
-		"snd_ritual_cont": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_chant_start",
-			"path": "ritual.wav"
-		},
 		"snd_stop_amb": {
 			"type": "sound",
 			"sound_type": "stop_ambience",
@@ -126,6 +121,257 @@
 			"sound_type": "music",
 			"next": "narration_8",
 			"path": "ending_peaceful.wav"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Stille. Echte Stille. Zum ersten Mal seit ich Graubach betreten habe, ist es wirklich still. Kein Singen, kein Pulsieren, kein Flüstern in meinem Kopf.",
+			"next": "narration_8b"
+		},
+		"narration_8b": {
+			"type": "narration",
+			"text": "Ich ziehe meine Hände vom Stein. Sie zittern. Meine Wangen sind nass - ich habe geweint, ohne es zu merken. Freudentränen? Trauer? Ich weiß es nicht.",
+			"next": "narration_9"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Ich steige die Treppe hinauf, durch die Kirche, ins Morgenlicht. Es ist ein neuer Tag. Der Himmel ist blau. Richtig blau.",
+			"next": "check_ally_seal_georg"
+		},
+		"check_ally_seal_georg": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_seal",
+			"false_next": "check_ally_seal_hilde"
+		},
+		"show_georg_seal": {
+			"type": "character",
+			"character": "georg",
+			"expression": "sad",
+			"position": "left",
+			"action": "show",
+			"next": "narration_georg_waits"
+		},
+		"narration_georg_waits": {
+			"type": "narration",
+			"text": "Georg wartet draußen. Er sieht mein Gesicht und weiß Bescheid. Seine Augen füllen sich mit Tränen.",
+			"next": "georg_seal_1"
+		},
+		"georg_seal_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Du hast es geschafft. Margarethe... sie hätte...",
+			"next": "elise_georg_seal"
+		},
+		"elise_georg_seal": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich weiß. Sie hätte geweint und gelacht gleichzeitig.",
+			"next": "georg_seal_2"
+		},
+		"georg_seal_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Genau so. Genau so.",
+			"next": "narration_georg_embrace"
+		},
+		"narration_georg_embrace": {
+			"type": "narration",
+			"text": "Georg umarmt mich. Zum ersten Mal. Er riecht nach Eisen und Rauch und Erleichterung. Dreißig Jahre Last fallen von seinen Schultern.",
+			"next": "hide_georg_seal"
+		},
+		"hide_georg_seal": {
+			"type": "character",
+			"character": "georg",
+			"expression": "protective",
+			"position": "left",
+			"action": "hide",
+			"next": "narration_village_morning"
+		},
+		"check_ally_seal_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_seal",
+			"false_next": "check_ally_seal_voss"
+		},
+		"show_hilde_seal": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_seal_1"
+		},
+		"hilde_seal_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Ich habe den Gesang gehört. Bis hierher. Er war... schön.",
+			"next": "elise_hilde_seal"
+		},
+		"elise_hilde_seal": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Es hat geantwortet, Hilde. Es hat mit mir gesungen. Am Ende war es fast... friedlich.",
+			"next": "hilde_seal_2"
+		},
+		"hilde_seal_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Deine Großmutter hat immer gesagt, dass der richtige Gesang das Wesen nicht bindet. Er wiegt es in den Schlaf. Wie ein Wiegenlied.",
+			"next": "hide_hilde_seal"
+		},
+		"hide_hilde_seal": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "left",
+			"action": "hide",
+			"next": "narration_village_morning"
+		},
+		"check_ally_seal_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_seal",
+			"false_next": "narration_village_morning"
+		},
+		"show_voss_seal": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "show",
+			"next": "voss_seal_1"
+		},
+		"voss_seal_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Gott sei Dank. Gott sei Dank.",
+			"next": "elise_voss_seal"
+		},
+		"elise_voss_seal": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Nicht Gott, Pfarrer. Großmutter. Und ein sehr müdes, sehr einsames Wesen, das endlich schlafen darf.",
+			"next": "voss_seal_2"
+		},
+		"voss_seal_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Ist es... ist es vorbei? Kein Opfer mehr?",
+			"next": "elise_voss_seal_2"
+		},
+		"elise_voss_seal_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Kein Opfer mehr. Nie wieder. Dreißig Jahre haben wir Zeit, einen dauerhaften Weg zu finden.",
+			"next": "hide_voss_seal"
+		},
+		"hide_voss_seal": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "hide",
+			"next": "narration_village_morning"
+		},
+		"narration_village_morning": {
+			"type": "narration",
+			"text": "Das Dorf erwacht. Fenster öffnen sich. Kinder laufen auf die Straße. Die Stille von Graubach ist zum ersten Mal seit Jahrhunderten eine gewöhnliche, friedliche Stille.",
+			"next": "check_packed_seal"
+		},
+		"check_packed_seal": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_seal",
+			"false_next": "check_packed_cross_seal"
+		},
+		"packed_books_seal": {
+			"type": "narration",
+			"text": "In meiner Tasche finde ich die Bücher, die ich aus Berlin mitgebracht habe. Folklore-Texte. Damals wusste ich nicht, warum ich sie eingepackt habe. Jetzt weiß ich: Großmutter hat mir den Weg gewiesen, bevor ich wusste, dass es einen gab.",
+			"next": "letter_resolution_seal"
+		},
+		"check_packed_cross_seal": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_seal",
+			"false_next": "check_packed_camera_seal"
+		},
+		"packed_cross_seal": {
+			"type": "narration",
+			"text": "Ich halte Großmutters Kreuz in der Hand. Es war ihr einziges Zugeständnis an den Glauben des Pfarrers. Aber der wahre Schutz kam von ihr, nicht von Gott.",
+			"next": "letter_resolution_seal"
+		},
+		"check_packed_camera_seal": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_seal",
+			"false_next": "letter_resolution_seal"
+		},
+		"packed_camera_seal": {
+			"type": "narration",
+			"text": "Ich habe die Kamera mitgebracht, um Graubach festzuhalten. Aber was ich hier erlebt habe, passt auf kein Bild. Manche Wahrheiten muss man in sich tragen.",
+			"next": "letter_resolution_seal"
+		},
+		"letter_resolution_seal": {
+			"type": "narration",
+			"text": "In Großmutters Journal finde ich eine letzte Seite, die ich übersehen hatte. Angeheftet mit einer Nadel, versteckt hinter dem Einband.",
+			"next": "narration_letter_seal"
+		},
+		"narration_letter_seal": {
+			"type": "narration",
+			"text": "'Elise, wenn du das liest, hast du es geschafft. Du warst nie in Gefahr. Du warst die Lösung. Immer.'",
+			"next": "elise_letter_react"
+		},
+		"elise_letter_react": {
+			"type": "narration",
+			"text": "Ich lege das Journal auf den Tisch und lache. Zum ersten Mal seit einer Woche lache ich. Durch die Tränen hindurch, aber es ist ein echtes Lachen.",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. Nicht in dreißig Jahren. Vorher. Viel vorher.",
+			"next": "narration_12b"
+		},
+		"narration_12b": {
+			"type": "narration",
+			"text": "Denn unter dem Stein schläft etwas, dem ich ein Versprechen gegeben habe. Und Brandts halten ihre Versprechen.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Großmutter, ich habe es geschafft. Dein Lebenswerk ist vollendet. Und meines hat gerade erst begonnen.",
+			"next": "journal_seal"
+		},
+		"journal_seal": {
+			"type": "journal",
+			"entry_id": "ending_seal",
+			"title": "Das Siegel",
+			"content": "Das Bindungsritual gelang. Das Wesen schläft wieder, gehalten durch Gesang statt durch Blut. Kein Opfer mehr. Es hat mich gefragt: Versprochen? Und ich habe geantwortet: Versprochen.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:seal"
 		}
 	}
 }

@@ -8,6 +8,18 @@
 			"transition": "fade",
 			"next": "snd_village_music"
 		},
+		"snd_village_music": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "village_day.wav",
+			"next": "snd_village_amb"
+		},
+		"snd_village_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "village_ambience.wav",
+			"next": "narration_morning_1"
+		},
 		"narration_morning_1": {
 			"type": "narration",
 			"text": "Der Morgen bringt keine Erleichterung. Der Nebel hat sich nicht gehoben - er ist nur heller geworden, wie ein schmutziges Laken ueber dem Dorf.",
@@ -29,6 +41,11 @@
 		"narration_morning_3": {
 			"type": "narration",
 			"text": "Ich zucke zurück. Nichts. Nur mein Spiegelbild.",
+			"next": "elise_morning_1"
+		},
+		"elise_morning_1": {
+			"type": "narration",
+			"text": "Meine Hände zittern noch vom Wasser. Oder von der Nacht. Ich bin mir nicht sicher.",
 			"next": "narration_morning_4"
 		},
 		"narration_morning_4": {
@@ -38,7 +55,12 @@
 		},
 		"narration_morning_5": {
 			"type": "narration",
-			"text": "Niemand spricht. Niemand grüst mich. Manche sehen mich an - kurze, verstöhlene Blicke, die sofort abgewandt werden. Als würde mein Anblick ihnen Unbehagen bereiten.",
+			"text": "Niemand spricht. Niemand grüßt mich. Manche sehen mich an - kurze, verstohlene Blicke, die sofort abgewandt werden. Als würde mein Anblick ihnen Unbehagen bereiten.",
+			"next": "elise_morning_plan"
+		},
+		"elise_morning_plan": {
+			"type": "narration",
+			"text": "Ich muss mit den Leuten reden. Irgendjemand in diesem Dorf weiß, was mit Großmutter passiert ist. Und irgendjemand wird mir die Wahrheit sagen - ob er will oder nicht.",
 			"next": "choice_explore"
 		},
 		"choice_explore": {
@@ -67,11 +89,18 @@
 				}
 			]
 		},
+
 		"church_path": {
 			"type": "background",
 			"background": "church_exterior",
 			"transition": "fade",
 			"next": "snd_church"
+		},
+		"snd_church": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "church.wav",
+			"next": "effect_church_desat"
 		},
 		"effect_church_desat": {
 			"type": "effect",
@@ -97,7 +126,12 @@
 		},
 		"church_2": {
 			"type": "narration",
-			"text": "Der Friedhof neben der Kirche ist ueberwuchert. Grabsteine stehen schief, manche sind umgefallen. Auf mehreren erkenne ich das gleiche Symbol: eine Spirale.",
+			"text": "Der Friedhof neben der Kirche ist überwuchert. Grabsteine stehen schief, manche sind umgefallen. Auf mehreren erkenne ich das gleiche Symbol: eine Spirale.",
+			"next": "elise_church_spirals"
+		},
+		"elise_church_spirals": {
+			"type": "narration",
+			"text": "Die Spiralen auf den Grabsteinen... ich kenne dieses Symbol aus meinem Studium. Vorchristlich. Keltisch vielleicht, oder noch älter. Aber so konzentriert an einem Ort - das ist ungewöhnlich.",
 			"next": "church_3"
 		},
 		"church_3": {
@@ -129,6 +163,21 @@
 			"speaker": "voss",
 			"expression": "warning",
 			"text": "Sie dürfen hier nicht sein.",
+			"next": "show_elise_church"
+		},
+		"show_elise_church": {
+			"type": "character",
+			"character": "elise",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
+			"next": "elise_church_intro"
+		},
+		"elise_church_intro": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich bin Elise Brandt. Margarethes Enkelin. Und ich suche nach Antworten.",
 			"next": "voss_3"
 		},
 		"voss_3": {
@@ -140,6 +189,20 @@
 			"type": "dialogue",
 			"speaker": "voss",
 			"text": "Sie sind Margarethes Enkelin, nicht wahr? Elise Brandt. Ich bin Pfarrer Voss.",
+			"next": "elise_church_how"
+		},
+		"elise_church_how": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Woher kennen Sie meinen Namen? Ich habe mich noch nicht vorgestellt.",
+			"next": "voss_4b"
+		},
+		"voss_4b": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "worried",
+			"text": "Jeder in Graubach kannte Ihre Großmutter. Und jeder wusste, dass Sie kommen würden.",
 			"next": "voss_5"
 		},
 		"voss_5": {
@@ -154,11 +217,18 @@
 			"type": "dialogue",
 			"speaker": "voss",
 			"text": "Gehen Sie. Verlassen Sie Graubach. Heute noch. Nehmen Sie nichts mit, sehen Sie sich nicht um. Gehen Sie einfach.",
+			"next": "elise_church_defiant"
+		},
+		"elise_church_defiant": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Meine Großmutter hat mich gerufen. Ich gehe nicht, bevor ich weiß warum sie sterben musste.",
 			"next": "voss_7"
 		},
 		"voss_7": {
 			"type": "narration",
-			"text": "Er greift nach meinem Arm. Sein Griff ist ueberraschend fest für so einen ausgezehrten Mann.",
+			"text": "Er greift nach meinem Arm. Sein Griff ist überraschend fest für so einen ausgezehrten Mann.",
 			"next": "voss_8"
 		},
 		"voss_8": {
@@ -207,6 +277,13 @@
 			"speaker": "voss",
 			"expression": "broken",
 			"text": "Ich bin ein Mann Gottes, Fräulein Brandt. Aber was unter dieser Kirche liegt... dafür hat Gott keine Worte.",
+			"next": "elise_q_react"
+		},
+		"elise_q_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Unter der Kirche...?",
 			"next": "voss_converge"
 		},
 		"voss_defied": {
@@ -272,6 +349,20 @@
 			"speaker": "anna",
 			"expression": "lucid",
 			"text": "Du bist es. Du bist die, die es zeichnet. Ich sehe die Spirale um dich herum.",
+			"next": "elise_anna_react"
+		},
+		"elise_anna_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Was? Was siehst du?",
+			"next": "anna_4b"
+		},
+		"anna_4b": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Das Singen. Es singt deinen Namen. Immer und immer wieder.",
 			"next": "effect_anna_glitch"
 		},
 		"effect_anna_glitch": {
@@ -304,11 +395,44 @@
 			"speaker": "voss",
 			"expression": "angry",
 			"text": "Anna! Genug. Geh rein.",
+			"next": "elise_follow_anna"
+		},
+		"elise_follow_anna": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Warten Sie - was meint sie? Was singt meinen Namen?",
+			"next": "voss_blocks"
+		},
+		"voss_blocks": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "angry",
+			"text": "Halten Sie sich von meiner Tochter fern. Sie ist krank. Sie weiß nicht, was sie sagt.",
 			"next": "anna_6"
 		},
 		"anna_6": {
 			"type": "narration",
 			"text": "Voss schiebt seine Tochter sanft aber bestimmt zurück ins Haus. Bevor die Tür sich schließt, sehe ich Annas Hand. Sie zeichnet mit dem Finger Spiralen in die Luft.",
+			"next": "set_anna_spirale"
+		},
+		"set_anna_spirale": {
+			"type": "set_flag",
+			"flag": "anna_spirale",
+			"value": 1,
+			"next": "elise_anna_monologue"
+		},
+		"elise_anna_monologue": {
+			"type": "narration",
+			"text": "Krank? Nein. Das Mädchen hat mich gesehen - wirklich gesehen. Sie hat etwas um mich herum wahrgenommen, das ich selbst nicht sehen kann. Was ist die Spirale? Und warum singt sie meinen Namen?",
+			"next": "hide_elise_church"
+		},
+		"hide_elise_church": {
+			"type": "character",
+			"character": "elise",
+			"expression": "worried",
+			"position": "left",
+			"action": "hide",
 			"next": "hide_church_chars"
 		},
 		"hide_church_chars": {
@@ -331,9 +455,10 @@
 			"type": "journal",
 			"entry_id": "meeting_voss",
 			"title": "Pfarrer Voss und Anna",
-			"content": "Pfarrer Voss warnte mich zu fliehen. Er weiß von etwas unter der Kirche. Seine Tochter Anna scheint 'berührt' zu sein - sie sah eine Spirale um mich herum. Was bedeutet das?",
-			"next": "explore_converge"
+			"content": "Pfarrer Voss warnte mich zu fliehen. Er weiß von etwas unter der Kirche - 'das Andere', das durch Menschen spricht. Seine Tochter Anna sah eine Spirale um mich herum und sagte, etwas singt meinen Namen. Voss nennt sie 'krank'. Aber ihre Augen waren klar.",
+			"next": "route_next_location"
 		},
+
 		"hilde_path": {
 			"type": "background",
 			"background": "hilde_cottage",
@@ -342,12 +467,12 @@
 		},
 		"hilde_1": {
 			"type": "narration",
-			"text": "Am Rande des Dorfes, wo die letzten Häuser in den Wald uebergehen, steht ein kleines Haus. Krauter hangen an der Tür, und der Garten ist trotz November erstaunlich grün.",
+			"text": "Am Rande des Dorfes, wo die letzten Häuser in den Wald übergehen, steht ein kleines Haus. Kräuter hängen an der Tür, und der Garten ist trotz November erstaunlich grün.",
 			"next": "hilde_2"
 		},
 		"hilde_2": {
 			"type": "narration",
-			"text": "Die Tür oeffnet sich, bevor ich anklopfe.",
+			"text": "Die Tür öffnet sich, bevor ich anklopfe.",
 			"next": "show_hilde"
 		},
 		"show_hilde": {
@@ -368,6 +493,20 @@
 			"type": "dialogue",
 			"speaker": "hilde",
 			"text": "Ich habe dich erwartet, Kind. Komm rein. Der Tee ist fertig.",
+			"next": "elise_hilde_arrive"
+		},
+		"elise_hilde_arrive": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Woher wussten Sie, dass ich komme?",
+			"next": "hilde_3b"
+		},
+		"hilde_3b": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Deine Großmutter hat mir von dir erzählt. Oft. Du hast ihre Augen, weißt du das?",
 			"next": "hilde_4"
 		},
 		"hilde_4": {
@@ -377,7 +516,40 @@
 		},
 		"hilde_5": {
 			"type": "narration",
-			"text": "Ihr Haus riecht nach getrockneten Krautern, nach Honig und Erde. Überall stehen Gläser mit seltsamen Inhalten. An den Wänden hängen Symbole - Runen, Spiralen, und einige, die ich nicht kenne.",
+			"text": "Ihr Haus riecht nach getrockneten Kräutern, nach Honig und Erde. Überall stehen Gläser mit seltsamen Inhalten. An den Wänden hängen Symbole - Runen, Spiralen, und einige, die ich nicht kenne.",
+			"next": "elise_hilde_personal"
+		},
+		"elise_hilde_personal": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Hilde... wie war meine Großmutter in den letzten Jahren? War sie glücklich hier?",
+			"next": "hilde_5b"
+		},
+		"hilde_5b": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Glücklich? Nein, Kind. Aber sie war stark. Die stärkste Frau, die ich je kannte. Jeden Morgen stand sie auf, trank ihren Tee, und hielt das Dorf zusammen. Dreißig Jahre lang.",
+			"next": "elise_hilde_afraid"
+		},
+		"elise_hilde_afraid": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Hatte sie Angst?",
+			"next": "hilde_5c"
+		},
+		"hilde_5c": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "sad",
+			"text": "...Ja. Aber nicht vor dem, was du denkst. Sie hatte Angst, dass sie dich nicht mehr sehen würde. Und dass du ihren Brief zu spät bekommst.",
+			"next": "narration_hilde_silence"
+		},
+		"narration_hilde_silence": {
+			"type": "narration",
+			"text": "Einen Moment lang kann ich nicht sprechen. Der Kloß in meinem Hals ist zu groß. Hilde legt mir eine warme Hand auf den Arm und wartet.",
 			"next": "hilde_6"
 		},
 		"hilde_6": {
@@ -399,18 +571,51 @@
 			"type": "dialogue",
 			"speaker": "hilde",
 			"text": "Trink den Tee, Elise. Er wird dich schützen. Zumindest für eine Weile.",
+			"next": "elise_hilde_tea"
+		},
+		"elise_hilde_tea": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Was ist in dem Tee? Verzeihen Sie, aber in diesem Dorf vertraue ich niemandem blind.",
+			"next": "hilde_8b"
+		},
+		"hilde_8b": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Misstrauisch. Gut. Das wirst du brauchen hier. Schafgarbe, Beifuß und Baldrian. Nichts Gefährliches. Deine Großmutter hat denselben Tee getrunken.",
 			"next": "hilde_9"
 		},
 		"hilde_9": {
 			"type": "narration",
 			"text": "Der Tee schmeckt bitter und erdig. Aber während ich trinke, spüre ich, wie eine seltsame Wärme sich in meiner Brust ausbreitet. Die Angst der letzten Nacht rückt ein Stück weiter weg.",
+			"next": "elise_hilde_effect"
+		},
+		"elise_hilde_effect": {
+			"type": "narration",
+			"text": "Wie hat sie das gemacht? Die Angst ist nicht weg - aber sie ist leiser. Als hätte jemand an einem Regler gedreht.",
 			"next": "hilde_10"
 		},
 		"hilde_10": {
 			"type": "dialogue",
 			"speaker": "hilde",
 			"expression": "mysterious",
-			"text": "Es gibt alte Wege und neue Wege. Der Pfarrer versucht es mit Gebeten. Aber was unter der Kirche schläft, ist aelter als sein Gott. Es braucht aeltere Mittel.",
+			"text": "Es gibt alte Wege und neue Wege. Der Pfarrer versucht es mit Gebeten. Aber was unter der Kirche schläft, ist älter als sein Gott. Es braucht ältere Mittel.",
+			"next": "elise_hilde_folklore"
+		},
+		"elise_hilde_folklore": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Alte Wege... Sie meinen vorchristliche Rituale? Ich studiere Folkloristik in Berlin. Ich kenne die Geschichten - die Spiralen, die Erdmutter, die Schwellennächte.",
+			"next": "hilde_10b"
+		},
+		"hilde_10b": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Geschichten? Kind, was unter der Kirche schläft, ist keine Geschichte. Aber ja - du weißt mehr als die meisten hier. Das ist gut. Das wird dir helfen.",
 			"next": "hilde_11"
 		},
 		"hilde_11": {
@@ -432,6 +637,20 @@
 			"speaker": "hilde",
 			"expression": "warning",
 			"text": "Aber die Zeit hat sie eingeholt. Jetzt bist du hier. Und die Frage ist: Bist du bereit, das zu tun, was sie nicht mehr konnte?",
+			"next": "elise_hilde_answer"
+		},
+		"elise_hilde_answer": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich weiß nicht, ob ich bereit bin. Aber ich bin hier. Und ich werde nicht weglaufen.",
+			"next": "hilde_13b"
+		},
+		"hilde_13b": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Es hat für deine Großmutter gereicht. Es wird für dich reichen. Komm wieder zu mir, wenn du mehr erfahren hast. Es gibt vieles, was ich dir noch zeigen muss.",
 			"next": "hide_hilde"
 		},
 		"hide_hilde": {
@@ -446,9 +665,10 @@
 			"type": "journal",
 			"entry_id": "meeting_hilde",
 			"title": "Hilde, die Kräuterfrau",
-			"content": "Hilde kennt die 'alten Wege' - vorchristliche Rituale. Großmutter hat 30 Jahre lang an einem Plan gearbeitet, das Ritual diesmal ohne Opfer durchzuführen. Hilde scheint eine Verbündete zu sein.",
-			"next": "explore_converge"
+			"content": "Hilde kennt die 'alten Wege' - vorchristliche Rituale. Großmutter hat 30 Jahre lang an einem Plan gearbeitet, das Ritual diesmal ohne Opfer durchzuführen. Hilde scheint eine Verbündete zu sein. Ihr Tee hat eine beruhigende Wirkung - kein Placebo. Und sie kannte Großmutter gut. Vielleicht besser als jeder andere hier.",
+			"next": "route_next_location"
 		},
+
 		"school_path": {
 			"type": "background",
 			"background": "village_school",
@@ -468,6 +688,11 @@
 		"school_3": {
 			"type": "narration",
 			"text": "Als er mich am Fenster bemerkt, lächelt er und winkt mich herein. Die Kinder drehen sich um. Keines von ihnen lächelt.",
+			"next": "elise_school_hesitate"
+		},
+		"elise_school_hesitate": {
+			"type": "narration",
+			"text": "Georg hat gesagt, ich soll mich von ihm fernhalten. Aber ich muss diesen Mann verstehen. Wer nachts an fremde Türen klopft, hat Gründe. Ich will seine hören.",
 			"next": "show_konrad_day"
 		},
 		"show_konrad_day": {
@@ -488,11 +713,23 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"text": "Fräulein Brandt! Kinder, das ist Fräulein Brandt, die Enkelin von Frau Margarethe. Sie ist Studentin in Berlin. Aus Berlin! Stellt euch das vor.",
+			"next": "elise_school_greet"
+		},
+		"elise_school_greet": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "neutral",
+			"text": "Guten Tag. Die Kinder scheinen sehr... aufmerksam zu sein.",
 			"next": "konrad_day_2"
 		},
 		"konrad_day_2": {
 			"type": "narration",
 			"text": "Die Kinder starren mich an. Stille Gesichter, alte Augen in jungen Körpern. Ein Mädchen in der letzten Reihe zeichnet - ich kann es von hier sehen. Spiralen. Immer wieder Spiralen.",
+			"next": "elise_school_spirals_girl"
+		},
+		"elise_school_spirals_girl": {
+			"type": "narration",
+			"text": "Das Mädchen in der letzten Reihe. Ihre Spiralen sind identisch mit denen auf den Grabsteinen der Kirche. Dieselbe Drehrichtung, dieselbe Dichte. Ein Kind kann das nicht zufällig so zeichnen.",
 			"next": "konrad_day_3"
 		},
 		"konrad_day_3": {
@@ -504,6 +741,20 @@
 		"konrad_day_4": {
 			"type": "narration",
 			"text": "Die Kinder stehen auf und gehen - nicht wie Kinder. Keine hastigen Bewegungen, kein Gelächter. Sie gehen wie kleine Erwachsene. Geordnet. Still.",
+			"next": "elise_school_children"
+		},
+		"elise_school_children": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Sind die Kinder hier immer so... ruhig?",
+			"next": "konrad_day_4b"
+		},
+		"konrad_day_4b": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "smiling",
+			"text": "Graubach-Kinder sind brave Kinder. Die Stille hier erzieht sie besser als jeder Lehrer. Manche würden sagen, sie sind altklug.",
 			"next": "konrad_day_5"
 		},
 		"konrad_day_5": {
@@ -518,6 +769,20 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"text": "Es tut mir leid wegen gestern Nacht. Ich hoffe, ich habe Sie nicht erschreckt. Ich mache manchmal späte Spaziergänge - die Schlaflosigkeit, wissen Sie.",
+			"next": "elise_school_why"
+		},
+		"elise_school_why": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Warum waren Sie mitten in der Nacht vor meiner Tür, Herr Müller? Ein Spaziergang führt nicht zu einer bestimmten Haustür.",
+			"next": "konrad_day_6b"
+		},
+		"konrad_day_6b": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Als ich Licht in Margarethes Haus sah, wollte ich mich vergewissern, dass alles in Ordnung ist. Ihr Haus steht seit drei Tagen leer. Man wird... aufmerksam.",
 			"next": "konrad_day_7"
 		},
 		"konrad_day_7": {
@@ -525,11 +790,25 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Ihre Großmutter fehlt dem Dorf. Sie war... ein Anker, wissen Sie? Manche Leute halten die Welt zusammen, ohne dass es jemand merkt. Margarethe war so jemand.",
+			"next": "elise_school_anker"
+		},
+		"elise_school_anker": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Ein Anker. Ein seltsames Wort. Was genau hat sie zusammengehalten?",
+			"next": "konrad_day_7b"
+		},
+		"konrad_day_7b": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Alles. Sie hat alles zusammengehalten. Mehr als Sie ahnen, Fräulein Brandt.",
 			"next": "konrad_day_8"
 		},
 		"konrad_day_8": {
 			"type": "narration",
-			"text": "Er klingt aufrichtig. Traurig sogar. Aber dann streicht er sich ueber den Ärmel, und ich sehe etwas auf seiner Hand. Tintenflecke? Nein - die Linien sind zu gleichmässig.",
+			"text": "Er klingt aufrichtig. Traurig sogar. Aber dann streicht er sich über den Ärmel, und ich sehe etwas auf seiner Hand. Tintenflecke? Nein - die Linien sind zu gleichmäßig.",
 			"next": "konrad_day_9"
 		},
 		"konrad_day_9": {
@@ -543,6 +822,33 @@
 			"params": {
 				"duration": 0.15
 			},
+			"next": "elise_school_hand"
+		},
+		"elise_school_hand": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Was ist das auf Ihrer Hand, Herr Müller?",
+			"next": "konrad_day_9b"
+		},
+		"konrad_day_9b": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "suspicious",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_day_9c"
+		},
+		"konrad_day_9c": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Tintenflecke. Die Kinder arbeiten mit billigem Papier, es färbt ab. Nichts weiter.",
+			"next": "narration_konrad_lie"
+		},
+		"narration_konrad_lie": {
+			"type": "narration",
+			"text": "Er lügt. Die Linien sind zu gleichmäßig, zu präzise für Tintenflecke. Dieselben Spiralen wie auf den Grabsteinen, wie in Annas Zeichnungen. Aber sein Lächeln bleibt perfekt.",
 			"next": "konrad_day_10"
 		},
 		"konrad_day_10": {
@@ -555,7 +861,12 @@
 		},
 		"konrad_day_11": {
 			"type": "narration",
-			"text": "Er bemerkt meinen Blick und zieht den Ärmel ueber die Hand. Das Lächeln bleibt, aber etwas in seinen Augen verändert sich. Nur für einen Sekundenbruchteil.",
+			"text": "Er bemerkt meinen Blick und zieht den Ärmel über die Hand. Das Lächeln bleibt, aber etwas in seinen Augen verändert sich. Nur für einen Sekundenbruchteil.",
+			"next": "elise_school_monologue"
+		},
+		"elise_school_monologue": {
+			"type": "narration",
+			"text": "Hinter seinem Lächeln liegt etwas anderes. Etwas Altes. Großmutter schrieb, er sei ein 'Gefäß'. Jetzt, in seinen Augen, glaube ich einen Moment lang zu sehen, was sie meinte.",
 			"next": "hide_konrad_day"
 		},
 		"hide_konrad_day": {
@@ -570,19 +881,76 @@
 			"type": "journal",
 			"entry_id": "meeting_konrad",
 			"title": "Konrad Müller, Dorflehrer",
-			"content": "Konrad ist charmant und freundlich - fast zu freundlich. Die Kinder in seiner Klasse verhalten sich seltsam still. Und auf seiner Handfläche hat er Spiralen. Großmutter schrieb, er sei ein 'Gefäss'. Was steckt wirklich hinter seinem Lächeln?",
-			"next": "explore_converge"
+			"content": "Konrad ist charmant und freundlich - fast zu freundlich. Die Kinder in seiner Klasse verhalten sich seltsam still. Auf seiner Handfläche hat er Spiralen - er behauptet Tintenflecke. Seine Erklärungen klingen plausibel, aber seine Augen verraten etwas anderes. Großmutter nannte ihn ein 'Gefäß'. Was steckt wirklich hinter seinem Lächeln?",
+			"next": "route_next_location"
 		},
+
+		"route_next_location": {
+			"type": "narration",
+			"text": "Noch ist der Tag lang. Ich sollte mich weiter umsehen.",
+			"next": "check_visited_church"
+		},
+		"check_visited_church": {
+			"type": "flag_check",
+			"flag": "explored_church",
+			"value": 1,
+			"true_next": "check_visited_hilde",
+			"false_next": "auto_set_church"
+		},
+		"auto_set_church": {
+			"type": "set_flag",
+			"flag": "explored_church",
+			"value": 1,
+			"next": "church_path"
+		},
+		"check_visited_hilde": {
+			"type": "flag_check",
+			"flag": "explored_hilde",
+			"value": 1,
+			"true_next": "check_visited_school",
+			"false_next": "auto_set_hilde"
+		},
+		"auto_set_hilde": {
+			"type": "set_flag",
+			"flag": "explored_hilde",
+			"value": 1,
+			"next": "hilde_path"
+		},
+		"check_visited_school": {
+			"type": "flag_check",
+			"flag": "explored_school",
+			"value": 1,
+			"true_next": "explore_converge",
+			"false_next": "auto_set_school"
+		},
+		"auto_set_school": {
+			"type": "set_flag",
+			"flag": "explored_school",
+			"value": 1,
+			"next": "school_path"
+		},
+
 		"explore_converge": {
 			"type": "effect",
 			"effect": "clear",
 			"params": {},
 			"next": "snd_village_ret"
 		},
+		"snd_village_ret": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "village_day.wav",
+			"next": "explore_converge_bg"
+		},
 		"explore_converge_bg": {
 			"type": "background",
 			"background": "village_square",
 			"transition": "fade",
+			"next": "narration_puzzle"
+		},
+		"narration_puzzle": {
+			"type": "narration",
+			"text": "Voss spricht vom 'Anderen' unter der Kirche. Anna sieht Spiralen um mich herum. Konrad HAT Spiralen auf der Hand. Und Hilde kennt die alten Wege. Alle reden in Andeutungen. Niemand sagt die ganze Wahrheit.",
 			"next": "converge_1"
 		},
 		"converge_1": {
@@ -596,6 +964,14 @@
 			"expression": "guilty",
 			"position": "right",
 			"action": "show",
+			"next": "show_elise_converge"
+		},
+		"show_elise_converge": {
+			"type": "character",
+			"character": "elise",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
 			"next": "georg_day_1"
 		},
 		"georg_day_1": {
@@ -603,17 +979,59 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "Elise. Hast du... war die Nacht ruhig?",
+			"next": "elise_georg_respond"
+		},
+		"elise_georg_respond": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Nicht wirklich. Aber das weißt du, oder? Konrad Müller stand mitten in der Nacht vor meiner Tür.",
 			"next": "georg_day_2"
 		},
 		"georg_day_2": {
 			"type": "narration",
 			"text": "Er fragt es beiläufig, aber seine Augen suchen mein Gesicht nach Spuren. Spuren wovon?",
+			"next": "elise_georg_report"
+		},
+		"elise_georg_report": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Georg, ich habe mich heute im Dorf umgesehen. Der Pfarrer sagt, ich soll fliehen. Seine Tochter sieht Dinge. Hilde spricht von alten Ritualen. Und Konrad hat Spiralen auf der Hand. Was geht hier vor?",
+			"next": "georg_react_alarmed"
+		},
+		"georg_react_alarmed": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Konrad? Bist du ihm nahegekommen? Hat er dich angefasst?",
+			"next": "elise_georg_no"
+		},
+		"elise_georg_no": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Nein. Aber seine Erklärungen klingen zu glatt. Und er nennt Großmutter einen 'Anker'. Dasselbe Wort, das Hilde benutzt hat.",
 			"next": "georg_day_3"
 		},
 		"georg_day_3": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Komm heute Abend zu mir in die Schmiede. Zum Essen. Ich... ich schulde dir einige Antworten.",
+			"next": "elise_georg_now"
+		},
+		"elise_georg_now": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Warum nicht jetzt? Warum immer warten? Alle in diesem Dorf reden in Rätseln, und du bist nicht besser!",
+			"next": "georg_day_3b"
+		},
+		"georg_day_3b": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Weil Wände Ohren haben in Graubach. Bei mir zu Hause ist es sicher. Hier draußen... nicht.",
 			"next": "georg_day_4"
 		},
 		"georg_day_4": {
@@ -627,7 +1045,34 @@
 		"georg_day_5": {
 			"type": "dialogue",
 			"speaker": "georg",
-			"text": "Aber wenn du dort bist - sprich mit niemandem ueber das, was ich dir sage. Mit niemandem, hörst du?",
+			"text": "Aber wenn du dort bist - sprich mit niemandem über das, was ich dir sage. Mit niemandem, hörst du?",
+			"next": "elise_georg_afraid"
+		},
+		"elise_georg_afraid": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Georg... habe ich einen Grund, Angst zu haben?",
+			"next": "georg_day_5b"
+		},
+		"georg_day_5b": {
+			"type": "narration",
+			"text": "Georg sieht mich lange an. In seinen Augen liegt etwas, das ich nicht deuten kann. Schuld? Furcht? Zärtlichkeit?",
+			"next": "georg_day_5c"
+		},
+		"georg_day_5c": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Komm heute Abend. Dann verstehst du alles.",
+			"next": "hide_elise_converge"
+		},
+		"hide_elise_converge": {
+			"type": "character",
+			"character": "elise",
+			"expression": "worried",
+			"position": "left",
+			"action": "hide",
 			"next": "hide_georg_day"
 		},
 		"hide_georg_day": {
@@ -636,6 +1081,11 @@
 			"expression": "determined",
 			"position": "right",
 			"action": "hide",
+			"next": "narration_tired_walk"
+		},
+		"narration_tired_walk": {
+			"type": "narration",
+			"text": "Meine Beine sind schwer. Ich habe kaum geschlafen, kaum gegessen, und das Dorf drückt auf mich wie eine Hand auf der Brust. Aber ich darf jetzt nicht schwach werden.",
 			"next": "narration_afternoon"
 		},
 		"narration_afternoon": {
@@ -661,6 +1111,13 @@
 			"type": "dialogue",
 			"speaker": "otto",
 			"text": "Ah, Sie müssen die junge Brandt sein! Willkommen in Graubach. Ich bin Otto Reinhardt, Bürgermeister unseres kleinen Dorfes.",
+			"next": "elise_otto_greet"
+		},
+		"elise_otto_greet": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "neutral",
+			"text": "Bürgermeister Reinhardt. Man hat mir schon von Ihnen erzählt.",
 			"next": "otto_2"
 		},
 		"otto_2": {
@@ -681,11 +1138,25 @@
 			"speaker": "otto",
 			"expression": "jovial",
 			"text": "Ihre Großmutter war ein geschätztes Mitglied unserer Gemeinschaft. Wir werden nächste Woche eine schöne Beerdigung für sie ausrichten. Samstag, nach der... nach dem Gottesdienst.",
+			"next": "elise_otto_nach"
+		},
+		"elise_otto_nach": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Nach der... was genau, Herr Bürgermeister? Sie haben gezögert.",
+			"next": "otto_4b"
+		},
+		"otto_4b": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "authoritative",
+			"text": "Nach dem Gottesdienst natürlich. Samstag ist Gottesdienst. Was denn sonst?",
 			"next": "otto_5"
 		},
 		"otto_5": {
 			"type": "narration",
-			"text": "Er hat gezogert. Fast unmerklich. \"Nach der...\" - was hatte er sagen wollen? Nach der Tradition? Nach dem Ritual?",
+			"text": "Er hat gelogen. So routiniert, dass es fast überzeugend war. Fast. Aber sein linkes Auge hat gezuckt.",
 			"next": "otto_6"
 		},
 		"otto_6": {
@@ -693,11 +1164,30 @@
 			"speaker": "otto",
 			"expression": "authoritative",
 			"text": "Bleiben Sie doch bis dahin, Fräulein Brandt. Es wäre nicht recht, die Enkelin vor der Beerdigung abreisen zu lassen. Graubach kümmert sich um die Seinen.",
+			"next": "elise_otto_death"
+		},
+		"elise_otto_death": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Meine Großmutter lag drei Tage allein in ihrem Haus. In einem Dorf, wo jeder jeden kennt. Wie ist das möglich, Herr Bürgermeister?",
+			"next": "otto_6b"
+		},
+		"otto_6b": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "authoritative",
+			"text": "Ein tragisches Versäumnis. Wir alle tragen die Schuld. Aber Graubach ist ein kleines Dorf - manchmal passieren Dinge, die nicht hätten passieren sollen.",
 			"next": "otto_7"
 		},
 		"otto_7": {
 			"type": "narration",
 			"text": "Es klingt wie eine Einladung. Aber in seinen Augen lese ich etwas Anderes. Es ist kein Wunsch. Es ist eine Erwartung.",
+			"next": "elise_otto_monologue"
+		},
+		"elise_otto_monologue": {
+			"type": "narration",
+			"text": "Ich sage nichts mehr. Aber ich merke mir sein Gesicht. Die Art, wie sein Lächeln nicht bis zu den Augen reicht. Otto Reinhardt weiß mehr als jeder andere in diesem Dorf. Und er will, dass ich bleibe. Die Frage ist: Warum?",
 			"next": "effect_otto_vignette"
 		},
 		"effect_otto_vignette": {
@@ -721,36 +1211,22 @@
 			"type": "journal",
 			"entry_id": "meeting_otto",
 			"title": "Bürgermeister Reinhardt",
-			"content": "Bürgermeister Otto Reinhardt. Jovial, aber mit stählerner Kontrolle. Er will, dass ich bis zur Beerdigung bleibe - 'nächste Woche, nach der...' Er hat sich selbst unterbrochen. Was findet vor der Beerdigung statt?",
+			"content": "Bürgermeister Otto Reinhardt. Jovial, aber mit stählerner Kontrolle. Er will, dass ich bis zur Beerdigung bleibe - 'nächste Woche, nach der...' Er hat sich selbst unterbrochen. Er log über die drei Tage, in denen Großmutter allein lag. Was findet vor der Beerdigung statt?",
+			"next": "narration_evening_1"
+		},
+		"narration_evening_1": {
+			"type": "narration",
+			"text": "Die Sonne sinkt hinter den Bergen. Die Schatten der Häuser werden lang und spitz. In wenigen Stunden werde ich in Georgs Schmiede sitzen und endlich Antworten bekommen. Oder zumindest das, was Georg für Antworten hält.",
+			"next": "narration_evening_singing"
+		},
+		"narration_evening_singing": {
+			"type": "narration",
+			"text": "Auf dem Weg zu Großmutters Haus höre ich es wieder. Leise, fast unmerklich. Das Singen. Es kommt von überall und nirgendwo. Und zum ersten Mal glaube ich, einzelne Silben zu erkennen. Meinen Namen.",
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/smithy_evening.json"
-		},
-		"snd_village_music": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "snd_village_amb",
-			"path": "village_day.wav"
-		},
-		"snd_village_amb": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "narration_morning_1",
-			"path": "village_ambience.wav"
-		},
-		"snd_church": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_church_desat",
-			"path": "church.wav"
-		},
-		"snd_village_ret": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "explore_converge_bg",
-			"path": "village_day.wav"
 		}
 	}
 }

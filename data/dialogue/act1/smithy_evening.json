@@ -8,6 +8,18 @@
 			"transition": "fade",
 			"next": "snd_fire"
 		},
+		"snd_fire": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "fire_crackling.wav",
+			"next": "snd_invest"
+		},
+		"snd_invest": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "investigation.wav",
+			"next": "effect_smithy_mood"
+		},
 		"effect_smithy_mood": {
 			"type": "effect",
 			"effect": "vignette",
@@ -24,7 +36,7 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Heute Abend ist das Feuer heruntergebrannt. Georg sitzt am Tisch, vor sich zwei Teller mit Eintopf und ein Krug Bier. Er sieht zehn Jahre aelter aus als gestern.",
+			"text": "Heute Abend ist das Feuer heruntergebrannt. Georg sitzt am Tisch, vor sich zwei Teller mit Eintopf und ein Krug Bier. Er sieht zehn Jahre älter aus als gestern.",
 			"next": "show_georg"
 		},
 		"show_georg": {
@@ -33,6 +45,14 @@
 			"expression": "guilty",
 			"position": "right",
 			"action": "show",
+			"next": "show_elise_smithy"
+		},
+		"show_elise_smithy": {
+			"type": "character",
+			"character": "elise",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
 			"next": "georg_1"
 		},
 		"georg_1": {
@@ -40,6 +60,13 @@
 			"speaker": "georg",
 			"expression": "sad",
 			"text": "Setz dich. Iss. Und dann... dann erzähle ich dir, was ich kann.",
+			"next": "elise_sit"
+		},
+		"elise_sit": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich will keine halben Wahrheiten, Georg. Nicht mehr. Von niemandem.",
 			"next": "narration_3"
 		},
 		"narration_3": {
@@ -59,6 +86,13 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "In Graubach gibt es eine Tradition. So alt wie das Dorf selbst. Älter vielleicht. Die Ältesten erzählen sie von Generation zu Generation.",
+			"next": "elise_tradition_1"
+		},
+		"elise_tradition_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Tradition? Was für eine Tradition? Hilde hat auch davon gesprochen.",
 			"next": "georg_4"
 		},
 		"georg_4": {
@@ -66,6 +100,25 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "Alle dreißig Jahre, im November, wenn die Nächte am längsten werden... muss ein Preis bezahlt werden.",
+			"next": "elise_tradition_2"
+		},
+		"elise_tradition_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Alle dreißig Jahre? Georg, das klingt nach Aberglauben. Nach einer alten Geschichte, die sich Bauern erzählen.",
+			"next": "georg_4b"
+		},
+		"georg_4b": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "angry",
+			"text": "Du hast die Kerze gesehen. Die in Margarethes Schlafzimmer. Sie brennt seit Tagen und wird nicht kürzer. Ist DAS Aberglaube?",
+			"next": "elise_tradition_3"
+		},
+		"elise_tradition_3": {
+			"type": "narration",
+			"text": "Ich will widersprechen. Aber er hat Recht. Die Kerze brennt. Das Singen kommt von unter der Erde. Und Anna hat etwas um mich herum gesehen, das kein Kind erfinden kann.",
 			"next": "georg_5"
 		},
 		"georg_5": {
@@ -73,6 +126,11 @@
 			"speaker": "georg",
 			"expression": "angry",
 			"text": "Die Alten nennen es die 'Fütterung'. Der Bürgermeister nennt es 'Tradition'. Deine Großmutter nannte es Mord.",
+			"next": "elise_mord_react"
+		},
+		"elise_mord_react": {
+			"type": "narration",
+			"text": "Das Wort trifft mich wie ein Schlag. Mein Löffel klirrt gegen den Teller.",
 			"next": "effect_revelation_shake"
 		},
 		"effect_revelation_shake": {
@@ -91,6 +149,20 @@
 				"intensity": 0.5,
 				"duration": 0.8
 			},
+			"next": "elise_mord_react_2"
+		},
+		"elise_mord_react_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Mord? Georg, hör dich an! Was redest du da?",
+			"next": "georg_5b"
+		},
+		"georg_5b": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Die Wahrheit. Du wolltest keine halben Wahrheiten, also bekommst du die ganze.",
 			"next": "set_knows_tradition"
 		},
 		"set_knows_tradition": {
@@ -132,12 +204,24 @@
 			"speaker": "georg",
 			"expression": "sad",
 			"text": "Er kommt nicht zurück. Niemand kommt je zurück.",
+			"next": "elise_wer"
+		},
+		"elise_wer": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Wer? Wer war das letzte Opfer?",
 			"next": "georg_10"
 		},
 		"georg_10": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Das letzte Mal war 1893. Mein Großvater... er war damals ein junger Mann. Er hat es gesehen. Er hat nie darüber gesprochen, aber er hat auch nie wieder gelacht.",
+			"next": "elise_scale"
+		},
+		"elise_scale": {
+			"type": "narration",
+			"text": "1893. Dreißig Jahre. Das bedeutet 1863. Und davor. Und davor. Wie viele Menschen hat dieses Dorf geopfert? Wie viele Generationen haben geschwiegen?",
 			"next": "choice_georg_smithy"
 		},
 		"choice_georg_smithy": {
@@ -166,6 +250,7 @@
 				}
 			]
 		},
+
 		"georg_name": {
 			"type": "character",
 			"character": "georg",
@@ -176,7 +261,7 @@
 		},
 		"georg_name_1": {
 			"type": "narration",
-			"text": "Georg sieht mich an. In seinen Augen liegt die Antwort, bevor er sie außpricht.",
+			"text": "Georg sieht mich an. In seinen Augen liegt die Antwort, bevor er sie ausspricht.",
 			"next": "georg_name_2"
 		},
 		"georg_name_2": {
@@ -206,6 +291,7 @@
 			"value": 1,
 			"next": "georg_converge"
 		},
+
 		"georg_police": {
 			"type": "character",
 			"character": "georg",
@@ -219,6 +305,13 @@
 			"speaker": "georg",
 			"expression": "angry",
 			"text": "Polizei? Elise, der nächste Polizeiposten ist zwei Tagesreisen entfernt. Und selbst wenn - was soll ich ihnen sagen? Dass ein Monster unter unserer Kirche lebt?",
+			"next": "elise_police_react"
+		},
+		"elise_police_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Dass Menschen verschwinden! Das reicht!",
 			"next": "georg_police_2"
 		},
 		"georg_police_2": {
@@ -234,6 +327,7 @@
 			"text": "Dieses Dorf ist ein Gefängnis, Elise. Und die Wärter tragen keine Uniform.",
 			"next": "georg_converge"
 		},
+
 		"georg_entity": {
 			"type": "character",
 			"character": "georg",
@@ -245,7 +339,14 @@
 		"georg_entity_1": {
 			"type": "dialogue",
 			"speaker": "georg",
-			"text": "Ich weiß es nicht. Nicht wirklich. Keiner weiß es. Wir wissen nur, dass es alt ist. Älter als der Wald, aelter als die Berge.",
+			"text": "Ich weiß es nicht. Nicht wirklich. Keiner weiß es. Wir wissen nur, dass es alt ist. Älter als der Wald, älter als die Berge.",
+			"next": "elise_entity_react"
+		},
+		"elise_entity_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "In meinem Studium gibt es Berichte über solche Wesen. Alte Götter, die in der Erde schlafen. Ich dachte immer, es seien Metaphern.",
 			"next": "georg_entity_2"
 		},
 		"georg_entity_2": {
@@ -284,13 +385,122 @@
 			"value": 3,
 			"next": "georg_converge"
 		},
+
 		"georg_converge": {
 			"type": "character",
 			"character": "georg",
 			"expression": "determined",
 			"position": "right",
 			"action": "show",
+			"next": "check_asked_name"
+		},
+		"check_asked_name": {
+			"type": "flag_check",
+			"flag": "asked_about_name",
+			"value": 1,
+			"true_next": "snd_tension",
+			"false_next": "georg_name_reveal"
+		},
+		"georg_name_reveal": {
+			"type": "narration",
+			"text": "Georg schweigt einen Moment. Dann reibt er sich die Augen, als müsste er sich zwingen weiterzusprechen.",
+			"next": "georg_name_reveal_2"
+		},
+		"georg_name_reveal_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Es gibt noch etwas, das du wissen musst. Dein Name, Elise. Er steht in dem Buch. In dem Buch in der Kammer.",
+			"next": "georg_name_reveal_3"
+		},
+		"georg_name_reveal_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Deine Großmutter hat versucht ihn zu löschen. Ausstreichen, ausbrennen, die Seite herausreißen. Aber er kommt immer wieder.",
+			"next": "set_name_reveal_flag"
+		},
+		"set_name_reveal_flag": {
+			"type": "set_flag",
+			"flag": "found_name_in_book",
+			"value": 1,
+			"next": "name_breakdown"
+		},
+		"name_breakdown": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 4.0,
+				"duration": 0.6
+			},
+			"next": "elise_breakdown_1"
+		},
+		"elise_breakdown_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Nein. Nein, das kann nicht sein.",
+			"next": "elise_breakdown_2"
+		},
+		"elise_breakdown_2": {
+			"type": "narration",
+			"text": "Ich stehe auf. Der Stuhl kratzt über den Steinboden. Mein Herz hämmert so laut, dass ich sicher bin, Georg kann es hören.",
+			"next": "elise_breakdown_3"
+		},
+		"elise_breakdown_3": {
+			"type": "character",
+			"character": "elise",
+			"expression": "angry",
+			"position": "left",
+			"action": "show",
+			"next": "elise_breakdown_4"
+		},
+		"elise_breakdown_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Sie WUSSTE es? Dreißig Jahre lang wusste sie, dass mein Name in diesem verdammten Buch steht? Und sie hat mir NICHTS gesagt?",
+			"next": "georg_defend_1"
+		},
+		"georg_defend_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Sie hat dich geschützt, Elise. Dreißig Jahre lang hat sie nach einem Weg gesucht, das Ritual zu ändern. Für DICH.",
+			"next": "elise_breakdown_5"
+		},
+		"elise_breakdown_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Geschützt? Sie hat mich in eine Falle gelockt! Ihr Brief, die Reise, alles...",
+			"next": "georg_defend_2"
+		},
+		"georg_defend_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Nein. Sie hat dir die Chance gegeben, es zu beenden. Nicht als Opfer. Als die Person, die diesen Kreislauf bricht. Für immer.",
+			"next": "elise_breakdown_6"
+		},
+		"elise_breakdown_6": {
+			"type": "narration",
+			"text": "Stille. Nur das Knistern des Feuers. Ich setze mich wieder. Meine Hände zittern. Aber hinter der Angst wächst etwas anderes. Etwas Hartes.",
+			"next": "elise_breakdown_7"
+		},
+		"elise_breakdown_7": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Was hat sie geplant? Was genau muss ich tun?",
 			"next": "snd_tension"
+		},
+
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "tension.wav",
+			"next": "georg_final_1"
 		},
 		"georg_final_1": {
 			"type": "dialogue",
@@ -301,6 +511,11 @@
 		"georg_final_2": {
 			"type": "narration",
 			"text": "Er legt einen schweren Eisenschlüssel auf den Tisch. Er ist alt, die Zähne abgegriffen. Auf dem Griff ist eine Spirale eingraviert.",
+			"next": "elise_key_1"
+		},
+		"elise_key_1": {
+			"type": "narration",
+			"text": "Ich nehme den Schlüssel. Er ist schwerer als er aussieht. Das Metall ist kalt, aber die Spirale auf dem Griff - sie fühlt sich warm an unter meinen Fingern. Als würde etwas darin pulsieren.",
 			"next": "georg_final_3"
 		},
 		"georg_final_3": {
@@ -308,6 +523,13 @@
 			"speaker": "georg",
 			"expression": "sad",
 			"text": "Sie wollte, dass du ihn bekommst. 'Wenn Elise kommt', hat sie gesagt, 'gib ihr den Schlüssel. Sie wird wissen, was zu tun ist.'",
+			"next": "elise_key_2"
+		},
+		"elise_key_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Was erwartet sie von mir, Georg? Ich bin Studentin. Ich lese Bücher über Folklore. Ich bin keine... keine Heldin.",
 			"next": "georg_final_4"
 		},
 		"georg_final_4": {
@@ -321,7 +543,22 @@
 		"georg_final_5": {
 			"type": "dialogue",
 			"speaker": "georg",
+			"expression": "protective",
+			"text": "Deine Großmutter auch nicht. Sie war Lehrerin, Kräutersammlerin, Großmutter. Und trotzdem hat sie dreißig Jahre lang das Dorf zusammengehalten. Du bist stärker als du denkst.",
+			"next": "elise_key_3"
+		},
+		"elise_key_3": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
 			"text": "Aber nicht heute. Und nicht allein. Versprich mir das.",
+			"next": "elise_key_promise"
+		},
+		"elise_key_promise": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich verspreche es.",
 			"next": "set_has_key"
 		},
 		"set_has_key": {
@@ -336,13 +573,41 @@
 			"expression": "protective",
 			"position": "right",
 			"action": "hide",
+			"next": "hide_elise_smithy"
+		},
+		"hide_elise_smithy": {
+			"type": "character",
+			"character": "elise",
+			"expression": "determined",
+			"position": "left",
+			"action": "hide",
 			"next": "journal_smithy"
 		},
 		"journal_smithy": {
 			"type": "journal",
 			"entry_id": "georg_confession",
 			"title": "Georgs Geständnis",
-			"content": "Alle 30 Jahre ein Opfer - die 'Fütterung'. Mein Name steht in dem Buch. Großmutter arbeitete an einem alternativen Ritual. Georg hat mir den Schlüssel zur Kammer gegeben. Ich muss herausfinden, was Großmutter geplant hat.",
+			"content": "Alle 30 Jahre ein Opfer - die 'Fütterung'. Mein Name steht in dem Buch und lässt sich nicht löschen. Großmutter arbeitete an einem alternativen Ritual. Georg hat mir den Schlüssel zur Kammer gegeben. Ich bin nicht hier als Opfer. Ich bin hier, um diesen Kreislauf zu brechen.",
+			"next": "narration_deliberate_1"
+		},
+		"narration_deliberate_1": {
+			"type": "narration",
+			"text": "Draußen ist es dunkel geworden. Die Laternen in der Schmiede werfen tanzende Schatten. Der Schlüssel liegt schwer in meiner Manteltasche.",
+			"next": "narration_deliberate_2"
+		},
+		"narration_deliberate_2": {
+			"type": "narration",
+			"text": "Mein Verstand sagt: Lauf. Pack deine Sachen und lauf. Du bist keine Folkloristin, die ein altes Ritual studiert. Du bist das OPFER eines Rituals.",
+			"next": "narration_deliberate_3"
+		},
+		"narration_deliberate_3": {
+			"type": "narration",
+			"text": "Aber der Schlüssel in meiner Tasche ist warm. Und Großmutters Stimme ist in meinem Kopf, so klar, als stünde sie neben mir: 'Du bist mein Licht gegen die Dunkelheit.'",
+			"next": "narration_deliberate_4"
+		},
+		"narration_deliberate_4": {
+			"type": "narration",
+			"text": "Dreißig Jahre hat sie gekämpft. Für mich. Soll ich jetzt fliehen und ihren Kampf bedeutungslos machen?",
 			"next": "choice_night2"
 		},
 		"choice_night2": {
@@ -367,32 +632,66 @@
 		},
 		"stay_decision": {
 			"type": "narration",
-			"text": "Fliehen? Nein. Großmutter hat mich hierhergerufen. Sie hat dreißig Jahre lang gekämpft. Ich werde nicht weglaufen.",
+			"text": "Nein. Ich bleibe. Nicht weil ich keine Angst habe - meine Hände zittern immer noch. Aber weil Großmutter mich hierhergerufen hat. Nicht als Opfer. Als ihre Nachfolgerin.",
 			"next": "stay_2"
 		},
 		"stay_2": {
 			"type": "narration",
-			"text": "Außerdem - wenn mein Name in diesem Buch steht, wird das Weglaufen nichts aendern. Der Brief hat mich in Berlin gefunden. Was immer es ist, es weiß, wo ich bin.",
+			"text": "Außerdem - wenn mein Name in diesem Buch steht, wird das Weglaufen nichts ändern. Der Brief hat mich in Berlin gefunden. Was immer es ist, es weiß, wo ich bin.",
+			"next": "stay_3"
+		},
+		"stay_3": {
+			"type": "narration",
+			"text": "Morgen werde ich Hildes Kräuter brauchen, Voss' Wissen über die Kammer und jeden Fetzen Information, den Großmutter hinterlassen hat. Es gibt einen Plan. Ich muss ihn nur finden.",
 			"next": "act1_end"
 		},
 		"flee_decision": {
 			"type": "narration",
-			"text": "Genug. Ich bin Studentin, keine Heldin. Morgen früh, bei Tagesanbruch, gehe ich. Zu Fuss, wenn es sein muss.",
+			"text": "Genug. Ich bin Studentin, keine Heldin. Morgen früh, bei Tagesanbruch, gehe ich. Zu Fuß, wenn es sein muss.",
 			"next": "flee_2"
 		},
 		"flee_2": {
 			"type": "narration",
-			"text": "Aber während ich zurück zu Großmutters Haus gehe, bemerke ich, dass der Wald näher steht als heute Morgen. Die Bäume am Dorfrand - sie waren nicht so dicht. Nicht so nah.",
+			"text": "Ich packe das Wenige zusammen, das ich mitgebracht habe. Großmutters Notizbuch kommt mit. Der Schlüssel auch - ob aus Hoffnung oder Trotz, weiß ich nicht.",
 			"next": "flee_3"
 		},
 		"flee_3": {
 			"type": "narration",
-			"text": "Und auf dem Weg, den die Kutsche gekommen ist, liegt ein umgestürzter Baum. Ein riesiger, alter Baum. Er sieht aus, als wäre er dort gewachsen.",
+			"text": "Aber während ich zurück zu Großmutters Haus gehe, bemerke ich, dass der Wald näher steht als heute Morgen. Die Bäume am Dorfrand - sie waren nicht so dicht. Nicht so nah.",
 			"next": "flee_4"
 		},
 		"flee_4": {
 			"type": "narration",
+			"text": "Und auf dem Weg, den die Kutsche gekommen ist, liegt ein umgestürzter Baum. Ein riesiger, alter Baum. Er sieht aus, als wäre er dort gewachsen.",
+			"next": "flee_5"
+		},
+		"flee_5": {
+			"type": "narration",
+			"text": "Ich versuche einen anderen Weg. Der Pfad zum Nachbardorf. Aber die Bäume stehen hier so eng, dass kaum Mondlicht durchdringt. Und zwischen den Stämmen... bewegt sich etwas.",
+			"next": "flee_6"
+		},
+		"flee_6": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"intensity": 0.6,
+				"duration": 2.0
+			},
+			"next": "flee_7"
+		},
+		"flee_7": {
+			"type": "narration",
+			"text": "Ich gehe schneller. Dann renne ich. Aber jeder Pfad führt zurück ins Dorf. Jede Kreuzung mündet in eine Sackgasse aus Bäumen, die gestern noch nicht da waren.",
+			"next": "flee_8"
+		},
+		"flee_8": {
+			"type": "narration",
 			"text": "Graubach will mich nicht gehen lassen.",
+			"next": "flee_9"
+		},
+		"flee_9": {
+			"type": "narration",
+			"text": "Schwer atmend stehe ich wieder vor Großmutters Haus. Der Schlüssel in meiner Tasche pulsiert warm, als würde er sagen: Du weißt, was du zu tun hast.",
 			"next": "act1_end"
 		},
 		"act1_end": {
@@ -400,6 +699,12 @@
 			"flag": "act1_complete",
 			"value": 1,
 			"next": "snd_underground"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "underground.wav",
+			"next": "narration_end_1"
 		},
 		"narration_end_1": {
 			"type": "narration",
@@ -427,6 +732,11 @@
 		"narration_end_2": {
 			"type": "narration",
 			"text": "Und er ist lauter.",
+			"next": "narration_end_2b"
+		},
+		"narration_end_2b": {
+			"type": "narration",
+			"text": "Ich liege im Bett, den Schlüssel in der Hand. Die Spirale drückt sich in meine Handfläche. Das Singen formt Worte, die ich fast verstehen kann. Fast.",
 			"next": "effect_end_flicker"
 		},
 		"effect_end_flicker": {
@@ -446,30 +756,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act2/investigation_morning.json"
-		},
-		"snd_fire": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "snd_invest",
-			"path": "fire_crackling.wav"
-		},
-		"snd_invest": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_smithy_mood",
-			"path": "investigation.wav"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "georg_final_1",
-			"path": "tension.wav"
-		},
-		"snd_underground": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "narration_end_1",
-			"path": "underground.wav"
 		}
 	}
 }

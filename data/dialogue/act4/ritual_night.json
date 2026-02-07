@@ -8,6 +8,18 @@
 			"transition": "fade",
 			"next": "snd_ritual"
 		},
+		"snd_ritual": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "snd_underground",
+			"path": "ritual.wav"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_opening",
+			"path": "underground.wav"
+		},
 		"effect_opening": {
 			"type": "effect",
 			"effect": "heavy_glitch",
@@ -32,7 +44,7 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füssen spüre ich es: riesig, alt, erwachend.",
+			"text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füßen spüre ich es: riesig, alt, erwachend.",
 			"next": "effect_breathing"
 		},
 		"effect_breathing": {
@@ -47,21 +59,301 @@
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Georgs Schlüssel hat die letzte Tür geoeffnet. Hildes Kräter brennen in einer Schale neben mir, ihr Rauch steigt spiralförmig auf. Großmutters Journal liegt aufgeschlagen.",
+			"text": "Georgs Schlüssel hat die letzte Tür geöffnet. Hildes Kräuter brennen in einer Schale neben mir, ihr Rauch steigt spiralförmig auf. Großmutters Journal liegt aufgeschlagen.",
 			"next": "narration_4"
 		},
 		"narration_4": {
 			"type": "narration",
+			"text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
 			"text": "Jetzt gibt es kein Zurück. Das Wesen weiß, dass ich hier bin. Es wartet.",
+			"next": "check_ally_ritual"
+		},
+		"check_ally_ritual": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_ritual",
+			"false_next": "check_hilde_ritual"
+		},
+		"show_georg_ritual": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
+			"next": "georg_ritual_1"
+		},
+		"georg_ritual_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Ich bin hier, Elise. Wie versprochen.",
+			"next": "elise_georg_ritual"
+		},
+		"elise_georg_ritual": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Was auch passiert, Georg - danke. Für alles. Für Großmutter. Für mich.",
+			"next": "georg_ritual_2"
+		},
+		"georg_ritual_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Danke mir danach. Wenn wir hier rausgehen. Zusammen.",
+			"next": "narration_ally_ready"
+		},
+		"check_hilde_ritual": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_ritual_entry",
+			"false_next": "check_voss_ritual"
+		},
+		"show_hilde_ritual_entry": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_ritual_entry_1"
+		},
+		"hilde_ritual_entry_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "ritual",
+			"text": "Die Kräuter brennen richtig. Gut. Der Rauch wird den Weg öffnen.",
+			"next": "elise_hilde_ritual"
+		},
+		"elise_hilde_ritual": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Hilde... wenn ich nicht zurückkomme...",
+			"next": "hilde_ritual_entry_2"
+		},
+		"hilde_ritual_entry_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Du kommst zurück. Deine Großmutter hat mir das versprochen, und Margarethe hat nie gelogen.",
+			"next": "narration_ally_ready"
+		},
+		"check_voss_ritual": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_ritual",
+			"false_next": "narration_alone_ritual"
+		},
+		"show_voss_ritual": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "show",
+			"next": "voss_ritual_1"
+		},
+		"voss_ritual_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Himmlischer Vater, steh diesem Kind bei in seiner dunkelsten Stunde...",
+			"next": "elise_voss_ritual"
+		},
+		"elise_voss_ritual": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Pfarrer. Wenn Ihr Gott hier unten Macht hat - dann jetzt.",
+			"next": "voss_ritual_2"
+		},
+		"voss_ritual_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "determined",
+			"text": "Er hat Macht überall. Auch über Dinge, die älter sind als sein Name.",
+			"next": "narration_ally_ready"
+		},
+		"narration_alone_ritual": {
+			"type": "narration",
+			"text": "Ich bin allein. So wie Großmutter es dreißig Jahre lang war. Vielleicht ist das der richtige Weg. Dieses Treffen war immer nur für uns zwei bestimmt.",
+			"next": "narration_begin_ritual"
+		},
+		"narration_ally_ready": {
+			"type": "narration",
+			"text": "Ich atme tief ein. Der Rauch der Kräuter füllt meine Lungen. Das Amulett pulsiert warm an meiner Brust. Es ist soweit.",
+			"next": "narration_begin_ritual"
+		},
+		"narration_begin_ritual": {
+			"type": "narration",
+			"text": "Ich lege meine Hände auf das Zeichen der Erde. Der pulsierende Punkt in der Mitte des Kreises. Und diesmal ziehe ich sie nicht zurück.",
+			"next": "effect_ritual_contact"
+		},
+		"effect_ritual_contact": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 3.0,
+				"duration": 1.0
+			},
 			"next": "effect_text_glitch"
 		},
 		"effect_text_glitch": {
 			"type": "effect",
 			"effect": "text_glitch",
 			"params": {
-				"intensity": 0.3,
-				"duration": 1.5
+				"intensity": 0.5,
+				"duration": 2.0
 			},
+			"next": "narration_contact_1"
+		},
+		"narration_contact_1": {
+			"type": "narration",
+			"text": "Der Ozean. Wieder. Aber diesmal bin ich nicht nur eine Fliege auf seiner Oberfläche. Diesmal tauche ich ein.",
+			"next": "narration_contact_2"
+		},
+		"narration_contact_2": {
+			"type": "narration",
+			"text": "Kälte. Dann Wärme. Dann etwas jenseits von Temperatur. Ein Bewusstsein, das sich langsam umwendet und mich ANSIEHT.",
+			"next": "effect_creature_manifest"
+		},
+		"effect_creature_manifest": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 2.0
+			},
+			"next": "effect_creature_breathing"
+		},
+		"effect_creature_breathing": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.2,
+				"max": 1.0,
+				"cycle": 1.5
+			},
+			"next": "narration_creature_1"
+		},
+		"narration_creature_1": {
+			"type": "narration",
+			"text": "Dann spricht es. Nicht mit Worten. Nicht mit Lauten. Es spricht direkt in meinen Kopf, und die Worte sind älter als jede Sprache, die ich kenne.",
+			"next": "narration_creature_speak_1"
+		},
+		"narration_creature_speak_1": {
+			"type": "narration",
+			"text": "ICH KENNE DICH. DEIN NAME STEHT IN MEINEM BUCH.",
+			"next": "narration_creature_speak_2"
+		},
+		"narration_creature_speak_2": {
+			"type": "narration",
+			"text": "Die Stimme ist wie Donner in einem geschlossenen Raum. Meine Zähne vibrieren. Meine Knochen summen.",
+			"next": "elise_creature_1"
+		},
+		"elise_creature_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Ich... ich weiß. Ich weiß, dass du mich kennst. Ich bin gekommen, um--",
+			"next": "narration_creature_speak_3"
+		},
+		"narration_creature_speak_3": {
+			"type": "narration",
+			"text": "DU BIST WIE SIE. DIE ALTE. SIE ROCH NACH KRÄUTERN UND STURHEIT. DU RIECHST GENAUSO.",
+			"next": "narration_creature_react"
+		},
+		"narration_creature_react": {
+			"type": "narration",
+			"text": "Es kennt Großmutter. Es erinnert sich an sie. Dreißig Jahre lang hat sie es besucht, hat es besungen, hat es gebunden. Und es erinnert sich.",
+			"next": "elise_creature_2"
+		},
+		"elise_creature_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Margarethe. Meine Großmutter. Sie hat mich geschickt.",
+			"next": "narration_creature_speak_4"
+		},
+		"narration_creature_speak_4": {
+			"type": "narration",
+			"text": "SIE IST NICHT MEHR. ICH HABE IHR LICHT ERLÖSCHEN GESPÜRT. ES WAR... STILL DANACH.",
+			"next": "narration_creature_lonely"
+		},
+		"narration_creature_lonely": {
+			"type": "narration",
+			"text": "In der Stimme liegt etwas, das ich nicht erwartet habe. Nicht Hunger. Nicht Wut. Trauer. Dieses uralte, unmenschliche Wesen TRAUERT um meine Großmutter.",
+			"next": "elise_creature_3"
+		},
+		"elise_creature_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Du... trauerst um sie?",
+			"next": "narration_creature_speak_5"
+		},
+		"narration_creature_speak_5": {
+			"type": "narration",
+			"text": "SIE WAR DIE EINZIGE, DIE GESUNGEN HAT. NICHT AUS ANGST. AUS... ICH HABE KEIN WORT DAFÜR. IHR SAGT VIELLEICHT: MITGEFÜHL.",
+			"next": "effect_creature_pulse"
+		},
+		"effect_creature_pulse": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 2.0,
+				"duration": 0.5
+			},
+			"next": "narration_creature_speak_6"
+		},
+		"narration_creature_speak_6": {
+			"type": "narration",
+			"text": "ICH BIN ÄLTER ALS EUER GOTT. ICH WAR HIER VOR DEN BÄUMEN, VOR DEN BERGEN, VOR DEM FLUSS. UND ICH BIN SO MÜDE.",
+			"next": "narration_creature_hunger"
+		},
+		"narration_creature_hunger": {
+			"type": "narration",
+			"text": "HUNGER IST KEIN WORT. ES IST EINE LEERE. SECHSHUNDERT JAHRE HABT IHR MIR EURE TOTEN GEGEBEN. SIE SCHMECKEN NACH ANGST. ICH WILL KEINE ANGST MEHR.",
+			"next": "narration_elise_realization"
+		},
+		"narration_elise_realization": {
+			"type": "narration",
+			"text": "Meine Hände zittern auf dem Stein. Aber nicht vor Angst. Vor Erkenntnis. Es ist kein Monster. Es ist etwas Altes und Einsames, das nie eine andere Wahl hatte als das zu nehmen, was man ihm gab.",
+			"next": "elise_creature_4"
+		},
+		"elise_creature_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Was willst du wirklich? Nicht Opfer. Nicht Blut. Was WILLST du?",
+			"next": "narration_creature_speak_7"
+		},
+		"narration_creature_speak_7": {
+			"type": "narration",
+			"text": "DASS JEMAND BLEIBT. NICHT STIRBT. BLEIBT. SECHSHUNDERT JAHRE UND NIEMAND HAT JE GEFRAGT.",
+			"next": "effect_revelation_glitch"
+		},
+		"effect_revelation_glitch": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "narration_revelation"
+		},
+		"narration_revelation": {
+			"type": "narration",
+			"text": "Stille. In meinem Kopf, in der Kammer, überall. Das Singen hat aufgehört. Zum ersten Mal seit ich in Graubach angekommen bin, ist es still.",
+			"next": "narration_revelation_2"
+		},
+		"narration_revelation_2": {
+			"type": "narration",
+			"text": "Es wartet auf meine Antwort. Das älteste Wesen der Welt wartet auf die Worte einer Folkloristin aus Berlin.",
 			"next": "check_konrad_sacrifice"
 		},
 		"check_konrad_sacrifice": {
@@ -80,7 +372,7 @@
 		},
 		"konrad_appears": {
 			"type": "narration",
-			"text": "Schritte auf der Treppe. Konrad. Er steht im Eingang der Kammer, halb im Schatten. Seine Augen flackern zwischen braun und etwas Bodenlosem.",
+			"text": "Schritte auf der Treppe. Konrad. Er steht im Eingang der Kammer, halb im Schatten. Seine Augen flackern zwischen Braun und etwas Bodenlosem.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -95,7 +387,14 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "possessed",
-			"text": "Elise... ich bin gekommen. Es... es hat mich hergebracht. Aber ein Teil von mir ist noch da. Noch.",
+			"text": "Elise... es hat mich hergebracht. Es... ES SPRICHT DURCH MICH. Aber ein Teil von mir ist noch da. Noch.",
+			"next": "elise_konrad_ritual_1"
+		},
+		"elise_konrad_ritual_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Konrad! Hör auf meine Stimme. DU bist Konrad Müller. Du bist Lehrer. Halte dich fest!",
 			"next": "effect_konrad_glitch"
 		},
 		"effect_konrad_glitch": {
@@ -118,7 +417,26 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Du hast die Wahl, Elise. Du hattest immer die Wahl. Ich... ich nicht.",
+			"text": "Es ist so müde, Elise. Ich spüre es. Sechshundert Jahre Einsamkeit... kein Mensch könnte das ertragen. Und es ist kein Mensch.",
+			"next": "elise_konrad_ritual_2"
+		},
+		"elise_konrad_ritual_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich weiß. Ich habe es gehört. Es will nicht fressen. Es will nicht töten. Es will nur, dass jemand bleibt.",
+			"next": "konrad_4"
+		},
+		"konrad_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Dreißig Jahre BIN ich geblieben. Nicht freiwillig. Aber ich verstehe es jetzt. Die Einsamkeit. Die endlose, bodenlose Einsamkeit.",
+			"next": "narration_konrad_choice"
+		},
+		"narration_konrad_choice": {
+			"type": "narration",
+			"text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Er kämpft gegen sich selbst. Gegen das Wesen. Gegen dreißig Jahre Gefangenschaft.",
 			"next": "choice_sacrifice_override"
 		},
 		"choice_sacrifice_override": {
@@ -129,13 +447,39 @@
 					"set_flags": {
 						"chose_sacrifice": 1
 					},
-					"next": "hide_konrad_sacrifice"
+					"next": "sacrifice_decision"
 				},
 				{
 					"text": "Am ursprünglichen Plan festhalten",
-					"next": "hide_konrad_plan"
+					"next": "plan_decision"
 				}
 			]
+		},
+		"sacrifice_decision": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Konrad. Ich nehme deinen Platz ein.",
+			"next": "konrad_sacrifice_react"
+		},
+		"konrad_sacrifice_react": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Nein... nein, Elise, das kannst du nicht--",
+			"next": "elise_sacrifice_2"
+		},
+		"elise_sacrifice_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Niemand sollte allein sein. Nicht einmal etwas, das älter ist als die Berge. Und du hast dreißig Jahre gelitten. Das reicht.",
+			"next": "narration_sacrifice_creature"
+		},
+		"narration_sacrifice_creature": {
+			"type": "narration",
+			"text": "DU BIST WIE SIE. DIE ALTE. SIE HÄTTE DASSELBE GETAN.",
+			"next": "hide_konrad_sacrifice"
 		},
 		"hide_konrad_sacrifice": {
 			"type": "character",
@@ -149,6 +493,20 @@
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act4/ending_sacrifice.json"
 		},
+		"plan_decision": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Konrad... es tut mir leid. Aber ich habe einen Plan. Vertrau mir.",
+			"next": "konrad_plan_react"
+		},
+		"konrad_plan_react": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Dann tu es. Schnell. Bevor ER wieder die Oberhand gewinnt.",
+			"next": "hide_konrad_plan"
+		},
 		"hide_konrad_plan": {
 			"type": "character",
 			"character": "konrad",
@@ -161,15 +519,105 @@
 			"type": "flag_check",
 			"flag": "approach_seal",
 			"value": 1,
-			"true_next": "check_seal_ready",
+			"true_next": "seal_ritual_begin",
 			"false_next": "check_understand"
+		},
+		"seal_ritual_begin": {
+			"type": "narration",
+			"text": "Das Siegel. Großmutters Weg. Ich öffne das Journal, finde die Seite mit dem Gesang. Die Worte sind alt, in keiner Sprache, die ich kenne, aber irgendwie verstehe ich sie.",
+			"next": "elise_seal_begin"
+		},
+		"elise_seal_begin": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Großmutter, wenn du mich hören kannst - hilf mir. Zeig mir den Weg.",
+			"next": "narration_seal_creature"
+		},
+		"narration_seal_creature": {
+			"type": "narration",
+			"text": "DU WILLST MICH BINDEN? WIE SIE? WIEDER DREISSIG JAHRE DUNKELHEIT?",
+			"next": "narration_seal_resist"
+		},
+		"narration_seal_resist": {
+			"type": "narration",
+			"text": "Wut. Echte Wut. Die Kammer bebt, die Spiralen drehen sich schneller. Das Wesen will nicht zurück in den Schlaf.",
+			"next": "effect_seal_shake"
+		},
+		"effect_seal_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 5.0,
+				"duration": 1.0
+			},
+			"next": "elise_seal_2"
+		},
+		"elise_seal_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Nicht für immer! Nur bis... bis wir einen besseren Weg finden. Bitte!",
+			"next": "check_seal_ready"
 		},
 		"check_seal_ready": {
 			"type": "flag_check",
 			"flag": "learned_chant",
 			"value": 1,
-			"true_next": "route_seal",
+			"true_next": "seal_chant_begin",
+			"false_next": "check_hilde_backup"
+		},
+		"seal_chant_begin": {
+			"type": "narration",
+			"text": "Ich beginne zu singen. Die Worte, die Hilde mich gelehrt hat, fließen aus meinem Mund wie Wasser aus einer Quelle. Alt. Klar. Mächtig.",
+			"next": "route_seal"
+		},
+		"check_hilde_backup": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "hilde_saves_seal",
 			"false_next": "seal_fails"
+		},
+		"hilde_saves_seal": {
+			"type": "narration",
+			"text": "Ich beginne das Ritual, aber die Worte fehlen. Der Gesang - ich kenne ihn nicht vollständig. Panik steigt auf.",
+			"next": "show_hilde_ritual"
+		},
+		"show_hilde_ritual": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_ritual_1"
+		},
+		"hilde_ritual_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "ritual",
+			"text": "Kind, ich bin hier. Ich singe mit dir. Meine Stimme ist alt, aber zusammen - zusammen reicht es.",
+			"next": "elise_hilde_sing"
+		},
+		"elise_hilde_sing": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Zusammen. Wie Großmutter es gewollt hätte.",
+			"next": "hilde_ritual_2"
+		},
+		"hilde_ritual_2": {
+			"type": "narration",
+			"text": "Hildes Stimme erhebt sich neben meiner, brüchig aber sicher. Sie kennt jedes Wort, jede Wendung. Die Melodie wird stärker, füllt die Kammer.",
+			"next": "hide_hilde_ritual"
+		},
+		"hide_hilde_ritual": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "ritual",
+			"position": "left",
+			"action": "hide",
+			"next": "route_seal"
 		},
 		"route_seal": {
 			"type": "scene_end",
@@ -178,6 +626,18 @@
 		"seal_fails": {
 			"type": "narration",
 			"text": "Ich beginne das Ritual, aber die Worte fehlen. Der Gesang - ich kenne ihn nicht vollständig. Die Luft vibriert, das Wesen reagiert, aber das Siegel schließt sich nicht.",
+			"next": "elise_seal_fail"
+		},
+		"elise_seal_fail": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Nein... nein, ich brauche mehr Zeit, ich--",
+			"next": "narration_seal_fail_creature"
+		},
+		"narration_seal_fail_creature": {
+			"type": "narration",
+			"text": "DEINE WORTE SIND LEER. DU KENNST DEN GESANG NICHT. WIE KANNST DU BINDEN, WAS DU NICHT VERSTEHST?",
 			"next": "effect_seal_fail"
 		},
 		"effect_seal_fail": {
@@ -190,10 +650,53 @@
 		},
 		"check_escape_possible": {
 			"type": "flag_check",
-			"flag": "ally_georg",
+			"flag": "allied_georg",
 			"value": 1,
 			"true_next": "route_escape",
+			"false_next": "check_voss_escape"
+		},
+		"check_voss_escape": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "voss_escape_narration",
+			"false_next": "check_courage_escape"
+		},
+		"voss_escape_narration": {
+			"type": "narration",
+			"text": "Das Ritual scheitert. Die Kammer bebt. Aber Voss ist da - er kennt jeden Stein, jeden Tunnel.",
+			"next": "voss_escape_2"
+		},
+		"voss_escape_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Hier entlang! Es gibt einen zweiten Ausgang, den nur die Pfarrer kennen!",
+			"next": "elise_escape_voss"
+		},
+		"elise_escape_voss": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Laufen! Schnell!",
+			"next": "route_escape"
+		},
+		"check_courage_escape": {
+			"type": "flag_check",
+			"flag": "courage",
+			"value": 10,
+			"true_next": "courage_escape",
 			"false_next": "route_awakening"
+		},
+		"courage_escape": {
+			"type": "narration",
+			"text": "Das Ritual scheitert. Die Kammer bricht auseinander. Aber etwas in mir weigert sich aufzugeben. Dieselbe Sturheit, die mich hierher gebracht hat.",
+			"next": "narration_courage_escape_2"
+		},
+		"narration_courage_escape_2": {
+			"type": "narration",
+			"text": "Ich renne. Durch Trümmer, durch Dunkelheit, durch das Brüllen des Wesens. Meine Beine tragen mich, obwohl sie längst hätten versagen sollen.",
+			"next": "route_escape"
 		},
 		"route_escape": {
 			"type": "scene_end",
@@ -203,15 +706,54 @@
 			"type": "flag_check",
 			"flag": "approach_understand",
 			"value": 1,
-			"true_next": "check_knowledge",
+			"true_next": "understand_begin",
 			"false_next": "check_pact"
+		},
+		"understand_begin": {
+			"type": "narration",
+			"text": "Verstehen. Nicht kämpfen, nicht binden. Verstehen. Ich bin Folkloristin. Ich studiere das Unbekannte. Es ist Zeit, das in die Praxis umzusetzen.",
+			"next": "elise_understand_1"
+		},
+		"elise_understand_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich will dich verstehen. Nicht binden, nicht zerstören. Zeig mir, was du bist. Zeig mir alles.",
+			"next": "narration_understand_creature"
+		},
+		"narration_understand_creature": {
+			"type": "narration",
+			"text": "VERSTEHEN? SECHSHUNDERT JAHRE UND NIEMAND HAT DAS GEWOLLT. BIST DU BEREIT FÜR DAS, WAS DU SIEHST?",
+			"next": "elise_understand_2"
+		},
+		"elise_understand_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Nein. Aber ich frage trotzdem.",
+			"next": "check_knowledge"
 		},
 		"check_knowledge": {
 			"type": "flag_check",
 			"flag": "journal_read",
 			"value": 1,
-			"true_next": "route_truth",
-			"false_next": "route_awakening"
+			"true_next": "understand_ready",
+			"false_next": "understand_unprepared"
+		},
+		"understand_ready": {
+			"type": "narration",
+			"text": "Großmutters Journal hat mich vorbereitet. Die Symbole, die Geschichte, die Verbindung. Ich verstehe genug, um die richtigen Fragen zu stellen.",
+			"next": "route_truth"
+		},
+		"understand_unprepared": {
+			"type": "narration",
+			"text": "Aber mir fehlt das Wissen. Großmutters Journal - ich hätte es gründlicher lesen sollen. Ohne Vorbereitung ist der Blick in diesen Abgrund...",
+			"next": "narration_understand_fail"
+		},
+		"narration_understand_fail": {
+			"type": "narration",
+			"text": "DU WILLST SEHEN, ABER DEINE AUGEN SIND NOCH GESCHLOSSEN. VIELLEICHT ÖFFNE ICH SIE FÜR DICH.",
+			"next": "route_awakening"
 		},
 		"route_truth": {
 			"type": "scene_end",
@@ -221,8 +763,37 @@
 			"type": "flag_check",
 			"flag": "approach_pact",
 			"value": 1,
-			"true_next": "route_pact",
+			"true_next": "pact_begin",
 			"false_next": "check_destroy"
+		},
+		"pact_begin": {
+			"type": "narration",
+			"text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden.",
+			"next": "elise_pact_1"
+		},
+		"elise_pact_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich schlage einen Deal vor. Kein Opfer mehr. Nie wieder. Dafür... dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest.",
+			"next": "narration_pact_creature"
+		},
+		"narration_pact_creature": {
+			"type": "narration",
+			"text": "MENSCHEN BRECHEN VERSPRECHEN. WARUM SOLLTE ICH DIR GLAUBEN?",
+			"next": "elise_pact_2"
+		},
+		"elise_pact_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten. Jeden Monat, jeden Gesang. Hat sie jemals gelogen?",
+			"next": "narration_pact_creature_2"
+		},
+		"narration_pact_creature_2": {
+			"type": "narration",
+			"text": "Stille. Langes, unendliches Nachdenken. Dann: NEIN. SIE WAR... ANDERS. WIE DU.",
+			"next": "route_pact"
 		},
 		"route_pact": {
 			"type": "scene_end",
@@ -232,31 +803,92 @@
 			"type": "flag_check",
 			"flag": "approach_destroy",
 			"value": 1,
-			"true_next": "route_awakening",
+			"true_next": "destroy_begin",
 			"false_next": "route_fallback"
+		},
+		"destroy_begin": {
+			"type": "narration",
+			"text": "Genug Reden. Genug Mitleid. Dieses Ding hat sechshundert Jahre Menschenopfer hingenommen. Egal was es fühlt - es muss enden.",
+			"next": "elise_destroy_1"
+		},
+		"elise_destroy_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Es reicht. Sechshundert Jahre Blut. Sechshundert Jahre Angst. Heute stirbst du!",
+			"next": "narration_destroy_creature"
+		},
+		"narration_destroy_creature": {
+			"type": "narration",
+			"text": "DU WILLST MICH TÖTEN? MICH? ICH BIN ÄLTER ALS DEIN STAUB. MAN KANN EINEN BERG NICHT MIT BLOSSEN HÄNDEN EINREISSEN.",
+			"next": "destroy_attempt"
+		},
+		"destroy_attempt": {
+			"type": "narration",
+			"text": "Ich greife an. Mit allem, was ich habe - Wille, Wut, Verzweiflung. Großmutters Amulett glüht, die Kräuter flammen auf, und ich schleudere alles gegen das Bewusstsein unter dem Stein.",
+			"next": "destroy_attempt_2"
+		},
+		"destroy_attempt_2": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.5
+			},
+			"next": "destroy_attempt_3"
+		},
+		"destroy_attempt_3": {
+			"type": "narration",
+			"text": "Mein Angriff prallt ab wie eine Welle an einem Kontinent. Das Wesen ist nicht böse - es ist RIESIG. Und der Aufprall... der Aufprall weckt es.",
+			"next": "destroy_recoil"
+		},
+		"destroy_recoil": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 8.0,
+				"duration": 1.5
+			},
+			"next": "narration_destroy_recoil"
+		},
+		"narration_destroy_recoil": {
+			"type": "narration",
+			"text": "SCHMERZ. DU GIBST MIR SCHMERZ. ICH HABE GENUG SCHMERZ.",
+			"next": "elise_destroy_2"
+		},
+		"elise_destroy_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Es... es bewegt sich. Oh Gott, es BEWEGT sich--",
+			"next": "check_escape_from_destroy"
+		},
+		"check_escape_from_destroy": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "route_escape",
+			"false_next": "route_awakening"
 		},
 		"route_awakening": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act4/ending_awakening.json"
 		},
 		"route_fallback": {
+			"type": "narration",
+			"text": "Ich stehe vor dem Wesen ohne Plan, ohne Vorbereitung. Nur ich und der Abgrund. Und der Abgrund schaut zurück.",
+			"next": "narration_fallback_creature"
+		},
+		"narration_fallback_creature": {
+			"type": "narration",
+			"text": "DU HAST KEINEN WEG GEWÄHLT. DANN WÄHLE ICH FÜR DICH.",
+			"next": "check_fallback_georg"
+		},
+		"check_fallback_georg": {
 			"type": "flag_check",
-			"flag": "ally_georg",
+			"flag": "allied_georg",
 			"value": 1,
 			"true_next": "route_escape",
 			"false_next": "route_awakening"
-		},
-		"snd_ritual": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "snd_underground",
-			"path": "ritual.wav"
-		},
-		"snd_underground": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "effect_opening",
-			"path": "underground.wav"
 		}
 	}
 }

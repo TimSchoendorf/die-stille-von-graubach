@@ -7,6 +7,12 @@
 			"text": "Ich schaue Konrad an. Er zittert. Schweißtropfen auf seiner Stirn. Hinter seinen Augen kämpft ein Mann gegen einen Ozean.",
 			"next": "snd_dark"
 		},
+		"snd_dark": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "show_konrad",
+			"path": "ending_dark.wav"
+		},
 		"show_konrad": {
 			"type": "character",
 			"character": "konrad",
@@ -17,12 +23,41 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Er hat mich lesen gelehrt - nein, das war Großmutter. Er hat mir den Wächterbaum gezeigt. Er hat um Hilfe gebeten, als niemand sonst es tat.",
+			"text": "Er hat mir den Wächterbaum gezeigt. Er hat um Hilfe gebeten, als niemand sonst es tat. Dreißig Jahre Gefangenschaft, und er hat nie aufgehört, Mensch zu sein.",
 			"next": "narration_3"
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Und ich habe in Großmutters Journal gelesen, was das Gefäss ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäss kann es nicht hier bleiben.",
+			"text": "Und ich habe in Großmutters Journal gelesen, was das Gefäß ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäß kann es nicht hier bleiben.",
+			"next": "elise_sacrifice_decision"
+		},
+		"elise_sacrifice_decision": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Konrad. Sieh mich an.",
+			"next": "konrad_look"
+		},
+		"konrad_look": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "konrad_sacrifice_1"
+		},
+		"konrad_sacrifice_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Elise... bitte tu es nicht. Ich kann es ertragen. Ich habe es dreißig Jahre ertragen.",
+			"next": "elise_sacrifice_1"
+		},
+		"elise_sacrifice_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Niemand sollte es ertragen MÜSSEN. Weder du noch irgendwer sonst.",
 			"next": "effect_decision"
 		},
 		"effect_decision": {
@@ -36,12 +71,43 @@
 		},
 		"narration_4": {
 			"type": "narration",
-			"text": "Konrad war nie freiwillig das Gefäss. Er wurde gewählt, bevor er geboren wurde. Ausgesucht wie ein Opferlamm.",
+			"text": "Konrad war nie freiwillig das Gefäß. Er wurde gewählt, bevor er geboren wurde. Ausgesucht wie ein Opferlamm.",
+			"next": "elise_sacrifice_2"
+		},
+		"elise_sacrifice_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich wähle es freiwillig. Das ist der Unterschied. Großmutter hat mir beigebracht, dass Mut nicht die Abwesenheit von Angst ist. Es ist die Entscheidung, trotzdem zu handeln.",
 			"next": "narration_5"
 		},
 		"narration_5": {
 			"type": "narration",
-			"text": "Ich trete auf das Zeichen der Erde. Ich oeffne meinen Geist - nicht um das Wesen zu binden oder zu verstehen, sondern um es einzuladen. In mich.",
+			"text": "Ich trete auf das Zeichen der Erde. Ich öffne meinen Geist - nicht um das Wesen zu binden oder zu verstehen, sondern um es einzuladen. In mich.",
+			"next": "elise_sacrifice_3"
+		},
+		"elise_sacrifice_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Komm. Ich bin bereit. Nimm mich statt ihm.",
+			"next": "narration_creature_sacrifice"
+		},
+		"narration_creature_sacrifice": {
+			"type": "narration",
+			"text": "WARUM? WARUM GIBST DU DICH FREIWILLIG?",
+			"next": "elise_sacrifice_4"
+		},
+		"elise_sacrifice_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Weil niemand allein sein sollte. Nicht einmal du. Und weil Konrad es verdient, frei zu sein.",
+			"next": "narration_creature_sacrifice_2"
+		},
+		"narration_creature_sacrifice_2": {
+			"type": "narration",
+			"text": "DU BIST WIE SIE. DIE ALTE. SIE HÄTTE DASSELBE GETAN. ABER SIE WAR ZU ALT. ZU MÜDE. DU BIST... JUNG. WARM.",
 			"next": "effect_invitation"
 		},
 		"effect_invitation": {
@@ -50,26 +116,11 @@
 			"params": {
 				"duration": 1.0
 			},
-			"next": "konrad_1"
-		},
-		"konrad_1": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "right",
-			"action": "show",
-			"next": "konrad_2"
-		},
-		"konrad_2": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "possessed",
-			"text": "Elise, NEIN! Was tust du?!",
 			"next": "narration_6"
 		},
 		"narration_6": {
 			"type": "narration",
-			"text": "'Ich gebe dir dein Leben zurück, Konrad.' Meine Stimme klingt ruhig. Ruhiger als ich mich fühle.",
+			"text": "ICH NEHME DEIN ANGEBOT AN. ABER ICH WERDE NICHT NEHMEN. ICH WERDE TEILEN. WIR WERDEN ZUSAMMEN SEIN. NICHT WIRT UND PARASIT. NACHBARN.",
 			"next": "effect_transfer"
 		},
 		"effect_transfer": {
@@ -84,7 +135,7 @@
 		},
 		"narration_7": {
 			"type": "narration",
-			"text": "Das Wesen bewegt sich. Ich spüre es - wie Wasser, das von einem Gefäss ins andere fließt. Aus Konrad heraus, durch den Stein, in mich hinein.",
+			"text": "Das Wesen bewegt sich. Ich spüre es - wie Wasser, das von einem Gefäß ins andere fließt. Aus Konrad heraus, durch den Stein, in mich hinein.",
 			"next": "effect_sprite_distort"
 		},
 		"effect_sprite_distort": {
@@ -98,6 +149,11 @@
 		"narration_8": {
 			"type": "narration",
 			"text": "Es ist... nicht wie erwartet. Kein Schmerz. Kein Horror. Es ist wie ein Meer, das sich in einen Teich ergießt. Zu groß, zu alt, zu anders. Aber es passt. Irgendwie.",
+			"next": "narration_8b"
+		},
+		"narration_8b": {
+			"type": "narration",
+			"text": "Ich spüre seine Einsamkeit. Sechshundert Jahre, eingesperrt in Dunkelheit, mit nichts als dem Hunger und dem Singen. Und jetzt... jetzt ist da Licht. Mein Licht.",
 			"next": "konrad_free"
 		},
 		"konrad_free": {
@@ -117,17 +173,33 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Elise... warum?",
-			"next": "narration_9"
+			"text": "Elise... warum? Warum für mich?",
+			"next": "elise_sacrifice_5"
 		},
-		"narration_9": {
-			"type": "narration",
-			"text": "'Weil du es verdienst, frei zu sein. Weil Großmutter es so gewollt hätte. Und weil...'",
+		"elise_sacrifice_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Weil du es verdienst, frei zu sein. Weil Großmutter es so gewollt hätte. Und weil... weil das Wesen mich braucht. Und ich es brauche.",
+			"next": "konrad_5"
+		},
+		"konrad_5": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Ich werde nie vergessen, was du getan hast. Nie.",
+			"next": "elise_sacrifice_6"
+		},
+		"elise_sacrifice_6": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Leb dein Leben, Konrad. Dreißig Jahre hast du verloren. Hol sie dir zurück.",
 			"next": "narration_10"
 		},
 		"narration_10": {
 			"type": "narration",
-			"text": "Ich beende den Satz nicht. Die Worte gehören nicht mehr mir allein. In meinem Kopf, neben meinen Gedanken, beginnt leise das Singen.",
+			"text": "In meinem Kopf, neben meinen Gedanken, beginnt leise das Singen. Nicht bedrohlich. Nicht hungrig. Zufrieden. Wie eine Katze, die schnurrt.",
 			"next": "effect_final"
 		},
 		"effect_final": {
@@ -153,7 +225,56 @@
 		},
 		"narration_12": {
 			"type": "narration",
-			"text": "Ich werde in Graubach bleiben. Ich werde Konrads Platz einnehmen - als Lehrerin, als Hüterin, als Gefäss. Aber nicht als Gefangene. Als Gastgeberin.",
+			"text": "Ich werde in Graubach bleiben. Ich werde Konrads Platz einnehmen - als Lehrerin, als Hüterin, als Gefäß. Aber nicht als Gefangene. Als Gastgeberin.",
+			"next": "anna_sacrifice_appears"
+		},
+		"anna_sacrifice_appears": {
+			"type": "character",
+			"character": "anna",
+			"expression": "lucid",
+			"position": "left",
+			"action": "show",
+			"next": "anna_sacrifice_1"
+		},
+		"anna_sacrifice_1": {
+			"type": "narration",
+			"text": "Tage später finde ich Anna vor dem Schulhaus. Sie zeichnet - nicht mehr Spiralen. Blumen. Bäume. Normale Dinge.",
+			"next": "anna_sacrifice_2"
+		},
+		"anna_sacrifice_2": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Das Singen klingt anders, Elise. Seit du hier bist. Es ist... glücklicher.",
+			"next": "elise_anna_sacrifice"
+		},
+		"elise_anna_sacrifice": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Es hat jemanden zum Reden. Zum ersten Mal seit sechshundert Jahren.",
+			"next": "anna_sacrifice_3"
+		},
+		"anna_sacrifice_3": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Du bist ein besseres Zuhause als Konrad. Es mag dich.",
+			"next": "elise_anna_2"
+		},
+		"elise_anna_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Und ich... ich glaube, ich mag es auch. Auf eine seltsame, unmenschliche Art.",
+			"next": "hide_anna_sacrifice"
+		},
+		"hide_anna_sacrifice": {
+			"type": "character",
+			"character": "anna",
+			"expression": "lucid",
+			"position": "left",
+			"action": "hide",
 			"next": "narration_13"
 		},
 		"narration_13": {
@@ -169,17 +290,18 @@
 		"narration_15": {
 			"type": "narration",
 			"text": "Das Singen in meinem Kopf wird leiser. Sanfter. Fast wie ein Wiegenlied. Vielleicht ist es eines.",
+			"next": "journal_sacrifice"
+		},
+		"journal_sacrifice": {
+			"type": "journal",
+			"entry_id": "ending_sacrifice",
+			"title": "Das Opfer",
+			"content": "Ich habe Konrads Platz als Gefäß eingenommen. Freiwillig. Das Wesen und ich teilen nun einen Körper, einen Geist. Es ist nicht das Ende. Es ist der Anfang einer Koexistenz.",
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "ending:sacrifice"
-		},
-		"snd_dark": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "show_konrad",
-			"path": "ending_dark.wav"
 		}
 	}
 }

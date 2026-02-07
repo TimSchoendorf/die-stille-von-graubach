@@ -8,9 +8,20 @@
 			"transition": "fade",
 			"next": "snd_village"
 		},
+		"snd_village": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "village_day.wav",
+			"next": "narration_1"
+		},
 		"narration_1": {
 			"type": "narration",
 			"text": "Tag vier. Auf dem Dorfplatz begegne ich Konrad zufällig - oder was sich als Zufall tarnt. Er sitzt auf dem Brunnenrand und liest.",
+			"next": "narration_inner"
+		},
+		"narration_inner": {
+			"type": "narration",
+			"text": "Großmutters Worte stehen mir vor Augen: 'Er ist das Gefäß.' Der Mann, der dort so friedlich liest, trägt etwas Uraltes in sich. Und er weiß es vielleicht nicht einmal.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -26,11 +37,53 @@
 			"speaker": "konrad",
 			"expression": "charming",
 			"text": "Fräulein Brandt! Was für eine angenehme Überraschung. Setzen Sie sich doch. Ich habe frischen Kaffee - echten, nicht diesen Ersatz.",
-			"next": "narration_2"
+			"next": "elise_greet"
 		},
-		"narration_2": {
+		"elise_greet": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "neutral",
+			"text": "Guten Tag, Herr Müller. Meine Großmutter hat oft von Ihnen erzählt.",
+			"next": "konrad_react_greet"
+		},
+		"konrad_react_greet": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Hat sie das? Das freut mich. Margarethe war eine besondere Frau.",
+			"next": "check_opened_door"
+		},
+		"check_opened_door": {
+			"type": "flag_check",
+			"flag": "opened_door",
+			"value": 1,
+			"true_next": "konrad_remembers_door",
+			"false_next": "check_journal_read"
+		},
+		"konrad_remembers_door": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "smiling",
+			"text": "Es ist schön, Sie bei Tageslicht zu sehen. Unser nächtliches Treffen war etwas... ungewöhnlich.",
+			"next": "elise_door_react"
+		},
+		"elise_door_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Ja, es hat mich überrascht. Was hat Sie nachts zu Großmutters Haus geführt?",
+			"next": "konrad_door_excuse"
+		},
+		"konrad_door_excuse": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Ich wollte mein Beileid aussprechen. Alte Gewohnheit - Margarethe und ich haben oft abends geplaudert.",
+			"next": "narration_door"
+		},
+		"narration_door": {
 			"type": "narration",
-			"text": "Sein Lächeln ist warm, einladend. Aber Großmutters Worte hallen nach: 'Seine Augen waren nicht seine eigenen.'",
+			"text": "Er lügt. Oder er sagt die halbe Wahrheit. Großmutter hat in ihrem Tagebuch nicht von abendlichen Plaudereien geschrieben.",
 			"next": "check_journal_read"
 		},
 		"check_journal_read": {
@@ -42,21 +95,29 @@
 		},
 		"narration_suspicious": {
 			"type": "narration",
-			"text": "Ich weiß, was Großmutter ueber ihn geschrieben hat. Das Gefäss. Ich muss vorsichtig sein.",
+			"text": "Ich weiß, was Großmutter über ihn geschrieben hat. Das Gefäß. Seine Augen, die nicht seine eigenen sind. Ich muss vorsichtig sein - aber ich muss auch verstehen.",
 			"next": "konrad_2"
 		},
 		"narration_charmed": {
 			"type": "narration",
-			"text": "Etwas an ihm zieht mich an. Er ist anders als die anderen Dorfbewohner - gebildet, offen, neugierig.",
+			"text": "Etwas an ihm zieht mich an. Er ist anders als die anderen Dorfbewohner - gebildet, offen, neugierig. Aber irgendetwas stimmt nicht. Ich spüre es.",
 			"next": "konrad_2"
 		},
 		"konrad_2": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Ich habe ueber Ihre Großmutter nachgedacht. Margarethe war eine bemerkenswerte Frau. Wussten Sie, dass sie mich Lesen beigebracht hat?",
-			"next": "konrad_3"
+			"expression": "charming",
+			"text": "Ich habe über Ihre Großmutter nachgedacht. Margarethe war eine bemerkenswerte Frau. Wussten Sie, dass sie mir Lesen beigebracht hat?",
+			"next": "elise_react_reading"
 		},
-		"konrad_3": {
+		"elise_react_reading": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Das wusste ich nicht. Sie hat nie viel über Graubach gesprochen. Jedenfalls nicht... nicht in den letzten Jahren.",
+			"next": "konrad_expr_sad"
+		},
+		"konrad_expr_sad": {
 			"type": "character",
 			"character": "konrad",
 			"expression": "sad",
@@ -69,9 +130,16 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Als ich ein Kind war, kam sie jeden Mittwoch. Hat mir vorgelesen, mir die Welt gezeigt jenseits dieser Berge. Ohne sie wäre ich nie Lehrer geworden.",
-			"next": "konrad_5"
+			"next": "elise_personal"
 		},
-		"konrad_5": {
+		"elise_personal": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Das klingt wunderschön. Ich wünschte, ich hätte sie öfter besucht.",
+			"next": "konrad_expr_charming"
+		},
+		"konrad_expr_charming": {
 			"type": "character",
 			"character": "konrad",
 			"expression": "charming",
@@ -84,6 +152,11 @@
 			"speaker": "konrad",
 			"expression": "suspicious",
 			"text": "Sie hatte immer ein Geheimnis, Ihre Großmutter. Etwas, das sie nie teilte. Haben Sie es herausgefunden?",
+			"next": "narration_test_moment"
+		},
+		"narration_test_moment": {
+			"type": "narration",
+			"text": "Er fragt so direkt. Seine Augen suchen meine - ruhig, aufmerksam. Zu aufmerksam? Oder nur neugierig?",
 			"next": "choice_konrad_trust"
 		},
 		"choice_konrad_trust": {
@@ -98,133 +171,292 @@
 					"require_flags": {
 						"knows_tradition": 1
 					},
-					"next": "konrad_trusted"
+					"next": "elise_trust_1"
 				},
 				{
-					"text": "Misstrauen: Ausweichend antworten",
+					"text": "Ausweichend antworten",
 					"set_flags": {
 						"distrusted_konrad": 1
 					},
-					"next": "konrad_distrusted"
+					"next": "elise_distrust_1"
 				},
 				{
-					"text": "Ihn testen: Von den Spiralen erzählen und seine Reaktion beobachten",
+					"text": "Ihn testen: Beiläufig die Spiralen erwähnen",
 					"set_flags": {
 						"tested_konrad": 1
 					},
-					"next": "konrad_tested"
+					"next": "elise_test_1"
 				}
 			]
 		},
-		"konrad_trusted": {
-			"type": "narration",
-			"text": "Ich erzähle ihm alles. Von der Tradition, dem Buch, der Fütterung. Er hört zu, ohne zu unterbrechen.",
-			"next": "konrad_trusted_2"
+
+		"elise_trust_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Herr Müller... Konrad. Ich weiß von der Tradition. Vom Buch unter der Kirche. Von der Fütterung alle dreißig Jahre.",
+			"next": "konrad_trust_react"
 		},
-		"konrad_trusted_2": {
+		"konrad_trust_react": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "dark",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_trust_silence"
+		},
+		"konrad_trust_silence": {
+			"type": "narration",
+			"text": "Er sagt nichts. Sein Gesicht verändert sich kaum - aber seine Hände um die Kaffeetasse werden weiß vor Anspannung.",
+			"next": "konrad_trust_2"
+		},
+		"konrad_trust_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Ich weiß es. Ich habe es immer gewusst, glaube ich. Nicht die Details, aber... das Gefühl. Dass etwas nicht stimmt in diesem Dorf. Dass ICH nicht stimme.",
+			"next": "elise_trust_ask"
+		},
+		"elise_trust_ask": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Wie fühlt es sich an? Können Sie... können Sie es spüren?",
+			"next": "konrad_trust_describe"
+		},
+		"konrad_trust_describe": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Stellen Sie sich vor, Sie stehen in einem dunklen Raum. Sie wissen, dass Sie nicht allein sind. Etwas atmet hinter Ihnen. Aber wenn Sie sich umdrehen, ist da nur... Sie selbst.",
+			"next": "fx_trust_glitch"
+		},
+		"fx_trust_glitch": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.3
+			},
+			"next": "konrad_trust_expr"
+		},
+		"konrad_trust_expr": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_trust_dreams"
+		},
+		"konrad_trust_dreams": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "Manchmal träume ich Dinge, die nicht meine Träume sind. Ich sehe... tiefer. Älter. Als wäre ich nur eine Hülle.",
+			"next": "elise_trust_vessel"
+		},
+		"elise_trust_vessel": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Konrad... Großmutter hat Sie 'das Gefäß' genannt. In ihrem Tagebuch.",
+			"next": "konrad_trust_vessel_react"
+		},
+		"konrad_trust_vessel_react": {
+			"type": "narration",
+			"text": "Er schließt die Augen. Ein Zittern läuft durch seinen Körper - kurz, heftig, als hätte ihn ein Stromstoß getroffen.",
+			"next": "konrad_trust_expr2"
+		},
+		"konrad_trust_expr2": {
 			"type": "character",
 			"character": "konrad",
 			"expression": "sad",
 			"position": "center",
 			"action": "show",
-			"next": "konrad_trusted_3"
+			"next": "konrad_trust_4"
 		},
-		"konrad_trusted_3": {
+		"konrad_trust_4": {
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Ich weiß es. Ich habe es immer gewusst, glaube ich. Nicht die Details, aber... das Gefühl. Dass etwas nicht stimmt in diesem Dorf. Dass ich etwas nicht stimme.",
-			"next": "konrad_trusted_4"
+			"text": "Das Gefäß. Ja. Das... das erklärt einiges. Wissen Sie, Fräulein Brandt, manchmal wache ich nachts auf und meine Hände zeichnen Spiralen. Ohne dass ich es will.",
+			"next": "narration_trust_horror"
 		},
-		"konrad_trusted_4": {
-			"type": "effect",
-			"effect": "color_glitch",
-			"params": {
-				"duration": 0.2
-			},
-			"next": "konrad_trusted_5"
-		},
-		"konrad_trusted_5": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "dark",
-			"text": "Manchmal träume ich Dinge, die nicht meine Träume sind. Ich sehe... tiefer. Älter. Als wäre ich nur eine Hülle.",
-			"next": "konrad_trusted_6"
-		},
-		"konrad_trusted_6": {
+		"narration_trust_horror": {
 			"type": "narration",
-			"text": "Er sagt es so ruhig, so nüchtert. Als rede er ueber das Wetter.",
+			"text": "Ein Schauer läuft mir über den Rücken. Er beschreibt die Besessenheit von innen - und es klingt nicht wie ein Monster. Es klingt wie ein Gefangener.",
 			"next": "konrad_converge"
 		},
-		"konrad_distrusted": {
-			"type": "narration",
-			"text": "'Nichts Besonderes', sage ich. 'Alte Briefe, Rezepte, Erinnerungen.' Die Lüge schmeckt bitter.",
-			"next": "konrad_distrusted_2"
+
+		"elise_distrust_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "neutral",
+			"text": "Nichts Besonderes. Alte Briefe, Rezepte. Erinnerungen an eine alte Frau.",
+			"next": "narration_lie"
 		},
-		"konrad_distrusted_2": {
+		"narration_lie": {
+			"type": "narration",
+			"text": "Die Lüge kommt leichter als erwartet. Aber meine Stimme klingt zu hoch, zu gleichmäßig.",
+			"next": "konrad_distrust_expr"
+		},
+		"konrad_distrust_expr": {
 			"type": "character",
 			"character": "konrad",
 			"expression": "suspicious",
 			"position": "center",
 			"action": "show",
-			"next": "konrad_distrusted_3"
+			"next": "konrad_distrust_2"
 		},
-		"konrad_distrusted_3": {
+		"konrad_distrust_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "suspicious",
+			"text": "Nur Erinnerungen? Keine... Aufzeichnungen? Keine Notizen über das Dorf?",
+			"next": "elise_distrust_push"
+		},
+		"elise_distrust_push": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "neutral",
+			"text": "Warum sollte sie Notizen über das Dorf haben?",
+			"next": "konrad_distrust_shift"
+		},
+		"konrad_distrust_shift": {
 			"type": "narration",
-			"text": "Er lächelt, aber das Lächeln erreicht seine Augen nicht. Für einen Moment - nur einen Moment - scheint etwas hinter seinen Pupillen zu gleiten. Etwas Altes.",
-			"next": "effect_konrad_eyes"
+			"text": "Sein Lächeln verändert sich. Die Wärme weicht. Für einen Moment scheint etwas hinter seinen Pupillen zu gleiten. Etwas Altes.",
+			"next": "fx_distrust_glitch"
 		},
-		"effect_konrad_eyes": {
+		"fx_distrust_glitch": {
 			"type": "effect",
 			"effect": "color_glitch",
 			"params": {
-				"duration": 0.15
+				"duration": 0.2
 			},
-			"next": "konrad_distrusted_4"
+			"next": "konrad_distrust_dark"
 		},
-		"konrad_distrusted_4": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "dark",
-			"text": "Natürlich. Nur Erinnerungen. Graubach ist schließlich ein ganz normales Dorf.",
-			"next": "konrad_converge"
-		},
-		"konrad_tested": {
-			"type": "narration",
-			"text": "Ich erwähne beiläufig die Spiralen in der Kirche. 'Seltsame Muster', sage ich. 'Kennen Sie die?'",
-			"next": "konrad_tested_2"
-		},
-		"konrad_tested_2": {
-			"type": "narration",
-			"text": "Seine Hand zuckt. Unwillkürlich greift er sich ans Handgelenk - dort, wo ich letztens die schwachen Spiralenmuster auf seiner Haut gesehen habe.",
-			"next": "effect_konrad_spiral"
-		},
-		"effect_konrad_spiral": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 0.5
-			},
-			"next": "konrad_tested_3"
-		},
-		"konrad_tested_3": {
+		"konrad_distrust_dark": {
 			"type": "character",
 			"character": "konrad",
 			"expression": "dark",
 			"position": "center",
 			"action": "show",
-			"next": "konrad_tested_4"
+			"next": "konrad_distrust_3"
 		},
-		"konrad_tested_4": {
+		"konrad_distrust_3": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Natürlich. Nur Erinnerungen. Graubach ist schließlich ein ganz normales Dorf.",
+			"next": "elise_distrust_shiver"
+		},
+		"elise_distrust_shiver": {
+			"type": "narration",
+			"text": "Die Art, wie er 'normal' betont, lässt mich frösteln. Er weiß, dass ich lüge. Und ich weiß, dass er weiß.",
+			"next": "konrad_distrust_4"
+		},
+		"konrad_distrust_4": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "dark",
+			"text": "Wissen Sie, Fräulein Brandt...",
+			"next": "fx_distrust_glitch2"
+		},
+		"fx_distrust_glitch2": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 0.3
+			},
+			"next": "konrad_distrust_creature"
+		},
+		"konrad_distrust_creature": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "possessed",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_distrust_voice"
+		},
+		"konrad_distrust_voice": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "possessed",
+			"text": "ICH lüge nie.",
+			"next": "narration_distrust_horror"
+		},
+		"narration_distrust_horror": {
+			"type": "narration",
+			"text": "Seine Stimme klingt plötzlich anders. Tiefer. Älter. Als spräche nicht er, sondern etwas DURCH ihn. Dann blinzelt er, und der alte Konrad ist zurück.",
+			"next": "konrad_distrust_recover"
+		},
+		"konrad_distrust_recover": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "charming",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_distrust_5"
+		},
+		"konrad_distrust_5": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Verzeihen Sie. Ich bin heute etwas... durcheinander. Der Schlaf war nicht gut.",
+			"next": "konrad_converge"
+		},
+
+		"elise_test_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Die Kirche ist faszinierend. Diese Spiralen an den Wänden - haben Sie die bemerkt? Ich kenne ähnliche Muster aus meinem Folkloristik-Studium.",
+			"next": "konrad_test_react"
+		},
+		"konrad_test_react": {
+			"type": "narration",
+			"text": "Seine Hand zuckt. Unwillkürlich greift er sich ans Handgelenk - dort, wo ich bei unserer letzten Begegnung die schwachen Spiralenmuster auf seiner Haut gesehen habe.",
+			"next": "konrad_test_hide"
+		},
+		"konrad_test_hide": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Spiralen? Ich... nein, ich achte nicht so auf Kirchendekoration. Pfarrer Voss' Zuständigkeit, nicht meine.",
+			"next": "elise_test_push"
+		},
+		"elise_test_push": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Seltsam. Sie haben gerade Ihr Handgelenk bedeckt. Haben Sie auch solche Muster?",
+			"next": "konrad_test_caught"
+		},
+		"konrad_test_caught": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "dark",
+			"position": "center",
+			"action": "show",
+			"next": "fx_test_glitch"
+		},
+		"fx_test_glitch": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 0.5
+			},
+			"next": "konrad_test_3"
+		},
+		"konrad_test_3": {
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "dark",
 			"text": "Spiralen? Nein, ich... ich kenne keine Spiralen.",
-			"next": "konrad_tested_5"
+			"next": "narration_test_lie"
 		},
-		"konrad_tested_5": {
+		"narration_test_lie": {
 			"type": "narration",
-			"text": "Er lügt. Und er weiß, dass ich es weiß. Die Luft zwischen uns wird schwer.",
+			"text": "Er lügt. Und er weiß, dass ich es weiß. Die Luft zwischen uns wird schwer. Ich sage nichts weiter - manchmal ist Schweigen aufschlussreicher als Fragen.",
 			"next": "set_konrad_suspicious"
 		},
 		"set_konrad_suspicious": {
@@ -233,6 +465,7 @@
 			"value": 1,
 			"next": "konrad_converge"
 		},
+
 		"konrad_converge": {
 			"type": "character",
 			"character": "konrad",
@@ -246,13 +479,43 @@
 			"speaker": "konrad",
 			"expression": "smiling",
 			"text": "Kommen Sie. Lassen Sie mich Ihnen etwas zeigen. Den Wald hinter der Schule - dort gibt es einen Ort, den Ihre Großmutter geliebt hat.",
+			"next": "elise_forest_hesitate"
+		},
+		"elise_forest_hesitate": {
+			"type": "narration",
+			"text": "Allein mit ihm in den Wald. Mit dem Mann, den Großmutter 'das Gefäß' nannte. Jeder vernünftige Mensch würde ablehnen.",
+			"next": "elise_forest_decide"
+		},
+		"elise_forest_decide": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Zeigen Sie mir den Ort.",
+			"next": "narration_forest_why"
+		},
+		"narration_forest_why": {
+			"type": "narration",
+			"text": "Aber ich bin nicht hier, um vernünftig zu sein. Ich bin hier, um zu verstehen.",
 			"next": "bg_forest"
 		},
+
 		"bg_forest": {
 			"type": "background",
 			"background": "forest_path",
 			"transition": "fade",
 			"next": "snd_forest_amb"
+		},
+		"snd_forest_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "forest_night.wav",
+			"next": "snd_forest"
+		},
+		"snd_forest": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "forest.wav",
+			"next": "effect_forest_mood"
 		},
 		"effect_forest_mood": {
 			"type": "effect",
@@ -267,6 +530,25 @@
 		"narration_forest_1": {
 			"type": "narration",
 			"text": "Der Waldweg führt tiefer als erwartet. Die Bäume stehen hier so dicht, dass kaum Licht durchdringt. Konrad geht voraus, sicher, als kennte er jeden Wurzelstock.",
+			"next": "elise_forest_1"
+		},
+		"elise_forest_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Kommen Sie oft hierher?",
+			"next": "konrad_forest_reply"
+		},
+		"konrad_forest_reply": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Manchmal. Wenn der Unterricht vorbei ist. Der Wald ist ein guter Ort zum Nachdenken.",
+			"next": "narration_forest_walk"
+		},
+		"narration_forest_walk": {
+			"type": "narration",
+			"text": "Seine Schritte sind sicher, fast automatisch. Als würde sein Körper den Weg kennen, auch wenn sein Verstand woanders ist.",
 			"next": "narration_forest_2"
 		},
 		"narration_forest_2": {
@@ -286,7 +568,20 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"text": "Die Dorfbewohner nennen ihn den Wächterbaum. Er steht schon seit Jahrhunderten hier. Ihre Großmutter kam oft hierher.",
+			"next": "elise_tree_1"
+		},
+		"elise_tree_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Spiralförmig gewachsen... wie die Muster in der Kirche. Wie die Zeichen auf Ihrem Handgelenk.",
 			"next": "snd_whispers"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "whispers.wav",
+			"next": "konrad_tree_2"
 		},
 		"konrad_tree_2": {
 			"type": "character",
@@ -301,11 +596,74 @@
 			"speaker": "konrad",
 			"expression": "possessed",
 			"text": "Fühlen Sie es? Der Boden hier... er atmet.",
+			"next": "elise_tree_feel"
+		},
+		"elise_tree_feel": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Ja. Unter meinen Füßen. Ein Pulsieren - wie ein Herzschlag.",
 			"next": "narration_tree"
 		},
 		"narration_tree": {
 			"type": "narration",
-			"text": "Er hat Recht. Unter meinen Füssen ist ein schwaches Pulsieren. Wie ein Herzschlag, tief in der Erde. Derselbe Rhythmus wie unter dem Altar.",
+			"text": "Derselbe Rhythmus wie unter dem Altar. Das Wesen reicht bis hierher - sein Einfluss durchzieht den Boden wie Wurzeln.",
+			"next": "konrad_humming"
+		},
+		"konrad_humming": {
+			"type": "narration",
+			"text": "Konrad steht reglos vor dem Baum. Seine Lippen bewegen sich, kaum sichtbar. Er summt - eine Melodie, die ich kenne. Die Melodie aus der Tiefe.",
+			"next": "elise_humming_react"
+		},
+		"elise_humming_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Das Lied. Sie summen das Lied - das Singen aus der Tiefe!",
+			"next": "konrad_humming_react"
+		},
+		"konrad_humming_react": {
+			"type": "narration",
+			"text": "Er zuckt zusammen, als hätte ich ihn geschlagen. Seine Augen weiten sich - Verwirrung, Angst. Echte Angst.",
+			"next": "konrad_humming_expr"
+		},
+		"konrad_humming_expr": {
+			"type": "character",
+			"character": "konrad",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "konrad_humming_2"
+		},
+		"konrad_humming_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Ich... was? Ich habe nicht... ich wusste nicht, dass ich...",
+			"next": "narration_humming_pity"
+		},
+		"narration_humming_pity": {
+			"type": "narration",
+			"text": "Er weiß es nicht. Er summt das Lied der Kreatur, ohne es zu bemerken. Wie ein Schlafwandler, der nicht weiß, wohin seine Füße ihn tragen.",
+			"next": "elise_humming_comfort"
+		},
+		"elise_humming_comfort": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Schon gut. Es ist nicht Ihre Schuld, Konrad.",
+			"next": "konrad_humming_3"
+		},
+		"konrad_humming_3": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Nichts hier ist meine Schuld. Und gleichzeitig ist alles meine Schuld. Oder das, was in mir steckt.",
+			"next": "narration_pity_moment"
+		},
+		"narration_pity_moment": {
+			"type": "narration",
+			"text": "Zum ersten Mal sehe ich ihn nicht als Bedrohung. Sondern als Opfer. Ein Mann, gefangen zwischen sich selbst und etwas, das älter ist als die Berge.",
 			"next": "set_found_tree"
 		},
 		"set_found_tree": {
@@ -318,7 +676,7 @@
 			"type": "journal",
 			"entry_id": "konrad_and_tree",
 			"title": "Konrad und der Wächterbaum",
-			"content": "Konrad zeigte mir den Wächterbaum im Wald - spiralförmig gewachsen. Der Boden dort pulsiert wie unter dem Altar. Konrad verhielt sich seltsam - seine Hand zuckt bei Spiralen, seine Augen verändern sich. Großmutters Journal bestätigte: Er ist das Gefäss.",
+			"content": "Konrad zeigte mir den Wächterbaum im Wald - spiralförmig gewachsen. Der Boden dort pulsiert wie unter dem Altar. Konrad summt unwillkürlich das Lied der Kreatur, ohne es zu wissen. Er ist das Gefäß - aber auch ein Gefangener. Nicht Feind, sondern Opfer.",
 			"next": "hide_konrad"
 		},
 		"hide_konrad": {
@@ -331,7 +689,12 @@
 		},
 		"narration_return": {
 			"type": "narration",
-			"text": "Wir gehen schweigend zurück ins Dorf. Konrad pfeift leise vor sich hin. Die Melodie kommt mir bekannt vor - es ist das Singen aus der Tiefe.",
+			"text": "Wir gehen schweigend zurück ins Dorf. Der Wald scheint sich hinter uns zu schließen, als wollte er den Weg versiegeln.",
+			"next": "elise_return_thought"
+		},
+		"elise_return_thought": {
+			"type": "narration",
+			"text": "Kann man ein Gefäß befreien, ohne es zu zerbrechen? Oder ist Konrad Müller schon lange nicht mehr Konrad Müller?",
 			"next": "effect_return_flicker"
 		},
 		"effect_return_flicker": {
@@ -352,30 +715,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act2/hilde_ritual.json"
-		},
-		"snd_village": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "narration_1",
-			"path": "village_day.wav"
-		},
-		"snd_forest_amb": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "snd_forest",
-			"path": "forest_night.wav"
-		},
-		"snd_forest": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_forest_mood",
-			"path": "forest.wav"
-		},
-		"snd_whispers": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "konrad_tree_2",
-			"path": "whispers.wav"
 		}
 	}
 }

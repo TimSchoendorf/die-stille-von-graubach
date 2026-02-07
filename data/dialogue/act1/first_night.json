@@ -8,6 +8,12 @@
 			"transition": "fade",
 			"next": "snd_night"
 		},
+		"snd_night": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "village_night.wav",
+			"next": "effect_dark"
+		},
 		"effect_dark": {
 			"type": "effect",
 			"effect": "vignette",
@@ -68,11 +74,23 @@
 		"read_notebook_4": {
 			"type": "narration",
 			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, aelter als die Bäume, aelter als die Berge. Wir nennen es den Schläfenden. Meine Großmutter nannte es den Atem der Erde.\"",
+			"next": "elise_nb_react_1"
+		},
+		"elise_nb_react_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Etwas unter der Kirche...? Großmutter, was hast du mir nie erzählt?",
 			"next": "read_notebook_5"
 		},
 		"read_notebook_5": {
 			"type": "narration",
 			"text": "\"Alle dreißig Jahre braucht es... Nahrung. Das letzte Mal war 1893. Das nächste Mal ist jetzt. November 1923.\"",
+			"next": "elise_nb_react_2"
+		},
+		"elise_nb_react_2": {
+			"type": "narration",
+			"text": "Ich lege das Buch hin. Meine Hände zittern zu stark. Dreißig Jahre. Nahrung. Was für eine Nahrung? Ich will nicht weiterlesen. Aber ich muss.",
 			"next": "effect_shake_read"
 		},
 		"effect_shake_read": {
@@ -92,11 +110,23 @@
 		"read_notebook_7": {
 			"type": "narration",
 			"text": "\"Konrad ist nicht Konrad. Nicht mehr. Seit dem Frühjahr sehe ich es in seinen Augen. Er lächelt anders. Er bewegt sich anders. Etwas trägt ihn wie einen Mantel.\"",
+			"next": "elise_nb_react_3"
+		},
+		"elise_nb_react_3": {
+			"type": "narration",
+			"text": "Konrad. Der Dorflehrer. Ich kenne den Mann nicht - aber Großmutter schreibt über ihn wie über eine Bedrohung. Was lebt IN einem Menschen? Was trägt jemanden wie einen Mantel?",
 			"next": "read_notebook_8"
 		},
 		"read_notebook_8": {
 			"type": "narration",
 			"text": "\"Sie wollen dich, Elise. Dein Name steht im Buch unter der Kirche. Ich habe versucht ihn auszustreichen, aber die Tinte kehrt zurück. Immer wieder.\"",
+			"next": "elise_nb_react_4"
+		},
+		"elise_nb_react_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Mein Name...? MEIN Name steht in einem Buch unter der Kirche? Was bedeutet das? Was WILL dieses Ding von mir?",
 			"next": "set_knowledge"
 		},
 		"set_knowledge": {
@@ -120,6 +150,38 @@
 		"skip_notebook_2": {
 			"type": "narration",
 			"text": "Morgen. Im Tageslicht. Wenn die Welt wieder Sinn ergibt.",
+			"next": "skip_restless_1"
+		},
+		"skip_restless_1": {
+			"type": "narration",
+			"text": "Aber ich kann nicht stillsitzen. Die Stille drückt. Ich stehe auf und gehe durch das dunkle Haus, die Finger an der Wand entlang.",
+			"next": "skip_restless_2"
+		},
+		"skip_restless_2": {
+			"type": "narration",
+			"text": "Im Flur bleibe ich stehen. Über dem Türrahmen sind Zeichen in das Holz geschnitzt - Spiralen, verschlungen und tief. Dieselben wie auf dem Brief. Ich fahre mit den Fingern darüber. Das Holz ist glatt, als hätte Großmutter sie regelmäßig nachgezogen.",
+			"next": "skip_restless_3"
+		},
+		"skip_restless_3": {
+			"type": "narration",
+			"text": "An jedem Fenster dasselbe. Spiralen über dem Rahmen, getrocknete Kräuterbündel in den Ritzen. Jede Öffnung im Haus ist geschützt. Versiegelt.",
+			"next": "skip_restless_4"
+		},
+		"skip_restless_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Großmutter... wie lange hast du das hier gemacht? Was hast du ferngehalten?",
+			"next": "skip_restless_5"
+		},
+		"skip_restless_5": {
+			"type": "narration",
+			"text": "Am Küchenfenster presse ich die Stirn gegen das kalte Glas. Draußen: Dunkelheit. Aber irgendwo in dieser Dunkelheit fühle ich etwas. Nicht sehen, nicht hören - fühlen. Als ob mich jemand beobachtet.",
+			"next": "skip_restless_6"
+		},
+		"skip_restless_6": {
+			"type": "narration",
+			"text": "Ich kehre zum Tisch zurück und wickle mich in Großmutters Schal. Der Duft von Lavendel und Kamille hüllt mich ein. Fast tröstlich. Fast.",
 			"next": "notebook_converge"
 		},
 		"notebook_converge": {
@@ -147,6 +209,12 @@
 			"type": "narration",
 			"text": "Im Traum stehe ich auf dem Dorfplatz. Es ist Nacht, aber das Dorf ist hell erleuchtet - von Fackeln, die in einer Spirale angeordnet sind.",
 			"next": "snd_whispers"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "whispers.wav",
+			"next": "narration_dream_2"
 		},
 		"narration_dream_2": {
 			"type": "narration",
@@ -205,6 +273,12 @@
 			"text": "Und dann höre ich es. Nicht im Traum. Im Wachen.",
 			"next": "snd_underground"
 		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "underground.wav",
+			"next": "narration_wake_3"
+		},
 		"narration_wake_3": {
 			"type": "narration",
 			"text": "Singen. Leise, gedämpft, als käme es von weit unter dem Haus. Viele Stimmen, verwoben zu etwas, das nicht ganz Musik ist und nicht ganz Sprache.",
@@ -230,10 +304,22 @@
 			"text": "Die Dielen vibrieren leicht unter meinen nackten Füssen. Das Glas auf dem Tisch klirrt leise. Die Kerze im Schlafzimmer - ich kann sie von hier aus sehen - brennt höher, heller.",
 			"next": "snd_glass"
 		},
+		"snd_glass": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "glass_break.wav",
+			"next": "narration_singing_3"
+		},
 		"narration_singing_3": {
 			"type": "narration",
 			"text": "Dann - ein Klopfen an der Tür.",
 			"next": "snd_heartbeat"
+		},
+		"snd_heartbeat": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "heartbeat.wav",
+			"next": "effect_knock"
 		},
 		"effect_knock": {
 			"type": "effect",
@@ -290,7 +376,48 @@
 		},
 		"open_door": {
 			"type": "narration",
-			"text": "Meine Hand liegt auf dem Riegel. Ich zaudere. Dann schiebe ich ihn zurück.",
+			"text": "Ich stehe auf und gehe zur Tür. Meine Hand liegt auf dem Riegel. Durch das Holz kann ich seinen Atem hören.",
+			"next": "elise_through_door_1"
+		},
+		"elise_through_door_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Wer sind Sie? Was wollen Sie mitten in der Nacht?",
+			"next": "voice_reply_1"
+		},
+		"voice_reply_1": {
+			"type": "narration",
+			"text": "\"Konrad Mueller, der Dorflehrer. Ich habe das Licht gesehen und mir Sorgen gemacht. Margarethe war... eine Freundin.\"",
+			"next": "elise_through_door_2"
+		},
+		"elise_through_door_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Mein Onkel hat gesagt, ich soll nicht öffnen. Nicht in der Nacht.",
+			"next": "voice_reply_2"
+		},
+		"voice_reply_2": {
+			"type": "narration",
+			"text": "Eine Pause. Dann, leiser: \"Georg hat Angst. Das ist verständlich, nach dem was passiert ist. Aber ich bin nur ein Lehrer, Fräulein Brandt. Kein Monster.\"",
+			"next": "elise_through_door_3"
+		},
+		"elise_through_door_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Woher kennen Sie meinen Namen? Ich habe mich nicht vorgestellt.",
+			"next": "voice_reply_3"
+		},
+		"voice_reply_3": {
+			"type": "narration",
+			"text": "Ein leises Lachen. Warm, aber irgendwie zu ruhig. \"Ihre Großmutter hat viel von Ihnen erzählt. Sie war sehr stolz auf Sie. Die Folkloristin in Berlin.\"",
+			"next": "open_door_decide"
+		},
+		"open_door_decide": {
+			"type": "narration",
+			"text": "Etwas in seiner Stimme beruhigt mich. Gegen mein besseres Urteil schiebe ich den Riegel zurück und öffne die Tür.",
 			"next": "open_door_2"
 		},
 		"open_door_2": {
@@ -323,6 +450,13 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Es tut mir schrecklich leid wegen Ihrer Großmutter. Sie war... eine bemerkenswerte Frau. Hat mir oft beim Unterricht geholfen.",
+			"next": "elise_responds_konrad"
+		},
+		"elise_responds_konrad": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Danke. Kannten Sie sie gut?",
 			"next": "konrad_3"
 		},
 		"konrad_3": {
@@ -359,6 +493,13 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"text": "Ich wollte nur sichergehen, dass alles in Ordnung ist. Es ist spät, und dieses Haus... nun, es steht seit Tagen leer. Wenn Sie irgendetwas brauchen - ich wohne am Schulhaus, gleich neben der Kirche.",
+			"next": "elise_responds_konrad_2"
+		},
+		"elise_responds_konrad_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Warum sind Sie mitten in der Nacht unterwegs, Herr Mueller? Schlafen Sie nie?",
 			"next": "konrad_5"
 		},
 		"konrad_5": {
@@ -406,6 +547,11 @@
 		"dont_open": {
 			"type": "narration",
 			"text": "Nein. Georg hat es gesagt. Ich presse die Hand auf den Mund, um keinen Laut von mir zu geben.",
+			"next": "elise_thinks_closed"
+		},
+		"elise_thinks_closed": {
+			"type": "narration",
+			"text": "Jeder Muskel in mir will diese Tür öffnen. Die Stimme klingt freundlich, besorgt, normal. Aber Georg hatte Todesangst. Georg, der mit bloßen Händen Pferde bändigt. Ich bleibe still.",
 			"next": "dont_open_2"
 		},
 		"dont_open_2": {
@@ -429,6 +575,11 @@
 		"dont_open_4": {
 			"type": "narration",
 			"text": "Mein Name. Er kennt meinen Namen.",
+			"next": "elise_thinks_name"
+		},
+		"elise_thinks_name": {
+			"type": "narration",
+			"text": "Woher? Ich bin heute erst angekommen. Niemand weiß, dass ich hier bin - niemand außer Georg. Wer immer vor dieser Tür steht, er hat mich erwartet.",
 			"next": "dont_open_5"
 		},
 		"dont_open_5": {
@@ -456,9 +607,31 @@
 			"text": "Irgendwann wird der Himmel draußen grau. Fahles Novemberlicht sickert durch die Ritzen der Fensterläden. Die Nacht ist vorbei.",
 			"next": "snd_stop_underground"
 		},
+		"snd_stop_underground": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "converge_night_3"
+		},
 		"converge_night_3": {
 			"type": "narration",
 			"text": "Ich bin am Leben. Alles andere kann warten, bis der Kaffee kocht.",
+			"next": "narration_dawn_1"
+		},
+		"narration_dawn_1": {
+			"type": "narration",
+			"text": "Am Herd finde ich noch Kaffeepulver. Meine Hände zittern beim Aufgießen. Durch das Fenster sehe ich den ersten schwachen Schimmer über den Tannen. Das Dorf liegt still im Nebel, als wäre nichts geschehen.",
+			"next": "elise_dawn_plan"
+		},
+		"elise_dawn_plan": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Heute rede ich mit den Leuten hier. Mit dem Pfarrer, mit dem Bürgermeister, mit jedem, der mir Antworten geben kann. Irgendjemand in diesem Dorf weiß, was hier vor sich geht.",
+			"next": "narration_dawn_melody"
+		},
+		"narration_dawn_melody": {
+			"type": "narration",
+			"text": "Aber noch während ich den Kaffee trinke, summe ich leise. Ohne es zu wollen. Dieselbe Melodie. Sie hat sich in mich eingenistet wie ein Ohrwurm, der nicht verschwinden will.",
 			"next": "journal_night"
 		},
 		"journal_night": {
@@ -471,41 +644,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/village_exploration.json"
-		},
-		"snd_night": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_dark",
-			"path": "village_night.wav"
-		},
-		"snd_whispers": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "narration_dream_2",
-			"path": "whispers.wav"
-		},
-		"snd_underground": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "narration_wake_3",
-			"path": "underground.wav"
-		},
-		"snd_glass": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "narration_singing_3",
-			"path": "glass_break.wav"
-		},
-		"snd_heartbeat": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "effect_knock",
-			"path": "heartbeat.wav"
-		},
-		"snd_stop_underground": {
-			"type": "sound",
-			"sound_type": "stop_ambience",
-			"next": "converge_night_3"
 		}
 	}
 }

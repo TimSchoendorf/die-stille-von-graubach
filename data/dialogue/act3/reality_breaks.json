@@ -8,6 +8,12 @@
 			"transition": "fade",
 			"next": "snd_cosmic"
 		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "cosmic_horror.wav",
+			"next": "effect_corruption_start"
+		},
 		"effect_corruption_start": {
 			"type": "effect",
 			"effect": "bg_corruption",
@@ -20,9 +26,9 @@
 		"narration_1": {
 			"type": "narration",
 			"text": "Tag sechs. Etwas ist anders. Als ich aus dem Fenster sehe, stimmen die Farben nicht. Der Himmel ist zu violett für den Morgen. Die Schatten fallen in die falsche Richtung.",
-			"next": "narration_2"
+			"next": "elise_mirror"
 		},
-		"narration_2": {
+		"elise_mirror": {
 			"type": "narration",
 			"text": "Im Spiegel sehe ich mich. Aber mein Spiegelbild blinzelt eine halbe Sekunde später als ich.",
 			"next": "effect_mirror"
@@ -33,13 +39,24 @@
 			"params": {
 				"duration": 0.8
 			},
+			"next": "elise_mirror_react"
+		},
+		"elise_mirror_react": {
+			"type": "narration",
+			"text": "Ich weiche zurück. Mein Herz hämmert. Das Spiegelbild lächelt - eine halbe Sekunde nachdem ICH aufgehört habe zu lächeln. Ich drehe den Spiegel zur Wand.",
 			"next": "narration_3"
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Ich wende mich ab. Das ist es, was Großmutter beschrieben hat: 'Die Träume sickern nach oben.' Die Realität wird dünn.",
+			"text": "Das ist es, was Großmutter beschrieben hat: 'Die Träume sickern nach oben.' Die Realität wird dünn. Und es wird schlimmer werden.",
+			"next": "elise_morning_plan"
+		},
+		"elise_morning_plan": {
+			"type": "narration",
+			"text": "Übermorgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen.",
 			"next": "bg_village_corrupted"
 		},
+
 		"bg_village_corrupted": {
 			"type": "background",
 			"background": "village_corrupted",
@@ -57,7 +74,12 @@
 		},
 		"narration_4": {
 			"type": "narration",
-			"text": "Das Dorf draußen ist... falsch. Die Häuser stehen in leicht verschobenen Winkeln, als hätte jemand sie ueber Nacht verrückt. Der Brunnen auf dem Platz tropft nach oben.",
+			"text": "Das Dorf draußen ist... falsch. Die Häuser stehen in leicht verschobenen Winkeln, als hätte jemand sie über Nacht verrückt. Der Brunnen auf dem Platz tropft nach oben.",
+			"next": "elise_street_react"
+		},
+		"elise_street_react": {
+			"type": "narration",
+			"text": "Die Straße war gestern nicht so gewunden. Ich WEISS das. Ich bin sie sechs Tage lang gegangen. Aber jetzt biegt sie sich, als wäre der Boden aus weichem Wachs.",
 			"next": "narration_5"
 		},
 		"narration_5": {
@@ -71,6 +93,34 @@
 			"params": {
 				"duration": 1.5
 			},
+			"next": "villager_scene"
+		},
+
+		"villager_scene": {
+			"type": "narration",
+			"text": "Eine alte Frau steht vor ihrem Haus und starrt ins Nichts. Ich kenne sie - sie hat mir gestern auf dem Markt Brot verkauft. Heute erkennt sie mich nicht.",
+			"next": "elise_villager"
+		},
+		"elise_villager": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Frau Lehmann? Ist alles in Ordnung?",
+			"next": "villager_react"
+		},
+		"villager_react": {
+			"type": "narration",
+			"text": "Sie dreht sich langsam zu mir. Ihre Augen sind glasig, leer. Dann flüstert sie etwas - in einer Sprache, die ich nicht kenne. Aber verstehe.",
+			"next": "villager_whisper"
+		},
+		"villager_whisper": {
+			"type": "narration",
+			"text": "'Es kommt.' Zwei Worte. Dann dreht sie sich zurück zur Kirche und steht wieder reglos da. Als wäre nichts gewesen.",
+			"next": "elise_villager_horror"
+		},
+		"elise_villager_horror": {
+			"type": "narration",
+			"text": "Es sind nicht nur die Mauern, die sich verzerren. Es sind die Menschen. Das Wesen greift nach ihren Köpfen, dreht sie in seine Richtung wie Sonnenblumen zur Sonne.",
 			"next": "narration_6"
 		},
 		"narration_6": {
@@ -90,8 +140,122 @@
 				"intensity": 0.5,
 				"duration": 1.5
 			},
+			"next": "nightmare_intro"
+		},
+
+		"nightmare_intro": {
+			"type": "narration",
+			"text": "Plötzlich wird mir schwindelig. Die Welt kippt. Ich greife nach dem Türpfosten, aber er ist nicht mehr da.",
+			"next": "effect_nightmare_enter"
+		},
+		"effect_nightmare_enter": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.0
+			},
+			"next": "nightmare_1"
+		},
+		"nightmare_1": {
+			"type": "narration",
+			"text": "Ich stehe in der Kammer. Nein - ich TRÄUME die Kammer. Die Spiralen an den Wänden drehen sich, und in ihrer Mitte sehe ich ein Gesicht. Riesig, alt, aus Stein und Dunkelheit geformt.",
+			"next": "nightmare_2"
+		},
+		"nightmare_2": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.3,
+				"max": 1.0,
+				"cycle": 2.0
+			},
+			"next": "nightmare_3"
+		},
+		"nightmare_3": {
+			"type": "narration",
+			"text": "Es spricht nicht. Es braucht keine Worte. Ich SPÜRE seine Frage: Warum bist du hier? Was willst du?",
+			"next": "elise_nightmare_inner"
+		},
+		"elise_nightmare_inner": {
+			"type": "narration",
+			"text": "Die Panik steigt. Aber Hildes Amulett brennt an meiner Brust - ein Anker in diesem Meer aus Dunkelheit. Ich atme. Ich bin Elise Brandt. Ich bin hier, weil Großmutter mich gerufen hat.",
+			"next": "choice_nightmare"
+		},
+		"choice_nightmare": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Ich bin hier, um dich zu binden. Wie meine Großmutter es wollte.",
+					"set_flags": {
+						"courage": 5
+					},
+					"next": "nightmare_defy"
+				},
+				{
+					"text": "Ich habe keine Angst vor dir.",
+					"set_flags": {
+						"courage": 8
+					},
+					"next": "nightmare_brave"
+				},
+				{
+					"text": "Nichts sagen. Nur standhalten.",
+					"set_flags": {
+						"courage": 3
+					},
+					"next": "nightmare_endure"
+				}
+			]
+		},
+		"nightmare_defy": {
+			"type": "narration",
+			"text": "Ich spüre, wie das Wesen zurückweicht. Nicht vor Angst - vor Überraschung. So hat seit Margarethe niemand mehr mit ihm gesprochen.",
+			"next": "nightmare_defy_2"
+		},
+		"nightmare_defy_2": {
+			"type": "narration",
+			"text": "Für einen Moment - kürzer als ein Herzschlag - spüre ich etwas wie... Respekt. Dann bricht die Vision zusammen.",
+			"next": "nightmare_end"
+		},
+		"nightmare_brave": {
+			"type": "narration",
+			"text": "Die Lüge schmeckt wie Asche. Aber das Wesen... es lacht. Nicht böswillig. Anerkennend. Wie ein alter Krieger, der einen jungen Gegner mustert.",
+			"next": "nightmare_brave_2"
+		},
+		"nightmare_brave_2": {
+			"type": "narration",
+			"text": "Es weiß, dass ich lüge. Natürlich habe ich Angst. Aber es respektiert den Mut, der nötig ist, um die Angst zu verbergen.",
+			"next": "nightmare_end"
+		},
+		"nightmare_endure": {
+			"type": "narration",
+			"text": "Ich sage nichts. Ich halte stand. Die Dunkelheit drückt auf mich ein, aber ich weiche nicht. Irgendwann - Sekunden? Stunden? - lässt der Druck nach.",
+			"next": "nightmare_endure_2"
+		},
+		"nightmare_endure_2": {
+			"type": "narration",
+			"text": "Schweigen als Antwort. Das Wesen scheint... nachzudenken. Als hätte es das nicht erwartet. Dann löst sich die Vision auf.",
+			"next": "nightmare_end"
+		},
+		"nightmare_end": {
+			"type": "effect",
+			"effect": "flash",
+			"params": {
+				"duration": 0.3
+			},
+			"next": "nightmare_wake"
+		},
+		"nightmare_wake": {
+			"type": "narration",
+			"text": "Ich schrecke hoch. Kalter Schweiß. Ich stehe noch im Türpfosten. Nur Sekunden sind vergangen. Aber das Wesen hat mich gesehen. Und ich habe es gesehen.",
+			"next": "elise_wake_react"
+		},
+		"elise_wake_react": {
+			"type": "narration",
+			"text": "Es ist real. Kein Aberglaube, kein Märchen, kein Wahn einer alten Frau. Es ist dort unten, und es ist wacher als je zuvor. Und es kennt meinen Namen.",
 			"next": "check_defied_otto"
 		},
+
 		"check_defied_otto": {
 			"type": "flag_check",
 			"flag": "defied_otto",
@@ -102,6 +266,11 @@
 		"otto_threat": {
 			"type": "narration",
 			"text": "Am Zaun von Großmutters Haus hängt ein totes Huhn. Daneben, in die Holzpfosten geritzt: eine Spirale. Ottos Warnung.",
+			"next": "elise_otto_react"
+		},
+		"elise_otto_react": {
+			"type": "narration",
+			"text": "Mein Magen dreht sich. Nicht vor Angst - vor Wut. Er droht mir mit einem toten Tier, während unter unseren Füßen etwas erwacht, das die Welt verschlingen könnte.",
 			"next": "effect_otto_warning"
 		},
 		"effect_otto_warning": {
@@ -122,8 +291,14 @@
 		"narration_plan": {
 			"type": "narration",
 			"text": "Ich brauche Verbündete. Allein kann ich das Bindungsritual nicht durchführen - und Otto wird es nicht kampflos geschehen lassen.",
+			"next": "elise_plan_assess"
+		},
+		"elise_plan_assess": {
+			"type": "narration",
+			"text": "Georg hat Stärke und Loyalität. Hilde kennt die alten Wege. Voss kennt die Kammer. Und Konrad... Konrad ist entweder der Schlüssel oder die größte Gefahr.",
 			"next": "bg_forest_corrupted"
 		},
+
 		"bg_forest_corrupted": {
 			"type": "background",
 			"background": "forest_corrupted",
@@ -140,12 +315,17 @@
 		},
 		"narration_forest_1": {
 			"type": "narration",
-			"text": "Der Wald hat sich verändert. Die Bäume beugen sich züinander, als flüstern sie. Leuchtende Spiralen pulsieren auf der Rinde. Der Pfad teilt sich in Richtungen, die es gestern nicht gab.",
+			"text": "Der Wald hat sich verändert. Die Bäume beugen sich zueinander, als flüstern sie. Leuchtende Spiralen pulsieren auf der Rinde.",
+			"next": "elise_forest_react"
+		},
+		"elise_forest_react": {
+			"type": "narration",
+			"text": "Gestern waren diese Spiralen kaum sichtbar. Heute leuchten sie. Der Boden vibriert unter meinen Schritten, als ginge ich über eine dünne Haut.",
 			"next": "narration_forest_2"
 		},
 		"narration_forest_2": {
 			"type": "narration",
-			"text": "Und der Wald ist näher. Viel näher. Die Bäume stehen jetzt direkt hinter den letzten Hauesern. Graubach schrumpft. Oder der Wald wächst.",
+			"text": "Und der Wald ist näher. Viel näher. Die Bäume stehen jetzt direkt hinter den letzten Häusern. Graubach schrumpft. Oder der Wald wächst.",
 			"next": "effect_breathing"
 		},
 		"effect_breathing": {
@@ -158,6 +338,13 @@
 			},
 			"next": "snd_heartbeat"
 		},
+		"snd_heartbeat": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "heartbeat.wav",
+			"next": "show_anna"
+		},
+
 		"show_anna": {
 			"type": "character",
 			"character": "anna",
@@ -168,7 +355,14 @@
 		},
 		"anna_1": {
 			"type": "narration",
-			"text": "Anna Voss steht zwischen den Bäumen. Barfuss, im Nachthemd. Ihre Augen sind weit offen, aber sie sehen mich nicht an. Sie sehen durch mich hindurch.",
+			"text": "Anna Voss steht zwischen den Bäumen. Barfuß, im Nachthemd. Ihre Augen sind weit offen, aber sie sehen mich nicht an. Sie sehen durch mich hindurch.",
+			"next": "elise_anna_approach"
+		},
+		"elise_anna_approach": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Anna? Hörst du mich? Was machst du hier allein im Wald?",
 			"next": "anna_2"
 		},
 		"anna_2": {
@@ -176,6 +370,13 @@
 			"speaker": "anna",
 			"expression": "possessed",
 			"text": "Es träumt von dir, Elise. Jede Nacht. Es träumt, dass du kommst und es befreist. Oder dass du kommst und es für immer einschläferst.",
+			"next": "elise_anna_question"
+		},
+		"elise_anna_question": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Woher weißt du das? Kannst du seine Träume sehen?",
 			"next": "anna_3"
 		},
 		"anna_3": {
@@ -190,7 +391,26 @@
 			"type": "dialogue",
 			"speaker": "anna",
 			"expression": "lucid",
-			"text": "Es hat Angst, Elise. Es hat Angst vor dir. Deshalb werden die Träume stärker. Es versucht, dich zu verwirren, bevor du handeln kannst.",
+			"text": "Ich sehe alles, was es sieht. Seine Träume sind meine Träume. Und in seinen Träumen bist du ein Licht, das es blendet.",
+			"next": "elise_anna_light"
+		},
+		"elise_anna_light": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Ein Licht? Es hat Angst vor MIR?",
+			"next": "anna_confirms"
+		},
+		"anna_confirms": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Es hat Angst vor dir, Elise. Deshalb werden die Träume stärker. Es versucht, dich zu verwirren, bevor du handeln kannst.",
+			"next": "narration_anna_realization"
+		},
+		"narration_anna_realization": {
+			"type": "narration",
+			"text": "Ich bin nicht das Opfer. Ich bin die Bedrohung. Seit ich meinen Namen im Buch berührt habe, seit ich den Gesang gelernt habe - das Wesen weiß, was ich vorhabe. Und es versucht verzweifelt, mich aufzuhalten.",
 			"next": "effect_anna_glitch"
 		},
 		"effect_anna_glitch": {
@@ -214,6 +434,13 @@
 			"speaker": "anna",
 			"expression": "afraid",
 			"text": "Bitte, Elise. Beeile dich. Ich kann seine Stimme immer lauter hören. Bald werde ich nichts anderes mehr hören.",
+			"next": "elise_anna_promise"
+		},
+		"elise_anna_promise": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich werde es beenden, Anna. Für dich, für Konrad, für alle. Ich verspreche es.",
 			"next": "hide_anna"
 		},
 		"hide_anna": {
@@ -228,13 +455,18 @@
 			"type": "set_flag",
 			"flag": "anna_warning",
 			"value": 1,
+			"next": "narration_determination"
+		},
+		"narration_determination": {
+			"type": "narration",
+			"text": "Als Anna zwischen den Bäumen verschwindet, spüre ich etwas Neues. Nicht Angst - Entschlossenheit. Das Wesen hat Angst vor mir. Dann habe ich eine Chance.",
 			"next": "journal_reality"
 		},
 		"journal_reality": {
 			"type": "journal",
 			"entry_id": "reality_breaking",
 			"title": "Die Realität bricht",
-			"content": "Tag 6: Die Realität wird dünn. Der Wald wächst, das Dorf verzerrt sich, Farben stimmen nicht mehr. Anna sagt, das Wesen träumt von mir - es hat Angst. Die Fütterung ist uebermorgen. Ich muss vorher handeln.",
+			"content": "Tag 6: Die Realität wird dünn. Der Wald wächst, das Dorf verzerrt sich, Farben stimmen nicht mehr. Anna sagt, das Wesen träumt von mir - und es hat Angst. Ich bin nicht das Opfer. Ich bin die Bedrohung. Die Fütterung ist übermorgen. Ich muss vorher handeln.",
 			"next": "effect_clear"
 		},
 		"effect_clear": {
@@ -246,18 +478,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/allies_choice.json"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_corruption_start",
-			"path": "cosmic_horror.wav"
-		},
-		"snd_heartbeat": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "show_anna",
-			"path": "heartbeat.wav"
 		}
 	}
 }

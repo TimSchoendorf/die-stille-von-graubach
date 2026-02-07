@@ -8,6 +8,12 @@
 			"transition": "fade",
 			"next": "snd_tension"
 		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "tension.wav",
+			"next": "effect_night_mood"
+		},
 		"effect_night_mood": {
 			"type": "effect",
 			"effect": "vignette",
@@ -24,7 +30,12 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Georgs Schlüssel liegt schwer in meiner Tasche. Hildes Amulett an meiner Brust. Großmutters Journal in meiner Tasche.",
+			"text": "Georgs Schlüssel liegt schwer in meiner Tasche. Hildes Amulett an meiner Brust. Großmutters Journal in meinem Rucksack. Alles, was ich habe gegen das, was dort unten wartet.",
+			"next": "elise_inner_ready"
+		},
+		"elise_inner_ready": {
+			"type": "narration",
+			"text": "Meine Hände zittern. Aber ich gehe weiter. Großmutter hat dreißig Jahre auf diesen Moment hingearbeitet. Ich werde ihn nicht verstreichen lassen.",
 			"next": "check_voss_meeting"
 		},
 		"check_voss_meeting": {
@@ -34,6 +45,7 @@
 			"true_next": "voss_waiting",
 			"false_next": "alone_at_church"
 		},
+
 		"voss_waiting": {
 			"type": "background",
 			"background": "church_exterior",
@@ -61,13 +73,28 @@
 			"speaker": "voss",
 			"expression": "afraid",
 			"text": "Sie sind gekommen. Gut. Wir haben wenig Zeit. Ottos Männer patrouillieren - er hat bemerkt, dass sich etwas verändert im Dorf.",
+			"next": "elise_voss_greet"
+		},
+		"elise_voss_greet": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Danke, dass Sie hier sind, Pfarrer. Ich hätte das nicht allein tun wollen.",
 			"next": "voss_night_2"
 		},
 		"voss_night_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "worried",
+			"text": "Dreißig Jahre Schuld. Es wird Zeit, dass ich etwas richtig mache.",
+			"next": "narration_voss_leads"
+		},
+		"narration_voss_leads": {
 			"type": "narration",
 			"text": "Voss führt mich durch eine Seitentür in die Sakristei. Dort, hinter einem schweren Vorhang, liegt eine Steintreppe, die nach unten führt.",
 			"next": "voss_merge"
 		},
+
 		"alone_at_church": {
 			"type": "background",
 			"background": "church_exterior",
@@ -85,7 +112,12 @@
 		},
 		"narration_alone": {
 			"type": "narration",
-			"text": "Die Kirchentür ist verschlossen. Aber der Schlüssel von Georg - er passt auch hier. Das alte Eisen dreht sich schwer im Schloss.",
+			"text": "Die Kirchentür ist verschlossen. Aber der Schlüssel von Georg passt auch hier. Das alte Eisen dreht sich schwer im Schloss.",
+			"next": "elise_alone_thought"
+		},
+		"elise_alone_thought": {
+			"type": "narration",
+			"text": "Allein. Kein Voss, kein Georg. Nur ich und das, was unter der Kirche wartet. Großmutter hat es dreißig Jahre lang allein gemacht. Ich kann eine Nacht schaffen.",
 			"next": "narration_alone_2"
 		},
 		"narration_alone_2": {
@@ -93,6 +125,7 @@
 			"text": "Allein in der dunklen Kirche. Meine Kerze wirft zitternde Schatten. Hinter dem Altar finde ich die Treppe nach unten.",
 			"next": "voss_merge"
 		},
+
 		"voss_merge": {
 			"type": "background",
 			"background": "church_basement",
@@ -107,6 +140,18 @@
 			},
 			"next": "snd_underground"
 		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "underground.wav",
+			"next": "snd_cosmic"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "cosmic_horror.wav",
+			"next": "effect_basement_vignette"
+		},
 		"effect_basement_vignette": {
 			"type": "effect",
 			"effect": "vignette",
@@ -118,12 +163,50 @@
 		},
 		"narration_basement_1": {
 			"type": "narration",
-			"text": "Die Luft aendert sich sofort. Wärmer, feuchter, süsser. Das Singen ist hier nicht mehr leise - es füllt den Raum, vibriert in meinen Knochen.",
+			"text": "Die Luft ändert sich sofort. Wärmer, feuchter, süßer. Das Singen ist hier nicht mehr leise - es füllt den Raum, vibriert in meinen Knochen.",
+			"next": "elise_descent_react"
+		},
+		"elise_descent_react": {
+			"type": "narration",
+			"text": "Übelkeit steigt in mir auf. Schwindel. Das Amulett an meiner Brust wird warm - als arbeitete es gegen den Druck, der auf meinen Gedanken lastet.",
 			"next": "narration_basement_2"
 		},
 		"narration_basement_2": {
 			"type": "narration",
-			"text": "Die Wände sind bedeckt mit Spiralen. Eingeritzt, gemalt, eingebrannt. Schicht um Schicht, Jahrhunderte uebereinander. Manche sehen aus wie Schrift, die ich nicht lesen kann.",
+			"text": "Die Wände sind bedeckt mit Spiralen. Eingeritzt, gemalt, eingebrannt. Schicht um Schicht, Jahrhunderte übereinander. Manche sehen aus wie Schrift, die ich nicht lesen kann.",
+			"next": "check_voss_descent"
+		},
+		"check_voss_descent": {
+			"type": "flag_check",
+			"flag": "voss_midnight_meeting",
+			"value": 1,
+			"true_next": "voss_descent_1",
+			"false_next": "effect_singing"
+		},
+		"voss_descent_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Herr im Himmel, steh uns bei...",
+			"next": "elise_voss_prayer"
+		},
+		"elise_voss_prayer": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Hilft das? Das Beten?",
+			"next": "voss_descent_2"
+		},
+		"voss_descent_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Nicht gegen DAS hier. Aber es hilft mir. Es erinnert mich daran, wer ich bin.",
+			"next": "elise_voss_understand"
+		},
+		"elise_voss_understand": {
+			"type": "narration",
+			"text": "Ich verstehe ihn. Hier unten, wo die Wände atmen und der Boden pulsiert, braucht man etwas, das einen verankert. Für Voss ist es sein Glaube. Für mich... Großmutters Worte.",
 			"next": "effect_singing"
 		},
 		"effect_singing": {
@@ -139,11 +222,21 @@
 		"narration_basement_3": {
 			"type": "narration",
 			"text": "Auf einem Steinpodest in der Mitte des Raumes liegt ein Buch. Es ist nicht alt - es ist jenseits von alt. Das Leder ist von keinem Tier, das ich kenne.",
+			"next": "elise_book_first"
+		},
+		"elise_book_first": {
+			"type": "narration",
+			"text": "Meine Hände zittern, als ich es berühre. Das Leder fühlt sich an wie... Haut. Warme Haut. Es reagiert auf meine Berührung - ein leichtes Pulsieren unter meinen Fingerspitzen.",
 			"next": "narration_basement_4"
 		},
 		"narration_basement_4": {
 			"type": "narration",
-			"text": "Ich schlage es auf. Seite um Seite mit Namen. Hunderte von Namen, in verschiedenen Handschriften, ueber Jahrhunderte geschrieben. Bei manchen ist ein Datum dahinter. Bei manchen ein Kreuz.",
+			"text": "Ich schlage es auf. Seite um Seite mit Namen. Hunderte von Namen, in verschiedenen Handschriften, über Jahrhunderte geschrieben. Bei manchen ist ein Datum dahinter. Bei manchen ein Kreuz.",
+			"next": "elise_crosses"
+		},
+		"elise_crosses": {
+			"type": "narration",
+			"text": "Die Kreuze. Eins alle dreißig Jahre. Die Geopferten. Ich zähle sie und mein Magen dreht sich. So viele. So viele Menschen, die in dieses Loch hinabgestiegen sind und nie wieder hochkamen.",
 			"next": "effect_book_glitch"
 		},
 		"effect_book_glitch": {
@@ -156,12 +249,17 @@
 		},
 		"narration_basement_5": {
 			"type": "narration",
-			"text": "Die Kreuze. Ich zähle sie. Eins alle dreißig Jahre, zurück bis... die aeltesten Einträge sind keine Schrift mehr, nur Symbole.",
+			"text": "Die ältesten Einträge sind keine Schrift mehr, nur Symbole. Spiralen und Linien, die mein Verstand nicht entschlüsseln kann. Und am Rand mancher Seiten... Großmutters Handschrift.",
+			"next": "elise_grandmother_notes"
+		},
+		"elise_grandmother_notes": {
+			"type": "narration",
+			"text": "Ihre Notizen. Kleine, ordentliche Buchstaben: 'Friedrich Meier, 1893. Letztes Opfer.' Und weiter hinten: 'Konrad M. - nicht als Opfer eingetragen. Anders markiert. Gefäß?' Großmutter hat dieses Buch studiert. Jahrelang.",
 			"next": "narration_find_name"
 		},
 		"narration_find_name": {
 			"type": "narration",
-			"text": "Und dort, auf der letzten beschriebenen Seite: 'Elise Brandt'. In einer Handschrift, die nicht menschlich außieht. Die Buchstaben sind zu gleichmässig, zu perfekt.",
+			"text": "Und dort, auf der letzten beschriebenen Seite: 'Elise Brandt'. In einer Handschrift, die nicht menschlich aussieht. Die Buchstaben sind zu gleichmäßig, zu perfekt.",
 			"next": "effect_name_horror"
 		},
 		"effect_name_horror": {
@@ -179,6 +277,16 @@
 			"params": {
 				"duration": 1.0
 			},
+			"next": "elise_panic_1"
+		},
+		"elise_panic_1": {
+			"type": "narration",
+			"text": "Mein Name. In einer Schrift, die kein Mensch schreiben kann. Und die Tinte... die Tinte PULSIERT. Sie lebt. Sie atmet unter meinen Fingern.",
+			"next": "elise_panic_2"
+		},
+		"elise_panic_2": {
+			"type": "narration",
+			"text": "Nein. Nein, das kann nicht sein. Das muss ein Fehler sein. Jemand hat ihn hineingeschrieben - Otto, Konrad, irgendjemand. Aber die Schrift ist nicht menschlich. Keine menschliche Hand schreibt so.",
 			"next": "effect_text_corrupt"
 		},
 		"effect_text_corrupt": {
@@ -192,7 +300,12 @@
 		},
 		"narration_name_1": {
 			"type": "narration",
-			"text": "Ich berühre meinen Namen auf der Seite. Die Tinte ist warm. Sie pulsiert unter meinen Fingern.",
+			"text": "Ich berühre meinen Namen auf der Seite. Die Tinte ist warm. Sie pulsiert unter meinen Fingern - im selben Rhythmus wie mein eigener Herzschlag.",
+			"next": "elise_panic_3"
+		},
+		"elise_panic_3": {
+			"type": "narration",
+			"text": "Großmutter wusste es. Sie hat mich gerufen, WEIL mein Name im Buch steht. Hat sie mich geopfert oder gerettet? Oder beides?",
 			"next": "narration_name_2"
 		},
 		"narration_name_2": {
@@ -218,13 +331,44 @@
 				"intensity": 0.4,
 				"duration": 2.0
 			},
+			"next": "elise_awareness"
+		},
+		"elise_awareness": {
+			"type": "narration",
+			"text": "Es betrachtet mich. Nicht mit Augen - mit etwas Älterem. Ich stehe nackt vor einem Bewusstsein, das Berge gesehen hat, die noch keine Berge waren.",
 			"next": "snd_whispers"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "whispers.wav",
+			"next": "narration_before_choice"
+		},
+		"narration_before_choice": {
+			"type": "narration",
+			"text": "Das Buch liegt offen vor mir. Mein Name starrt mich an. Was tue ich jetzt?",
+			"next": "elise_deliberate_1"
+		},
+		"elise_deliberate_1": {
+			"type": "narration",
+			"text": "Wenn ich den Namen lösche - bin ich dann frei? Oder wird es das Wesen nur wütend machen? Großmutter hat geschrieben, dass der Name immer wiederkommt.",
+			"next": "elise_deliberate_2"
+		},
+		"elise_deliberate_2": {
+			"type": "narration",
+			"text": "Wenn ich das Buch mitnehme, habe ich Beweis. Kontrolle. Aber Otto wird es bemerken. Und das Wesen... es wird wissen, dass etwas fehlt.",
+			"next": "elise_deliberate_3"
+		},
+		"elise_deliberate_3": {
+			"type": "narration",
+			"text": "Oder ich lasse es hier. Vielleicht brauche ich nicht das Buch. Vielleicht brauche ich die VERBINDUNG, die mein Name darstellt.",
+			"next": "choice_book"
 		},
 		"choice_book": {
 			"type": "choice",
 			"choices": [
 				{
-					"text": "Den Namen außtreichen versuchen",
+					"text": "Den Namen auszustreichen versuchen",
 					"set_flags": {
 						"tried_erase_name": 1
 					},
@@ -249,7 +393,12 @@
 		},
 		"erase_attempt": {
 			"type": "narration",
-			"text": "Ich kratze mit dem Fingernagel ueber meinen Namen. Die Tinte gibt nicht nach. Ich spucke auf die Seite, reibe - nichts. Wie Großmutter geschrieben hat: Der Name kommt immer wieder.",
+			"text": "Ich kratze mit dem Fingernagel über meinen Namen. Die Tinte gibt nicht nach. Ich spucke auf die Seite, reibe - nichts.",
+			"next": "elise_erase_frustrate"
+		},
+		"elise_erase_frustrate": {
+			"type": "narration",
+			"text": "Wie Großmutter geschrieben hat: Der Name kommt immer wieder. Als wäre er nicht AUF der Seite, sondern IN ihr. Teil des Buches selbst.",
 			"next": "erase_2"
 		},
 		"erase_2": {
@@ -266,9 +415,10 @@
 			"text": "Der Boden bebt. Staub rieselt von der Decke. Das Singen setzt wieder ein - lauter, wütender, wie ein Hornissenschwarm aus der Tiefe.",
 			"next": "book_converge"
 		},
+
 		"take_book": {
 			"type": "narration",
-			"text": "Ich schließe das Buch und nehme es. Es ist schwerer als es außieht, und warm, fast heiß. Als ich es vom Podest hebe, erzittert der Raum.",
+			"text": "Ich schließe das Buch und nehme es. Es ist schwerer als es aussieht, und warm, fast heiß. Als ich es vom Podest hebe, erzittert der Raum.",
 			"next": "take_2"
 		},
 		"take_2": {
@@ -282,11 +432,22 @@
 		"take_3": {
 			"type": "narration",
 			"text": "Ein Laut - kein Singen, kein Schrei. Ein Seufzen. So groß, so tief, dass die Steinwände vibrieren. Es hat bemerkt, dass etwas fehlt.",
+			"next": "elise_take_react"
+		},
+		"elise_take_react": {
+			"type": "narration",
+			"text": "Das Buch drückt gegen meine Brust wie ein Herzschlag, der nicht meiner ist. Aber ich halte es fest. Es gehört mir - oder ich gehöre ihm.",
 			"next": "book_converge"
 		},
+
 		"leave_book": {
 			"type": "narration",
 			"text": "Ich trete zurück. Mein Instinkt sagt mir: Das Buch ist nicht für Menschenhände. Es gehört nach unten, ins Dunkle, wo es hingehört.",
+			"next": "elise_leave_reason"
+		},
+		"elise_leave_reason": {
+			"type": "narration",
+			"text": "Ich brauche das Buch nicht. Ich habe etwas Besseres: Ich weiß jetzt, dass mein Name eine Verbindung ist. Und eine Verbindung kann man nutzen - ohne sie zu besitzen.",
 			"next": "leave_2"
 		},
 		"leave_2": {
@@ -294,6 +455,7 @@
 			"text": "Das Singen setzt sanft wieder ein. Zufrieden fast. Als hätte ich die richtige Entscheidung getroffen - oder die, die es wollte.",
 			"next": "book_converge"
 		},
+
 		"book_converge": {
 			"type": "narration",
 			"text": "Ich muss hier raus. Sofort. Die Wände scheinen sich zu verengen, die Spiralen drehen sich in meinem peripheren Blickfeld.",
@@ -325,9 +487,10 @@
 			"true_next": "otto_encounter",
 			"false_next": "narration_home"
 		},
+
 		"otto_encounter": {
 			"type": "narration",
-			"text": "Vor der Kirche steht eine Gestalt im Mondlicht. Breitschultrig, reglos. Bürgermeister Reinhardt.",
+			"text": "Vor der Kirche steht eine Gestalt im Mondlicht. Breitschultrig, reglos. Bürgermeister Reinhardt. Er ist nicht allein - zwei Männer stehen hinter ihm im Schatten.",
 			"next": "show_otto"
 		},
 		"show_otto": {
@@ -343,9 +506,23 @@
 			"speaker": "otto",
 			"expression": "threatening",
 			"text": "Fräulein Brandt. Spät unterwegs. Und mit etwas, das Ihnen nicht gehört.",
+			"next": "elise_otto_react"
+		},
+		"elise_otto_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Herr Reinhardt. Wie lange stehen Sie schon hier?",
 			"next": "otto_2"
 		},
 		"otto_2": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "authoritative",
+			"text": "Lange genug. Ich habe Sie beobachtet, seit Sie Hildes Hütte verlassen haben. Genau wie Ihre Großmutter - immer da, wo sie nicht sein sollte.",
+			"next": "otto_2b"
+		},
+		"otto_2b": {
 			"type": "effect",
 			"effect": "vignette",
 			"params": {
@@ -359,6 +536,20 @@
 			"speaker": "otto",
 			"expression": "angry",
 			"text": "Geben Sie mir das Buch. Und gehen Sie nach Hause. Vergessen Sie, was Sie gesehen haben. Das ist keine Bitte.",
+			"next": "elise_otto_defiant"
+		},
+		"elise_otto_defiant": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Mein Name steht in diesem Buch, Herr Reinhardt. In einer Schrift, die kein Mensch geschrieben hat. Ich denke, ich habe ein Recht darauf.",
+			"next": "otto_react_name"
+		},
+		"otto_react_name": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "threatening",
+			"text": "Recht? Hier gibt es keine Rechte, Fräulein. Es gibt nur die Tradition. Und die Tradition sagt: Alle dreißig Jahre wird gefüttert. Das hat funktioniert. Jahrhundertelang.",
 			"next": "choice_otto"
 		},
 		"choice_otto": {
@@ -383,7 +574,7 @@
 		},
 		"give_book": {
 			"type": "narration",
-			"text": "Meine Hände zittern, als ich ihm das Buch reiche. Otto nimmt es mit einer Behutsandkeit, die im Widerspruch zu seiner Drohung steht. Er hält es wie ein Baby.",
+			"text": "Meine Hände zittern, als ich ihm das Buch reiche. Otto nimmt es mit einer Behutsamkeit, die im Widerspruch zu seiner Drohung steht. Er hält es wie ein Baby.",
 			"next": "give_book_2"
 		},
 		"give_book_2": {
@@ -398,12 +589,25 @@
 			"type": "dialogue",
 			"speaker": "otto",
 			"expression": "authoritative",
-			"text": "Vernünftig. Ganz wie Ihre Großmutter. Die war auch vernünftig - am Ende. Gehen Sie nach Hause, Fräulein Brandt. Und bleiben Sie dort.",
+			"text": "Vernünftig. Ganz wie Ihre Großmutter. Die war auch vernünftig - am Ende.",
+			"next": "elise_give_whisper"
+		},
+		"elise_give_whisper": {
+			"type": "narration",
+			"text": "Am Ende. Was bedeutet das? War Großmutter vernünftig - oder hat Otto sie zum Schweigen gebracht? Der Gedanke lässt mich frösteln.",
 			"next": "otto_converge"
 		},
+
 		"defy_otto": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Meine Großmutter hat dreißig Jahre nach einer Alternative gesucht. Ich werde sie finden.",
+			"next": "defy_narration"
+		},
+		"defy_narration": {
 			"type": "narration",
-			"text": "Ich drücke das Buch an meine Brust und renne. Durch die Gassen, ueber den Platz, in Richtung Großmutters Haus. Otto ruft hinter mir her, aber er verfolgt mich nicht.",
+			"text": "Ich drücke das Buch an meine Brust und renne. Durch die Gassen, über den Platz, in Richtung Großmutters Haus. Otto ruft hinter mir her, aber er verfolgt mich nicht.",
 			"next": "defy_2"
 		},
 		"defy_2": {
@@ -416,8 +620,15 @@
 			"next": "defy_3"
 		},
 		"defy_3": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "angry",
+			"text": "Das war ein Fehler, Fräulein Brandt. Ein schwerer Fehler.",
+			"next": "defy_4"
+		},
+		"defy_4": {
 			"type": "narration",
-			"text": "Sein letztes Wort hallt durch die Nacht: 'Das war ein Fehler, Fräulein Brandt. Ein schwerer Fehler.'",
+			"text": "Sein Ruf hallt durch die Nacht. Aber ich bin schneller als ein alter Mann. Und die Dunkelheit schützt mich - zum ersten Mal.",
 			"next": "otto_converge"
 		},
 		"otto_converge": {
@@ -428,6 +639,7 @@
 			"action": "hide",
 			"next": "narration_home"
 		},
+
 		"narration_home": {
 			"type": "background",
 			"background": "grandmother_house_night",
@@ -446,18 +658,18 @@
 		"narration_home_1": {
 			"type": "narration",
 			"text": "Zurück in Großmutters Haus. Ich verriegele die Tür, schiebe einen Stuhl davor. Meine Hände zittern noch.",
-			"next": "narration_home_2"
+			"next": "elise_home_process"
 		},
-		"narration_home_2": {
+		"elise_home_process": {
 			"type": "narration",
-			"text": "Ich habe meinen Namen gesehen. In einer Schrift, die kein Mensch geschrieben hat. Auf einer Seite, die keinen Fehler kennt.",
+			"text": "Ich habe meinen Namen gesehen. In einer Schrift, die kein Mensch geschrieben hat. Auf einer Seite, die keinen Fehler kennt. Und jetzt weiß ich es mit Sicherheit: Ich bin keine Zuschauerin. Ich bin Teil der Geschichte.",
 			"next": "journal_book"
 		},
 		"journal_book": {
 			"type": "journal",
 			"entry_id": "the_book_of_names",
 			"title": "Das Buch der Namen",
-			"content": "In der Kammer unter der Kirche liegt ein uraltes Buch mit Hunderten von Namen. Bei einigen ein Kreuz - die Geopferten, alle 30 Jahre. Mein Name steht als letzter Eintrag, in unmenschlicher Schrift. Die Tinte pulsiert. Das Wesen wusste, dass ich kommen würde.",
+			"content": "In der Kammer unter der Kirche liegt ein uraltes Buch mit Hunderten von Namen. Bei einigen ein Kreuz - die Geopferten, alle 30 Jahre. Mein Name steht als letzter Eintrag, in unmenschlicher Schrift. Die Tinte pulsiert im Rhythmus meines Herzschlags. Großmutters Randnotizen zeigen, dass sie das Buch jahrelang studiert hat.",
 			"next": "set_act2_complete"
 		},
 		"set_act2_complete": {
@@ -469,6 +681,11 @@
 		"narration_end_1": {
 			"type": "narration",
 			"text": "Ich kann nicht schlafen. Das Singen ist lauter als je zuvor. Es dringt durch die Wände, durch den Boden, durch meine geschlossenen Lider.",
+			"next": "elise_end_cover"
+		},
+		"elise_end_cover": {
+			"type": "narration",
+			"text": "Ich presse die Hände auf die Ohren. Es hilft nicht. Das Singen kommt nicht von außen. Es kommt von INNEN. Seit ich meinen Namen berührt habe, ist es Teil von mir.",
 			"next": "effect_end_corruption"
 		},
 		"effect_end_corruption": {
@@ -499,6 +716,12 @@
 			"text": "Es sagt meinen Namen. Immer und immer wieder. Elise. Elise. Elise.",
 			"next": "snd_heartbeat"
 		},
+		"snd_heartbeat": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "heartbeat.wav",
+			"next": "effect_final"
+		},
 		"effect_final": {
 			"type": "effect",
 			"effect": "heavy_glitch",
@@ -515,36 +738,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/reality_breaks.json"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_night_mood",
-			"path": "tension.wav"
-		},
-		"snd_underground": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "snd_cosmic",
-			"path": "underground.wav"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_basement_vignette",
-			"path": "cosmic_horror.wav"
-		},
-		"snd_whispers": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "choice_book",
-			"path": "whispers.wav"
-		},
-		"snd_heartbeat": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "effect_final",
-			"path": "heartbeat.wav"
 		}
 	}
 }

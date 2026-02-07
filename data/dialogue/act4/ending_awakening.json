@@ -5,7 +5,25 @@
 		"narration_1": {
 			"type": "narration",
 			"text": "Ich versuche es. Mit aller Kraft, allem Willen, allem Wissen, das ich gesammelt habe. Aber es reicht nicht.",
+			"next": "check_destroy_awakening"
+		},
+		"check_destroy_awakening": {
+			"type": "flag_check",
+			"flag": "approach_destroy",
+			"value": 1,
+			"true_next": "destroy_awakening_intro",
+			"false_next": "snd_cosmic"
+		},
+		"destroy_awakening_intro": {
+			"type": "narration",
+			"text": "Ich wollte es vernichten. Dieser Hochmut - dieses menschliche Bedürfnis, alles zu kontrollieren, was wir nicht verstehen. Großmutter hat es anders versucht. Sie wollte einen Frieden. Ich wollte einen Sieg. Es gibt keinen Sieg gegen einen Berg.",
 			"next": "snd_cosmic"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_failure",
+			"path": "cosmic_horror.wav"
 		},
 		"effect_failure": {
 			"type": "effect",
@@ -14,11 +32,35 @@
 				"intensity": 10.0,
 				"duration": 2.0
 			},
+			"next": "elise_awake_1"
+		},
+		"elise_awake_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Nein... nein, es funktioniert nicht. Der Gesang bricht ab, die Zeichen verblassen -",
 			"next": "narration_2"
 		},
 		"narration_2": {
 			"type": "narration",
 			"text": "Der Boden reißt auf. Nicht wie Stein reißt - wie Haut. Darunter ist Licht, aber kein Licht, das Augen sehen sollten. Es ist zu hell und zu dunkel gleichzeitig.",
+			"next": "creature_awake_1"
+		},
+		"creature_awake_1": {
+			"type": "narration",
+			"text": "DU HAST MICH GEWECKT. NACH SECHSHUNDERT JAHREN. GEWECKT. NICHT SANFT. NICHT WIE DIE ALTE. DU HAST GERISSEN.",
+			"next": "elise_awake_2"
+		},
+		"elise_awake_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Es tut mir leid - ich wollte nicht - ich habe versucht -",
+			"next": "creature_awake_2"
+		},
+		"creature_awake_2": {
+			"type": "narration",
+			"text": "VERSUCHT. JA. ALLE VERSUCHEN. NIEMAND FRAGT. NIEMAND HÖRT ZU. IHR KOMMT MIT FEUER UND GESANG UND KETTEN. SECHSHUNDERT JAHRE.",
 			"next": "effect_awakening"
 		},
 		"effect_awakening": {
@@ -41,9 +83,141 @@
 		"narration_3": {
 			"type": "narration",
 			"text": "Das Singen wird zum Brüllen. Ein Laut jenseits von Klang, der die Luft selbst verbiegt. Die Spiralen lösen sich von den Wänden und schweben.",
-			"next": "narration_4"
+			"next": "elise_awake_3"
 		},
-		"narration_4": {
+		"elise_awake_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Großmutter... es tut mir leid. Ich habe versagt.",
+			"next": "check_ally_awake_georg"
+		},
+		"check_ally_awake_georg": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_awake",
+			"false_next": "check_ally_awake_hilde"
+		},
+		"show_georg_awake": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "left",
+			"action": "show",
+			"next": "georg_awake_1"
+		},
+		"georg_awake_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "ELISE! Der Boden - alles bricht zusammen! Wir müssen -",
+			"next": "elise_georg_awake"
+		},
+		"elise_georg_awake": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Georg, es ist zu spät. Ich habe es geweckt. Ich konnte es nicht halten.",
+			"next": "georg_awake_2"
+		},
+		"georg_awake_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Dann kämpfen wir. Zusammen. Margarethe hätte nicht aufgegeben!",
+			"next": "elise_awake_fight"
+		},
+		"elise_awake_fight": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Du hast recht. Ich versuche es noch einmal. Ich MUSS es versuchen.",
+			"next": "hide_ally_awake"
+		},
+		"check_ally_awake_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_awake",
+			"false_next": "check_ally_awake_voss"
+		},
+		"show_hilde_awake": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "warning",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_awake_1"
+		},
+		"hilde_awake_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Das Wesen erwacht! Elise, versuch den Gegengesang - schnell!",
+			"next": "elise_hilde_awake"
+		},
+		"elise_hilde_awake": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Ich kann nicht - die Worte - sie lösen sich auf in meinem Kopf -",
+			"next": "hilde_awake_2"
+		},
+		"hilde_awake_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "ritual",
+			"text": "Dann singe ICH! Halt durch, Kind!",
+			"next": "elise_awake_fight"
+		},
+		"check_ally_awake_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_awake",
+			"false_next": "narration_alone_awake"
+		},
+		"show_voss_awake": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "show",
+			"next": "voss_awake_1"
+		},
+		"voss_awake_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Herr im Himmel - das Licht - es kommt von UNTEN -",
+			"next": "elise_voss_awake"
+		},
+		"elise_voss_awake": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Pfarrer, laufen Sie! Es ist zu spät für Gebete!",
+			"next": "voss_awake_2"
+		},
+		"voss_awake_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Nein. Nein, ich laufe nicht mehr. Dreißig Jahre bin ich gelaufen.",
+			"next": "elise_awake_fight"
+		},
+		"narration_alone_awake": {
+			"type": "narration",
+			"text": "Ich bin allein. Niemand ist hier, um mir zu helfen. Aber ich gebe nicht auf. Noch nicht.",
+			"next": "elise_awake_fight"
+		},
+		"elise_awake_fight": {
+			"type": "narration",
+			"text": "Ich versuche es noch einmal. Sammle die Fragmente des Gesangs, die letzten Reste meines Willens. Aber das Wesen ist wach. Richtig wach. Und es ist wütend.",
+			"next": "hide_ally_awake"
+		},
+		"hide_ally_awake": {
 			"type": "effect",
 			"effect": "text_glitch",
 			"params": {
@@ -55,6 +229,11 @@
 		"narration_5": {
 			"type": "narration",
 			"text": "Es wacht auf. Nicht langsam, nicht sanft. Es REISST sich aus dem Schlaf wie ein Ertrinkender an die Oberfläche. Sechshundert Jahre komprimierter Hunger entladen sich.",
+			"next": "creature_awake_3"
+		},
+		"creature_awake_3": {
+			"type": "narration",
+			"text": "ENDLICH. ENDLICH WACH. DIE KETTEN SIND GEBROCHEN. DIE DÜNNE STELLE REISST.",
 			"next": "effect_ui_break"
 		},
 		"effect_ui_break": {
@@ -63,6 +242,18 @@
 			"params": {
 				"duration": 3.0
 			},
+			"next": "elise_awake_4"
+		},
+		"elise_awake_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Hör mich an! Bitte! Du musst nicht zerstören - du bist frei, du brauchst nicht -",
+			"next": "creature_awake_4"
+		},
+		"creature_awake_4": {
+			"type": "narration",
+			"text": "FREI? ICH KENNE KEIN FREI. ICH KENNE NUR HUNGER UND KETTEN UND DUNKELHEIT. UND JETZT KENNE ICH LICHT.",
 			"next": "narration_6"
 		},
 		"narration_6": {
@@ -92,6 +283,13 @@
 		"narration_8": {
 			"type": "narration",
 			"text": "Otto schreit Befehle, die niemand hört. Voss betet, aber seine Worte lösen sich in der Luft auf. Anna steht still und lächelt. Sie hat es kommen sehen.",
+			"next": "elise_awake_5"
+		},
+		"elise_awake_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Großmutter... es tut mir leid. Ich war nicht stark genug. Ich war nicht weise genug.",
 			"next": "effect_text_corrupt"
 		},
 		"effect_text_corrupt": {
@@ -105,12 +303,17 @@
 		},
 		"narration_9": {
 			"type": "narration",
-			"text": "Das Letzte, was ich sehe, bevor die Realität endgültig zerbricht: der Himmel oeffnet sich. Nicht wie Wolken sich teilen. Wie Augen sich oeffnen.",
+			"text": "Das Letzte, was ich sehe, bevor die Realität endgültig zerbricht: der Himmel öffnet sich. Nicht wie Wolken sich teilen. Wie Augen sich öffnen.",
 			"next": "narration_10"
 		},
 		"narration_10": {
 			"type": "narration",
 			"text": "Es sieht mich an. Es sieht alles an. Und alles sieht zurück.",
+			"next": "creature_awake_final"
+		},
+		"creature_awake_final": {
+			"type": "narration",
+			"text": "ICH SEHE EUCH. ICH SEHE EUCH ALLE. ENDLICH.",
 			"next": "effect_final"
 		},
 		"effect_final": {
@@ -119,22 +322,28 @@
 			"params": {
 				"duration": 3.0
 			},
+			"next": "narration_last_thought"
+		},
+		"narration_last_thought": {
+			"type": "narration",
+			"text": "Mein letzter bewusster Gedanke, bevor das Singen alles verschlingt: Großmutter hat mich nicht geschickt, um zu scheitern. Sie hat mir vertraut. Und ich habe... ich habe...",
 			"next": "narration_11"
 		},
 		"narration_11": {
 			"type": "narration",
 			"text": "Da̷n̸n̵ ̶i̸s̵t̷ ̶n̷u̴r̶ ̵n̸o̴c̵h̵ ̸S̸i̸n̷g̵e̶n̶.",
+			"next": "journal_awakening"
+		},
+		"journal_awakening": {
+			"type": "journal",
+			"entry_id": "ending_awakening",
+			"title": "Das Erwachen",
+			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Und das Singen... das Singen hört nicht mehr auf.",
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "ending:awakening"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_failure",
-			"path": "cosmic_horror.wav"
 		}
 	}
 }

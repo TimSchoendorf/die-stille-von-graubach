@@ -8,6 +8,18 @@
 			"transition": "fade",
 			"next": "snd_rain"
 		},
+		"snd_rain": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "rain.wav",
+			"next": "snd_main_theme"
+		},
+		"snd_main_theme": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "main_theme.wav",
+			"next": "wait_start"
+		},
 		"wait_start": {
 			"type": "wait",
 			"duration": 1.0,
@@ -26,6 +38,21 @@
 		"narration_1c": {
 			"type": "narration",
 			"text": "Niemand sieht in diesen Tagen auf. Die Inflation frisst das Land. Ein Brot kostet Milliarden. Aber das ist nicht der Grund, warum meine Hände zittern.",
+			"next": "narration_memory_1"
+		},
+		"narration_memory_1": {
+			"type": "narration",
+			"text": "Großmutter Margarethe war es, die mich zur Folklore brachte. Als Kind saß ich auf ihrem Schoß, während sie mir von den alten Geschichten erzählte - nicht als Märchen, sondern als Erinnerungen.",
+			"next": "narration_memory_2"
+		},
+		"narration_memory_2": {
+			"type": "narration",
+			"text": "\"Die Geschichten sind wahr, Elise\", sagte sie immer. \"Nicht wörtlich. Aber wahr.\" Damals verstand ich nicht, was sie meinte. Heute, nach drei Semestern Volkskunde, bin ich mir nicht mehr sicher, ob ich es verstehen will.",
+			"next": "narration_memory_3"
+		},
+		"narration_memory_3": {
+			"type": "narration",
+			"text": "Fünf Monate Schweigen. Drei unbeantwortete Briefe. Ich hatte schon überlegt, bei der Gemeindeverwaltung in Waldkirch anzurufen. Aber dann kam heute dieser Brief.",
 			"next": "narration_2"
 		},
 		"narration_2": {
@@ -94,6 +121,30 @@
 		"narration_5b": {
 			"type": "narration",
 			"text": "In meinen Folklore-Studien habe ich dieses Symbol gesehen. Es ist alt. Älter als das Christentum in diesen Ländern. Ein Schutzzeichen - oder eine Warnung.",
+			"next": "elise_conflict_1"
+		},
+		"elise_conflict_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Graubach... Ich habe nächste Woche drei Seminare. Die Abgabe meiner Arbeit über thüringische Ernteriten ist überfällig.",
+			"next": "narration_conflict_2"
+		},
+		"narration_conflict_2": {
+			"type": "narration",
+			"text": "Ich lege den Brief auf den Tisch und trete ans Fenster. Der Regen wird stärker. In der Scheibe sehe ich mein Spiegelbild - müde Augen, die Haare ungekämmt. Seit Wochen schlafe ich schlecht.",
+			"next": "narration_conflict_3"
+		},
+		"narration_conflict_3": {
+			"type": "narration",
+			"text": "Seit die Briefe ausblieben, eigentlich. Als hätte ein Teil von mir gewusst, dass etwas nicht stimmt. Dass Großmutters Schweigen kein Vergessen war, sondern eine Entscheidung.",
+			"next": "elise_conflict_4"
+		},
+		"elise_conflict_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Nein. Die Seminare können warten. Großmutter hat mich nie um etwas gebeten. Nie. Und jetzt schreibt sie \"komm\" - dann komme ich.",
 			"next": "elise_4"
 		},
 		"elise_4": {
@@ -118,6 +169,11 @@
 		"narration_6b": {
 			"type": "narration",
 			"text": "\"Bring etwas mit, das dich schützt.\"",
+			"next": "narration_pack_think"
+		},
+		"narration_pack_think": {
+			"type": "narration",
+			"text": "Schutz. Was schützt einen Menschen? Wissen? Glaube? Beweise? Ich sehe mich in meiner kleinen Wohnung um und drei Dinge ziehen meinen Blick auf sich.",
 			"next": "choice_pack"
 		},
 		"choice_pack": {
@@ -250,6 +306,17 @@
 			"duration": 1.0,
 			"next": "snd_stop_rain"
 		},
+		"snd_stop_rain": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "snd_train_music"
+		},
+		"snd_train_music": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "village_day.wav",
+			"next": "show_elise_train"
+		},
 		"show_elise_train": {
 			"type": "character",
 			"character": "elise",
@@ -272,6 +339,12 @@
 			"type": "narration",
 			"text": "Es ist dieselbe Melodie aus meinem Traum.",
 			"next": "snd_whispers"
+		},
+		"snd_whispers": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "whispers.wav",
+			"next": "effect_vignette_train"
 		},
 		"effect_vignette_train": {
 			"type": "effect",
@@ -303,11 +376,45 @@
 		"narration_train_old_2": {
 			"type": "narration",
 			"text": "\"Das singt man im Schwarzwald, wenn der November kommt. Damit die, die unten schlafen, nicht aufwachen.\"",
+			"next": "elise_train_ask_2"
+		},
+		"elise_train_ask_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Die, die unten schlafen? Das klingt nach einer alten Beschwörungsformel. Ich studiere Volkskunde - darf ich fragen, wo genau im Schwarzwald Sie das gelernt haben?",
+			"next": "narration_old_react"
+		},
+		"narration_old_react": {
+			"type": "narration",
+			"text": "Die Frau hört auf zu stricken. Einen Moment lang ist ihr Lächeln verschwunden. Dann kehrt es zurück - aber es erreicht ihre Augen nicht mehr.",
+			"next": "narration_old_react_2"
+		},
+		"narration_old_react_2": {
+			"type": "narration",
+			"text": "\"Gelernt? Kind, das lernt man nicht. Das weiß man. So wie man weiß, wann es Zeit ist, die Fenster zu schließen.\"",
+			"next": "elise_train_ask_3"
+		},
+		"elise_train_ask_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Und wann ist es Zeit, die Fenster zu schließen?",
+			"next": "narration_old_unsettling"
+		},
+		"narration_old_unsettling": {
+			"type": "narration",
+			"text": "Die Frau beugt sich vor. Ihr Atem riecht nach Kräutern - denselben Kräutern wie Großmutters Brief. \"Wenn das Singen anfängt, Kindchen. Wenn das Singen anfängt.\"",
 			"next": "narration_train_old_3"
 		},
 		"narration_train_old_3": {
 			"type": "narration",
-			"text": "Sie strickt weiter. Ich sage nichts mehr. Aber ich bemerke, dass ihr Strickmuster Spiralen formt.",
+			"text": "Sie strickt weiter. Ich sage nichts mehr. Aber ich bemerke, dass ihr Strickmuster Spiralen formt. Dieselben Spiralen wie auf Großmutters Brief.",
+			"next": "narration_train_old_4"
+		},
+		"narration_train_old_4": {
+			"type": "narration",
+			"text": "Ein Schauer läuft mir über den Rücken. Ich presse meine Tasche enger an mich und sehe aus dem Fenster. Die Wälder draußen werden dichter, dunkler.",
 			"next": "narration_train_4"
 		},
 		"narration_train_4": {
@@ -400,6 +507,12 @@
 			"duration": 1.5,
 			"next": "snd_village_amb"
 		},
+		"snd_village_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "village_ambience.wav",
+			"next": "effect_vignette"
+		},
 		"effect_vignette": {
 			"type": "effect",
 			"effect": "vignette",
@@ -438,6 +551,36 @@
 			"text": "Meine Schritte auf dem Kopfsteinpflaster sind das einzige Geräusch. Jeder Schritt ein Eindringling in diese erstickende Ruhe.",
 			"next": "snd_footsteps"
 		},
+		"snd_footsteps": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "footsteps_wood.wav",
+			"next": "narration_childhood_1"
+		},
+		"narration_childhood_1": {
+			"type": "narration",
+			"text": "Das ist nicht das Graubach meiner Kindheit. Damals standen die Türen offen. Frauen riefen sich über die Gasse zu. Am Brunnen wuschen die Mädchen Wäsche und lachten.",
+			"next": "show_elise_arrival"
+		},
+		"show_elise_arrival": {
+			"type": "character",
+			"character": "elise",
+			"expression": "sad",
+			"position": "center",
+			"action": "show",
+			"next": "elise_childhood_1"
+		},
+		"elise_childhood_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Großmutter stand immer am Zaun und winkte, wenn ich kam. Schon von weitem konnte ich sie sehen. Was ist hier passiert?",
+			"next": "narration_childhood_2"
+		},
+		"narration_childhood_2": {
+			"type": "narration",
+			"text": "Niemand winkt. Niemand steht am Zaun. Nur der Nebel kriecht über die leeren Gassen, und irgendwo - tief und kaum hörbar - summt etwas.",
+			"next": "narration_arrival_6"
+		},
 		"narration_arrival_6": {
 			"type": "narration",
 			"text": "Ich kenne den Weg zu Großmutters Haus. Links am Brunnen vorbei, die Gasse hinauf, bis zur letzten Tür vor dem Wald.",
@@ -456,6 +599,23 @@
 		"narration_arrival_9": {
 			"type": "narration",
 			"text": "An Großmutters Zaun hängt ein weiteres. Die Tür steht einen Spalt offen. Aus dem Inneren dringt der süssliche Geruch von verwelkten Blumen.",
+			"next": "elise_arrival_emotion"
+		},
+		"elise_arrival_emotion": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Trauerband... Nein. Nein, nein, nein.",
+			"next": "narration_arrival_emotion_2"
+		},
+		"narration_arrival_emotion_2": {
+			"type": "narration",
+			"text": "Meine Knie werden weich. Ich greife nach dem Zaun, um mich zu halten. Das Holz ist feucht und kalt unter meinen Fingern. Der süße Geruch verwelkter Blumen wird stärker.",
+			"next": "narration_arrival_emotion_3"
+		},
+		"narration_arrival_emotion_3": {
+			"type": "narration",
+			"text": "Ich kenne diesen Geruch. Lilien. Trauerlilien. Dieselben, die auf Mutters Beerdigung standen.",
 			"next": "effect_shake_door"
 		},
 		"effect_shake_door": {
@@ -466,6 +626,12 @@
 				"duration": 0.3
 			},
 			"next": "snd_door"
+		},
+		"snd_door": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "door_creak.wav",
+			"next": "narration_arrival_10"
 		},
 		"narration_arrival_10": {
 			"type": "narration",
@@ -482,53 +648,6 @@
 		"scene_end_prologue": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/arrival.json"
-		},
-		"snd_rain": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "snd_main_theme",
-			"path": "rain.wav"
-		},
-		"snd_main_theme": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "wait_start",
-			"path": "main_theme.wav"
-		},
-		"snd_stop_rain": {
-			"type": "sound",
-			"sound_type": "stop_ambience",
-			"next": "snd_train_music"
-		},
-		"snd_train_music": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "show_elise_train",
-			"path": "village_day.wav"
-		},
-		"snd_whispers": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "effect_vignette_train",
-			"path": "whispers.wav"
-		},
-		"snd_village_amb": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "effect_vignette",
-			"path": "village_ambience.wav"
-		},
-		"snd_footsteps": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "narration_arrival_6",
-			"path": "footsteps_wood.wav"
-		},
-		"snd_door": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "narration_arrival_10",
-			"path": "door_creak.wav"
 		}
 	}
 }

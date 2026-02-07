@@ -4,8 +4,14 @@
 	"nodes": {
 		"narration_1": {
 			"type": "narration",
-			"text": "Ich spreche zum Wesen. Nicht mit Worten - mit Gedanken, mit Willen. Ich stelle mich auf das Zeichen der Erde und oeffne meinen Geist.",
+			"text": "Ich spreche zum Wesen. Nicht mit Worten - mit Gedanken, mit Willen. Ich stelle mich auf das Zeichen der Erde und öffne meinen Geist.",
 			"next": "snd_cosmic"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_contact",
+			"path": "cosmic_horror.wav"
 		},
 		"effect_contact": {
 			"type": "effect",
@@ -13,11 +19,88 @@
 			"params": {
 				"duration": 0.8
 			},
+			"next": "elise_pact_1"
+		},
+		"elise_pact_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich bin nicht hier um dich zu binden. Nicht um dich zu töten. Ich schlage einen Handel vor.",
+			"next": "creature_pact_1"
+		},
+		"creature_pact_1": {
+			"type": "narration",
+			"text": "EINEN HANDEL? MENSCHEN HANDELN MIT GOLD UND VIEH. WAS HAST DU, DAS ICH WILL?",
+			"next": "elise_pact_2"
+		},
+		"elise_pact_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Bewusstsein. Kontakt. Du hungerst nicht nach Blut. Du hungerst nach Aufmerksamkeit. Nach jemand, der da ist.",
+			"next": "creature_pact_2"
+		},
+		"creature_pact_2": {
+			"type": "narration",
+			"text": "Stille. Lange Stille. Dann: WOHER WEISST DU DAS?",
+			"next": "elise_pact_3"
+		},
+		"elise_pact_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Meine Großmutter hat es verstanden. Am Ende ihres Lebens. Sie hat es in ihr Journal geschrieben. Und sie hat mich hergerufen, damit ich es zu Ende bringe.",
+			"next": "creature_pact_3"
+		},
+		"creature_pact_3": {
+			"type": "narration",
+			"text": "DIE ALTE. SIE HAT MIT MIR GESPROCHEN. AM ENDE. ALS IHR LICHT SCHON SCHWACH WAR. SIE HAT GESAGT: MEINE ENKELIN WIRD KOMMEN.",
 			"next": "narration_2"
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Es antwortet. Nicht in Worten. In Bildern, Gefühlen, Erinnerungen, die nicht meine sind. Ich sehe Jahrtausende in Sekunden. Zivilisationen, die kamen und gingen wie Gezeiten.",
+			"text": "Großmutter. Selbst im Sterben hat sie vorausgeplant. Selbst im letzten Atemzug hat sie an mich gedacht.",
+			"next": "elise_pact_4"
+		},
+		"elise_pact_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Und hier bin ich. Wie sie es versprochen hat.",
+			"next": "creature_pact_4"
+		},
+		"creature_pact_4": {
+			"type": "narration",
+			"text": "MENSCHEN BRECHEN VERSPRECHEN. EURE LEBEN SIND KURZ. IHR VERGESST.",
+			"next": "elise_pact_5"
+		},
+		"elise_pact_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten. Jeden Tag. Bis zu ihrem Tod.",
+			"next": "creature_pact_5"
+		},
+		"creature_pact_5": {
+			"type": "narration",
+			"text": "JA. SIE WAR... ANDERS. SIE HAT NICHT GEFÜTTERT. SIE HAT GESPROCHEN. IN DEN LETZTEN JAHREN. LEISE. ICH HABE ZUGEHÖRT.",
+			"next": "narration_revelation"
+		},
+		"narration_revelation": {
+			"type": "narration",
+			"text": "Meine Augen brennen. Großmutter hat mit dem Wesen gesprochen. In den letzten Jahren, als sie krank wurde, als niemand hinschaute. Sie hat ihm Gesellschaft geleistet.",
+			"next": "elise_pact_6"
+		},
+		"elise_pact_6": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich bin ihre Enkelin. Und ich halte meine Versprechen.",
+			"next": "creature_pact_6"
+		},
+		"creature_pact_6": {
+			"type": "narration",
+			"text": "DAS WEISS ICH. DESHALB HÖRE ICH ZU. WAS BIETEST DU AN?",
 			"next": "effect_visions"
 		},
 		"effect_visions": {
@@ -26,16 +109,42 @@
 			"params": {
 				"duration": 1.0
 			},
-			"next": "narration_3"
+			"next": "elise_pact_7"
 		},
-		"narration_3": {
-			"type": "narration",
-			"text": "Und Hunger. Einen Hunger so alt und tief, dass er die Grenzen zwischen Emotion und Naturgesetz verschwimmt. Es braucht Nahrung. Nicht Fleisch, nicht Blut - Aufmerksamkeit. Bewusstsein. Kontakt.",
-			"next": "narration_4"
+		"elise_pact_7": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Keine Opfer mehr. Kein Blut. Kein Gefäß. Stattdessen komme ich. Jedes Jahr. Setze mich hierher und lasse dich meine Gedanken berühren.",
+			"next": "creature_pact_7"
 		},
-		"narration_4": {
+		"creature_pact_7": {
 			"type": "narration",
-			"text": "Ich biete einen Handel an: Ich werde die Hüterin. Keine Opfer mehr, kein Blut. Stattdessen komme ich jedes Jahr, setze mich auf das Zeichen und lasse es meine Gedanken berühren.",
+			"text": "EINMAL IM JAHR. DAS IST... WENIG. FÜR SECHSHUNDERT JAHRE HUNGER.",
+			"next": "elise_pact_8"
+		},
+		"elise_pact_8": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden andere kommen. Du wirst nie wieder vergessen werden.",
+			"next": "creature_pact_8"
+		},
+		"creature_pact_8": {
+			"type": "narration",
+			"text": "Stille. Ich spüre es denken. Abwägen. Sechshundert Jahre Erfahrung gegen ein Versprechen eines einzigen Menschenlebens.",
+			"next": "creature_pact_9"
+		},
+		"creature_pact_9": {
+			"type": "narration",
+			"text": "UND WENN DU STIRBST? WIE DEINE ALTE?",
+			"next": "elise_pact_9"
+		},
+		"elise_pact_9": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Brandts brechen ihre Versprechen nicht.",
 			"next": "effect_pact_forming"
 		},
 		"effect_pact_forming": {
@@ -46,35 +155,165 @@
 				"max": 1.0,
 				"cycle": 2.0
 			},
+			"next": "creature_pact_10"
+		},
+		"creature_pact_10": {
+			"type": "narration",
+			"text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT.",
 			"next": "snd_dark"
+		},
+		"snd_dark": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_5",
+			"path": "ending_dark.wav"
 		},
 		"narration_5": {
 			"type": "narration",
-			"text": "Es ueberlegt. Ich spüre seine Skepsis, seine Erfahrung mit gebrochenen Versprechen. Aber auch seine Müdigkeit. Es will nicht mehr kämpfen. Es will nur nicht vergessen werden.",
-			"next": "narration_6"
+			"text": "Ich spüre den Pakt sich formen - nicht als Vertrag, sondern als Verbindung. Ein dünner Faden zwischen seinem Bewusstsein und meinem. Warm. Lebendig. Er wird nie reißen.",
+			"next": "narration_5b"
 		},
-		"narration_6": {
-			"type": "effect",
-			"effect": "desaturate",
-			"params": {
-				"amount": 0.3
-			},
-			"next": "narration_7"
-		},
-		"narration_7": {
+		"narration_5b": {
 			"type": "narration",
-			"text": "Es nimmt an. Ich spüre den Pakt sich formen - nicht als Vertrag, sondern als Verbindung. Ein dünner Faden zwischen seinem Bewusstsein und meinem. Er wird nie reißen.",
-			"next": "narration_8"
-		},
-		"narration_8": {
-			"type": "narration",
-			"text": "Das Singen wird leiser. Sanfter. Zufrieden. Das Pulsieren unter meinen Füssen verlangsamt sich zu einem ruhigen Rhythmus.",
+			"text": "Das Singen wird leiser. Sanfter. Zufrieden. Das Pulsieren unter meinen Füßen verlangsamt sich zu einem ruhigen Rhythmus. Wie ein Herzschlag, der zur Ruhe kommt.",
 			"next": "effect_calm"
 		},
 		"effect_calm": {
 			"type": "effect",
 			"effect": "clear",
 			"params": {},
+			"next": "check_ally_pact_georg"
+		},
+		"check_ally_pact_georg": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_pact",
+			"false_next": "check_ally_pact_hilde"
+		},
+		"show_georg_pact": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "georg_pact_1"
+		},
+		"georg_pact_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Elise! Was ist passiert? Das Singen hat aufgehört, und dann...",
+			"next": "elise_georg_pact"
+		},
+		"elise_georg_pact": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Es ist vorbei, Georg. Keine Opfer mehr. Ich habe einen Pakt geschlossen. Einen fairen.",
+			"next": "georg_pact_2"
+		},
+		"georg_pact_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg.",
+			"next": "hide_georg_pact"
+		},
+		"hide_georg_pact": {
+			"type": "character",
+			"character": "georg",
+			"expression": "sad",
+			"position": "right",
+			"action": "hide",
+			"next": "narration_9"
+		},
+		"check_ally_pact_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_pact",
+			"false_next": "check_ally_pact_voss"
+		},
+		"show_hilde_pact": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "mysterious",
+			"position": "right",
+			"action": "show",
+			"next": "hilde_pact_1"
+		},
+		"hilde_pact_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Ich spüre die Verbindung. Einen Faden. Dünn, aber stark. Was hast du getan, Kind?",
+			"next": "elise_hilde_pact"
+		},
+		"elise_hilde_pact": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Verhandelt. Wie Großmutter es am Ende gewollt hätte. Kein Blut mehr. Nur Gesellschaft.",
+			"next": "hilde_pact_2"
+		},
+		"hilde_pact_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Gesellschaft. So einfach. Und so schwer.",
+			"next": "hide_hilde_pact"
+		},
+		"hide_hilde_pact": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "right",
+			"action": "hide",
+			"next": "narration_9"
+		},
+		"check_ally_pact_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_pact",
+			"false_next": "narration_9"
+		},
+		"show_voss_pact": {
+			"type": "character",
+			"character": "voss",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "voss_pact_1"
+		},
+		"voss_pact_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Was habe ich verpasst? Was ist da unten geschehen?",
+			"next": "elise_voss_pact"
+		},
+		"elise_voss_pact": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Frieden, Pfarrer. Zum ersten Mal seit sechshundert Jahren. Kein Opfer mehr. Kein Blut. Nur ein Versprechen.",
+			"next": "voss_pact_2"
+		},
+		"voss_pact_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten.",
+			"next": "hide_voss_pact"
+		},
+		"hide_voss_pact": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "right",
+			"action": "hide",
 			"next": "narration_9"
 		},
 		"narration_9": {
@@ -84,7 +323,7 @@
 		},
 		"narration_10": {
 			"type": "narration",
-			"text": "Ich werde zurückkommen. Jedes Jahr. Für den Rest meines Lebens. Und danach muss jemand anderes den Pakt uebernehmen.",
+			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Und dann, jedes Jahr im Herbst, werde ich den Zug nach Graubach nehmen.",
 			"next": "narration_11"
 		},
 		"narration_11": {
@@ -94,24 +333,24 @@
 		},
 		"narration_12": {
 			"type": "narration",
-			"text": "Manchmal, in ruhigen Nächten in Berlin, höre ich das Singen. Leise, fern, fast wie ein Wiegenlied. Es ist nicht mehr bedrohlich. Es ist... einsam.",
+			"text": "Manchmal, in ruhigen Nächten in Berlin, höre ich das Singen. Leise, fern, fast wie ein Wiegenlied. Es ist nicht mehr bedrohlich. Es klingt... wie Warten. Geduldiges, hoffnungsvolles Warten.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Großmutter, du hast es mir überlassen. Nicht als Bürde. Als Erbe. Und ich nehme es an.",
+			"next": "journal_pact"
+		},
+		"journal_pact": {
+			"type": "journal",
+			"entry_id": "ending_pact",
+			"title": "Der Pakt",
+			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich zurück und leiste dem Wesen Gesellschaft. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "ending:pact"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_contact",
-			"path": "cosmic_horror.wav"
-		},
-		"snd_dark": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "narration_5",
-			"path": "ending_dark.wav"
 		}
 	}
 }

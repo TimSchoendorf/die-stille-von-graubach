@@ -8,9 +8,58 @@
 			"transition": "fade",
 			"next": "snd_invest"
 		},
+		"snd_invest": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "investigation.wav",
+			"next": "snd_village_amb"
+		},
+		"snd_village_amb": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "village_ambience.wav",
+			"next": "narration_1"
+		},
 		"narration_1": {
 			"type": "narration",
 			"text": "Tag drei. Die Morgensonne fällt durch die staubigen Gardinen, aber sie wärmt nicht. Ich habe kaum geschlafen.",
+			"next": "elise_wakes"
+		},
+		"elise_wakes": {
+			"type": "narration",
+			"text": "Irgendwann in der Nacht wurde das Singen lauter. Es formte Worte, die ich im Halbschlaf fast verstand. Jetzt, im Morgenlicht, sind sie wieder verschwunden - wie Traumfetzen, die man nicht festhalten kann.",
+			"next": "check_fled"
+		},
+		"check_fled": {
+			"type": "flag_check",
+			"flag": "tried_to_flee",
+			"value": 1,
+			"true_next": "fled_morning",
+			"false_next": "stayed_morning"
+		},
+		"fled_morning": {
+			"type": "narration",
+			"text": "Die Erinnerung an letzte Nacht brennt. Der Wald, der sich verschoben hat. Die Wege, die alle zurückführten. Graubach hält mich fest. Also muss ich einen anderen Weg finden.",
+			"next": "narration_kitchen"
+		},
+		"stayed_morning": {
+			"type": "narration",
+			"text": "Ich habe mich entschieden zu bleiben. Der Schlüssel liegt auf dem Nachttisch, die Spirale nach oben. Im Morgenlicht sieht er harmlos aus. Fast.",
+			"next": "narration_kitchen"
+		},
+		"narration_kitchen": {
+			"type": "narration",
+			"text": "In der Küche finde ich Großmutters Teetasse. Sie steht neben dem Herd, halb leer. Getrocknete Kräuter am Rand. Beifuß und Schafgarbe - derselbe Tee, den Hilde mir gegeben hat.",
+			"next": "elise_cup"
+		},
+		"elise_cup": {
+			"type": "narration",
+			"text": "Ich halte die Tasse in beiden Händen. Sie ist kalt. Aber für einen Moment kann ich Großmutters Hände spüren, die diese Tasse gehalten haben. Jeden Morgen. Dreißig Jahre lang.",
+			"next": "elise_morning_resolve"
+		},
+		"elise_morning_resolve": {
+			"type": "narration",
+			"text": "Ich stelle die Tasse zurück. Heute suche ich nach Großmutters Aufzeichnungen. Dreißig Jahre Forschung müssen irgendwo in diesem Haus sein.",
 			"next": "narration_2"
 		},
 		"narration_2": {
@@ -44,14 +93,20 @@
 				}
 			]
 		},
+
 		"search_study": {
 			"type": "narration",
-			"text": "Das Arbeitszimmer ist ein Chaos aus Büchern und Papieren. Großmutter war besessen - Dutzende Bücher ueber Folklore, Okkultismus, vorchristliche Rituale im Schwarzwald.",
+			"text": "Das Arbeitszimmer ist ein Chaos aus Büchern und Papieren. Großmutter war besessen - Dutzende Bücher über Folklore, Okkultismus, vorchristliche Rituale im Schwarzwald.",
+			"next": "elise_study_1"
+		},
+		"elise_study_1": {
+			"type": "narration",
+			"text": "Ich kenne einige dieser Bücher aus meinem Studium. Grimms Mythologie, Mannhardts Wald- und Feldkulte. Aber andere sind mir fremd - handgeschriebene Abschriften, Blätter in Sprachen, die ich nicht lesen kann.",
 			"next": "search_study_2"
 		},
 		"search_study_2": {
 			"type": "narration",
-			"text": "Zwischen den Seiten eines zerlesenen Buches ueber germanische Bindungsrituale finde ich lose Blätter. Großmutters Handschrift, eng und hastig.",
+			"text": "Zwischen den Seiten eines zerlesenen Buches über germanische Bindungsrituale finde ich lose Blätter. Großmutters Handschrift, eng und hastig.",
 			"next": "effect_study_find"
 		},
 		"effect_study_find": {
@@ -66,11 +121,22 @@
 		"find_notes_study": {
 			"type": "narration",
 			"text": "'Das Siegel muss erneuert werden, nicht mit Blut, sondern mit Willen. Drei Komponenten: das Zeichen der Erde, den Gesang der Alten und einen Anker - jemanden, der das Wesen kennt aber nicht fürchtet.'",
+			"next": "elise_study_react"
+		},
+		"elise_study_react": {
+			"type": "narration",
+			"text": "Einen Anker. Das Wort wieder. Konrad hat es benutzt. Hilde auch. Und jetzt Großmutter. Bin ICH dieser Anker?",
 			"next": "set_found_journal"
 		},
+
 		"search_cellar": {
 			"type": "narration",
-			"text": "Der Keller riecht nach feuchter Erde und etwas Süsserem, Kräutern vielleicht. An der Wand hängen getrocknete Pflanzenbündel, sorgfältig beschriftet.",
+			"text": "Der Keller riecht nach feuchter Erde und etwas Süßerem - Kräutern vielleicht. An der Wand hängen getrocknete Pflanzenbündel, sorgfältig beschriftet.",
+			"next": "elise_cellar_1"
+		},
+		"elise_cellar_1": {
+			"type": "narration",
+			"text": "Die Treppe knarrt unter meinen Füßen. Es ist kalt hier unten, aber eine andere Kälte als draußen. Diese hier kommt von unten, aus der Erde selbst. Als würde etwas darunter atmen.",
 			"next": "search_cellar_2"
 		},
 		"search_cellar_2": {
@@ -83,29 +149,46 @@
 		},
 		"search_cellar_3": {
 			"type": "narration",
-			"text": "Hinter einem losen Stein in der Wand finde ich eine Blechdose. Darin: ein ledergebundenes Heft, ein kleiner Beutel mit Krätern und ein gefalteter Zettel.",
+			"text": "Hinter einem losen Stein in der Wand finde ich eine Blechdose. Darin: ein ledergebundenes Heft, ein kleiner Beutel mit Kräutern und ein gefalteter Zettel.",
 			"next": "search_cellar_4"
 		},
 		"search_cellar_4": {
 			"type": "narration",
 			"text": "'Für Elise, wenn die Zeit kommt. Du wirst verstehen. - M.' Großmutters Initialen. Das Heft ist ihr Journal.",
+			"next": "elise_cellar_react"
+		},
+		"elise_cellar_react": {
+			"type": "narration",
+			"text": "Sie hat es für mich versteckt. Nicht im offensichtlichen Arbeitszimmer, nicht im Schlafzimmer. Hier unten, wo die Erde kalt ist und niemand sucht. Als wüsste sie, dass andere auch danach suchen würden.",
 			"next": "set_found_journal"
 		},
+
 		"search_bedroom": {
 			"type": "narration",
 			"text": "Großmutters Schlafzimmer sieht aus wie am Tag ihres Todes. Das Bett ordentlich gemacht, als hätte sie gewusst, dass sie nicht zurückkehren würde.",
+			"next": "elise_bedroom_1"
+		},
+		"elise_bedroom_1": {
+			"type": "narration",
+			"text": "Ihr Morgenmantel hängt noch am Haken. Ich drücke mein Gesicht hinein. Lavendel und Kräuter. Ihr Geruch. Einen Moment lang bin ich wieder sechs Jahre alt und sie hält mich auf dem Arm.",
 			"next": "search_bedroom_2"
 		},
 		"search_bedroom_2": {
 			"type": "narration",
-			"text": "Unter der losen Diele neben dem Bett - dort, wo sie früher Süssigkeiten für mich versteckt hat - liegt ein in Wachstuch gewickeltes Paket.",
+			"text": "Unter der losen Diele neben dem Bett - dort, wo sie früher Süßigkeiten für mich versteckt hat - liegt ein in Wachstuch gewickeltes Paket.",
 			"next": "search_bedroom_3"
 		},
 		"search_bedroom_3": {
 			"type": "narration",
-			"text": "Ein altes Heft, vollgeschrieben. Auf der ersten Seite steht: 'Aufzeichnungen ueber das Wesen unter Graubach. Begonnen 1893, fortgesetzt bis heute.'",
+			"text": "Ein altes Heft, vollgeschrieben. Auf der ersten Seite steht: 'Aufzeichnungen über das Wesen unter Graubach. Begonnen 1893, fortgesetzt bis heute.'",
+			"next": "elise_bedroom_react"
+		},
+		"elise_bedroom_react": {
+			"type": "narration",
+			"text": "Sie hat das Versteck benutzt, das nur ich kannte. Den Ort, wo sie Süßigkeiten für mich versteckt hat. Eine letzte Botschaft von Großmutter an ihr Enkelkind.",
 			"next": "set_found_journal"
 		},
+
 		"set_found_journal": {
 			"type": "set_flag",
 			"flag": "found_journal",
@@ -116,22 +199,32 @@
 			"type": "journal",
 			"entry_id": "grandmother_journal",
 			"title": "Großmutters Journal",
-			"content": "Großmutters Aufzeichnungen gefunden. Sie dokumentierte 30 Jahre Forschung ueber das Wesen unter der Kirche und ein alternatives Bindungsritual. Drei Komponenten nötig: Zeichen der Erde, Gesang der Alten, ein Anker.",
+			"content": "Großmutters Aufzeichnungen gefunden. Sie dokumentierte 30 Jahre Forschung über das Wesen unter der Kirche und ein alternatives Bindungsritual. Drei Komponenten nötig: Zeichen der Erde, Gesang der Alten, ein Anker.",
 			"next": "read_journal_1"
 		},
 		"read_journal_1": {
 			"type": "narration",
-			"text": "Ich blättere durch das Journal. Die ersten Einträge sind nüchtern, wissenschaftlich fast. Aber mit den Jahren wird die Handschrift unruhiger.",
+			"text": "Ich setze mich an den Küchentisch und blättere durch das Journal. Die ersten Einträge sind nüchtern, wissenschaftlich fast. Aber mit den Jahren wird die Handschrift unruhiger.",
 			"next": "read_journal_2"
 		},
 		"read_journal_2": {
 			"type": "narration",
-			"text": "'1903: Die Spirale taucht ueberall auf. In der Rinde der Bäume, im Muster des Frostes, in meinen Träumen. Es weiß, dass ich forsche.'",
+			"text": "'1903: Die Spirale taucht überall auf. In der Rinde der Bäume, im Muster des Frostes, in meinen Träumen. Es weiß, dass ich forsche.'",
+			"next": "elise_journal_react_1"
+		},
+		"elise_journal_react_1": {
+			"type": "narration",
+			"text": "Die Spirale. Auf den Grabsteinen, auf Konrads Hand, in Annas Zeichnungen. Überall dasselbe Symbol. Es ist keine Dekoration - es ist eine Signatur.",
 			"next": "read_journal_3"
 		},
 		"read_journal_3": {
 			"type": "narration",
 			"text": "'1915: Hilde hat mir einen alten Gesang beigebracht. Er stammt aus der Zeit vor den Römern. Wenn ich ihn summe, wird die Luft schwer und das Singen aus der Tiefe verstummt für Stunden.'",
+			"next": "elise_journal_react_2"
+		},
+		"elise_journal_react_2": {
+			"type": "narration",
+			"text": "Ein Gesang, der die Kreatur zum Schweigen bringt? Das ist eine der drei Komponenten. Hilde kennt ihn noch - sie muss ihn mir beibringen.",
 			"next": "read_journal_4"
 		},
 		"read_journal_4": {
@@ -144,7 +237,46 @@
 		},
 		"read_journal_5": {
 			"type": "narration",
-			"text": "'1921: Konrads Augen. Ich habe es gesehen. Für einen Moment, als die Sonne tief stand, waren seine Augen nicht seine eigenen. Das Wesen hat ein Gefäss gefunden.'",
+			"text": "'1921: Konrads Augen. Ich habe es gesehen. Für einen Moment, als die Sonne tief stand, waren seine Augen nicht seine eigenen. Das Wesen hat ein Gefäß gefunden.'",
+			"next": "elise_journal_react_3"
+		},
+		"elise_journal_react_3": {
+			"type": "narration",
+			"text": "Konrad. Sie hat es schon 1921 gewusst. Zwei Jahre lang hat er vor meiner Tür gestanden und gelächelt, und hinter diesem Lächeln lebt etwas, das nicht er ist. Und gestern habe ich mit ihm gesprochen, als wäre alles normal.",
+			"next": "read_journal_6"
+		},
+		"read_journal_6": {
+			"type": "narration",
+			"text": "'1923: Ich habe den Namen gefunden. In dem Buch in der Kammer. Elise Margarethe Brandt. Geschrieben in einer Tinte, die pulsiert. Meine Enkelin. Die noch gar nicht geboren ist.'",
+			"next": "effect_name_shock"
+		},
+		"effect_name_shock": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 3.0,
+				"duration": 0.4
+			},
+			"next": "elise_journal_react_4"
+		},
+		"elise_journal_react_4": {
+			"type": "narration",
+			"text": "1923. Mein Name stand in dem Buch, bevor ich geboren wurde. Das Wesen kannte mich, bevor es mich gab. Es hat auf MICH gewartet.",
+			"next": "elise_journal_react_5"
+		},
+		"elise_journal_react_5": {
+			"type": "narration",
+			"text": "Meine Hände zittern so stark, dass ich das Journal kaum halten kann. Ich lege es hin. Atme. Eins. Zwei. Drei. Dann nehme ich es wieder auf.",
+			"next": "read_journal_7"
+		},
+		"read_journal_7": {
+			"type": "narration",
+			"text": "'1923, Nachtrag: Ich werde nicht zulassen, dass meine Enkelin ein Opfer wird. Ab heute arbeite ich an einem anderen Weg. Es wird dreißig Jahre dauern. Aber ich habe dreißig Jahre.'",
+			"next": "elise_journal_react_6"
+		},
+		"elise_journal_react_6": {
+			"type": "narration",
+			"text": "Sie hat es für mich getan. Nicht aus Pflicht oder Tradition. Weil sie mich geliebt hat. Eine Großmutter, die dreißig Jahre lang gegen ein uraltes Wesen gekämpft hat, damit ihre Enkelin leben kann.",
 			"next": "set_journal_read"
 		},
 		"set_journal_read": {
@@ -155,7 +287,7 @@
 		},
 		"narration_midmorning": {
 			"type": "narration",
-			"text": "Ich klappe das Journal zu. Meine Hände zittern. Großmutter wusste ueber Konrad Bescheid. Sie wusste alles.",
+			"text": "Ich klappe das Journal zu. Draußen ist die Sonne höher gestiegen. Die Schatten sind kürzer geworden. Aber in meinem Kopf ist es dunkler als zuvor.",
 			"next": "effect_morning_vignette"
 		},
 		"effect_morning_vignette": {
@@ -165,11 +297,26 @@
 				"intensity": 0.3,
 				"duration": 1.0
 			},
+			"next": "elise_plan_1"
+		},
+		"elise_plan_1": {
+			"type": "narration",
+			"text": "Drei Komponenten. Das Zeichen der Erde - vielleicht in der Kammer unter der Kirche. Der Gesang der Alten - Hilde kennt ihn. Und ein Anker.",
+			"next": "elise_plan_2"
+		},
+		"elise_plan_2": {
+			"type": "narration",
+			"text": "Ich bin der Anker. Mein Name im Buch ist die Verbindung. Großmutter wollte diese Verbindung nicht zerstören - sie wollte sie NUTZEN. Nicht als Opfer, sondern als Bindeglied.",
+			"next": "elise_plan_3"
+		},
+		"elise_plan_3": {
+			"type": "narration",
+			"text": "Kann das funktionieren? Oder war Großmutter genauso verzweifelt wie ich und hat sich an jeden Strohhalm geklammert?",
 			"next": "narration_plan"
 		},
 		"narration_plan": {
 			"type": "narration",
-			"text": "Was hat sie noch geschrieben? Drei Komponenten für das Siegel. Hilde kennt den Gesang. Das Zeichen der Erde - vielleicht in der Kirche? Und der Anker...",
+			"text": "Es spielt keine Rolle. Es ist der einzige Plan, den ich habe. Und Großmutter hat dreißig Jahre daran gearbeitet. Das muss etwas bedeuten.",
 			"next": "choice_next_step"
 		},
 		"choice_next_step": {
@@ -193,29 +340,23 @@
 		},
 		"narration_to_church": {
 			"type": "narration",
-			"text": "Die Kirche. Dort liegt die Kammer, dort werden die Rituale durchgeführt. Wenn irgendwo Hinweise auf das Zeichen der Erde zu finden sind, dann dort.",
+			"text": "Die Kirche. Dort liegt die Kammer, dort werden die Rituale durchgeführt. Wenn irgendwo Hinweise auf das Zeichen der Erde zu finden sind, dann dort. Und ich habe den Schlüssel.",
 			"next": "scene_end"
 		},
 		"narration_to_hilde": {
 			"type": "narration",
-			"text": "Hilde war Großmutters Verbündete. Sie kennt den Gesang. Vielleicht weiß sie auch mehr ueber die anderen Komponenten.",
+			"text": "Hilde war Großmutters Verbündete. Sie kennt den Gesang. Vielleicht weiß sie auch mehr über die anderen Komponenten. Die Kirche kann warten - aber nicht lange.",
+			"next": "set_hilde_first"
+		},
+		"set_hilde_first": {
+			"type": "set_flag",
+			"flag": "visited_hilde_before_church",
+			"value": 1,
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act2/church_secrets.json"
-		},
-		"snd_invest": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "snd_village_amb",
-			"path": "investigation.wav"
-		},
-		"snd_village_amb": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "narration_1",
-			"path": "village_ambience.wav"
 		}
 	}
 }

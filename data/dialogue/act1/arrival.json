@@ -8,6 +8,18 @@
 			"transition": "fade",
 			"next": "snd_tension"
 		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"path": "tension.wav",
+			"next": "snd_clock"
+		},
+		"snd_clock": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "clock_ticking.wav",
+			"next": "effect_dark"
+		},
 		"effect_dark": {
 			"type": "effect",
 			"effect": "vignette",
@@ -34,6 +46,48 @@
 		"narration_4": {
 			"type": "narration",
 			"text": "Ihre Augen sind geschlossen. Ihr Mund lächelt leicht. Aber ihre Haut hat die Farbe von altem Pergament, und als ich ihre Hand berühre, ist sie kalt wie Stein.",
+			"next": "show_elise_grief"
+		},
+		"show_elise_grief": {
+			"type": "character",
+			"character": "elise",
+			"expression": "afraid",
+			"position": "center",
+			"action": "show",
+			"next": "elise_grief_1"
+		},
+		"elise_grief_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Großmutter...? Nein... Nein, bitte nicht.",
+			"next": "narration_grief_2"
+		},
+		"narration_grief_2": {
+			"type": "narration",
+			"text": "Meine Knie geben nach. Ich sinke auf die Bettkante und halte ihre kalte Hand mit beiden Händen. Meine Finger zittern. Tränen laufen über mein Gesicht, bevor ich es bemerke.",
+			"next": "narration_grief_3"
+		},
+		"narration_grief_3": {
+			"type": "narration",
+			"text": "Das letzte Mal hielt ich diese Hand vor zehn Jahren. Am Bahnhof in Waldkirch, als Großmutter mir zum Abschied getrocknete Arnika in die Tasche steckte. \"Komm bald wieder\", hatte sie gesagt. \"Versprich es mir.\"",
+			"next": "narration_grief_4"
+		},
+		"narration_grief_4": {
+			"type": "narration",
+			"text": "Ich habe es versprochen. Und dann kamen die Universität, die Seminare, die Inflation, und immer ein Grund nicht zu fahren. Zehn Jahre voller Ausreden.",
+			"next": "elise_grief_5"
+		},
+		"elise_grief_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Es tut mir leid. Es tut mir so leid, dass ich nicht früher gekommen bin.",
+			"next": "narration_grief_6"
+		},
+		"narration_grief_6": {
+			"type": "narration",
+			"text": "Ich wische mir die Augen. Mein Blick fällt auf den Nachttisch, und durch den Tränenschleier sehe ich drei Dinge, die dort stehen.",
 			"next": "narration_5"
 		},
 		"narration_5": {
@@ -84,6 +138,13 @@
 		"books_reaction_2": {
 			"type": "narration",
 			"text": "Aber keine Kerze brennt drei Tage lang, ohne nachgefüllt zu werden. Diese ist kaum kürzer als eine neue.",
+			"next": "elise_books_react"
+		},
+		"elise_books_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Drei Tage... Keine Kerze brennt drei Tage. Nicht ohne Hilfe. In den Schwarzwälder Überlieferungen gibt es Seelenlichter, die erst erlöschen, wenn der Tote seinen Frieden findet.",
 			"next": "meet_georg"
 		},
 		"cross_reaction": {
@@ -94,6 +155,13 @@
 		"cross_reaction_2": {
 			"type": "narration",
 			"text": "Neben dem Bett murmele ich ein Gebet. Die Worte fühlen sich fremd an in diesem Raum. Als gehörten sie nicht hierher.",
+			"next": "elise_cross_react"
+		},
+		"elise_cross_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Etwas in diesem Raum fühlt sich nicht richtig an. Das Kruzifix ist warm. Die Luft ist schwer. Und diese Kerze... sie hätte längst ausgehen müssen.",
 			"next": "meet_georg"
 		},
 		"camera_reaction": {
@@ -104,11 +172,23 @@
 		"camera_reaction_2": {
 			"type": "narration",
 			"text": "Trotzdem - die Kerze. Ich fotografiere sie aus der Nähe. Im Sucher sehe ich etwas, das ich mit bloßem Auge nicht bemerkt habe: Das Wachs tropft nicht nach unten. Es spiralt sich um die Kerze herum.",
+			"next": "elise_camera_react"
+		},
+		"elise_camera_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Das Wachs spiralt... wie das Symbol auf dem Brief. Das ist kein Zufall. Irgendetwas hält diese Flamme am Leben.",
 			"next": "meet_georg"
 		},
 		"general_reaction": {
 			"type": "narration",
 			"text": "Ein Schauer läuft mir ueber den Rücken. Die Kerze flackert, obwohl kein Luftzug im Raum ist. Die Flamme beugt sich - in meine Richtung.",
+			"next": "elise_general_react"
+		},
+		"elise_general_react": {
+			"type": "narration",
+			"text": "Ich trete einen Schritt zurück. Die Flamme folgt meiner Bewegung. Unmöglich. Und doch geschieht es, direkt vor meinen Augen.",
 			"next": "meet_georg"
 		},
 		"meet_georg": {
@@ -138,6 +218,20 @@
 		"narration_georg_2": {
 			"type": "narration",
 			"text": "Onkel Georg. Großmutters einziger Sohn. Der Schmied von Graubach.",
+			"next": "show_elise_with_georg"
+		},
+		"show_elise_with_georg": {
+			"type": "character",
+			"character": "elise",
+			"expression": "sad",
+			"position": "left",
+			"action": "show",
+			"next": "elise_sees_georg"
+		},
+		"elise_sees_georg": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"text": "Georg...? Du bist... du siehst furchtbar aus.",
 			"next": "georg_1"
 		},
 		"georg_1": {
@@ -149,6 +243,13 @@
 		"georg_2": {
 			"type": "narration",
 			"text": "Er sagt nur meinen Namen. Aber in diesem einen Wort liegt so viel - Erleichterung, Schuld, und etwas, das wie Angst klingt.",
+			"next": "elise_responds_1"
+		},
+		"elise_responds_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Wann ist sie gestorben? Was ist passiert?",
 			"next": "georg_3"
 		},
 		"georg_3": {
@@ -170,6 +271,20 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Deine Großmutter... es tut mir leid, Kind. Wir haben sie vor drei Tagen so gefunden. Friedlich, sagen die Leute. Im Schlaf.",
+			"next": "elise_responds_2"
+		},
+		"elise_responds_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Drei Tage? Warum hat mir niemand Bescheid gesagt? Ich hätte sofort kommen können!",
+			"next": "georg_explains"
+		},
+		"georg_explains": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Es gibt kein Telefon in Graubach. Und der nächste Telegraf ist in Freiburg. Elise, ich wollte nicht, dass du allein herkommst. Nicht jetzt.",
 			"next": "georg_6"
 		},
 		"georg_6": {
@@ -177,6 +292,18 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "Aber ihr Gesicht... sie hat gelächelt, Elise. Als hätte sie etwas gewusst, das wir nicht wissen.",
+			"next": "elise_responds_3"
+		},
+		"elise_responds_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Sie hat gelächelt...? Großmutter hat nie gelächelt, wenn sie schlief. Nie. Was hat sie gesehen?",
+			"next": "narration_elise_looks"
+		},
+		"narration_elise_looks": {
+			"type": "narration",
+			"text": "Ich sehe zurück ins Schlafzimmer. Großmutters Lächeln im Kerzenlicht. Es wirkt nicht friedlich. Es wirkt wissend. Als hätte sie etwas in Gang gesetzt, das nun seinen Lauf nimmt.",
 			"next": "choice_georg"
 		},
 		"choice_georg": {
@@ -228,6 +355,13 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Das ist... das ist ihre Schrift. Aber Elise - wir haben kein Postamt in Graubach. Nicht mehr. Und der nächste ist zwei Tagesreisen entfernt.",
+			"next": "elise_letter_react"
+		},
+		"elise_letter_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Kein Postamt? Aber der Stempel ist von heute, Georg. Der Brief war warm, als ich ihn öffnete. Er roch nach ihren Kräutern. Wie kann eine Tote einen Brief verschicken?",
 			"next": "georg_letter_4"
 		},
 		"georg_letter_4": {
@@ -242,6 +376,13 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Dieser Brief... er kann nicht existieren.",
+			"next": "georg_letter_exclusive"
+		},
+		"georg_letter_exclusive": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "In Graubach geschehen Dinge, die nicht geschehen sollten. Der Brief ist noch das Harmloseste davon. Glaub mir, Elise.",
 			"next": "georg_converge"
 		},
 		"georg_candle": {
@@ -268,12 +409,26 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "Sie geht nicht aus, Elise. Wir haben gepustet, Wasser drüber geschüttet, den Docht abgeschnitten. Am nächsten Morgen brannte sie wieder.",
+			"next": "elise_candle_react"
+		},
+		"elise_candle_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Das ist unmöglich. Kerzen gehen aus, wenn man den Docht abschneidet. Das ist... Georg, das widerspricht jeder Physik.",
 			"next": "georg_candle_4"
 		},
 		"georg_candle_4": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"text": "Löscht sie nicht. Bitte. Ich weiß nicht warum, aber... löscht sie nicht.",
+			"next": "georg_candle_exclusive"
+		},
+		"georg_candle_exclusive": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Am Abend bevor sie starb, hat Margarethe die Kerze angezündet. Sie sagte: \"Diese Flamme ist für Elise. Sie wird brennen, bis sie kommt.\" Ich dachte, sie redet wirr. Aber hier bist du. Und die Kerze brennt.",
 			"next": "georg_converge"
 		},
 		"georg_notes": {
@@ -301,6 +456,13 @@
 			"speaker": "georg",
 			"expression": "guilty",
 			"text": "Verzeih mir. Es ist... deine Großmutter hat in den letzten Wochen viel geschrieben. Tag und Nacht. Als würde ihr die Zeit davonlaufen.",
+			"next": "elise_notes_react"
+		},
+		"elise_notes_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Albträume? Georg, ich bin Folkloristin. Ich habe hunderte Gruselgeschichten gelesen. Was steht in einem Notizbuch, das DIR Albträume macht?",
 			"next": "georg_notes_4"
 		},
 		"georg_notes_4": {
@@ -308,6 +470,13 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "Ich habe reingesehen. Einmal. Es hat mir... es hat mir Albträume gemacht, Elise. Aber vielleicht bist du diejenige, die es lesen muss.",
+			"next": "georg_notes_exclusive"
+		},
+		"georg_notes_exclusive": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Sie hat über den Lehrer geschrieben. Konrad Mueller. Über das, was... IN ihm lebt. Elise - versprich mir: Bleib weg von Konrad.",
 			"next": "georg_converge"
 		},
 		"georg_converge": {
@@ -331,6 +500,12 @@
 				"amount": 0.3
 			},
 			"next": "snd_bells"
+		},
+		"snd_bells": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "church_bell.wav",
+			"next": "sound_bells"
 		},
 		"sound_bells": {
 			"type": "narration",
@@ -423,6 +598,13 @@
 			"speaker": "georg",
 			"expression": "sad",
 			"text": "Morgen. Morgen früstücken wir zusammen, und ich erzähle dir... so viel ich kann. Aber heute Nacht - bitte, Elise. Vertrau mir.",
+			"next": "elise_demand_farewell"
+		},
+		"elise_demand_farewell": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Morgen, Georg. Aber morgen will ich die ganze Wahrheit. Keine halben Sachen.",
 			"next": "georg_leave"
 		},
 		"georg_follow": {
@@ -442,6 +624,13 @@
 		"georg_follow_2": {
 			"type": "narration",
 			"text": "Die Angst in seinen Augen ist echt. Georg war nie ein Mann, der leicht Angst zeigte. Als Kind habe ich ihn einmal gesehen, wie er mit bloßen Händen ein durchgehendes Pferd zum Stehen brachte.",
+			"next": "elise_follow_farewell"
+		},
+		"elise_follow_farewell": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Ich verspreche es. Aber du - sei auch vorsichtig. Bitte.",
 			"next": "georg_leave"
 		},
 		"georg_quiet": {
@@ -454,6 +643,11 @@
 			"speaker": "georg",
 			"expression": "sad",
 			"text": "Du bist wie deine Großmutter. Stärker als du weißt.",
+			"next": "elise_quiet_farewell"
+		},
+		"elise_quiet_farewell": {
+			"type": "narration",
+			"text": "Ich sage nichts. Aber als sich die Tür schließt, lege ich meine Hand dagegen. Auf der anderen Seite höre ich Georg stehen bleiben. Einen Moment. Dann gehen seine Schritte davon, schwer und langsam.",
 			"next": "georg_leave"
 		},
 		"georg_leave": {
@@ -477,6 +671,33 @@
 		"narration_alone_3": {
 			"type": "narration",
 			"text": "Draußen ist es jetzt völlig dunkel. Durch die Fensterläden dringt kein Licht. Kein Mond, keine Sterne. Nur die schwere, satte Schwärze eines Novemberabends im Schwarzwald.",
+			"next": "narration_alone_search_1"
+		},
+		"narration_alone_search_1": {
+			"type": "narration",
+			"text": "Ich kann nicht schlafen. Nicht jetzt. Stattdessen gehe ich durch das Haus. Großmutters Schrank: ihr Schal, der noch nach Lavendel riecht. Stricknadeln mit halbfertiger Arbeit, als hätte sie nur kurz pausiert.",
+			"next": "narration_alone_search_2"
+		},
+		"narration_alone_search_2": {
+			"type": "narration",
+			"text": "In einer Schublade: getrocknete Kräuter in Leinensäckchen, Kerzenstummel mit seltsamen Kerben, ein Bündel vergilbter Briefe. Und darunter - meine Kinderzeichnungen. Sie hat sie alle aufgehoben.",
+			"next": "elise_finds_photo"
+		},
+		"elise_finds_photo": {
+			"type": "narration",
+			"text": "Hinter den Zeichnungen steckt eine Fotografie. Ich im Alter von vielleicht sieben Jahren, auf Großmutters Schoß. Beide lachen wir. Sommerlicht fällt durch ein offenes Fenster.",
+			"next": "narration_photo"
+		},
+		"narration_photo": {
+			"type": "narration",
+			"text": "Auf der Rückseite, in Großmutters Handschrift: \"Mein Licht gegen die Dunkelheit.\" Das Wort \"Licht\" ist unterstrichen. Dreimal.",
+			"next": "elise_cries"
+		},
+		"elise_cries": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich bin hier, Großmutter. Zu spät... aber ich bin hier.",
 			"next": "effect_alone_dark"
 		},
 		"effect_alone_dark": {
@@ -496,6 +717,18 @@
 		"narration_alone_5": {
 			"type": "narration",
 			"text": "Drei Tage. Sie ist seit drei Tagen tot, aber der Brief wurde heute abgestempelt. Die Kerze brennt noch. Und die Kirchenglocken läuten zu keiner Stunde.",
+			"next": "narration_alone_sounds"
+		},
+		"narration_alone_sounds": {
+			"type": "narration",
+			"text": "Irgendwann in der Stille höre ich es. Leise, tief, kaum mehr als ein Vibrieren in den Dielen. Gesang? Nein - eher ein Summen. Wie ein Wiegenlied, das aus dem Boden selbst kommt.",
+			"next": "elise_alone_resolve"
+		},
+		"elise_alone_resolve": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Morgen. Morgen fange ich an zu verstehen.",
 			"next": "journal_grandmother"
 		},
 		"journal_grandmother": {
@@ -515,24 +748,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/first_night.json"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "snd_clock",
-			"path": "tension.wav"
-		},
-		"snd_clock": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "effect_dark",
-			"path": "clock_ticking.wav"
-		},
-		"snd_bells": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"next": "sound_bells",
-			"path": "church_bell.wav"
 		}
 	}
 }

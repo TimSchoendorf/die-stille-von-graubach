@@ -8,6 +8,12 @@
 			"transition": "fade",
 			"next": "snd_tension"
 		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_church_corrupt",
+			"path": "tension.wav"
+		},
 		"effect_church_corrupt": {
 			"type": "effect",
 			"effect": "heavy_glitch",
@@ -48,6 +54,172 @@
 		"narration_3": {
 			"type": "narration",
 			"text": "Ich stehe vor der Treppe zur Kammer. Der Schlüssel in meiner Hand ist warm - nicht von meiner Körperhitze. Eigene Wärme.",
+			"next": "narration_resolve"
+		},
+		"narration_resolve": {
+			"type": "narration",
+			"text": "Mein Herz hämmert. Aber meine Hände sind ruhig. Großmutters Hände, hat Georg gesagt. Hände, die nicht zittern, wenn es darauf ankommt.",
+			"next": "check_ally_present"
+		},
+		"check_ally_present": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_ally",
+			"false_next": "check_ally_hilde"
+		},
+		"show_georg_ally": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
+			"next": "georg_ally_1"
+		},
+		"georg_ally_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Bist du bereit?",
+			"next": "elise_ally_georg_1"
+		},
+		"elise_ally_georg_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Nein. Aber wann wäre man bereit für so etwas?",
+			"next": "georg_ally_2"
+		},
+		"georg_ally_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Margarethe hat dasselbe gesagt, damals. Wort für Wort.",
+			"next": "elise_ally_georg_2"
+		},
+		"elise_ally_georg_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Dann hat sie mir wenigstens das vererbt.",
+			"next": "narration_ally_together"
+		},
+		"narration_ally_together": {
+			"type": "narration",
+			"text": "Er nickt. Keine weiteren Worte nötig. Wir gehen zusammen.",
+			"next": "check_otto_hostile"
+		},
+		"check_ally_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_ally",
+			"false_next": "check_ally_voss"
+		},
+		"show_hilde_ally": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "wise",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_ally_1"
+		},
+		"hilde_ally_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Die Kirche wehrt sich. Spürst du es? Die Steine sträuben sich.",
+			"next": "elise_ally_hilde_1"
+		},
+		"elise_ally_hilde_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Ich spüre vor allem das Singen. Es ist... lauter als letzte Nacht. Näher.",
+			"next": "hilde_ally_2"
+		},
+		"hilde_ally_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Das ist gut. Es weiß, dass du kommst. Es erwartet dich.",
+			"next": "elise_ally_hilde_2"
+		},
+		"elise_ally_hilde_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Das soll mich beruhigen?",
+			"next": "hilde_ally_3"
+		},
+		"hilde_ally_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Es soll dich vorbereiten. Beruhigung überlasse ich dem Baldrian.",
+			"next": "narration_hilde_smile"
+		},
+		"narration_hilde_smile": {
+			"type": "narration",
+			"text": "Trotz allem muss ich lächeln. Hilde hat diese Art, dem Schrecken die Spitze zu nehmen.",
+			"next": "check_otto_hostile"
+		},
+		"check_ally_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_ally",
+			"false_next": "narration_alone"
+		},
+		"show_voss_ally": {
+			"type": "character",
+			"character": "voss",
+			"expression": "afraid",
+			"position": "left",
+			"action": "show",
+			"next": "voss_ally_1"
+		},
+		"voss_ally_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Gott steh uns bei. Die Kirche... meine Kirche... was hat es mit ihr gemacht?",
+			"next": "elise_ally_voss_1"
+		},
+		"elise_ally_voss_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Es zeigt uns, was unter der Oberfläche immer schon da war, Pfarrer. Sind Sie bereit?",
+			"next": "voss_ally_2"
+		},
+		"voss_ally_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Dreißig Jahre habe ich mich vor dieser Nacht gefürchtet. Aber jetzt... jetzt bin ich fast erleichtert, dass es endlich soweit ist.",
+			"next": "elise_ally_voss_2"
+		},
+		"elise_ally_voss_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Erleichterung vor dem Abgrund. Ich verstehe, was Sie meinen.",
+			"next": "narration_voss_together"
+		},
+		"narration_voss_together": {
+			"type": "narration",
+			"text": "Voss bekreuzigt sich. Seine Hände zittern, aber seine Schritte sind fest. Dreißig Jahre Schuld sind ein schwerer Anker.",
+			"next": "check_otto_hostile"
+		},
+		"narration_alone": {
+			"type": "narration",
+			"text": "Ich bin allein. Kein Verbündeter, kein Beschützer. Nur ich, der Schlüssel und das Singen.",
+			"next": "narration_alone_2"
+		},
+		"narration_alone_2": {
+			"type": "narration",
+			"text": "Großmutter hat es dreißig Jahre lang allein gemacht. Vielleicht liegt das in der Familie.",
 			"next": "check_otto_hostile"
 		},
 		"check_otto_hostile": {
@@ -74,15 +246,55 @@
 			"type": "dialogue",
 			"speaker": "otto",
 			"expression": "angry",
-			"text": "Ich habe Sie gewarnt, Fräulein Brandt. Die Tradition ist aelter als Sie, aelter als ich, aelter als dieses Dorf. Und Sie werden sie nicht brechen.",
-			"next": "check_ally_georg"
+			"text": "Ich habe Sie gewarnt, Fräulein Brandt. Die Tradition ist älter als Sie, älter als ich, älter als dieses Dorf. Und Sie werden sie nicht brechen.",
+			"next": "elise_otto_1"
 		},
-		"check_ally_georg": {
+		"elise_otto_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "angry",
+			"text": "Tradition? Sie meinen: Mord. Alle dreißig Jahre ein Mord, damit Sie Bürgermeister spielen dürfen.",
+			"next": "otto_conf_2"
+		},
+		"otto_conf_2": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "threatening",
+			"text": "Damit dieses Dorf EXISTIERT! Glauben Sie, irgendjemand lebt gern neben einem solchen Wesen? Wir tun, was nötig ist!",
+			"next": "elise_otto_2"
+		},
+		"elise_otto_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Meine Großmutter hat dreißig Jahre nach einem anderen Weg gesucht. Ich werde ihn finden.",
+			"next": "otto_conf_3"
+		},
+		"otto_conf_3": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "angry",
+			"text": "Ihre Großmutter ist GESTORBEN, bevor sie einen fand!",
+			"next": "narration_otto_silence"
+		},
+		"narration_otto_silence": {
+			"type": "narration",
+			"text": "Die Worte treffen. Für einen Moment kann ich nicht atmen. Er hat recht. Großmutter hat dreißig Jahre gesucht und ist gestorben, ohne eine Lösung zu finden.",
+			"next": "elise_otto_3"
+		},
+		"elise_otto_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Dann hat sie wenigstens mir den Weg gezeigt. Treten Sie zur Seite, Otto.",
+			"next": "check_ally_georg_otto"
+		},
+		"check_ally_georg_otto": {
 			"type": "flag_check",
-			"flag": "ally_georg",
+			"flag": "allied_georg",
 			"value": 1,
 			"true_next": "georg_defends",
-			"false_next": "otto_blocks"
+			"false_next": "check_any_ally_otto"
 		},
 		"georg_defends": {
 			"type": "character",
@@ -109,6 +321,20 @@
 			"speaker": "georg",
 			"expression": "determined",
 			"text": "Geh, Elise. Ich halte sie auf. Tu, was Margarethe geplant hat.",
+			"next": "elise_georg_go"
+		},
+		"elise_georg_go": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Georg... pass auf dich auf.",
+			"next": "georg_defends_4"
+		},
+		"georg_defends_4": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Ich bin Schmied. Wir sind zäh.",
 			"next": "hide_otto_georg"
 		},
 		"hide_otto_georg": {
@@ -127,16 +353,83 @@
 			"action": "hide",
 			"next": "descent_start"
 		},
+		"check_any_ally_otto": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "ally_confronts_otto",
+			"false_next": "check_voss_ally_otto"
+		},
+		"check_voss_ally_otto": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "voss_confronts_otto",
+			"false_next": "otto_blocks"
+		},
+		"ally_confronts_otto": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "angry",
+			"text": "Otto Reinhardt. Ich kannte deinen Vater und deinen Großvater. Sie alle hatten mehr Mut als du. Lass uns durch.",
+			"next": "narration_hilde_otto"
+		},
+		"narration_hilde_otto": {
+			"type": "narration",
+			"text": "Hilde tritt vor, klein und alt und absolut unbeugsam. Otto zögert. In Graubach widerspricht man Hilde nicht.",
+			"next": "otto_retreats"
+		},
+		"voss_confronts_otto": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "warning",
+			"text": "Otto, ich habe dreißig Jahre geschwiegen über das, was 1893 geschehen ist. Willst du wirklich, dass ich jetzt zu reden anfange?",
+			"next": "narration_voss_threat"
+		},
+		"narration_voss_threat": {
+			"type": "narration",
+			"text": "Ottos Gesicht verliert alle Farbe. Was immer Voss weiß - es ist genug, um einen Bürgermeister zu Fall zu bringen.",
+			"next": "otto_retreats"
+		},
+		"otto_retreats": {
+			"type": "dialogue",
+			"speaker": "otto",
+			"expression": "desperate",
+			"text": "Ihr bringt den Tod über dieses Dorf. Über uns alle.",
+			"next": "elise_otto_retreat"
+		},
+		"elise_otto_retreat": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Nein. Ich bringe das Ende des Tötens.",
+			"next": "hide_otto_retreat"
+		},
+		"hide_otto_retreat": {
+			"type": "character",
+			"character": "otto",
+			"expression": "desperate",
+			"position": "right",
+			"action": "hide",
+			"next": "descent_start"
+		},
 		"otto_blocks": {
 			"type": "dialogue",
 			"speaker": "otto",
-			"expression": "angry",
+			"expression": "threatening",
 			"text": "Treten Sie zurück. Sofort. Oder es wird Ihnen ergehen wie allen, die sich gegen die Tradition gestellt haben.",
+			"next": "elise_otto_alone"
+		},
+		"elise_otto_alone": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Wenn das Wesen mich haben will, Otto - glauben Sie wirklich, Sie können es daran hindern?",
 			"next": "narration_dodge"
 		},
 		"narration_dodge": {
 			"type": "narration",
-			"text": "Aber die Kirche ist auf meiner Seite - oder das Wesen unter ihr. Die Steinplatten unter Ottos Füssen erzittern, und er stolpert. Ich nutze den Moment und renne zur Treppe.",
+			"text": "Wie zur Bestätigung erzittert der Boden. Die Steinplatten unter Ottos Füßen verschieben sich, und er stolpert. Das Wesen will mich durchlassen.",
 			"next": "effect_escape_shake"
 		},
 		"effect_escape_shake": {
@@ -146,6 +439,11 @@
 				"intensity": 5.0,
 				"duration": 0.8
 			},
+			"next": "narration_dodge_2"
+		},
+		"narration_dodge_2": {
+			"type": "narration",
+			"text": "Ich renne zur Treppe, vorbei an den taumelnden Männern. Ottos Schreie verhallen hinter mir, verschluckt vom Singen.",
 			"next": "hide_otto_block"
 		},
 		"hide_otto_block": {
@@ -158,7 +456,12 @@
 		},
 		"otto_surprise": {
 			"type": "narration",
-			"text": "Niemand hat mich aufgehalten. Vielleicht weiß Otto nichts. Vielleicht ist er anderswo beschäftigt. Oder vielleicht lässt mich etwas absichtlich durch.",
+			"text": "Niemand hat mich aufgehalten. Vielleicht weiß Otto nichts. Vielleicht ist er anderswo beschäftigt.",
+			"next": "narration_otto_surprise_2"
+		},
+		"narration_otto_surprise_2": {
+			"type": "narration",
+			"text": "Oder vielleicht lässt mich etwas absichtlich durch. Der Gedanke ist schlimmer als jede Konfrontation.",
 			"next": "descent_start"
 		},
 		"descent_start": {
@@ -166,6 +469,12 @@
 			"background": "church_basement",
 			"transition": "fade",
 			"next": "snd_underground"
+		},
+		"snd_underground": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"next": "effect_descent_1",
+			"path": "underground.wav"
 		},
 		"effect_descent_1": {
 			"type": "effect",
@@ -191,7 +500,141 @@
 		},
 		"narration_descent_2": {
 			"type": "narration",
-			"text": "Die Luft ist dick und süss. Mein Kerzenlicht flackert, obwohl kein Luftzug weht. Die Spiralen an den Wänden scheinen sich zu bewegen, wenn ich nicht direkt hinsehe.",
+			"text": "Die Luft ist dick und süß. Mein Kerzenlicht flackert, obwohl kein Luftzug weht. Die Spiralen an den Wänden scheinen sich zu bewegen, wenn ich nicht direkt hinsehe.",
+			"next": "check_ally_descent_dialogue"
+		},
+		"check_ally_descent_dialogue": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "descent_georg_dialogue",
+			"false_next": "check_hilde_descent"
+		},
+		"descent_georg_dialogue": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Georg... die Wände. Die Spiralen bewegen sich.",
+			"next": "georg_descent_1"
+		},
+		"georg_descent_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Nicht hinsehen. Einfach weitergehen. Margarethe hat das auch gesagt.",
+			"next": "elise_descent_georg"
+		},
+		"elise_descent_georg": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Wie oft war sie hier unten?",
+			"next": "georg_descent_2"
+		},
+		"georg_descent_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Zu oft. Jedes Mal kam sie... verändert zurück. Stiller. Als hätte ihr jeder Gang ein Stück genommen.",
+			"next": "narration_descent_cost"
+		},
+		"narration_descent_cost": {
+			"type": "narration",
+			"text": "Was hat es ihr genommen? Was wird es mir nehmen? Die Fragen hämmern in meinem Kopf, im Takt des Singens.",
+			"next": "effect_text_glitch"
+		},
+		"check_hilde_descent": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "descent_hilde_dialogue",
+			"false_next": "check_voss_descent"
+		},
+		"descent_hilde_dialogue": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Atme gleichmäßig. Die Luft hier unten will dich verwirren. Sie lügt.",
+			"next": "elise_descent_hilde"
+		},
+		"elise_descent_hilde": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Die Süße... ist das der Atem des Wesens?",
+			"next": "hilde_descent_1"
+		},
+		"hilde_descent_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "In gewisser Weise. Es träumt, und sein Atem ist der Duft seiner Träume. Nicht angenehme Träume.",
+			"next": "elise_descent_hilde_2"
+		},
+		"elise_descent_hilde_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Wovon träumt etwas, das älter ist als die Bäume?",
+			"next": "hilde_descent_2"
+		},
+		"hilde_descent_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Von Gesellschaft. Das ist das Traurige daran.",
+			"next": "narration_descent_cost"
+		},
+		"check_voss_descent": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "descent_voss_dialogue",
+			"false_next": "narration_descent_alone"
+		},
+		"descent_voss_dialogue": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Vater unser, der du bist im Himmel...",
+			"next": "elise_descent_voss"
+		},
+		"elise_descent_voss": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Hilft das Beten hier unten?",
+			"next": "voss_descent_1"
+		},
+		"voss_descent_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Nicht gegen DAS hier. Aber es hilft MIR. Und das muss reichen.",
+			"next": "elise_descent_voss_2"
+		},
+		"elise_descent_voss_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Sie waren hier. 1893. Als Friedrich starb. Wie... wie war es damals?",
+			"next": "voss_descent_2"
+		},
+		"voss_descent_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Genau so. Dieselbe Süße, dasselbe Singen. Nur... damals haben wir nicht versucht, es zu stoppen. Wir haben es GEFÜTTERT.",
+			"next": "narration_descent_cost"
+		},
+		"narration_descent_alone": {
+			"type": "narration",
+			"text": "Allein in der Tiefe. Meine Schritte hallen, aber das Echo kommt falsch zurück - zu spät, zu laut, als würde jemand mir folgen.",
+			"next": "narration_descent_alone_2"
+		},
+		"narration_descent_alone_2": {
+			"type": "narration",
+			"text": "Ich drehe mich um. Nichts. Nur Dunkelheit und Spiralen. Aber ich SPÜRE etwas. Aufmerksamkeit. Es beobachtet mich seit ich seinen Namen berührt habe.",
 			"next": "effect_text_glitch"
 		},
 		"effect_text_glitch": {
@@ -205,7 +648,31 @@
 		},
 		"narration_descent_3": {
 			"type": "narration",
-			"text": "Dann: die Kammer. Grösser als erwartet. Der Stein ist hier nicht gemauert - er ist gewachsen. Organisch, wie das Innere eines riesigen Wesens.",
+			"text": "Der Abstieg wird steiler. Meine Beine brennen, und die Übelkeit kommt in Wellen. Die Wände sind feucht, und dort wo meine Finger den Stein berühren, pulsiert es warm.",
+			"next": "narration_descent_4"
+		},
+		"narration_descent_4": {
+			"type": "narration",
+			"text": "Tiefer. Noch tiefer. Die Stufen hören auf, gleichmäßig zu sein. Manche sind breiter als andere, manche schief, als hätte die Erde sich unter ihnen bewegt.",
+			"next": "effect_deeper_shake"
+		},
+		"effect_deeper_shake": {
+			"type": "effect",
+			"effect": "shake",
+			"params": {
+				"intensity": 2.0,
+				"duration": 0.5
+			},
+			"next": "narration_descent_5"
+		},
+		"narration_descent_5": {
+			"type": "narration",
+			"text": "Ein Zittern läuft durch den Stein. Nicht von außen. Von UNTEN. Als hätte etwas Großes sich im Schlaf umgedreht.",
+			"next": "narration_descent_6"
+		},
+		"narration_descent_6": {
+			"type": "narration",
+			"text": "Dann: die Kammer. Größer als erwartet. Der Stein ist hier nicht gemauert - er ist gewachsen. Organisch, wie das Innere eines riesigen Wesens.",
 			"next": "bg_ritual"
 		},
 		"bg_ritual": {
@@ -213,6 +680,12 @@
 			"background": "ritual_chamber",
 			"transition": "fade",
 			"next": "snd_ritual"
+		},
+		"snd_ritual": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_ritual_chamber",
+			"path": "ritual.wav"
 		},
 		"effect_ritual_chamber": {
 			"type": "effect",
@@ -230,7 +703,126 @@
 		},
 		"narration_chamber_2": {
 			"type": "narration",
-			"text": "Das Zeichen der Erde. Hier ist es. Ich spüre den Herzschlag durch meine Schuhsohlen, stärker als je zuvor. Es lebt. Es wartet.",
+			"text": "Das Zeichen der Erde. Hier ist es. Ich spüre den Herzschlag durch meine Schuhsohlen, stärker als je zuvor.",
+			"next": "narration_chamber_3"
+		},
+		"narration_chamber_3": {
+			"type": "narration",
+			"text": "Mein Atem geht schwer. Die Luft hier unten schmeckt nach etwas Uraltem - nach Moos und Stein und etwas Lebendigem, das kein Tageslicht kennt.",
+			"next": "narration_chamber_elise_1"
+		},
+		"narration_chamber_elise_1": {
+			"type": "narration",
+			"text": "Zwischen mir und IHM ist nur noch Stein. Dünner Stein. Ich lege meine Hand auf den pulsierenden Boden, und für einen Moment - spüre ich es.",
+			"next": "effect_chamber_pulse"
+		},
+		"effect_chamber_pulse": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.3,
+				"max": 0.8,
+				"cycle": 2.0
+			},
+			"next": "narration_chamber_contact"
+		},
+		"narration_chamber_contact": {
+			"type": "narration",
+			"text": "Ein Ozean. Kein Wasser, sondern Bewusstsein. Alt und weit und langsam. Es bemerkt meine Hand wie ein schlafender Riese eine Fliege auf seiner Nase bemerkt.",
+			"next": "narration_chamber_withdraw"
+		},
+		"narration_chamber_withdraw": {
+			"type": "narration",
+			"text": "Ich ziehe die Hand zurück. Mein Herz hämmert. Nicht vor Angst - vor Ehrfurcht. Was auch immer dort unten liegt, es ist RIESIG. Größer als Graubach, größer als alles was ich mir vorstellen kann.",
+			"next": "check_ally_chamber_react"
+		},
+		"check_ally_chamber_react": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "georg_chamber_react",
+			"false_next": "check_hilde_chamber"
+		},
+		"georg_chamber_react": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Elise? Du bist blass geworden. Was hast du gespürt?",
+			"next": "elise_chamber_react"
+		},
+		"elise_chamber_react": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Es ist... es ist so viel größer, als ich dachte. Georg, wie hat Großmutter das dreißig Jahre lang ausgehalten?",
+			"next": "georg_chamber_2"
+		},
+		"georg_chamber_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Weil sie stärker war, als irgendwer wusste. Und du bist ihre Enkelin.",
+			"next": "set_in_chamber"
+		},
+		"check_hilde_chamber": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "hilde_chamber_react",
+			"false_next": "check_voss_chamber"
+		},
+		"hilde_chamber_react": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Du hast es berührt. Ich sehe es in deinen Augen.",
+			"next": "elise_chamber_hilde"
+		},
+		"elise_chamber_hilde": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Es ist ein Ozean, Hilde. Ein Ozean aus Bewusstsein. Wie kann etwas so... GROSS sein?",
+			"next": "hilde_chamber_2"
+		},
+		"hilde_chamber_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Es war hier vor den Bergen. Vor den Flüssen. Es ist der Grund, warum der Boden hier fruchtbar ist. Alles hat seinen Preis.",
+			"next": "set_in_chamber"
+		},
+		"check_voss_chamber": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "voss_chamber_react",
+			"false_next": "narration_chamber_alone"
+		},
+		"voss_chamber_react": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Du kannst es fühlen, nicht wahr? Dieser... Druck. Als stünde man vor etwas Heiligem. Oder Unheiligem.",
+			"next": "elise_chamber_voss"
+		},
+		"elise_chamber_voss": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Vielleicht beides. Vielleicht ist der Unterschied nicht so groß, wie wir denken.",
+			"next": "voss_chamber_2"
+		},
+		"voss_chamber_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Das... ist ein ketzerischer Gedanke. Aber hier unten klingt er wahr.",
+			"next": "set_in_chamber"
+		},
+		"narration_chamber_alone": {
+			"type": "narration",
+			"text": "Ich bin allein mit ihm. Mit IT. Dem Wesen unter dem Stein. Und zum ersten Mal fühlt sich das richtig an. Dieses Treffen war immer nur für uns zwei bestimmt.",
 			"next": "set_in_chamber"
 		},
 		"set_in_chamber": {
@@ -243,12 +835,17 @@
 			"type": "journal",
 			"entry_id": "the_descent",
 			"title": "Der Abstieg",
-			"content": "Ich bin in der Kammer unter der Kirche. Der Boden pulsiert, die Wände leben, das Singen füllt alles. Das Buch der Namen liegt hier. Das Zeichen der Erde - der pulsierende Punkt - ist in der Mitte. Morgen führe ich das Ritual durch. Oder sterbe beim Versuch.",
+			"content": "Ich bin in der Kammer unter der Kirche. Der Boden pulsiert, die Wände leben, das Singen füllt alles. Ich habe es berührt - das Bewusstsein des Wesens. Ein Ozean. Alt und weit und unbegreiflich groß. Morgen führe ich das Ritual durch. Oder sterbe beim Versuch.",
 			"next": "narration_end_1"
 		},
 		"narration_end_1": {
 			"type": "narration",
 			"text": "Ich stehe in der Kammer, und das Wesen weiß, dass ich hier bin. Zwischen uns liegt nur dünner Stein und Jahrhunderte des Wartens.",
+			"next": "narration_end_1b"
+		},
+		"narration_end_1b": {
+			"type": "narration",
+			"text": "Und morgen... morgen fällt der Stein.",
 			"next": "effect_end_corruption"
 		},
 		"effect_end_corruption": {
@@ -276,24 +873,6 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/preparation.json"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_church_corrupt",
-			"path": "tension.wav"
-		},
-		"snd_underground": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"next": "effect_descent_1",
-			"path": "underground.wav"
-		},
-		"snd_ritual": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_ritual_chamber",
-			"path": "ritual.wav"
 		}
 	}
 }

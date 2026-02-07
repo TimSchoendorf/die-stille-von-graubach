@@ -7,6 +7,12 @@
 			"text": "Es geht schief. Alles geht schief. Der Boden reißt, die Spiralen explodieren in blendendem Licht, und das Singen wird zum Schrei.",
 			"next": "snd_tension"
 		},
+		"snd_tension": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_chaos",
+			"path": "tension.wav"
+		},
 		"effect_chaos": {
 			"type": "effect",
 			"effect": "heavy_glitch",
@@ -22,6 +28,13 @@
 				"intensity": 8.0,
 				"duration": 1.5
 			},
+			"next": "elise_escape_1"
+		},
+		"elise_escape_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Nein - NEIN! Der Gesang bricht - ich kann es nicht halten -",
 			"next": "narration_2"
 		},
 		"narration_2": {
@@ -42,38 +55,53 @@
 			"speaker": "georg",
 			"expression": "afraid",
 			"text": "ELISE! RAUS HIER! SOFORT!",
+			"next": "elise_escape_2"
+		},
+		"elise_escape_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Georg, nein! Ich kann es noch schaffen - gib mir noch eine Minute -",
 			"next": "narration_3"
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Ich versuche zu sprechen, ihm zu sagen, dass ich es noch schaffen kann. Aber er packt mich am Arm und zerrt mich zur Treppe.",
+			"text": "Aber er packt mich am Arm. Seine Hände sind wie Schraubstöcke. Dreißig Jahre Schmiedearbeit.",
 			"next": "georg_2"
 		},
 		"georg_2": {
-			"type": "character",
-			"character": "georg",
-			"expression": "protective",
-			"position": "center",
-			"action": "show",
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Es ist zu spät für das Siegel. Aber nicht für dich. Geh. Lauf. Ich halte es auf.",
+			"next": "elise_escape_3"
+		},
+		"elise_escape_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Georg, NEIN! Du kannst nicht - es wird dich -",
 			"next": "georg_3"
 		},
 		"georg_3": {
 			"type": "dialogue",
 			"speaker": "georg",
-			"expression": "determined",
-			"text": "Es ist zu spät für das Siegel. Aber nicht für dich. Geh. Lauf. Ich halte es auf.",
-			"next": "narration_4"
+			"expression": "sad",
+			"text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
+			"next": "elise_escape_4"
 		},
-		"narration_4": {
-			"type": "narration",
-			"text": "'Georg, nein -' Aber er hat sich bereits umgedreht. Er steht breitbeinig auf dem pulsierenden Boden, den Schmiedehammer in beiden Händen.",
+		"elise_escape_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Du bist kein Feigling. Du warst nie ein Feigling. Großmutter wusste das.",
 			"next": "georg_4"
 		},
 		"georg_4": {
 			"type": "dialogue",
 			"speaker": "georg",
-			"expression": "sad",
-			"text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
+			"expression": "protective",
+			"text": "Für Margarethe. Und für dich. Jetzt LAUF!",
 			"next": "effect_georg_stand"
 		},
 		"effect_georg_stand": {
@@ -88,6 +116,16 @@
 		"narration_5": {
 			"type": "narration",
 			"text": "Er schlägt den Hammer auf den Boden. Einmal. Der Stein bricht. Das Singen wird zur Stille - nicht friedlich, sondern erschrocken. Verwirrt.",
+			"next": "creature_escape_1"
+		},
+		"creature_escape_1": {
+			"type": "narration",
+			"text": "WAS TUT ER? DER STEIN - ER BRICHT DEN STEIN - NEIN -",
+			"next": "narration_hammer"
+		},
+		"narration_hammer": {
+			"type": "narration",
+			"text": "Georg schlägt ein zweites Mal. Ein drittes. Jeder Schlag ein Donnerschlag. Die Kammer bebt. Georg brüllt - nicht vor Wut. Vor Trauer. Dreißig Jahre Trauer in jedem Schlag.",
 			"next": "hide_georg"
 		},
 		"hide_georg": {
@@ -101,6 +139,18 @@
 		"narration_6": {
 			"type": "narration",
 			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir bricht der Boden ein. Staub und Licht und ein Laut, der kein Laut sein sollte.",
+			"next": "elise_escape_5"
+		},
+		"elise_escape_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "GEORG!",
+			"next": "narration_no_answer"
+		},
+		"narration_no_answer": {
+			"type": "narration",
+			"text": "Keine Antwort. Nur das Brechen von Stein und das Verstummen des Singens.",
 			"next": "effect_escape"
 		},
 		"effect_escape": {
@@ -112,15 +162,109 @@
 			},
 			"next": "snd_peaceful"
 		},
+		"snd_peaceful": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "bg_village",
+			"path": "ending_peaceful.wav"
+		},
 		"bg_village": {
 			"type": "background",
 			"background": "village_night",
 			"transition": "fade",
+			"next": "check_ally_escape_hilde"
+		},
+		"check_ally_escape_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_escape",
+			"false_next": "check_ally_escape_voss"
+		},
+		"show_hilde_escape": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "warning",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_escape_1"
+		},
+		"hilde_escape_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Elise! Lauf weiter! Nicht stehen bleiben!",
+			"next": "elise_hilde_escape"
+		},
+		"elise_hilde_escape": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Georg ist noch da unten - er hat -",
+			"next": "hilde_escape_2"
+		},
+		"hilde_escape_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Ich weiß. Ich weiß, Kind. Aber wir müssen LEBEN. Das war sein letzter Wunsch.",
+			"next": "hide_hilde_escape"
+		},
+		"hide_hilde_escape": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "left",
+			"action": "hide",
+			"next": "narration_7"
+		},
+		"check_ally_escape_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_escape",
+			"false_next": "narration_7"
+		},
+		"show_voss_escape": {
+			"type": "character",
+			"character": "voss",
+			"expression": "afraid",
+			"position": "left",
+			"action": "show",
+			"next": "voss_escape_1"
+		},
+		"voss_escape_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Die Kirche stürzt ein! Wir müssen zum Wald -",
+			"next": "elise_voss_escape"
+		},
+		"elise_voss_escape": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Georg ist dort unten. Er hat sich geopfert. Für mich. Für uns alle.",
+			"next": "voss_escape_2"
+		},
+		"voss_escape_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Gott nehme ihn auf. Kommen Sie, Fräulein Brandt. Sein Opfer darf nicht umsonst sein.",
+			"next": "hide_voss_escape"
+		},
+		"hide_voss_escape": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "hide",
 			"next": "narration_7"
 		},
 		"narration_7": {
 			"type": "narration",
-			"text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald oeffnet sich - zum ersten Mal oeffnet er sich.",
+			"text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald öffnet sich - zum ersten Mal öffnet er sich.",
 			"next": "narration_8"
 		},
 		"narration_8": {
@@ -139,11 +283,23 @@
 		"narration_9": {
 			"type": "narration",
 			"text": "Nur Wald. Als hätte es Graubach nie gegeben.",
+			"next": "elise_escape_6"
+		},
+		"elise_escape_6": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Georg...",
 			"next": "narration_10"
 		},
 		"narration_10": {
 			"type": "narration",
-			"text": "Georg. Mein Onkel. Der Mann, der dreißig Jahre lang vor Schuld gebeugt ging und am Ende aufrecht stand.",
+			"text": "Im Gras liegt etwas. Schwer, rostig, warm. Georgs Schmiedehammer. Er muss ihn geworfen haben, bevor... bevor.",
+			"next": "narration_10b"
+		},
+		"narration_10b": {
+			"type": "narration",
+			"text": "Ich hebe ihn auf. Er ist schwer. So schwer wie dreißig Jahre Schuld. Aber auch schwer wie dreißig Jahre Treue.",
 			"next": "narration_11"
 		},
 		"narration_11": {
@@ -154,23 +310,38 @@
 		"narration_12": {
 			"type": "narration",
 			"text": "In meiner Tasche liegt Großmutters Journal. Der Beweis, dass es real war. Dass Georg real war. Dass sein Opfer etwas bedeutet hat.",
+			"next": "narration_epilog"
+		},
+		"narration_epilog": {
+			"type": "narration",
+			"text": "Wochen später, in Berlin. Ich sitze in meinem Zimmer. Georgs Hammer steht neben der Tür. Großmutters Journal liegt auf dem Schreibtisch.",
+			"next": "narration_epilog_2"
+		},
+		"narration_epilog_2": {
+			"type": "narration",
+			"text": "Manchmal, in der Stille zwischen Mitternacht und Morgengrauen, glaube ich das Singen zu hören. Leise. Fern. Fast wie ein Wiegenlied.",
+			"next": "narration_epilog_3"
+		},
+		"narration_epilog_3": {
+			"type": "narration",
+			"text": "Hat Georg überlebt? Ich weiß es nicht. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet.",
+			"next": "narration_epilog_4"
+		},
+		"narration_epilog_4": {
+			"type": "narration",
+			"text": "Großmutter, du hast mich geschickt um es zu beenden. Ich habe versagt. Aber Georg... Georg hat das Richtige getan. Am Ende war er der Mutigste von uns allen.",
+			"next": "journal_escape"
+		},
+		"journal_escape": {
+			"type": "journal",
+			"entry_id": "ending_escape",
+			"title": "Die Flucht",
+			"content": "Graubach ist verschwunden. Georg hat sich geopfert, damit ich fliehen konnte. Sein Hammer ist alles, was mir geblieben ist. Und die Frage, die mich nie loslässt: Hat er überlebt?",
 			"next": "scene_end"
 		},
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "ending:escape"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_chaos",
-			"path": "tension.wav"
-		},
-		"snd_peaceful": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "bg_village",
-			"path": "ending_peaceful.wav"
 		}
 	}
 }
