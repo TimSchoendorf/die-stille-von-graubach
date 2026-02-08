@@ -26,31 +26,31 @@ func _ready() -> void:
 
 
 func _setup_ui() -> void:
-	custom_minimum_size = Vector2(1920, 250)
+	custom_minimum_size = Vector2(1920, UITheme.s(250))
 
 	# Dark semi-transparent background with golden border
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0.04, 0.04, 0.07, 0.88)
 	style.border_color = UITheme.BORDER
-	style.border_width_top = 3
+	style.border_width_top = UITheme.s(3)
 	style.corner_radius_top_left = 4
 	style.corner_radius_top_right = 4
-	style.content_margin_left = 60
-	style.content_margin_right = 60
-	style.content_margin_top = 20
-	style.content_margin_bottom = 20
+	style.content_margin_left = UITheme.s(60)
+	style.content_margin_right = UITheme.s(60)
+	style.content_margin_top = UITheme.s(20)
+	style.content_margin_bottom = UITheme.s(20)
 	add_theme_stylebox_override("panel", style)
 
 	var vbox := VBoxContainer.new()
-	vbox.add_theme_constant_override("separation", 8)
+	vbox.add_theme_constant_override("separation", UITheme.s(8))
 	add_child(vbox)
 
 	# Speaker name (serif font)
 	_speaker_label = RichTextLabel.new()
 	_speaker_label.bbcode_enabled = true
 	_speaker_label.fit_content = true
-	_speaker_label.custom_minimum_size.y = 32
-	_speaker_label.add_theme_font_size_override("normal_font_size", 28)
+	_speaker_label.custom_minimum_size.y = UITheme.s(32)
+	_speaker_label.add_theme_font_size_override("normal_font_size", UITheme.s(28))
 	_speaker_label.add_theme_font_override("normal_font", UITheme.font_title())
 	_speaker_label.scroll_active = false
 	vbox.add_child(_speaker_label)
@@ -59,8 +59,8 @@ func _setup_ui() -> void:
 	_text_label = RichTextLabel.new()
 	_text_label.bbcode_enabled = true
 	_text_label.fit_content = true
-	_text_label.custom_minimum_size.y = 120
-	_text_label.add_theme_font_size_override("normal_font_size", 24)
+	_text_label.custom_minimum_size.y = UITheme.s(120)
+	_text_label.add_theme_font_size_override("normal_font_size", UITheme.s(24))
 	_text_label.add_theme_font_override("normal_font", UITheme.font_body())
 	_text_label.scroll_active = false
 	vbox.add_child(_text_label)
@@ -69,7 +69,7 @@ func _setup_ui() -> void:
 	_continue_indicator = Label.new()
 	_continue_indicator.text = "▼"
 	_continue_indicator.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_continue_indicator.add_theme_font_size_override("font_size", 20)
+	_continue_indicator.add_theme_font_size_override("font_size", UITheme.s(20))
 	_continue_indicator.add_theme_color_override("font_color", UITheme.GOLD)
 	_continue_indicator.hide()
 	vbox.add_child(_continue_indicator)
@@ -77,6 +77,11 @@ func _setup_ui() -> void:
 
 func show_dialogue(speaker: String, text: String, color: Color = Color.WHITE) -> void:
 	show()
+	# Apply current font size setting
+	var fs: int = GameManager.font_size if GameManager.font_size > 0 else 24
+	_text_label.add_theme_font_size_override("normal_font_size", UITheme.s(fs))
+	_speaker_label.add_theme_font_size_override("normal_font_size", UITheme.s(fs + 4))
+
 	_speaker_label.clear()
 	if not speaker.is_empty():
 		_speaker_label.append_text(TextEffects.format_speaker(speaker, color))

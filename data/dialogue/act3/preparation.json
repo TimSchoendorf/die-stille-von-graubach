@@ -49,7 +49,24 @@
 		"narration_hands": {
 			"type": "narration",
 			"text": "Meine Hände liegen auf dem Tisch. Großmutters Hände, hat Georg gesagt. Ich betrachte sie. Feine Finger, keine Schwielen. Was sollen diese Hände morgen tun?",
-			"next": "narration_journal_open"
+			"next": "check_has_journal"
+		},
+		"check_has_journal": {
+			"type": "flag_check",
+			"flag": "found_journal",
+			"value": 1,
+			"true_next": "narration_journal_open",
+			"false_next": "narration_no_journal"
+		},
+		"narration_no_journal": {
+			"type": "narration",
+			"text": "Ich habe kein Journal, keine Aufzeichnungen. Nur das, was mir die anderen erzählt haben. Hilde, Georg, Voss - jeder hat mir ein Stück der Wahrheit gegeben. Jetzt muss ich die Teile zusammensetzen.",
+			"next": "narration_no_journal_2"
+		},
+		"narration_no_journal_2": {
+			"type": "narration",
+			"text": "Großmutter, was hast du gewusst? Was hättest du mir gesagt, wenn du noch da wärst? Ich muss es ohne deine Worte schaffen. Aber vielleicht hat sie mir genug hinterlassen - in den Menschen, die sie kannte.",
+			"next": "check_ally_visit"
 		},
 		"narration_journal_open": {
 			"type": "narration",
@@ -474,8 +491,10 @@
 				{
 					"text": "Es zerstören - was auch immer es kostet",
 					"set_flags": {
-						"approach_destroy": 1,
-						"courage": 15
+						"approach_destroy": 1
+					},
+					"add_flags": {
+						"courage": 5
 					},
 					"next": "approach_destroy"
 				},

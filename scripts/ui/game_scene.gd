@@ -12,6 +12,7 @@ var _journal_ui: Node # JournalUI
 var _save_load_ui: Node # SaveLoadUI
 var _ending_screen: Node # EndingScreen
 var _quick_menu: HBoxContainer
+var _settings_overlay: Node # SettingsOverlay
 
 # Effect layer
 var _effect_layer: CanvasLayer
@@ -75,11 +76,22 @@ func _setup_layers() -> void:
 	ui_layer.layer = 10
 	add_child(ui_layer)
 
+	# Settings button (top left)
+	var settings_btn := Button.new()
+	settings_btn.text = Locale.t("SETTINGS")
+	settings_btn.custom_minimum_size = Vector2(UITheme.s(140), UITheme.s(48))
+	settings_btn.position = Vector2(UITheme.s(20), UITheme.s(10))
+	UITheme.style_quick_button(settings_btn)
+	settings_btn.pressed.connect(_on_settings)
+	ui_layer.add_child(settings_btn)
+
 	# Quick menu (top right)
 	_quick_menu = HBoxContainer.new()
 	_quick_menu.name = "QuickMenu"
-	_quick_menu.position = Vector2(1920 - 4 * 120 - 3 * 8 - 20, 10)
-	_quick_menu.add_theme_constant_override("separation", 8)
+	var qm_btn_w := UITheme.s(140)
+	var qm_sep := UITheme.s(10)
+	_quick_menu.position = Vector2(1920 - 4 * qm_btn_w - 3 * qm_sep - UITheme.s(20), UITheme.s(10))
+	_quick_menu.add_theme_constant_override("separation", qm_sep)
 	ui_layer.add_child(_quick_menu)
 
 	_create_quick_button(Locale.t("SAVE"), _on_save)
@@ -88,16 +100,17 @@ func _setup_layers() -> void:
 	_create_quick_button(Locale.t("JOURNAL"), _on_journal)
 
 	# Textbox (bottom) — explicit position for CanvasLayer children
+	var tb_h := UITheme.s(250)
 	_textbox = preload("res://scripts/ui/textbox.gd").new()
 	_textbox.name = "Textbox"
-	_textbox.position = Vector2(0, 830)
-	_textbox.size = Vector2(1920, 250)
+	_textbox.position = Vector2(0, 1080 - tb_h)
+	_textbox.size = Vector2(1920, tb_h)
 	ui_layer.add_child(_textbox)
 
 	# Choice panel (center)
 	_choice_panel = preload("res://scripts/ui/choice_panel.gd").new()
 	_choice_panel.name = "ChoicePanel"
-	_choice_panel.position = Vector2(660, 300)
+	_choice_panel.position = Vector2(660, UITheme.s(200) if UITheme.is_mobile() else 300)
 	ui_layer.add_child(_choice_panel)
 
 	# Overlay Layer
@@ -118,6 +131,10 @@ func _setup_layers() -> void:
 	_save_load_ui.name = "SaveLoadUI"
 	overlay_layer.add_child(_save_load_ui)
 
+	_settings_overlay = preload("res://scripts/ui/settings_overlay.gd").new()
+	_settings_overlay.name = "SettingsOverlay"
+	overlay_layer.add_child(_settings_overlay)
+
 	_ending_screen = preload("res://scripts/ui/ending_screen.gd").new()
 	_ending_screen.name = "EndingScreen"
 	overlay_layer.add_child(_ending_screen)
@@ -126,7 +143,7 @@ func _setup_layers() -> void:
 func _create_quick_button(text: String, callback: Callable) -> void:
 	var btn := Button.new()
 	btn.text = text
-	btn.custom_minimum_size = Vector2(120, 44)
+	btn.custom_minimum_size = Vector2(UITheme.s(140), UITheme.s(48))
 	UITheme.style_quick_button(btn)
 	btn.pressed.connect(callback)
 	_quick_menu.add_child(btn)
@@ -365,7 +382,7 @@ func _apply_shake(intensity: float, duration: float) -> void:
 
 
 func _is_any_overlay_open() -> bool:
-	return _save_load_ui.visible or _history_log.visible or _journal_ui.visible
+	return _save_load_ui.visible or _history_log.visible or _journal_ui.visible or _settings_overlay.visible
 
 
 func _on_save() -> void:
@@ -383,6 +400,10 @@ func _on_history() -> void:
 func _on_journal() -> void:
 	if not _is_any_overlay_open():
 		_journal_ui.open_journal()
+
+func _on_settings() -> void:
+	if not _is_any_overlay_open():
+		_settings_overlay.open_settings()
 
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -347,6 +347,16 @@
 		"narration_before_choice": {
 			"type": "narration",
 			"text": "Das Buch liegt offen vor mir. Mein Name starrt mich an. Was tue ich jetzt?",
+			"next": "zugfrau_1"
+		},
+		"zugfrau_1": {
+			"type": "narration",
+			"text": "Ich blättere zurück. Dutzende Seiten, Hunderte Namen. Und dann - ein alter Eintrag: 'Mathilde, 1863'. Daneben eine Zeichnung. Mein Atem stockt.",
+			"next": "zugfrau_2"
+		},
+		"zugfrau_2": {
+			"type": "narration",
+			"text": "Die Zeichnung zeigt eine Frau mit leeren Augenhöhlen. Die blinde Frau aus dem Zug. Sie war keine Fremde - sie war die Letzte, die das Ritual überlebt hat. Sie hat sechzig Jahre gewartet.",
 			"next": "elise_deliberate_1"
 		},
 		"elise_deliberate_1": {
@@ -377,8 +387,10 @@
 				{
 					"text": "Das Buch mitnehmen",
 					"set_flags": {
-						"took_book": 1,
-						"courage": 12
+						"took_book": 1
+					},
+					"add_flags": {
+						"courage": 3
 					},
 					"next": "take_book"
 				},
@@ -565,8 +577,10 @@
 				{
 					"text": "Weigern und weglaufen",
 					"set_flags": {
-						"defied_otto": 1,
-						"courage": 15
+						"defied_otto": 1
+					},
+					"add_flags": {
+						"courage": 5
 					},
 					"next": "defy_otto"
 				}

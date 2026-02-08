@@ -44,14 +44,14 @@ func _setup_ui() -> void:
 
 	var vbox := VBoxContainer.new()
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
-	vbox.add_theme_constant_override("separation", 16)
+	vbox.add_theme_constant_override("separation", UITheme.s(16))
 	center.add_child(vbox)
 
 	# Title
 	var title := Label.new()
 	title.text = Locale.t("TITLE")
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 64)
+	title.add_theme_font_size_override("font_size", UITheme.s(64))
 	title.add_theme_color_override("font_color", UITheme.GOLD)
 	title.add_theme_font_override("font", UITheme.font_title())
 	vbox.add_child(title)
@@ -60,7 +60,7 @@ func _setup_ui() -> void:
 	var subtitle := Label.new()
 	subtitle.text = Locale.t("TITLE_SUBTITLE")
 	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	subtitle.add_theme_font_size_override("font_size", 22)
+	subtitle.add_theme_font_size_override("font_size", UITheme.s(22))
 	subtitle.add_theme_color_override("font_color", UITheme.TEXT_DIM)
 	subtitle.add_theme_font_override("font", UITheme.font_body())
 	vbox.add_child(subtitle)
@@ -70,7 +70,7 @@ func _setup_ui() -> void:
 
 	# Spacer
 	var spacer := Control.new()
-	spacer.custom_minimum_size.y = 40
+	spacer.custom_minimum_size.y = UITheme.s(40)
 	vbox.add_child(spacer)
 
 	# Buttons
@@ -78,6 +78,7 @@ func _setup_ui() -> void:
 	_continue_btn = _create_menu_button(vbox, Locale.t("CONTINUE"), _on_continue)
 	_create_menu_button(vbox, Locale.t("LOAD"), _on_load)
 	_create_menu_button(vbox, Locale.t("SETTINGS"), _on_settings)
+	_create_menu_button(vbox, Locale.t("CREDITS"), _on_credits)
 	_create_menu_button(vbox, Locale.t("QUIT"), _on_quit)
 
 	# Disable "Fortsetzen" if no quick save exists
@@ -101,7 +102,7 @@ func _setup_ui() -> void:
 func _create_menu_button(parent: VBoxContainer, text: String, callback: Callable) -> Button:
 	var btn := Button.new()
 	btn.text = text
-	btn.custom_minimum_size = Vector2(450, 58)
+	btn.custom_minimum_size = Vector2(mini(UITheme.s(450), 1600), UITheme.s(58))
 	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	UITheme.style_menu_button(btn, 26)
 	btn.pressed.connect(callback)
@@ -138,6 +139,10 @@ func _on_save_loaded(_slot: int) -> void:
 
 func _on_settings() -> void:
 	SceneManager.change_scene("res://scenes/SettingsScreen.tscn")
+
+
+func _on_credits() -> void:
+	SceneManager.change_scene("res://scenes/CreditsScreen.tscn")
 
 
 func _on_quit() -> void:

@@ -48,7 +48,7 @@ func _build_ending_screen(ending_id: String) -> void:
 
 	var vbox := VBoxContainer.new()
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
-	vbox.add_theme_constant_override("separation", 24)
+	vbox.add_theme_constant_override("separation", UITheme.s(24))
 	center.add_child(vbox)
 
 	var suffix: String = ENDING_KEYS.get(ending_id, "")
@@ -63,7 +63,7 @@ func _build_ending_screen(ending_id: String) -> void:
 	var end_label := Label.new()
 	end_label.text = Locale.t("END_HEADER")
 	end_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	end_label.add_theme_font_size_override("font_size", 28)
+	end_label.add_theme_font_size_override("font_size", UITheme.s(28))
 	end_label.add_theme_color_override("font_color", UITheme.TEXT_DIM)
 	end_label.add_theme_font_override("font", UITheme.font_ui())
 	vbox.add_child(end_label)
@@ -72,7 +72,7 @@ func _build_ending_screen(ending_id: String) -> void:
 	var name_label := Label.new()
 	name_label.text = ending_name
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	name_label.add_theme_font_size_override("font_size", 56)
+	name_label.add_theme_font_size_override("font_size", UITheme.s(56))
 	name_label.add_theme_color_override("font_color", UITheme.GOLD)
 	name_label.add_theme_font_override("font", UITheme.font_title())
 	vbox.add_child(name_label)
@@ -81,7 +81,7 @@ func _build_ending_screen(ending_id: String) -> void:
 	var type_label := Label.new()
 	type_label.text = "[%s]" % ending_type
 	type_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	type_label.add_theme_font_size_override("font_size", 20)
+	type_label.add_theme_font_size_override("font_size", UITheme.s(20))
 	type_label.add_theme_color_override("font_color", UITheme.GOLD_DIM)
 	type_label.add_theme_font_override("font", UITheme.font_ui())
 	vbox.add_child(type_label)
@@ -93,15 +93,15 @@ func _build_ending_screen(ending_id: String) -> void:
 	var desc := Label.new()
 	desc.text = ending_desc
 	desc.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	desc.add_theme_font_size_override("font_size", 22)
+	desc.add_theme_font_size_override("font_size", UITheme.s(22))
 	desc.add_theme_color_override("font_color", UITheme.TEXT_LIGHT)
 	desc.add_theme_font_override("font", UITheme.font_body())
 	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	desc.custom_minimum_size.x = 800
+	desc.custom_minimum_size.x = mini(UITheme.s(800), 1800)
 	vbox.add_child(desc)
 
 	var spacer := Control.new()
-	spacer.custom_minimum_size.y = 30
+	spacer.custom_minimum_size.y = UITheme.s(30)
 	vbox.add_child(spacer)
 
 	# Completion tracker
@@ -109,7 +109,7 @@ func _build_ending_screen(ending_id: String) -> void:
 	var count := GameManager.endings_unlocked.size()
 	completion.text = Locale.t("ENDINGS_DISCOVERED") % count
 	completion.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	completion.add_theme_font_size_override("font_size", 20)
+	completion.add_theme_font_size_override("font_size", UITheme.s(20))
 	completion.add_theme_color_override("font_color", UITheme.TEXT_DIM)
 	completion.add_theme_font_override("font", UITheme.font_ui())
 	vbox.add_child(completion)
@@ -118,13 +118,13 @@ func _build_ending_screen(ending_id: String) -> void:
 	vbox.add_child(UITheme.create_ornament_label(UITheme.ORNAMENT_WIDE, 20))
 
 	var spacer2 := Control.new()
-	spacer2.custom_minimum_size.y = 20
+	spacer2.custom_minimum_size.y = UITheme.s(20)
 	vbox.add_child(spacer2)
 
 	# Return to title button
 	var btn := Button.new()
 	btn.text = Locale.t("RETURN_TO_MENU")
-	btn.custom_minimum_size = Vector2(300, 50)
+	btn.custom_minimum_size = Vector2(UITheme.s(300), UITheme.s(50))
 	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	UITheme.style_menu_button(btn, 24)
 	btn.pressed.connect(func():

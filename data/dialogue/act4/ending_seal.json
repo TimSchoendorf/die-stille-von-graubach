@@ -367,6 +367,38 @@
 			"entry_id": "ending_seal",
 			"title": "Das Siegel",
 			"content": "Das Bindungsritual gelang. Das Wesen schläft wieder, gehalten durch Gesang statt durch Blut. Kein Opfer mehr. Es hat mich gefragt: Versprochen? Und ich habe geantwortet: Versprochen.",
+			"next": "seal_anna_epilog"
+		},
+		"seal_anna_epilog": {
+			"type": "narration",
+			"text": "Annas Augen werden von Tag zu Tag klarer. Das Singen lässt nach, und mit ihm ihre Visionen. Zum ersten Mal ist sie ein normales Kind.",
+			"next": "seal_otto_epilog"
+		},
+		"seal_otto_epilog": {
+			"type": "narration",
+			"text": "Otto Reinhardt verlässt Graubach eine Woche nach dem Ritual. Niemand hält ihn auf. Niemand vermisst ihn.",
+			"next": "check_trusted_konrad_seal"
+		},
+		"check_trusted_konrad_seal": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "konrad_trusted_seal",
+			"false_next": "konrad_untrusted_seal"
+		},
+		"konrad_trusted_seal": {
+			"type": "narration",
+			"text": "Konrad taucht am nächsten Morgen auf. Die Spiralen auf seiner Hand verblassen. Er weint. 'Ich bin frei', flüstert er. Und zum ersten Mal glaube ich ihm.",
+			"next": "seal_candle_epilog"
+		},
+		"konrad_untrusted_seal": {
+			"type": "narration",
+			"text": "Konrad verschwand in der Nacht des Rituals. Niemand sah ihn gehen. Manche sagen, er lebt jetzt im Wald. Manche sagen, der Wald hat ihn genommen.",
+			"next": "seal_candle_epilog"
+		},
+		"seal_candle_epilog": {
+			"type": "narration",
+			"text": "Die Kerze auf Großmutters Nachttisch erlischt in dem Moment, als das Wesen einschläft. Leise. Friedlich.",
 			"next": "scene_end"
 		},
 		"scene_end": {

@@ -507,8 +507,49 @@
 			"type": "flag_check",
 			"flag": "allied_georg",
 			"value": 1,
-			"true_next": "descent_georg_dialogue",
+			"true_next": "check_georg_catchup",
 			"false_next": "check_hilde_descent"
+		},
+		"check_georg_catchup": {
+			"type": "flag_check",
+			"flag": "otto_hostile",
+			"value": 1,
+			"true_next": "georg_catchup_narration",
+			"false_next": "descent_georg_dialogue"
+		},
+		"georg_catchup_narration": {
+			"type": "narration",
+			"text": "Schritte auf der Treppe. Schwer, eilig, aber vertraut. Georg. Er hat es geschafft.",
+			"next": "georg_catchup_show"
+		},
+		"georg_catchup_show": {
+			"type": "character",
+			"character": "georg",
+			"expression": "determined",
+			"position": "left",
+			"action": "show",
+			"next": "georg_catchup_1"
+		},
+		"georg_catchup_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "determined",
+			"text": "Ottos Männer sind nicht so mutig, wenn es dunkel wird. Sie sind davongelaufen, als die Kirche zu beben anfing.",
+			"next": "elise_catchup_1"
+		},
+		"elise_catchup_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Georg! Ich dachte, du —",
+			"next": "georg_catchup_2"
+		},
+		"georg_catchup_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Ich habe Margarethe versprochen, auf dich aufzupassen. Ein Schmied hält sein Wort.",
+			"next": "descent_georg_dialogue"
 		},
 		"descent_georg_dialogue": {
 			"type": "dialogue",

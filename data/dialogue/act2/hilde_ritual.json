@@ -520,6 +520,93 @@
 			"speaker": "hilde",
 			"expression": "kind",
 			"text": "Du bist ihr ähnlicher, als du denkst.",
+			"next": "hilde_letter_1"
+		},
+		"hilde_letter_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Hilde... der Brief. Großmutters Brief. Wie konnte er mich in Berlin erreichen, wenn sie schon Tage tot war, als ich ankam?",
+			"next": "hilde_letter_2"
+		},
+		"hilde_letter_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Ah. Das war Margarethes letzter Zauber. Sie hat ihn vor Monaten geschrieben und mit einem Zeitbinder versehen - ein altes Ritual, das den Brief erst zustellt, wenn der Empfänger bereit ist.",
+			"next": "hilde_letter_3"
+		},
+		"hilde_letter_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Nicht wenn sie stirbt, sondern wenn ICH bereit bin? Das heißt, der Brief hat... auf mich gewartet?",
+			"next": "hilde_letter_4"
+		},
+		"hilde_letter_4": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Genau. Er hat auf den richtigen Moment gewartet. Den Moment, in dem du stark genug warst, nach Graubach zu kommen.",
+			"next": "hilde_creature_dual_1"
+		},
+		"hilde_creature_dual_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Und noch etwas, Kind. Über das Wesen. Die Alten haben die Fütterung erfunden - nicht die Kreatur. Sie haben ihre Einsamkeit als Hunger gedeutet und mit Blut geantwortet.",
+			"next": "hilde_creature_dual_2"
+		},
+		"hilde_creature_dual_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Vielleicht war das falsch. Vielleicht hätte ein Gespräch genügt.",
+			"next": "hilde_creature_dual_3"
+		},
+		"hilde_creature_dual_3": {
+			"type": "narration",
+			"text": "Hilde hält inne. In der Stille höre ich das ferne Singen - leiser als sonst, fast fragend.",
+			"next": "hilde_creature_dual_4"
+		},
+		"hilde_creature_dual_4": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Aber wer redet schon mit dem, was unter der Erde schläft?",
+			"next": "hilde_margarethe_1"
+		},
+		"hilde_margarethe_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Georg sagt, Großmutter hätte versagt. Dass ihr Ritual nicht funktioniert hat. Aber Sie klingen, als wüssten Sie etwas anderes.",
+			"next": "hilde_margarethe_2"
+		},
+		"hilde_margarethe_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Georg glaubt, sie hätte versagt. Margarethe wollte es so. Sie hat ihm nur die Hälfte erzählt - zum Schutz.",
+			"next": "hilde_margarethe_3"
+		},
+		"hilde_margarethe_3": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Wenn Otto wüsste, dass das Ritual vollständig ist, hätte er Georg längst... beseitigt.",
+			"next": "hilde_margarethe_4"
+		},
+		"hilde_margarethe_4": {
+			"type": "narration",
+			"text": "Hilde senkt die Stimme. Die Schatten in der Hütte scheinen dichter zu werden.",
+			"next": "hilde_margarethe_5"
+		},
+		"hilde_margarethe_5": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "mysterious",
+			"text": "Das vollständige Wissen liegt hier. Bei mir. Und jetzt bei dir.",
 			"next": "hilde_gift"
 		},
 

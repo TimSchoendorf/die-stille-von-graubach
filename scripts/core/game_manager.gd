@@ -38,9 +38,11 @@ var game_state: String = "title" # title, playing, paused, ending
 # Settings (persisted via settings_screen.gd)
 var text_speed: float = 40.0  # characters per second
 var auto_advance: bool = false  # auto-advance after text finishes
+var font_size: int = 24  # dialogue text font size (18-36)
 
 
 func _ready() -> void:
+	UITheme.init_scaling()
 	_load_characters()
 	_load_default_flags()
 
@@ -75,6 +77,12 @@ func _load_default_flags() -> void:
 func set_flag(flag_name: String, value: int = 1) -> void:
 	flags[flag_name] = value
 	flag_changed.emit(flag_name, value)
+
+
+func add_flag(flag_name: String, value: int = 1) -> void:
+	var current: int = flags.get(flag_name, 0)
+	flags[flag_name] = current + value
+	flag_changed.emit(flag_name, flags[flag_name])
 
 
 func get_flag(flag_name: String, default: int = 0) -> int:

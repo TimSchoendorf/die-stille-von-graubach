@@ -1256,10 +1256,10 @@ def _add_act1_village_exploration(tr):
        es="Hay caminos viejos y caminos nuevos. El pastor lo intenta con oraciones. Pero lo que duerme bajo la iglesia es más antiguo que su Dios. Requiere medios más antiguos.",
        it="Ci sono vie antiche è vie nuove. Il pastore ci prova con le preghiere. Ma ciò che dorme sotto la chiesa è più antico del suo Dio. Richiede mezzi più antichi.")
     _t(tr, F, "hilde_12",
-       en="Your grandmother knew both ways. She waited and prepared for thirty years. She wanted to do it differently this time — without sacrifice.",
-       fr="Tà grand-mère connaissait les deux voies. Elle à attendu et s'est préparée pendant trente ans. Elle voulait faire autrement cette fois — sans sacrifice.",
-       es="Tu abuela conocía ambos caminos. Esperó y se preparó durante treinta años. Quería hacerlo diferente esta vez — sin sacrificio.",
-       it="Tua nonna conosceva entrambe le vie. Ha aspettato è si è preparata per trent'anni. Voleva farlo diversamente questa volta — senza sacrificio.")
+       en="Your grandmother knew both ways. She waited and prepared for thirty years. She wanted to do it differently this time — without bloodshed.",
+       fr="Ta grand-mère connaissait les deux voies. Elle a attendu et s'est préparée pendant trente ans. Elle voulait faire autrement cette fois — sans effusion de sang.",
+       es="Tu abuela conocía ambos caminos. Esperó y se preparó durante treinta años. Quería hacerlo diferente esta vez — sin derramamiento de sangre.",
+       it="Tua nonna conosceva entrambe le vie. Ha aspettato e si è preparata per trent'anni. Voleva farlo diversamente questa volta — senza spargimento di sangue.")
     _t(tr, F, "hilde_13",
        en="But time caught up with her. Now you are here. And the question is: Are you ready to do what she could no longer do?",
        fr="Mais le temps l'à rattrapée. Maintenant tu es là. Et là question est : es-tu prête à faire ce qu'elle n'à plus pu accomplir ?",
@@ -1278,10 +1278,10 @@ def _add_act1_village_exploration(tr):
        es="La escuela se alza junto a la iglesia. Un edificio pequeño con grandes ventanas a través de las cuales veo niños sentados en bancos de madera.",
        it="La scuola sorge accanto alla chiesa. Un piccolo edificio con grandi finestre attraverso le quali vedo bambini seduti su panche di legno.")
     _t(tr, F, "school_2",
-       en="At the blackboard stands a man, explaining something. Konrad Müller. In daylight he looks... normal. Friendly. Even charismatic.",
-       fr="Au tableau se tient un homme qui explique quelque chose. Konrad Müller. À là lumière du jour, il à l'air... normal. Amical. Même charismatique.",
-       es="Ante la pizarra hay un hombre explicando algo. Konrad Müller. A la luz del día parece... normal. Amable. Incluso carismático.",
-       it="Alla lavagna c'è un uomo che spiega qualcosa. Konrad Müller. Alla luce del giorno sembra... normale. Cordiale. Persino carismatico.")
+       en="At the blackboard stands a man, explaining something. The children call him 'Herr Müller'. Konrad Müller — the man from last night. In daylight he looks... normal. Friendly. Even charismatic.",
+       fr="Au tableau se tient un homme qui explique quelque chose. Les enfants l'appellent « Herr Müller ». Konrad Müller — l'homme de la nuit dernière. À la lumière du jour, il a l'air... normal. Amical. Même charismatique.",
+       es="Ante la pizarra hay un hombre explicando algo. Los niños lo llaman 'Herr Müller'. Konrad Müller — el hombre de anoche. A la luz del día parece... normal. Amable. Incluso carismático.",
+       it="Alla lavagna c'è un uomo che spiega qualcosa. I bambini lo chiamano 'Herr Müller'. Konrad Müller — l'uomo di ieri notte. Alla luce del giorno sembra... normale. Cordiale. Persino carismatico.")
     _t(tr, F, "school_3",
        en="When he notices me at the window, he smiles and waves me inside. The children turn around. Not one of them smiles.",
        fr="Quand il me remarque à là fenêtre, il sourit et me fait signe d'entrer. Les enfants se retournent. Aucun d'entre eux ne sourit.",
@@ -1708,6 +1708,33 @@ def _add_act1_village_exploration(tr):
        es="Ha mentido. Tan rutinariamente que casi era convincente. Casi. Pero su ojo izquierdo se ha crispado.",
        it="Ha mentito. Così meccanicamente che era quasi convincente. Quasi. Ma il suo occhio sinistro ha avuto un tic.")
 
+    # --- Phase 9 Story-Fixes: Otto motivation ---
+    _t(tr, F, "otto_motivation_1",
+       en="On the way back I think about the mayor. About his self-assurance. About the weight of his words — not like a man who threatens, but like one who is absolutely convinced.",
+       fr="Sur le chemin du retour, je pense au maire. À son assurance. Au poids de ses mots — pas comme un homme qui menace, mais comme quelqu'un qui est absolument convaincu.",
+       es="De vuelta pienso en el alcalde. En su seguridad. En el peso de sus palabras — no como un hombre que amenaza, sino como alguien que está absolutamente convencido.",
+       it="Sulla via del ritorno penso al sindaco. Alla sua sicurezza. Al peso delle sue parole — non come un uomo che minaccia, ma come uno che è assolutamente convinto.")
+    _t(tr, F, "otto_motivation_2",
+       en="Georg once told me that Otto's father was mayor in 1893. And his father before him. The Reinhardts have ruled Graubach for generations — and profited from it.",
+       fr="Georg m'a dit un jour que le père d'Otto était maire en 1893. Et son père avant lui. Les Reinhardt gouvernent Graubach depuis des générations — et en profitent.",
+       es="Georg me contó una vez que el padre de Otto fue alcalde en 1893. Y su padre antes que él. Los Reinhardt gobiernan Graubach desde hace generaciones — y se benefician de ello.",
+       it="Georg una volta mi ha detto che il padre di Otto era sindaco nel 1893. E suo padre prima di lui. I Reinhardt governano Graubach da generazioni — e ne traggono profitto.")
+    _t(tr, F, "otto_motivation_3",
+       en="The forest protects their land. The harvests on the Reinhardt fields are unnaturally good, even in bad years. The family stays healthy while other children die of fever.",
+       fr="La forêt protège leurs terres. Les récoltes sur les champs des Reinhardt sont anormalement bonnes, même les mauvaises années. La famille reste en bonne santé tandis que d'autres enfants meurent de fièvre.",
+       es="El bosque protege sus tierras. Las cosechas en los campos de los Reinhardt son antinaturalmente buenas, incluso en años malos. La familia se mantiene sana mientras otros niños mueren de fiebre.",
+       it="Il bosco protegge le loro terre. I raccolti sui campi dei Reinhardt sono innaturalmente buoni, anche nelle annate cattive. La famiglia resta in salute mentre altri bambini muoiono di febbre.")
+    _t(tr, F, "otto_motivation_4",
+       en="Otto does not act only from tradition. He acts from self-interest. And the worst part: he truly believes in it. He is convinced that the sacrifices are necessary. That he is doing the right thing.",
+       fr="Otto n'agit pas seulement par tradition. Il agit par intérêt personnel. Et le pire : il y croit vraiment. Il est convaincu que les sacrifices sont nécessaires. Qu'il fait ce qui est juste.",
+       es="Otto no actúa solo por tradición. Actúa por interés propio. Y lo peor: realmente cree en ello. Está convencido de que los sacrificios son necesarios. De que hace lo correcto.",
+       it="Otto non agisce solo per tradizione. Agisce per interesse personale. E la cosa peggiore: ci crede davvero. È convinto che i sacrifici siano necessari. Che stia facendo la cosa giusta.")
+    _t(tr, F, "otto_motivation_5",
+       en="A madman would be easier. A madman can be exposed. But a true believer? A true believer must be broken.",
+       fr="Un fou serait plus facile. On peut démasquer un fou. Mais un croyant ? Un croyant, il faut le briser.",
+       es="Un loco sería más fácil. A un loco se le puede desenmascarar. Pero a un creyente? A un creyente hay que quebrantarlo.",
+       it="Un pazzo sarebbe più facile. Un pazzo lo si può smascherare. Ma un credente? Un credente bisogna spezzarlo.")
+
 def _add_act1_smithy_evening(tr):
     F = "res://data/dialogue/act1/smithy_evening.json"
 
@@ -1982,6 +2009,28 @@ def _add_act1_smithy_evening(tr):
        es="Estoy acostada en la cama, la llave en la mano. La espiral se clava en mi palma. El canto forma palabras que casi puedo entender. Casi.",
        it="Sono distesa a letto, la chiave in mano. La spirale si imprime nel palmo. Il canto forma parole che quasi riesco a capire. Quasi.")
 
+    # --- Phase 9 Story-Fixes: Forest logic ---
+    _t(tr, F, "georg_wald_1",
+       en="But how? The postman comes through. Merchants travel through. Why does the forest hold me but not others?",
+       fr="Mais comment ? Le facteur passe bien. Les marchands voyagent. Pourquoi la forêt me retient-elle, mais pas les autres ?",
+       es="Pero ¿cómo? El cartero viene. Los comerciantes viajan. ¿Por qué el bosque me retiene a mí pero no a los demás?",
+       it="Ma come? Il postino passa. I mercanti viaggiano. Perché il bosco trattiene me ma non gli altri?")
+    _t(tr, F, "georg_wald_2",
+       en="The forest lets most people pass. Merchants, travelers, even the postman. But those whose names are in the book... it does not let them go.",
+       fr="La forêt laisse passer la plupart des gens. Marchands, voyageurs, même le facteur. Mais ceux dont le nom est dans le livre... elle ne les laisse pas partir.",
+       es="El bosque deja pasar a la mayoría. Comerciantes, viajeros, incluso al cartero. Pero a quienes tienen su nombre en el libro... no los deja ir.",
+       it="Il bosco lascia passare la maggior parte della gente. Mercanti, viaggiatori, persino il postino. Ma quelli il cui nome è nel libro... non li lascia andare.")
+    _t(tr, F, "georg_wald_3",
+       en="That is why I cannot flee.",
+       fr="C'est pour ça que je ne peux pas fuir.",
+       es="Por eso no puedo huir.",
+       it="Per questo non posso fuggire.")
+    _t(tr, F, "georg_wald_4",
+       en="Your grandmother tried to leave the village for thirty years. Once. Just a single time. The forest led her in circles for three days until she gave up.",
+       fr="Ta grand-mère a essayé de quitter le village pendant trente ans. Une fois. Une seule fois. La forêt l'a fait tourner en rond pendant trois jours, jusqu'à ce qu'elle abandonne.",
+       es="Tu abuela intentó salir del pueblo durante treinta años. Una vez. Una sola vez. El bosque la hizo caminar en círculos durante tres días hasta que se rindió.",
+       it="Tua nonna ha cercato di lasciare il villaggio per trent'anni. Una volta. Una sola volta. Il bosco l'ha fatta camminare in cerchio per tre giorni, finché non ha rinunciato.")
+
 
 def _add_act2_investigation_morning(tr):
     F = "res://data/dialogue/act2/investigation_morning.json"
@@ -2218,10 +2267,10 @@ def _add_act2_investigation_morning(tr):
        it="Konrad. Lo sapeva già nel 1921. Per due anni e stato davanti alla mia porta e ha sorriso, e dietro quel sorriso vive qualcosa che non e lui. E ieri gli ho parlato come se tutto fosse normale.")
 
     _t(tr, F, "read_journal_6",
-       en="'1923: I found the name. In the book in the chamber. Elise Margarethe Brandt. Written in an ink that pulses. My granddaughter. Who is not even born yet.'",
-       fr="'1923 : J'ai trouve le nom. Dans le livre de la chambre. Elise Margarethe Brandt. Ecrit dans une encre qui pulse. Ma petite-fille. Qui n'est même pas encore nee.'",
-       es="'1923: Encontre el nombre. En el libro de la camara. Elise Margarethe Brandt. Escrito en una tinta que pulsa. Mi nieta. Que aun no ha nacido.'",
-       it="'1923: Ho trovato il nome. Nel libro della camera. Elise Margarethe Brandt. Scritto in un inchiostro che pulsa. Mia nipote. Che non e ancora nata.'")
+       en="'1923: I found the name. In the book in the chamber. Elise Margarethe Brandt. Written in an ink that pulses. My granddaughter. Who is studying in Berlin and suspects nothing of all this.'",
+       fr="'1923 : J'ai trouvé le nom. Dans le livre de la chambre. Elise Margarethe Brandt. Écrit dans une encre qui pulse. Ma petite-fille. Qui étudie à Berlin et ne se doute de rien.'",
+       es="'1923: Encontré el nombre. En el libro de la cámara. Elise Margarethe Brandt. Escrito en una tinta que pulsa. Mi nieta. Que estudia en Berlín y no sospecha nada de todo esto.'",
+       it="'1923: Ho trovato il nome. Nel libro della camera. Elise Margarethe Brandt. Scritto in un inchiostro che pulsa. Mia nipote. Che studia a Berlino e non sospetta nulla di tutto questo.'")
 
     _t(tr, F, "elise_journal_react_4",
        en="1923. My name was in that book before I was born. The creature knew me before I existed. It was waiting for ME.",
@@ -3010,6 +3059,23 @@ def _add_act2_konrad_encounter(tr):
        es="¿Se puede liberar un recipiente sin romperlo? ¿O hace mucho que Konrad Müller dejó de ser Konrad Müller?",
        it="Si può liberare un ricettacolo senza romperlo? O Konrad Müller ha cessato da tempo di essere Konrad Müller?")
 
+    # --- Phase 9 Story-Fixes: Konrad possession clarity ---
+    _t(tr, F, "konrad_possession_1",
+       en="I observe him more closely. There — his gaze turns glassy. For three, four seconds there is no one behind his eyes. Then he returns, confused, as though he had been dreaming.",
+       fr="Je l'observe plus attentivement. Là — son regard devient vitreux. Pendant trois, quatre secondes, il n'y a personne derrière ses yeux. Puis il revient, confus, comme s'il avait rêvé.",
+       es="Lo observo más de cerca. Ahí — su mirada se vuelve vidriosa. Durante tres, cuatro segundos no hay nadie detrás de sus ojos. Luego vuelve, confuso, como si hubiera estado soñando.",
+       it="Lo osservo più attentamente. Ecco — il suo sguardo diventa vitreo. Per tre, quattro secondi non c'è nessuno dietro i suoi occhi. Poi ritorna, confuso, come se avesse sognato.")
+    _t(tr, F, "konrad_possession_2",
+       en="How... how long was I just...? What did I say?",
+       fr="Com... combien de temps est-ce que je viens de...? Qu'est-ce que j'ai dit ?",
+       es="¿Cuánto... cuánto tiempo acabo de...? ¿Qué he dicho?",
+       it="Quanto... per quanto tempo ho appena...? Cosa ho detto?")
+    _t(tr, F, "konrad_possession_3",
+       en="The creature sleeps and dreams through him. In those moments Konrad is not Konrad — he is a window through which something ancient peers. And the gaps are growing longer. Whole hours, he said, that he cannot account for.",
+       fr="La créature dort et rêve à travers lui. Dans ces moments, Konrad n'est pas Konrad — il est une fenêtre à travers laquelle quelque chose d'ancien regarde. Et les absences s'allongent. Des heures entières, dit-il, dont il ne peut rendre compte.",
+       es="La criatura duerme y sueña a través de él. En esos momentos Konrad no es Konrad — es una ventana a través de la cual algo antiguo mira. Y los vacíos se hacen más largos. Horas enteras, dice, que no puede explicar.",
+       it="La creatura dorme e sogna attraverso di lui. In quei momenti Konrad non è Konrad — è una finestra attraverso la quale qualcosa di antico scruta. E i vuoti si allungano. Ore intere, dice, di cui non riesce a rendere conto.")
+
 def _add_act2_hilde_ritual(tr):
     F = "res://data/dialogue/act2/hilde_ritual.json"
     _t(tr,F,"narration_1", en="Hilde's cottage sits at the edge of the forest, half hidden among ancient oaks. It smells of sage, chamomile, and something I cannot name — earthier, older.", fr="Là chaumière de Hilde se trouve à l'orée de là forêt, à moitié cachée parmi de vieux chênes. Çà sent là sauge, là camomille et quelque chose que je ne saurais nommer — plus terreux, plus ancien.", es="La cabaña de Hilde se encuentra al borde del bosque, medio oculta entre robles centenarios. Huele a salvia, manzanilla y algo que no puedo nombrar — más terroso, más antiguo.", it="La capanna di Hilde sorge ai margini del bosco, seminascosta tra querce antiche. Sa di salvia, camomilla è qualcosa che non riesco a nominare — più terroso, più antico.")
@@ -3318,6 +3384,73 @@ def _add_act2_hilde_ritual(tr):
        es="¿Quién era? ¿Otto? ¿Uno de sus cómplices? ¿O algo completamente distinto? El amuleto en mi bolsillo está caliente, como si estuviera trabajando.",
        it="Chi era? Otto? Uno dei suoi complici? O qualcosa di completamente diverso? L'amuleto nella mia tasca è caldo - come se stesse lavorando.")
 
+    # --- Phase 9 Story-Fixes: Letter riddle, creature duality, Margarethe ---
+    _t(tr, F, "hilde_letter_1",
+       en="Hilde... the letter. Grandmother's letter. How could it reach me in Berlin if she had already been dead for days when I arrived?",
+       fr="Hilde... la lettre. La lettre de grand-mère. Comment a-t-elle pu me parvenir à Berlin si elle était déjà morte depuis des jours quand je suis arrivée ?",
+       es="Hilde... la carta. La carta de la abuela. ¿Cómo pudo llegar a mí en Berlín si ella ya llevaba días muerta cuando llegué?",
+       it="Hilde... la lettera. La lettera della nonna. Come ha potuto raggiungermi a Berlino se era già morta da giorni quando sono arrivata?")
+    _t(tr, F, "hilde_letter_2",
+       en="Ah. That was Margarethe's last spell. She wrote it months ago and bound it with a time-binder — an old ritual that only delivers the letter when the recipient is ready.",
+       fr="Ah. C'était le dernier sortilège de Margarethe. Elle l'a écrite il y a des mois et l'a liée avec un lien temporel — un ancien rituel qui ne délivre la lettre que lorsque le destinataire est prêt.",
+       es="Ah. Ese fue el último hechizo de Margarethe. La escribió hace meses y la ató con un vinculador temporal — un antiguo ritual que solo entrega la carta cuando el destinatario está listo.",
+       it="Ah. Quello era l'ultimo incantesimo di Margarethe. L'ha scritta mesi fa e l'ha legata con un vincolo temporale — un antico rituale che consegna la lettera solo quando il destinatario è pronto.")
+    _t(tr, F, "hilde_letter_3",
+       en="Not when she dies, but when I am ready? That means the letter... waited for me?",
+       fr="Pas quand elle meurt, mais quand JE suis prête ? Cela veut dire que la lettre... m'a attendue ?",
+       es="¿No cuando ella muere, sino cuando YO estoy lista? Eso significa que la carta... ¿me esperó?",
+       it="Non quando lei muore, ma quando IO sono pronta? Vuol dire che la lettera... mi ha aspettata?")
+    _t(tr, F, "hilde_letter_4",
+       en="Exactly. It waited for the right moment. The moment you were strong enough to come to Graubach.",
+       fr="Exactement. Elle a attendu le bon moment. Le moment où tu étais assez forte pour venir à Graubach.",
+       es="Exacto. Esperó el momento adecuado. El momento en que fuiste lo suficientemente fuerte para venir a Graubach.",
+       it="Esattamente. Ha aspettato il momento giusto. Il momento in cui eri abbastanza forte per venire a Graubach.")
+    _t(tr, F, "hilde_creature_dual_1",
+       en="And one more thing, child. About the creature. The elders invented the feeding — not the creature. They interpreted its loneliness as hunger and answered with blood.",
+       fr="Et encore une chose, mon enfant. À propos de la créature. Les anciens ont inventé la nourriture — pas la créature. Ils ont interprété sa solitude comme de la faim et ont répondu avec du sang.",
+       es="Y una cosa más, niña. Sobre la criatura. Los ancianos inventaron la alimentación — no la criatura. Interpretaron su soledad como hambre y respondieron con sangre.",
+       it="E un'altra cosa, bambina. Sulla creatura. Gli anziani hanno inventato la nutrizione — non la creatura. Hanno interpretato la sua solitudine come fame e hanno risposto col sangue.")
+    _t(tr, F, "hilde_creature_dual_2",
+       en="Perhaps that was wrong. Perhaps a conversation would have sufficed.",
+       fr="Peut-être que c'était faux. Peut-être qu'une conversation aurait suffi.",
+       es="Quizás eso estuvo mal. Quizás una conversación habría bastado.",
+       it="Forse era sbagliato. Forse sarebbe bastata una conversazione.")
+    _t(tr, F, "hilde_creature_dual_3",
+       en="Hilde pauses. In the silence I hear the distant singing — quieter than usual, almost questioning.",
+       fr="Hilde fait une pause. Dans le silence, j'entends le chant lointain — plus bas que d'habitude, presque interrogateur.",
+       es="Hilde hace una pausa. En el silencio oigo el canto lejano — más bajo de lo habitual, casi interrogante.",
+       it="Hilde si ferma. Nel silenzio sento il canto lontano — più basso del solito, quasi interrogativo.")
+    _t(tr, F, "hilde_creature_dual_4",
+       en="But who talks to what sleeps beneath the earth?",
+       fr="Mais qui parle à ce qui dort sous la terre ?",
+       es="Pero ¿quién habla con lo que duerme bajo la tierra?",
+       it="Ma chi parla con ciò che dorme sotto terra?")
+    _t(tr, F, "hilde_margarethe_1",
+       en="Georg says Grandmother failed. That her ritual did not work. But you sound as if you know something different.",
+       fr="Georg dit que grand-mère a échoué. Que son rituel n'a pas fonctionné. Mais vous parlez comme si vous saviez autre chose.",
+       es="Georg dice que la abuela fracasó. Que su ritual no funcionó. Pero usted habla como si supiera algo diferente.",
+       it="Georg dice che la nonna ha fallito. Che il suo rituale non ha funzionato. Ma lei parla come se sapesse qualcosa di diverso.")
+    _t(tr, F, "hilde_margarethe_2",
+       en="Georg believes she failed. Margarethe wanted it that way. She only told him half — to protect him.",
+       fr="Georg croit qu'elle a échoué. Margarethe le voulait ainsi. Elle ne lui a dit que la moitié — pour le protéger.",
+       es="Georg cree que fracasó. Margarethe lo quiso así. Solo le contó la mitad — para protegerlo.",
+       it="Georg crede che abbia fallito. Margarethe lo voleva così. Gli ha detto solo la metà — per proteggerlo.")
+    _t(tr, F, "hilde_margarethe_3",
+       en="If Otto knew the ritual was complete, he would have long since... eliminated Georg.",
+       fr="Si Otto savait que le rituel est complet, il aurait depuis longtemps... éliminé Georg.",
+       es="Si Otto supiera que el ritual está completo, hace tiempo que habría... eliminado a Georg.",
+       it="Se Otto sapesse che il rituale è completo, avrebbe da tempo... eliminato Georg.")
+    _t(tr, F, "hilde_margarethe_4",
+       en="Hilde lowers her voice. The shadows in the cottage seem to grow thicker.",
+       fr="Hilde baisse la voix. Les ombres dans la chaumière semblent s'épaissir.",
+       es="Hilde baja la voz. Las sombras en la cabaña parecen espesarse.",
+       it="Hilde abbassa la voce. Le ombre nella capanna sembrano farsi più fitte.")
+    _t(tr, F, "hilde_margarethe_5",
+       en="The complete knowledge lies here. With me. And now with you.",
+       fr="Le savoir complet est ici. Chez moi. Et maintenant chez toi.",
+       es="El conocimiento completo está aquí. Conmigo. Y ahora contigo.",
+       it="La conoscenza completa è qui. Con me. E ora con te.")
+
 
 def _add_act2_the_book(tr):
     F = "res://data/dialogue/act2/the_book.json"
@@ -3536,6 +3669,18 @@ def _add_act2_the_book(tr):
        fr="Je plaque mes mains sur mes oreilles. Ça ne sert à rien. Le chant ne vient pas de l'extérieur. Il vient de l'INTÉRIEUR. Depuis que j'ai touché mon nom, il fait partie de moi.",
        es="Me tapo los oídos con las manos. No ayuda. El canto no viene de fuera. Viene de DENTRO. Desde que toqué mi nombre, es parte de mí.",
        it="Premo le mani sulle orecchie. Non serve. Il canto non viene da fuori. Viene da DENTRO. Da quando ho toccato il mio nome, è parte di me.")
+
+    # --- Phase 9 Story-Fixes: Train woman reference ---
+    _t(tr, F, "zugfrau_1",
+       en="I page back. Dozens of pages, hundreds of names. And then — an old entry: 'Mathilde, 1863'. Beside it a drawing. My breath catches.",
+       fr="Je feuillette en arrière. Des dizaines de pages, des centaines de noms. Et puis — une ancienne entrée : « Mathilde, 1863 ». À côté, un dessin. Mon souffle se coupe.",
+       es="Paso las páginas hacia atrás. Docenas de páginas, cientos de nombres. Y entonces — una entrada antigua: 'Mathilde, 1863'. Junto a ella un dibujo. Se me corta la respiración.",
+       it="Sfoglio all'indietro. Decine di pagine, centinaia di nomi. E poi — una vecchia voce: 'Mathilde, 1863'. Accanto un disegno. Mi si mozza il respiro.")
+    _t(tr, F, "zugfrau_2",
+       en="The drawing shows a woman with empty eye sockets. The blind woman from the train. She was no stranger — she was the last to survive the ritual. She waited sixty years.",
+       fr="Le dessin montre une femme aux orbites vides. La femme aveugle du train. Ce n'était pas une inconnue — c'était la dernière à avoir survécu au rituel. Elle a attendu soixante ans.",
+       es="El dibujo muestra a una mujer con las cuencas de los ojos vacías. La mujer ciega del tren. No era una desconocida — era la última en sobrevivir al ritual. Esperó sesenta años.",
+       it="Il disegno mostra una donna con le orbite vuote. La donna cieca del treno. Non era un'estranea — era l'ultima a sopravvivere al rituale. Ha aspettato sessant'anni.")
 
 
 def _add_act3_allies_choice(tr):
@@ -3902,6 +4047,28 @@ def _add_act3_reality_breaks(tr):
        fr="Tandis qu'Anna dispara\u00eet entre les arbres, je ressens quelque chose de nouveau. Pas de la peur - de la d\u00e9termination. La cr\u00e9ature a peur de moi. Alors j'ai une chance.",
        es="Mientras Anna desaparece entre los \u00e1rboles, siento algo nuevo. No miedo, sino determinaci\u00f3n. La criatura me tiene miedo. Entonces tengo una oportunidad.",
        it="Mentre Anna scompare tra gli alberi, sento qualcosa di nuovo. Non paura - determinazione. La creatura ha paura di me. Allora ho una possibilit\u00e0.")
+
+    # --- Phase 9 Story-Fixes: Anna fear detail ---
+    _t(tr, F, "anna_fear_detail_1",
+       en="Fear? Of what exactly? That I will destroy it?",
+       fr="Peur ? De quoi exactement ? Que je le détruise ?",
+       es="¿Miedo? ¿De qué exactamente? ¿De que lo destruya?",
+       it="Paura? Di cosa esattamente? Che lo distrugga?")
+    _t(tr, F, "anna_fear_detail_2",
+       en="No. It is not afraid you will destroy it. It is afraid you will SEE it and... leave.",
+       fr="Non. Il n'a pas peur que tu le détruises. Il a peur que tu le VOIES et... que tu partes.",
+       es="No. No tiene miedo de que lo destruyas. Tiene miedo de que lo VEAS y... te vayas.",
+       it="No. Non ha paura che tu lo distrugga. Ha paura che tu lo VEDA e... te ne vada.")
+    _t(tr, F, "anna_fear_detail_3",
+       en="Six hundred years alone. And now you are here. What if you leave too?",
+       fr="Six cents ans de solitude. Et maintenant tu es là. Et si tu partais aussi ?",
+       es="Seiscientos años solo. Y ahora estás aquí. ¿Y si tú también te vas?",
+       it="Seicento anni da solo. E ora sei qui. E se anche tu te ne andassi?")
+    _t(tr, F, "anna_fear_narration",
+       en="I understand it suddenly. The creature did not call me out of hunger. Out of hope. Six hundred years of loneliness, and now someone is here who might listen — and it is terrified that I will run away.",
+       fr="Je comprends soudain. La créature ne m'a pas appelée par faim. Par espoir. Six cents ans de solitude, et maintenant quelqu'un est là qui pourrait écouter — et elle est terrifiée à l'idée que je m'enfuie.",
+       es="Lo comprendo de repente. La criatura no me llamó por hambre. Por esperanza. Seiscientos años de soledad, y ahora hay alguien que podría escuchar — y está aterrorizada de que yo huya.",
+       it="Lo capisco all'improvviso. La creatura non mi ha chiamata per fame. Per speranza. Seicento anni di solitudine, e ora c'è qualcuno che potrebbe ascoltare — ed è terrorizzata che io scappi.")
 
 
 def _add_act3_descent(tr):
@@ -4299,12 +4466,45 @@ def _add_act3_descent(tr):
        es="Y mañana... mañana cae la piedra.",
        it="E domani... domani cade la pietra.")
 
+    # --- Phase 9b: Georg catch-up when otto_hostile ---
+    _t(tr, F, "georg_catchup_narration",
+       en="Footsteps on the stairs. Heavy, hurried, but familiar. Georg. He made it.",
+       fr="Des pas dans l'escalier. Lourds, pressés, mais familiers. Georg. Il a réussi.",
+       es="Pasos en la escalera. Pesados, apresurados, pero familiares. Georg. Lo logró.",
+       it="Passi sulle scale. Pesanti, frettolosi, ma familiari. Georg. Ce l'ha fatta.")
+    _t(tr, F, "georg_catchup_1",
+       en="Otto's men are not so brave when it gets dark. They ran when the church started shaking.",
+       fr="Les hommes d'Otto ne sont pas si courageux quand il fait noir. Ils se sont enfuis quand l'église a commencé à trembler.",
+       es="Los hombres de Otto no son tan valientes cuando oscurece. Huyeron cuando la iglesia comenzó a temblar.",
+       it="Gli uomini di Otto non sono così coraggiosi quando si fa buio. Sono scappati quando la chiesa ha iniziato a tremare.")
+    _t(tr, F, "elise_catchup_1",
+       en="Georg! I thought you —",
+       fr="Georg ! Je croyais que tu —",
+       es="¡Georg! Pensé que tú —",
+       it="Georg! Pensavo che tu —")
+    _t(tr, F, "georg_catchup_2",
+       en="I promised Margarethe to watch over you. A blacksmith keeps his word.",
+       fr="J'ai promis à Margarethe de veiller sur toi. Un forgeron tient parole.",
+       es="Le prometí a Margarethe cuidarte. Un herrero cumple su palabra.",
+       it="Ho promesso a Margarethe di vegliare su di te. Un fabbro mantiene la parola.")
+
 
 def _add_act3_preparation(tr):
     F = "res://data/dialogue/act3/preparation.json"
 
     _t(tr, F, "narration_1", en="The last night before the ritual. I sit at my grandmother's table, her journal open, her candle burning. How often did she sit here?", fr="Là dernière nuit avant le rituel. Je suis assise à là table de mà grand-mère, son journal ouvert, sà bougie allumée. Combien de fois s'est-elle assise ici ?", es="La última noche antes del ritual. Estoy sentada a la mesa de mi abuela, su diario abierto, su vela encendida. ¿Cuántas veces se habrá sentado aquí?", it="L'ultima notte prima del rituale. Siedo al tavolo di mia nonna, il suo diario aperto, la sua candela accesa. Quante volte si è seduta qui?")
     _t(tr, F, "narration_2", en="Outside, the sky is wrong. Stars that should not exist, in patterns reminiscent of spirals. The moon is too large and too close.", fr="Dehors, le ciel est faux. Des étoiles qui ne devraient pas exister, dans des motifs qui rappellent des spirales. Là lune est trop grande et trop proche.", es="Afuera, el cielo está mal. Estrellas que no deberían existir, en patrones que recuerdan a espirales. La luna es demasiado grande y está demasiado cerca.", it="Fuori, il cielo è sbagliato. Stelle che non dovrebbero esistere, in schemi che ricordano spirali. La luna è troppo grande è troppo vicina.")
+    # --- Phase 9b: No-journal alternative path ---
+    _t(tr, F, "narration_no_journal",
+       en="I have no journal, no records. Only what the others have told me. Hilde, Georg, Voss — each gave me a piece of the truth. Now I must piece them together.",
+       fr="Je n'ai ni journal, ni notes. Seulement ce que les autres m'ont dit. Hilde, Georg, Voss — chacun m'a donné un morceau de la vérité. Maintenant je dois les assembler.",
+       es="No tengo diario, ni registros. Solo lo que los demás me han contado. Hilde, Georg, Voss — cada uno me dio un pedazo de la verdad. Ahora debo unir las piezas.",
+       it="Non ho un diario, nessun appunto. Solo ciò che gli altri mi hanno detto. Hilde, Georg, Voss — ognuno mi ha dato un pezzo della verità. Ora devo metterli insieme.")
+    _t(tr, F, "narration_no_journal_2",
+       en="Grandmother, what did you know? What would you have told me if you were still here? I must do it without your words. But perhaps she left me enough — in the people she knew.",
+       fr="Grand-mère, que savais-tu ? Que m'aurais-tu dit si tu étais encore là ? Je dois y arriver sans tes mots. Mais peut-être m'a-t-elle laissé assez — dans les gens qu'elle connaissait.",
+       es="Abuela, ¿qué sabías? ¿Qué me habrías dicho si aún estuvieras aquí? Debo hacerlo sin tus palabras. Pero quizás me dejó suficiente — en la gente que conocía.",
+       it="Nonna, cosa sapevi? Cosa mi avresti detto se fossi ancora qui? Devo farcela senza le tue parole. Ma forse mi ha lasciato abbastanza — nelle persone che conosceva.")
     _t(tr, F, "narration_3", en="I read my grandmother's final entries once more. The last pages, written in the days before her death.", fr="Je relis les dernières entrées du journal de mà grand-mère. Les dernières pages, écrites dans les jours précédant sà mort.", es="Releo las últimas entradas del diario de mi abuela. Las últimas páginas, escritas en los días antes de su muerte.", it="Rileggo le ultime annotazioni di mia nonna. Le ultime pagine, scritte nei giorni prima della sua morte.")
     _t(tr, F, "narration_journal_1", en="'I am too old. My body is failing. But Elise will come. The entity shows it to me in its dreams — not as a threat, as a prophecy.'", fr="« Je suis trop vieille. Mon corps me lâche. Mais Elise viendra. L'entité me le montre dans ses rêves — pas comme une menace, comme une prophétie. »", es="'Soy demasiado vieja. Mi cuerpo se rinde. Pero Elise vendrá. La entidad me lo muestra en sus sueños — no como amenaza, sino como profecía.'", it="'Sono troppo vecchia. Il mio corpo cede. Ma Elise verrà. L'entità me lo mostra nei suoi sogni — non come minaccia, come profezia.'")
     _t(tr, F, "narration_journal_2", en="'She has my blood. She has my will. And she has something I never had: the ability to accept the unknown without fearing it.'", fr="« Elle à mon sang. Elle à mà volonté. Et elle à quelque chose que je n'ai jamais eu : là capacité d'accepter l'inconnu sans le craindre. »", es="'Tiene mi sangre. Tiene mi voluntad. Y tiene algo que yo nunca tuve: la capacidad de aceptar lo desconocido sin temerlo.'", it="'Ha il mio sangue. Ha la mia volontà. È ha qualcosa che io non ho mai avuto: la capacità di accettare l'ignoto senza temerlo.'")
@@ -5225,6 +5425,78 @@ def _add_act4_ritual_night(tr):
        es="NO HAS ELEGIDO NINGÚN CAMINO. ENTONCES YO ELIJO POR TI.",
        it="NON HAI SCELTO NESSUN CAMMINO. ALLORA SCELGO IO PER TE.")
 
+    # --- Phase 9 Story-Fixes: Book check, packed items, 30-year logic, Margarethe death ---
+    _t(tr, F, "book_taken_narration",
+       en="The book in my hands pulses. It is warm, alive, as though it had its own heartbeat. The creature recognizes it immediately.",
+       fr="Le livre dans mes mains pulse. Il est chaud, vivant, comme s'il avait son propre battement de cœur. La créature le reconnaît immédiatement.",
+       es="El libro en mis manos pulsa. Está caliente, vivo, como si tuviera su propio latido. La criatura lo reconoce de inmediato.",
+       it="Il libro nelle mie mani pulsa. È caldo, vivo, come se avesse un proprio battito cardiaco. La creatura lo riconosce subito.")
+    _t(tr, F, "book_taken_creature",
+       en="YOU BROUGHT IT. MY BREATH. MY MEMORY.",
+       fr="TU L'AS APPORTÉ. MON SOUFFLE. MA MÉMOIRE.",
+       es="LO HAS TRAÍDO. MI ALIENTO. MI MEMORIA.",
+       it="L'HAI PORTATO. IL MIO RESPIRO. LA MIA MEMORIA.")
+    _t(tr, F, "book_taken_reaction",
+       en="The book vibrates in my hands. The pages turn by themselves — names, hundreds of names, in an ink that glows in the dark.",
+       fr="Le livre vibre dans mes mains. Les pages se tournent d'elles-mêmes — des noms, des centaines de noms, dans une encre qui brille dans le noir.",
+       es="El libro vibra en mis manos. Las páginas se pasan solas — nombres, cientos de nombres, en una tinta que brilla en la oscuridad.",
+       it="Il libro vibra nelle mie mani. Le pagine si girano da sole — nomi, centinaia di nomi, in un inchiostro che brilla nel buio.")
+    _t(tr, F, "book_left_narration",
+       en="On the pedestal in the corner lies the book. I did not take it back then. The creature senses my gaze upon it.",
+       fr="Sur le piédestal dans le coin repose le livre. Je ne l'avais pas pris à l'époque. La créature sent mon regard posé dessus.",
+       es="En el pedestal del rincón está el libro. No lo tomé entonces. La criatura percibe mi mirada sobre él.",
+       it="Sul piedistallo nell'angolo giace il libro. Non l'avevo preso allora. La creatura percepisce il mio sguardo su di esso.")
+    _t(tr, F, "book_left_creature",
+       en="YOU LEFT IT. THAT WAS... WISE. OR FEAR.",
+       fr="TU L'AS LAISSÉ. C'ÉTAIT... SAGE. OU DE LA PEUR.",
+       es="LO DEJASTE. ESO FUE... SABIO. O MIEDO.",
+       it="L'HAI LASCIATO. È STATO... SAGGIO. O PAURA.")
+    _t(tr, F, "book_left_reaction",
+       en="The book remains closed. But the spiral on the cover turns slowly, as though watching me.",
+       fr="Le livre reste fermé. Mais la spirale sur la couverture tourne lentement, comme si elle m'observait.",
+       es="El libro permanece cerrado. Pero la espiral en la portada gira lentamente, como si me observara.",
+       it="Il libro resta chiuso. Ma la spirale sulla copertina gira lentamente, come se mi stesse osservando.")
+    _t(tr, F, "packed_books_narration",
+       en="My books lie open beside me. A passage about binding rituals in pre-Christian communities comes to mind — the resonance of the spoken word, the connection between sound and earth.",
+       fr="Mes livres sont ouverts à côté de moi. Un passage sur les rituels de liaison dans les communautés précrétiennes me revient — la résonance du mot prononcé, le lien entre le son et la terre.",
+       es="Mis libros están abiertos junto a mí. Me viene a la mente un pasaje sobre rituales de vinculación en comunidades precristianas — la resonancia de la palabra hablada, la conexión entre sonido y tierra.",
+       it="I miei libri giacciono aperti accanto a me. Mi viene in mente un passaggio sui rituali di legame nelle comunità precristiane — la risonanza della parola pronunciata, il legame tra suono e terra.")
+    _t(tr, F, "packed_books_creature",
+       en="YOU CARRY WORDS. WORDS HAVE POWER.",
+       fr="TU PORTES DES MOTS. LES MOTS ONT DU POUVOIR.",
+       es="LLEVAS PALABRAS. LAS PALABRAS TIENEN PODER.",
+       it="PORTI PAROLE. LE PAROLE HANNO POTERE.")
+    _t(tr, F, "packed_cross_narration",
+       en="My mother's cross pulses in my hand — not divine, but... human. Warm. It protects me for a moment from the overwhelm as the entity's consciousness rolls over me.",
+       fr="La croix de ma mère pulse dans ma main — pas divine, mais... humaine. Chaude. Elle me protège un instant de la submersion quand la conscience de l'entité déferle sur moi.",
+       es="La cruz de mi madre pulsa en mi mano — no divina, pero... humana. Cálida. Me protege un momento de la abrumación cuando la consciencia de la entidad me arrolla.",
+       it="La croce di mia madre pulsa nella mia mano — non divina, ma... umana. Calda. Mi protegge per un istante dal sovraccarico quando la coscienza dell'entità mi travolge.")
+    _t(tr, F, "packed_camera_narration",
+       en="Through the camera's lens I see it. The connection. Spirals in the air, threads of light between the stones. Visible, tangible. The camera shows what the naked eye cannot grasp.",
+       fr="À travers l'objectif de l'appareil photo, je le vois. La connexion. Des spirales dans l'air, des fils de lumière entre les pierres. Visible, tangible. L'appareil montre ce que l'œil nu ne peut saisir.",
+       es="A través del objetivo de la cámara lo veo. La conexión. Espirales en el aire, hilos de luz entre las piedras. Visible, tangible. La cámara muestra lo que el ojo desnudo no puede captar.",
+       it="Attraverso l'obiettivo della macchina fotografica lo vedo. La connessione. Spirali nell'aria, fili di luce tra le pietre. Visibile, tangibile. La macchina mostra ciò che l'occhio nudo non riesce ad afferrare.")
+    _t(tr, F, "creature_names_1",
+       en="HUNDREDS OF NAMES. NOT ALL VICTIMS. SOME I TOUCHED. SOME TOUCHED ME. VESSELS. SEERS. ONLY EVERY THIRTY YEARS ONE WITH THE CROSS.",
+       fr="DES CENTAINES DE NOMS. PAS TOUS DES VICTIMES. CERTAINS, JE LES AI TOUCHÉS. CERTAINS M'ONT TOUCHÉ. DES RÉCEPTACLES. DES VOYANTS. SEULEMENT TOUS LES TRENTE ANS UN AVEC LA CROIX.",
+       es="CIENTOS DE NOMBRES. NO TODOS VÍCTIMAS. A ALGUNOS LOS TOQUÉ YO. ALGUNOS ME TOCARON A MÍ. RECIPIENTES. VIDENTES. SOLO CADA TREINTA AÑOS UNO CON LA CRUZ.",
+       it="CENTINAIA DI NOMI. NON TUTTI VITTIME. ALCUNI LI HO TOCCATI IO. ALCUNI HANNO TOCCATO ME. RICETTACOLI. VEGGENTI. SOLO OGNI TRENT'ANNI UNO CON LA CROCE.")
+    _t(tr, F, "creature_margarethe_1",
+       en="THE OLD ONE. SHE CAME TO ME. AT THE END. OF HER OWN WILL. I DID NOT TAKE HER. SHE... SAID FAREWELL.",
+       fr="LA VIEILLE. ELLE EST VENUE À MOI. À LA FIN. DE SA PROPRE VOLONTÉ. JE NE L'AI PAS PRISE. ELLE S'EST... DIT AU REVOIR.",
+       es="LA VIEJA. VINO A MÍ. AL FINAL. POR SU PROPIA VOLUNTAD. NO LA TOMÉ. ELLA SE... DESPIDIÓ.",
+       it="LA VECCHIA. È VENUTA DA ME. ALLA FINE. DI SUA VOLONTÀ. NON L'HO PRESA. LEI HA... DETTO ADDIO.")
+    _t(tr, F, "creature_margarethe_2",
+       en="Grandmother. She died peacefully. She went to the creature of her own will, had her last conversation with it. No murder, no accident. A farewell.",
+       fr="Grand-mère. Elle est morte paisiblement. Elle est allée vers la créature de son plein gré, a eu sa dernière conversation avec elle. Pas de meurtre, pas d'accident. Un adieu.",
+       es="La abuela. Murió en paz. Fue a la criatura por voluntad propia, tuvo su última conversación con ella. Ni asesinato, ni accidente. Una despedida.",
+       it="La nonna. È morta serenamente. È andata dalla creatura per sua volontà, ha avuto la sua ultima conversazione con lei. Nessun omicidio, nessun incidente. Un addio.")
+    _t(tr, F, "creature_margarethe_3",
+       en="My eyes burn. Grandmother did not have to die alone. She had someone with her — even if that someone was older than humankind.",
+       fr="Mes yeux brûlent. Grand-mère n'a pas dû mourir seule. Elle avait quelqu'un auprès d'elle — même si ce quelqu'un était plus ancien que l'humanité.",
+       es="Me arden los ojos. La abuela no tuvo que morir sola. Tenía a alguien a su lado — aunque ese alguien fuera más antiguo que la humanidad.",
+       it="Mi bruciano gli occhi. La nonna non ha dovuto morire sola. Aveva qualcuno accanto — anche se quel qualcuno era più antico dell'umanità.")
+
 
 def _add_act4_ending_seal(tr):
     F = "res://data/dialogue/act4/ending_seal.json"
@@ -5465,6 +5737,33 @@ def _add_act4_ending_seal(tr):
        it="Il rituale di legame è riuscito. L'entità dorme di nuovo, trattenuta dal canto invece che dal sangue. Niente più sacrifici. I trent'anni di ricerche della nonna hanno dato i loro frutti.",
        field="content")
 
+    # --- Phase 9 Story-Fixes: Epilog nodes + trusted_konrad ---
+    _t(tr, F, "seal_anna_epilog",
+       en="Anna's eyes grow clearer by the day. The singing fades, and with it her visions. For the first time she is a normal child.",
+       fr="Les yeux d'Anna deviennent plus clairs de jour en jour. Le chant s'estompe, et avec lui ses visions. Pour la première fois, elle est une enfant normale.",
+       es="Los ojos de Anna se aclaran día a día. El canto se desvanece, y con él sus visiones. Por primera vez es una niña normal.",
+       it="Gli occhi di Anna diventano più chiari giorno dopo giorno. Il canto si affievolisce, e con esso le sue visioni. Per la prima volta è una bambina normale.")
+    _t(tr, F, "seal_otto_epilog",
+       en="Otto Reinhardt leaves Graubach a week after the ritual. No one stops him. No one misses him.",
+       fr="Otto Reinhardt quitte Graubach une semaine après le rituel. Personne ne l'arrête. Personne ne le regrette.",
+       es="Otto Reinhardt deja Graubach una semana después del ritual. Nadie lo detiene. Nadie lo echa de menos.",
+       it="Otto Reinhardt lascia Graubach una settimana dopo il rituale. Nessuno lo ferma. Nessuno lo rimpiange.")
+    _t(tr, F, "seal_candle_epilog",
+       en="The candle on Grandmother's nightstand goes out at the moment the entity falls asleep. Quietly. Peacefully.",
+       fr="La bougie sur la table de nuit de grand-mère s'éteint au moment où l'entité s'endort. Doucement. Paisiblement.",
+       es="La vela en la mesita de noche de la abuela se apaga en el momento en que la entidad se duerme. En silencio. En paz.",
+       it="La candela sul comodino della nonna si spegne nel momento in cui l'entità si addormenta. Piano. Serenamente.")
+    _t(tr, F, "konrad_trusted_seal",
+       en="Konrad appears the next morning. The spirals on his hand are fading. He weeps. 'I am free,' he whispers. And for the first time I believe him.",
+       fr="Konrad apparaît le lendemain matin. Les spirales sur sa main s'estompent. Il pleure. « Je suis libre », murmure-t-il. Et pour la première fois, je le crois.",
+       es="Konrad aparece a la mañana siguiente. Las espirales en su mano se desvanecen. Llora. 'Soy libre', susurra. Y por primera vez le creo.",
+       it="Konrad appare la mattina dopo. Le spirali sulla sua mano si stanno sbiadendo. Piange. 'Sono libero', sussurra. E per la prima volta gli credo.")
+    _t(tr, F, "konrad_untrusted_seal",
+       en="Konrad vanished on the night of the ritual. No one saw him leave. Some say he lives in the forest now. Some say the forest took him.",
+       fr="Konrad a disparu la nuit du rituel. Personne ne l'a vu partir. Certains disent qu'il vit dans la forêt maintenant. Certains disent que la forêt l'a pris.",
+       es="Konrad desapareció la noche del ritual. Nadie lo vio irse. Algunos dicen que ahora vive en el bosque. Algunos dicen que el bosque se lo llevó.",
+       it="Konrad è scomparso la notte del rituale. Nessuno l'ha visto andarsene. Alcuni dicono che ora vive nel bosco. Alcuni dicono che il bosco l'ha preso.")
+
 
 def _add_act4_ending_escape(tr):
     F = "res://data/dialogue/act4/ending_escape.json"
@@ -5680,6 +5979,18 @@ def _add_act4_ending_escape(tr):
        es="Graubach ha desaparecido. Georg se sacrificó para que yo pudiera escapar. Su martillo es todo lo que me queda. Y la pregunta que nunca me deja: ¿sobrevivió?",
        it="Graubach è scomparsa. Georg si è sacrificato perché io potessi fuggire. Il suo martello è tutto ciò che mi resta. È la domanda che non mi lascia mai: è sopravvissuto?",
        field="content")
+
+    # --- Phase 9 Story-Fixes: Epilog nodes ---
+    _t(tr, F, "escape_anna_epilog",
+       en="In her darkest nights Elise wonders whether Anna survived. A child with eyes that saw too much.",
+       fr="Dans ses nuits les plus sombres, Elise se demande si Anna a survécu. Une enfant aux yeux qui voyaient trop.",
+       es="En sus noches más oscuras, Elise se pregunta si Anna sobrevivió. Una niña con ojos que veían demasiado.",
+       it="Nelle sue notti più buie, Elise si chiede se Anna sia sopravvissuta. Una bambina con occhi che vedevano troppo.")
+    _t(tr, F, "escape_otto_epilog",
+       en="Otto? Vanished with the village. Buried beneath his own silence.",
+       fr="Otto ? Disparu avec le village. Enseveli sous son propre silence.",
+       es="¿Otto? Desaparecido con el pueblo. Enterrado bajo su propio silencio.",
+       it="Otto? Scomparso con il villaggio. Sepolto sotto il suo stesso silenzio.")
 
 
 def _add_act4_ending_pact(tr):
@@ -5922,6 +6233,29 @@ def _add_act4_ending_pact(tr):
        es="Sin sangre. Sin sacrificio. Sin receptáculo. Solo una promesa: cada año volveré y le haré compañía a la entidad. Aceptó. La abuela allanó el camino. Yo lo recorreré hasta el final.",
        it="Niente sangue. Niente sacrificio. Nessun ricettacolo. Solo una promessa: ogni anno tornerò è farò compagnia all'entità. Ha accettato. La nonna ha aperto la strada. Io la percorrerò fino in fondo.",
        field="content")
+
+    # --- Phase 9b: Konrad epilog ---
+    _t(tr, F, "pact_konrad_epilog",
+       en="Konrad stands at the fountain as Elise leaves the chamber. The spirals on his hands are already fading. For the first time in thirty years, his gaze belongs to himself.",
+       fr="Konrad se tient près de la fontaine quand Elise quitte la chambre. Les spirales sur ses mains s'estompent déjà. Pour la première fois en trente ans, son regard lui appartient.",
+       es="Konrad está junto a la fuente cuando Elise sale de la cámara. Las espirales en sus manos ya se desvanecen. Por primera vez en treinta años, su mirada le pertenece.",
+       it="Konrad è alla fontana quando Elise esce dalla camera. Le spirali sulle sue mani stanno già svanendo. Per la prima volta in trent'anni, il suo sguardo appartiene a lui stesso.")
+    _t(tr, F, "pact_konrad_epilog_2",
+       en="'It's letting me go,' he says quietly. 'I can feel it. It doesn't need me anymore.' He weeps — not from grief. From relief.",
+       fr="« Il me laisse partir », dit-il doucement. « Je le sens. Il n'a plus besoin de moi. » Il pleure — pas de chagrin. De soulagement.",
+       es="'Me está soltando', dice en voz baja. 'Puedo sentirlo. Ya no me necesita.' Llora — no de pena. De alivio.",
+       it="'Mi sta lasciando andare', dice piano. 'Lo sento. Non ha più bisogno di me.' Piange — non di dolore. Di sollievo.")
+    # --- Phase 9 Story-Fixes: Epilog nodes ---
+    _t(tr, F, "pact_anna_epilog",
+       en="Anna visits Elise every autumn. 'It sings differently,' she says. 'More content.' Anna smiles — for the first time without fear.",
+       fr="Anna rend visite à Elise chaque automne. « Il chante différemment », dit-elle. « Plus content. » Anna sourit — pour la première fois sans peur.",
+       es="Anna visita a Elise cada otoño. 'Canta diferente', dice. 'Más contento.' Anna sonríe — por primera vez sin miedo.",
+       it="Anna fa visita a Elise ogni autunno. 'Canta diversamente', dice. 'Più soddisfatto.' Anna sorride — per la prima volta senza paura.")
+    _t(tr, F, "pact_otto_epilog",
+       en="Otto leaves the village when he realizes the tradition is over. His life's work — meaningless.",
+       fr="Otto quitte le village quand il comprend que la tradition est terminée. L'œuvre de sa vie — sans signification.",
+       es="Otto deja el pueblo cuando comprende que la tradición ha terminado. La obra de su vida — sin sentido.",
+       it="Otto lascia il villaggio quando capisce che la tradizione è finita. L'opera della sua vita — senza significato.")
 
 
 def _add_act4_ending_truth(tr):
@@ -6211,6 +6545,24 @@ def _add_act4_ending_truth(tr):
        it="L'entità non è il nostro nemico. È un vicino, intrappolato tra i mondi, seicento anni da solo. I sacrifici non sono mai stati necessari. Aveva solo bisogno di qualcuno che ascoltasse. Sono la prima che ha ascoltato.",
        field="content")
 
+    # --- Phase 9b: Konrad epilog ---
+    _t(tr, F, "truth_konrad_epilog",
+       en="Konrad stands at the church entrance as the morning light falls through the windows. The glassy moments are over. His eyes are clear. 'It sleeps peacefully,' he whispers. 'For the first time it is not dreaming through me.'",
+       fr="Konrad se tient à l'entrée de l'église tandis que la lumière du matin traverse les vitraux. Les moments vitreux sont terminés. Ses yeux sont clairs. « Il dort paisiblement », murmure-t-il. « Pour la première fois, il ne rêve pas à travers moi. »",
+       es="Konrad está en la entrada de la iglesia mientras la luz de la mañana atraviesa las ventanas. Los momentos vidriosos han terminado. Sus ojos están claros. 'Duerme en paz', susurra. 'Por primera vez no sueña a través de mí.'",
+       it="Konrad è all'ingresso della chiesa mentre la luce del mattino filtra dalle finestre. I momenti vitrei sono finiti. I suoi occhi sono limpidi. 'Dorme in pace', sussurra. 'Per la prima volta non sogna attraverso di me.'")
+    # --- Phase 9 Story-Fixes: Epilog nodes ---
+    _t(tr, F, "truth_otto_epilog",
+       en="Otto stands at the edge of the village and watches the sunrise. He weeps. For thirty years he believed the sacrifices were necessary. They never were.",
+       fr="Otto se tient au bord du village et regarde le lever du soleil. Il pleure. Pendant trente ans, il a cru que les sacrifices étaient nécessaires. Ils ne l'ont jamais été.",
+       es="Otto está al borde del pueblo y observa el amanecer. Llora. Durante treinta años creyó que los sacrificios eran necesarios. Nunca lo fueron.",
+       it="Otto sta ai margini del villaggio e guarda l'alba. Piange. Per trent'anni ha creduto che i sacrifici fossero necessari. Non lo sono mai stati.")
+    _t(tr, F, "truth_candle_epilog",
+       en="In Grandmother's house the candle goes out. But the scent of honey and herbs remains.",
+       fr="Dans la maison de grand-mère, la bougie s'éteint. Mais l'odeur de miel et d'herbes reste.",
+       es="En la casa de la abuela la vela se apaga. Pero el olor a miel y hierbas permanece.",
+       it="Nella casa della nonna la candela si spegne. Ma il profumo di miele ed erbe resta.")
+
 
 def _add_act4_ending_sacrifice(tr):
     F = "res://data/dialogue/act4/ending_sacrifice.json"
@@ -6423,6 +6775,28 @@ def _add_act4_ending_sacrifice(tr):
        it="Ho preso il posto di Konrad come ricettacolo. Volontariamente. L'entità è io ora condividiamo un corpo, una mente. Non è la fine. È l'inizio di una coesistenza.",
        field="content")
 
+    # --- Phase 9 Story-Fixes: Epilog nodes + trusted_konrad ---
+    _t(tr, F, "sacrifice_anna_epilog",
+       en="Anna understands it first. 'The singing sounds different,' she whispers. 'Warmer. Like a conversation.' She places her hand on Elise's shoulder.",
+       fr="Anna comprend la première. « Le chant sonne différemment », murmure-t-elle. « Plus chaud. Comme une conversation. » Elle pose sa main sur l'épaule d'Elise.",
+       es="Anna lo entiende primero. 'El canto suena diferente', susurra. 'Más cálido. Como una conversación.' Pone su mano en el hombro de Elise.",
+       it="Anna lo capisce per prima. 'Il canto suona diverso', sussurra. 'Più caldo. Come una conversazione.' Posa la mano sulla spalla di Elise.")
+    _t(tr, F, "sacrifice_otto_epilog",
+       en="Otto never understands. He leaves because the tradition no longer makes sense. His last glance back is empty.",
+       fr="Otto ne comprend jamais. Il part parce que la tradition n'a plus de sens. Son dernier regard en arrière est vide.",
+       es="Otto nunca lo entiende. Se va porque la tradición ya no tiene sentido. Su última mirada atrás está vacía.",
+       it="Otto non capisce mai. Se ne va perché la tradizione non ha più senso. Il suo ultimo sguardo indietro è vuoto.")
+    _t(tr, F, "konrad_trusted_sacrifice",
+       en="You believed me. At the village square, when all the others feared me. You looked at me and saw a person, not a monster.",
+       fr="Tu m'as cru. Sur la place du village, quand tous les autres me craignaient. Tu m'as regardé et tu as vu un être humain, pas un monstre.",
+       es="Me creíste. En la plaza del pueblo, cuando todos los demás me temían. Me miraste y viste a una persona, no a un monstruo.",
+       it="Mi hai creduto. Nella piazza del villaggio, quando tutti gli altri mi temevano. Mi hai guardato e hai visto una persona, non un mostro.")
+    _t(tr, F, "konrad_untrusted_sacrifice",
+       en="You barely knew me. And yet... why? Why for me?",
+       fr="Tu me connaissais à peine. Et pourtant... pourquoi ? Pourquoi pour moi ?",
+       es="Apenas me conocías. Y sin embargo... ¿por qué? ¿Por qué por mí?",
+       it="Mi conoscevi appena. Eppure... perché? Perché per me?")
+
 
 def _add_act4_ending_awakening(tr):
     F = "res://data/dialogue/act4/ending_awakening.json"
@@ -6619,6 +6993,24 @@ def _add_act4_ending_awakening(tr):
        es="He fracasado. La entidad ha despertado. Graubach ya no existe. Y el canto... el canto ya no se detiene.",
        it="Ho fallito. L'entità si è risvegliata. Graubach non esiste più. È il canto... il canto non si ferma più.",
        field="content")
+
+    # --- Phase 9b: Konrad epilog ---
+    _t(tr, F, "awakening_konrad_epilog",
+       en="Konrad stands in the middle of the village square. He smiles. The spirals on his hands glow. For the first time he is no longer a vessel — he is a bridge. The entity flows through him into the world, and Konrad lets it happen. Thirty years of struggle, and in the end he surrenders — not from weakness, but from exhaustion.",
+       fr="Konrad se tient au milieu de la place du village. Il sourit. Les spirales sur ses mains brillent. Pour la première fois, il n'est plus un réceptacle — il est un pont. L'entité coule à travers lui dans le monde, et Konrad la laisse faire. Trente ans de lutte, et à la fin il se rend — non par faiblesse, mais par épuisement.",
+       es="Konrad está en medio de la plaza del pueblo. Sonríe. Las espirales en sus manos brillan. Por primera vez ya no es un receptáculo — es un puente. La entidad fluye a través de él hacia el mundo, y Konrad lo permite. Treinta años de lucha, y al final se rinde — no por debilidad, sino por agotamiento.",
+       it="Konrad è in mezzo alla piazza del villaggio. Sorride. Le spirali sulle sue mani brillano. Per la prima volta non è più un ricettacolo — è un ponte. L'entità fluisce attraverso di lui nel mondo, e Konrad lo lascia accadere. Trent'anni di lotta, e alla fine si arrende — non per debolezza, ma per stanchezza.")
+    # --- Phase 9 Story-Fixes: Epilog nodes ---
+    _t(tr, F, "awakening_anna_epilog",
+       en="Anna smiles. She always knew. 'It only wanted to be seen,' she whispers as the walls open.",
+       fr="Anna sourit. Elle a toujours su. « Il voulait seulement être vu », murmure-t-elle tandis que les murs s'ouvrent.",
+       es="Anna sonríe. Siempre lo supo. 'Solo quería ser visto', susurra mientras las paredes se abren.",
+       it="Anna sorride. L'ha sempre saputo. 'Voleva solo essere visto', sussurra mentre le pareti si aprono.")
+    _t(tr, F, "awakening_otto_epilog",
+       en="Otto's commands fade away. His system of power — meaningless before something older than power.",
+       fr="Les ordres d'Otto se perdent. Son système de pouvoir — sans signification face à quelque chose de plus ancien que le pouvoir.",
+       es="Las órdenes de Otto se desvanecen. Su sistema de poder — insignificante ante algo más antiguo que el poder.",
+       it="Gli ordini di Otto svaniscono. Il suo sistema di potere — insignificante davanti a qualcosa di più antico del potere.")
 
 
 def generate_auto_translations():

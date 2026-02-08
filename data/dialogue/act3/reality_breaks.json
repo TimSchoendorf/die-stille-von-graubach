@@ -186,22 +186,22 @@
 			"choices": [
 				{
 					"text": "Ich bin hier, um dich zu binden. Wie meine Großmutter es wollte.",
-					"set_flags": {
-						"courage": 5
+					"add_flags": {
+						"courage": 3
 					},
 					"next": "nightmare_defy"
 				},
 				{
 					"text": "Ich habe keine Angst vor dir.",
-					"set_flags": {
-						"courage": 8
+					"add_flags": {
+						"courage": 5
 					},
 					"next": "nightmare_brave"
 				},
 				{
 					"text": "Nichts sagen. Nur standhalten.",
-					"set_flags": {
-						"courage": 3
+					"add_flags": {
+						"courage": 1
 					},
 					"next": "nightmare_endure"
 				}
@@ -406,6 +406,32 @@
 			"speaker": "anna",
 			"expression": "lucid",
 			"text": "Es hat Angst vor dir, Elise. Deshalb werden die Träume stärker. Es versucht, dich zu verwirren, bevor du handeln kannst.",
+			"next": "anna_fear_detail_1"
+		},
+		"anna_fear_detail_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Angst? Wovor genau? Dass ich es zerstöre?",
+			"next": "anna_fear_detail_2"
+		},
+		"anna_fear_detail_2": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Nein. Es hat nicht Angst, dass du es zerstörst. Es hat Angst, dass du es SIEHST und... weggehst.",
+			"next": "anna_fear_detail_3"
+		},
+		"anna_fear_detail_3": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "afraid",
+			"text": "Sechshundert Jahre allein. Und jetzt bist du da. Was, wenn du auch weggehst?",
+			"next": "anna_fear_narration"
+		},
+		"anna_fear_narration": {
+			"type": "narration",
+			"text": "Ich verstehe es plötzlich. Die Kreatur hat mich nicht aus Hunger gerufen. Aus Hoffnung. Sechshundert Jahre Einsamkeit, und jetzt ist jemand da, der zuhören könnte - und es hat Todesangst, dass ich weglaufe.",
 			"next": "narration_anna_realization"
 		},
 		"narration_anna_realization": {

@@ -67,6 +67,11 @@ func select_choice(index: int) -> void:
 	for flag_name in set_flags:
 		GameManager.set_flag(flag_name, set_flags[flag_name])
 
+	# Add flags from this choice (additive)
+	var add_flags: Dictionary = choice.get("add_flags", {})
+	for flag_name in add_flags:
+		GameManager.add_flag(flag_name, add_flags[flag_name])
+
 	# Navigate to the choice's target
 	var next_id: String = choice.get("next", "")
 	if next_id.is_empty():
@@ -120,6 +125,9 @@ func _process_current_node() -> void:
 			_go_to_next()
 		"set_flag":
 			_handle_set_flag(node)
+			_go_to_next()
+		"add_flag":
+			_handle_add_flag(node)
 			_go_to_next()
 		"flag_check":
 			_handle_flag_check(node)
@@ -222,13 +230,37 @@ func _handle_set_flag(node: Dictionary) -> void:
 		GameManager.set_flag(flag_name, value)
 
 
+func _handle_add_flag(node: Dictionary) -> void:
+	var flag_name: String = node.get("flag", "")
+	var value: int = node.get("value", 1)
+	if not flag_name.is_empty():
+		GameManager.add_flag(flag_name, value)
+
+
 func _handle_flag_check(node: Dictionary) -> void:
 	var flag_name: String = node.get("flag", "")
 	var expected_value: int = node.get("value", 1)
+	var compare: String = node.get("compare", "eq")
 	var true_next: String = node.get("true_next", "")
 	var false_next: String = node.get("false_next", "")
 
-	if GameManager.get_flag(flag_name) == expected_value:
+	var current_value: int = GameManager.get_flag(flag_name)
+	var result: bool = false
+	match compare:
+		"eq":
+			result = current_value == expected_value
+		"gte":
+			result = current_value >= expected_value
+		"gt":
+			result = current_value > expected_value
+		"lte":
+			result = current_value <= expected_value
+		"lt":
+			result = current_value < expected_value
+		_:
+			result = current_value == expected_value
+
+	if result:
 		if not true_next.is_empty():
 			_current_node_id = true_next
 			_process_current_node()

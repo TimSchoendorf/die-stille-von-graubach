@@ -251,8 +251,10 @@
 				{
 					"text": "Ich gehe nirgendwohin, bis ich die Wahrheit kenne.",
 					"set_flags": {
-						"defied_voss": 1,
-						"courage": 7
+						"defied_voss": 1
+					},
+					"add_flags": {
+						"courage": 3
 					},
 					"next": "voss_defied"
 				}
@@ -629,7 +631,7 @@
 		"hilde_12": {
 			"type": "dialogue",
 			"speaker": "hilde",
-			"text": "Deine Großmutter kannte beide Wege. Sie hat dreißig Jahre lang gewartet und sich vorbereitet. Sie wollte es diesmal anders machen - ohne Opfer.",
+			"text": "Deine Großmutter kannte beide Wege. Sie hat dreißig Jahre lang gewartet und sich vorbereitet. Sie wollte es diesmal anders machen - ohne Blutvergießen.",
 			"next": "hilde_13"
 		},
 		"hilde_13": {
@@ -682,7 +684,7 @@
 		},
 		"school_2": {
 			"type": "narration",
-			"text": "An der Tafel steht ein Mann und erklärt etwas. Konrad Müller. Bei Tageslicht sieht er... normal aus. Freundlich. Charismatisch sogar.",
+			"text": "An der Tafel steht ein Mann und erklärt etwas. Die Kinder nennen ihn 'Herr Müller'. Konrad Müller - der Mann von letzter Nacht. Bei Tageslicht sieht er... normal aus. Freundlich. Charismatisch sogar.",
 			"next": "school_3"
 		},
 		"school_3": {
@@ -1212,6 +1214,31 @@
 			"entry_id": "meeting_otto",
 			"title": "Bürgermeister Reinhardt",
 			"content": "Bürgermeister Otto Reinhardt. Jovial, aber mit stählerner Kontrolle. Er will, dass ich bis zur Beerdigung bleibe - 'nächste Woche, nach der...' Er hat sich selbst unterbrochen. Er log über die drei Tage, in denen Großmutter allein lag. Was findet vor der Beerdigung statt?",
+			"next": "otto_motivation_1"
+		},
+		"otto_motivation_1": {
+			"type": "narration",
+			"text": "Auf dem Rückweg denke ich an den Bürgermeister. An seine Selbstsicherheit. An das Gewicht seiner Worte - nicht wie ein Mann, der droht, sondern wie einer, der absolut überzeugt ist.",
+			"next": "otto_motivation_2"
+		},
+		"otto_motivation_2": {
+			"type": "narration",
+			"text": "Georg hat mir einmal erzählt, dass Ottos Vater 1893 Bürgermeister war. Und dessen Vater davor. Die Reinhardts regieren Graubach seit Generationen - und profitieren davon.",
+			"next": "otto_motivation_3"
+		},
+		"otto_motivation_3": {
+			"type": "narration",
+			"text": "Der Wald schützt ihr Land. Die Ernten auf den Reinhardt-Feldern sind unnatürlich gut, selbst in schlechten Jahren. Die Familie bleibt gesund, während andere Kinder an Fieber sterben.",
+			"next": "otto_motivation_4"
+		},
+		"otto_motivation_4": {
+			"type": "narration",
+			"text": "Otto handelt nicht nur aus Tradition. Er handelt aus Eigennutz. Und das Schlimmste daran: Er glaubt wirklich daran. Er ist überzeugt, dass die Opfer nötig sind. Dass er das Richtige tut.",
+			"next": "otto_motivation_5"
+		},
+		"otto_motivation_5": {
+			"type": "narration",
+			"text": "Ein Verrückter wäre einfacher. Einen Verrückten kann man entlarven. Aber einen Gläubigen? Einen Gläubigen muss man brechen.",
 			"next": "narration_evening_1"
 		},
 		"narration_evening_1": {

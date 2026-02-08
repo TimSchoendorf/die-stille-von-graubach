@@ -44,7 +44,7 @@
 				{
 					"text": "Georg als Hauptverbündeten wählen - Stärke und Loyalität",
 					"set_flags": {
-						"ally_georg": 1,
+						"allied_georg": 1,
 						"georg_trust": 10
 					},
 					"next": "ally_georg"
@@ -52,7 +52,7 @@
 				{
 					"text": "Hilde als Hauptverbündete wählen - Wissen und Erfahrung",
 					"set_flags": {
-						"ally_hilde": 1,
+						"allied_hilde": 1,
 						"hilde_trust": 10
 					},
 					"next": "ally_hilde"
@@ -60,7 +60,7 @@
 				{
 					"text": "Voss als Hauptverbündeten wählen - Zugang und Reue",
 					"set_flags": {
-						"ally_voss": 1,
+						"allied_voss": 1,
 						"voss_trust": 10
 					},
 					"next": "ally_voss"

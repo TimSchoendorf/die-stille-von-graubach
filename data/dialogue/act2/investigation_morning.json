@@ -247,7 +247,7 @@
 		},
 		"read_journal_6": {
 			"type": "narration",
-			"text": "'1923: Ich habe den Namen gefunden. In dem Buch in der Kammer. Elise Margarethe Brandt. Geschrieben in einer Tinte, die pulsiert. Meine Enkelin. Die noch gar nicht geboren ist.'",
+			"text": "'1923: Ich habe den Namen gefunden. In dem Buch in der Kammer. Elise Margarethe Brandt. Geschrieben in einer Tinte, die pulsiert. Meine Enkelin. Die in Berlin studiert und nichts von alledem ahnt.'",
 			"next": "effect_name_shock"
 		},
 		"effect_name_shock": {

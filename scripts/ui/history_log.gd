@@ -25,10 +25,10 @@ func _setup_ui() -> void:
 	var margin := MarginContainer.new()
 	margin.position = Vector2(0, 0)
 	margin.size = Vector2(1920, 1080)
-	margin.add_theme_constant_override("margin_left", 200)
-	margin.add_theme_constant_override("margin_right", 200)
-	margin.add_theme_constant_override("margin_top", 60)
-	margin.add_theme_constant_override("margin_bottom", 60)
+	margin.add_theme_constant_override("margin_left", UITheme.margin_h())
+	margin.add_theme_constant_override("margin_right", UITheme.margin_h())
+	margin.add_theme_constant_override("margin_top", UITheme.margin_v())
+	margin.add_theme_constant_override("margin_bottom", UITheme.margin_v())
 	add_child(margin)
 
 	var vbox := VBoxContainer.new()
@@ -39,7 +39,7 @@ func _setup_ui() -> void:
 	var title := Label.new()
 	title.text = Locale.t("HISTORY_TITLE")
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 34)
+	title.add_theme_font_size_override("font_size", UITheme.s(34))
 	title.add_theme_color_override("font_color", UITheme.GOLD)
 	title.add_theme_font_override("font", UITheme.font_title())
 	vbox.add_child(title)
@@ -58,7 +58,7 @@ func _setup_ui() -> void:
 
 	var close_btn := Button.new()
 	close_btn.text = Locale.t("CLOSE")
-	close_btn.custom_minimum_size = Vector2(200, 45)
+	close_btn.custom_minimum_size = Vector2(UITheme.s(200), UITheme.s(45))
 	close_btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	UITheme.style_button(close_btn, 22)
 	close_btn.pressed.connect(close_log)
@@ -92,7 +92,7 @@ func _rebuild_content() -> void:
 		rtl.fit_content = true
 		rtl.scroll_active = false
 		rtl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		rtl.add_theme_font_size_override("normal_font_size", 20)
+		rtl.add_theme_font_size_override("normal_font_size", UITheme.s(20))
 		rtl.add_theme_font_override("normal_font", UITheme.font_body())
 
 		var speaker: String = entry["speaker"]

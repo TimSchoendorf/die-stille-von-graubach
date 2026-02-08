@@ -70,6 +70,50 @@
 		"narration_5": {
 			"type": "narration",
 			"text": "Jetzt gibt es kein Zurück. Das Wesen weiß, dass ich hier bin. Es wartet.",
+			"next": "check_took_book"
+		},
+		"check_took_book": {
+			"type": "flag_check",
+			"flag": "took_book",
+			"value": 1,
+			"true_next": "book_taken_narration",
+			"false_next": "check_left_book"
+		},
+		"book_taken_narration": {
+			"type": "narration",
+			"text": "Das Buch in meinen Händen pulsiert. Es ist warm, lebendig, als hätte es seinen eigenen Herzschlag. Die Kreatur erkennt es sofort.",
+			"next": "book_taken_creature"
+		},
+		"book_taken_creature": {
+			"type": "narration",
+			"text": "DU HAST ES MITGEBRACHT. MEINEN ATEM. MEINE ERINNERUNG.",
+			"next": "book_taken_reaction"
+		},
+		"book_taken_reaction": {
+			"type": "narration",
+			"text": "Das Buch vibriert in meinen Händen. Die Seiten schlagen von selbst auf - Namen, Hunderte von Namen, in einer Tinte, die im Dunkeln leuchtet.",
+			"next": "check_ally_ritual"
+		},
+		"check_left_book": {
+			"type": "flag_check",
+			"flag": "left_book",
+			"value": 1,
+			"true_next": "book_left_narration",
+			"false_next": "check_ally_ritual"
+		},
+		"book_left_narration": {
+			"type": "narration",
+			"text": "Auf dem Podest in der Ecke liegt das Buch. Ich habe es damals nicht mitgenommen. Die Kreatur spürt meinen Blick darauf.",
+			"next": "book_left_creature"
+		},
+		"book_left_creature": {
+			"type": "narration",
+			"text": "DU HAST ES GELASSEN. DAS WAR... WEISE. ODER ANGST.",
+			"next": "book_left_reaction"
+		},
+		"book_left_reaction": {
+			"type": "narration",
+			"text": "Das Buch bleibt geschlossen. Aber die Spirale auf dem Einband dreht sich langsam, als beobachte sie mich.",
 			"next": "check_ally_ritual"
 		},
 		"check_ally_ritual": {
@@ -193,6 +237,47 @@
 		"narration_begin_ritual": {
 			"type": "narration",
 			"text": "Ich lege meine Hände auf das Zeichen der Erde. Der pulsierende Punkt in der Mitte des Kreises. Und diesmal ziehe ich sie nicht zurück.",
+			"next": "check_packed_books"
+		},
+		"check_packed_books": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_narration",
+			"false_next": "check_packed_cross"
+		},
+		"packed_books_narration": {
+			"type": "narration",
+			"text": "Meine Bücher liegen neben mir aufgeschlagen. Eine Passage über Bindungsrituale in vorchristlichen Gemeinschaften fällt mir ein - die Resonanz des gesprochenen Wortes, die Verbindung zwischen Klang und Erde.",
+			"next": "packed_books_creature"
+		},
+		"packed_books_creature": {
+			"type": "narration",
+			"text": "DU TRÄGST WORTE. WORTE HABEN MACHT.",
+			"next": "effect_ritual_contact"
+		},
+		"check_packed_cross": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_narration",
+			"false_next": "check_packed_camera"
+		},
+		"packed_cross_narration": {
+			"type": "narration",
+			"text": "Das Kreuz meiner Mutter pulsiert in meiner Hand - nicht göttlich, aber... menschlich. Warm. Es schützt mich einen Moment lang vor der Überwältigung, als das Bewusstsein des Wesens über mich hinwegrollt.",
+			"next": "effect_ritual_contact"
+		},
+		"check_packed_camera": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_narration",
+			"false_next": "effect_ritual_contact"
+		},
+		"packed_camera_narration": {
+			"type": "narration",
+			"text": "Durch das Objektiv der Kamera sehe ich es. Die Verbindung. Spiralen in der Luft, Lichtfäden zwischen den Steinen. Sichtbar, greifbar. Die Kamera zeigt, was das bloße Auge nicht fassen kann.",
 			"next": "effect_ritual_contact"
 		},
 		"effect_ritual_contact": {
@@ -319,6 +404,26 @@
 		"narration_creature_hunger": {
 			"type": "narration",
 			"text": "HUNGER IST KEIN WORT. ES IST EINE LEERE. SECHSHUNDERT JAHRE HABT IHR MIR EURE TOTEN GEGEBEN. SIE SCHMECKEN NACH ANGST. ICH WILL KEINE ANGST MEHR.",
+			"next": "creature_names_1"
+		},
+		"creature_names_1": {
+			"type": "narration",
+			"text": "HUNDERTE NAMEN. NICHT ALLE OPFER. MANCHE HABE ICH BERÜHRT. MANCHE HABEN MICH BERÜHRT. GEFÄSSE. SEHENDE. NUR ALLE DREISSIG JAHRE EINER MIT DEM KREUZ.",
+			"next": "creature_margarethe_1"
+		},
+		"creature_margarethe_1": {
+			"type": "narration",
+			"text": "DIE ALTE. SIE KAM ZU MIR. AM ENDE. AUS EIGENEM WILLEN. ICH HABE SIE NICHT GENOMMEN. SIE HAT SICH... VERABSCHIEDET.",
+			"next": "creature_margarethe_2"
+		},
+		"creature_margarethe_2": {
+			"type": "narration",
+			"text": "Großmutter. Sie ist friedlich gestorben. Auf eigenen Wunsch zur Kreatur gegangen, hat ihr letztes Gespräch mit ihr geführt. Kein Mord, kein Unfall. Ein Abschied.",
+			"next": "creature_margarethe_3"
+		},
+		"creature_margarethe_3": {
+			"type": "narration",
+			"text": "Meine Augen brennen. Großmutter hat nicht allein sterben müssen. Sie hatte jemanden bei sich - auch wenn dieser Jemand älter war als die Menschheit.",
 			"next": "narration_elise_realization"
 		},
 		"narration_elise_realization": {
@@ -660,7 +765,7 @@
 			"flag": "allied_voss",
 			"value": 1,
 			"true_next": "voss_escape_narration",
-			"false_next": "check_courage_escape"
+			"false_next": "check_hilde_escape"
 		},
 		"voss_escape_narration": {
 			"type": "narration",
@@ -681,10 +786,44 @@
 			"text": "Laufen! Schnell!",
 			"next": "route_escape"
 		},
+		"check_hilde_escape": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "hilde_escape_narration",
+			"false_next": "check_courage_escape"
+		},
+		"hilde_escape_narration": {
+			"type": "narration",
+			"text": "Das Ritual scheitert. Die Kammer bebt. Aber Hilde greift nach meiner Hand und beginnt zu singen — einen anderen Gesang, alt und rau, der die Luft beruhigt.",
+			"next": "hilde_escape_dialogue"
+		},
+		"hilde_escape_dialogue": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "ritual",
+			"text": "Dieser Gesang beruhigt, nicht bindet! Lauf, Kind, solange es zuhört!",
+			"next": "elise_escape_hilde_rn"
+		},
+		"elise_escape_hilde_rn": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Hilde, komm MIT!",
+			"next": "hilde_escape_stay"
+		},
+		"hilde_escape_stay": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Ich singe weiter. Geh. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse.",
+			"next": "route_escape"
+		},
 		"check_courage_escape": {
 			"type": "flag_check",
 			"flag": "courage",
-			"value": 10,
+			"value": 15,
+			"compare": "gte",
 			"true_next": "courage_escape",
 			"false_next": "route_awakening"
 		},
@@ -867,7 +1006,7 @@
 			"flag": "allied_georg",
 			"value": 1,
 			"true_next": "route_escape",
-			"false_next": "route_awakening"
+			"false_next": "check_voss_escape"
 		},
 		"route_awakening": {
 			"type": "scene_end",
@@ -888,7 +1027,7 @@
 			"flag": "allied_georg",
 			"value": 1,
 			"true_next": "route_escape",
-			"false_next": "route_awakening"
+			"false_next": "check_voss_escape"
 		}
 	}
 }

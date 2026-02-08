@@ -27,10 +27,10 @@ func _setup_ui() -> void:
 	var margin := MarginContainer.new()
 	margin.position = Vector2(0, 0)
 	margin.size = Vector2(1920, 1080)
-	margin.add_theme_constant_override("margin_left", 300)
-	margin.add_theme_constant_override("margin_right", 300)
-	margin.add_theme_constant_override("margin_top", 100)
-	margin.add_theme_constant_override("margin_bottom", 100)
+	margin.add_theme_constant_override("margin_left", UITheme.margin_h())
+	margin.add_theme_constant_override("margin_right", UITheme.margin_h())
+	margin.add_theme_constant_override("margin_top", UITheme.margin_v())
+	margin.add_theme_constant_override("margin_bottom", UITheme.margin_v())
 	add_child(margin)
 
 	var vbox := VBoxContainer.new()
@@ -41,7 +41,7 @@ func _setup_ui() -> void:
 	_title_label = Label.new()
 	_title_label.text = Locale.t("SAVE_TITLE")
 	_title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_title_label.add_theme_font_size_override("font_size", 38)
+	_title_label.add_theme_font_size_override("font_size", UITheme.s(38))
 	_title_label.add_theme_color_override("font_color", UITheme.GOLD)
 	_title_label.add_theme_font_override("font", UITheme.font_title())
 	vbox.add_child(_title_label)
@@ -57,7 +57,7 @@ func _setup_ui() -> void:
 	# Close button
 	var close_btn := Button.new()
 	close_btn.text = Locale.t("CLOSE")
-	close_btn.custom_minimum_size = Vector2(200, 45)
+	close_btn.custom_minimum_size = Vector2(UITheme.s(200), UITheme.s(45))
 	close_btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	UITheme.style_button(close_btn, 22)
 	close_btn.pressed.connect(close_panel)
@@ -96,7 +96,7 @@ func _refresh_slots() -> void:
 		else:
 			slot_btn.text = "Slot %d - %s (%s)" % [i, info.get("act", "?"), info.get("timestamp", "?")]
 
-		slot_btn.custom_minimum_size = Vector2(0, 60)
+		slot_btn.custom_minimum_size = Vector2(0, UITheme.s(60))
 		UITheme.style_button(slot_btn, 20)
 
 		var slot := i

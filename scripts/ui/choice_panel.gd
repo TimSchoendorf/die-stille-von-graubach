@@ -9,7 +9,7 @@ var _buttons: Array[Button] = []
 
 func _ready() -> void:
 	alignment = BoxContainer.ALIGNMENT_CENTER
-	add_theme_constant_override("separation", 14)
+	add_theme_constant_override("separation", UITheme.s(14))
 	hide()
 
 
@@ -21,7 +21,7 @@ func show_choices(choices: Array) -> void:
 		var choice: Dictionary = choices[i]
 		var btn := Button.new()
 		btn.text = choice.get("text", "???")
-		btn.custom_minimum_size = Vector2(650, 65)
+		btn.custom_minimum_size = Vector2(mini(UITheme.s(650), 1800), UITheme.s(65))
 		btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 
 		# Style with gold accent border on left
@@ -31,12 +31,12 @@ func show_choices(choices: Array) -> void:
 		style.border_width_bottom = 1
 		style.border_width_top = 1
 		style.border_width_right = 1
-		style.border_width_left = 3
+		style.border_width_left = UITheme.s(3)
 		style.set_corner_radius_all(3)
-		style.content_margin_left = 24
-		style.content_margin_right = 20
-		style.content_margin_top = 12
-		style.content_margin_bottom = 12
+		style.content_margin_left = UITheme.s(24)
+		style.content_margin_right = UITheme.s(20)
+		style.content_margin_top = UITheme.s(12)
+		style.content_margin_bottom = UITheme.s(12)
 		btn.add_theme_stylebox_override("normal", style)
 
 		var hover_style := style.duplicate()
@@ -53,7 +53,7 @@ func show_choices(choices: Array) -> void:
 		focus_style.border_color = UITheme.GOLD_DIM
 		btn.add_theme_stylebox_override("focus", focus_style)
 
-		btn.add_theme_font_size_override("font_size", 22)
+		btn.add_theme_font_size_override("font_size", UITheme.s(22))
 		btn.add_theme_font_override("font", UITheme.font_body())
 		btn.add_theme_color_override("font_color", UITheme.TEXT_LIGHT)
 		btn.add_theme_color_override("font_hover_color", UITheme.GOLD_LIGHT)

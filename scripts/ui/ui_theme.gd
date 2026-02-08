@@ -5,6 +5,41 @@ extends RefCounted
 ## Provides fonts, colors, ornaments, and button styling.
 
 
+# ── Scaling ───────────────────────────────────────────────────────────
+
+static var _scale: float = 1.0
+static var _is_mobile: bool = false
+
+
+static func init_scaling() -> void:
+	_is_mobile = OS.get_name() in ["Android", "iOS"]
+	if _is_mobile:
+		var dpi := DisplayServer.screen_get_dpi()
+		_scale = clampf(dpi / 160.0, 1.0, 2.5) if dpi > 0 else 1.8
+	else:
+		_scale = 1.0
+
+
+static func s(value: int) -> int:
+	return int(value * _scale)
+
+
+static func sf(value: float) -> float:
+	return value * _scale
+
+
+static func is_mobile() -> bool:
+	return _is_mobile
+
+
+static func margin_h() -> int:
+	return s(60) if _is_mobile else 300
+
+
+static func margin_v() -> int:
+	return s(40) if _is_mobile else 80
+
+
 # ── Fonts ──────────────────────────────────────────────────────────────
 
 static func font_title() -> SystemFont:
@@ -49,7 +84,7 @@ static func create_ornament_label(ornament: String = ORNAMENT_WIDE, size: int = 
 	var lbl := Label.new()
 	lbl.text = ornament
 	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	lbl.add_theme_font_size_override("font_size", size)
+	lbl.add_theme_font_size_override("font_size", s(size))
 	lbl.add_theme_color_override("font_color", GOLD_DIM)
 	lbl.add_theme_font_override("font", font_body())
 	return lbl
@@ -63,10 +98,10 @@ static func style_button(btn: Button, font_size: int = 22) -> void:
 	style.border_color = BORDER
 	style.set_border_width_all(1)
 	style.set_corner_radius_all(2)
-	style.content_margin_left = 16
-	style.content_margin_right = 16
-	style.content_margin_top = 10
-	style.content_margin_bottom = 10
+	style.content_margin_left = s(16)
+	style.content_margin_right = s(16)
+	style.content_margin_top = s(10)
+	style.content_margin_bottom = s(10)
 	btn.add_theme_stylebox_override("normal", style)
 
 	var hover := style.duplicate()
@@ -83,7 +118,7 @@ static func style_button(btn: Button, font_size: int = 22) -> void:
 	focus.border_color = GOLD_DIM
 	btn.add_theme_stylebox_override("focus", focus)
 
-	btn.add_theme_font_size_override("font_size", font_size)
+	btn.add_theme_font_size_override("font_size", s(font_size))
 	btn.add_theme_font_override("font", font_ui())
 	btn.add_theme_color_override("font_color", TEXT_LIGHT)
 	btn.add_theme_color_override("font_hover_color", GOLD_LIGHT)
@@ -100,10 +135,10 @@ static func style_menu_button(btn: Button, font_size: int = 26) -> void:
 	style.border_width_left = 1
 	style.border_width_right = 1
 	style.set_corner_radius_all(3)
-	style.content_margin_top = 12
-	style.content_margin_bottom = 12
-	style.content_margin_left = 24
-	style.content_margin_right = 24
+	style.content_margin_top = s(12)
+	style.content_margin_bottom = s(12)
+	style.content_margin_left = s(24)
+	style.content_margin_right = s(24)
 	btn.add_theme_stylebox_override("normal", style)
 
 	var hover := style.duplicate()
@@ -120,7 +155,7 @@ static func style_menu_button(btn: Button, font_size: int = 26) -> void:
 	focus.border_color = GOLD_DIM
 	btn.add_theme_stylebox_override("focus", focus)
 
-	btn.add_theme_font_size_override("font_size", font_size)
+	btn.add_theme_font_size_override("font_size", s(font_size))
 	btn.add_theme_font_override("font", font_title())
 	btn.add_theme_color_override("font_color", TEXT_LIGHT)
 	btn.add_theme_color_override("font_hover_color", GOLD_LIGHT)
@@ -128,31 +163,38 @@ static func style_menu_button(btn: Button, font_size: int = 26) -> void:
 
 
 static func style_quick_button(btn: Button) -> void:
-	## Small button for in-game quick menu.
+	## Styled button for in-game quick menu with text outline for readability.
 	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.08, 0.08, 0.1, 0.5)
-	style.border_color = Color(BORDER.r, BORDER.g, BORDER.b, 0.3)
+	style.bg_color = Color(0.06, 0.06, 0.09, 0.7)
+	style.border_color = BORDER
 	style.set_border_width_all(1)
-	style.set_corner_radius_all(2)
-	style.content_margin_left = 12
-	style.content_margin_right = 12
-	style.content_margin_top = 8
-	style.content_margin_bottom = 8
+	style.set_corner_radius_all(3)
+	style.content_margin_left = s(16)
+	style.content_margin_right = s(16)
+	style.content_margin_top = s(10)
+	style.content_margin_bottom = s(10)
 	btn.add_theme_stylebox_override("normal", style)
 
 	var hover := style.duplicate()
-	hover.bg_color = Color(0.14, 0.11, 0.08, 0.8)
-	hover.border_color = GOLD_DIM
+	hover.bg_color = Color(0.14, 0.11, 0.08, 0.88)
+	hover.border_color = GOLD
 	btn.add_theme_stylebox_override("hover", hover)
 
 	var pressed := style.duplicate()
-	pressed.bg_color = Color(0.04, 0.04, 0.06, 0.8)
+	pressed.bg_color = Color(0.04, 0.04, 0.06, 0.9)
+	pressed.border_color = GOLD_LIGHT
 	btn.add_theme_stylebox_override("pressed", pressed)
 
 	var focus := style.duplicate()
+	focus.border_color = GOLD_DIM
 	btn.add_theme_stylebox_override("focus", focus)
 
-	btn.add_theme_font_size_override("font_size", 16)
+	btn.add_theme_font_size_override("font_size", s(20))
 	btn.add_theme_font_override("font", font_ui())
-	btn.add_theme_color_override("font_color", TEXT_DIM)
+	btn.add_theme_color_override("font_color", TEXT_LIGHT)
 	btn.add_theme_color_override("font_hover_color", GOLD_LIGHT)
+	btn.add_theme_color_override("font_pressed_color", GOLD)
+
+	# Text outline for readability over backgrounds
+	btn.add_theme_constant_override("outline_size", s(3))
+	btn.add_theme_color_override("font_outline_color", Color(0.0, 0.0, 0.0, 0.85))

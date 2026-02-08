@@ -445,6 +445,21 @@
 			"entry_id": "ending_truth",
 			"title": "Die Wahrheit",
 			"content": "Das Wesen ist nicht unser Feind. Es ist ein Nachbar, gefangen zwischen den Welten, sechshundert Jahre allein. Die Opfer waren nie nötig. Es brauchte nur jemanden, der zuhört. Ich bin die Erste, die zugehört hat.",
+			"next": "truth_konrad_epilog"
+		},
+		"truth_konrad_epilog": {
+			"type": "narration",
+			"text": "Konrad steht am Kircheneingang, als das Licht der Morgendämmerung durch die Fenster fällt. Die glasigen Momente sind vorbei. Seine Augen sind klar. 'Es schläft friedlich', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+			"next": "truth_otto_epilog"
+		},
+		"truth_otto_epilog": {
+			"type": "narration",
+			"text": "Otto steht am Dorfrand und beobachtet den Sonnenaufgang. Er weint. Dreißig Jahre hat er geglaubt, die Opfer seien nötig. Sie waren es nie.",
+			"next": "truth_candle_epilog"
+		},
+		"truth_candle_epilog": {
+			"type": "narration",
+			"text": "In Großmutters Haus erlischt die Kerze. Aber der Geruch nach Honig und Kräutern bleibt.",
 			"next": "scene_end"
 		},
 		"scene_end": {

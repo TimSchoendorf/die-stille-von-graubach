@@ -325,6 +325,34 @@
 			"speaker": "georg",
 			"expression": "determined",
 			"text": "Dieses Dorf ist ein Gefängnis, Elise. Und die Wärter tragen keine Uniform.",
+			"next": "georg_wald_1"
+		},
+		"georg_wald_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Aber wie? Der Postbote kommt doch. Händler reisen durch. Warum hält der Wald mich fest, aber andere nicht?",
+			"next": "georg_wald_2"
+		},
+		"georg_wald_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Der Wald lässt die meisten passieren. Händler, Reisende, sogar den Postboten. Aber wer im Buch steht... den lässt er nicht gehen.",
+			"next": "georg_wald_3"
+		},
+		"georg_wald_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Deswegen kann ich nicht fliehen.",
+			"next": "georg_wald_4"
+		},
+		"georg_wald_4": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Deine Großmutter hat dreißig Jahre lang versucht, das Dorf zu verlassen. Einmal. Nur ein einziges Mal. Der Wald hat sie drei Tage im Kreis geführt, bis sie aufgab.",
 			"next": "georg_converge"
 		},
 
@@ -616,8 +644,10 @@
 				{
 					"text": "In Graubach bleiben und nachforschen",
 					"set_flags": {
-						"stayed_in_village": 1,
-						"courage": 8
+						"stayed_in_village": 1
+					},
+					"add_flags": {
+						"courage": 3
 					},
 					"next": "stay_decision"
 				},

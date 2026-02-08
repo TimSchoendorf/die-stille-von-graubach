@@ -339,6 +339,21 @@
 			"entry_id": "ending_awakening",
 			"title": "Das Erwachen",
 			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Und das Singen... das Singen hört nicht mehr auf.",
+			"next": "awakening_konrad_epilog"
+		},
+		"awakening_konrad_epilog": {
+			"type": "narration",
+			"text": "Konrad steht mitten auf dem Dorfplatz. Er lächelt. Die Spiralen auf seinen Händen leuchten. Zum ersten Mal ist er nicht mehr Gefäß - er ist Brücke. Das Wesen fließt durch ihn hindurch in die Welt, und Konrad lässt es geschehen. Dreißig Jahre Kampf, und am Ende ergibt er sich - nicht aus Schwäche, sondern aus Müdigkeit.",
+			"next": "awakening_anna_epilog"
+		},
+		"awakening_anna_epilog": {
+			"type": "narration",
+			"text": "Anna lächelt. Sie hat es immer gewusst. 'Es wollte nur gesehen werden', flüstert sie, während die Wände sich öffnen.",
+			"next": "awakening_otto_epilog"
+		},
+		"awakening_otto_epilog": {
+			"type": "narration",
+			"text": "Ottos Befehle verhallen. Sein Machtsystem - bedeutungslos vor etwas, das älter ist als Macht.",
 			"next": "scene_end"
 		},
 		"scene_end": {

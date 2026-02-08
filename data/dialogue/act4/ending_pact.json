@@ -346,6 +346,26 @@
 			"entry_id": "ending_pact",
 			"title": "Der Pakt",
 			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich zurück und leiste dem Wesen Gesellschaft. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
+			"next": "pact_konrad_epilog"
+		},
+		"pact_konrad_epilog": {
+			"type": "narration",
+			"text": "Konrad steht am Brunnen, als Elise die Kammer verlässt. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+			"next": "pact_konrad_epilog_2"
+		},
+		"pact_konrad_epilog_2": {
+			"type": "narration",
+			"text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer. Vor Erleichterung.",
+			"next": "pact_anna_epilog"
+		},
+		"pact_anna_epilog": {
+			"type": "narration",
+			"text": "Anna besucht Elise jeden Herbst. 'Es singt anders', sagt sie. 'Zufriedener.' Anna lächelt - zum ersten Mal ohne Furcht.",
+			"next": "pact_otto_epilog"
+		},
+		"pact_otto_epilog": {
+			"type": "narration",
+			"text": "Otto verlässt das Dorf, als er begreift, dass die Tradition vorbei ist. Sein Lebenswerk - bedeutungslos.",
 			"next": "scene_end"
 		},
 		"scene_end": {

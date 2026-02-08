@@ -664,6 +664,23 @@
 		"narration_pity_moment": {
 			"type": "narration",
 			"text": "Zum ersten Mal sehe ich ihn nicht als Bedrohung. Sondern als Opfer. Ein Mann, gefangen zwischen sich selbst und etwas, das älter ist als die Berge.",
+			"next": "konrad_possession_1"
+		},
+		"konrad_possession_1": {
+			"type": "narration",
+			"text": "Ich beobachte ihn genauer. Da - sein Blick wird glasig. Für drei, vier Sekunden ist niemand hinter seinen Augen. Dann kehrt er zurück, verwirrt, als hätte er geträumt.",
+			"next": "konrad_possession_2"
+		},
+		"konrad_possession_2": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Wie... wie lange habe ich gerade...? Was habe ich gesagt?",
+			"next": "konrad_possession_3"
+		},
+		"konrad_possession_3": {
+			"type": "narration",
+			"text": "Die Kreatur schläft und träumt durch ihn. In diesen Momenten ist Konrad nicht Konrad - er ist ein Fenster, durch das etwas Uraltes hindurchblickt. Und die Lücken werden länger. Ganze Stunden, hat er gesagt, die er nicht erklären kann.",
 			"next": "set_found_tree"
 		},
 		"set_found_tree": {

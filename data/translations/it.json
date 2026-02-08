@@ -875,6 +875,18 @@
 		"georg_police_3": {
 			"text": "Questo villaggio è una prigione, Elise. È i carcerieri non portano divisa."
 		},
+		"georg_wald_1": {
+			"text": "Ma come? Il postino passa. I mercanti viaggiano. Perché il bosco trattiene me ma non gli altri?"
+		},
+		"georg_wald_2": {
+			"text": "Il bosco lascia passare la maggior parte della gente. Mercanti, viaggiatori, persino il postino. Ma quelli il cui nome è nel libro... non li lascia andare."
+		},
+		"georg_wald_3": {
+			"text": "Per questo non posso fuggire."
+		},
+		"georg_wald_4": {
+			"text": "Tua nonna ha cercato di lasciare il villaggio per trent'anni. Una volta. Una sola volta. Il bosco l'ha fatta camminare in cerchio per tre giorni, finché non ha rinunciato."
+		},
 		"georg_entity_1": {
 			"text": "Non lo so. Non davvero. Nessuno lo sa. Sappiamo solo che è antico. Più antico della foresta, più antico delle montagne."
 		},
@@ -1208,7 +1220,7 @@
 			"text": "Storie? Bambina, quello che dorme sotto la chiesa non è una storia. Ma sì — sai più della maggior parte della gente qui. Questo è un bene. Ti aiuterà."
 		},
 		"hilde_12": {
-			"text": "Tua nonna conosceva entrambe le vie. Ha aspettato è si è preparata per trent'anni. Voleva farlo diversamente questa volta — senza sacrificio."
+			"text": "Tua nonna conosceva entrambe le vie. Ha aspettato e si è preparata per trent'anni. Voleva farlo diversamente questa volta — senza spargimento di sangue."
 		},
 		"hilde_13": {
 			"text": "Ma il tempo l'ha raggiunta. Ora sei qui tu. È la domanda è: sei pronta a fare ciò che lei non ha più potuto?"
@@ -1227,7 +1239,7 @@
 			"text": "La scuola sorge accanto alla chiesa. Un piccolo edificio con grandi finestre attraverso le quali vedo bambini seduti su panche di legno."
 		},
 		"school_2": {
-			"text": "Alla lavagna c'è un uomo che spiega qualcosa. Konrad Müller. Alla luce del giorno sembra... normale. Cordiale. Persino carismatico."
+			"text": "Alla lavagna c'è un uomo che spiega qualcosa. I bambini lo chiamano 'Herr Müller'. Konrad Müller — l'uomo di ieri notte. Alla luce del giorno sembra... normale. Cordiale. Persino carismatico."
 		},
 		"school_3": {
 			"text": "Quando mi nota alla finestra, sorride è mi fa cenno di entrare. I bambini si girano. Nessuno di loro sorride."
@@ -1395,6 +1407,21 @@
 		"journal_otto": {
 			"title": "Il sindaco Reinhardt",
 			"content": "Il sindaco Otto Reinhardt. Gioviale, ma con un controllo d'acciaio. Vuole che io resti fino al funerale — 'la settimana prossima, dopo la...' Si è interrotto. Cosa ha luogo prima del funerale?"
+		},
+		"otto_motivation_1": {
+			"text": "Sulla via del ritorno penso al sindaco. Alla sua sicurezza. Al peso delle sue parole — non come un uomo che minaccia, ma come uno che è assolutamente convinto."
+		},
+		"otto_motivation_2": {
+			"text": "Georg una volta mi ha detto che il padre di Otto era sindaco nel 1893. E suo padre prima di lui. I Reinhardt governano Graubach da generazioni — e ne traggono profitto."
+		},
+		"otto_motivation_3": {
+			"text": "Il bosco protegge le loro terre. I raccolti sui campi dei Reinhardt sono innaturalmente buoni, anche nelle annate cattive. La famiglia resta in salute mentre altri bambini muoiono di febbre."
+		},
+		"otto_motivation_4": {
+			"text": "Otto non agisce solo per tradizione. Agisce per interesse personale. E la cosa peggiore: ci crede davvero. È convinto che i sacrifici siano necessari. Che stia facendo la cosa giusta."
+		},
+		"otto_motivation_5": {
+			"text": "Un pazzo sarebbe più facile. Un pazzo lo si può smascherare. Ma un credente? Un credente bisogna spezzarlo."
 		},
 		"narration_evening_1": {
 			"text": "Il sole cala dietro le montagne. Le ombre delle case si allungano è si affilano. Tra poche ore sarò seduta nella fucina di Georg è finalmente avrò delle risposte. O almeno quello che Georg considera risposte."
@@ -1720,6 +1747,45 @@
 		"hilde_warning_smile": {
 			"text": "Le assomigli più di quanto pensi."
 		},
+		"hilde_letter_1": {
+			"text": "Hilde... la lettera. La lettera della nonna. Come ha potuto raggiungermi a Berlino se era già morta da giorni quando sono arrivata?"
+		},
+		"hilde_letter_2": {
+			"text": "Ah. Quello era l'ultimo incantesimo di Margarethe. L'ha scritta mesi fa e l'ha legata con un vincolo temporale — un antico rituale che consegna la lettera solo quando il destinatario è pronto."
+		},
+		"hilde_letter_3": {
+			"text": "Non quando lei muore, ma quando IO sono pronta? Vuol dire che la lettera... mi ha aspettata?"
+		},
+		"hilde_letter_4": {
+			"text": "Esattamente. Ha aspettato il momento giusto. Il momento in cui eri abbastanza forte per venire a Graubach."
+		},
+		"hilde_creature_dual_1": {
+			"text": "E un'altra cosa, bambina. Sulla creatura. Gli anziani hanno inventato la nutrizione — non la creatura. Hanno interpretato la sua solitudine come fame e hanno risposto col sangue."
+		},
+		"hilde_creature_dual_2": {
+			"text": "Forse era sbagliato. Forse sarebbe bastata una conversazione."
+		},
+		"hilde_creature_dual_3": {
+			"text": "Hilde si ferma. Nel silenzio sento il canto lontano — più basso del solito, quasi interrogativo."
+		},
+		"hilde_creature_dual_4": {
+			"text": "Ma chi parla con ciò che dorme sotto terra?"
+		},
+		"hilde_margarethe_1": {
+			"text": "Georg dice che la nonna ha fallito. Che il suo rituale non ha funzionato. Ma lei parla come se sapesse qualcosa di diverso."
+		},
+		"hilde_margarethe_2": {
+			"text": "Georg crede che abbia fallito. Margarethe lo voleva così. Gli ha detto solo la metà — per proteggerlo."
+		},
+		"hilde_margarethe_3": {
+			"text": "Se Otto sapesse che il rituale è completo, avrebbe da tempo... eliminato Georg."
+		},
+		"hilde_margarethe_4": {
+			"text": "Hilde abbassa la voce. Le ombre nella capanna sembrano farsi più fitte."
+		},
+		"hilde_margarethe_5": {
+			"text": "La conoscenza completa è qui. Con me. E ora con te."
+		},
 		"hilde_gift_1": {
 			"text": "Hilde infila la mano nel grembiule è mi preme un sacchettino nel palmo. Dentro ci sono erbe essiccate è un amuleto di pietra rotondo con una spirale incisa."
 		},
@@ -1870,7 +1936,7 @@
 			"text": "Konrad. Lo sapeva già nel 1921. Per due anni e stato davanti alla mia porta e ha sorriso, e dietro quel sorriso vive qualcosa che non e lui. E ieri gli ho parlato come se tutto fosse normale."
 		},
 		"read_journal_6": {
-			"text": "'1923: Ho trovato il nome. Nel libro della camera. Elise Margarethe Brandt. Scritto in un inchiostro che pulsa. Mia nipote. Che non e ancora nata.'"
+			"text": "'1923: Ho trovato il nome. Nel libro della camera. Elise Margarethe Brandt. Scritto in un inchiostro che pulsa. Mia nipote. Che studia a Berlino e non sospetta nulla di tutto questo.'"
 		},
 		"elise_journal_react_4": {
 			"text": "1923. Il mio nome era in quel libro prima che io nascessi. La creatura mi conosceva prima che esistessi. Stava aspettando ME."
@@ -2118,6 +2184,15 @@
 		"narration_pity_moment": {
 			"text": "Per la prima volta non lo vedo come una minaccia. Ma come una vittima. Un uomo, intrappolato tra sé stesso è qualcosa di più antico delle montagne."
 		},
+		"konrad_possession_1": {
+			"text": "Lo osservo più attentamente. Ecco — il suo sguardo diventa vitreo. Per tre, quattro secondi non c'è nessuno dietro i suoi occhi. Poi ritorna, confuso, come se avesse sognato."
+		},
+		"konrad_possession_2": {
+			"text": "Quanto... per quanto tempo ho appena...? Cosa ho detto?"
+		},
+		"konrad_possession_3": {
+			"text": "La creatura dorme e sogna attraverso di lui. In quei momenti Konrad non è Konrad — è una finestra attraverso la quale qualcosa di antico scruta. E i vuoti si allungano. Ore intere, dice, di cui non riesce a rendere conto."
+		},
 		"journal_konrad": {
 			"title": "Konrad è l'Albero Guardiano",
 			"content": "Konrad mi ha mostrato l'Albero Guardiano nel bosco — cresciuto a spirale. Il terreno lì pulsa come sotto l'altare. Konrad si è comportato in modo strano — la sua mano sussulta alla menzione delle spirali, i suoi occhi cambiano. Il diario della nonna lo ha confermato: lui è il ricettacolo."
@@ -2264,6 +2339,12 @@
 		},
 		"narration_before_choice": {
 			"text": "Il libro giace aperto davanti a me. Il mio nome mi fissa. Cosa faccio adesso?"
+		},
+		"zugfrau_1": {
+			"text": "Sfoglio all'indietro. Decine di pagine, centinaia di nomi. E poi — una vecchia voce: 'Mathilde, 1863'. Accanto un disegno. Mi si mozza il respiro."
+		},
+		"zugfrau_2": {
+			"text": "Il disegno mostra una donna con le orbite vuote. La donna cieca del treno. Non era un'estranea — era l'ultima a sopravvivere al rituale. Ha aspettato sessant'anni."
 		},
 		"elise_deliberate_1": {
 			"text": "Se cancello il nome - sarò libera? O renderà solo furiosa la creatura? La nonna scrisse che il nome ritorna sempre."
@@ -2725,6 +2806,18 @@
 		"narration_descent_2": {
 			"text": "L'aria è densa è dolce. La luce della mia candela tremola, sebbene non ci sia corrente. Le spirali sulle pareti sembrano muoversi quando non le guardo direttamente."
 		},
+		"georg_catchup_narration": {
+			"text": "Passi sulle scale. Pesanti, frettolosi, ma familiari. Georg. Ce l'ha fatta."
+		},
+		"georg_catchup_1": {
+			"text": "Gli uomini di Otto non sono così coraggiosi quando si fa buio. Sono scappati quando la chiesa ha iniziato a tremare."
+		},
+		"elise_catchup_1": {
+			"text": "Georg! Pensavo che tu —"
+		},
+		"georg_catchup_2": {
+			"text": "Ho promesso a Margarethe di vegliare su di te. Un fabbro mantiene la parola."
+		},
 		"descent_georg_dialogue": {
 			"text": "Georg... le pareti. Le spirali si muovono."
 		},
@@ -2862,6 +2955,12 @@
 		},
 		"narration_hands": {
 			"text": "Le mie mani giacciono sul tavolo. Le mani della nonna, ha detto Georg. Le osservo. Dita sottili, nessun callo. Che cosa dovrebbero fare queste mani domani?"
+		},
+		"narration_no_journal": {
+			"text": "Non ho un diario, nessun appunto. Solo ciò che gli altri mi hanno detto. Hilde, Georg, Voss — ognuno mi ha dato un pezzo della verità. Ora devo metterli insieme."
+		},
+		"narration_no_journal_2": {
+			"text": "Nonna, cosa sapevi? Cosa mi avresti detto se fossi ancora qui? Devo farcela senza le tue parole. Ma forse mi ha lasciato abbastanza — nelle persone che conosceva."
 		},
 		"narration_journal_open": {
 			"text": "Rileggo le ultime annotazioni della nonna ancora una volta. Le ultime pagine, scritte nei giorni prima della sua morte. La calligrafia diventa incerta verso la fine, tremante."
@@ -3235,6 +3334,18 @@
 		"anna_confirms": {
 			"text": "Ha paura di te, Elise. Per questo i sogni si fanno più forti. Sta cercando di confonderti prima che tu possa agire."
 		},
+		"anna_fear_detail_1": {
+			"text": "Paura? Di cosa esattamente? Che lo distrugga?"
+		},
+		"anna_fear_detail_2": {
+			"text": "No. Non ha paura che tu lo distrugga. Ha paura che tu lo VEDA e... te ne vada."
+		},
+		"anna_fear_detail_3": {
+			"text": "Seicento anni da solo. E ora sei qui. E se anche tu te ne andassi?"
+		},
+		"anna_fear_narration": {
+			"text": "Lo capisco all'improvviso. La creatura non mi ha chiamata per fame. Per speranza. Seicento anni di solitudine, e ora c'è qualcuno che potrebbe ascoltare — ed è terrorizzata che io scappi."
+		},
 		"narration_anna_realization": {
 			"text": "Non sono la vittima. Sono la minaccia. Da quando ho toccato il mio nome nel libro, da quando ho imparato il canto - la creatura sa cosa intendo fare. E sta cercando disperatamente di fermarmi."
 		},
@@ -3358,6 +3469,15 @@
 		"journal_awakening": {
 			"title": "Il risveglio",
 			"content": "Ho fallito. L'entità si è risvegliata. Graubach non esiste più. È il canto... il canto non si ferma più."
+		},
+		"awakening_konrad_epilog": {
+			"text": "Konrad è in mezzo alla piazza del villaggio. Sorride. Le spirali sulle sue mani brillano. Per la prima volta non è più un ricettacolo — è un ponte. L'entità fluisce attraverso di lui nel mondo, e Konrad lo lascia accadere. Trent'anni di lotta, e alla fine si arrende — non per debolezza, ma per stanchezza."
+		},
+		"awakening_anna_epilog": {
+			"text": "Anna sorride. L'ha sempre saputo. 'Voleva solo essere visto', sussurra mentre le pareti si aprono."
+		},
+		"awakening_otto_epilog": {
+			"text": "Gli ordini di Otto svaniscono. Il suo sistema di potere — insignificante davanti a qualcosa di più antico del potere."
 		}
 	},
 	"res://data/dialogue/act4/ending_escape.json": {
@@ -3367,8 +3487,8 @@
 		"elise_escape_1": {
 			"text": "No — NO! Il canto si spezza — non riesco a tenerlo —"
 		},
-		"narration_2": {
-			"text": "Georg è improvvisamente lì. Si è fatto strada tra gli uomini di Otto, giù per le scale, nella camera che trema."
+		"narration_georg_arrives": {
+			"text": "Georg ist plötzlich da. Er hat sich durch Ottos Männer gekämpft, die Treppe hinunter, in die bebende Kammer."
 		},
 		"georg_1": {
 			"text": "ELISE! FUORI DI QUI! SUBITO!"
@@ -3403,14 +3523,174 @@
 		"narration_hammer": {
 			"text": "Georg colpisce una seconda volta. Una terza. Ogni colpo un tuono. La camera trema. Georg ruggisce — non di rabbia. Di dolore. Trent'anni di dolore in ogni colpo."
 		},
-		"narration_6": {
-			"text": "Corro. Su per le scale, attraverso la chiesa, all'aperto. Dietro di me il pavimento crolla. Polvere è luce è un suono che non dovrebbe essere un suono."
+		"narration_6_georg": {
+			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir bricht der Boden ein. Staub und Licht und ein Laut, der kein Laut sein sollte."
 		},
-		"elise_escape_5": {
+		"elise_escape_5_georg": {
 			"text": "GEORG!"
 		},
 		"narration_no_answer": {
 			"text": "Nessuna risposta. Solo il frantumarsi della pietra è il tacere del canto."
+		},
+		"narration_voss_arrives": {
+			"text": "Voss ist plötzlich neben mir. Er kennt jeden Stein dieser Kirche, jede verborgene Nische."
+		},
+		"voss_main_1": {
+			"text": "Hier entlang! Hinter dem Altar - ein zweiter Tunnel, den nur die Pfarrer kennen!"
+		},
+		"elise_voss_main_1": {
+			"text": "Aber das Ritual - ich muss -"
+		},
+		"voss_main_2": {
+			"text": "Das Ritual ist gescheitert! Aber wir leben noch! LAUFEN SIE!"
+		},
+		"narration_voss_tunnel": {
+			"text": "Er zerrt mich hinter den Altar. Dort, verborgen von einem jahrhundertealten Wandteppich, ist eine schmale Tür. Ein Fluchttunnel, gebaut von Pfarrern, die wussten, dass die Kreatur eines Tages erwachen könnte."
+		},
+		"narration_6_voss": {
+			"text": "Wir rennen durch den engen Gang, gebückt, halb kriechend. Hinter uns bricht die Kirche zusammen. Staub regnet von der Decke, und das Singen wird zum Brüllen."
+		},
+		"narration_hilde_sings": {
+			"text": "Hilde beginnt zu singen. Nicht den Bindungsgesang - etwas anderes. Ein Wiegenlied, alt und rau, das die bebende Luft beruhigt."
+		},
+		"hilde_main_1": {
+			"text": "Lauf, Kind. Mein Gesang hält es noch einen Moment ruhig. Nur einen Moment."
+		},
+		"elise_hilde_main_1": {
+			"text": "Hilde, nein! Komm mit mir!"
+		},
+		"hilde_main_2": {
+			"text": "Ich bin alt, Elise. Zu alt zum Rennen. Aber nicht zu alt zum Singen. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse."
+		},
+		"narration_hilde_chant": {
+			"text": "Hildes Stimme füllt die Kammer. Brüchig, aber sicher. Das Wesen lauscht - verwirrt, fasziniert. Für einen kostbaren Moment vergisst es seine Wut."
+		},
+		"narration_6_hilde": {
+			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir verstummt Hildes Gesang. Dann bricht der Boden ein."
+		},
+		"elise_escape_5_hilde": {
+			"text": "HILDE!"
+		},
+		"narration_no_answer_hilde": {
+			"text": "Keine Antwort. Nur die letzten Noten eines Wiegenliedes, das im Donner der einstürzenden Kirche versinkt."
+		},
+		"narration_solo_escape": {
+			"text": "Niemand kommt. Niemand wird kommen. Ich bin allein mit dem Zusammenbruch."
+		},
+		"narration_solo_2": {
+			"text": "Aber etwas in mir weigert sich aufzugeben. Dieselbe Sturheit, die mich nach Graubach gebracht hat. Dieselbe Sturheit, die Großmutter dreißig Jahre durchgehalten hat."
+		},
+		"narration_solo_3": {
+			"text": "Ich renne. Durch Trümmer, durch Dunkelheit, durch das Brüllen des Wesens. Meine Beine tragen mich, obwohl sie längst hätten versagen sollen."
+		},
+		"narration_6_solo": {
+			"text": "Die Treppe hinauf, durch die berstende Kirche, ins Freie. Hinter mir verschluckt die Erde alles. Ich bin die Letzte, die Graubach lebend verlässt."
+		},
+		"narration_7": {
+			"text": "Continuo a correre. Attraverso il villaggio, oltre il pozzo, oltre le case buie. Il bosco si apre — per la prima volta, il bosco si apre."
+		},
+		"narration_8": {
+			"text": "Mi volto un'ultima volta. Graubach sprofonda. Le case cedono, la chiesa si inclina, il bosco inghiotte tutto. In pochi secondi, non resta più nulla."
+		},
+		"narration_9": {
+			"text": "Solo bosco. Come se Graubach non fosse mai esistita."
+		},
+		"elise_escape_6_georg": {
+			"text": "Georg..."
+		},
+		"narration_10_georg": {
+			"text": "Im Gras liegt etwas. Schwer, rostig, warm. Georgs Schmiedehammer. Er muss ihn geworfen haben, bevor... bevor."
+		},
+		"narration_10b_georg": {
+			"text": "Ich hebe ihn auf. Er ist schwer. So schwer wie dreißig Jahre Schuld. Aber auch schwer wie dreißig Jahre Treue."
+		},
+		"narration_aftermath_voss": {
+			"text": "Voss steht neben mir. Er atmet schwer. Sein Gesicht ist grau vor Staub, aber er lebt. Wir beide leben."
+		},
+		"voss_aftermath_1": {
+			"text": "Meine Kirche. Mein Dorf. Dreißig Jahre... alles umsonst."
+		},
+		"elise_voss_aftermath": {
+			"text": "Nicht umsonst, Pfarrer. Sie haben mir das Leben gerettet."
+		},
+		"voss_aftermath_2": {
+			"text": "Und all die anderen? Anna? Die Kinder?"
+		},
+		"narration_voss_silence": {
+			"text": "Darauf habe ich keine Antwort. Wir stehen nebeneinander im Wald und schauen auf die Stelle, wo Graubach war. Nur Bäume. Als hätte es nie existiert."
+		},
+		"elise_escape_6_hilde": {
+			"text": "Hilde..."
+		},
+		"narration_10_hilde": {
+			"text": "Stille. Hildes Gesang ist verstummt. Irgendwo in den Trümmern liegt eine alte Frau, die stärker war als alle Männer dieses Dorfes zusammen."
+		},
+		"narration_10b_hilde": {
+			"text": "Am Waldrand finde ich ein Büschel Kräuter. Baldrian und Beifuß, zusammengebunden mit einem dünnen Faden. Hildes Kräuter. Vom Wind hergetragen oder von etwas anderem."
+		},
+		"narration_aftermath_solo": {
+			"text": "Ich stehe allein im Wald. Kein Verbündeter, kein Andenken. Nur Großmutters Journal in meiner Tasche und die Stille, die alles verschluckt hat."
+		},
+		"narration_11": {
+			"text": "Cammino. Attraverso il bosco, nella notte, verso un mondo che non sa nulla di Graubach. Che non saprà mai di Graubach."
+		},
+		"narration_12": {
+			"text": "Nella mia tasca c'è il diario della nonna. La prova che era reale. Che Georg era reale. Che il suo sacrificio ha avuto un senso."
+		},
+		"narration_epilog_georg": {
+			"text": "Wochen später, in Berlin. Georgs Hammer steht neben der Tür. Großmutters Journal liegt auf dem Schreibtisch."
+		},
+		"narration_epilog_voss": {
+			"text": "Wochen später, in Berlin. Voss hat sich in einem Kloster nahe München eingefunden. Er schreibt mir Briefe. Kurze, traurige Briefe. Er betet für die Seelen von Graubach."
+		},
+		"narration_epilog_hilde": {
+			"text": "Wochen später, in Berlin. Hildes Kräuter liegen auf der Fensterbank. Der Geruch nach Baldrian und Beifuß füllt den Raum. Großmutters Journal liegt auf dem Schreibtisch."
+		},
+		"narration_epilog_solo": {
+			"text": "Wochen später, in Berlin. Großmutters Journal liegt auf dem Schreibtisch. Es ist das Einzige, was mir geblieben ist."
+		},
+		"narration_epilog_2": {
+			"text": "A volte, nel silenzio tra la mezzanotte è l'alba, mi sembra di sentire il canto. Sommesso. Lontano. Quasi come una ninna nanna."
+		},
+		"narration_epilog_3_georg": {
+			"text": "Hat Georg überlebt? Ich weiß es nicht. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet."
+		},
+		"narration_epilog_3_hilde": {
+			"text": "Hat Hilde überlebt? Ich weiß es nicht. Ihr Gesang war das Letzte, was ich hörte, bevor die Erde alles verschluckte. Manchmal glaube ich, ihn noch zu hören - zwischen den Noten des Singens."
+		},
+		"narration_epilog_3_other": {
+			"text": "Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Niemand außer mir weiß, dass es je existiert hat."
+		},
+		"narration_epilog_4": {
+			"text": "Nonna, mi hai mandata per finirla. Ho fallito. Ma Georg... Georg ha fatto la cosa giusta. Alla fine, è stato il più coraggioso di tutti noi."
+		},
+		"journal_escape": {
+			"title": "La fuga",
+			"content": "Graubach è scomparsa. Georg si è sacrificato perché io potessi fuggire. Il suo martello è tutto ciò che mi resta. È la domanda che non mi lascia mai: è sopravvissuto?"
+		},
+		"escape_konrad_epilog": {
+			"text": "Konrad. In manchen Nächten denkt Elise an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?"
+		},
+		"escape_anna_epilog": {
+			"text": "Nelle sue notti più buie, Elise si chiede se Anna sia sopravvissuta. Una bambina con occhi che vedevano troppo."
+		},
+		"escape_otto_epilog": {
+			"text": "Otto? Scomparso con il villaggio. Sepolto sotto il suo stesso silenzio."
+		},
+		"narration_2": {
+			"text": "Georg è improvvisamente lì. Si è fatto strada tra gli uomini di Otto, giù per le scale, nella camera che trema."
+		},
+		"narration_4": {
+			"text": "«Georg, no —» Ma si è già voltato. Sta in piedi a gambe larghe sul pavimento pulsante, il martello da fucina in entrambe le mani."
+		},
+		"narration_6": {
+			"text": "Corro. Su per le scale, attraverso la chiesa, all'aperto. Dietro di me il pavimento crolla. Polvere è luce è un suono che non dovrebbe essere un suono."
+		},
+		"narration_10": {
+			"text": "Georg. Mio zio. L'uomo che ha camminato piegato dal senso di colpa per trent'anni è alla fine si è alzato in piedi."
+		},
+		"elise_escape_5": {
+			"text": "GEORG!"
 		},
 		"hilde_escape_1": {
 			"text": "Elise! Continua a correre! Non fermarti!"
@@ -3430,48 +3710,17 @@
 		"voss_escape_2": {
 			"text": "Dio lo accolga. Venga, Fräulein Brandt. Il suo sacrificio non deve essere vano."
 		},
-		"narration_7": {
-			"text": "Continuo a correre. Attraverso il villaggio, oltre il pozzo, oltre le case buie. Il bosco si apre — per la prima volta, il bosco si apre."
-		},
-		"narration_8": {
-			"text": "Mi volto un'ultima volta. Graubach sprofonda. Le case cedono, la chiesa si inclina, il bosco inghiotte tutto. In pochi secondi, non resta più nulla."
-		},
-		"narration_9": {
-			"text": "Solo bosco. Come se Graubach non fosse mai esistita."
-		},
 		"elise_escape_6": {
 			"text": "Georg..."
-		},
-		"narration_10": {
-			"text": "Georg. Mio zio. L'uomo che ha camminato piegato dal senso di colpa per trent'anni è alla fine si è alzato in piedi."
 		},
 		"narration_10b": {
 			"text": "Lo raccolgo. È pesante. Pesante come trent'anni di colpa. Ma anche pesante come trent'anni di fedeltà."
 		},
-		"narration_11": {
-			"text": "Cammino. Attraverso il bosco, nella notte, verso un mondo che non sa nulla di Graubach. Che non saprà mai di Graubach."
-		},
-		"narration_12": {
-			"text": "Nella mia tasca c'è il diario della nonna. La prova che era reale. Che Georg era reale. Che il suo sacrificio ha avuto un senso."
-		},
 		"narration_epilog": {
 			"text": "Settimane dopo, a Berlino. Sono seduta nella mia stanza. Il martello di Georg è accanto alla porta. Il diario della nonna giace sulla scrivania."
 		},
-		"narration_epilog_2": {
-			"text": "A volte, nel silenzio tra la mezzanotte è l'alba, mi sembra di sentire il canto. Sommesso. Lontano. Quasi come una ninna nanna."
-		},
 		"narration_epilog_3": {
 			"text": "Georg è sopravvissuto? Non lo so. Graubach non esiste più su nessuna mappa. Il bosco si è chiuso. Ma a volte sogno che sia in piedi accanto al pozzo, in attesa."
-		},
-		"narration_epilog_4": {
-			"text": "Nonna, mi hai mandata per finirla. Ho fallito. Ma Georg... Georg ha fatto la cosa giusta. Alla fine, è stato il più coraggioso di tutti noi."
-		},
-		"journal_escape": {
-			"title": "La fuga",
-			"content": "Graubach è scomparsa. Georg si è sacrificato perché io potessi fuggire. Il suo martello è tutto ciò che mi resta. È la domanda che non mi lascia mai: è sopravvissuto?"
-		},
-		"narration_4": {
-			"text": "«Georg, no —» Ma si è già voltato. Sta in piedi a gambe larghe sul pavimento pulsante, il martello da fucina in entrambe le mani."
 		}
 	},
 	"res://data/dialogue/act4/ending_pact.json": {
@@ -3593,6 +3842,18 @@
 			"title": "Il patto",
 			"content": "Niente sangue. Niente sacrificio. Nessun ricettacolo. Solo una promessa: ogni anno tornerò è farò compagnia all'entità. Ha accettato. La nonna ha aperto la strada. Io la percorrerò fino in fondo."
 		},
+		"pact_konrad_epilog": {
+			"text": "Konrad è alla fontana quando Elise esce dalla camera. Le spirali sulle sue mani stanno già svanendo. Per la prima volta in trent'anni, il suo sguardo appartiene a lui stesso."
+		},
+		"pact_konrad_epilog_2": {
+			"text": "'Mi sta lasciando andare', dice piano. 'Lo sento. Non ha più bisogno di me.' Piange — non di dolore. Di sollievo."
+		},
+		"pact_anna_epilog": {
+			"text": "Anna fa visita a Elise ogni autunno. 'Canta diversamente', dice. 'Più soddisfatto.' Anna sorride — per la prima volta senza paura."
+		},
+		"pact_otto_epilog": {
+			"text": "Otto lascia il villaggio quando capisce che la tradizione è finita. L'opera della sua vita — senza significato."
+		},
 		"narration_3": {
 			"text": "E fame. Una fame così antica è profonda da confondere i confini tra emozione è legge naturale. Ha bisogno di nutrimento. Non carne, non sangue — attenzione. Coscienza. Contatto."
 		},
@@ -3661,8 +3922,11 @@
 		"konrad_3": {
 			"text": "Gli occhi di Konrad si fanno limpidi. Per la prima volta nella sua vita, completamente limpidi. È si riempiono di lacrime."
 		},
-		"konrad_4": {
-			"text": "Elise... perché?"
+		"konrad_trusted_sacrifice": {
+			"text": "Mi hai creduto. Nella piazza del villaggio, quando tutti gli altri mi temevano. Mi hai guardato e hai visto una persona, non un mostro."
+		},
+		"konrad_untrusted_sacrifice": {
+			"text": "Mi conoscevi appena. Eppure... perché? Perché per me?"
 		},
 		"elise_sacrifice_5": {
 			"text": "Perché meriti di essere libero. Perché la nonna lo avrebbe voluto. È perché... perché l'entità ha bisogno di me. È io ho bisogno di lei."
@@ -3710,8 +3974,17 @@
 			"title": "Il sacrificio",
 			"content": "Ho preso il posto di Konrad come ricettacolo. Volontariamente. L'entità è io ora condividiamo un corpo, una mente. Non è la fine. È l'inizio di una coesistenza."
 		},
+		"sacrifice_anna_epilog": {
+			"text": "Anna lo capisce per prima. 'Il canto suona diverso', sussurra. 'Più caldo. Come una conversazione.' Posa la mano sulla spalla di Elise."
+		},
+		"sacrifice_otto_epilog": {
+			"text": "Otto non capisce mai. Se ne va perché la tradizione non ha più senso. Il suo ultimo sguardo indietro è vuoto."
+		},
 		"konrad_2": {
 			"text": "Elise, NO! Che cosa fai?!"
+		},
+		"konrad_4": {
+			"text": "Elise... perché?"
 		},
 		"narration_9": {
 			"text": "«Perché meriti di essere libero. Perché la nonna lo avrebbe voluto. È perché...»"
@@ -3838,6 +4111,21 @@
 		"journal_seal": {
 			"title": "Il Sigillo",
 			"content": "Il rituale di legame è riuscito. L'entità dorme di nuovo, trattenuta dal canto invece che dal sangue. Niente più sacrifici. I trent'anni di ricerche della nonna hanno dato i loro frutti."
+		},
+		"seal_anna_epilog": {
+			"text": "Gli occhi di Anna diventano più chiari giorno dopo giorno. Il canto si affievolisce, e con esso le sue visioni. Per la prima volta è una bambina normale."
+		},
+		"seal_otto_epilog": {
+			"text": "Otto Reinhardt lascia Graubach una settimana dopo il rituale. Nessuno lo ferma. Nessuno lo rimpiange."
+		},
+		"konrad_trusted_seal": {
+			"text": "Konrad appare la mattina dopo. Le spirali sulla sua mano si stanno sbiadendo. Piange. 'Sono libero', sussurra. E per la prima volta gli credo."
+		},
+		"konrad_untrusted_seal": {
+			"text": "Konrad è scomparso la notte del rituale. Nessuno l'ha visto andarsene. Alcuni dicono che ora vive nel bosco. Alcuni dicono che il bosco l'ha preso."
+		},
+		"seal_candle_epilog": {
+			"text": "La candela sul comodino della nonna si spegne nel momento in cui l'entità si addormenta. Piano. Serenamente."
 		},
 		"narration_11": {
 			"text": "Georg aspetta fuori, Hilde accanto a lui. Vedono il mio volto è capiscono. Hilde annuisce. Georg piange."
@@ -3997,6 +4285,15 @@
 		"journal_truth": {
 			"title": "La verità",
 			"content": "L'entità non è il nostro nemico. È un vicino, intrappolato tra i mondi, seicento anni da solo. I sacrifici non sono mai stati necessari. Aveva solo bisogno di qualcuno che ascoltasse. Sono la prima che ha ascoltato."
+		},
+		"truth_konrad_epilog": {
+			"text": "Konrad è all'ingresso della chiesa mentre la luce del mattino filtra dalle finestre. I momenti vitrei sono finiti. I suoi occhi sono limpidi. 'Dorme in pace', sussurra. 'Per la prima volta non sogna attraverso di me.'"
+		},
+		"truth_otto_epilog": {
+			"text": "Otto sta ai margini del villaggio e guarda l'alba. Piange. Per trent'anni ha creduto che i sacrifici fossero necessari. Non lo sono mai stati."
+		},
+		"truth_candle_epilog": {
+			"text": "Nella casa della nonna la candela si spegne. Ma il profumo di miele ed erbe resta."
 		}
 	},
 	"res://data/dialogue/act4/ritual_night.json": {
@@ -4014,6 +4311,24 @@
 		},
 		"narration_5": {
 			"text": "Ora non si torna indietro. L'entità sa che sono qui. Sta aspettando."
+		},
+		"book_taken_narration": {
+			"text": "Il libro nelle mie mani pulsa. È caldo, vivo, come se avesse un proprio battito cardiaco. La creatura lo riconosce subito."
+		},
+		"book_taken_creature": {
+			"text": "L'HAI PORTATO. IL MIO RESPIRO. LA MIA MEMORIA."
+		},
+		"book_taken_reaction": {
+			"text": "Il libro vibra nelle mie mani. Le pagine si girano da sole — nomi, centinaia di nomi, in un inchiostro che brilla nel buio."
+		},
+		"book_left_narration": {
+			"text": "Sul piedistallo nell'angolo giace il libro. Non l'avevo preso allora. La creatura percepisce il mio sguardo su di esso."
+		},
+		"book_left_creature": {
+			"text": "L'HAI LASCIATO. È STATO... SAGGIO. O PAURA."
+		},
+		"book_left_reaction": {
+			"text": "Il libro resta chiuso. Ma la spirale sulla copertina gira lentamente, come se mi stesse osservando."
 		},
 		"georg_ritual_1": {
 			"text": "Sono qui, Elise. Come promesso."
@@ -4050,6 +4365,18 @@
 		},
 		"narration_begin_ritual": {
 			"text": "Poso le mani sul segno della terra. Il punto pulsante al centro del cerchio. È questa volta non le ritiro."
+		},
+		"packed_books_narration": {
+			"text": "I miei libri giacciono aperti accanto a me. Mi viene in mente un passaggio sui rituali di legame nelle comunità precristiane — la risonanza della parola pronunciata, il legame tra suono e terra."
+		},
+		"packed_books_creature": {
+			"text": "PORTI PAROLE. LE PAROLE HANNO POTERE."
+		},
+		"packed_cross_narration": {
+			"text": "La croce di mia madre pulsa nella mia mano — non divina, ma... umana. Calda. Mi protegge per un istante dal sovraccarico quando la coscienza dell'entità mi travolge."
+		},
+		"packed_camera_narration": {
+			"text": "Attraverso l'obiettivo della macchina fotografica lo vedo. La connessione. Spirali nell'aria, fili di luce tra le pietre. Visibile, tangibile. La macchina mostra ciò che l'occhio nudo non riesce ad afferrare."
 		},
 		"narration_contact_1": {
 			"text": "L'oceano. Di nuovo. Ma questa volta non sono solo una mosca sulla sua superficie. Questa volta mi immergo."
@@ -4095,6 +4422,18 @@
 		},
 		"narration_creature_hunger": {
 			"text": "LA FAME NON È UNA PAROLA. È UN VUOTO. PER SEICENTO ANNI MI AVETE DATO I VOSTRI MORTI. SANNO DI PAURA. NON VOGLIO PIÙ PAURA."
+		},
+		"creature_names_1": {
+			"text": "CENTINAIA DI NOMI. NON TUTTI VITTIME. ALCUNI LI HO TOCCATI IO. ALCUNI HANNO TOCCATO ME. RICETTACOLI. VEGGENTI. SOLO OGNI TRENT'ANNI UNO CON LA CROCE."
+		},
+		"creature_margarethe_1": {
+			"text": "LA VECCHIA. È VENUTA DA ME. ALLA FINE. DI SUA VOLONTÀ. NON L'HO PRESA. LEI HA... DETTO ADDIO."
+		},
+		"creature_margarethe_2": {
+			"text": "La nonna. È morta serenamente. È andata dalla creatura per sua volontà, ha avuto la sua ultima conversazione con lei. Nessun omicidio, nessun incidente. Un addio."
+		},
+		"creature_margarethe_3": {
+			"text": "Mi bruciano gli occhi. La nonna non ha dovuto morire sola. Aveva qualcuno accanto — anche se quel qualcuno era più antico dell'umanità."
 		},
 		"narration_elise_realization": {
 			"text": "Le mie mani tremano sulla pietra. Ma non per la paura. Per la comprensione. Non è un mostro. È qualcosa di vecchio è di solo che non ha mai avuto altra scelta se non prendere ciò che gli veniva dato."
@@ -4203,6 +4542,18 @@
 		},
 		"elise_escape_voss": {
 			"text": "Corriamo! Presto!"
+		},
+		"hilde_escape_narration": {
+			"text": "Das Ritual scheitert. Die Kammer bebt. Aber Hilde greift nach meiner Hand und beginnt zu singen — einen anderen Gesang, alt und rau, der die Luft beruhigt."
+		},
+		"hilde_escape_dialogue": {
+			"text": "Dieser Gesang beruhigt, nicht bindet! Lauf, Kind, solange es zuhört!"
+		},
+		"elise_escape_hilde_rn": {
+			"text": "Hilde, komm MIT!"
+		},
+		"hilde_escape_stay": {
+			"text": "Ich singe weiter. Geh. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse."
 		},
 		"courage_escape": {
 			"text": "Il rituale fallisce. La camera si sgretola. Ma qualcosa in me rifiuta di arrendersi. La stessa ostinazione che mi ha portata qui."
