@@ -15,7 +15,14 @@ static func init_scaling() -> void:
 	_is_mobile = OS.get_name() in ["Android", "iOS"]
 	if _is_mobile:
 		var dpi := DisplayServer.screen_get_dpi()
-		_scale = clampf(dpi / 160.0, 1.0, 2.5) if dpi > 0 else 1.8
+		var screen_px := DisplayServer.screen_get_size()
+		if dpi > 0 and screen_px.x > 0:
+			var diag_px := sqrt(float(screen_px.x) * screen_px.x + float(screen_px.y) * screen_px.y)
+			var diag_inches := diag_px / float(dpi)
+			# Smaller screens need more scaling; cap at 1.5 to fit viewport
+			_scale = clampf(9.0 / diag_inches, 1.0, 1.5)
+		else:
+			_scale = 1.4
 	else:
 		_scale = 1.0
 

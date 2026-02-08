@@ -107,10 +107,11 @@ func _setup_layers() -> void:
 	_textbox.size = Vector2(1920, tb_h)
 	ui_layer.add_child(_textbox)
 
-	# Choice panel (center)
+	# Choice panel (horizontally centered)
 	_choice_panel = preload("res://scripts/ui/choice_panel.gd").new()
 	_choice_panel.name = "ChoicePanel"
-	_choice_panel.position = Vector2(660, UITheme.s(200) if UITheme.is_mobile() else 300)
+	var choice_w := mini(UITheme.s(650), 1800)
+	_choice_panel.position = Vector2((1920 - choice_w) / 2, UITheme.s(200) if UITheme.is_mobile() else 300)
 	ui_layer.add_child(_choice_panel)
 
 	# Overlay Layer

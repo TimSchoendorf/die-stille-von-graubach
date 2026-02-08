@@ -49,10 +49,16 @@ func _setup_ui() -> void:
 	# Ornament under title
 	vbox.add_child(UITheme.create_ornament_label(UITheme.ORNAMENT_LINE, 16))
 
-	# Slots container
+	# Scrollable slots container
+	var slot_scroll := ScrollContainer.new()
+	slot_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	slot_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	vbox.add_child(slot_scroll)
+
 	_slot_container = VBoxContainer.new()
+	_slot_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_slot_container.add_theme_constant_override("separation", 8)
-	vbox.add_child(_slot_container)
+	slot_scroll.add_child(_slot_container)
 
 	# Close button
 	var close_btn := Button.new()

@@ -41,10 +41,16 @@ func _build_ending_screen(ending_id: String) -> void:
 	bg.size = Vector2(1920, 1080)
 	add_child(bg)
 
+	var scroll := ScrollContainer.new()
+	scroll.position = Vector2(0, 0)
+	scroll.size = Vector2(1920, 1080)
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	add_child(scroll)
+
 	var center := CenterContainer.new()
-	center.position = Vector2(0, 0)
-	center.size = Vector2(1920, 1080)
-	add_child(center)
+	center.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	center.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.add_child(center)
 
 	var vbox := VBoxContainer.new()
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
