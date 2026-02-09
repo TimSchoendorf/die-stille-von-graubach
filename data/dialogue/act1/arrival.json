@@ -46,6 +46,11 @@
 		"narration_4": {
 			"type": "narration",
 			"text": "Ihre Augen sind geschlossen. Ihr Mund lächelt leicht. Aber ihre Haut hat die Farbe von altem Pergament, und als ich ihre Hand berühre, ist sie kalt wie Stein.",
+			"next": "narration_4b"
+		},
+		"narration_4b": {
+			"type": "narration",
+			"text": "Dieses Lächeln. Es sieht nicht aus wie der friedliche Tod einer alten Frau. Es sieht aus wie das Lächeln von jemandem, der etwas beendet hat. Etwas Wichtiges.",
 			"next": "show_elise_grief"
 		},
 		"show_elise_grief": {

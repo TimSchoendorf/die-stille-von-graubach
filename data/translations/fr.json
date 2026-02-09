@@ -267,6 +267,9 @@
 		"narration_4": {
 			"text": "Ses yeux sont fermés. Sà bouche esquisse un léger sourire. Mais sà peau à là couleur du vieux parchemin, et quand je touche sà main, elle est froide comme là pierre."
 		},
+		"narration_4b": {
+			"text": "Ce sourire. Il ne ressemble pas à la mort paisible d'une vieille femme. Il ressemble au sourire de quelqu'un qui a terminé quelque chose. Quelque chose d'important."
+		},
 		"elise_grief_1": {
 			"text": "Grand-mère... ? Non... Non, pas ça, je vous en prie."
 		},
@@ -799,8 +802,11 @@
 		"georg_3": {
 			"text": "À Graubach, il y à une tradition. Aussi vieille que le village lui-même. Plus vieille, peut-être. Les anciens là transmettent de génération en génération."
 		},
-		"elise_tradition_1": {
-			"text": "Tradition? Quelle tradition? Hilde en a parle aussi."
+		"elise_tradition_1_hilde": {
+			"text": "Tradition ? Quelle tradition ? Hilde en a parlé aussi."
+		},
+		"elise_tradition_1_nohilde": {
+			"text": "Tradition ? Quelle tradition ? Grand-mère a fait allusion à quelque chose comme ça dans sa lettre."
 		},
 		"georg_4": {
 			"text": "Tous les trente ans, en novembre, quand les nuits deviennent les plus longues... un prix doit être payé."
@@ -1321,7 +1327,10 @@
 			"text": "Voss parle de « l'Autre » sous l'église. Annà voit des spirales autour de moi. Konrad A des spirales sur là main. Et Hilde connaît les anciennes voies. Tout le monde parle par allusions. Personne ne dit toute là vérité."
 		},
 		"converge_1": {
-			"text": "En début d'après-midi, je retrouve Georg au puits. Il à l'air de ne pas avoir dormi non plus."
+			"text": "En début d'après-midi, je vais au puits. Une vieille femme aveugle est assise sur le banc de pierre à côté, fredonnant doucement. La mélodie me semble familière - le chant que j'ai entendu la nuit dernière. Elle tourne la tête dans ma direction, comme si elle pouvait me sentir."
+		},
+		"converge_1b": {
+			"text": "Avant que je puisse lui parler, elle se lève et s'en va. Lentement, sûrement, comme si elle connaissait chaque pierre. Georg attend déjà au puits. Il a l'air de ne pas avoir dormi non plus."
 		},
 		"georg_day_1": {
 			"text": "Elise. Est-ce que tu... là nuit à été calme ?"
@@ -1469,6 +1478,12 @@
 		},
 		"voss_smells_herbs": {
 			"text": "Vous êtes allée voir Hilde. Je sens ses herbes. Bien. Alors vous savez déjà qu'il y à ici plus que des prières et de l'encens."
+		},
+		"elise_hilde_knowledge": {
+			"text": "Hilde m'a parlé du chant. Et du signe de la terre. Si vous savez où se trouve le point le plus mince dans la chambre, vous pouvez me faire gagner du temps, mon Père."
+		},
+		"voss_hilde_react": {
+			"text": "La vieille païenne en sait plus que l'Église ne l'admettrait jamais. Oui. Je connais le point le plus mince. Je vous montrerai où vous devez vous tenir."
 		},
 		"voss_3": {
 			"text": "Voilà trente ans que je suis pasteur ici. Trente ans que je me tiens sur ce sol à prêcher un Dieu, tandis que quelque chose d'autre se tapit sous mes pieds."
@@ -1672,6 +1687,21 @@
 		"hilde_chant_calm": {
 			"text": "Il le savait déjà, mon enfant. Ton nom figure dans son livre. Mais maintenant il sait que tu peux CHANTER. C'est important."
 		},
+		"choice_practice_chant": {
+			"choices": [
+				"Pratiquer le chant — je dois le maîtriser",
+				"Plus tard — j'ai d'abord besoin de plus d'informations"
+			]
+		},
+		"practice_chant_success": {
+			"text": "Je répète la mélodie encore et encore jusqu'à ce qu'elle s'imprime dans mes os. Hilde me corrige patiemment — un ton plus bas ici, un souffle plus long là. Au bout d'une heure, cela sonne... juste."
+		},
+		"skip_chant_practice": {
+			"text": "Ma tête tourne. Le chant, le signe, l'ancre — trop de choses à la fois. Je dois d'abord comprendre ce que tout cela signifie avant de l'apprendre par cœur."
+		},
+		"skip_chant_2": {
+			"text": "N'attends pas trop longtemps, mon enfant. Le chant demande de la pratique. Sans lui, le sceau n'est qu'une promesse vide."
+		},
 		"transition_to_sign": {
 			"text": "Hilde attend que le silence se soit installé. Le chant des profondeurs reprend, timidement d'abord. Puis elle reprend là parole, plus calme à présent."
 		},
@@ -1716,6 +1746,24 @@
 		},
 		"narration_anchor_weight": {
 			"text": "Pas sûre. Cela signifie que ça pourrait me tuer. Ou pire - me transformer. Comme ça a transformé Konrad."
+		},
+		"choice_anchor_reaction": {
+			"choices": [
+				"Et si je meurs ? Qu'advient-il de l'entité ?",
+				"Grand-mère voulait être l'ancre. Pourquoi ne l'a-t-elle pas fait ?"
+			]
+		},
+		"hilde_death_answer": {
+			"text": "Si l'ancre meurt, la connexion se rompt. Le sceau se brise. L'entité s'éveille — confuse, furieuse, affamée. C'est pourquoi l'ancre doit être forte. Et c'est pourquoi ce doit être quelqu'un d'assez jeune."
+		},
+		"hilde_death_answer_2": {
+			"text": "Alors je ne dois pas seulement survivre — je dois survivre LONGTEMPS. Trente ans. Comme grand-mère."
+		},
+		"hilde_margarethe_answer": {
+			"text": "Elle le voulait. Jusqu'au bout. Mais son corps a lâché. L'ancre a besoin de force — pas physique, mentale. Et l'esprit de Margarethe était las. Trente ans éveillée, trente ans vigilante."
+		},
+		"hilde_margarethe_answer_2": {
+			"text": "Elle t'a attendue. Non parce que tu es plus forte. Parce que tu es fraîche. Parce que tu as encore la force qu'elle avait perdue."
 		},
 		"hilde_anchor_5": {
 			"text": "Elise... Margarethe croyait que tu pourrais être l'ancre. Ton nom dans le livre — ce n'est pas une malédiction. C'est un lien. Tu es déjà proche de l'entité."
@@ -1770,6 +1818,18 @@
 		},
 		"hilde_creature_dual_4": {
 			"text": "Mais qui parle à ce qui dort sous la terre ?"
+		},
+		"hilde_margarethe_death_1": {
+			"text": "À la fin, Margarethe l'a fait. Elle est descendue une dernière fois, la nuit précédant sa mort. Pas pour se battre. Pour parler."
+		},
+		"hilde_margarethe_death_2": {
+			"text": "Elle est revenue. Elle s'est couchée, a souri et a fermé les yeux. Elle est morte dans son sommeil, mon enfant. Paisiblement. C'était un adieu, pas un sacrifice."
+		},
+		"hilde_margarethe_death_3": {
+			"text": "Mais Otto a laissé entendre que sa mort n'était pas naturelle..."
+		},
+		"hilde_margarethe_death_4": {
+			"text": "Otto ment. C'est ce qu'Otto fait. Il veut te faire assez peur pour que tu acceptes sa Nourriture. Ne crois pas un mot de ce que cet homme dit sur Margarethe."
 		},
 		"hilde_margarethe_1": {
 			"text": "Georg dit que grand-mère a échoué. Que son rituel n'a pas fonctionné. Mais vous parlez comme si vous saviez autre chose."
@@ -1985,6 +2045,12 @@
 		"narration_inner": {
 			"text": "Les mots de grand-mère me hantent : « Il est le réceptacle. » L'homme qui est assis là si paisiblement à lire porte quelque chose d'ancien en lui. Et il ne le sait peut-être même pas."
 		},
+		"georg_warned_about_konrad": {
+			"text": "Georg m'a prévenue. « Soyez prudente avec l'instituteur », a-t-il dit. Ses yeux étaient plus graves que je n'en ai jamais vu. Le sourire de Konrad dissimule quelque chose."
+		},
+		"georg_warned_2": {
+			"text": "Je serai aimable. Mais sur mes gardes. Chaque question que je poserai, chaque réponse qu'il donnera — j'écouterai attentivement. Pas seulement les mots. Ce qui se cache entre les mots."
+		},
 		"konrad_1": {
 			"text": "Fräulein Brandt ! Quelle agréable surprise. Asseyez-vous donc. J'ai du café frais — du vrai, pas cet ersatz."
 		},
@@ -2054,6 +2120,12 @@
 		},
 		"konrad_trust_dreams": {
 			"text": "Parfois je rêve de choses qui ne sont pas mes rêves. Je vois... plus profond. Plus ancien. Comme si je n'étais qu'une coquille."
+		},
+		"konrad_coexistence_hint": {
+			"text": "Mais il y a des moments... quand j'arrête de lutter... alors c'est presque paisible. Comme si l'on était assis à côté de quelqu'un, pas prisonnier à l'intérieur de quelqu'un."
+		},
+		"elise_coexistence_react": {
+			"text": "Ne pas lutter, mais coexister ? L'idée est plus troublante que tout le reste. Et pourtant — quelque chose en elle sonne juste."
 		},
 		"elise_trust_vessel": {
 			"text": "Konrad... Grand-mère vous à appelé « le réceptacle » dans son journal."
@@ -2255,6 +2327,15 @@
 		},
 		"voss_night_1": {
 			"text": "Vous êtes venue. Bien. Nous avons peu de temps. Les hommes d'Otto patrouillent — il à remarqué que quelque chose changeait dans le village."
+		},
+		"voss_distrusts": {
+			"text": "Mais d'abord... vous m'avez menti dans l'église. Sur ce que vous savez. Ce que vous cherchez. Je l'ai vu dans vos yeux."
+		},
+		"elise_voss_lied": {
+			"text": "Je ne savais pas si je pouvais vous faire confiance, mon Père. Pouvez-vous me pardonner ?"
+		},
+		"voss_forgives_lie": {
+			"text": "Pardonner ? Je suis le dernier à pouvoir condamner les mensonges. J'ai gardé le silence pendant trente ans. C'est pire que n'importe quel mensonge."
 		},
 		"elise_voss_greet": {
 			"text": "Merci d'être là, mon Père. Je n'aurais pas voulu faire cela seule."
@@ -2486,8 +2567,18 @@
 			"choices": [
 				"Choisir Georg comme allié principal - force et loyauté",
 				"Choisir Hilde comme alliée principale - savoir et expérience",
-				"Choisir Voss comme allié principal - accès et remords"
+				"Choisir Voss comme allié principal - accès et remords",
+				"Ne confier à personne - je ne veux mettre personne en danger"
 			]
+		},
+		"ally_solo": {
+			"text": "Personne. Je ne mettrai personne en danger. Ni Georg, ni Hilde, ni Voss. Quoi qu'il attende dans la chambre - c'est entre moi et l'entité. Rien que nous deux."
+		},
+		"ally_solo_2": {
+			"text": "Grand-mère s'est battue seule pendant trente ans. Elle n'a entraîné personne, n'a sacrifié personne, n'a risqué personne. Si je suis sa petite-fille, je peux faire de même."
+		},
+		"ally_solo_3": {
+			"text": "C'est solitaire. Mais la solitude n'est pas une condamnation à mort. Je devrais le savoir - je suis folkloriste, pas soldat. Mon outil est la compréhension, pas la violence. Pour cela, je n'ai besoin d'aucune armée."
 		},
 		"georg_ally_1": {
 			"text": "Tu veux vraiment aller jusqu'au bout. Le rituel de Margarethe. J'espérais que tu partirais, Elise. Mais je savais aussi que tu resterais."
@@ -2591,8 +2682,11 @@
 		"elise_voss_no": {
 			"text": "Personne ne doit mourir, Pasteur. Ni vous, ni moi. C'est pour cela que nous faisons tout ceci."
 		},
-		"ally_converge": {
-			"text": "J'ai un allié. Mais est-ce suffisant ? Le soir tombe, et avec lui le monde devient plus étrange encore."
+		"ally_converge_solo": {
+			"text": "Je suis seule. Comme grand-mère. Mais j'ai son savoir, sa préparation. Cela doit suffire."
+		},
+		"ally_converge_allied": {
+			"text": "J'ai un allié. Quelqu'un qui se tiendra à mes côtés demain soir, quand je devrai affronter ce qui attend en bas."
 		},
 		"elise_konrad_consider": {
 			"text": "Mais il y a aussi Konrad. Le réceptacle. L'homme prisonnier entre lui-même et la créature. Peut-il m'aider - ou me trahira-t-il ?"
@@ -2944,6 +3038,9 @@
 		}
 	},
 	"res://data/dialogue/act3/preparation.json": {
+		"narration_return": {
+			"text": "Je monte l'escalier, retour à travers l'église, dehors dans la nuit. L'air frais brûle dans mes poumons. Le ciel au-dessus de Graubach est clair, mais les étoiles semblent fausses. Trop proches. Trop vives."
+		},
 		"narration_1": {
 			"text": "Là dernière nuit avant le rituel. Je suis assise à là table de mà grand-mère, son journal ouvert, sà bougie allumée. Combien de fois s'est-elle assise ici ?"
 		},
@@ -2978,10 +3075,10 @@
 			"text": "Sans le craindre ? Grand-mère, si tu pouvais me voir maintenant. Mes mains tremblent, et le chant dans mà tête devient plus fort à chaque heure."
 		},
 		"narration_journal_4": {
-			"text": "« Le rituel à six voies. Six fins possibles. Toutes ne sont pas bonnes. Mais toutes valent mieux que là Nourriture. »"
+			"text": "« Le rituel a de nombreuses issues possibles. Le chant peut lier, libérer, ouvrir ou détruire. Et certains chemins n'apparaissent qu'au moment même. »"
 		},
 		"narration_react_3": {
-			"text": "Six voies. Six possibilités. Je les compte sur mes doigts : sceller, comprendre, détruire, négocier, sacrifier, fuir. Chacune à son prix."
+			"text": "Lier, comprendre, détruire, négocier - et ce qui advient dans le moment même. Chaque chemin a son prix."
 		},
 		"narration_journal_5": {
 			"text": "« Elise, si tu lis ceci : fais confiance à ton instinct. L'entité n'est pas maléfique. Elle est seulement vieille, affamée et seule. Parfois, c'est pire que là malveillance. »"
@@ -3068,7 +3165,7 @@
 			"text": "D'où vient cette certitude ? Moi, je ne suis pas certaine. Pas même de loin."
 		},
 		"hilde_visit_4": {
-			"text": "Tà grand-mère prenait les mains d'Elise. Tu lui ressembles plus que tu ne le penses. Et l'entité le sait."
+			"text": "Ta grand-mère a pris mes mains, juste avant de partir. Et a dit : « Elise sera plus forte que moi. » Tu lui ressembles plus que tu ne le penses. Et l'entité le sait."
 		},
 		"narration_hilde_leave": {
 			"text": "Hilde pose les herbes sur là table, me caresse les cheveux comme le faisait grand-mère, et sort sans bruit."
@@ -3156,8 +3253,11 @@
 		"approach_pact_2": {
 			"text": "Mon nom est dans le livre. Celà me donne un lien, une voix. Pour là première fois en six cents ans, quelqu'un và PARLER à l'entité, pas lui faire un sacrifice."
 		},
-		"narration_preparation": {
-			"text": "Je dispose les choses dont j'ai besoin : là clé de Georg. L'amulette et les herbes de Hilde. Le journal de Grand-mère. Là bougie de mà grand-mère."
+		"narration_preparation_journal": {
+			"text": "Je dispose les choses dont j'ai besoin : la clé de Georg. L'amulette et les herbes de Hilde. Le journal de grand-mère. La bougie qui ne s'éteint jamais."
+		},
+		"narration_preparation_nojournal": {
+			"text": "Je dispose les choses dont j'ai besoin : la clé de Georg. L'amulette et les herbes de Hilde. La bougie qui ne s'éteint jamais."
 		},
 		"narration_preparation_2": {
 			"text": "Et là lettre. Là lettre de grand-mère. Non parce que c'est un outil. Mais parce que je veux l'avoir sur moi quand le moment viendra."
@@ -3197,7 +3297,7 @@
 		},
 		"journal_preparation": {
 			"title": "Là Dernière Nuit",
-			"content": "Lu les dernières entrées du journal de Grand-mère. Le rituel à six fins possibles. Elle à écrit : « L'entité n'est pas maléfique. Elle est seulement vieille, affamée et seule. » Demain au coucher du soleil, tout commence. Je suis aussi prête que je le serai jamais."
+			"content": "Lu la dernière lettre de grand-mère. Elle s'est excusée - et m'a donné du courage. Le rituel a de nombreuses issues possibles. J'ai choisi mon chemin. Écrit ma propre lettre, au cas où. Le matin est rouge sang. C'est le moment."
 		},
 		"narration_end": {
 			"text": "Fin de l'Acte 3"
@@ -3217,7 +3317,7 @@
 			"text": "Je me détourne. C'est ce que grand-mère décrivait : « Les rêves suintent vers le haut. » Là réalité s'amincit."
 		},
 		"elise_morning_plan": {
-			"text": "Übermorgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen."
+			"text": "Morgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen."
 		},
 		"narration_4": {
 			"text": "Le village dehors est... faux. Les maisons se dressent à des angles légèrement décalés, comme si quelqu'un les avait déplacées pendant là nuit. Là fontaine sur là place goutte vers le haut."
@@ -3244,7 +3344,7 @@
 			"text": "Ce ne sont pas seulement les murs qui se déforment. Ce sont les gens. La créature s'insinue dans leurs têtes, les tourne dans sa direction comme des tournesols vers le soleil."
 		},
 		"narration_6": {
-			"text": "Je dois agir. Après-demain marque le trentième anniversaire de là dernière Nourriture. Si le rituel à lieu, quelqu'un meurt. S'il n'à pas lieu..."
+			"text": "Je dois agir. Demain soir marque le trentième anniversaire de la dernière Nourriture. Si le rituel a lieu, quelqu'un meurt. S'il n'a pas lieu..."
 		},
 		"narration_7": {
 			"text": "Alors il se réveille. Complètement. Et personne ne sait ce qui se passe ensuite."
@@ -3343,6 +3443,9 @@
 		"anna_fear_detail_3": {
 			"text": "Six cents ans de solitude. Et maintenant tu es là. Et si tu partais aussi ?"
 		},
+		"anna_coexistence_hint": {
+			"text": "Il ne veut pas posséder. Il veut simplement ne pas être seul. Konrad aurait pu être son ami. Mais Konrad a résisté."
+		},
 		"anna_fear_narration": {
 			"text": "Je comprends soudain. La créature ne m'a pas appelée par faim. Par espoir. Six cents ans de solitude, et maintenant quelqu'un est là qui pourrait écouter — et elle est terrifiée à l'idée que je m'enfuie."
 		},
@@ -3360,7 +3463,7 @@
 		},
 		"journal_reality": {
 			"title": "Là réalité se brise",
-			"content": "Jour 6 : Là réalité s'amincit. Là forêt grandit, le village se déforme, les couleurs ne sont plus justes. Annà dit que l'entité rêve de moi - elle à peur. Là Nourriture est après-demain. Je dois agir avant."
+			"content": "Jour 6 : La réalité s'amincit. La forêt grandit, le village se déforme, les couleurs ne sont plus justes. Anna dit que l'entité rêve de moi - elle a peur. La Nourriture est demain soir. Je dois agir avant."
 		},
 		"narration_2": {
 			"text": "Dans le miroir, je me vois. Mais mon reflet cligne des yeux une demi-seconde après moi."
@@ -3403,8 +3506,8 @@
 		"georg_awake_2": {
 			"text": "Alors on se bat. Ensemble. Margarethe n'aurait pas abandonné !"
 		},
-		"elise_awake_fight": {
-			"text": "J'essaie encore. Je rassemble les fragments du chant, les derniers restes de mà volonté. Mais l'entité est éveillée. Vraiment éveillée. Et elle est furieuse."
+		"elise_awake_fight_ally": {
+			"text": "Tu as raison. Je vais réessayer. Je DOIS essayer."
 		},
 		"hilde_awake_1": {
 			"text": "L'entité se réveille ! Elise, essaie le contre-chant — vite !"
@@ -3426,6 +3529,9 @@
 		},
 		"narration_alone_awake": {
 			"text": "Je suis seule. Personne n'est là pour m'aider. Mais je n'abandonne pas. Pas encore."
+		},
+		"elise_awake_fight": {
+			"text": "J'essaie encore. Je rassemble les fragments du chant, les derniers restes de mà volonté. Mais l'entité est éveillée. Vraiment éveillée. Et elle est furieuse."
 		},
 		"narration_5": {
 			"text": "Elle se réveille. Pas lentement, pas doucement. Elle s'ARRACHE du sommeil comme un noyé à là surface. Six cents ans de faim comprimée se libèrent d'un coup."
@@ -3478,6 +3584,9 @@
 		},
 		"awakening_otto_epilog": {
 			"text": "Les ordres d'Otto se perdent. Son système de pouvoir — sans signification face à quelque chose de plus ancien que le pouvoir."
+		},
+		"awakening_candle_epilog": {
+			"text": "La bougie sur la table de nuit s'embrase - une flamme sauvage, affamée - puis s'éteint avec un sifflement, comme si quelqu'un l'avait soufflée."
 		}
 	},
 	"res://data/dialogue/act4/ending_escape.json": {
@@ -3589,6 +3698,12 @@
 		"narration_7": {
 			"text": "Je continue de courir. À travers le village, devant le puits, devant les maisons sombres. Là forêt s'ouvre — pour là première fois, là forêt s'ouvre."
 		},
+		"narration_forest_opens": {
+			"text": "Les arbres reculent. La forêt qui m'a retenue captive pendant des jours s'ouvre soudain - comme si l'éveil de la créature avait déchiré les anciens liens."
+		},
+		"narration_forest_opens_2": {
+			"text": "Bien sûr. L'entité contrôlait la forêt. Celui qui garde le livre garde aussi les frontières. Mais maintenant elle est éveillée, et son attention ne se porte plus sur les arbres."
+		},
 		"narration_8": {
 			"text": "Je me retourne une dernière fois. Graubach s'enfonce. Les maisons s'affaissent, l'église penche, là forêt engloutit tout. En quelques secondes, il ne reste plus rien."
 		},
@@ -3668,14 +3783,26 @@
 			"title": "Là Fuite",
 			"content": "Graubach à disparu. Georg s'est sacrifié pour que je puisse fuir. Son marteau est tout ce qu'il me reste. Et là question qui ne me quitte jamais : a-t-il survécu ?"
 		},
+		"packed_books_escape": {
+			"text": "Mes livres gisent quelque part sous les décombres. Le folklore, les mythes - tout inutile contre quelque chose de plus ancien que les histoires. Mais j'en écrirai de nouveaux. Des avertissements."
+		},
+		"packed_cross_escape": {
+			"text": "Le crucifix de ma mère pend encore à mon cou. A-t-il aidé ? Non. Mais il m'a rappelé quelque chose : il existe un monde au-delà de Graubach. Et je suis en chemin pour y retourner."
+		},
+		"packed_camera_escape": {
+			"text": "L'appareil photo a une dernière image : Graubach, qui sombre, qui se dissout. La seule preuve en dehors du journal de grand-mère. Parfois je l'examine lors de nuits blanches et me demande si c'était réel."
+		},
 		"escape_konrad_epilog": {
-			"text": "Konrad. In manchen Nächten denkt Elise an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?"
+			"text": "Konrad. Certaines nuits, je pense à l'homme aux yeux vitreux qui a été prisonnier pendant trente ans. L'éveil l'a-t-il libéré ? Ou l'a-t-il emporté ?"
 		},
 		"escape_anna_epilog": {
-			"text": "Dans ses nuits les plus sombres, Elise se demande si Anna a survécu. Une enfant aux yeux qui voyaient trop."
+			"text": "Dans mes nuits les plus sombres, je me demande si Anna a survécu. Une enfant aux yeux qui voyaient trop."
 		},
 		"escape_otto_epilog": {
 			"text": "Otto ? Disparu avec le village. Enseveli sous son propre silence."
+		},
+		"escape_candle_epilog": {
+			"text": "Quelque part dans les ruines de Graubach, une bougie qui a brûlé pendant trois semaines s'éteint. Son dernier scintillement n'est vu par personne."
 		},
 		"narration_2": {
 			"text": "Georg est soudain là. Il s'est frayé un chemin à travers les hommes d'Otto, à descendu l'escalier, est entré dans là chambre qui tremble."
@@ -3790,6 +3917,9 @@
 		"creature_pact_10": {
 			"text": "J'... ACCEPTE. PAS PARCE QUE JE TE FAIS CONFIANCE. PARCE QUE JE SUIS FATIGUÉ. ET PARCE QUE TA VIEILLE M'A APPRIS LA CONFIANCE."
 		},
+		"narration_anchor_pact": {
+			"text": "Je me tiens sur le signe, le chant s'estompe, et l'ancre tient - non comme une chaîne, mais comme un pont. Le pacte se forme non par la puissance, mais par la confiance."
+		},
 		"narration_5": {
 			"text": "Elle réfléchit. Je sens son scepticisme, son expérience des promesses brisées. Mais aussi sà lassitude. Elle ne veut plus se battre. Elle veut simplement ne pas être oubliée."
 		},
@@ -3842,6 +3972,18 @@
 			"title": "Le Pacte",
 			"content": "Pas de sang. Pas de sacrifice. Pas de réceptacle. Seulement une promesse : chaque année, je reviendrai tenir compagnie à l'entité. Elle à accepté. Grand-mère à ouvert là voie. Je là suivrai jusqu'au bout."
 		},
+		"packed_books_pact": {
+			"text": "Mes livres sont ouverts à côté de moi. Les anciens textes sur les rituels et les liens - ils m'ont menée ici. Mais le vrai savoir n'a jamais été dans les livres. Il résidait dans l'écoute."
+		},
+		"packed_cross_pact": {
+			"text": "Le crucifix de ma mère repose, chaud, dans ma main. La foi contre l'inconnu - mais l'inconnu n'a jamais été l'ennemi. Il était seulement seul."
+		},
+		"packed_camera_pact": {
+			"text": "Mon appareil photo pend inutilisé autour de mon cou. Certaines vérités ne se photographient pas. Mais je les écrirai - chaque mot, chaque rencontre."
+		},
+		"pact_epilog_transition": {
+			"text": "Les semaines passent. Les mois. Le souvenir de cette nuit s'estompe comme un rêve — mais le pacte demeure."
+		},
 		"pact_konrad_epilog": {
 			"text": "Konrad se tient près de la fontaine quand Elise quitte la chambre. Les spirales sur ses mains s'estompent déjà. Pour la première fois en trente ans, son regard lui appartient."
 		},
@@ -3853,6 +3995,9 @@
 		},
 		"pact_otto_epilog": {
 			"text": "Otto quitte le village quand il comprend que la tradition est terminée. L'œuvre de sa vie — sans signification."
+		},
+		"pact_candle_epilog": {
+			"text": "La bougie sur la table de nuit de grand-mère brûle plus régulièrement. Plus désespérée, plus en attente. Une flamme calme et satisfaite."
 		},
 		"narration_3": {
 			"text": "Et là faim. Une faim si ancienne et si profonde qu'elle brouille les frontières entre émotion et loi naturelle. Elle à besoin de nourriture. Pas de chair, pas de sang — de l'attention. De là conscience. Du contact."
@@ -3937,6 +4082,27 @@
 		"elise_sacrifice_6": {
 			"text": "Vis tà vie, Konrad. Tu as perdu trente ans. Reprends-les."
 		},
+		"georg_sacrifice_1": {
+			"text": "Elise, non ! Tu ne peux pas — c'est de la folie ! Il doit y avoir un autre moyen !"
+		},
+		"elise_georg_sacrifice": {
+			"text": "Ce n'est pas de la folie, Georg. C'est une décision. Ma décision. Prends soin du village."
+		},
+		"hilde_sacrifice_1": {
+			"text": "Tu es plus courageuse que ta grand-mère. Elle l'aurait fait si elle avait pu. Je te bénis, mon enfant."
+		},
+		"elise_hilde_sacrifice": {
+			"text": "Merci, Hilde. Pour tout."
+		},
+		"voss_sacrifice_1": {
+			"text": "Dieu soit avec toi, mon enfant. Ce que tu fais est... saint. D'une manière qu'aucune prière ne peut atteindre."
+		},
+		"elise_voss_sacrifice": {
+			"text": "Priez pour moi, Pasteur. Pas pour mon âme. Pour ma force."
+		},
+		"narration_sacrifice_solo": {
+			"text": "Le silence. Seulement le chant — plus doux maintenant, plus satisfait. Personne n'est là pour m'arrêter. Personne pour me consoler. Seulement moi et l'entité qui trouve lentement sa nouvelle place."
+		},
 		"narration_10": {
 			"text": "Je ne finis pas là phrase. Les mots ne m'appartiennent plus seule. Dans mà tête, à côté de mes pensées, le chant commence doucement."
 		},
@@ -3974,11 +4140,29 @@
 			"title": "Le Sacrifice",
 			"content": "J'ai pris là place de Konrad comme réceptacle. Volontairement. L'entité et moi partageons désormais un corps, un esprit. Ce n'est pas là fin. C'est le début d'une coexistence."
 		},
+		"packed_books_sacrifice": {
+			"text": "Mes livres sont maintenant sur l'étagère de grand-mère. Elise les lit parfois, quand l'entité dort. Le folklore a pris un nouveau sens - non plus une étude. Une expérience vécue."
+		},
+		"packed_cross_sacrifice": {
+			"text": "Le crucifix est accroché au-dessus du lit. Parfois, quand l'entité regarde la croix à travers les yeux d'Elise, elle sent sa curiosité. Il ne connaît pas de dieux. Mais il comprend le réconfort."
+		},
+		"packed_camera_sacrifice": {
+			"text": "L'appareil photo repose, poussiéreux, sur l'étagère. Elise ne photographie plus. À quoi bon ? Ce qu'elle voit, aucun objectif ne peut le saisir. Mais parfois, dans les moments de clarté, elle capture le monde en mots."
+		},
+		"sacrifice_epilog_transition": {
+			"text": "Les jours deviennent des semaines. Les semaines des mois. J'apprends à vivre avec mon hôte. Et mon hôte apprend à ne pas me dévorer."
+		},
 		"sacrifice_anna_epilog": {
 			"text": "Anna comprend la première. « Le chant sonne différemment », murmure-t-elle. « Plus chaud. Comme une conversation. » Elle pose sa main sur l'épaule d'Elise."
 		},
+		"sacrifice_mathilde_epilog": {
+			"text": "Mathilde, la femme aveugle du train, a survécu au rituel il y a soixante ans. Seule, oubliée. Je ne serai pas oubliée."
+		},
 		"sacrifice_otto_epilog": {
 			"text": "Otto ne comprend jamais. Il part parce que la tradition n'a plus de sens. Son dernier regard en arrière est vide."
+		},
+		"sacrifice_candle_epilog": {
+			"text": "Dans la maison de grand-mère, la bougie continue de brûler. Mais sa lumière est plus chaude maintenant, plus dorée. Comme si elle savait qu'Elise est restée."
 		},
 		"konrad_2": {
 			"text": "Elise, NON ! Qu'est-ce que tu fais ?!"
@@ -4017,6 +4201,9 @@
 		},
 		"narration_6": {
 			"text": "Les spirales se condensent en un motif sur le sol. Un sceau. Non fait de pierre où d'encre — de son, de volonté, de là connexion entre mà voix et l'entité."
+		},
+		"narration_anchor_seal": {
+			"text": "Trois parties se rejoignent - le chant, le signe sous mes pieds, et moi-même. L'ancre. Le plan de grand-mère, accompli."
 		},
 		"elise_seal_2": {
 			"text": "Dors bien. Je reviendrai. Dans trente ans. Ou plus tôt."
@@ -4216,6 +4403,9 @@
 		"creature_truth_final": {
 			"text": "Silence. Un long silence. Puis, plus doucement que jamais : MERCI."
 		},
+		"narration_anchor_truth": {
+			"text": "Le signe pulse sous moi, le chant résonne, et l'ancre - moi - maintient la connexion. Mais au lieu de lier, elle ouvre. La compréhension coule dans les deux sens."
+		},
 		"narration_9": {
 			"text": "L'entité se retire. Satisfaite. Pour là première fois en des siècles, quelqu'un l'à regardée sans fuir. Elle s'endort — non par contrainte, mais en paix."
 		},
@@ -4286,11 +4476,26 @@
 			"title": "Là Vérité",
 			"content": "L'entité n'est pas notre ennemi. C'est un voisin, piégé entre les mondes, six cents ans de solitude. Les sacrifices n'ont jamais été nécessaires. Il avait juste besoin de quelqu'un pour l'écouter. Je suis là première à avoir écouté."
 		},
+		"packed_books_truth": {
+			"text": "Mes livres - folklore, mythes, rituels de liaison - ils m'ont préparée à poser des questions. Mais les réponses ne sont pas venues du papier. Elles sont venues de l'abîme lui-même."
+		},
+		"packed_cross_truth": {
+			"text": "Le crucifix de ma mère gisait inutile dans ma poche. Aucun dieu ne m'a sauvée. La vérité m'a sauvée - et la volonté de la supporter."
+		},
+		"packed_camera_truth": {
+			"text": "L'appareil photo n'aurait rien pu capturer de ce que j'ai vu. Six cents ans de solitude ne tiennent pas sur une pellicule. Mais j'en écrirai. Le monde doit savoir ce qui était ici."
+		},
+		"truth_epilog_transition": {
+			"text": "L'aube. La plus longue nuit de ma vie est terminée. Et avec elle trente ans de mensonges."
+		},
 		"truth_konrad_epilog": {
 			"text": "Konrad se tient à l'entrée de l'église tandis que la lumière du matin traverse les vitraux. Les moments vitreux sont terminés. Ses yeux sont clairs. « Il dort paisiblement », murmure-t-il. « Pour la première fois, il ne rêve pas à travers moi. »"
 		},
 		"truth_otto_epilog": {
 			"text": "Otto se tient au bord du village et regarde le lever du soleil. Il pleure. Pendant trente ans, il a cru que les sacrifices étaient nécessaires. Ils ne l'ont jamais été."
+		},
+		"truth_mathilde_epilog": {
+			"text": "Elise pense à la femme aveugle dans le train. Mathilde. Elle le savait depuis soixante ans. Elle fredonnait la mélodie non par folie - mais par compréhension."
 		},
 		"truth_candle_epilog": {
 			"text": "Dans la maison de grand-mère, la bougie s'éteint. Mais l'odeur de miel et d'herbes reste."
@@ -4366,6 +4571,18 @@
 		"narration_begin_ritual": {
 			"text": "Je pose mes mains sur le signe de terre. Le point pulsant au centre du cercle. Et cette fois, je ne les retire pas."
 		},
+		"otto_has_book": {
+			"text": "Un bruit à l'entrée. Otto Reinhardt sort de l'ombre, le livre dans les mains. Il a dû me suivre."
+		},
+		"otto_book_taunt": {
+			"text": "Les lèvres d'Otto dessinent un sourire triomphant. Il brandit le livre comme une arme - mais avant qu'il puisse parler, l'air vibre."
+		},
+		"otto_book_creature": {
+			"text": "LE LIVRE M'APPARTIENT. PAS À LUI."
+		},
+		"otto_book_taken": {
+			"text": "Le livre s'arrache des mains d'Otto, vole dans les airs et atterrit ouvert devant moi. Otto recule, blanc comme un linge, et fuit dans l'escalier. L'entité n'a aucune patience pour les voleurs."
+		},
 		"packed_books_narration": {
 			"text": "Mes livres sont ouverts à côté de moi. Un passage sur les rituels de liaison dans les communautés précrétiennes me revient — la résonance du mot prononcé, le lien entre le son et la terre."
 		},
@@ -4401,6 +4618,15 @@
 		},
 		"narration_creature_react": {
 			"text": "Il connaît grand-mère. Il se souvient d'elle. Pendant trente ans, elle l'à visité, lui à chanté, l'à lié. Et il s'en souvient."
+		},
+		"knowledge_high": {
+			"text": "Tout ce que j'ai appris - les spirales, le chant, les vieilles histoires - tout prend sens maintenant. La créature n'est pas un monstre. C'est un prisonnier. Comme Konrad, mais plus ancien. Bien plus ancien."
+		},
+		"knowledge_high_2": {
+			"text": "Je te connais. Pas ton nom, mais ta solitude. Les spirales, les rêves, le chant - j'ai écouté."
+		},
+		"knowledge_zero": {
+			"text": "Je ne comprends rien. La conscience qui touche la mienne est si étrangère, si AUTRE, que les mots me manquent. Comme si j'entendais une langue jamais destinée aux oreilles humaines."
 		},
 		"elise_creature_2": {
 			"text": "Margarethe. Mà grand-mère. C'est elle qui m'à envoyée."
@@ -4450,8 +4676,29 @@
 		"narration_revelation_2": {
 			"text": "Il attend mà réponse. L'être le plus ancien du monde attend les mots d'une folkloriste de Berlin."
 		},
+		"courage_high_dialogue": {
+			"text": "Mes mains reposent, fermes, sur la pierre. Pas de tremblement. Pas de panique. Seulement de la clarté, tranchante et froide."
+		},
+		"courage_high_2": {
+			"text": "TU N'AS PAS PEUR. C'EST... NOUVEAU. SIX CENTS ANS ET PERSONNE NE S'EST TENU SI CALME DEVANT MOI."
+		},
+		"courage_high_3": {
+			"text": "J'ai peur. Mais j'ai appris que la peur ne doit pas être la dernière chose que l'on ressent."
+		},
+		"courage_low_dialogue": {
+			"text": "Tout mon corps tremble. Mes dents claquent. Le froid rampe de l'intérieur vers l'extérieur, comme si l'entité avait enfoncé un doigt de glace dans ma poitrine."
+		},
+		"courage_low_2": {
+			"text": "TA PEUR A LE GOÛT DE CELLE DES AUTRES. MAIS TU ES LÀ QUAND MÊME. CELA TE REND... ÉTRANGE."
+		},
+		"courage_low_3": {
+			"text": "J'ai tellement peur. Mais je ne peux pas partir. Pas maintenant. Pas après tout cela."
+		},
 		"konrad_appears": {
 			"text": "Des pas dans l'escalier. Konrad. Il se tient à l'entrée de là chambre, à moitié dans l'ombre. Ses yeux oscillent entre le brun et quelque chose de sans fond."
+		},
+		"konrad_door_memory": {
+			"text": "Tu m'as ouvert la porte quand tous les autres la gardaient verrouillée. La première nuit. Ça... c'était moi, Elise. Pas LUI. C'était moi."
 		},
 		"konrad_1": {
 			"text": "Elise... çà m'à amené ici. Ça... ÇA PARLE À TRAVERS MOI. Mais une partie de moi est encore là. Encore."

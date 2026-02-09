@@ -207,7 +207,7 @@
 		"voss_main_2": {
 			"type": "dialogue",
 			"speaker": "voss",
-			"expression": "determined",
+			"expression": "warning",
 			"text": "Das Ritual ist gescheitert! Aber wir leben noch! LAUFEN SIE!",
 			"next": "narration_voss_tunnel"
 		},
@@ -340,6 +340,16 @@
 		"narration_7": {
 			"type": "narration",
 			"text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald öffnet sich - zum ersten Mal öffnet er sich.",
+			"next": "narration_forest_opens"
+		},
+		"narration_forest_opens": {
+			"type": "narration",
+			"text": "Die Bäume weichen zurück. Der Wald, der mich tagelang gefangen hielt, öffnet sich plötzlich - als hätte das Erwachen der Kreatur die alten Bindungen zerrissen.",
+			"next": "narration_forest_opens_2"
+		},
+		"narration_forest_opens_2": {
+			"type": "narration",
+			"text": "Natürlich. Das Wesen HAT den Wald kontrolliert. Wer das Buch bewacht, bewacht auch die Grenzen. Aber jetzt ist es wach, und seine Aufmerksamkeit gilt nicht mehr den Bäumen.",
 			"next": "narration_8"
 		},
 		"narration_8": {
@@ -571,21 +581,62 @@
 			"entry_id": "ending_escape",
 			"title": "Die Flucht",
 			"content": "Graubach ist verschwunden. Ich bin geflohen - die Einzige, die entkam. In meiner Tasche Großmutters Journal, der einzige Beweis. Und die Frage, die mich nie loslässt: Hätte ich es verhindern können?",
+			"next": "check_packed_escape"
+		},
+		"check_packed_escape": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_escape",
+			"false_next": "check_packed_cross_escape"
+		},
+		"packed_books_escape": {
+			"type": "narration",
+			"text": "Meine Bücher liegen irgendwo unter den Trümmern. Die Folklore, die Mythen - alles nutzlos gegen etwas, das älter ist als Geschichten. Aber ich werde neue schreiben. Warnungen.",
+			"next": "escape_konrad_epilog"
+		},
+		"check_packed_cross_escape": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_escape",
+			"false_next": "check_packed_camera_escape"
+		},
+		"packed_cross_escape": {
+			"type": "narration",
+			"text": "Das Kruzifix meiner Mutter baumelt noch an meinem Hals. Hat es geholfen? Nein. Aber es hat mich an etwas erinnert: Es gibt eine Welt jenseits von Graubach. Und ich bin auf dem Weg zurück dorthin.",
+			"next": "escape_konrad_epilog"
+		},
+		"check_packed_camera_escape": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_escape",
+			"false_next": "escape_konrad_epilog"
+		},
+		"packed_camera_escape": {
+			"type": "narration",
+			"text": "Die Kamera hat ein letztes Bild: Graubach, versinkend, aufgelöst. Der einzige Beweis neben Großmutters Journal. Manchmal betrachte ich es in schlaflosen Nächten und frage mich, ob es real war.",
 			"next": "escape_konrad_epilog"
 		},
 		"escape_konrad_epilog": {
 			"type": "narration",
-			"text": "Konrad. In manchen Nächten denkt Elise an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
+			"text": "Konrad. In manchen Nächten denke ich an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
 			"next": "escape_anna_epilog"
 		},
 		"escape_anna_epilog": {
 			"type": "narration",
-			"text": "In ihren dunkelsten Nächten fragt sich Elise, ob Anna es überlebt hat. Ein Kind mit Augen, die zu viel sahen.",
+			"text": "In meinen dunkelsten Nächten frage ich mich, ob Anna es überlebt hat. Ein Kind mit Augen, die zu viel sahen.",
 			"next": "escape_otto_epilog"
 		},
 		"escape_otto_epilog": {
 			"type": "narration",
 			"text": "Otto? Verschwunden mit dem Dorf. Begraben unter seinem eigenen Schweigen.",
+			"next": "escape_candle_epilog"
+		},
+		"escape_candle_epilog": {
+			"type": "narration",
+			"text": "Irgendwo in den Trümmern von Graubach erlischt eine Kerze, die drei Wochen lang brannte. Ihr letztes Flackern sieht niemand.",
 			"next": "scene_end"
 		},
 		"scene_end": {

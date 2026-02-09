@@ -126,14 +126,14 @@
 			"speaker": "georg",
 			"expression": "determined",
 			"text": "Dann kämpfen wir. Zusammen. Margarethe hätte nicht aufgegeben!",
-			"next": "elise_awake_fight"
+			"next": "elise_awake_fight_ally"
 		},
-		"elise_awake_fight": {
+		"elise_awake_fight_ally": {
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
 			"text": "Du hast recht. Ich versuche es noch einmal. Ich MUSS es versuchen.",
-			"next": "hide_ally_awake"
+			"next": "elise_awake_fight"
 		},
 		"check_ally_awake_hilde": {
 			"type": "flag_check",
@@ -169,7 +169,7 @@
 			"speaker": "hilde",
 			"expression": "ritual",
 			"text": "Dann singe ICH! Halt durch, Kind!",
-			"next": "elise_awake_fight"
+			"next": "elise_awake_fight_ally"
 		},
 		"check_ally_awake_voss": {
 			"type": "flag_check",
@@ -205,7 +205,7 @@
 			"speaker": "voss",
 			"expression": "broken",
 			"text": "Nein. Nein, ich laufe nicht mehr. Dreißig Jahre bin ich gelaufen.",
-			"next": "elise_awake_fight"
+			"next": "elise_awake_fight_ally"
 		},
 		"narration_alone_awake": {
 			"type": "narration",
@@ -215,9 +215,48 @@
 		"elise_awake_fight": {
 			"type": "narration",
 			"text": "Ich versuche es noch einmal. Sammle die Fragmente des Gesangs, die letzten Reste meines Willens. Aber das Wesen ist wach. Richtig wach. Und es ist wütend.",
-			"next": "hide_ally_awake"
+			"next": "check_hide_georg_awake"
 		},
-		"hide_ally_awake": {
+		"check_hide_georg_awake": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "hide_georg_awake",
+			"false_next": "check_hide_hilde_awake"
+		},
+		"hide_georg_awake": {
+			"type": "character",
+			"character": "georg",
+			"action": "hide",
+			"next": "effect_ally_vanish"
+		},
+		"check_hide_hilde_awake": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "hide_hilde_awake",
+			"false_next": "check_hide_voss_awake"
+		},
+		"hide_hilde_awake": {
+			"type": "character",
+			"character": "hilde",
+			"action": "hide",
+			"next": "effect_ally_vanish"
+		},
+		"check_hide_voss_awake": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "hide_voss_awake",
+			"false_next": "effect_ally_vanish"
+		},
+		"hide_voss_awake": {
+			"type": "character",
+			"character": "voss",
+			"action": "hide",
+			"next": "effect_ally_vanish"
+		},
+		"effect_ally_vanish": {
 			"type": "effect",
 			"effect": "text_glitch",
 			"params": {
@@ -354,6 +393,11 @@
 		"awakening_otto_epilog": {
 			"type": "narration",
 			"text": "Ottos Befehle verhallen. Sein Machtsystem - bedeutungslos vor etwas, das älter ist als Macht.",
+			"next": "awakening_candle_epilog"
+		},
+		"awakening_candle_epilog": {
+			"type": "narration",
+			"text": "Die Kerze auf dem Nachttisch lodert - eine wilde, hungrige Flamme - und erlischt dann mit einem Zischen, als hätte jemand sie ausgeblasen.",
 			"next": "scene_end"
 		},
 		"scene_end": {

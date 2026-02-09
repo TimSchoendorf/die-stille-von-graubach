@@ -53,7 +53,7 @@
 		},
 		"elise_morning_plan": {
 			"type": "narration",
-			"text": "Übermorgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen.",
+			"text": "Morgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen.",
 			"next": "bg_village_corrupted"
 		},
 
@@ -125,7 +125,7 @@
 		},
 		"narration_6": {
 			"type": "narration",
-			"text": "Ich muss handeln. Übermorgen ist der dreißigste Jahrestag der letzten Fütterung. Wenn das Ritual stattfindet, stirbt jemand. Wenn es nicht stattfindet...",
+			"text": "Ich muss handeln. Morgen Nacht ist der dreißigste Jahrestag der letzten Fütterung. Wenn das Ritual stattfindet, stirbt jemand. Wenn es nicht stattfindet...",
 			"next": "narration_7"
 		},
 		"narration_7": {
@@ -427,6 +427,13 @@
 			"speaker": "anna",
 			"expression": "afraid",
 			"text": "Sechshundert Jahre allein. Und jetzt bist du da. Was, wenn du auch weggehst?",
+			"next": "anna_coexistence_hint"
+		},
+		"anna_coexistence_hint": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "dreamy",
+			"text": "Es will nicht besetzen. Es will nur nicht allein sein. Konrad hätte sein Freund sein können. Aber Konrad hat sich gewehrt.",
 			"next": "anna_fear_narration"
 		},
 		"anna_fear_narration": {
@@ -492,7 +499,7 @@
 			"type": "journal",
 			"entry_id": "reality_breaking",
 			"title": "Die Realität bricht",
-			"content": "Tag 6: Die Realität wird dünn. Der Wald wächst, das Dorf verzerrt sich, Farben stimmen nicht mehr. Anna sagt, das Wesen träumt von mir - und es hat Angst. Ich bin nicht das Opfer. Ich bin die Bedrohung. Die Fütterung ist übermorgen. Ich muss vorher handeln.",
+			"content": "Tag 6: Die Realität wird dünn. Der Wald wächst, das Dorf verzerrt sich, Farben stimmen nicht mehr. Anna sagt, das Wesen träumt von mir - und es hat Angst. Ich bin nicht das Opfer. Ich bin die Bedrohung. Die Fütterung ist morgen Nacht. Ich muss vorher handeln.",
 			"next": "effect_clear"
 		},
 		"effect_clear": {

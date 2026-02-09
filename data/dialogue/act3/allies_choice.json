@@ -64,8 +64,34 @@
 						"voss_trust": 10
 					},
 					"next": "ally_voss"
+				},
+				{
+					"text": "Niemanden einweihen - ich will niemanden in Gefahr bringen",
+					"set_flags": {
+						"chose_solo": 1
+					},
+					"add_flags": {
+						"courage": 3
+					},
+					"next": "ally_solo"
 				}
 			]
+		},
+
+		"ally_solo": {
+			"type": "narration",
+			"text": "Niemanden. Ich werde niemanden in Gefahr bringen. Nicht Georg, nicht Hilde, nicht Voss. Was auch immer in der Kammer wartet - es ist zwischen mir und dem Wesen. Nur uns zwei.",
+			"next": "ally_solo_2"
+		},
+		"ally_solo_2": {
+			"type": "narration",
+			"text": "Großmutter hat dreißig Jahre allein gekämpft. Sie hat niemanden hinuntergezogen, niemanden geopfert, niemanden riskiert. Wenn ich ihre Enkelin bin, kann ich das auch.",
+			"next": "ally_solo_3"
+		},
+		"ally_solo_3": {
+			"type": "narration",
+			"text": "Es ist einsam. Aber Einsamkeit ist kein Todesurteil. Das sollte ich wissen - ich bin Folkloristin, nicht Soldatin. Mein Werkzeug ist Verständnis, nicht Gewalt. Dafür brauche ich keine Armee.",
+			"next": "ally_converge"
 		},
 
 		"ally_georg": {
@@ -400,6 +426,18 @@
 		},
 
 		"ally_converge": {
+			"type": "flag_check",
+			"flag": "chose_solo",
+			"value": 1,
+			"true_next": "ally_converge_solo",
+			"false_next": "ally_converge_allied"
+		},
+		"ally_converge_solo": {
+			"type": "narration",
+			"text": "Ich bin allein. Wie Großmutter. Aber ich habe ihr Wissen, ihre Vorbereitung. Das muss reichen.",
+			"next": "elise_konrad_consider"
+		},
+		"ally_converge_allied": {
 			"type": "narration",
 			"text": "Ich habe einen Verbündeten. Jemanden, der morgen Nacht neben mir stehen wird, wenn ich mich dem stellen muss, was unter der Erde wartet.",
 			"next": "elise_konrad_consider"

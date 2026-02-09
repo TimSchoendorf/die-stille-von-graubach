@@ -89,10 +89,24 @@
 			"next": "elise_tradition_1"
 		},
 		"elise_tradition_1": {
+			"type": "flag_check",
+			"flag": "met_hilde",
+			"value": 1,
+			"true_next": "elise_tradition_1_hilde",
+			"false_next": "elise_tradition_1_nohilde"
+		},
+		"elise_tradition_1_hilde": {
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
 			"text": "Tradition? Was für eine Tradition? Hilde hat auch davon gesprochen.",
+			"next": "georg_4"
+		},
+		"elise_tradition_1_nohilde": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Tradition? Was für eine Tradition? Großmutter hat in ihrem Brief so etwas angedeutet.",
 			"next": "georg_4"
 		},
 		"georg_4": {

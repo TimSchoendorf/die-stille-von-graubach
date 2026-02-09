@@ -280,12 +280,45 @@
 			"speaker": "hilde",
 			"expression": "wise",
 			"text": "Es wusste das schon vorher, Kind. Dein Name steht in seinem Buch. Aber jetzt weiß es, dass du SINGEN kannst. Das ist wichtig.",
+			"next": "choice_practice_chant"
+		},
+		"choice_practice_chant": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Den Gesang üben - ich muss ihn beherrschen",
+					"set_flags": {
+						"practiced_chant": 1
+					},
+					"next": "practice_chant_success"
+				},
+				{
+					"text": "Später - ich brauche erst mehr Informationen",
+					"next": "skip_chant_practice"
+				}
+			]
+		},
+		"practice_chant_success": {
+			"type": "narration",
+			"text": "Ich übe die Melodie, wieder und wieder, bis sie sich in meine Knochen einprägt. Hilde korrigiert mich geduldig - ein Ton tiefer hier, ein Atemzug länger dort. Nach einer Stunde klingt es... richtig.",
 			"next": "set_learned_chant"
 		},
 		"set_learned_chant": {
 			"type": "set_flag",
 			"flag": "learned_chant",
 			"value": 1,
+			"next": "transition_to_sign"
+		},
+		"skip_chant_practice": {
+			"type": "narration",
+			"text": "Mir schwirrt der Kopf. Der Gesang, das Zeichen, der Anker - zu viel auf einmal. Ich muss erst verstehen, was das alles bedeutet, bevor ich es auswendig lerne.",
+			"next": "skip_chant_2"
+		},
+		"skip_chant_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Warte nicht zu lang, Kind. Der Gesang braucht Übung. Ohne ihn ist das Siegel nur ein leeres Versprechen.",
 			"next": "transition_to_sign"
 		},
 		"transition_to_sign": {
@@ -404,6 +437,53 @@
 		"narration_anchor_weight": {
 			"type": "narration",
 			"text": "Nicht sicher. Das heißt, es könnte mich töten. Oder schlimmer - es könnte mich verändern. So wie es Konrad verändert hat.",
+			"next": "choice_anchor_reaction"
+		},
+		"choice_anchor_reaction": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Und wenn ich sterbe? Was passiert dann mit dem Wesen?",
+					"set_flags": {
+						"asked_about_death": 1
+					},
+					"next": "hilde_death_answer"
+				},
+				{
+					"text": "Großmutter wollte der Anker sein. Warum hat sie es nicht getan?",
+					"set_flags": {
+						"asked_about_margarethe_anchor": 1
+					},
+					"next": "hilde_margarethe_answer"
+				}
+			]
+		},
+		"hilde_death_answer": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "warning",
+			"text": "Wenn der Anker stirbt, reißt die Verbindung. Das Siegel bricht. Das Wesen erwacht - verwirrt, wütend, hungrig. Deshalb muss der Anker stark sein. Und deshalb muss es jemand tun, der jung genug ist.",
+			"next": "hilde_death_answer_2"
+		},
+		"hilde_death_answer_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Also muss ich nicht nur überleben - ich muss LANGE überleben. Dreißig Jahre. Wie Großmutter.",
+			"next": "hilde_anchor_expr"
+		},
+		"hilde_margarethe_answer": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Sie wollte es. Bis zum Schluss. Aber ihr Körper hat nicht mehr mitgemacht. Der Anker braucht Kraft - nicht körperliche, geistige. Und Margarethes Geist war müde. Dreißig Jahre wach, dreißig Jahre wachsam.",
+			"next": "hilde_margarethe_answer_2"
+		},
+		"hilde_margarethe_answer_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Sie hat auf dich gewartet. Nicht weil du stärker bist. Weil du frisch bist. Weil du noch die Kraft hast, die sie verloren hat.",
 			"next": "hilde_anchor_expr"
 		},
 		"hilde_anchor_expr": {
@@ -574,6 +654,34 @@
 			"speaker": "hilde",
 			"expression": "kind",
 			"text": "Aber wer redet schon mit dem, was unter der Erde schläft?",
+			"next": "hilde_margarethe_death_1"
+		},
+		"hilde_margarethe_death_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Am Ende hat Margarethe es getan. Sie ist ein letztes Mal hinuntergegangen, in der Nacht vor ihrem Tod. Nicht zum Kämpfen. Zum Reden.",
+			"next": "hilde_margarethe_death_2"
+		},
+		"hilde_margarethe_death_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Sie ist zurückgekommen. Hat sich ins Bett gelegt, gelächelt und die Augen geschlossen. Sie ist im Schlaf gestorben, Kind. Friedlich. Es war ein Abschied, kein Opfer.",
+			"next": "hilde_margarethe_death_3"
+		},
+		"hilde_margarethe_death_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Aber Otto hat angedeutet, dass ihr Tod nicht natürlich war...",
+			"next": "hilde_margarethe_death_4"
+		},
+		"hilde_margarethe_death_4": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "angry",
+			"text": "Otto lügt. Das ist, was Otto tut. Er will dir Angst machen, damit du seine Fütterung akzeptierst. Glaub keinem Wort, das dieser Mann über Margarethe sagt.",
 			"next": "hilde_margarethe_1"
 		},
 		"hilde_margarethe_1": {

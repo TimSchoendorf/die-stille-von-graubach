@@ -79,6 +79,11 @@
 		"narration_6": {
 			"type": "narration",
 			"text": "Die Spiralen verdichten sich zu einem Muster auf dem Boden. Ein Siegel. Nicht aus Stein oder Tinte - aus Klang, aus Willen, aus der Verbindung zwischen meiner Stimme und dem Wesen.",
+			"next": "narration_anchor_seal"
+		},
+		"narration_anchor_seal": {
+			"type": "narration",
+			"text": "Drei Teile verbinden sich - der Gesang, das Zeichen unter meinen Füßen, und ich selbst. Der Anker. Großmutters Plan, vollendet.",
 			"next": "elise_seal_2"
 		},
 		"elise_seal_2": {

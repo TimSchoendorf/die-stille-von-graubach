@@ -209,6 +209,116 @@
 			"speaker": "elise",
 			"expression": "thinking",
 			"text": "Leb dein Leben, Konrad. Dreißig Jahre hast du verloren. Hol sie dir zurück.",
+			"next": "check_ally_sacrifice_georg"
+		},
+		"check_ally_sacrifice_georg": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_sacrifice",
+			"false_next": "check_ally_sacrifice_hilde"
+		},
+		"show_georg_sacrifice": {
+			"type": "character",
+			"character": "georg",
+			"expression": "afraid",
+			"position": "left",
+			"action": "show",
+			"next": "georg_sacrifice_1"
+		},
+		"georg_sacrifice_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "afraid",
+			"text": "Elise, nein! Du kannst nicht - das ist Wahnsinn! Es muss einen anderen Weg geben!",
+			"next": "elise_georg_sacrifice"
+		},
+		"elise_georg_sacrifice": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Es ist kein Wahnsinn, Georg. Es ist eine Entscheidung. Meine Entscheidung. Pass auf das Dorf auf.",
+			"next": "hide_georg_sacrifice"
+		},
+		"hide_georg_sacrifice": {
+			"type": "character",
+			"character": "georg",
+			"action": "hide",
+			"next": "narration_10"
+		},
+		"check_ally_sacrifice_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_sacrifice",
+			"false_next": "check_ally_sacrifice_voss"
+		},
+		"show_hilde_sacrifice": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "left",
+			"action": "show",
+			"next": "hilde_sacrifice_1"
+		},
+		"hilde_sacrifice_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Du bist mutiger als deine Großmutter. Sie hätte es getan, wenn sie gekonnt hätte. Ich segne dich, Kind.",
+			"next": "elise_hilde_sacrifice"
+		},
+		"elise_hilde_sacrifice": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Danke, Hilde. Für alles.",
+			"next": "hide_hilde_sacrifice"
+		},
+		"hide_hilde_sacrifice": {
+			"type": "character",
+			"character": "hilde",
+			"action": "hide",
+			"next": "narration_10"
+		},
+		"check_ally_sacrifice_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_sacrifice",
+			"false_next": "narration_sacrifice_solo"
+		},
+		"show_voss_sacrifice": {
+			"type": "character",
+			"character": "voss",
+			"expression": "praying",
+			"position": "left",
+			"action": "show",
+			"next": "voss_sacrifice_1"
+		},
+		"voss_sacrifice_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "praying",
+			"text": "Gott sei mit dir, Kind. Was du tust, ist... heilig. Auf eine Art, die kein Gebet erreichen kann.",
+			"next": "elise_voss_sacrifice"
+		},
+		"elise_voss_sacrifice": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Beten Sie für mich, Pfarrer. Nicht für meine Seele. Für meine Stärke.",
+			"next": "hide_voss_sacrifice"
+		},
+		"hide_voss_sacrifice": {
+			"type": "character",
+			"character": "voss",
+			"action": "hide",
+			"next": "narration_10"
+		},
+		"narration_sacrifice_solo": {
+			"type": "narration",
+			"text": "Stille. Nur das Singen - leiser jetzt, zufriedener. Niemand ist hier, um mich aufzuhalten. Niemand, um mich zu trösten. Nur ich und das Wesen, das langsam seinen neuen Platz findet.",
 			"next": "narration_10"
 		},
 		"narration_10": {
@@ -311,16 +421,67 @@
 			"entry_id": "ending_sacrifice",
 			"title": "Das Opfer",
 			"content": "Ich habe Konrads Platz als Gefäß eingenommen. Freiwillig. Das Wesen und ich teilen nun einen Körper, einen Geist. Es ist nicht das Ende. Es ist der Anfang einer Koexistenz.",
+			"next": "check_packed_sacrifice"
+		},
+		"check_packed_sacrifice": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_sacrifice",
+			"false_next": "check_packed_cross_sacrifice"
+		},
+		"packed_books_sacrifice": {
+			"type": "narration",
+			"text": "Meine Bücher stehen jetzt in Großmutters Regal. Elise liest sie manchmal, wenn das Wesen schläft. Folklore hat eine neue Bedeutung bekommen - nicht mehr Studium. Lebende Erfahrung.",
+			"next": "sacrifice_epilog_transition"
+		},
+		"check_packed_cross_sacrifice": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_sacrifice",
+			"false_next": "check_packed_camera_sacrifice"
+		},
+		"packed_cross_sacrifice": {
+			"type": "narration",
+			"text": "Das Kruzifix hängt über dem Bett. Manchmal, wenn das Wesen durch Elises Augen auf das Kreuz blickt, spürt sie seine Neugier. Es kennt keine Götter. Aber es versteht den Trost.",
+			"next": "sacrifice_epilog_transition"
+		},
+		"check_packed_camera_sacrifice": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_sacrifice",
+			"false_next": "sacrifice_anna_epilog"
+		},
+		"packed_camera_sacrifice": {
+			"type": "narration",
+			"text": "Die Kamera steht verstaubt im Regal. Elise fotografiert nicht mehr. Wozu auch? Was sie sieht, kann keine Linse einfangen. Aber manchmal, in klaren Momenten, hält sie die Welt in Worten fest.",
+			"next": "sacrifice_epilog_transition"
+		},
+		"sacrifice_epilog_transition": {
+			"type": "narration",
+			"text": "Tage werden zu Wochen. Wochen zu Monaten. Ich lerne, mit meinem Gast zu leben. Und mein Gast lernt, mich nicht zu verschlingen.",
 			"next": "sacrifice_anna_epilog"
 		},
 		"sacrifice_anna_epilog": {
 			"type": "narration",
 			"text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt Elise die Hand auf die Schulter.",
+			"next": "sacrifice_mathilde_epilog"
+		},
+		"sacrifice_mathilde_epilog": {
+			"type": "narration",
+			"text": "Mathilde, die Blinde aus dem Zug, überlebte das Ritual vor sechzig Jahren. Allein, vergessen. Ich werde nicht vergessen werden.",
 			"next": "sacrifice_otto_epilog"
 		},
 		"sacrifice_otto_epilog": {
 			"type": "narration",
 			"text": "Otto versteht es nie. Er geht, weil die Tradition keinen Sinn mehr hat. Sein letzter Blick zurück ist leer.",
+			"next": "sacrifice_candle_epilog"
+		},
+		"sacrifice_candle_epilog": {
+			"type": "narration",
+			"text": "In Großmutters Haus brennt die Kerze weiter. Aber ihr Licht ist wärmer jetzt, goldener. Als wüsste sie, dass Elise geblieben ist.",
 			"next": "scene_end"
 		},
 		"scene_end": {

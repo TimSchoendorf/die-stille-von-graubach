@@ -22,6 +22,23 @@
 		"narration_inner": {
 			"type": "narration",
 			"text": "Großmutters Worte stehen mir vor Augen: 'Er ist das Gefäß.' Der Mann, der dort so friedlich liest, trägt etwas Uraltes in sich. Und er weiß es vielleicht nicht einmal.",
+			"next": "check_questioned_notes"
+		},
+		"check_questioned_notes": {
+			"type": "flag_check",
+			"flag": "questioned_notes",
+			"value": 1,
+			"true_next": "georg_warned_about_konrad",
+			"false_next": "show_konrad"
+		},
+		"georg_warned_about_konrad": {
+			"type": "narration",
+			"text": "Georg hat mich gewarnt. 'Sei vorsichtig mit dem Lehrer', hat er gesagt. Seine Augen waren dabei so ernst, wie ich sie bei niemandem gesehen habe. Konrads Lächeln verbirgt etwas.",
+			"next": "georg_warned_2"
+		},
+		"georg_warned_2": {
+			"type": "narration",
+			"text": "Ich werde freundlich sein. Aber auf der Hut. Jede Frage, die ich stelle, jede Antwort, die er gibt - ich werde genau zuhören. Nicht nur auf die Worte. Auf das, was zwischen den Worten liegt.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -142,7 +159,7 @@
 		"konrad_expr_charming": {
 			"type": "character",
 			"character": "konrad",
-			"expression": "charming",
+			"expression": "suspicious",
 			"position": "center",
 			"action": "show",
 			"next": "konrad_6"
@@ -252,6 +269,18 @@
 			"speaker": "konrad",
 			"expression": "possessed",
 			"text": "Manchmal träume ich Dinge, die nicht meine Träume sind. Ich sehe... tiefer. Älter. Als wäre ich nur eine Hülle.",
+			"next": "konrad_coexistence_hint"
+		},
+		"konrad_coexistence_hint": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Aber es gibt Momente... wenn ich aufhöre zu kämpfen... dann ist es fast friedlich. Als würde man neben jemandem sitzen, nicht in jemandem gefangen sein.",
+			"next": "elise_coexistence_react"
+		},
+		"elise_coexistence_react": {
+			"type": "narration",
+			"text": "Nicht kämpfen, sondern koexistieren? Der Gedanke ist verstörender als alles andere. Und trotzdem - irgendetwas daran klingt wahr.",
 			"next": "elise_trust_vessel"
 		},
 		"elise_trust_vessel": {

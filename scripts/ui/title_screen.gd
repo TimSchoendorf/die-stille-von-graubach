@@ -37,10 +37,16 @@ func _setup_ui() -> void:
 		bg.set_anchors_preset(PRESET_FULL_RECT)
 		add_child(bg)
 
-	# Center container
+	# Scrollable container (safety net for small screens)
+	var scroll := ScrollContainer.new()
+	scroll.set_anchors_preset(PRESET_FULL_RECT)
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	add_child(scroll)
+
 	var center := CenterContainer.new()
-	center.set_anchors_preset(PRESET_FULL_RECT)
-	add_child(center)
+	center.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	center.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.add_child(center)
 
 	var vbox := VBoxContainer.new()
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -68,9 +74,9 @@ func _setup_ui() -> void:
 	# Ornament divider
 	vbox.add_child(UITheme.create_ornament_label(UITheme.ORNAMENT_WIDE, 20))
 
-	# Spacer
+	# Spacer (smaller on mobile to save vertical space)
 	var spacer := Control.new()
-	spacer.custom_minimum_size.y = UITheme.s(40)
+	spacer.custom_minimum_size.y = UITheme.s(20) if UITheme.is_mobile() else 40
 	vbox.add_child(spacer)
 
 	# Buttons

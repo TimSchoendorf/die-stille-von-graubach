@@ -73,6 +73,34 @@
 			"speaker": "voss",
 			"expression": "afraid",
 			"text": "Sie sind gekommen. Gut. Wir haben wenig Zeit. Ottos Männer patrouillieren - er hat bemerkt, dass sich etwas verändert im Dorf.",
+			"next": "check_lied_to_voss"
+		},
+		"check_lied_to_voss": {
+			"type": "flag_check",
+			"flag": "lied_to_voss",
+			"value": 1,
+			"true_next": "voss_distrusts",
+			"false_next": "elise_voss_greet"
+		},
+		"voss_distrusts": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "worried",
+			"text": "Aber zuerst... Sie haben mich in der Kirche angelogen. Über das, was Sie wissen. Was Sie suchen. Ich habe es in Ihren Augen gesehen.",
+			"next": "elise_voss_lied"
+		},
+		"elise_voss_lied": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "worried",
+			"text": "Ich wusste nicht, ob ich Ihnen vertrauen kann, Pfarrer. Können Sie mir das verzeihen?",
+			"next": "voss_forgives_lie"
+		},
+		"voss_forgives_lie": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Verzeihen? Ich bin der Letzte, der Lügen verurteilen darf. Ich habe dreißig Jahre lang geschwiegen. Das ist schlimmer als jede Lüge.",
 			"next": "elise_voss_greet"
 		},
 		"elise_voss_greet": {
@@ -207,6 +235,12 @@
 		"elise_voss_understand": {
 			"type": "narration",
 			"text": "Ich verstehe ihn. Hier unten, wo die Wände atmen und der Boden pulsiert, braucht man etwas, das einen verankert. Für Voss ist es sein Glaube. Für mich... Großmutters Worte.",
+			"next": "hide_voss_book"
+		},
+		"hide_voss_book": {
+			"type": "character",
+			"character": "voss",
+			"action": "hide",
 			"next": "effect_singing"
 		},
 		"effect_singing": {

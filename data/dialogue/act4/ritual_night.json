@@ -220,7 +220,7 @@
 		"voss_ritual_2": {
 			"type": "dialogue",
 			"speaker": "voss",
-			"expression": "determined",
+			"expression": "warning",
 			"text": "Er hat Macht überall. Auch über Dinge, die älter sind als sein Name.",
 			"next": "narration_ally_ready"
 		},
@@ -237,6 +237,33 @@
 		"narration_begin_ritual": {
 			"type": "narration",
 			"text": "Ich lege meine Hände auf das Zeichen der Erde. Der pulsierende Punkt in der Mitte des Kreises. Und diesmal ziehe ich sie nicht zurück.",
+			"next": "check_gave_book_back"
+		},
+		"check_gave_book_back": {
+			"type": "flag_check",
+			"flag": "gave_book_back",
+			"value": 1,
+			"true_next": "otto_has_book",
+			"false_next": "check_packed_books"
+		},
+		"otto_has_book": {
+			"type": "narration",
+			"text": "Ein Geräusch am Eingang. Otto Reinhardt tritt aus dem Schatten, das Buch in seinen Händen. Er muss mir gefolgt sein.",
+			"next": "otto_book_taunt"
+		},
+		"otto_book_taunt": {
+			"type": "narration",
+			"text": "Ottos Lippen formen ein triumphierendes Lächeln. Er hebt das Buch wie eine Waffe - aber bevor er sprechen kann, vibriert die Luft.",
+			"next": "otto_book_creature"
+		},
+		"otto_book_creature": {
+			"type": "narration",
+			"text": "DAS BUCH GEHÖRT MIR. NICHT IHM.",
+			"next": "otto_book_taken"
+		},
+		"otto_book_taken": {
+			"type": "narration",
+			"text": "Das Buch reißt sich aus Ottos Händen, fliegt durch die Luft und landet aufgeschlagen vor mir. Otto weicht zurück, kreidebleich, und flieht die Treppe hinauf. Das Wesen hat keine Geduld für Diebe.",
 			"next": "check_packed_books"
 		},
 		"check_packed_books": {
@@ -287,6 +314,45 @@
 				"intensity": 3.0,
 				"duration": 1.0
 			},
+			"next": "check_hide_georg_ritual"
+		},
+		"check_hide_georg_ritual": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "hide_georg_ritual",
+			"false_next": "check_hide_hilde_ritual"
+		},
+		"hide_georg_ritual": {
+			"type": "character",
+			"character": "georg",
+			"action": "hide",
+			"next": "effect_text_glitch"
+		},
+		"check_hide_hilde_ritual": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "hide_hilde_ritual",
+			"false_next": "check_hide_voss_ritual"
+		},
+		"hide_hilde_ritual": {
+			"type": "character",
+			"character": "hilde",
+			"action": "hide",
+			"next": "effect_text_glitch"
+		},
+		"check_hide_voss_ritual": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "hide_voss_ritual",
+			"false_next": "effect_text_glitch"
+		},
+		"hide_voss_ritual": {
+			"type": "character",
+			"character": "voss",
+			"action": "hide",
 			"next": "effect_text_glitch"
 		},
 		"effect_text_glitch": {
@@ -356,6 +422,38 @@
 		"narration_creature_react": {
 			"type": "narration",
 			"text": "Es kennt Großmutter. Es erinnert sich an sie. Dreißig Jahre lang hat sie es besucht, hat es besungen, hat es gebunden. Und es erinnert sich.",
+			"next": "check_knowledge_entity"
+		},
+		"check_knowledge_entity": {
+			"type": "flag_check",
+			"flag": "knowledge_entity",
+			"value": 3,
+			"compare": "gte",
+			"true_next": "knowledge_high",
+			"false_next": "check_knowledge_none"
+		},
+		"knowledge_high": {
+			"type": "narration",
+			"text": "Alles, was ich gelernt habe - die Spiralen, das Singen, die alten Geschichten - es ergibt jetzt Sinn. Die Kreatur ist kein Monster. Sie ist ein Gefangener. Wie Konrad, nur älter. Viel älter.",
+			"next": "knowledge_high_2"
+		},
+		"knowledge_high_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich kenne dich. Nicht deinen Namen, aber deine Einsamkeit. Die Spiralen, die Träume, das Singen - ich habe zugehört.",
+			"next": "elise_creature_2"
+		},
+		"check_knowledge_none": {
+			"type": "flag_check",
+			"flag": "knowledge_entity",
+			"value": 0,
+			"true_next": "knowledge_zero",
+			"false_next": "elise_creature_2"
+		},
+		"knowledge_zero": {
+			"type": "narration",
+			"text": "Ich verstehe nichts. Das Bewusstsein, das mich berührt, ist so fremdartig, so ANDERS, dass mir die Worte fehlen. Als würde man eine Sprache hören, die nie für menschliche Ohren gedacht war.",
 			"next": "elise_creature_2"
 		},
 		"elise_creature_2": {
@@ -459,6 +557,56 @@
 		"narration_revelation_2": {
 			"type": "narration",
 			"text": "Es wartet auf meine Antwort. Das älteste Wesen der Welt wartet auf die Worte einer Folkloristin aus Berlin.",
+			"next": "check_courage_high"
+		},
+		"check_courage_high": {
+			"type": "flag_check",
+			"flag": "courage",
+			"value": 20,
+			"compare": "gte",
+			"true_next": "courage_high_dialogue",
+			"false_next": "check_courage_low"
+		},
+		"courage_high_dialogue": {
+			"type": "narration",
+			"text": "Meine Hände liegen ruhig auf dem Stein. Kein Zittern. Keine Panik. Nur Klarheit, messerscharf und kalt.",
+			"next": "courage_high_2"
+		},
+		"courage_high_2": {
+			"type": "narration",
+			"text": "DU HAST KEINE ANGST. DAS IST... NEU. SECHSHUNDERT JAHRE UND KEINER STAND SO RUHIG VOR MIR.",
+			"next": "courage_high_3"
+		},
+		"courage_high_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich habe Angst. Aber ich habe gelernt, dass Angst nicht das Letzte sein muss, was man fühlt.",
+			"next": "check_konrad_sacrifice"
+		},
+		"check_courage_low": {
+			"type": "flag_check",
+			"flag": "courage",
+			"value": 8,
+			"compare": "lte",
+			"true_next": "courage_low_dialogue",
+			"false_next": "check_konrad_sacrifice"
+		},
+		"courage_low_dialogue": {
+			"type": "narration",
+			"text": "Mein ganzer Körper zittert. Meine Zähne klappern. Die Kälte kriecht von innen nach außen, als hätte das Wesen einen Finger aus Eis in meine Brust geschoben.",
+			"next": "courage_low_2"
+		},
+		"courage_low_2": {
+			"type": "narration",
+			"text": "DEINE ANGST SCHMECKT WIE DIE DER ANDEREN. ABER DU BIST TROTZDEM HIER. DAS MACHT DICH... SELTSAM.",
+			"next": "courage_low_3"
+		},
+		"courage_low_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Ich habe solche Angst. Aber ich kann nicht weg. Nicht jetzt. Nicht nach allem.",
 			"next": "check_konrad_sacrifice"
 		},
 		"check_konrad_sacrifice": {
@@ -478,6 +626,20 @@
 		"konrad_appears": {
 			"type": "narration",
 			"text": "Schritte auf der Treppe. Konrad. Er steht im Eingang der Kammer, halb im Schatten. Seine Augen flackern zwischen Braun und etwas Bodenlosem.",
+			"next": "check_opened_door_konrad"
+		},
+		"check_opened_door_konrad": {
+			"type": "flag_check",
+			"flag": "opened_door",
+			"value": 1,
+			"true_next": "konrad_door_memory",
+			"false_next": "show_konrad"
+		},
+		"konrad_door_memory": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Du hast mir die Tür geöffnet, als alle anderen sie verschlossen hielten. In der ersten Nacht. Das... das war ich, Elise. Nicht ES. Das war ich.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {

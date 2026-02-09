@@ -1,7 +1,12 @@
 {
 	"title": "Akt 3 - Vorbereitung",
-	"start": "bg_grandmother_night",
+	"start": "narration_return",
 	"nodes": {
+		"narration_return": {
+			"type": "narration",
+			"text": "Ich klettere die Treppe hinauf, zurück durch die Kirche, hinaus in die Nacht. Die frische Luft brennt in meinen Lungen. Der Himmel über Graubach ist klar, aber die Sterne sehen falsch aus. Zu nah. Zu hell.",
+			"next": "bg_grandmother_night"
+		},
 		"bg_grandmother_night": {
 			"type": "background",
 			"background": "grandmother_house_night",
@@ -104,12 +109,12 @@
 		},
 		"narration_journal_4": {
 			"type": "narration",
-			"text": "'Das Ritual hat sechs Wege. Sechs mögliche Enden. Nicht alle sind gut. Aber alle sind besser als die Fütterung.'",
+			"text": "'Das Ritual hat viele mögliche Ausgänge. Der Gesang kann binden, befreien, öffnen oder zerstören. Und manche Wege entstehen erst im Moment.'",
 			"next": "narration_react_3"
 		},
 		"narration_react_3": {
 			"type": "narration",
-			"text": "Sechs Wege. Sechs Möglichkeiten. Ich zähle sie an den Fingern ab: siegeln, verstehen, zerstören, verhandeln, opfern, fliehen. Jeder hat seinen Preis.",
+			"text": "Binden, verstehen, zerstören, verhandeln - und was auch immer im Moment selbst geschieht. Jeder Weg hat seinen Preis.",
 			"next": "narration_journal_5"
 		},
 		"narration_journal_5": {
@@ -301,7 +306,7 @@
 		"hilde_visit_2": {
 			"type": "dialogue",
 			"speaker": "hilde",
-			"expression": "sad",
+			"expression": "kind",
 			"text": "Sie hat sich dreißig Jahre lang entschuldigt. Bei mir, bei Georg, bei den Sternen. Aber du warst immer die Einzige, bei der es zählte.",
 			"next": "elise_hilde_visit_2"
 		},
@@ -330,7 +335,7 @@
 			"type": "dialogue",
 			"speaker": "hilde",
 			"expression": "mysterious",
-			"text": "Deine Großmutter fasste Elises Hände. Du bist ihr ähnlicher als du denkst. Und das Wesen weiß es.",
+			"text": "Deine Großmutter fasste meine Hände, kurz bevor sie ging. Und sagte: 'Elise wird stärker sein als ich.' Du bist ihr ähnlicher als du denkst. Und das Wesen weiß es.",
 			"next": "narration_hilde_leave"
 		},
 		"narration_hilde_leave": {
@@ -466,6 +471,20 @@
 		"narration_approach_pact": {
 			"type": "narration",
 			"text": "Verhandeln: Ein Pakt. Geben und Nehmen. Weniger als Opfer, mehr als Ignoranz. Aber: kann man einem Wesen vertrauen, das sechshundert Jahre Menschenopfer hingenommen hat?",
+			"next": "check_courage_for_destroy"
+		},
+		"check_courage_for_destroy": {
+			"type": "flag_check",
+			"flag": "courage",
+			"value": 12,
+			"compare": "gte",
+			"true_next": "set_destroy_available",
+			"false_next": "choice_approach"
+		},
+		"set_destroy_available": {
+			"type": "set_flag",
+			"flag": "destroy_available",
+			"value": 1,
 			"next": "choice_approach"
 		},
 		"choice_approach": {
@@ -495,6 +514,9 @@
 					},
 					"add_flags": {
 						"courage": 5
+					},
+					"require_flags": {
+						"destroy_available": 1
 					},
 					"next": "approach_destroy"
 				},
@@ -548,8 +570,20 @@
 			"next": "narration_preparation"
 		},
 		"narration_preparation": {
+			"type": "flag_check",
+			"flag": "found_journal",
+			"value": 1,
+			"true_next": "narration_preparation_journal",
+			"false_next": "narration_preparation_nojournal"
+		},
+		"narration_preparation_journal": {
 			"type": "narration",
 			"text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Großmutters Journal. Die Kerze, die nicht erlischt.",
+			"next": "narration_preparation_2"
+		},
+		"narration_preparation_nojournal": {
+			"type": "narration",
+			"text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Die Kerze, die nicht erlischt.",
 			"next": "narration_preparation_2"
 		},
 		"narration_preparation_2": {
@@ -652,7 +686,7 @@
 			"type": "journal",
 			"entry_id": "final_preparation",
 			"title": "Die letzte Nacht",
-			"content": "Großmutters letzten Brief gelesen. Sie hat sich entschuldigt - und mir Mut gemacht. Das Ritual hat sechs mögliche Enden. Ich habe meinen Weg gewählt. Einen eigenen Brief geschrieben, für den Fall. Der Morgen ist blutrot. Es ist soweit.",
+			"content": "Großmutters letzten Brief gelesen. Sie hat sich entschuldigt - und mir Mut gemacht. Das Ritual hat viele mögliche Ausgänge. Ich habe meinen Weg gewählt. Einen eigenen Brief geschrieben, für den Fall. Der Morgen ist blutrot. Es ist soweit.",
 			"next": "narration_end"
 		},
 		"narration_end": {

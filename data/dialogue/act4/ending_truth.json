@@ -198,6 +198,11 @@
 		"creature_truth_final": {
 			"type": "narration",
 			"text": "Stille. Lange Stille. Dann, leiser als je zuvor: DANKE.",
+			"next": "narration_anchor_truth"
+		},
+		"narration_anchor_truth": {
+			"type": "narration",
+			"text": "Das Zeichen pulst unter mir, der Gesang hallt nach, und der Anker - ich - hält die Verbindung. Aber statt zu binden, öffnet sie. Verständnis fließt in beide Richtungen.",
 			"next": "effect_understanding"
 		},
 		"effect_understanding": {
@@ -445,6 +450,47 @@
 			"entry_id": "ending_truth",
 			"title": "Die Wahrheit",
 			"content": "Das Wesen ist nicht unser Feind. Es ist ein Nachbar, gefangen zwischen den Welten, sechshundert Jahre allein. Die Opfer waren nie nötig. Es brauchte nur jemanden, der zuhört. Ich bin die Erste, die zugehört hat.",
+			"next": "check_packed_truth"
+		},
+		"check_packed_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_truth",
+			"false_next": "check_packed_cross_truth"
+		},
+		"packed_books_truth": {
+			"type": "narration",
+			"text": "Meine Bücher - Folklore, Mythen, Bindungsrituale - sie haben mich auf das Fragen vorbereitet. Aber die Antworten kamen nicht aus Papier. Sie kamen aus dem Abgrund selbst.",
+			"next": "truth_epilog_transition"
+		},
+		"check_packed_cross_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_truth",
+			"false_next": "check_packed_camera_truth"
+		},
+		"packed_cross_truth": {
+			"type": "narration",
+			"text": "Das Kruzifix meiner Mutter lag nutzlos in meiner Tasche. Kein Gott hat mich gerettet. Die Wahrheit hat mich gerettet - und die Bereitschaft, sie auszuhalten.",
+			"next": "truth_epilog_transition"
+		},
+		"check_packed_camera_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_truth",
+			"false_next": "truth_konrad_epilog"
+		},
+		"packed_camera_truth": {
+			"type": "narration",
+			"text": "Die Kamera hätte nichts festhalten können, was ich gesehen habe. Sechshundert Jahre Einsamkeit passen nicht auf einen Filmstreifen. Aber ich werde darüber schreiben. Die Welt soll wissen, was hier war.",
+			"next": "truth_epilog_transition"
+		},
+		"truth_epilog_transition": {
+			"type": "narration",
+			"text": "Morgendämmerung. Die längste Nacht meines Lebens ist vorbei. Und mit ihr dreißig Jahre Lügen.",
 			"next": "truth_konrad_epilog"
 		},
 		"truth_konrad_epilog": {
@@ -455,6 +501,11 @@
 		"truth_otto_epilog": {
 			"type": "narration",
 			"text": "Otto steht am Dorfrand und beobachtet den Sonnenaufgang. Er weint. Dreißig Jahre hat er geglaubt, die Opfer seien nötig. Sie waren es nie.",
+			"next": "truth_mathilde_epilog"
+		},
+		"truth_mathilde_epilog": {
+			"type": "narration",
+			"text": "Elise denkt an die blinde Frau im Zug. Mathilde. Sie hat es gewusst, seit sechzig Jahren. Sie summte die Melodie nicht aus Wahnsinn - sondern aus Verständnis.",
 			"next": "truth_candle_epilog"
 		},
 		"truth_candle_epilog": {

@@ -160,6 +160,11 @@
 		"creature_pact_10": {
 			"type": "narration",
 			"text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT.",
+			"next": "narration_anchor_pact"
+		},
+		"narration_anchor_pact": {
+			"type": "narration",
+			"text": "Ich stehe auf dem Zeichen, der Gesang verklingt, und der Anker hält - nicht als Kette, sondern als Brücke. Der Pakt formt sich nicht aus Macht, sondern aus Vertrauen.",
 			"next": "snd_dark"
 		},
 		"snd_dark": {
@@ -346,6 +351,47 @@
 			"entry_id": "ending_pact",
 			"title": "Der Pakt",
 			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich zurück und leiste dem Wesen Gesellschaft. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
+			"next": "check_packed_pact"
+		},
+		"check_packed_pact": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_pact",
+			"false_next": "check_packed_cross_pact"
+		},
+		"packed_books_pact": {
+			"type": "narration",
+			"text": "Meine Bücher liegen aufgeschlagen neben mir. Die alten Texte über Rituale und Bindungen - sie haben mich hierher geführt. Aber das wahre Wissen lag nie in Büchern. Es lag im Zuhören.",
+			"next": "pact_epilog_transition"
+		},
+		"check_packed_cross_pact": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_pact",
+			"false_next": "check_packed_camera_pact"
+		},
+		"packed_cross_pact": {
+			"type": "narration",
+			"text": "Das Kruzifix meiner Mutter liegt warm in meiner Hand. Glaube gegen das Unbekannte - aber das Unbekannte war nie der Feind. Es war nur einsam.",
+			"next": "pact_epilog_transition"
+		},
+		"check_packed_camera_pact": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_pact",
+			"false_next": "pact_konrad_epilog"
+		},
+		"packed_camera_pact": {
+			"type": "narration",
+			"text": "Meine Kamera hängt unbenutzt um meinen Hals. Manche Wahrheiten lassen sich nicht fotografieren. Aber ich werde sie aufschreiben - jedes Wort, jede Begegnung.",
+			"next": "pact_epilog_transition"
+		},
+		"pact_epilog_transition": {
+			"type": "narration",
+			"text": "Wochen vergehen. Monate. Die Erinnerung an jene Nacht verblasst wie ein Traum - aber der Pakt bleibt.",
 			"next": "pact_konrad_epilog"
 		},
 		"pact_konrad_epilog": {
@@ -366,6 +412,11 @@
 		"pact_otto_epilog": {
 			"type": "narration",
 			"text": "Otto verlässt das Dorf, als er begreift, dass die Tradition vorbei ist. Sein Lebenswerk - bedeutungslos.",
+			"next": "pact_candle_epilog"
+		},
+		"pact_candle_epilog": {
+			"type": "narration",
+			"text": "Die Kerze auf Großmutters Nachttisch brennt ruhiger. Nicht mehr verzweifelt, nicht mehr wartend. Eine stetige, zufriedene Flamme.",
 			"next": "scene_end"
 		},
 		"scene_end": {

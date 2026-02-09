@@ -545,7 +545,7 @@
 		"hilde_5c": {
 			"type": "dialogue",
 			"speaker": "hilde",
-			"expression": "sad",
+			"expression": "kind",
 			"text": "...Ja. Aber nicht vor dem, was du denkst. Sie hatte Angst, dass sie dich nicht mehr sehen würde. Und dass du ihren Brief zu spät bekommst.",
 			"next": "narration_hilde_silence"
 		},
@@ -957,7 +957,12 @@
 		},
 		"converge_1": {
 			"type": "narration",
-			"text": "Am frühen Nachmittag treffe ich Georg am Brunnen. Er sieht aus, als hätte er ebenfalls nicht geschlafen.",
+			"text": "Am frühen Nachmittag gehe ich zum Brunnen. Eine blinde alte Frau sitzt auf der Steinbank daneben und summt leise vor sich hin. Die Melodie kommt mir bekannt vor - das Singen, das ich letzte Nacht gehört habe. Sie dreht den Kopf in meine Richtung, als könnte sie mich spüren.",
+			"next": "converge_1b"
+		},
+		"converge_1b": {
+			"type": "narration",
+			"text": "Bevor ich sie ansprechen kann, steht sie auf und geht. Langsam, sicher, als kennte sie jeden Stein. Georg wartet bereits am Brunnen. Er sieht aus, als hätte er ebenfalls nicht geschlafen.",
 			"next": "show_georg_day"
 		},
 		"show_georg_day": {
