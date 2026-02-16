@@ -188,7 +188,7 @@
 		},
 		"general_reaction": {
 			"type": "narration",
-			"text": "Ein Schauer läuft mir ueber den Rücken. Die Kerze flackert, obwohl kein Luftzug im Raum ist. Die Flamme beugt sich - in meine Richtung.",
+			"text": "Ein Schauer läuft mir über den Rücken. Die Kerze flackert, obwohl kein Luftzug im Raum ist. Die Flamme beugt sich – in meine Richtung.",
 			"next": "elise_general_react"
 		},
 		"elise_general_react": {
@@ -453,7 +453,7 @@
 		},
 		"georg_notes_2": {
 			"type": "narration",
-			"text": "Georg fährt erschrocken zusammen, als hätte er selbst nicht erwartet, so heftig zu reagieren. Er fährt sich ueber das Gesicht.",
+			"text": "Georg fährt erschrocken zusammen, als hätte er selbst nicht erwartet, so heftig zu reagieren. Er fährt sich über das Gesicht.",
 			"next": "georg_notes_3"
 		},
 		"georg_notes_3": {
@@ -481,7 +481,7 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "afraid",
-			"text": "Sie hat über den Lehrer geschrieben. Konrad Mueller. Über das, was... IN ihm lebt. Elise - versprich mir: Bleib weg von Konrad.",
+			"text": "Sie hat über den Lehrer geschrieben. Konrad Müller. Über das, was ... in ihm lebt. Elise – versprich mir: Bleib weg von Konrad.",
 			"next": "georg_converge"
 		},
 		"georg_converge": {

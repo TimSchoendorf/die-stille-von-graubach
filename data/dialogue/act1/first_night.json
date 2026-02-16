@@ -73,7 +73,7 @@
 		},
 		"read_notebook_4": {
 			"type": "narration",
-			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, aelter als die Bäume, aelter als die Berge. Wir nennen es den Schlafenden unter der Erde. Meine Großmutter nannte es den Atem der Erde.\"",
+			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, älter als die Bäume, älter als die Berge. Wir nennen es den Schlafenden unter der Erde. Meine Großmutter nannte es den Atem der Erde.\"",
 			"next": "elise_nb_react_1"
 		},
 		"elise_nb_react_1": {
@@ -252,7 +252,7 @@
 		},
 		"narration_dream_7": {
 			"type": "narration",
-			"text": "Und dann oeffne ich die Augen.",
+			"text": "Und dann öffne ich die Augen.",
 			"next": "transition_wake"
 		},
 		"transition_wake": {
@@ -337,7 +337,7 @@
 		},
 		"narration_knock_2": {
 			"type": "narration",
-			"text": "\"Wenn es klopft, dann oeffne nicht.\"",
+			"text": "\"Wenn es klopft, dann öffne nicht.\"",
 			"next": "narration_knock_3"
 		},
 		"narration_knock_3": {
@@ -430,7 +430,7 @@
 		},
 		"open_door_2": {
 			"type": "narration",
-			"text": "Vor der Tür steht ein Mann. Etwa dreißig, mit welligem dunklem Haar und braunen Augen, die im Mondlicht warm schimmern. Er trägt einen Mantel ueber einem Pullover und lächelt besorgt.",
+			"text": "Vor der Tür steht ein Mann. Etwa dreißig, mit welligem dunklem Haar und braunen Augen, die im Mondlicht warm schimmern. Er trägt einen Mantel über einem Pullover und lächelt besorgt.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -450,14 +450,14 @@
 		"konrad_1": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Oh - Sie müssen Elise sein. Margarethes Enkelin, nicht wahr? Ich bin Konrad. Konrad Müller, der Dorflehrer.",
+			"text": "Sie müssen Elise sein, Margarethes Enkelin? Ich bin Konrad Müller. Dorflehrer.",
 			"next": "konrad_2"
 		},
 		"konrad_2": {
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Es tut mir schrecklich leid wegen Ihrer Großmutter. Sie war... eine bemerkenswerte Frau. Hat mir oft beim Unterricht geholfen.",
+			"text": "Es tut mir leid wegen Ihrer Großmutter. Sie war eine bemerkenswerte Frau. Sie hat den Kindern oft mit Geschichten und Liedern geholfen.",
 			"next": "elise_responds_konrad"
 		},
 		"elise_responds_konrad": {
@@ -469,7 +469,7 @@
 		},
 		"konrad_3": {
 			"type": "narration",
-			"text": "Er klingt aufrichtig. Sein Lächeln ist warm, seine Augen freundlich. Und doch - wenn ich genau hinsehe, ist da etwas in seinem Blick. Etwas, das nicht ganz...",
+			"text": "Er klingt aufrichtig. Sein Lächeln ist warm, seine Augen freundlich. Und doch: Wenn ich genauer hinsehe, liegt da etwas, das nicht passt.",
 			"next": "effect_konrad_glitch"
 		},
 		"effect_konrad_glitch": {
@@ -500,14 +500,14 @@
 		"konrad_continue": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Ich wollte nur sichergehen, dass alles in Ordnung ist. Es ist spät, und dieses Haus... nun, es steht seit Tagen leer. Wenn Sie irgendetwas brauchen - ich wohne am Schulhaus, gleich neben der Kirche.",
+			"text": "Ich wollte nur sehen, ob bei Ihnen alles in Ordnung ist. Es ist spät, und das Haus stand seit Tagen leer. Wenn Sie etwas brauchen: Ich wohne am Schulhaus, direkt neben der Kirche.",
 			"next": "elise_responds_konrad_2"
 		},
 		"elise_responds_konrad_2": {
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Warum sind Sie mitten in der Nacht unterwegs, Herr Mueller? Schlafen Sie nie?",
+			"text": "Warum sind Sie mitten in der Nacht noch unterwegs, Herr Müller?",
 			"next": "konrad_5"
 		},
 		"konrad_5": {
@@ -521,12 +521,12 @@
 		"konrad_6": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Schlafen Sie gut, Elise. Und machen Sie sich keine Sorgen. Graubach ist ein ruhiges Dorf. Hier passiert nie etwas.",
+			"text": "Versuchen Sie zu schlafen, Elise. Und machen Sie sich keine Sorgen. Graubach wirkt nachts schlimmer, als es ist.",
 			"next": "konrad_leave"
 		},
 		"konrad_leave": {
 			"type": "narration",
-			"text": "Er lächelt noch einmal, dreht sich um und verschwindet im Nebel. Seine Schritte machen kein Geräusch auf dem Kopfsteinpflaster.",
+			"text": "Er nickt knapp, dreht sich um und verschwindet im Nebel. Seine Schritte sind auf dem Pflaster kaum zu hören.",
 			"next": "konrad_gone"
 		},
 		"konrad_gone": {

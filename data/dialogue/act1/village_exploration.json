@@ -22,7 +22,7 @@
 		},
 		"narration_morning_1": {
 			"type": "narration",
-			"text": "Der Morgen bringt keine Erleichterung. Der Nebel hat sich nicht gehoben - er ist nur heller geworden, wie ein schmutziges Laken ueber dem Dorf.",
+			"text": "Der Morgen bringt keine Erleichterung. Der Nebel hat sich nicht gehoben - er ist nur heller geworden, wie ein schmutziges Laken über dem Dorf.",
 			"next": "narration_morning_2"
 		},
 		"narration_morning_2": {
@@ -89,7 +89,6 @@
 				}
 			]
 		},
-
 		"church_path": {
 			"type": "background",
 			"background": "church_exterior",
@@ -460,7 +459,6 @@
 			"content": "Pfarrer Voss warnte mich zu fliehen. Er weiß von etwas unter der Kirche - 'das Andere', das durch Menschen spricht. Seine Tochter Anna sah eine Spirale um mich herum und sagte, etwas singt meinen Namen. Voss nennt sie 'krank'. Aber ihre Augen waren klar.",
 			"next": "route_next_location"
 		},
-
 		"hilde_path": {
 			"type": "background",
 			"background": "hilde_cottage",
@@ -670,7 +668,6 @@
 			"content": "Hilde kennt die 'alten Wege' - vorchristliche Rituale. Großmutter hat 30 Jahre lang an einem Plan gearbeitet, das Ritual diesmal ohne Opfer durchzuführen. Hilde scheint eine Verbündete zu sein. Ihr Tee hat eine beruhigende Wirkung - kein Placebo. Und sie kannte Großmutter gut. Vielleicht besser als jeder andere hier.",
 			"next": "route_next_location"
 		},
-
 		"school_path": {
 			"type": "background",
 			"background": "village_school",
@@ -886,7 +883,6 @@
 			"content": "Konrad ist charmant und freundlich - fast zu freundlich. Die Kinder in seiner Klasse verhalten sich seltsam still. Auf seiner Handfläche hat er Spiralen - er behauptet Tintenflecke. Seine Erklärungen klingen plausibel, aber seine Augen verraten etwas anderes. Großmutter nannte ihn ein 'Gefäß'. Was steckt wirklich hinter seinem Lächeln?",
 			"next": "route_next_location"
 		},
-
 		"route_next_location": {
 			"type": "narration",
 			"text": "Noch ist der Tag lang. Ich sollte mich weiter umsehen.",
@@ -931,7 +927,6 @@
 			"value": 1,
 			"next": "school_path"
 		},
-
 		"explore_converge": {
 			"type": "effect",
 			"effect": "clear",
