@@ -3,8 +3,8 @@ extends Node
 
 ## Processes dialogue nodes sequentially, dispatching to UI components.
 
-signal text_requested(speaker: String, text: String, speaker_color: Color, speaker_id: String)
-signal narration_requested(text: String)
+signal text_requested(speaker: String, text: String, speaker_color: Color, speaker_id: String, text_effect: String)
+signal narration_requested(text: String, text_effect: String)
 signal choices_requested(choices: Array)
 signal choice_made(choice_index: int)
 signal background_requested(bg_path: String, transition: String)
@@ -23,6 +23,24 @@ var _current_file_path: String = ""
 var _is_waiting_for_input: bool = false
 var _is_waiting_for_choice: bool = false
 var _is_processing: bool = false
+var _skip_advance_timer: float = 0.0
+var _visited_since_input: int = 0  # cycle detection counter
+const SKIP_DELAY := 0.05  # seconds between skipped nodes
+const MAX_NODES_WITHOUT_INPUT := 500  # cycle detection threshold
+
+
+func _process(delta: float) -> void:
+	if not GameManager.skip_mode or not _is_waiting_for_input:
+		return
+
+	# Only skip nodes that have been read before
+	if not GameManager.is_node_read(_current_file_path, _current_node_id):
+		return
+
+	_skip_advance_timer += delta
+	if _skip_advance_timer >= SKIP_DELAY:
+		_skip_advance_timer = 0.0
+		advance()
 
 
 func load_and_start(file_path: String, start_node: String = "") -> void:
@@ -43,6 +61,7 @@ func load_and_start(file_path: String, start_node: String = "") -> void:
 func advance() -> void:
 	if _is_waiting_for_input:
 		_is_waiting_for_input = false
+		_visited_since_input = 0  # reset cycle counter on user input
 		_go_to_next()
 	# Choices are handled through select_choice()
 
@@ -52,6 +71,7 @@ func select_choice(index: int) -> void:
 		return
 
 	_is_waiting_for_choice = false
+	_visited_since_input = 0  # reset cycle counter on user choice
 	choice_made.emit(index)
 
 	var node := _get_current_node()
@@ -97,11 +117,18 @@ func _process_current_node() -> void:
 
 	var node := _get_current_node()
 	if node.is_empty():
-		push_error("Node not found: " + _current_node_id)
+		push_error("Node not found: '%s' in file '%s'" % [_current_node_id, _current_file_path])
 		_end_dialogue()
 		return
 
 	GameManager.current_node_id = _current_node_id
+
+	# Cycle detection: count nodes processed without user input
+	_visited_since_input += 1
+	if _visited_since_input > MAX_NODES_WITHOUT_INPUT:
+		push_error("Possible infinite loop detected after %d nodes without input at '%s' in '%s'" % [MAX_NODES_WITHOUT_INPUT, _current_node_id, _current_file_path])
+		_end_dialogue()
+		return
 
 	var node_type: String = node.get("type", "")
 	match node_type:
@@ -163,13 +190,17 @@ func _handle_dialogue(node: Dictionary) -> void:
 	if not expression.is_empty() and not speaker.is_empty():
 		character_requested.emit(speaker, expression, "", "update_expression")
 
-	text_requested.emit(display_name, text, color, speaker)
+	var text_effect: String = node.get("text_effect", "")
+	text_requested.emit(display_name, text, color, speaker, text_effect)
+	GameManager.mark_node_read(_current_file_path, _current_node_id)
 	_is_waiting_for_input = true
 
 
 func _handle_narration(node: Dictionary) -> void:
 	var text: String = Locale.td(_current_file_path, _current_node_id, "text", node.get("text", ""))
-	narration_requested.emit(text)
+	var text_effect: String = node.get("text_effect", "")
+	narration_requested.emit(text, text_effect)
+	GameManager.mark_node_read(_current_file_path, _current_node_id)
 	_is_waiting_for_input = true
 
 
@@ -192,14 +223,17 @@ func _handle_choice(node: Dictionary) -> void:
 			_go_to_next()
 		return
 
-	# Localize choice texts
-	for i in available_choices.size():
-		var localized_text := Locale.td_choice(_current_file_path, _current_node_id, i, available_choices[i].get("text", ""))
-		available_choices[i]["text"] = localized_text
+	# Deep-copy to avoid mutating original dialogue data
+	var display_choices: Array = available_choices.duplicate(true)
 
-	# Replace choices with only the available ones for indexing
+	# Localize choice texts on the copy
+	for i in display_choices.size():
+		var localized_text := Locale.td_choice(_current_file_path, _current_node_id, i, display_choices[i].get("text", ""))
+		display_choices[i]["text"] = localized_text
+
+	# Store available choices for select_choice() indexing without mutating original
 	node["choices"] = available_choices
-	choices_requested.emit(available_choices)
+	choices_requested.emit(display_choices)
 	_is_waiting_for_choice = true
 
 
@@ -244,6 +278,11 @@ func _handle_flag_check(node: Dictionary) -> void:
 	var true_next: String = node.get("true_next", "")
 	var false_next: String = node.get("false_next", "")
 
+	if flag_name.is_empty():
+		push_warning("Empty flag name in flag_check at '%s' in '%s'" % [_current_node_id, _current_file_path])
+		_go_to_next()
+		return
+
 	var current_value: int = GameManager.get_flag(flag_name)
 	var result: bool = false
 	match compare:
@@ -258,6 +297,7 @@ func _handle_flag_check(node: Dictionary) -> void:
 		"lt":
 			result = current_value < expected_value
 		_:
+			push_warning("Unknown compare mode '%s' in flag_check at '%s', defaulting to eq" % [compare, _current_node_id])
 			result = current_value == expected_value
 
 	if result:

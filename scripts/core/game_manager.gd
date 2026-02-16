@@ -35,10 +35,16 @@ var current_ambience: String = ""
 # Game state enum-like
 var game_state: String = "title" # title, playing, paused, ending
 
+# Skip mode: track which nodes have been read
+var read_nodes: Dictionary = {} # "file_path::node_id" → true
+var skip_mode: bool = false
+
 # Settings (persisted via settings_screen.gd)
 var text_speed: float = 40.0  # characters per second
 var auto_advance: bool = false  # auto-advance after text finishes
+var auto_advance_speed: float = 1.0  # 0.5 = slow, 1.0 = normal, 2.0 = fast
 var font_size: int = 24  # dialogue text font size (18-36)
+var textbox_opacity: float = 0.88  # textbox background opacity (0.5 - 1.0)
 
 
 func _ready() -> void:
@@ -131,11 +137,22 @@ func set_game_state(new_state: String) -> void:
 	game_state_changed.emit(new_state)
 
 
+func mark_node_read(file_path: String, node_id: String) -> void:
+	var key := file_path + "::" + node_id
+	read_nodes[key] = true
+
+
+func is_node_read(file_path: String, node_id: String) -> bool:
+	var key := file_path + "::" + node_id
+	return read_nodes.has(key)
+
+
 func start_new_game() -> void:
 	flags.clear()
 	_load_default_flags()
 	journal_entries.clear()
 	journal_data.clear()
+	# Keep read_nodes across playthroughs for skip mode
 	current_act = "prologue"
 	current_scene = ""
 	current_dialogue_file = ""
@@ -144,6 +161,7 @@ func start_new_game() -> void:
 	active_characters.clear()
 	current_music = ""
 	current_ambience = ""
+	skip_mode = false
 	set_game_state("playing")
 
 
@@ -161,6 +179,7 @@ func get_save_data() -> Dictionary:
 		"active_characters": active_characters.duplicate(true),
 		"current_music": current_music,
 		"current_ambience": current_ambience,
+		"read_nodes": read_nodes.duplicate(),
 	}
 
 
@@ -177,4 +196,9 @@ func load_save_data(data: Dictionary) -> void:
 	active_characters = data.get("active_characters", {})
 	current_music = data.get("current_music", "")
 	current_ambience = data.get("current_ambience", "")
+	# Merge read_nodes (keep existing + add from save)
+	var saved_read: Dictionary = data.get("read_nodes", {})
+	for key in saved_read:
+		read_nodes[key] = true
+	skip_mode = false
 	set_game_state("playing")

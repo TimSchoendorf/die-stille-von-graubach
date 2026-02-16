@@ -1,0 +1,9 @@
+Drop ChatGPT-generated files here.
+
+Required naming: exact id from manifest + .png
+Examples:
+bg.village_square_v2.png
+char.elise.afraid_v2.png
+
+Then run:
+powershell -ExecutionPolicy Bypass -File scripts_assets/vn_assets_easy.ps1 -Action import

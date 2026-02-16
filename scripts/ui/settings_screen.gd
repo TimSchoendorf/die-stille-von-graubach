@@ -5,7 +5,6 @@ extends Control
 const SB := preload("res://scripts/ui/settings_builder.gd")
 
 var _text_speed_slider: HSlider
-var _auto_advance_check: CheckButton
 var _fullscreen_check: CheckButton
 
 
@@ -52,7 +51,6 @@ func _setup_ui() -> void:
 
 	var text_refs := SB.build_text_section(vbox, SB.save_settings)
 	_text_speed_slider = text_refs["text_speed_slider"]
-	_auto_advance_check = text_refs["auto_advance_check"]
 
 	var display_refs := SB.build_display_section(vbox, SB.save_settings)
 	_fullscreen_check = display_refs["fullscreen_check"]

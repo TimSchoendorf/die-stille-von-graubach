@@ -61,11 +61,17 @@ func stop_music(fade_duration: float = 1.0) -> void:
 	if fade_duration > 0.0 and music_player.playing:
 		if _music_tween:
 			_music_tween.kill()
+			_music_tween = null
 		_music_tween = create_tween()
 		_music_tween.tween_property(music_player, "volume_db", -80.0, fade_duration)
-		_music_tween.tween_callback(music_player.stop)
+		_music_tween.tween_callback(func():
+			music_player.stop()
+			_music_tween = null)
 	else:
 		music_player.stop()
+		if _music_tween:
+			_music_tween.kill()
+			_music_tween = null
 
 
 func play_sfx(path: String) -> void:
@@ -148,6 +154,7 @@ func _apply_volumes() -> void:
 func _crossfade_music(new_path: String, duration: float) -> void:
 	if _music_tween:
 		_music_tween.kill()
+		_music_tween = null
 
 	_music_tween = create_tween()
 	_music_tween.tween_property(music_player, "volume_db", -80.0, duration * 0.5)
@@ -157,3 +164,4 @@ func _crossfade_music(new_path: String, duration: float) -> void:
 	)
 	_music_tween.tween_property(music_player, "volume_db",
 		linear_to_db(music_volume * master_volume), duration * 0.5)
+	_music_tween.tween_callback(func(): _music_tween = null)

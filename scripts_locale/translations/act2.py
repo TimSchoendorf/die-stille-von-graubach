@@ -583,6 +583,13 @@ def _add_act2_church_secrets(tr):
        es="La vieja pagana sabe más de lo que la Iglesia jamás admitiría. Sí. Conozco el punto más delgado. Le mostraré dónde debe colocarse.",
        it="La vecchia pagana sa più di quanto la Chiesa ammetterebbe mai. Sì. Conosco il punto più sottile. Le mostrerò dove deve stare.")
 
+    # --- Phase 12: Foreshadowing ---
+    _t(tr, F, "elise_heartbeat_hint",
+       en="And in that recognition there is no hostility. Only... expectation. Like a dog that hears someone at the door and lifts its head.",
+       fr="Et dans cette reconnaissance, il n'y a pas d'hostilité. Seulement... de l'attente. Comme un chien qui entend quelqu'un à la porte et lève la tête.",
+       es="Y en ese reconocimiento no hay hostilidad. Solo... expectación. Como un perro que oye a alguien en la puerta y levanta la cabeza.",
+       it="E in quel riconoscimento non c'è ostilità. Solo... attesa. Come un cane che sente qualcuno alla porta e alza la testa.")
+
 
 def _add_act2_konrad_encounter(tr):
     F = "res://data/dialogue/act2/konrad_encounter.json"
@@ -1541,6 +1548,13 @@ def _add_act2_hilde_ritual(tr):
        fr="Elle t'a attendue. Non parce que tu es plus forte. Parce que tu es fraîche. Parce que tu as encore la force qu'elle avait perdue.",
        es="Te esperó a ti. No porque seas más fuerte. Porque estás fresca. Porque aún tienes la fuerza que ella había perdido.",
        it="Ha aspettato te. Non perché sei più forte. Perché sei fresca. Perché hai ancora la forza che lei aveva perduto.")
+
+    # --- Phase 12: Foreshadowing ---
+    _t(tr, F, "narration_chant_hint",
+       en="The faltering doesn't sound like defense. It sounds like surprise. As if someone had received an answer for the first time after a very, very long time.",
+       fr="Ce n'est pas un son de défense. C'est de la surprise. Comme si quelqu'un avait reçu une réponse pour la première fois après très, très longtemps.",
+       es="El titubeo no suena como defensa. Suena como sorpresa. Como si alguien hubiera recibido una respuesta por primera vez después de mucho, mucho tiempo.",
+       it="L'esitazione non suona come difesa. Suona come sorpresa. Come se qualcuno avesse ricevuto una risposta per la prima volta dopo molto, molto tempo.")
 
 
 def _add_act2_the_book(tr):

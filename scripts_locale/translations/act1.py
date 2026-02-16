@@ -264,7 +264,17 @@ def _add_act1_arrival(tr):
        es="Mañana. Mañana empezaré a entender.",
        it="Domani. Domani comincerò a capire.")
 
-
+    # --- Phase 12: Foreshadowing + Margarethe hints ---
+    _t(tr, F, "narration_alone_sounds_hint",
+       en="It doesn't sound threatening. It sounds... sad. Like someone sitting alone in a dark room, humming to themselves because no one is listening.",
+       fr="Ce n'est pas menaçant. C'est... triste. Comme quelqu'un assis seul dans une pièce sombre, fredonnant pour lui-même parce que personne n'écoute.",
+       es="No suena amenazante. Suena... triste. Como alguien sentado solo en una habitación oscura, tarareando porque nadie escucha.",
+       it="Non suona minaccioso. Suona... triste. Come qualcuno seduto solo in una stanza buia, che canticchia perché nessuno ascolta.")
+    _t(tr, F, "georg_5_hint",
+       en="Only... her boots were by the door. Covered in mud. Even though she had been too weak to walk for a week. I don't know where she went that last night.",
+       fr="Seulement... ses bottes étaient à la porte. Couvertes de boue. Alors qu'elle était trop faible pour marcher depuis une semaine. Je ne sais pas où elle est allée cette dernière nuit.",
+       es="Solo que... sus botas estaban junto a la puerta. Cubiertas de barro. Aunque llevaba una semana demasiado débil para caminar. No sé adónde fue esa última noche.",
+       it="Solo che... i suoi stivali erano alla porta. Coperti di fango. Eppure era troppo debole per camminare da una settimana. Non so dove sia andata quella ultima notte.")
 
 
 def _add_act1_first_night(tr):
@@ -476,7 +486,12 @@ def _add_act1_first_night(tr):
        es="Pero mientras bebo el cafe, tarareo en voz baja. Sin querer. La misma melodia. Se ha anidado en mi como un estribillo que no quiere desaparecer.",
        it="Ma mentre bevo il caffe, canticchio piano. Senza volerlo. La stessa melodia. Si e insediata in me come un motivetto che non vuole andarsene.")
 
-
+    # --- Phase 12: Foreshadowing ---
+    _t(tr, F, "narration_wake_3_hint",
+       en="It doesn't sound angry. It sounds... searching. As if calling for someone who never comes.",
+       fr="Ce n'est pas un son de colère. C'est... une recherche. Comme un appel vers quelqu'un qui ne vient jamais.",
+       es="No suena furioso. Suena... buscando. Como si llamara a alguien que nunca viene.",
+       it="Non suona arrabbiato. Suona... cercante. Come se chiamasse qualcuno che non viene mai.")
 
 
 def _add_act1_village_exploration(tr):
@@ -1142,7 +1157,12 @@ def _add_act1_village_exploration(tr):
        es="Un loco sería más fácil. A un loco se le puede desenmascarar. Pero a un creyente? A un creyente hay que quebrantarlo.",
        it="Un pazzo sarebbe più facile. Un pazzo lo si può smascherare. Ma un credente? Un credente bisogna spezzarlo.")
 
-
+    # --- Phase 12: Margarethe foreshadowing ---
+    _t(tr, F, "voss_d2_hint",
+       en="In the end she was... strangely calm. As if she had made peace with someone. Not with God. With something else.",
+       fr="À la fin elle était... étrangement calme. Comme si elle avait fait la paix avec quelqu'un. Pas avec Dieu. Avec autre chose.",
+       es="Al final estaba... extrañamente tranquila. Como si hubiera hecho las paces con alguien. No con Dios. Con algo más.",
+       it="Alla fine era... stranamente calma. Come se avesse fatto pace con qualcuno. Non con Dio. Con qualcos'altro.")
 
 
 def _add_act1_smithy_evening(tr):

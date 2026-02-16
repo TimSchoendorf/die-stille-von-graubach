@@ -1,12 +1,15 @@
 extends PanelContainer
 
-## Scrollable log of past dialogue text.
+## Scrollable log of past dialogue text with node references.
 
 signal closed
 
 var _scroll: ScrollContainer
 var _content: VBoxContainer
-var _entries: Array[Dictionary] = [] # {speaker, text, color}
+var _entries: Array[Dictionary] = [] # {speaker, text, color, file_path, node_id}
+
+const MAX_ENTRIES := 500  # Prevent memory bloat on long sessions
+const RENDER_BATCH := 100  # Only render last N entries for performance
 
 
 func _ready() -> void:
@@ -65,8 +68,17 @@ func _setup_ui() -> void:
 	vbox.add_child(close_btn)
 
 
-func add_entry(speaker: String, text: String, color: Color = Color.WHITE) -> void:
-	_entries.append({"speaker": speaker, "text": text, "color": color})
+func add_entry(speaker: String, text: String, color: Color = Color.WHITE, file_path: String = "", node_id: String = "") -> void:
+	_entries.append({
+		"speaker": speaker,
+		"text": text,
+		"color": color,
+		"file_path": file_path,
+		"node_id": node_id,
+	})
+	# Trim oldest entries to prevent memory bloat
+	if _entries.size() > MAX_ENTRIES:
+		_entries = _entries.slice(_entries.size() - MAX_ENTRIES)
 
 
 func open_log() -> void:
@@ -86,7 +98,20 @@ func _rebuild_content() -> void:
 	for child in _content.get_children():
 		child.queue_free()
 
-	for entry in _entries:
+	# Only render last RENDER_BATCH entries for performance
+	var start_idx := maxi(0, _entries.size() - RENDER_BATCH)
+
+	# Show "earlier entries" hint if truncated
+	if start_idx > 0:
+		var hint := Label.new()
+		hint.text = "... (%d)" % start_idx
+		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		hint.add_theme_font_size_override("font_size", UITheme.s(16))
+		hint.add_theme_color_override("font_color", UITheme.TEXT_DIM)
+		_content.add_child(hint)
+
+	for i in range(start_idx, _entries.size()):
+		var entry: Dictionary = _entries[i]
 		var rtl := RichTextLabel.new()
 		rtl.bbcode_enabled = true
 		rtl.fit_content = true

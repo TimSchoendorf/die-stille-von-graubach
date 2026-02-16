@@ -354,6 +354,9 @@
 		"georg_5": {
 			"text": "Tu abuela... lo siento, niña. La encontramos así hace tres días. En paz, dice la gente. Mientras dormía."
 		},
+		"georg_5_hint": {
+			"text": "Solo que... sus botas estaban junto a la puerta. Cubiertas de barro. Aunque llevaba una semana demasiado débil para caminar. No sé adónde fue esa última noche."
+		},
 		"elise_responds_2": {
 			"text": "¿Tres días? ¿Por qué nadie me avisó? ¡Podría haber venido enseguida!"
 		},
@@ -515,6 +518,9 @@
 		"narration_alone_sounds": {
 			"text": "En algún momento del silencio lo oigo. Suave, profundo, apenas más que una vibración en las tablas del suelo. ¿Canto? No — más bien un zumbido. Como una nana que sale del suelo mismo."
 		},
+		"narration_alone_sounds_hint": {
+			"text": "No suena amenazante. Suena... triste. Como alguien sentado solo en una habitación oscura, tarareando porque nadie escucha."
+		},
 		"elise_alone_resolve": {
 			"text": "Mañana. Mañana empezaré a entender."
 		},
@@ -639,6 +645,9 @@
 		},
 		"narration_wake_3": {
 			"text": "Cantos. Tenues, amortiguados, como si vinieran de muy debajo de la casa. Muchas voces, entrelazadas en algo que no es del todo música ni del todo lenguaje."
+		},
+		"narration_wake_3_hint": {
+			"text": "No suena furioso. Suena... buscando. Como si llamara a alguien que nunca viene."
 		},
 		"narration_singing_2": {
 			"text": "Las tablas vibran ligeramente bajo mis pies descalzos. El vaso en la mesa tintinea suavemente. La vela en el dormitorio — la veo desde aquí — arde más alta, más brillante."
@@ -1125,6 +1134,9 @@
 		"voss_d2": {
 			"text": "Igual que Margarethe. Los mismos ojos. La misma terquedad. Ella tampoco me escuchó."
 		},
+		"voss_d2_hint": {
+			"text": "Al final estaba... extrañamente tranquila. Como si hubiera hecho las paces con alguien. No con Dios. Con algo más."
+		},
 		"voss_converge": {
 			"text": "Antes de que pueda hacer más preguntas, una niña aparece en el umbral de la puerta lateral. Cabello rubio, piel pálida, una mirada que me atraviesa."
 		},
@@ -1467,6 +1479,9 @@
 		"elise_heartbeat_react": {
 			"text": "Esta vivo. Justo debajo de mi, bajo piedra y tierra. Lo siento - no solo con los dedos, sino en algun lugar mas profundo, en una parte de mi que no tiene palabras. Como si me reconociera."
 		},
+		"elise_heartbeat_hint": {
+			"text": "Y en ese reconocimiento no hay hostilidad. Solo... expectación. Como un perro que oye a alguien en la puerta y levanta la cabeza."
+		},
 		"voss_appears": {
 			"text": "Una voz a mis espaldas. «Yo no tocaría eso, si fuera usted.»"
 		},
@@ -1680,6 +1695,9 @@
 		},
 		"narration_chant_response": {
 			"text": "En lo profundo, apenas perceptible, algo se desplaza. El canto de las profundidades titubea, solo un instante, pero titubea. Me ha oído."
+		},
+		"narration_chant_hint": {
+			"text": "El titubeo no suena como defensa. Suena como sorpresa. Como si alguien hubiera recibido una respuesta por primera vez después de mucho, mucho tiempo."
 		},
 		"elise_chant_fear": {
 			"text": "Ha reaccionado. ¡ME ha oído! ¡Hilde, sabe que estoy aquí!"
@@ -3113,6 +3131,12 @@
 		"georg_visit_1": {
 			"text": "Tampoco podía dormir. ¿Puedo pasar?"
 		},
+		"elise_georg_visit_1_noletter": {
+			"text": "Por favor. Yo... estoy sentada aquí mirando las paredes. ¿Qué pasará mañana, Georg?"
+		},
+		"georg_visit_2_noletter": {
+			"text": "Tu abuela habría sabido qué decirte. Solo soy un viejo con una linterna. Pero estoy aquí."
+		},
 		"elise_georg_visit_1": {
 			"text": "Por favor. Yo... acabo de leer la última carta de la abuela."
 		},
@@ -3148,6 +3172,12 @@
 		},
 		"hilde_visit_1": {
 			"text": "Has llorado. Bien. Quien llora antes de la batalla no tiene lágrimas después."
+		},
+		"elise_hilde_visit_1_noletter": {
+			"text": "Ojalá la abuela me hubiera dejado algo. Instrucciones. Lo que sea."
+		},
+		"hilde_visit_2_noletter": {
+			"text": "Margarethe te dejó más de lo que crees. No en tinta y papel. En la gente de aquí. En mí."
 		},
 		"elise_hilde_visit_1": {
 			"text": "La carta de la abuela. Ella... se disculpó. Por haberme llamado."
@@ -3206,8 +3236,11 @@
 		"narration_approach": {
 			"text": "La noche envejece. El canto se hace más suave, como si la entidad contuviera el aliento. Espera mi decisión."
 		},
-		"narration_approach_think": {
+		"narration_approach_think_journal": {
 			"text": "Cierro el diario. Mis manos están tranquilas. Extrañamente tranquilas para alguien que mañana se enfrentará a una entidad ancestral."
+		},
+		"narration_approach_think_nojournal": {
+			"text": "Pongo las manos planas sobre la mesa. Están tranquilas. Extrañamente tranquilas para alguien que mañana se enfrentará a una entidad ancestral."
 		},
 		"narration_approach_seal": {
 			"text": "Sellar: el camino de la abuela. Atarlo, no matarlo. Seguro. Probado. Pero solo dura treinta años. Luego alguien más deberá vivir esta noche."
@@ -3851,8 +3884,20 @@
 		}
 	},
 	"res://data/dialogue/act4/ending_pact.json": {
-		"narration_1": {
+		"narration_1_wounded": {
+			"text": "La criatura se contrae, herida, asustada. Por primera vez en seiscientos años, un humano está por encima de ella, no por debajo."
+		},
+		"narration_1_normal": {
 			"text": "Le hablo a la entidad. No con palabras — con pensamientos, con voluntad. Me coloco sobre el signo de la tierra y abro mi mente."
+		},
+		"wounded_pact_creature": {
+			"text": "ESCUCHO. PLANTEA TUS CONDICIONES. MI... DOLOR... ES GRANDE."
+		},
+		"wounded_pact_elise": {
+			"text": "Seiscientos años de sacrificios. Se acaba. Hoy. Para siempre. A cambio, te dejo en paz."
+		},
+		"wounded_creature_react": {
+			"text": "PAZ. UNA PALABRA QUE CASI HE OLVIDADO. ¿QUÉ SIGNIFICA PARA TI?"
 		},
 		"elise_pact_1": {
 			"text": "No estoy aquí para atarte. Ni para matarte. Propongo un trato."
@@ -4508,11 +4553,17 @@
 		"narration_2": {
 			"text": "Estoy de pie sobre el signo de la tierra, el punto donde la piedra es más delgada. Bajo mis pies lo siento: inmenso, antiguo, despertando."
 		},
-		"narration_3": {
+		"narration_3_journal": {
 			"text": "La llave de Georg abrió la última puerta. Las hierbas de Hilde arden en un cuenco junto a mí, su humo asciende en espirales. El diario de la abuela está abierto."
 		},
-		"narration_4": {
+		"narration_4_journal": {
 			"text": "La carta de la abuela en mi bolsillo del pecho. El amuleto de Hilde alrededor de mi cuello. Todo lo que me conecta con los vivos."
+		},
+		"narration_3_nojournal": {
+			"text": "La llave de Georg abrió la última puerta. Las hierbas de Hilde arden en un cuenco junto a mí, su humo asciende en espirales."
+		},
+		"narration_4_nojournal": {
+			"text": "El amuleto de Hilde alrededor de mi cuello. Mi propia carta en el bolsillo. Todo lo que me conecta con los vivos."
 		},
 		"narration_5": {
 			"text": "Ahora no hay vuelta atrás. La entidad sabe que estoy aquí. Está esperando."
@@ -4625,8 +4676,8 @@
 		"knowledge_high_2": {
 			"text": "Te conozco. No tu nombre, pero sí tu soledad. Las espirales, los sueños, el canto - escuché."
 		},
-		"knowledge_zero": {
-			"text": "No entiendo nada. La conciencia que toca la mía es tan ajena, tan OTRA, que me faltan las palabras. Como si oyera un idioma que nunca fue pensado para oídos humanos."
+		"knowledge_partial": {
+			"text": "Sé que es antiguo. Sé que duerme bajo la tierra y canta en sueños. Pero no es suficiente. No entiendo su idioma, solo fragmentos, como palabras de una lengua extranjera que uno capta al pasar."
 		},
 		"elise_creature_2": {
 			"text": "Margarethe. Mi abuela. Ella me envió."
@@ -4820,6 +4871,9 @@
 		"elise_understand_2": {
 			"text": "No. Pero pregunto de todos modos."
 		},
+		"understand_ready_books": {
+			"text": "Mis libros me han preparado - de forma diferente al diario, pero los textos académicos sobre rituales precristianos me dan suficiente base para hacer las preguntas correctas."
+		},
 		"understand_ready": {
 			"text": "El diario de la abuela me ha preparado. Los símbolos, la historia, la conexión. Entiendo lo suficiente para hacer las preguntas correctas."
 		},
@@ -4861,6 +4915,36 @@
 		},
 		"narration_destroy_recoil": {
 			"text": "DOLOR. ME DAS DOLOR. YA HE TENIDO BASTANTE DOLOR."
+		},
+		"destroy_partial_success": {
+			"text": "Pero hay algo. Una grieta. Diminuta, apenas perceptible, pero REAL. Mi ataque no mató a la entidad - pero la HIRIÓ. Por primera vez en seiscientos años."
+		},
+		"destroy_partial_2": {
+			"text": "DETENTE. DETENTE. TÚ... PUEDES HACERME DAÑO. NADIE HABÍA PODIDO HACER ESO."
+		},
+		"destroy_partial_3": {
+			"text": "Tiene miedo. La antigua entidad bajo la piedra tiene MIEDO. De mí. La revelación me golpea como un puñetazo."
+		},
+		"destroy_partial_4": {
+			"text": "Sí. Puedo hacerte daño. Y lo haré de nuevo. A menos que..."
+		},
+		"destroy_partial_5": {
+			"text": "¿A MENOS QUE?"
+		},
+		"choice_destroy_pivot": {
+			"choices": [
+				"Atacar de nuevo - destruirlo definitivamente",
+				"Usar mi fuerza - dictar condiciones"
+			]
+		},
+		"destroy_to_pact": {
+			"text": "No más sacrificios. Nunca más. Sin sangre, sin recipiente, sin tradición. Aceptas mis condiciones. O ataco de nuevo."
+		},
+		"destroy_to_pact_creature": {
+			"text": "AMENAZAS. PERO TUS AMENAZAS TIENEN DIENTES. ESO ES... NUEVO."
+		},
+		"destroy_to_pact_2": {
+			"text": "Por primera vez, un humano negocia con la entidad desde una posición de fuerza. La abuela se habría reído."
 		},
 		"elise_destroy_2": {
 			"text": "Se... se mueve. Dios mío, se MUEVE—"

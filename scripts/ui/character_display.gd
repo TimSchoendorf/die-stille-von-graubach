@@ -10,17 +10,45 @@ var _positions: Dictionary = {
 
 # Active character sprites: char_id → {sprite: TextureRect, position: String}
 var _active_characters: Dictionary = {}
+var _texture_cache: Dictionary = {}  # path → Texture2D
 
 const SPRITE_WIDTH := 600
 const SPRITE_HEIGHT := 900
+const MAX_CACHE_SIZE := 30
 
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
+func _load_cached(path: String) -> Texture2D:
+	if path in _texture_cache:
+		return _texture_cache[path]
+	var tex: Texture2D = load(path)
+	if _texture_cache.size() >= MAX_CACHE_SIZE:
+		# Remove oldest entry
+		var first_key: String = _texture_cache.keys()[0]
+		_texture_cache.erase(first_key)
+	_texture_cache[path] = tex
+	return tex
+
+
+func _resolve_sprite_path(char_id: String, expression: String) -> String:
+	var path := "res://assets/sprites/characters/%s/%s.png" % [char_id, expression]
+	if ResourceLoader.exists(path):
+		return path
+	# Fallback to neutral expression
+	if expression != "neutral":
+		var neutral_path := "res://assets/sprites/characters/%s/neutral.png" % char_id
+		if ResourceLoader.exists(neutral_path):
+			push_warning("Sprite not found: %s, using neutral" % path)
+			return neutral_path
+	push_warning("No sprite found for character: " + char_id)
+	return ""
+
+
 func show_character(char_id: String, expression: String, pos: String) -> void:
-	var sprite_path := "res://assets/sprites/characters/%s/%s.png" % [char_id, expression]
+	var sprite_path := _resolve_sprite_path(char_id, expression)
 
 	# Check if character already shown
 	if char_id in _active_characters:
@@ -28,8 +56,8 @@ func show_character(char_id: String, expression: String, pos: String) -> void:
 		var sprite: TextureRect = entry["sprite"]
 
 		# Update expression
-		if ResourceLoader.exists(sprite_path):
-			sprite.texture = load(sprite_path)
+		if not sprite_path.is_empty():
+			sprite.texture = _load_cached(sprite_path)
 
 		# Move if position changed
 		if entry["position"] != pos:
@@ -40,11 +68,10 @@ func show_character(char_id: String, expression: String, pos: String) -> void:
 	var sprite := TextureRect.new()
 	sprite.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	if ResourceLoader.exists(sprite_path):
-		sprite.texture = load(sprite_path)
+	if not sprite_path.is_empty():
+		sprite.texture = _load_cached(sprite_path)
 	else:
-		push_warning("Character sprite not found: " + sprite_path)
-		# Use placeholder
+		# Placeholder: semi-transparent silhouette
 		sprite.custom_minimum_size = Vector2(SPRITE_WIDTH, SPRITE_HEIGHT)
 
 	sprite.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -102,7 +129,7 @@ func update_expression(char_id: String, expression: String) -> void:
 	if char_id not in _active_characters:
 		return
 
-	var sprite_path := "res://assets/sprites/characters/%s/%s.png" % [char_id, expression]
-	if ResourceLoader.exists(sprite_path):
+	var sprite_path := _resolve_sprite_path(char_id, expression)
+	if not sprite_path.is_empty():
 		var sprite: TextureRect = _active_characters[char_id]["sprite"]
-		sprite.texture = load(sprite_path)
+		sprite.texture = _load_cached(sprite_path)

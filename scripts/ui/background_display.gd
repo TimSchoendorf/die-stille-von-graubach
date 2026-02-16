@@ -31,8 +31,8 @@ func change_background(bg_name: String, transition: String = "fade") -> void:
 		bg_path += ".png"
 
 	if not ResourceLoader.exists(bg_path):
-		push_warning("Background not found: " + bg_path)
-		return
+		push_warning("Background not found: " + bg_path + " — keeping current")
+		return  # Keep current background visible instead of showing black
 
 	var new_texture: Texture2D = load(bg_path)
 

@@ -1130,11 +1130,17 @@ def _add_act3_preparation(tr):
        fr="Là nuit vieillit. Le chant se fait plus doux, comme si l'entité retenait son souffle. Elle attend mà décision.",
        es="La noche envejece. El canto se hace más suave, como si la entidad contuviera el aliento. Espera mi decisión.",
        it="La notte invecchia. Il canto si fa più sommesso, come se l'entità trattenesse il respiro. Aspetta la mia decisione.")
-    _t(tr, F, "narration_approach_think",
+    # narration_approach_think is now a flag_check (Phase 12)
+    _t(tr, F, "narration_approach_think_journal",
        en="I close the journal. My hands are calm. Strangely calm for someone who will face an ancient entity tomorrow.",
-       fr="Je ferme le journal. Mes mains sont calmes. Étrangement calmes pour quelqu'un qui affronterà une entité ancestrale demain.",
+       fr="Je ferme le journal. Mes mains sont calmes. Étrangement calmes pour quelqu'un qui affrontera une entité ancestrale demain.",
        es="Cierro el diario. Mis manos están tranquilas. Extrañamente tranquilas para alguien que mañana se enfrentará a una entidad ancestral.",
        it="Chiudo il diario. Le mie mani sono calme. Stranamente calme per qualcuno che domani affronterà un'entità ancestrale.")
+    _t(tr, F, "narration_approach_think_nojournal",
+       en="I lay my hands flat on the table. They are calm. Strangely calm for someone who will face an ancient entity tomorrow.",
+       fr="Je pose les mains à plat sur la table. Elles sont calmes. Étrangement calmes pour quelqu'un qui affrontera une entité ancestrale demain.",
+       es="Pongo las manos planas sobre la mesa. Están tranquilas. Extrañamente tranquilas para alguien que mañana se enfrentará a una entidad ancestral.",
+       it="Appoggio le mani sul tavolo. Sono calme. Stranamente calme per qualcuno che domani affronterà un'entità ancestrale.")
     _t(tr, F, "narration_approach_seal",
        en="Seal: Grandmother's way. Bind it, not kill it. Safe. Proven. But it lasts only thirty years. Then someone else must live through this night.",
        fr="Sceller : là voie de grand-mère. Le lier, pas le tuer. Sûr. Éprouvé. Mais çà ne dure que trente ans. Ensuite quelqu'un d'autre devrà vivre cette nuit.",
@@ -1222,5 +1228,26 @@ def _add_act3_preparation(tr):
        fr="Je là laisse brûler. Peut-être qu'elle m'éclairerà le chemin du retour. S'il y à un chemin du retour.",
        es="La dejo arder. Quizás me ilumine el camino de vuelta. Si hay un camino de vuelta.",
        it="La lascio ardere. Forse mi illuminerà la via del ritorno. Se c'è una via del ritorno.")
+    # --- Phase 12: No-letter dialogue alternatives ---
+    _t(tr, F, "elise_georg_visit_1_noletter",
+       en="Please. I... I'm sitting here staring at the walls. What will happen tomorrow, Georg?",
+       fr="Je t'en prie. Je... je suis assise ici à fixer les murs. Que va-t-il se passer demain, Georg ?",
+       es="Por favor. Yo... estoy sentada aquí mirando las paredes. ¿Qué pasará mañana, Georg?",
+       it="Prego. Io... sto qui seduta a fissare le pareti. Cosa succederà domani, Georg?")
+    _t(tr, F, "georg_visit_2_noletter",
+       en="Your grandmother would have known what to say to you. I'm just an old man with a lantern. But I'm here.",
+       fr="Ta grand-mère aurait su quoi te dire. Je ne suis qu'un vieil homme avec une lanterne. Mais je suis là.",
+       es="Tu abuela habría sabido qué decirte. Solo soy un viejo con una linterna. Pero estoy aquí.",
+       it="Tua nonna avrebbe saputo cosa dirti. Sono solo un vecchio con una lanterna. Ma sono qui.")
+    _t(tr, F, "elise_hilde_visit_1_noletter",
+       en="I wish Grandmother had left me something. Instructions. Anything.",
+       fr="J'aurais aimé que grand-mère me laisse quelque chose. Des instructions. N'importe quoi.",
+       es="Ojalá la abuela me hubiera dejado algo. Instrucciones. Lo que sea.",
+       it="Vorrei che la nonna mi avesse lasciato qualcosa. Istruzioni. Qualsiasi cosa.")
+    _t(tr, F, "hilde_visit_2_noletter",
+       en="Margarethe left you more than you think. Not in ink and paper. In the people here. In me.",
+       fr="Margarethe t'a laissé plus que tu ne le penses. Pas dans l'encre et le papier. Dans les gens ici. En moi.",
+       es="Margarethe te dejó más de lo que crees. No en tinta y papel. En la gente de aquí. En mí.",
+       it="Margarethe ti ha lasciato più di quanto pensi. Non in inchiostro e carta. Nelle persone qui. In me.")
 
 

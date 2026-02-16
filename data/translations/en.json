@@ -354,6 +354,9 @@
 		"georg_5": {
 			"text": "Your grandmother... I'm sorry, child. We found her like this three days ago. Peaceful, people say. In her sleep."
 		},
+		"georg_5_hint": {
+			"text": "Only... her boots were by the door. Covered in mud. Even though she had been too weak to walk for a week. I don't know where she went that last night."
+		},
 		"elise_responds_2": {
 			"text": "Three days? Why didn't anyone let me know? I could have come right away!"
 		},
@@ -515,6 +518,9 @@
 		"narration_alone_sounds": {
 			"text": "At some point in the silence I hear it. Soft, deep, barely more than a vibration in the floorboards. Singing? No — more like a hum. Like a lullaby that comes from the ground itself."
 		},
+		"narration_alone_sounds_hint": {
+			"text": "It doesn't sound threatening. It sounds... sad. Like someone sitting alone in a dark room, humming to themselves because no one is listening."
+		},
 		"elise_alone_resolve": {
 			"text": "Tomorrow. Tomorrow I'll start to understand."
 		},
@@ -639,6 +645,9 @@
 		},
 		"narration_wake_3": {
 			"text": "Singing. Faint, muffled, as if coming from far beneath the house. Many voices, woven into something that isn't quite music and isn't quite language."
+		},
+		"narration_wake_3_hint": {
+			"text": "It doesn't sound angry. It sounds... searching. As if calling for someone who never comes."
 		},
 		"narration_singing_2": {
 			"text": "The floorboards vibrate faintly under my bare feet. The glass on the table clinks softly. The candle in the bedroom — I can see it from here — burns higher, brighter."
@@ -1125,6 +1134,9 @@
 		"voss_d2": {
 			"text": "Just like Margarethe. The same eyes. The same stubbornness. She did not listen to me either."
 		},
+		"voss_d2_hint": {
+			"text": "In the end she was... strangely calm. As if she had made peace with someone. Not with God. With something else."
+		},
 		"voss_converge": {
 			"text": "Before I can ask more questions, a young girl appears in the side doorway. Blonde hair, pale skin, a gaze that looks right through me."
 		},
@@ -1467,6 +1479,9 @@
 		"elise_heartbeat_react": {
 			"text": "It's alive. Right beneath me, under stone and earth. I feel it - not just with my fingers, but somewhere deeper, in a part of me that has no words. As if it recognizes me."
 		},
+		"elise_heartbeat_hint": {
+			"text": "And in that recognition there is no hostility. Only... expectation. Like a dog that hears someone at the door and lifts its head."
+		},
 		"voss_appears": {
 			"text": "A voice behind me. 'I wouldn't touch that if I were you.'"
 		},
@@ -1680,6 +1695,9 @@
 		},
 		"narration_chant_response": {
 			"text": "Deep beneath us, barely perceptible, something shifts. The singing from the depths falters - only for a moment, but it falters. It heard me."
+		},
+		"narration_chant_hint": {
+			"text": "The faltering doesn't sound like defense. It sounds like surprise. As if someone had received an answer for the first time after a very, very long time."
 		},
 		"elise_chant_fear": {
 			"text": "It reacted. It heard ME. Hilde, it knows I am here!"
@@ -3113,6 +3131,12 @@
 		"georg_visit_1": {
 			"text": "Couldn't sleep either. May I come in?"
 		},
+		"elise_georg_visit_1_noletter": {
+			"text": "Please. I... I'm sitting here staring at the walls. What will happen tomorrow, Georg?"
+		},
+		"georg_visit_2_noletter": {
+			"text": "Your grandmother would have known what to say to you. I'm just an old man with a lantern. But I'm here."
+		},
 		"elise_georg_visit_1": {
 			"text": "Please. I... just read Grandmother's last letter."
 		},
@@ -3148,6 +3172,12 @@
 		},
 		"hilde_visit_1": {
 			"text": "You have been crying. Good. Those who weep before the battle have no tears left afterward."
+		},
+		"elise_hilde_visit_1_noletter": {
+			"text": "I wish Grandmother had left me something. Instructions. Anything."
+		},
+		"hilde_visit_2_noletter": {
+			"text": "Margarethe left you more than you think. Not in ink and paper. In the people here. In me."
 		},
 		"elise_hilde_visit_1": {
 			"text": "Grandmother's letter. She... she apologized. For summoning me."
@@ -3206,8 +3236,11 @@
 		"narration_approach": {
 			"text": "The night grows older. The singing quieter, as if the entity were holding its breath. It is waiting for my decision."
 		},
-		"narration_approach_think": {
+		"narration_approach_think_journal": {
 			"text": "I close the journal. My hands are calm. Strangely calm for someone who will face an ancient entity tomorrow."
+		},
+		"narration_approach_think_nojournal": {
+			"text": "I lay my hands flat on the table. They are calm. Strangely calm for someone who will face an ancient entity tomorrow."
 		},
 		"narration_approach_seal": {
 			"text": "Seal: Grandmother's way. Bind it, not kill it. Safe. Proven. But it lasts only thirty years. Then someone else must live through this night."
@@ -3851,8 +3884,20 @@
 		}
 	},
 	"res://data/dialogue/act4/ending_pact.json": {
-		"narration_1": {
+		"narration_1_wounded": {
+			"text": "The creature contracts, wounded, frightened. For the first time in six hundred years, a human stands above it, not beneath it."
+		},
+		"narration_1_normal": {
 			"text": "I speak to the entity. Not with words — with thoughts, with will. I step onto the earth sign and open my mind."
+		},
+		"wounded_pact_creature": {
+			"text": "I HEAR. STATE YOUR TERMS. MY... PAIN... IS GREAT."
+		},
+		"wounded_pact_elise": {
+			"text": "Six hundred years of sacrifice. It ends. Today. Forever. In return, I leave you in peace."
+		},
+		"wounded_creature_react": {
+			"text": "PEACE. A WORD I HAVE ALMOST FORGOTTEN. WHAT DOES IT MEAN TO YOU?"
 		},
 		"elise_pact_1": {
 			"text": "I am not here to bind you. Not to kill you. I propose a bargain."
@@ -4508,11 +4553,17 @@
 		"narration_2": {
 			"text": "I stand on the earth sign, the point where the stone is thinnest. Beneath my feet I feel it: vast, ancient, awakening."
 		},
-		"narration_3": {
+		"narration_3_journal": {
 			"text": "Georg's key opened the last door. Hilde's herbs burn in a bowl beside me, their smoke rising in spirals. Grandmother's journal lies open."
 		},
-		"narration_4": {
+		"narration_4_journal": {
 			"text": "Grandmother's letter in my breast pocket. Hilde's amulet around my neck. Everything that connects me to the living."
+		},
+		"narration_3_nojournal": {
+			"text": "Georg's key opened the last door. Hilde's herbs burn in a bowl beside me, their smoke rising in spirals."
+		},
+		"narration_4_nojournal": {
+			"text": "Hilde's amulet around my neck. My own letter in my pocket. Everything that connects me to the living."
 		},
 		"narration_5": {
 			"text": "Now there is no turning back. The entity knows I am here. It is waiting."
@@ -4625,8 +4676,8 @@
 		"knowledge_high_2": {
 			"text": "I know you. Not your name, but your loneliness. The spirals, the dreams, the singing - I listened."
 		},
-		"knowledge_zero": {
-			"text": "I understand nothing. The consciousness touching mine is so alien, so OTHER, that words fail me. As if hearing a language never meant for human ears."
+		"knowledge_partial": {
+			"text": "I know it is old. I know it sleeps beneath the earth and sings in its sleep. But that is not enough. I do not understand its language, only fragments, like words of a foreign language one catches in passing."
 		},
 		"elise_creature_2": {
 			"text": "Margarethe. My grandmother. She sent me."
@@ -4820,6 +4871,9 @@
 		"elise_understand_2": {
 			"text": "No. But I am asking anyway."
 		},
+		"understand_ready_books": {
+			"text": "My books have prepared me - differently from the journal, but the academic texts on pre-Christian rituals give me enough foundation to ask the right questions."
+		},
 		"understand_ready": {
 			"text": "Grandmother's journal has prepared me. The symbols, the history, the connection. I understand enough to ask the right questions."
 		},
@@ -4861,6 +4915,36 @@
 		},
 		"narration_destroy_recoil": {
 			"text": "PAIN. YOU GIVE ME PAIN. I HAVE HAD ENOUGH PAIN."
+		},
+		"destroy_partial_success": {
+			"text": "But something is there. A crack. Tiny, barely perceptible, but REAL. My attack did not kill the entity - but it HURT it. For the first time in six hundred years."
+		},
+		"destroy_partial_2": {
+			"text": "STOP. STOP. YOU... YOU CAN HURT ME. NO ONE HAS EVER BEEN ABLE TO DO THAT."
+		},
+		"destroy_partial_3": {
+			"text": "It is afraid. The ancient entity beneath the stone is AFRAID. Of me. The realization hits me like a blow."
+		},
+		"destroy_partial_4": {
+			"text": "Yes. I can hurt you. And I will do it again. Unless..."
+		},
+		"destroy_partial_5": {
+			"text": "UNLESS?"
+		},
+		"choice_destroy_pivot": {
+			"choices": [
+				"Attack again - destroy it for good",
+				"Use my strength - dictate terms"
+			]
+		},
+		"destroy_to_pact": {
+			"text": "No more sacrifices. Never again. No blood, no vessel, no tradition. You accept my terms. Or I attack again."
+		},
+		"destroy_to_pact_creature": {
+			"text": "THREATS. BUT YOUR THREATS HAVE TEETH. THAT IS... NEW."
+		},
+		"destroy_to_pact_2": {
+			"text": "For the first time, a human negotiates with the entity from a position of strength. Grandmother would have laughed."
 		},
 		"elise_destroy_2": {
 			"text": "It... it is moving. Oh God, it is MOVING—"

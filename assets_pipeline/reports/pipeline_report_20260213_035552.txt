@@ -1,0 +1,71 @@
+Action: run
+Timestamp: 2026-02-13T03:55:52
+Entries total: 62
+Processed: 0
+Missing source: 62
+Transparency warnings: 0
+
+Missing source files:
+- bg.berlin_apartment_v2
+- bg.blacksmith_shop_v2
+- bg.church_basement_v2
+- bg.church_corrupted_v2
+- bg.church_exterior_v2
+- bg.church_interior_v2
+- bg.forest_corrupted_v2
+- bg.forest_path_v2
+- bg.grandmother_house_v2
+- bg.grandmother_house_night_v2
+- bg.hilde_cottage_v2
+- bg.ritual_chamber_v2
+- bg.train_interior_v2
+- bg.village_corrupted_v2
+- bg.village_entrance_v2
+- bg.village_night_v2
+- bg.village_school_v2
+- bg.village_square_v2
+- char.anna.afraid_v2
+- char.anna.dreamy_v2
+- char.anna.lucid_v2
+- char.anna.possessed_v2
+- char.elise.afraid_v2
+- char.elise.angry_v2
+- char.elise.determined_v2
+- char.elise.happy_v2
+- char.elise.neutral_v2
+- char.elise.sad_v2
+- char.elise.shocked_v2
+- char.elise.thinking_v2
+- char.elise.worried_v2
+- char.georg.afraid_v2
+- char.georg.angry_v2
+- char.georg.determined_v2
+- char.georg.guilty_v2
+- char.georg.neutral_v2
+- char.georg.protective_v2
+- char.georg.sad_v2
+- char.hilde.angry_v2
+- char.hilde.kind_v2
+- char.hilde.mysterious_v2
+- char.hilde.ritual_v2
+- char.hilde.warning_v2
+- char.hilde.wise_v2
+- char.konrad.charming_v2
+- char.konrad.dark_v2
+- char.konrad.possessed_v2
+- char.konrad.sad_v2
+- char.konrad.smiling_v2
+- char.konrad.suspicious_v2
+- char.otto.angry_v2
+- char.otto.authoritative_v2
+- char.otto.desperate_v2
+- char.otto.jovial_v2
+- char.otto.threatening_v2
+- char.voss.afraid_v2
+- char.voss.angry_v2
+- char.voss.broken_v2
+- char.voss.neutral_v2
+- char.voss.praying_v2
+- char.voss.warning_v2
+- char.voss.worried_v2
+

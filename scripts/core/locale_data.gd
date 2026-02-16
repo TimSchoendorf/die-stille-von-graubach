@@ -242,11 +242,39 @@ const TRANSLATIONS: Dictionary = {
 		"it": "Dim. carattere",
 	},
 	"AUTO_ADVANCE": {
-		"de": "  Auto-Weiter (3 Sek.)",
-		"en": "  Auto-Advance (3 sec.)",
-		"fr": "  Avance auto (3 sec.)",
-		"es": "  Avance auto (3 seg.)",
-		"it": "  Avanzamento auto (3 sec.)",
+		"de": "  Auto-Weiter",
+		"en": "  Auto-Advance",
+		"fr": "  Avance auto",
+		"es": "  Avance auto",
+		"it": "  Avanzamento auto",
+	},
+	"AUTO_SPEED": {
+		"de": "Auto-Geschwindigkeit",
+		"en": "Auto Speed",
+		"fr": "Vitesse auto",
+		"es": "Velocidad auto",
+		"it": "Velocità auto",
+	},
+	"TEXTBOX_OPACITY": {
+		"de": "Textbox-Deckkraft",
+		"en": "Textbox Opacity",
+		"fr": "Opacité boîte de texte",
+		"es": "Opacidad del cuadro de texto",
+		"it": "Opacità casella di testo",
+	},
+	"SKIP": {
+		"de": "Skip",
+		"en": "Skip",
+		"fr": "Passer",
+		"es": "Saltar",
+		"it": "Salta",
+	},
+	"AUTO": {
+		"de": "Auto",
+		"en": "Auto",
+		"fr": "Auto",
+		"es": "Auto",
+		"it": "Auto",
 	},
 	"DISPLAY": {
 		"de": "Anzeige",
@@ -305,6 +333,36 @@ const TRANSLATIONS: Dictionary = {
 		"fr": "Journal",
 		"es": "Diario",
 		"it": "Diario",
+	},
+
+	# ── Pause Menu ──
+	"PAUSE_TITLE": {
+		"de": "Pause",
+		"en": "Paused",
+		"fr": "Pause",
+		"es": "Pausa",
+		"it": "Pausa",
+	},
+	"RESUME": {
+		"de": "Fortsetzen",
+		"en": "Resume",
+		"fr": "Reprendre",
+		"es": "Reanudar",
+		"it": "Riprendi",
+	},
+	"MAIN_MENU": {
+		"de": "Hauptmenü",
+		"en": "Main Menu",
+		"fr": "Menu principal",
+		"es": "Menú principal",
+		"it": "Menu principale",
+	},
+	"QUIT_GAME": {
+		"de": "Beenden",
+		"en": "Quit",
+		"fr": "Quitter",
+		"es": "Salir",
+		"it": "Esci",
 	},
 
 	# ── Save/Load ──

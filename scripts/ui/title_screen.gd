@@ -87,8 +87,8 @@ func _setup_ui() -> void:
 	_create_menu_button(vbox, Locale.t("CREDITS"), _on_credits)
 	_create_menu_button(vbox, Locale.t("QUIT"), _on_quit)
 
-	# Disable "Fortsetzen" if no quick save exists
-	if not SaveManager.has_save(0):
+	# Disable "Fortsetzen" if no saves exist at all
+	if SaveManager.get_newest_save_slot() < 0:
 		_continue_btn.disabled = true
 		_continue_btn.add_theme_color_override("font_color", Color(0.4, 0.38, 0.35, 0.5))
 
@@ -123,9 +123,10 @@ func _on_new_game() -> void:
 
 
 func _on_continue() -> void:
-	if SaveManager.has_save(0):
+	var slot := SaveManager.get_newest_save_slot()
+	if slot >= 0:
 		AudioManager.stop_music(1.5)
-		SaveManager.load_game(0)
+		SaveManager.load_game(slot)
 		SceneManager.change_scene("res://scenes/GameScene.tscn")
 
 

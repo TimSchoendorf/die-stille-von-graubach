@@ -111,7 +111,7 @@ static func build_audio_section(parent: VBoxContainer, on_save: Callable) -> voi
 		on_save.call())
 
 
-## Builds text section. Returns Dictionary with "text_speed_slider" and "auto_advance_check".
+## Builds text section. Returns Dictionary with "text_speed_slider".
 static func build_text_section(parent: VBoxContainer, on_save: Callable) -> Dictionary:
 	add_section_label(parent, Locale.t("TEXT"))
 
@@ -123,17 +123,17 @@ static func build_text_section(parent: VBoxContainer, on_save: Callable) -> Dict
 		GameManager.font_size = int(val)
 		on_save.call())
 
-	var auto_advance_check := CheckButton.new()
-	auto_advance_check.text = Locale.t("AUTO_ADVANCE")
-	auto_advance_check.button_pressed = GameManager.auto_advance
-	auto_advance_check.add_theme_font_size_override("font_size", UITheme.s(22))
-	auto_advance_check.add_theme_color_override("font_color", UITheme.TEXT_LIGHT)
-	auto_advance_check.toggled.connect(func(on: bool):
-		GameManager.auto_advance = on
+	create_slider_raw(parent, Locale.t("AUTO_SPEED"), GameManager.auto_advance_speed, 0.5, 3.0, 0.25, func(val: float):
+		GameManager.auto_advance_speed = val
 		on_save.call())
-	parent.add_child(auto_advance_check)
 
-	return {"text_speed_slider": text_speed_slider, "auto_advance_check": auto_advance_check}
+	add_section_label(parent, Locale.t("DISPLAY"))
+
+	create_slider(parent, Locale.t("TEXTBOX_OPACITY"), GameManager.textbox_opacity, func(val: float):
+		GameManager.textbox_opacity = val
+		on_save.call())
+
+	return {"text_speed_slider": text_speed_slider}
 
 
 ## Builds display section. Returns Dictionary with "fullscreen_check".
@@ -165,6 +165,8 @@ static func save_settings() -> void:
 		"text_speed": GameManager.text_speed,
 		"font_size": GameManager.font_size,
 		"auto_advance": GameManager.auto_advance,
+		"auto_advance_speed": GameManager.auto_advance_speed,
+		"textbox_opacity": GameManager.textbox_opacity,
 		"fullscreen": DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN,
 		"language": Locale.current_locale,
 	}
@@ -190,6 +192,8 @@ static func load_settings() -> void:
 	GameManager.text_speed = data.get("text_speed", 40.0)
 	GameManager.font_size = int(data.get("font_size", 24))
 	GameManager.auto_advance = data.get("auto_advance", false)
+	GameManager.auto_advance_speed = data.get("auto_advance_speed", 1.0)
+	GameManager.textbox_opacity = data.get("textbox_opacity", 0.88)
 	if data.get("fullscreen", false):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	var lang: String = data.get("language", "de")

@@ -12,7 +12,10 @@ var _journal_ui: Node # JournalUI
 var _save_load_ui: Node # SaveLoadUI
 var _ending_screen: Node # EndingScreen
 var _quick_menu: HBoxContainer
+var _skip_button: Button
+var _auto_button: Button
 var _settings_overlay: Node # SettingsOverlay
+var _pause_menu: Node # PauseMenu
 
 # Effect layer
 var _effect_layer: CanvasLayer
@@ -90,7 +93,8 @@ func _setup_layers() -> void:
 	_quick_menu.name = "QuickMenu"
 	var qm_btn_w := UITheme.s(140)
 	var qm_sep := UITheme.s(10)
-	_quick_menu.position = Vector2(1920 - 4 * qm_btn_w - 3 * qm_sep - UITheme.s(20), UITheme.s(10))
+	var qm_count := 6  # Save, Load, History, Journal, Skip, Auto
+	_quick_menu.position = Vector2(1920 - qm_count * qm_btn_w - (qm_count - 1) * qm_sep - UITheme.s(20), UITheme.s(10))
 	_quick_menu.add_theme_constant_override("separation", qm_sep)
 	ui_layer.add_child(_quick_menu)
 
@@ -98,6 +102,8 @@ func _setup_layers() -> void:
 	_create_quick_button(Locale.t("LOAD_SHORT"), _on_load)
 	_create_quick_button(Locale.t("HISTORY"), _on_history)
 	_create_quick_button(Locale.t("JOURNAL"), _on_journal)
+	_skip_button = _create_quick_button_ref(Locale.t("SKIP"), _on_skip_toggle)
+	_auto_button = _create_quick_button_ref(Locale.t("AUTO"), _on_auto_toggle)
 
 	# Textbox (bottom) — explicit position for CanvasLayer children
 	var tb_h := UITheme.s(250)
@@ -140,6 +146,16 @@ func _setup_layers() -> void:
 	_ending_screen.name = "EndingScreen"
 	overlay_layer.add_child(_ending_screen)
 
+	_pause_menu = preload("res://scripts/ui/pause_menu.gd").new()
+	_pause_menu.name = "PauseMenu"
+	overlay_layer.add_child(_pause_menu)
+	_pause_menu.save_requested.connect(_on_save)
+	_pause_menu.load_requested.connect(_on_load)
+	_pause_menu.history_requested.connect(_on_history)
+	_pause_menu.journal_requested.connect(_on_journal)
+	_pause_menu.settings_requested.connect(_on_settings)
+	_pause_menu.resumed.connect(_update_toggle_buttons)
+
 
 func _create_quick_button(text: String, callback: Callable) -> void:
 	var btn := Button.new()
@@ -148,6 +164,16 @@ func _create_quick_button(text: String, callback: Callable) -> void:
 	UITheme.style_quick_button(btn)
 	btn.pressed.connect(callback)
 	_quick_menu.add_child(btn)
+
+
+func _create_quick_button_ref(text: String, callback: Callable) -> Button:
+	var btn := Button.new()
+	btn.text = text
+	btn.custom_minimum_size = Vector2(UITheme.s(140), UITheme.s(48))
+	UITheme.style_quick_button(btn)
+	btn.pressed.connect(callback)
+	_quick_menu.add_child(btn)
+	return btn
 
 
 func _setup_dialogue_player() -> void:
@@ -173,14 +199,14 @@ func _connect_signals() -> void:
 	_choice_panel.choice_selected.connect(_dialogue_player.select_choice)
 
 
-func _on_text_requested(speaker: String, text: String, color: Color, speaker_id: String = "") -> void:
-	_textbox.show_dialogue(speaker, text, color)
+func _on_text_requested(speaker: String, text: String, color: Color, speaker_id: String = "", text_effect: String = "") -> void:
+	_textbox.show_dialogue(speaker, text, color, text_effect)
 	_history_log.add_entry(speaker, text, color)
 	_highlight_speaker(speaker_id)
 
 
-func _on_narration_requested(text: String) -> void:
-	_textbox.show_narration(text)
+func _on_narration_requested(text: String, text_effect: String = "") -> void:
+	_textbox.show_narration(text, text_effect)
 	_history_log.add_entry("", text)
 	_highlight_speaker("")
 
@@ -336,17 +362,21 @@ func _on_scene_ended(next_file: String) -> void:
 		_ending_screen.show_ending(ending_id)
 		return
 
+	# Block saves during transition
+	SaveManager.save_blocked = true
+
 	# Clear characters when transitioning to next file
 	_character_display.hide_all_characters()
 	GameManager.active_characters.clear()
 
-	# Update dialogue file and reset node_id before auto-save
+	# Load next dialogue file FIRST, then save consistent state
 	GameManager.current_dialogue_file = next_file
-	GameManager.current_node_id = ""
-	SaveManager.quick_save()
-
-	# Load next dialogue file
 	_dialogue_player.load_and_start(next_file)
+
+	# Now state is consistent — safe to auto-save
+	GameManager.current_node_id = GameManager.current_node_id # already set by load_and_start
+	SaveManager.save_blocked = false
+	SaveManager.quick_save()
 
 
 func _on_dialogue_finished() -> void:
@@ -383,7 +413,7 @@ func _apply_shake(intensity: float, duration: float) -> void:
 
 
 func _is_any_overlay_open() -> bool:
-	return _save_load_ui.visible or _history_log.visible or _journal_ui.visible or _settings_overlay.visible
+	return _save_load_ui.visible or _history_log.visible or _journal_ui.visible or _settings_overlay.visible or _pause_menu.visible
 
 
 func _on_save() -> void:
@@ -405,6 +435,23 @@ func _on_journal() -> void:
 func _on_settings() -> void:
 	if not _is_any_overlay_open():
 		_settings_overlay.open_settings()
+
+
+func _on_skip_toggle() -> void:
+	GameManager.skip_mode = not GameManager.skip_mode
+	_update_toggle_buttons()
+
+
+func _on_auto_toggle() -> void:
+	GameManager.auto_advance = not GameManager.auto_advance
+	_update_toggle_buttons()
+
+
+func _update_toggle_buttons() -> void:
+	if _skip_button:
+		_skip_button.modulate = UITheme.GOLD if GameManager.skip_mode else Color.WHITE
+	if _auto_button:
+		_auto_button.modulate = UITheme.GOLD if GameManager.auto_advance else Color.WHITE
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -429,4 +476,12 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("toggle_history"):
 		if not _is_any_overlay_open():
 			_history_log.open_log()
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("toggle_menu"):
+		if not _is_any_overlay_open():
+			_pause_menu.open_pause()
+			_update_toggle_buttons()
+		get_viewport().set_input_as_handled()
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_CTRL:
+		_on_skip_toggle()
 		get_viewport().set_input_as_handled()

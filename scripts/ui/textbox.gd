@@ -75,8 +75,10 @@ func _setup_ui() -> void:
 	vbox.add_child(_continue_indicator)
 
 
-func show_dialogue(speaker: String, text: String, color: Color = Color.WHITE) -> void:
+func show_dialogue(speaker: String, text: String, color: Color = Color.WHITE, text_effect: String = "") -> void:
 	show()
+	# Apply textbox opacity setting
+	_update_opacity()
 	# Apply current font size setting
 	var fs: int = GameManager.font_size if GameManager.font_size > 0 else 24
 	_text_label.add_theme_font_size_override("normal_font_size", UITheme.s(fs))
@@ -91,7 +93,20 @@ func show_dialogue(speaker: String, text: String, color: Color = Color.WHITE) ->
 
 	_text_label.clear()
 	_full_text = text
-	_text_label.append_text(text)
+
+	# Apply text effect
+	var display_text := text
+	match text_effect:
+		"glitch":
+			display_text = TextEffects.glitch_text(text, 0.15)
+		"shake":
+			display_text = TextEffects.shake_text(text)
+		"wave":
+			display_text = TextEffects.wave_text(text)
+		"redact":
+			display_text = TextEffects.redact_text(text, 0.4)
+
+	_text_label.append_text(display_text)
 	_continue_indicator.hide()
 
 	if typewriter_enabled:
@@ -107,8 +122,8 @@ func show_dialogue(speaker: String, text: String, color: Color = Color.WHITE) ->
 		text_finished.emit()
 
 
-func show_narration(text: String) -> void:
-	show_dialogue("", text, Color.WHITE)
+func show_narration(text: String, text_effect: String = "") -> void:
+	show_dialogue("", text, Color.WHITE, text_effect)
 
 
 var _auto_advance_timer: float = 0.0
@@ -122,10 +137,14 @@ func _process(delta: float) -> void:
 		# Blink the continue indicator
 		if _is_text_complete and _continue_indicator.visible:
 			_continue_indicator.modulate.a = 0.5 + 0.5 * sin(Time.get_ticks_msec() * 0.005)
-			# Auto-advance
+			# Auto-advance (text-length-dependent delay)
 			if GameManager.auto_advance:
 				_auto_advance_timer += delta
-				if _auto_advance_timer >= 3.0:
+				var base_delay := 1.0
+				var per_char := 0.04  # ~25 chars/sec reading speed
+				var text_len := _full_text.length()
+				var auto_delay := (base_delay + text_len * per_char) / maxf(GameManager.auto_advance_speed, 0.25)
+				if _auto_advance_timer >= auto_delay:
 					_auto_advance_timer = 0.0
 					_is_text_complete = false
 					_continue_indicator.hide()
@@ -189,3 +208,10 @@ func hide_textbox() -> void:
 
 func is_typing() -> bool:
 	return _is_typing
+
+
+func _update_opacity() -> void:
+	var style: StyleBoxFlat = get_theme_stylebox("panel") as StyleBoxFlat
+	if style:
+		var c := style.bg_color
+		style.bg_color = Color(c.r, c.g, c.b, clampf(GameManager.textbox_opacity, 0.3, 1.0))

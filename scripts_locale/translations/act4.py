@@ -19,17 +19,29 @@ def _add_act4_ritual_night(tr):
        es="Estoy de pie sobre el signo de la tierra, el punto donde la piedra es más delgada. Bajo mis pies lo siento: inmenso, antiguo, despertando.",
        it="Sono in piedi sul segno della terra, il punto dove la pietra è più sottile. Sotto i miei piedi lo sento: immenso, antico, in risveglio.")
 
-    _t(tr, F, "narration_3",
+    _t(tr, F, "narration_3_journal",
        en="Georg's key opened the last door. Hilde's herbs burn in a bowl beside me, their smoke rising in spirals. Grandmother's journal lies open.",
-       fr="Là clé de Georg à ouvert là dernière porte. Les herbes de Hilde brûlent dans un bol à côté de moi, leur fumée s'élève en spirales. Le journal de grand-mère est ouvert.",
+       fr="La clé de Georg a ouvert la dernière porte. Les herbes de Hilde brûlent dans un bol à côté de moi, leur fumée s'élève en spirales. Le journal de grand-mère est ouvert.",
        es="La llave de Georg abrió la última puerta. Las hierbas de Hilde arden en un cuenco junto a mí, su humo asciende en espirales. El diario de la abuela está abierto.",
        it="La chiave di Georg ha aperto l'ultima porta. Le erbe di Hilde bruciano in una ciotola accanto a me, il loro fumo sale a spirale. Il diario della nonna è aperto.")
 
-    _t(tr, F, "narration_4",
+    _t(tr, F, "narration_4_journal",
        en="Grandmother's letter in my breast pocket. Hilde's amulet around my neck. Everything that connects me to the living.",
-       fr="Là lettre de grand-mère dans mà poche de poitrine. L'amulette de Hilde autour de mon cou. Tout ce qui me relie aux vivants.",
+       fr="La lettre de grand-mère dans ma poche de poitrine. L'amulette de Hilde autour de mon cou. Tout ce qui me relie aux vivants.",
        es="La carta de la abuela en mi bolsillo del pecho. El amuleto de Hilde alrededor de mi cuello. Todo lo que me conecta con los vivos.",
        it="La lettera della nonna nella tasca del petto. L'amuleto di Hilde al collo. Tutto ciò che mi lega ai vivi.")
+
+    _t(tr, F, "narration_3_nojournal",
+       en="Georg's key opened the last door. Hilde's herbs burn in a bowl beside me, their smoke rising in spirals.",
+       fr="La clé de Georg a ouvert la dernière porte. Les herbes de Hilde brûlent dans un bol à côté de moi, leur fumée s'élève en spirales.",
+       es="La llave de Georg abrió la última puerta. Las hierbas de Hilde arden en un cuenco junto a mí, su humo asciende en espirales.",
+       it="La chiave di Georg ha aperto l'ultima porta. Le erbe di Hilde bruciano in una ciotola accanto a me, il loro fumo sale a spirale.")
+
+    _t(tr, F, "narration_4_nojournal",
+       en="Hilde's amulet around my neck. My own letter in my pocket. Everything that connects me to the living.",
+       fr="L'amulette de Hilde autour de mon cou. Ma propre lettre dans ma poche. Tout ce qui me relie aux vivants.",
+       es="El amuleto de Hilde alrededor de mi cuello. Mi propia carta en el bolsillo. Todo lo que me conecta con los vivos.",
+       it="L'amuleto di Hilde al collo. La mia lettera in tasca. Tutto ciò che mi lega ai vivi.")
 
     _t(tr, F, "narration_5",
        en="Now there is no turning back. The entity knows I am here. It is waiting.",
@@ -466,9 +478,15 @@ def _add_act4_ritual_night(tr):
 
     _t(tr, F, "understand_ready",
        en="Grandmother's journal has prepared me. The symbols, the history, the connection. I understand enough to ask the right questions.",
-       fr="Le journal de grand-mère m'à préparée. Les symboles, l'histoire, là connexion. J'en comprends assez pour poser les bonnes questions.",
+       fr="Le journal de grand-mère m'a préparée. Les symboles, l'histoire, la connexion. J'en comprends assez pour poser les bonnes questions.",
        es="El diario de la abuela me ha preparado. Los símbolos, la historia, la conexión. Entiendo lo suficiente para hacer las preguntas correctas.",
        it="Il diario della nonna mi ha preparata. I simboli, la storia, la connessione. Capisco abbastanza per fare le domande giuste.")
+
+    _t(tr, F, "understand_ready_books",
+       en="My books have prepared me - differently from the journal, but the academic texts on pre-Christian rituals give me enough foundation to ask the right questions.",
+       fr="Mes livres m'ont préparée - différemment du journal, mais les textes académiques sur les rituels préchrétiens me donnent assez de bases pour poser les bonnes questions.",
+       es="Mis libros me han preparado - de forma diferente al diario, pero los textos académicos sobre rituales precristianos me dan suficiente base para hacer las preguntas correctas.",
+       it="I miei libri mi hanno preparata - diversamente dal diario, ma i testi accademici sui rituali precristiani mi danno abbastanza basi per fare le domande giuste.")
 
     _t(tr, F, "understand_unprepared",
        en="But I lack the knowledge. Grandmother's journal — I should have read it more thoroughly. Without preparation, the gaze into this abyss...",
@@ -549,6 +567,61 @@ def _add_act4_ritual_night(tr):
        fr="DOULEUR. TU ME DONNES DE LA DOULEUR. J'AI EU ASSEZ DE DOULEUR.",
        es="DOLOR. ME DAS DOLOR. YA HE TENIDO BASTANTE DOLOR.",
        it="DOLORE. MI DAI DOLORE. HO AVUTO ABBASTANZA DOLORE.")
+
+    # --- Destroy partial success (high courage) ---
+    _t(tr, F, "destroy_partial_success",
+       en="But something is there. A crack. Tiny, barely perceptible, but REAL. My attack did not kill the entity - but it HURT it. For the first time in six hundred years.",
+       fr="Mais il y a quelque chose. Une fissure. Minuscule, à peine perceptible, mais RÉELLE. Mon attaque n'a pas tué l'entité - mais elle l'a BLESSÉE. Pour la première fois en six cents ans.",
+       es="Pero hay algo. Una grieta. Diminuta, apenas perceptible, pero REAL. Mi ataque no mató a la entidad - pero la HIRIÓ. Por primera vez en seiscientos años.",
+       it="Ma c'è qualcosa. Una crepa. Minuscola, appena percettibile, ma REALE. Il mio attacco non ha ucciso l'entità - ma l'ha FERITA. Per la prima volta in seicento anni.")
+
+    _t(tr, F, "destroy_partial_2",
+       en="STOP. STOP. YOU... YOU CAN HURT ME. NO ONE HAS EVER BEEN ABLE TO DO THAT.",
+       fr="ARRÊTE. ARRÊTE. TU... TU PEUX ME BLESSER. PERSONNE N'A JAMAIS PU FAIRE ÇA.",
+       es="DETENTE. DETENTE. TÚ... PUEDES HACERME DAÑO. NADIE HABÍA PODIDO HACER ESO.",
+       it="FERMATI. FERMATI. TU... PUOI FARMI DEL MALE. NESSUNO È MAI RIUSCITO A FARLO.")
+
+    _t(tr, F, "destroy_partial_3",
+       en="It is afraid. The ancient entity beneath the stone is AFRAID. Of me. The realization hits me like a blow.",
+       fr="Elle a peur. L'ancienne entité sous la pierre a PEUR. De moi. La réalisation me frappe comme un coup.",
+       es="Tiene miedo. La antigua entidad bajo la piedra tiene MIEDO. De mí. La revelación me golpea como un puñetazo.",
+       it="Ha paura. L'antica entità sotto la pietra ha PAURA. Di me. La consapevolezza mi colpisce come un pugno.")
+
+    _t(tr, F, "destroy_partial_4",
+       en="Yes. I can hurt you. And I will do it again. Unless...",
+       fr="Oui. Je peux te blesser. Et je le referai. À moins que...",
+       es="Sí. Puedo hacerte daño. Y lo haré de nuevo. A menos que...",
+       it="Sì. Posso ferirti. E lo farò di nuovo. A meno che...")
+
+    _t(tr, F, "destroy_partial_5",
+       en="UNLESS?",
+       fr="À MOINS QUE ?",
+       es="¿A MENOS QUE?",
+       it="A MENO CHE?")
+
+    _tc(tr, F, "choice_destroy_pivot",
+        en_choices=["Attack again - destroy it for good", "Use my strength - dictate terms"],
+        fr_choices=["Attaquer de nouveau - le détruire définitivement", "Utiliser ma force - dicter mes conditions"],
+        es_choices=["Atacar de nuevo - destruirlo definitivamente", "Usar mi fuerza - dictar condiciones"],
+        it_choices=["Attaccare di nuovo - distruggerlo definitivamente", "Usare la mia forza - dettare le condizioni"])
+
+    _t(tr, F, "destroy_to_pact",
+       en="No more sacrifices. Never again. No blood, no vessel, no tradition. You accept my terms. Or I attack again.",
+       fr="Plus de sacrifices. Plus jamais. Pas de sang, pas de réceptacle, pas de tradition. Tu acceptes mes conditions. Ou j'attaque de nouveau.",
+       es="No más sacrificios. Nunca más. Sin sangre, sin recipiente, sin tradición. Aceptas mis condiciones. O ataco de nuevo.",
+       it="Niente più sacrifici. Mai più. Niente sangue, niente recipiente, niente tradizione. Accetti le mie condizioni. O attacco di nuovo.")
+
+    _t(tr, F, "destroy_to_pact_creature",
+       en="THREATS. BUT YOUR THREATS HAVE TEETH. THAT IS... NEW.",
+       fr="DES MENACES. MAIS TES MENACES ONT DES DENTS. C'EST... NOUVEAU.",
+       es="AMENAZAS. PERO TUS AMENAZAS TIENEN DIENTES. ESO ES... NUEVO.",
+       it="MINACCE. MA LE TUE MINACCE HANNO DENTI. QUESTO È... NUOVO.")
+
+    _t(tr, F, "destroy_to_pact_2",
+       en="For the first time, a human negotiates with the entity from a position of strength. Grandmother would have laughed.",
+       fr="Pour la première fois, un humain négocie avec l'entité en position de force. Grand-mère aurait ri.",
+       es="Por primera vez, un humano negocia con la entidad desde una posición de fuerza. La abuela se habría reído.",
+       it="Per la prima volta, un umano negozia con l'entità da una posizione di forza. La nonna avrebbe riso.")
 
     _t(tr, F, "elise_destroy_2",
        en="It... it is moving. Oh God, it is MOVING—",
@@ -690,11 +763,11 @@ def _add_act4_ritual_night(tr):
        es="Te conozco. No tu nombre, pero sí tu soledad. Las espirales, los sueños, el canto - escuché.",
        it="Ti conosco. Non il tuo nome, ma la tua solitudine. Le spirali, i sogni, il canto - ho ascoltato.")
 
-    _t(tr, F, "knowledge_zero",
-       en="I understand nothing. The consciousness touching mine is so alien, so OTHER, that words fail me. As if hearing a language never meant for human ears.",
-       fr="Je ne comprends rien. La conscience qui touche la mienne est si étrangère, si AUTRE, que les mots me manquent. Comme si j'entendais une langue jamais destinée aux oreilles humaines.",
-       es="No entiendo nada. La conciencia que toca la mía es tan ajena, tan OTRA, que me faltan las palabras. Como si oyera un idioma que nunca fue pensado para oídos humanos.",
-       it="Non capisco nulla. La coscienza che tocca la mia è così aliena, così ALTRA, che le parole mi mancano. Come se udissi una lingua mai pensata per orecchie umane.")
+    _t(tr, F, "knowledge_partial",
+       en="I know it is old. I know it sleeps beneath the earth and sings in its sleep. But that is not enough. I do not understand its language, only fragments, like words of a foreign language one catches in passing.",
+       fr="Je sais qu'elle est ancienne. Je sais qu'elle dort sous la terre et chante dans son sommeil. Mais cela ne suffit pas. Je ne comprends pas son langage, seulement des fragments, comme des mots d'une langue étrangère qu'on attrape en passant.",
+       es="Sé que es antiguo. Sé que duerme bajo la tierra y canta en sueños. Pero no es suficiente. No entiendo su idioma, solo fragmentos, como palabras de una lengua extranjera que uno capta al pasar.",
+       it="So che è antico. So che dorme sotto la terra e canta nel sonno. Ma non è abbastanza. Non capisco il suo linguaggio, solo frammenti, come parole di una lingua straniera che si colgono di passaggio.")
 
     _t(tr, F, "konrad_door_memory",
        en="You opened the door for me when everyone else kept it locked. On the first night. That... that was me, Elise. Not IT. That was me.",
@@ -1274,11 +1347,17 @@ def _add_act4_ending_escape(tr):
 def _add_act4_ending_pact(tr):
     F = "res://data/dialogue/act4/ending_pact.json"
 
-    _t(tr, F, "narration_1",
+    _t(tr, F, "narration_1_wounded",
+       en="The creature contracts, wounded, frightened. For the first time in six hundred years, a human stands above it, not beneath it.",
+       fr="La créature se contracte, blessée, effrayée. Pour la première fois en six cents ans, un humain se tient au-dessus d'elle, pas en dessous.",
+       es="La criatura se contrae, herida, asustada. Por primera vez en seiscientos años, un humano está por encima de ella, no por debajo.",
+       it="La creatura si contrae, ferita, spaventata. Per la prima volta in seicento anni, un umano le sta sopra, non sotto.")
+
+    _t(tr, F, "narration_1_normal",
        en="I speak to the entity. Not with words — with thoughts, with will. I step onto the earth sign and open my mind.",
-       fr="Je parle à l'entité. Pas avec des mots — avec des pensées, avec de là volonté. Je me place sur le signe de terre et j'ouvre mon esprit.",
+       fr="Je parle à l'entité. Pas avec des mots — avec des pensées, avec de la volonté. Je me place sur le signe de terre et j'ouvre mon esprit.",
        es="Le hablo a la entidad. No con palabras — con pensamientos, con voluntad. Me coloco sobre el signo de la tierra y abro mi mente.",
-       it="Parlo all'entità. Non con parole — con pensieri, con volontà. Mi posiziono sul segno della terrà è apro la mia mente.")
+       it="Parlo all'entità. Non con parole — con pensieri, con volontà. Mi posiziono sul segno della terra e apro la mia mente.")
 
     _t(tr, F, "narration_2",
        en="It answers. Not in words. In images, feelings, memories that are not mine. I see millennia in seconds. Civilizations that came and went like tides.",
@@ -1339,6 +1418,25 @@ def _add_act4_ending_pact(tr):
        fr="Parfois, lors de nuits calmes à Berlin, j'entends le chant. Doux, lointain, presque comme une berceuse. Il n'est plus menaçant. Il est... solitaire.",
        es="A veces, en noches tranquilas en Berlín, oigo el canto. Suave, lejano, casi como una nana. Ya no es amenazante. Es... solitario.",
        it="A volte, nelle notti silenziose a Berlino, sento il canto. Sommesso, lontano, quasi come una ninna nanna. Non è più minaccioso. È... solitario.")
+
+    # --- Wounded pact path (from destroy) ---
+    _t(tr, F, "wounded_pact_creature",
+       en="I HEAR. STATE YOUR TERMS. MY... PAIN... IS GREAT.",
+       fr="J'ÉCOUTE. POSE TES CONDITIONS. MA... DOULEUR... EST GRANDE.",
+       es="ESCUCHO. PLANTEA TUS CONDICIONES. MI... DOLOR... ES GRANDE.",
+       it="ASCOLTO. PONI LE TUE CONDIZIONI. IL MIO... DOLORE... È GRANDE.")
+
+    _t(tr, F, "wounded_pact_elise",
+       en="Six hundred years of sacrifice. It ends. Today. Forever. In return, I leave you in peace.",
+       fr="Six cents ans de sacrifices. Ça s'arrête. Aujourd'hui. Pour toujours. En échange, je te laisse en paix.",
+       es="Seiscientos años de sacrificios. Se acaba. Hoy. Para siempre. A cambio, te dejo en paz.",
+       it="Seicento anni di sacrifici. Finisce. Oggi. Per sempre. In cambio, ti lascio in pace.")
+
+    _t(tr, F, "wounded_creature_react",
+       en="PEACE. A WORD I HAVE ALMOST FORGOTTEN. WHAT DOES IT MEAN TO YOU?",
+       fr="PAIX. UN MOT QUE J'AI PRESQUE OUBLIÉ. QUE SIGNIFIE-T-IL POUR TOI ?",
+       es="PAZ. UNA PALABRA QUE CASI HE OLVIDADO. ¿QUÉ SIGNIFICA PARA TI?",
+       it="PACE. UNA PAROLA CHE HO QUASI DIMENTICATO. CHE COSA SIGNIFICA PER TE?")
 
     # --- Elise/Creature dialogue during pact ---
     _t(tr, F, "elise_pact_1",

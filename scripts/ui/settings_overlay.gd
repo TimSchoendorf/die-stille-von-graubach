@@ -7,7 +7,6 @@ const SB := preload("res://scripts/ui/settings_builder.gd")
 signal closed
 
 var _text_speed_slider: HSlider
-var _auto_advance_check: CheckButton
 var _fullscreen_check: CheckButton
 var _content_vbox: VBoxContainer
 
@@ -78,7 +77,6 @@ func _build_settings() -> void:
 
 	var text_refs := SB.build_text_section(_content_vbox, on_save)
 	_text_speed_slider = text_refs["text_speed_slider"]
-	_auto_advance_check = text_refs["auto_advance_check"]
 
 	var display_refs := SB.build_display_section(_content_vbox, on_save)
 	_fullscreen_check = display_refs["fullscreen_check"]
