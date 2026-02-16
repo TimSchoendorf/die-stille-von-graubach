@@ -347,12 +347,12 @@
 		},
 		"narration_knock_4": {
 			"type": "narration",
-			"text": "\"Hallo? Ist da jemand? Ich habe Licht gesehen. Brauchen Sie Hilfe?\"",
+			"text": "\"Hallo? Ist drinnen alles in Ordnung? Ich habe einen Schrei gehört.\"",
 			"next": "narration_knock_5"
 		},
 		"narration_knock_5": {
 			"type": "narration",
-			"text": "Eine Männerstimme. Jung, freundlich. Nicht bedrohlich. Aber Georg hat gesagt...",
+			"text": "Eine Männerstimme. Jung, kontrolliert, freundlich. Ich presse die Finger an die Schläfen, zwinge mich zu zählen: Atemzug eins. Atemzug zwei. Bevor ich zu einem Schluss komme, klopft es erneut.",
 			"next": "choice_door"
 		},
 		"choice_door": {
@@ -396,7 +396,7 @@
 		},
 		"voice_reply_1": {
 			"type": "narration",
-			"text": "\"Konrad Müller. Entschuldigen Sie die Stunde – ich war in der Nähe und habe Ihren Schrei gehört. Ist alles in Ordnung bei Ihnen?\"",
+			"text": "\"Konrad Müller. Entschuldigen Sie die Stunde – ich war noch beim Schulhaus und habe Ihren Schrei gehört. Ist alles in Ordnung bei Ihnen?\"",
 			"next": "elise_through_door_2"
 		},
 		"elise_through_door_2": {
@@ -420,12 +420,12 @@
 		},
 		"voice_reply_3": {
 			"type": "narration",
-			"text": "Ein leises Lachen. Warm, aber irgendwie zu ruhig. \"Ihre Großmutter hat viel von Ihnen erzählt. Sie war sehr stolz auf Sie. Die Folkloristin in Berlin.\"",
+			"text": "Ein leises Ausatmen vor der Antwort. \"Man kennt sich hier. Neue Gesichter fallen auf – erst recht in diesem Haus.\"",
 			"next": "open_door_decide"
 		},
 		"open_door_decide": {
 			"type": "narration",
-			"text": "Etwas in seiner Stimme beruhigt mich. Gegen mein besseres Urteil schiebe ich den Riegel zurück und öffne die Tür.",
+			"text": "Seine Stimme bleibt ruhig, als würde er absichtlich jedes Wort weich zeichnen. Gegen mein besseres Urteil schiebe ich den Riegel zurück und öffne die Tür.",
 			"next": "open_door_2"
 		},
 		"open_door_2": {
@@ -457,7 +457,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Es tut mir leid wegen Ihrer Großmutter. Sie war eine bemerkenswerte Frau. Sie hat den Kindern oft mit Geschichten und Liedern geholfen.",
+			"text": "Es tut mir leid wegen Ihrer Großmutter. Das ganze Dorf redet darüber. Wenn Sie etwas brauchen, sagen Sie es.",
 			"next": "elise_responds_konrad"
 		},
 		"elise_responds_konrad": {
@@ -500,7 +500,7 @@
 		"konrad_continue": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Ich wollte nur sehen, ob bei Ihnen alles in Ordnung ist. Es ist spät, und das Haus stand seit Tagen leer. Wenn Sie etwas brauchen: Ich wohne am Schulhaus, direkt neben der Kirche.",
+			"text": "Ich wollte nur sehen, ob bei Ihnen alles in Ordnung ist. Es ist spät, und das Haus stand seit Tagen leer. Wenn Sie etwas brauchen: Schulhaus, direkt neben der Kirche.",
 			"next": "elise_responds_konrad_2"
 		},
 		"elise_responds_konrad_2": {
@@ -679,7 +679,7 @@
 		},
 		"narration_singing_4": {
 			"type": "narration",
-			"text": "Dann: drei harte Schläge an der Tür. Auf einmal ist das Summen weg. Kein Beben. Nur mein Atem.",
+			"text": "Dann: drei harte Schläge an der Tür. Auf einmal ist das Summen weg. Kein Beben. Nur mein Atem. War das eben noch der Traum – oder hat er gerade erst angefangen?",
 			"next": "snd_heartbeat"
 		},
 		"door_questions_1": {

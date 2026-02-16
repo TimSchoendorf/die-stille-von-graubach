@@ -433,7 +433,7 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "guilty",
-			"text": "Am Abend bevor sie starb, hat Margarethe die Kerze angezündet. Sie sagte: \"Diese Flamme ist für Elise. Sie brennt, bis sie kommt.\" Als wir sie löschen wollten, läutete jedes Mal kurz darauf die Glocke. Seitdem fasst hier keiner die Kerze an.",
+			"text": "Am Abend bevor sie starb, hat Margarethe die Kerze angezündet. Sie sagte: \"Diese Flamme ist für Elise. Sie brennt, bis sie kommt.\" Als wir sie löschen wollten, läutete jedes Mal kurz darauf die Glocke – und in derselben Nacht bekam jeder von uns denselben Traum. Seitdem fasst hier keiner die Kerze an.",
 			"next": "georg_converge"
 		},
 		"georg_notes": {
@@ -467,14 +467,14 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Albträume? Georg, ich bin Folkloristin. Ich habe hunderte Gruselgeschichten gelesen. Was steht in einem Notizbuch, das DIR Albträume macht?",
+			"text": "Derselbe Traum, immer wieder? Georg ... das klingt nicht nach normalem Schock. Wenn das Buch wirklich so etwas auslöst, muss ich wissen, warum.",
 			"next": "georg_notes_4"
 		},
 		"georg_notes_4": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "afraid",
-			"text": "Ich habe reingesehen. Einmal. Es hat mir... es hat mir Albträume gemacht, Elise. Aber vielleicht bist du diejenige, die es lesen muss.",
+			"text": "Ich habe nur zwei Seiten gelesen. Danach drei Nächte denselben Traum: Glocken, Erde, und jemand ruft deinen Namen aus der Tiefe. Seitdem fasse ich das Buch nicht mehr an.",
 			"next": "georg_notes_exclusive"
 		},
 		"georg_notes_exclusive": {
