@@ -23,6 +23,13 @@
    - Existing fallback uses `door_creak.wav` (better than glass, but still not ideal).
    - Need proper 3-knock SFX (single clean knock sample or precomposed triple knock).
 
+### Asset batch for Tim (tomorrow generation)
+- [ ] `assets/sprites/backgrounds/grandmother_door_open_night.png`
+  - Composition: interior view, opened front door centered in frame, outside fog visible, moonlit contrast.
+  - Mood: uncertain/surreal but realistic enough for VN dialogue scene.
+  - Resolution target: 1920x1080.
+- [ ] Optional variant: `grandmother_door_open_night_v2.png` (same framing, stronger contrast + colder tones)
+
 3. **Umlaut consistency pass**
    - Some legacy lines still contain ae/oe/ue forms.
    - Run focused text cleanup across Act 1 + translation keys.
