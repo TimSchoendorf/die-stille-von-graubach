@@ -80,7 +80,7 @@
 		},
 		"narration_grief_4": {
 			"type": "narration",
-			"text": "Ich habe es versprochen. Und dann kamen die Universität, die Seminare, die Inflation, und immer ein Grund nicht zu fahren. Zehn Jahre voller Ausreden.",
+			"text": "Ich habe es versprochen. Und dann kamen die Universität, die Seminare, die Inflation – und später Mutters Krankheit, wegen der ich jeden Pfennig und jede freie Stunde brauchte. Zehn Jahre, in denen ich mir eingeredet habe, es gäbe immer noch ein später.",
 			"next": "elise_grief_5"
 		},
 		"elise_grief_5": {
@@ -426,14 +426,14 @@
 		"georg_candle_4": {
 			"type": "dialogue",
 			"speaker": "georg",
-			"text": "Löscht sie nicht. Bitte. Ich weiß nicht warum, aber... löscht sie nicht.",
+			"text": "Sie lässt sich nicht löschen, Elise. Nicht dauerhaft. Wir haben alles versucht.",
 			"next": "georg_candle_exclusive"
 		},
 		"georg_candle_exclusive": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "guilty",
-			"text": "Am Abend bevor sie starb, hat Margarethe die Kerze angezündet. Sie sagte: \"Diese Flamme ist für Elise. Sie wird brennen, bis sie kommt.\" Ich dachte, sie redet wirr. Aber hier bist du. Und die Kerze brennt.",
+			"text": "Am Abend bevor sie starb, hat Margarethe die Kerze angezündet. Sie sagte: \"Diese Flamme ist für Elise. Sie brennt, bis sie kommt.\" Als wir sie löschen wollten, läutete jedes Mal kurz darauf die Glocke. Seitdem fasst hier keiner die Kerze an.",
 			"next": "georg_converge"
 		},
 		"georg_notes": {
@@ -548,14 +548,14 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "afraid",
-			"text": "Ich muss gehen. Sofort.",
+			"text": "Ich muss los. Sofort. Die dritte Glocke ist das Zeichen für die Nachtwache am alten Friedhof.",
 			"next": "georg_react_3"
 		},
 		"georg_react_3": {
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "protective",
-			"text": "Elise, hör mir zu. Bleib heute Nacht hier. Schließ die Tür ab. Leg den Riegel vor. Und wenn es klopft - wenn es klopft, dann oeffne nicht.",
+			"text": "Elise, hör mir zu. Ich muss bei den anderen sein, sonst fehlt uns einer am Tor. Bleib heute Nacht hier. Schließ die Tür ab. Leg den Riegel vor. Und wenn es klopft – dann öffne nicht.",
 			"next": "choice_georg_leave"
 		},
 		"choice_georg_leave": {
@@ -602,7 +602,7 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "sad",
-			"text": "Morgen. Morgen früstücken wir zusammen, und ich erzähle dir... so viel ich kann. Aber heute Nacht - bitte, Elise. Vertrau mir.",
+			"text": "Morgen früh reden wir. Nicht ausweichen, nicht beschönigen. Aber heute Nacht bringt dir die halbe Wahrheit nur Panik.",
 			"next": "elise_demand_farewell"
 		},
 		"elise_demand_farewell": {
@@ -733,7 +733,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Morgen. Morgen fange ich an zu verstehen.",
+			"text": "Morgen frage ich nach. Bei allen. Und diesmal höre ich nicht auf, wenn jemand ausweicht.",
 			"next": "journal_grandmother"
 		},
 		"journal_grandmother": {

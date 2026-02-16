@@ -30,7 +30,7 @@
 		"narration_2": {
 			"type": "narration",
 			"text": "Ich sitze am Küchentisch und starre auf das Notizbuch meiner Großmutter. Es liegt im Schlafzimmer. Georgs Worte klingen in meinem Kopf nach.",
-			"next": "narration_3"
+			"next": "flag_check_georg_quote"
 		},
 		"narration_3": {
 			"type": "narration",
@@ -73,7 +73,7 @@
 		},
 		"read_notebook_4": {
 			"type": "narration",
-			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, aelter als die Bäume, aelter als die Berge. Wir nennen es den Schläfenden. Meine Großmutter nannte es den Atem der Erde.\"",
+			"text": "\"Es gibt etwas unter der Kirche. Etwas Altes. Älter als das Dorf, aelter als die Bäume, aelter als die Berge. Wir nennen es den Schlafenden unter der Erde. Meine Großmutter nannte es den Atem der Erde.\"",
 			"next": "elise_nb_react_1"
 		},
 		"elise_nb_react_1": {
@@ -139,7 +139,7 @@
 			"type": "journal",
 			"entry_id": "grandmother_notebook",
 			"title": "Großmutters Notizbuch",
-			"content": "Großmutter schreibt von etwas unter der Kirche - dem 'Schläfenden'. Alle 30 Jahre braucht es 'Nahrung'. Der Dorflehrer Konrad sei 'nicht mehr Konrad'. Und mein Name steht in einem Buch unter der Kirche. Was bedeutet das alles?",
+			"content": "Großmutter schreibt von etwas unter der Kirche - dem 'Schlafenden unter der Erde'. Alle 30 Jahre braucht es 'Nahrung'. Der Dorflehrer Konrad sei 'nicht mehr Konrad'. Und mein Name steht in einem Buch unter der Kirche. Was bedeutet das alles?",
 			"next": "notebook_converge"
 		},
 		"skip_notebook": {
@@ -186,7 +186,7 @@
 		},
 		"notebook_converge": {
 			"type": "narration",
-			"text": "Irgendwann muss ich eingeschlafen sein. Am Küchentisch, den Kopf auf den verschränkten Armen.",
+			"text": "Ich lese dieselben Zeilen immer wieder, bis die Buchstaben ineinanderlaufen. Irgendwann rutsche ich am Tisch zusammen, die Stirn auf den Armen, ohne zu merken, wann Wachen in Dösen kippt.",
 			"next": "effect_dream_enter"
 		},
 		"effect_dream_enter": {
@@ -203,11 +203,11 @@
 			"params": {
 				"amount": 0.6
 			},
-			"next": "narration_dream_1"
+			"next": "dream_bg"
 		},
 		"narration_dream_1": {
 			"type": "narration",
-			"text": "Im Traum stehe ich auf dem Dorfplatz. Es ist Nacht, aber das Dorf ist hell erleuchtet - von Fackeln, die in einer Spirale angeordnet sind.",
+			"text": "Ich stehe auf dem Dorfplatz. Nacht. Und trotzdem ist alles hell – Fackeln, in einer Spirale gesetzt.",
 			"next": "snd_whispers"
 		},
 		"snd_whispers": {
@@ -270,7 +270,7 @@
 		},
 		"narration_wake_2": {
 			"type": "narration",
-			"text": "Und dann höre ich es. Nicht im Traum. Im Wachen.",
+			"text": "Und dann höre ich es wieder. Oder noch immer. Ich weiß nicht einmal sicher, ob ich wirklich wach bin.",
 			"next": "snd_underground"
 		},
 		"snd_underground": {
@@ -301,19 +301,19 @@
 		},
 		"narration_singing_2": {
 			"type": "narration",
-			"text": "Die Dielen vibrieren leicht unter meinen nackten Füssen. Das Glas auf dem Tisch klirrt leise. Die Kerze im Schlafzimmer - ich kann sie von hier aus sehen - brennt höher, heller.",
+			"text": "Die Dielen vibrieren erst kaum merklich, dann so stark, dass das Glas auf dem Tisch klirrt. Die Luft drückt gegen meine Ohren. Die Kerze im Schlafzimmer brennt plötzlich hoch, als würde sie atmen.",
 			"next": "snd_glass"
 		},
 		"snd_glass": {
 			"type": "sound",
 			"sound_type": "sfx",
-			"path": "glass_break.wav",
+			"path": "door_creak.wav",
 			"next": "narration_singing_3"
 		},
 		"narration_singing_3": {
 			"type": "narration",
-			"text": "Dann - ein Klopfen an der Tür.",
-			"next": "snd_heartbeat"
+			"text": "Das Vibrieren schießt mir durch den Brustkorb. Ich reiße die Augen zu – und ein Schrei fährt mir aus der Kehle.",
+			"next": "narration_singing_4"
 		},
 		"snd_heartbeat": {
 			"type": "sound",
@@ -359,25 +359,33 @@
 			"type": "choice",
 			"choices": [
 				{
-					"text": "Die Tür oeffnen",
+					"text": "Die Tür öffnen",
 					"set_flags": {
 						"opened_door": 1
 					},
 					"next": "open_door"
 				},
 				{
-					"text": "Nicht oeffnen. Georg hat es gesagt.",
+					"text": "Nicht öffnen. Georg hat es gesagt.",
 					"set_flags": {
 						"opened_door": 0
 					},
 					"next": "dont_open"
+				},
+				{
+					"text": "Durch die Tür weiterfragen",
+					"set_flags": {
+						"opened_door": 0,
+						"questioned_door_visitor": 1
+					},
+					"next": "door_questions_1"
 				}
 			]
 		},
 		"open_door": {
 			"type": "narration",
 			"text": "Ich stehe auf und gehe zur Tür. Meine Hand liegt auf dem Riegel. Durch das Holz kann ich seinen Atem hören.",
-			"next": "elise_through_door_1"
+			"next": "bg_door_open"
 		},
 		"elise_through_door_1": {
 			"type": "dialogue",
@@ -388,7 +396,7 @@
 		},
 		"voice_reply_1": {
 			"type": "narration",
-			"text": "\"Konrad Mueller, der Dorflehrer. Ich habe das Licht gesehen und mir Sorgen gemacht. Margarethe war... eine Freundin.\"",
+			"text": "\"Konrad Müller. Entschuldigen Sie die Stunde – ich war in der Nähe und habe Ihren Schrei gehört. Ist alles in Ordnung bei Ihnen?\"",
 			"next": "elise_through_door_2"
 		},
 		"elise_through_door_2": {
@@ -400,7 +408,7 @@
 		},
 		"voice_reply_2": {
 			"type": "narration",
-			"text": "Eine Pause. Dann, leiser: \"Georg hat Angst. Das ist verständlich, nach dem was passiert ist. Aber ich bin nur ein Lehrer, Fräulein Brandt. Kein Monster.\"",
+			"text": "Eine kurze Stille. Dann ruhiger: \"Das war vernünftig von ihm. Nach so einer Nacht wäre jeder vorsichtig.\"",
 			"next": "elise_through_door_3"
 		},
 		"elise_through_door_3": {
@@ -644,6 +652,77 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/village_exploration.json"
+		},
+		"flag_check_georg_quote": {
+			"type": "flag_check",
+			"flag": "questioned_notes",
+			"value": 1,
+			"true_next": "narration_3",
+			"false_next": "narration_3_alt"
+		},
+		"narration_3_alt": {
+			"type": "narration",
+			"text": "Georgs Blick, als er das Notizbuch sah, geht mir nicht aus dem Kopf. Als hätte er darin etwas gesehen, das ihn bis heute verfolgt.",
+			"next": "choice_notebook"
+		},
+		"dream_bg": {
+			"type": "background",
+			"background": "village_corrupted",
+			"transition": "fade",
+			"next": "dream_wind"
+		},
+		"dream_wind": {
+			"type": "sound",
+			"sound_type": "ambience",
+			"path": "wind_howling.wav",
+			"next": "narration_dream_1"
+		},
+		"narration_singing_4": {
+			"type": "narration",
+			"text": "Dann: drei harte Schläge an der Tür. Auf einmal ist das Summen weg. Kein Beben. Nur mein Atem.",
+			"next": "snd_heartbeat"
+		},
+		"door_questions_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Bleiben Sie draußen. Wer sind Sie – und warum sind Sie um diese Uhrzeit hier?",
+			"next": "door_questions_2"
+		},
+		"door_questions_2": {
+			"type": "narration",
+			"text": "\"Konrad Müller. Ich war noch beim Schulhaus. Dann habe ich Ihren Schrei gehört.\" Eine Pause. \"Ich wollte nur nachsehen, ob Sie verletzt sind.\"",
+			"next": "door_questions_3"
+		},
+		"door_questions_3": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Tür jetzt öffnen",
+					"set_flags": {
+						"opened_door": 1
+					},
+					"next": "open_door"
+				},
+				{
+					"text": "Trotzdem nicht öffnen",
+					"set_flags": {
+						"opened_door": 0
+					},
+					"next": "dont_open"
+				}
+			]
+		},
+		"bg_door_open": {
+			"type": "background",
+			"background": "grandmother_house_night",
+			"transition": "fade",
+			"next": "open_door_1b"
+		},
+		"open_door_1b": {
+			"type": "narration",
+			"text": "Ich schiebe den Riegel zurück. Die Tür geht auf. Kalte Nachtluft schlägt mir entgegen.",
+			"next": "elise_through_door_1"
 		}
 	}
 }
