@@ -91,9 +91,9 @@ func _setup_layers() -> void:
 	# Quick menu (top right)
 	_quick_menu = HBoxContainer.new()
 	_quick_menu.name = "QuickMenu"
-	var qm_btn_w := UITheme.s(140)
-	var qm_sep := UITheme.s(10)
-	var qm_count := 6  # Save, Load, History, Journal, Skip, Auto
+	var qm_btn_w := UITheme.s(132)
+	var qm_sep := UITheme.s(8)
+	var qm_count := 7  # Save, Load, History, Journal, Main Menu, Skip, Auto
 	_quick_menu.position = Vector2(1920 - qm_count * qm_btn_w - (qm_count - 1) * qm_sep - UITheme.s(20), UITheme.s(10))
 	_quick_menu.add_theme_constant_override("separation", qm_sep)
 	ui_layer.add_child(_quick_menu)
@@ -102,6 +102,7 @@ func _setup_layers() -> void:
 	_create_quick_button(Locale.t("LOAD_SHORT"), _on_load)
 	_create_quick_button(Locale.t("HISTORY"), _on_history)
 	_create_quick_button(Locale.t("JOURNAL"), _on_journal)
+	_create_quick_button(Locale.t("MAIN_MENU"), _on_main_menu)
 	_skip_button = _create_quick_button_ref(Locale.t("SKIP"), _on_skip_toggle)
 	_auto_button = _create_quick_button_ref(Locale.t("AUTO"), _on_auto_toggle)
 
@@ -435,6 +436,13 @@ func _on_journal() -> void:
 func _on_settings() -> void:
 	if not _is_any_overlay_open():
 		_settings_overlay.open_settings()
+
+
+func _on_main_menu() -> void:
+	if not _is_any_overlay_open():
+		AudioManager.stop_music(0.5)
+		AudioManager.stop_ambience(0.5)
+		SceneManager.change_scene("res://scenes/TitleScreen.tscn")
 
 
 func _on_skip_toggle() -> void:
