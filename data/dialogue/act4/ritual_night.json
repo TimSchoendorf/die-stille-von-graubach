@@ -987,14 +987,14 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... verzeih mir. Wenn ich jetzt den Plan zerreiße, sterben vielleicht wir beide und am Ende wieder irgendein Fremder in dreißig Jahren. Ich brauche von dir noch ein paar Minuten Kampf - dann brechen wir den Kreis gemeinsam oder gar nicht.",
+      "text": "Konrad... verzeih mir. Wenn ich jetzt nachgebe, retten wir vielleicht dich - und verurteilen den nächsten Namen im Buch. Halt nur noch ein paar Minuten durch. Dann brechen wir den Kreis gemeinsam oder gar nicht.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "possessed",
-      "text": "Dann tu es. Schnell. Bevor ER wieder die Oberhand gewinnt.",
+      "text": "Dann tu es. Jetzt. Solange ich noch ich bin.",
       "next": "hide_konrad_plan"
     },
     "hide_konrad_plan": {

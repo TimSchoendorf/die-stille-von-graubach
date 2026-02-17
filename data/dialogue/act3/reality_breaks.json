@@ -108,7 +108,7 @@
     },
     "villager_react": {
       "type": "narration",
-      "text": "Sie dreht sich langsam zu mir. Ihre Augen sind glasig, leer. Dann flüstert sie etwas - in einer Sprache, die ich nicht kenne. Aber verstehe.",
+      "text": "Sie dreht sich langsam zu mir. Ihre Augen sind glasig, leer. Dann flüstert sie etwas - in einer Sprache, die ich nicht kenne und trotzdem verstehe.",
       "next": "villager_whisper"
     },
     "villager_whisper": {
