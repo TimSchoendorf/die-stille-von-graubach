@@ -1,647 +1,632 @@
 {
-	"title": "Ende - Die Flucht",
-	"start": "narration_1",
-	"nodes": {
-		"narration_1": {
-			"type": "narration",
-			"text": "Es geht schief. Alles geht schief. Der Boden reißt, die Spiralen explodieren in blendendem Licht, und das Singen wird zum Schrei.",
-			"next": "snd_tension"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_chaos",
-			"path": "tension.wav"
-		},
-		"effect_chaos": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 1.5
-			},
-			"next": "effect_shake"
-		},
-		"effect_shake": {
-			"type": "effect",
-			"effect": "shake",
-			"params": {
-				"intensity": 8.0,
-				"duration": 1.5
-			},
-			"next": "elise_escape_1"
-		},
-		"elise_escape_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Nein - NEIN! Der Gesang bricht - ich kann es nicht halten -",
-			"next": "check_escape_georg"
-		},
-
-		"check_escape_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "narration_georg_arrives",
-			"false_next": "check_escape_voss_main"
-		},
-		"check_escape_voss_main": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "narration_voss_arrives",
-			"false_next": "check_escape_hilde_main"
-		},
-		"check_escape_hilde_main": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "narration_hilde_sings",
-			"false_next": "narration_solo_escape"
-		},
-
-		"narration_georg_arrives": {
-			"type": "narration",
-			"text": "Georg ist plötzlich da. Er hat sich durch Ottos Männer gekämpft, die Treppe hinunter, in die bebende Kammer.",
-			"next": "show_georg"
-		},
-		"show_georg": {
-			"type": "character",
-			"character": "georg",
-			"expression": "determined",
-			"position": "center",
-			"action": "show",
-			"next": "georg_1"
-		},
-		"georg_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "afraid",
-			"text": "ELISE! RAUS HIER! SOFORT!",
-			"next": "elise_escape_2"
-		},
-		"elise_escape_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Georg, nein! Ich kann es noch schaffen - gib mir noch eine Minute -",
-			"next": "narration_3"
-		},
-		"narration_3": {
-			"type": "narration",
-			"text": "Aber er packt mich am Arm. Seine Hände sind wie Schraubstöcke. Dreißig Jahre Schmiedearbeit.",
-			"next": "georg_2"
-		},
-		"georg_2": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Es ist zu spät für das Siegel. Aber nicht für dich. Geh. Lauf. Ich halte es auf.",
-			"next": "elise_escape_3"
-		},
-		"elise_escape_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "shocked",
-			"text": "Georg, NEIN! Du kannst nicht - es wird dich -",
-			"next": "georg_3"
-		},
-		"georg_3": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "sad",
-			"text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
-			"next": "elise_escape_4"
-		},
-		"elise_escape_4": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Du bist kein Feigling. Du warst nie ein Feigling. Großmutter wusste das.",
-			"next": "georg_4"
-		},
-		"georg_4": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "protective",
-			"text": "Für Margarethe. Und für dich. Jetzt LAUF!",
-			"next": "effect_georg_stand"
-		},
-		"effect_georg_stand": {
-			"type": "effect",
-			"effect": "vignette",
-			"params": {
-				"intensity": 0.7,
-				"duration": 1.0
-			},
-			"next": "narration_5"
-		},
-		"narration_5": {
-			"type": "narration",
-			"text": "Er schlägt den Hammer auf den Boden. Einmal. Der Stein bricht. Das Singen wird zur Stille - nicht friedlich, sondern erschrocken. Verwirrt.",
-			"next": "creature_escape_1"
-		},
-		"creature_escape_1": {
-			"type": "narration",
-			"text": "WAS TUT ER? DER STEIN - ER BRICHT DEN STEIN - NEIN -",
-			"next": "narration_hammer"
-		},
-		"narration_hammer": {
-			"type": "narration",
-			"text": "Georg schlägt ein zweites Mal. Ein drittes. Jeder Schlag ein Donnerschlag. Die Kammer bebt. Georg brüllt - nicht vor Wut. Vor Trauer. Dreißig Jahre Trauer in jedem Schlag.",
-			"next": "hide_georg"
-		},
-		"hide_georg": {
-			"type": "character",
-			"character": "georg",
-			"expression": "determined",
-			"position": "center",
-			"action": "hide",
-			"next": "narration_6_georg"
-		},
-		"narration_6_georg": {
-			"type": "narration",
-			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir bricht der Boden ein. Staub und Licht und ein Laut, der kein Laut sein sollte.",
-			"next": "elise_escape_5_georg"
-		},
-		"elise_escape_5_georg": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "GEORG!",
-			"next": "narration_no_answer"
-		},
-		"narration_no_answer": {
-			"type": "narration",
-			"text": "Keine Antwort. Nur das Brechen von Stein und das Verstummen des Singens.",
-			"next": "effect_escape"
-		},
-
-		"narration_voss_arrives": {
-			"type": "narration",
-			"text": "Voss ist plötzlich neben mir. Er kennt jeden Stein dieser Kirche, jede verborgene Nische.",
-			"next": "show_voss_main"
-		},
-		"show_voss_main": {
-			"type": "character",
-			"character": "voss",
-			"expression": "afraid",
-			"position": "center",
-			"action": "show",
-			"next": "voss_main_1"
-		},
-		"voss_main_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "afraid",
-			"text": "Hier entlang! Hinter dem Altar - ein zweiter Tunnel, den nur die Pfarrer kennen!",
-			"next": "elise_voss_main_1"
-		},
-		"elise_voss_main_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Aber das Ritual - ich muss -",
-			"next": "voss_main_2"
-		},
-		"voss_main_2": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "warning",
-			"text": "Das Ritual ist gescheitert! Aber wir leben noch! LAUFEN SIE!",
-			"next": "narration_voss_tunnel"
-		},
-		"narration_voss_tunnel": {
-			"type": "narration",
-			"text": "Er zerrt mich hinter den Altar. Dort, verborgen von einem jahrhundertealten Wandteppich, ist eine schmale Tür. Ein Fluchttunnel, gebaut von Pfarrern, die wussten, dass die Kreatur eines Tages erwachen könnte.",
-			"next": "hide_voss_main"
-		},
-		"hide_voss_main": {
-			"type": "character",
-			"character": "voss",
-			"expression": "afraid",
-			"position": "center",
-			"action": "hide",
-			"next": "narration_6_voss"
-		},
-		"narration_6_voss": {
-			"type": "narration",
-			"text": "Wir rennen durch den engen Gang, gebückt, halb kriechend. Hinter uns bricht die Kirche zusammen. Staub regnet von der Decke, und das Singen wird zum Brüllen.",
-			"next": "effect_escape"
-		},
-
-		"narration_hilde_sings": {
-			"type": "narration",
-			"text": "Hilde beginnt zu singen. Nicht den Bindungsgesang - etwas anderes. Ein Wiegenlied, alt und rau, das die bebende Luft beruhigt.",
-			"next": "show_hilde_main"
-		},
-		"show_hilde_main": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_main_1"
-		},
-		"hilde_main_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "ritual",
-			"text": "Lauf, Kind. Mein Gesang hält es noch einen Moment ruhig. Nur einen Moment.",
-			"next": "elise_hilde_main_1"
-		},
-		"elise_hilde_main_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Hilde, nein! Komm mit mir!",
-			"next": "hilde_main_2"
-		},
-		"hilde_main_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Ich bin alt, Elise. Zu alt zum Rennen. Aber nicht zu alt zum Singen. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse.",
-			"next": "narration_hilde_chant"
-		},
-		"narration_hilde_chant": {
-			"type": "narration",
-			"text": "Hildes Stimme füllt die Kammer. Brüchig, aber sicher. Das Wesen lauscht - verwirrt, fasziniert. Für einen kostbaren Moment vergisst es seine Wut.",
-			"next": "hide_hilde_main"
-		},
-		"hide_hilde_main": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "center",
-			"action": "hide",
-			"next": "narration_6_hilde"
-		},
-		"narration_6_hilde": {
-			"type": "narration",
-			"text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir verstummt Hildes Gesang. Dann bricht der Boden ein.",
-			"next": "elise_escape_5_hilde"
-		},
-		"elise_escape_5_hilde": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "HILDE!",
-			"next": "narration_no_answer_hilde"
-		},
-		"narration_no_answer_hilde": {
-			"type": "narration",
-			"text": "Keine Antwort. Nur die letzten Noten eines Wiegenliedes, das im Donner der einstürzenden Kirche versinkt.",
-			"next": "effect_escape"
-		},
-
-		"narration_solo_escape": {
-			"type": "narration",
-			"text": "Niemand kommt. Niemand wird kommen. Ich bin allein mit dem Zusammenbruch.",
-			"next": "narration_solo_2"
-		},
-		"narration_solo_2": {
-			"type": "narration",
-			"text": "Aber etwas in mir weigert sich aufzugeben. Dieselbe Sturheit, die mich nach Graubach gebracht hat. Dieselbe Sturheit, die Großmutter dreißig Jahre durchgehalten hat.",
-			"next": "narration_solo_3"
-		},
-		"narration_solo_3": {
-			"type": "narration",
-			"text": "Ich renne. Durch Trümmer, durch Dunkelheit, durch das Brüllen des Wesens. Meine Beine tragen mich, obwohl sie längst hätten versagen sollen.",
-			"next": "narration_6_solo"
-		},
-		"narration_6_solo": {
-			"type": "narration",
-			"text": "Die Treppe hinauf, durch die berstende Kirche, ins Freie. Hinter mir verschluckt die Erde alles. Ich bin die Letzte, die Graubach lebend verlässt.",
-			"next": "effect_escape"
-		},
-
-		"effect_escape": {
-			"type": "effect",
-			"effect": "shake",
-			"params": {
-				"intensity": 6.0,
-				"duration": 2.0
-			},
-			"next": "snd_peaceful"
-		},
-		"snd_peaceful": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "bg_village",
-			"path": "ending_peaceful.wav"
-		},
-		"bg_village": {
-			"type": "background",
-			"background": "village_night",
-			"transition": "fade",
-			"next": "narration_7"
-		},
-		"narration_7": {
-			"type": "narration",
-			"text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald öffnet sich - zum ersten Mal öffnet er sich.",
-			"next": "narration_forest_opens"
-		},
-		"narration_forest_opens": {
-			"type": "narration",
-			"text": "Die Bäume weichen zurück. Der Wald, der mich tagelang gefangen hielt, öffnet sich plötzlich - als hätte das Erwachen der Kreatur die alten Bindungen zerrissen.",
-			"next": "narration_forest_opens_2"
-		},
-		"narration_forest_opens_2": {
-			"type": "narration",
-			"text": "Natürlich. Das Wesen HAT den Wald kontrolliert. Wer das Buch bewacht, bewacht auch die Grenzen. Aber jetzt ist es wach, und seine Aufmerksamkeit gilt nicht mehr den Bäumen.",
-			"next": "narration_8"
-		},
-		"narration_8": {
-			"type": "narration",
-			"text": "Ich drehe mich ein letztes Mal um. Graubach versinkt. Die Häuser sacken ein, die Kirche neigt sich, der Wald verschluckt alles. In Sekunden ist nichts mehr da.",
-			"next": "effect_village_gone"
-		},
-		"effect_village_gone": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "narration_9"
-		},
-		"narration_9": {
-			"type": "narration",
-			"text": "Nur Wald. Als hätte es Graubach nie gegeben.",
-			"next": "check_aftermath_georg"
-		},
-
-		"check_aftermath_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "elise_escape_6_georg",
-			"false_next": "check_aftermath_voss"
-		},
-		"check_aftermath_voss": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "narration_aftermath_voss",
-			"false_next": "check_aftermath_hilde"
-		},
-		"check_aftermath_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "elise_escape_6_hilde",
-			"false_next": "narration_aftermath_solo"
-		},
-
-		"elise_escape_6_georg": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Georg...",
-			"next": "narration_10_georg"
-		},
-		"narration_10_georg": {
-			"type": "narration",
-			"text": "Im Gras liegt etwas. Schwer, rostig, warm. Georgs Schmiedehammer. Er muss ihn geworfen haben, bevor... bevor.",
-			"next": "narration_10b_georg"
-		},
-		"narration_10b_georg": {
-			"type": "narration",
-			"text": "Ich hebe ihn auf. Er ist schwer. So schwer wie dreißig Jahre Schuld. Aber auch schwer wie dreißig Jahre Treue.",
-			"next": "narration_11"
-		},
-
-		"narration_aftermath_voss": {
-			"type": "narration",
-			"text": "Voss steht neben mir. Er atmet schwer. Sein Gesicht ist grau vor Staub, aber er lebt. Wir beide leben.",
-			"next": "show_voss_aftermath"
-		},
-		"show_voss_aftermath": {
-			"type": "character",
-			"character": "voss",
-			"expression": "broken",
-			"position": "left",
-			"action": "show",
-			"next": "voss_aftermath_1"
-		},
-		"voss_aftermath_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Meine Kirche. Mein Dorf. Dreißig Jahre... alles umsonst.",
-			"next": "elise_voss_aftermath"
-		},
-		"elise_voss_aftermath": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Nicht umsonst, Pfarrer. Sie haben mir das Leben gerettet.",
-			"next": "voss_aftermath_2"
-		},
-		"voss_aftermath_2": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "praying",
-			"text": "Und all die anderen? Anna? Die Kinder?",
-			"next": "narration_voss_silence"
-		},
-		"narration_voss_silence": {
-			"type": "narration",
-			"text": "Darauf habe ich keine Antwort. Wir stehen nebeneinander im Wald und schauen auf die Stelle, wo Graubach war. Nur Bäume. Als hätte es nie existiert.",
-			"next": "hide_voss_aftermath"
-		},
-		"hide_voss_aftermath": {
-			"type": "character",
-			"character": "voss",
-			"expression": "broken",
-			"position": "left",
-			"action": "hide",
-			"next": "narration_11"
-		},
-
-		"elise_escape_6_hilde": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Hilde...",
-			"next": "narration_10_hilde"
-		},
-		"narration_10_hilde": {
-			"type": "narration",
-			"text": "Stille. Hildes Gesang ist verstummt. Irgendwo in den Trümmern liegt eine alte Frau, die stärker war als alle Männer dieses Dorfes zusammen.",
-			"next": "narration_10b_hilde"
-		},
-		"narration_10b_hilde": {
-			"type": "narration",
-			"text": "Am Waldrand finde ich ein Büschel Kräuter. Baldrian und Beifuß, zusammengebunden mit einem dünnen Faden. Hildes Kräuter. Vom Wind hergetragen oder von etwas anderem.",
-			"next": "narration_11"
-		},
-
-		"narration_aftermath_solo": {
-			"type": "narration",
-			"text": "Ich stehe allein im Wald. Kein Verbündeter, kein Andenken. Nur Großmutters Journal in meiner Tasche und die Stille, die alles verschluckt hat.",
-			"next": "narration_11"
-		},
-
-		"narration_11": {
-			"type": "narration",
-			"text": "Ich gehe. Durch den Wald, in die Nacht, zurück in eine Welt, die nichts von Graubach weiß. Die nie von Graubach wissen wird.",
-			"next": "narration_12"
-		},
-		"narration_12": {
-			"type": "narration",
-			"text": "In meiner Tasche liegt Großmutters Journal. Der Beweis, dass es real war. Dass die Menschen von Graubach real waren. Dass ihr Leiden etwas bedeutet hat.",
-			"next": "check_epilog_georg"
-		},
-
-		"check_epilog_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "narration_epilog_georg",
-			"false_next": "check_epilog_voss"
-		},
-		"check_epilog_voss": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "narration_epilog_voss",
-			"false_next": "check_epilog_hilde"
-		},
-		"check_epilog_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "narration_epilog_hilde",
-			"false_next": "narration_epilog_solo"
-		},
-
-		"narration_epilog_georg": {
-			"type": "narration",
-			"text": "Wochen später, in Berlin. Georgs Hammer steht neben der Tür. Großmutters Journal liegt auf dem Schreibtisch.",
-			"next": "narration_epilog_2"
-		},
-		"narration_epilog_voss": {
-			"type": "narration",
-			"text": "Wochen später, in Berlin. Voss hat sich in einem Kloster nahe München eingefunden. Er schreibt mir Briefe. Kurze, traurige Briefe. Er betet für die Seelen von Graubach.",
-			"next": "narration_epilog_2"
-		},
-		"narration_epilog_hilde": {
-			"type": "narration",
-			"text": "Wochen später, in Berlin. Hildes Kräuter liegen auf der Fensterbank. Der Geruch nach Baldrian und Beifuß füllt den Raum. Großmutters Journal liegt auf dem Schreibtisch.",
-			"next": "narration_epilog_2"
-		},
-		"narration_epilog_solo": {
-			"type": "narration",
-			"text": "Wochen später, in Berlin. Großmutters Journal liegt auf dem Schreibtisch. Es ist das Einzige, was mir geblieben ist.",
-			"next": "narration_epilog_2"
-		},
-
-		"narration_epilog_2": {
-			"type": "narration",
-			"text": "Manchmal, in der Stille zwischen Mitternacht und Morgengrauen, glaube ich das Singen zu hören. Leise. Fern. Fast wie ein Wiegenlied.",
-			"next": "check_epilog_3_georg"
-		},
-		"check_epilog_3_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "narration_epilog_3_georg",
-			"false_next": "check_epilog_3_hilde"
-		},
-		"check_epilog_3_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "narration_epilog_3_hilde",
-			"false_next": "narration_epilog_3_other"
-		},
-		"narration_epilog_3_georg": {
-			"type": "narration",
-			"text": "Hat Georg überlebt? Ich weiß es nicht. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet.",
-			"next": "narration_epilog_4"
-		},
-		"narration_epilog_3_hilde": {
-			"type": "narration",
-			"text": "Hat Hilde überlebt? Ich weiß es nicht. Ihr Gesang war das Letzte, was ich hörte, bevor die Erde alles verschluckte. Manchmal glaube ich, ihn noch zu hören - zwischen den Noten des Singens.",
-			"next": "narration_epilog_4"
-		},
-		"narration_epilog_3_other": {
-			"type": "narration",
-			"text": "Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Niemand außer mir weiß, dass es je existiert hat.",
-			"next": "narration_epilog_4"
-		},
-		"narration_epilog_4": {
-			"type": "narration",
-			"text": "Großmutter, du hast mich geschickt um es zu beenden. Ich habe versagt. Aber ich habe überlebt. Und solange ich lebe, wird Graubach nicht vergessen.",
-			"next": "journal_escape"
-		},
-		"journal_escape": {
-			"type": "journal",
-			"entry_id": "ending_escape",
-			"title": "Die Flucht",
-			"content": "Graubach ist verschwunden. Ich bin geflohen - die Einzige, die entkam. In meiner Tasche Großmutters Journal, der einzige Beweis. Und die Frage, die mich nie loslässt: Hätte ich es verhindern können?",
-			"next": "check_packed_escape"
-		},
-		"check_packed_escape": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 1,
-			"true_next": "packed_books_escape",
-			"false_next": "check_packed_cross_escape"
-		},
-		"packed_books_escape": {
-			"type": "narration",
-			"text": "Meine Bücher liegen irgendwo unter den Trümmern. Die Folklore, die Mythen - alles nutzlos gegen etwas, das älter ist als Geschichten. Aber ich werde neue schreiben. Warnungen.",
-			"next": "escape_konrad_epilog"
-		},
-		"check_packed_cross_escape": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 2,
-			"true_next": "packed_cross_escape",
-			"false_next": "check_packed_camera_escape"
-		},
-		"packed_cross_escape": {
-			"type": "narration",
-			"text": "Das Kruzifix meiner Mutter baumelt noch an meinem Hals. Hat es geholfen? Nein. Aber es hat mich an etwas erinnert: Es gibt eine Welt jenseits von Graubach. Und ich bin auf dem Weg zurück dorthin.",
-			"next": "escape_konrad_epilog"
-		},
-		"check_packed_camera_escape": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 3,
-			"true_next": "packed_camera_escape",
-			"false_next": "escape_konrad_epilog"
-		},
-		"packed_camera_escape": {
-			"type": "narration",
-			"text": "Die Kamera hat ein letztes Bild: Graubach, versinkend, aufgelöst. Der einzige Beweis neben Großmutters Journal. Manchmal betrachte ich es in schlaflosen Nächten und frage mich, ob es real war.",
-			"next": "escape_konrad_epilog"
-		},
-		"escape_konrad_epilog": {
-			"type": "narration",
-			"text": "Konrad. In manchen Nächten denke ich an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
-			"next": "escape_anna_epilog"
-		},
-		"escape_anna_epilog": {
-			"type": "narration",
-			"text": "In meinen dunkelsten Nächten frage ich mich, ob Anna es überlebt hat. Ein Kind mit Augen, die zu viel sahen.",
-			"next": "escape_otto_epilog"
-		},
-		"escape_otto_epilog": {
-			"type": "narration",
-			"text": "Otto? Verschwunden mit dem Dorf. Begraben unter seinem eigenen Schweigen.",
-			"next": "escape_candle_epilog"
-		},
-		"escape_candle_epilog": {
-			"type": "narration",
-			"text": "Irgendwo in den Trümmern von Graubach erlischt eine Kerze, die drei Wochen lang brannte. Ihr letztes Flackern sieht niemand.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "ending:escape"
-		}
-	}
+  "title": "Ende - Die Flucht",
+  "start": "narration_1",
+  "nodes": {
+    "narration_1": {
+      "type": "narration",
+      "text": "Es geht schief. Alles geht schief. Der Boden reißt, die Spiralen explodieren in blendendem Licht, und das Singen wird zum Schrei.",
+      "next": "snd_tension"
+    },
+    "snd_tension": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "effect_chaos",
+      "path": "tension.wav"
+    },
+    "effect_chaos": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 1.5
+      },
+      "next": "effect_shake"
+    },
+    "effect_shake": {
+      "type": "effect",
+      "effect": "shake",
+      "params": {
+        "intensity": 8.0,
+        "duration": 1.5
+      },
+      "next": "elise_escape_1"
+    },
+    "elise_escape_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Nein - NEIN! Der Gesang bricht - ich kann es nicht halten -",
+      "next": "check_escape_georg"
+    },
+    "check_escape_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "narration_georg_arrives",
+      "false_next": "check_escape_voss_main"
+    },
+    "check_escape_voss_main": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "narration_voss_arrives",
+      "false_next": "check_escape_hilde_main"
+    },
+    "check_escape_hilde_main": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "narration_hilde_sings",
+      "false_next": "narration_solo_escape"
+    },
+    "narration_georg_arrives": {
+      "type": "narration",
+      "text": "Georg ist plötzlich da. Er hat sich durch Ottos Männer gekämpft, die Treppe hinunter, in die bebende Kammer.",
+      "next": "show_georg"
+    },
+    "show_georg": {
+      "type": "character",
+      "character": "georg",
+      "expression": "determined",
+      "position": "center",
+      "action": "show",
+      "next": "georg_1"
+    },
+    "georg_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "afraid",
+      "text": "ELISE! RAUS HIER! SOFORT!",
+      "next": "elise_escape_2"
+    },
+    "elise_escape_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Georg, nein! Ich kann es noch schaffen - gib mir noch eine Minute -",
+      "next": "narration_3"
+    },
+    "narration_3": {
+      "type": "narration",
+      "text": "Aber er packt mich am Arm. Seine Hände sind wie Schraubstöcke. Dreißig Jahre Schmiedearbeit.",
+      "next": "georg_2"
+    },
+    "georg_2": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Es ist zu spät für das Siegel. Aber nicht für dich. Geh. Lauf. Ich halte es auf.",
+      "next": "elise_escape_3"
+    },
+    "elise_escape_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "shocked",
+      "text": "Georg, NEIN! Du kannst nicht - es wird dich -",
+      "next": "georg_3"
+    },
+    "georg_3": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
+      "next": "elise_escape_4"
+    },
+    "elise_escape_4": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Du bist kein Feigling. Du warst nie ein Feigling. Großmutter wusste das.",
+      "next": "georg_4"
+    },
+    "georg_4": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "protective",
+      "text": "Für Margarethe. Und für dich. Jetzt LAUF!",
+      "next": "effect_georg_stand"
+    },
+    "effect_georg_stand": {
+      "type": "effect",
+      "effect": "vignette",
+      "params": {
+        "intensity": 0.7,
+        "duration": 1.0
+      },
+      "next": "narration_5"
+    },
+    "narration_5": {
+      "type": "narration",
+      "text": "Er schlägt den Hammer auf den Boden. Einmal. Der Stein bricht. Das Singen wird zur Stille - nicht friedlich, sondern erschrocken. Verwirrt.",
+      "next": "creature_escape_1"
+    },
+    "creature_escape_1": {
+      "type": "narration",
+      "text": "WAS TUT ER? DER STEIN - ER BRICHT DEN STEIN - NEIN -",
+      "next": "narration_hammer"
+    },
+    "narration_hammer": {
+      "type": "narration",
+      "text": "Georg schlägt ein zweites Mal. Ein drittes. Jeder Schlag ein Donnerschlag. Die Kammer bebt. Georg brüllt - nicht vor Wut. Vor Trauer. Dreißig Jahre Trauer in jedem Schlag.",
+      "next": "hide_georg"
+    },
+    "hide_georg": {
+      "type": "character",
+      "character": "georg",
+      "expression": "determined",
+      "position": "center",
+      "action": "hide",
+      "next": "narration_6_georg"
+    },
+    "narration_6_georg": {
+      "type": "narration",
+      "text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir bricht der Boden ein. Staub und Licht und ein Laut, der kein Laut sein sollte.",
+      "next": "elise_escape_5_georg"
+    },
+    "elise_escape_5_georg": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "GEORG!",
+      "next": "narration_no_answer"
+    },
+    "narration_no_answer": {
+      "type": "narration",
+      "text": "Keine Antwort. Nur das Brechen von Stein und das Verstummen des Singens.",
+      "next": "effect_escape"
+    },
+    "narration_voss_arrives": {
+      "type": "narration",
+      "text": "Voss ist plötzlich neben mir. Er kennt jeden Stein dieser Kirche, jede verborgene Nische.",
+      "next": "show_voss_main"
+    },
+    "show_voss_main": {
+      "type": "character",
+      "character": "voss",
+      "expression": "afraid",
+      "position": "center",
+      "action": "show",
+      "next": "voss_main_1"
+    },
+    "voss_main_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "afraid",
+      "text": "Hier entlang! Hinter dem Altar - ein zweiter Tunnel, den nur die Pfarrer kennen!",
+      "next": "elise_voss_main_1"
+    },
+    "elise_voss_main_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Aber das Ritual - ich muss -",
+      "next": "voss_main_2"
+    },
+    "voss_main_2": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Das Ritual ist gescheitert! Aber wir leben noch! LAUFEN SIE!",
+      "next": "narration_voss_tunnel"
+    },
+    "narration_voss_tunnel": {
+      "type": "narration",
+      "text": "Er zerrt mich hinter den Altar. Dort, verborgen von einem jahrhundertealten Wandteppich, ist eine schmale Tür. Ein Fluchttunnel, gebaut von Pfarrern, die wussten, dass die Kreatur eines Tages erwachen könnte.",
+      "next": "hide_voss_main"
+    },
+    "hide_voss_main": {
+      "type": "character",
+      "character": "voss",
+      "expression": "afraid",
+      "position": "center",
+      "action": "hide",
+      "next": "narration_6_voss"
+    },
+    "narration_6_voss": {
+      "type": "narration",
+      "text": "Wir rennen durch den engen Gang, gebückt, halb kriechend. Hinter uns bricht die Kirche zusammen. Staub regnet von der Decke, und das Singen wird zum Brüllen.",
+      "next": "effect_escape"
+    },
+    "narration_hilde_sings": {
+      "type": "narration",
+      "text": "Hilde beginnt zu singen. Nicht den Bindungsgesang - etwas anderes. Ein Wiegenlied, alt und rau, das die bebende Luft beruhigt.",
+      "next": "show_hilde_main"
+    },
+    "show_hilde_main": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "ritual",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_main_1"
+    },
+    "hilde_main_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "ritual",
+      "text": "Lauf, Kind. Mein Gesang hält es noch einen Moment ruhig. Nur einen Moment.",
+      "next": "elise_hilde_main_1"
+    },
+    "elise_hilde_main_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Hilde, nein! Komm mit mir!",
+      "next": "hilde_main_2"
+    },
+    "hilde_main_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Ich bin alt, Elise. Zu alt zum Rennen. Aber nicht zu alt zum Singen. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse.",
+      "next": "narration_hilde_chant"
+    },
+    "narration_hilde_chant": {
+      "type": "narration",
+      "text": "Hildes Stimme füllt die Kammer. Brüchig, aber sicher. Das Wesen lauscht - verwirrt, fasziniert. Für einen kostbaren Moment vergisst es seine Wut.",
+      "next": "hide_hilde_main"
+    },
+    "hide_hilde_main": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "ritual",
+      "position": "center",
+      "action": "hide",
+      "next": "narration_6_hilde"
+    },
+    "narration_6_hilde": {
+      "type": "narration",
+      "text": "Ich renne. Die Treppe hinauf, durch die Kirche, ins Freie. Hinter mir verstummt Hildes Gesang. Dann bricht der Boden ein.",
+      "next": "elise_escape_5_hilde"
+    },
+    "elise_escape_5_hilde": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "HILDE!",
+      "next": "narration_no_answer_hilde"
+    },
+    "narration_no_answer_hilde": {
+      "type": "narration",
+      "text": "Keine Antwort. Nur die letzten Noten eines Wiegenliedes, das im Donner der einstürzenden Kirche versinkt.",
+      "next": "effect_escape"
+    },
+    "narration_solo_escape": {
+      "type": "narration",
+      "text": "Niemand kommt. Niemand wird kommen. Ich bin allein mit dem Zusammenbruch.",
+      "next": "narration_solo_2"
+    },
+    "narration_solo_2": {
+      "type": "narration",
+      "text": "Aber etwas in mir weigert sich aufzugeben. Dieselbe Sturheit, die mich nach Graubach gebracht hat. Dieselbe Sturheit, die Großmutter dreißig Jahre durchgehalten hat.",
+      "next": "narration_solo_3"
+    },
+    "narration_solo_3": {
+      "type": "narration",
+      "text": "Ich renne. Durch Trümmer, durch Dunkelheit, durch das Brüllen des Wesens. Meine Beine tragen mich, obwohl sie längst hätten versagen sollen.",
+      "next": "narration_6_solo"
+    },
+    "narration_6_solo": {
+      "type": "narration",
+      "text": "Die Treppe hinauf, durch die berstende Kirche, ins Freie. Hinter mir verschluckt die Erde alles. Ich bin die Letzte, die Graubach lebend verlässt.",
+      "next": "effect_escape"
+    },
+    "effect_escape": {
+      "type": "effect",
+      "effect": "shake",
+      "params": {
+        "intensity": 6.0,
+        "duration": 2.0
+      },
+      "next": "snd_peaceful"
+    },
+    "snd_peaceful": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "bg_village",
+      "path": "ending_peaceful.wav"
+    },
+    "bg_village": {
+      "type": "background",
+      "background": "village_night",
+      "transition": "fade",
+      "next": "narration_7"
+    },
+    "narration_7": {
+      "type": "narration",
+      "text": "Ich renne weiter. Durch das Dorf, am Brunnen vorbei, an den dunklen Häusern. Der Wald öffnet sich - zum ersten Mal öffnet er sich.",
+      "next": "narration_forest_opens"
+    },
+    "narration_forest_opens": {
+      "type": "narration",
+      "text": "Die Bäume weichen zurück. Der Wald, der mich tagelang gefangen hielt, öffnet sich plötzlich - als hätte das Erwachen der Kreatur die alten Bindungen zerrissen.",
+      "next": "narration_forest_opens_2"
+    },
+    "narration_forest_opens_2": {
+      "type": "narration",
+      "text": "Natürlich. Das Wesen HAT den Wald kontrolliert. Wer das Buch bewacht, bewacht auch die Grenzen. Aber jetzt ist es wach, und seine Aufmerksamkeit gilt nicht mehr den Bäumen.",
+      "next": "narration_8"
+    },
+    "narration_8": {
+      "type": "narration",
+      "text": "Ich drehe mich ein letztes Mal um. Graubach versinkt. Die Häuser sacken ein, die Kirche neigt sich, der Wald verschluckt alles. In Sekunden ist nichts mehr da.",
+      "next": "effect_village_gone"
+    },
+    "effect_village_gone": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "narration_9"
+    },
+    "narration_9": {
+      "type": "narration",
+      "text": "Nur Wald. Als hätte es Graubach nie gegeben.",
+      "next": "check_aftermath_georg"
+    },
+    "check_aftermath_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "elise_escape_6_georg",
+      "false_next": "check_aftermath_voss"
+    },
+    "check_aftermath_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "narration_aftermath_voss",
+      "false_next": "check_aftermath_hilde"
+    },
+    "check_aftermath_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "elise_escape_6_hilde",
+      "false_next": "narration_aftermath_solo"
+    },
+    "elise_escape_6_georg": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Georg...",
+      "next": "narration_10_georg"
+    },
+    "narration_10_georg": {
+      "type": "narration",
+      "text": "Im Gras liegt etwas. Schwer, rostig, warm. Georgs Schmiedehammer. Er muss ihn geworfen haben, bevor... bevor.",
+      "next": "narration_10b_georg"
+    },
+    "narration_10b_georg": {
+      "type": "narration",
+      "text": "Ich hebe ihn auf. Er ist schwer. So schwer wie dreißig Jahre Schuld. Aber auch schwer wie dreißig Jahre Treue.",
+      "next": "narration_11"
+    },
+    "narration_aftermath_voss": {
+      "type": "narration",
+      "text": "Voss steht neben mir. Er atmet schwer. Sein Gesicht ist grau vor Staub, aber er lebt. Wir beide leben.",
+      "next": "show_voss_aftermath"
+    },
+    "show_voss_aftermath": {
+      "type": "character",
+      "character": "voss",
+      "expression": "broken",
+      "position": "left",
+      "action": "show",
+      "next": "voss_aftermath_1"
+    },
+    "voss_aftermath_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Meine Kirche. Mein Dorf. Dreißig Jahre... alles umsonst.",
+      "next": "elise_voss_aftermath"
+    },
+    "elise_voss_aftermath": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Nicht umsonst, Pfarrer. Sie haben mir das Leben gerettet.",
+      "next": "voss_aftermath_2"
+    },
+    "voss_aftermath_2": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Und all die anderen? Anna? Die Kinder?",
+      "next": "narration_voss_silence"
+    },
+    "narration_voss_silence": {
+      "type": "narration",
+      "text": "Darauf habe ich keine Antwort. Wir stehen nebeneinander im Wald und schauen auf die Stelle, wo Graubach war. Nur Bäume. Als hätte es nie existiert.",
+      "next": "hide_voss_aftermath"
+    },
+    "hide_voss_aftermath": {
+      "type": "character",
+      "character": "voss",
+      "expression": "broken",
+      "position": "left",
+      "action": "hide",
+      "next": "narration_11"
+    },
+    "elise_escape_6_hilde": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Hilde...",
+      "next": "narration_10_hilde"
+    },
+    "narration_10_hilde": {
+      "type": "narration",
+      "text": "Stille. Hildes Gesang ist verstummt. Irgendwo in den Trümmern liegt eine alte Frau, die stärker war als alle Männer dieses Dorfes zusammen.",
+      "next": "narration_10b_hilde"
+    },
+    "narration_10b_hilde": {
+      "type": "narration",
+      "text": "Am Waldrand finde ich ein Büschel Kräuter. Baldrian und Beifuß, zusammengebunden mit einem dünnen Faden. Hildes Kräuter. Vom Wind hergetragen oder von etwas anderem.",
+      "next": "narration_11"
+    },
+    "narration_aftermath_solo": {
+      "type": "narration",
+      "text": "Ich stehe allein im Wald. Kein Verbündeter, kein Andenken. Nur Großmutters Journal in meiner Tasche und die Stille, die alles verschluckt hat.",
+      "next": "narration_11"
+    },
+    "narration_11": {
+      "type": "narration",
+      "text": "Ich gehe. Durch den Wald, in die Nacht, zurück in eine Welt, die nichts von Graubach weiß. Die nie von Graubach wissen wird.",
+      "next": "narration_12"
+    },
+    "narration_12": {
+      "type": "narration",
+      "text": "In meiner Tasche liegt Großmutters Journal. Der Beweis, dass es real war. Dass die Menschen von Graubach real waren. Dass ihr Leiden etwas bedeutet hat.",
+      "next": "check_epilog_georg"
+    },
+    "check_epilog_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "narration_epilog_georg",
+      "false_next": "check_epilog_voss"
+    },
+    "check_epilog_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "narration_epilog_voss",
+      "false_next": "check_epilog_hilde"
+    },
+    "check_epilog_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "narration_epilog_hilde",
+      "false_next": "narration_epilog_solo"
+    },
+    "narration_epilog_georg": {
+      "type": "narration",
+      "text": "Wochen später, in Berlin. Georgs Hammer steht neben der Tür. Großmutters Journal liegt auf dem Schreibtisch.",
+      "next": "narration_epilog_2"
+    },
+    "narration_epilog_voss": {
+      "type": "narration",
+      "text": "Wochen später, in Berlin. Voss hat sich in einem Kloster nahe München eingefunden. Er schreibt mir Briefe. Kurze, traurige Briefe. Er betet für die Seelen von Graubach.",
+      "next": "narration_epilog_2"
+    },
+    "narration_epilog_hilde": {
+      "type": "narration",
+      "text": "Wochen später, in Berlin. Hildes Kräuter liegen auf der Fensterbank. Der Geruch nach Baldrian und Beifuß füllt den Raum. Großmutters Journal liegt auf dem Schreibtisch.",
+      "next": "narration_epilog_2"
+    },
+    "narration_epilog_solo": {
+      "type": "narration",
+      "text": "Wochen später, in Berlin. Großmutters Journal liegt auf dem Schreibtisch. Es ist das Einzige, was mir geblieben ist.",
+      "next": "narration_epilog_2"
+    },
+    "narration_epilog_2": {
+      "type": "narration",
+      "text": "Manchmal, in der Stille zwischen Mitternacht und Morgengrauen, glaube ich das Singen zu hören. Leise. Fern. Fast wie ein Wiegenlied.",
+      "next": "check_epilog_3_georg"
+    },
+    "check_epilog_3_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "narration_epilog_3_georg",
+      "false_next": "check_epilog_3_hilde"
+    },
+    "check_epilog_3_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "narration_epilog_3_hilde",
+      "false_next": "narration_epilog_3_other"
+    },
+    "narration_epilog_3_georg": {
+      "type": "narration",
+      "text": "Hat Georg überlebt? Ich weiß es nicht. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet.",
+      "next": "narration_epilog_4"
+    },
+    "narration_epilog_3_hilde": {
+      "type": "narration",
+      "text": "Hat Hilde überlebt? Ich weiß es nicht. Ihr Gesang war das Letzte, was ich hörte, bevor die Erde alles verschluckte. Manchmal glaube ich, ihn noch zu hören - zwischen den Noten des Singens.",
+      "next": "narration_epilog_4"
+    },
+    "narration_epilog_3_other": {
+      "type": "narration",
+      "text": "Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Niemand außer mir weiß, dass es je existiert hat.",
+      "next": "narration_epilog_4"
+    },
+    "narration_epilog_4": {
+      "type": "narration",
+      "text": "Großmutter, du hast mich geschickt um es zu beenden. Ich habe versagt. Aber ich habe überlebt. Und solange ich lebe, wird Graubach nicht vergessen.",
+      "next": "journal_escape"
+    },
+    "journal_escape": {
+      "type": "journal",
+      "entry_id": "ending_escape",
+      "title": "Die Flucht",
+      "content": "Graubach ist verschwunden. Ich bin entkommen - mit Großmutters Journal als einzigem Beweis. Und mit der Frage, die mich nie loslässt: Hätte ich es verhindern können?",
+      "next": "check_packed_escape"
+    },
+    "check_packed_escape": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 1,
+      "true_next": "packed_books_escape",
+      "false_next": "check_packed_cross_escape"
+    },
+    "packed_books_escape": {
+      "type": "narration",
+      "text": "Meine Bücher liegen irgendwo unter den Trümmern. Die Folklore, die Mythen - alles nutzlos gegen etwas, das älter ist als Geschichten. Aber ich werde neue schreiben. Warnungen.",
+      "next": "escape_konrad_epilog"
+    },
+    "check_packed_cross_escape": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 2,
+      "true_next": "packed_cross_escape",
+      "false_next": "check_packed_camera_escape"
+    },
+    "packed_cross_escape": {
+      "type": "narration",
+      "text": "Das Kruzifix meiner Mutter baumelt noch an meinem Hals. Hat es geholfen? Nein. Aber es hat mich an etwas erinnert: Es gibt eine Welt jenseits von Graubach. Und ich bin auf dem Weg zurück dorthin.",
+      "next": "escape_konrad_epilog"
+    },
+    "check_packed_camera_escape": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 3,
+      "true_next": "packed_camera_escape",
+      "false_next": "escape_konrad_epilog"
+    },
+    "packed_camera_escape": {
+      "type": "narration",
+      "text": "Die Kamera hat ein letztes Bild: Graubach, versinkend, aufgelöst. Der einzige Beweis neben Großmutters Journal. Manchmal betrachte ich es in schlaflosen Nächten und frage mich, ob es real war.",
+      "next": "escape_konrad_epilog"
+    },
+    "escape_konrad_epilog": {
+      "type": "narration",
+      "text": "Konrad. In manchen Nächten denke ich an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
+      "next": "escape_anna_epilog"
+    },
+    "escape_anna_epilog": {
+      "type": "narration",
+      "text": "In meinen dunkelsten Nächten frage ich mich, ob Anna es überlebt hat. Ein Kind mit Augen, die zu viel sahen.",
+      "next": "escape_otto_epilog"
+    },
+    "escape_otto_epilog": {
+      "type": "narration",
+      "text": "Otto? Verschwunden mit dem Dorf. Begraben unter seinem eigenen Schweigen.",
+      "next": "escape_candle_epilog"
+    },
+    "escape_candle_epilog": {
+      "type": "narration",
+      "text": "Irgendwo in den Trümmern von Graubach erlischt eine Kerze, die drei Wochen lang brannte. Ihr letztes Flackern sieht niemand.",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "ending:escape"
+    }
+  }
 }
