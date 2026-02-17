@@ -399,11 +399,23 @@
 			"flag": "konrad_asked_help",
 			"value": 1,
 			"true_next": "pact_konrad_epilog_helped",
+			"false_next": "check_tested_konrad_pact"
+		},
+		"check_tested_konrad_pact": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "pact_konrad_epilog_tested",
 			"false_next": "pact_konrad_epilog"
 		},
 		"pact_konrad_epilog_helped": {
 			"type": "narration",
 			"text": "Konrad wartet am Brunnen, als ich aus der Kirche trete. Er sieht mich, nickt nur und sagt dann: 'Du hast dein Versprechen gehalten.' Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+			"next": "pact_konrad_epilog_2"
+		},
+		"pact_konrad_epilog_tested": {
+			"type": "narration",
+			"text": "Konrad wartet am Brunnen, still und erschöpft. 'Du hast mich geprüft, bevor du mir geglaubt hast', sagt er. 'Das war richtig.' Er hebt die Hand; die Spiralen verblassen sichtbar. 'Jetzt muss ich nicht mehr kämpfen, um ich selbst zu bleiben.'",
 			"next": "pact_konrad_epilog_2"
 		},
 		"pact_konrad_epilog": {

@@ -203,6 +203,13 @@
 			"flag": "trusted_konrad",
 			"value": 1,
 			"true_next": "konrad_trusted_sacrifice",
+			"false_next": "check_tested_konrad_sacrifice"
+		},
+		"check_tested_konrad_sacrifice": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "konrad_tested_sacrifice",
 			"false_next": "konrad_untrusted_sacrifice"
 		},
 		"konrad_trusted_sacrifice": {
@@ -210,6 +217,13 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Du hast mir geglaubt. Am Dorfplatz, als alle anderen mich fürchteten. Du hast mich angesehen und einen Menschen gesehen, nicht ein Monster.",
+			"next": "elise_sacrifice_5"
+		},
+		"konrad_tested_sacrifice": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Du hast mir nicht blind vertraut. Du hast mich geprüft, bis du sicher warst, dass ich noch ich bin. Und trotzdem tust du das für mich.",
 			"next": "elise_sacrifice_5"
 		},
 		"konrad_untrusted_sacrifice": {
@@ -461,7 +475,7 @@
 		},
 		"packed_books_sacrifice": {
 			"type": "narration",
-			"text": "Meine Bücher stehen jetzt in Großmutters Regal. Elise liest sie manchmal, wenn das Wesen schläft. Folklore hat eine neue Bedeutung bekommen - nicht mehr Studium. Lebende Erfahrung.",
+			"text": "Meine Bücher stehen jetzt in Großmutters Regal. Ich lese sie manchmal, wenn das Wesen schläft. Folklore hat eine neue Bedeutung bekommen - nicht mehr Studium, sondern lebende Erfahrung.",
 			"next": "sacrifice_epilog_transition"
 		},
 		"check_packed_cross_sacrifice": {
@@ -473,7 +487,7 @@
 		},
 		"packed_cross_sacrifice": {
 			"type": "narration",
-			"text": "Das Kruzifix hängt über dem Bett. Manchmal, wenn das Wesen durch Elises Augen auf das Kreuz blickt, spürt sie seine Neugier. Es kennt keine Götter. Aber es versteht den Trost.",
+			"text": "Das Kruzifix hängt über meinem Bett. Manchmal, wenn das Wesen durch meine Augen auf das Kreuz blickt, spüre ich seine Neugier. Es kennt keine Götter. Aber es versteht den Trost.",
 			"next": "sacrifice_epilog_transition"
 		},
 		"check_packed_camera_sacrifice": {
@@ -485,7 +499,7 @@
 		},
 		"packed_camera_sacrifice": {
 			"type": "narration",
-			"text": "Die Kamera steht verstaubt im Regal. Elise fotografiert nicht mehr. Wozu auch? Was sie sieht, kann keine Linse einfangen. Aber manchmal, in klaren Momenten, hält sie die Welt in Worten fest.",
+			"text": "Die Kamera steht verstaubt im Regal. Ich fotografiere nicht mehr. Wozu auch? Was ich sehe, kann keine Linse einfangen. Aber manchmal, in klaren Momenten, halte ich die Welt in Worten fest.",
 			"next": "sacrifice_epilog_transition"
 		},
 		"sacrifice_epilog_transition": {
@@ -495,7 +509,7 @@
 		},
 		"sacrifice_anna_epilog": {
 			"type": "narration",
-			"text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt Elise die Hand auf die Schulter.",
+			"text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt mir die Hand auf die Schulter.",
 			"next": "sacrifice_mathilde_epilog"
 		},
 		"sacrifice_mathilde_epilog": {

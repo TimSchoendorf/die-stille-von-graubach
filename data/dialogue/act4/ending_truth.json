@@ -498,11 +498,23 @@
 			"flag": "konrad_asked_help",
 			"value": 1,
 			"true_next": "truth_konrad_epilog_helped",
+			"false_next": "check_tested_konrad_truth"
+		},
+		"check_tested_konrad_truth": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "truth_konrad_epilog_tested",
 			"false_next": "truth_konrad_epilog"
 		},
 		"truth_konrad_epilog_helped": {
 			"type": "narration",
 			"text": "Konrad wartet am Kircheneingang, bleich aber wach. Als er mich sieht, atmet er aus, als hätte er seit Stunden die Luft angehalten. 'Du hast dein Versprechen gehalten', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+			"next": "truth_otto_epilog"
+		},
+		"truth_konrad_epilog_tested": {
+			"type": "narration",
+			"text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Gut so. Das hat mich lange genug wach gehalten.' Dann blickt er in die Kammer hinab. 'Jetzt schläft es friedlich. Zum ersten Mal nicht durch mich.'",
 			"next": "truth_otto_epilog"
 		},
 		"truth_konrad_epilog": {
