@@ -53,7 +53,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "charming",
-			"text": "Fräulein Brandt! Was für eine angenehme Überraschung. Setzen Sie sich doch. Ich habe frischen Kaffee - echten, nicht diesen Ersatz.",
+			"text": "Fräulein Brandt - was für eine angenehme Überraschung. Setzen Sie sich gern. Ich habe sogar echten Kaffee aufgetrieben, keinen Ersatz.",
 			"next": "elise_greet"
 		},
 		"elise_greet": {
@@ -95,12 +95,12 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "charming",
-			"text": "Ich wollte mein Beileid aussprechen. Alte Gewohnheit - Margarethe und ich haben oft abends geplaudert.",
+			"text": "Ich wollte mein Beileid aussprechen. Alte Gewohnheit - Margarethe und ich haben oft am Abend gesprochen.",
 			"next": "narration_door"
 		},
 		"narration_door": {
 			"type": "narration",
-			"text": "Er lügt. Oder er sagt die halbe Wahrheit. Großmutter hat in ihrem Tagebuch nicht von abendlichen Plaudereien geschrieben.",
+			"text": "Er lügt. Oder er lässt den entscheidenden Teil weg. In Großmutters Tagebuch steht nichts von harmlosen Abendgesprächen.",
 			"next": "check_journal_read"
 		},
 		"check_journal_read": {
@@ -146,7 +146,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Als ich ein Kind war, kam sie jeden Mittwoch. Hat mir vorgelesen, mir die Welt gezeigt jenseits dieser Berge. Ohne sie wäre ich nie Lehrer geworden.",
+			"text": "Als ich ein Kind war, kam sie jeden Mittwoch. Sie hat mir vorgelesen und mir eine Welt jenseits dieser Berge gezeigt. Ohne sie wäre ich nie Lehrer geworden.",
 			"next": "elise_personal"
 		},
 		"elise_personal": {
@@ -168,12 +168,12 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "suspicious",
-			"text": "Sie hatte immer ein Geheimnis, Ihre Großmutter. Etwas, das sie nie teilte. Haben Sie es herausgefunden?",
+			"text": "Ihre Großmutter hatte immer ein Geheimnis. Etwas, das sie mit niemandem geteilt hat. Haben Sie es gefunden?",
 			"next": "narration_test_moment"
 		},
 		"narration_test_moment": {
 			"type": "narration",
-			"text": "Er fragt so direkt. Seine Augen suchen meine - ruhig, aufmerksam. Zu aufmerksam? Oder nur neugierig?",
+			"text": "Er fragt zu direkt. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als würde er auf das eine falsche Wort warten.",
 			"next": "choice_konrad_trust"
 		},
 		"choice_konrad_trust": {
@@ -206,7 +206,6 @@
 				}
 			]
 		},
-
 		"elise_trust_1": {
 			"type": "dialogue",
 			"speaker": "elise",
@@ -315,7 +314,6 @@
 			"text": "Ein Schauer läuft mir über den Rücken. Er beschreibt die Besessenheit von innen - und es klingt nicht wie ein Monster. Es klingt wie ein Gefangener.",
 			"next": "konrad_converge"
 		},
-
 		"elise_distrust_1": {
 			"type": "dialogue",
 			"speaker": "elise",
@@ -433,7 +431,6 @@
 			"text": "Verzeihen Sie. Ich bin heute etwas... durcheinander. Der Schlaf war nicht gut.",
 			"next": "konrad_converge"
 		},
-
 		"elise_test_1": {
 			"type": "dialogue",
 			"speaker": "elise",
@@ -494,7 +491,6 @@
 			"value": 1,
 			"next": "konrad_converge"
 		},
-
 		"konrad_converge": {
 			"type": "character",
 			"character": "konrad",
@@ -527,7 +523,6 @@
 			"text": "Aber ich bin nicht hier, um vernünftig zu sein. Ich bin hier, um zu verstehen.",
 			"next": "bg_forest"
 		},
-
 		"bg_forest": {
 			"type": "background",
 			"background": "forest_path",

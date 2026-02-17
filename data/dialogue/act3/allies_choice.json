@@ -26,7 +26,7 @@
 		"narration_1": {
 			"type": "narration",
 			"text": "Tag sechs, Nachmittag. Morgen ist der Jahrestag. Ich brauche Hilfe - und ich muss mich entscheiden, wem ich vertraue.",
-			"next": "elise_assess"
+			"next": "check_konrad_history"
 		},
 		"elise_assess": {
 			"type": "narration",
@@ -77,7 +77,6 @@
 				}
 			]
 		},
-
 		"ally_solo": {
 			"type": "narration",
 			"text": "Niemanden. Ich werde niemanden in Gefahr bringen. Nicht Georg, nicht Hilde, nicht Voss. Was auch immer in der Kammer wartet - es ist zwischen mir und dem Wesen. Nur uns zwei.",
@@ -93,7 +92,6 @@
 			"text": "Es ist einsam. Aber Einsamkeit ist kein Todesurteil. Das sollte ich wissen - ich bin Folkloristin, nicht Soldatin. Mein Werkzeug ist Verständnis, nicht Gewalt. Dafür brauche ich keine Armee.",
 			"next": "ally_converge"
 		},
-
 		"ally_georg": {
 			"type": "background",
 			"background": "blacksmith_shop",
@@ -213,7 +211,6 @@
 			"action": "hide",
 			"next": "ally_converge"
 		},
-
 		"ally_hilde": {
 			"type": "background",
 			"background": "hilde_cottage",
@@ -302,7 +299,6 @@
 			"action": "hide",
 			"next": "ally_converge"
 		},
-
 		"ally_voss": {
 			"type": "background",
 			"background": "church_interior",
@@ -424,7 +420,6 @@
 			"action": "hide",
 			"next": "ally_converge"
 		},
-
 		"ally_converge": {
 			"type": "flag_check",
 			"flag": "chose_solo",
@@ -466,7 +461,6 @@
 				}
 			]
 		},
-
 		"konrad_final": {
 			"type": "background",
 			"background": "village_school",
@@ -598,7 +592,6 @@
 			"action": "hide",
 			"next": "ally_final_converge"
 		},
-
 		"avoided_konrad": {
 			"type": "narration",
 			"text": "Konrad ist nicht mehr Konrad. Nicht ganz. Ich kann das Risiko nicht eingehen, dass das Wesen durch ihn von meinem Plan erfährt.",
@@ -609,7 +602,6 @@
 			"text": "Es tut mir leid, Konrad. Vielleicht kann ich dir helfen, wenn das hier vorbei ist. Aber jetzt... jetzt muss ich dich meiden. Zu deinem eigenen Schutz.",
 			"next": "ally_final_converge"
 		},
-
 		"ally_final_converge": {
 			"type": "narration",
 			"text": "Der Abend bricht herein. Der Himmel färbt sich in Farben, die es nicht geben sollte - violett und grün und ein Rot, das an Wunden erinnert.",
@@ -630,6 +622,30 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/descent.json"
+		},
+		"check_konrad_history": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "elise_assess_trusted_konrad",
+			"false_next": "check_konrad_distrust"
+		},
+		"check_konrad_distrust": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "elise_assess_distrusted_konrad",
+			"false_next": "elise_assess"
+		},
+		"elise_assess_trusted_konrad": {
+			"type": "narration",
+			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn eingeweiht. Wenn das ein Fehler war, bezahlen wir morgen Nacht dafür.",
+			"next": "elise_decide"
+		},
+		"elise_assess_distrusted_konrad": {
+			"type": "narration",
+			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten. Vielleicht rettet uns das. Vielleicht war es ein Fehler.",
+			"next": "elise_decide"
 		}
 	}
 }
