@@ -111,13 +111,27 @@
 			"speaker": "georg",
 			"expression": "guilty",
 			"text": "Du willst es wirklich durchziehen. Margarethes Ritual. Ich habe gehofft, dass du gehst, Elise. Aber ich habe auch gewusst, dass du bleibst.",
-			"next": "elise_georg_1"
+			"next": "check_saw_name_in_book_georg"
 		},
-		"elise_georg_1": {
+		"check_saw_name_in_book_georg": {
+			"type": "flag_check",
+			"flag": "saw_name_in_book",
+			"value": 1,
+			"true_next": "elise_georg_1_book",
+			"false_next": "elise_georg_1_no_book"
+		},
+		"elise_georg_1_book": {
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
 			"text": "Gehen war nie wirklich eine Option. Nicht seit ich meinen Namen in dem Buch gesehen habe.",
+			"next": "check_demanded_truth_callback"
+		},
+		"elise_georg_1_no_book": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Gehen war nie wirklich eine Option. Nicht seit ich verstanden habe, was unter dieser Kirche wartet.",
 			"next": "check_demanded_truth_callback"
 		},
 		"check_demanded_truth_callback": {

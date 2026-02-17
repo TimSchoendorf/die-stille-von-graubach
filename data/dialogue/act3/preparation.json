@@ -30,7 +30,7 @@
 		},
 		"narration_1": {
 			"type": "narration",
-			"text": "Die letzte Nacht vor dem Ritual. Ich sitze am Tisch meiner Großmutter, ihr Journal aufgeschlagen, ihre Kerze brennend. Wie oft hat sie hier gesessen?",
+			"text": "Die letzte Nacht vor dem Ritual. Ich sitze am Tisch meiner Großmutter, ihre Kerze brennt. Wie oft hat sie hier gesessen?",
 			"next": "narration_2"
 		},
 		"narration_2": {
@@ -446,11 +446,23 @@
 		"narration_approach": {
 			"type": "narration",
 			"text": "Die Nacht wird älter. Das Singen leiser, als hielte das Wesen den Atem an. Es wartet auf meine Entscheidung.",
-			"next": "narration_approach_think"
+			"next": "check_journal_approach_reflection"
 		},
-		"narration_approach_think": {
+		"check_journal_approach_reflection": {
+			"type": "flag_check",
+			"flag": "found_journal",
+			"value": 1,
+			"true_next": "narration_approach_think_journal",
+			"false_next": "narration_approach_think_nojournal"
+		},
+		"narration_approach_think_journal": {
 			"type": "narration",
 			"text": "Ich klappe das Journal zu. Meine Hände sind ruhig. Merkwürdig ruhig für jemanden, der morgen einem uralten Wesen gegenübertritt.",
+			"next": "narration_approach_seal"
+		},
+		"narration_approach_think_nojournal": {
+			"type": "narration",
+			"text": "Ich falte meine Notizen zusammen. Keine alten Antworten, nur Bruchstücke aus Gesprächen und Beobachtungen. Trotzdem sind meine Hände ruhig.",
 			"next": "narration_approach_seal"
 		},
 		"narration_approach_seal": {
