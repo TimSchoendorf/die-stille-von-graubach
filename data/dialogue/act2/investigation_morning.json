@@ -64,7 +64,7 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Großmutters Haus birgt Antworten. Sie hat dreißig Jahre an einem alternativen Ritual gearbeitet - irgendwo hier müssen ihre Aufzeichnungen sein.",
+			"text": "Großmutters Haus birgt Antworten. Wenn sie dreißig Jahre lang an einem anderen Ritual gearbeitet hat, müssen ihre Aufzeichnungen hier sein.",
 			"next": "choice_search"
 		},
 		"choice_search": {
@@ -93,15 +93,14 @@
 				}
 			]
 		},
-
 		"search_study": {
 			"type": "narration",
-			"text": "Das Arbeitszimmer ist ein Chaos aus Büchern und Papieren. Großmutter war besessen - Dutzende Bücher über Folklore, Okkultismus, vorchristliche Rituale im Schwarzwald.",
+			"text": "Das Arbeitszimmer ist ein kontrolliertes Chaos aus Büchern und Papieren. Großmutter war besessen: Dutzende Bände über Folklore, Okkultismus und vorchristliche Rituale im Schwarzwald.",
 			"next": "elise_study_1"
 		},
 		"elise_study_1": {
 			"type": "narration",
-			"text": "Ich kenne einige dieser Bücher aus meinem Studium. Grimms Mythologie, Mannhardts Wald- und Feldkulte. Aber andere sind mir fremd - handgeschriebene Abschriften, Blätter in Sprachen, die ich nicht lesen kann.",
+			"text": "Einige Titel kenne ich aus dem Studium - Grimms Mythologie, Mannhardts Wald- und Feldkulte. Andere sind mir fremd: handgeschriebene Abschriften, lose Blätter in Sprachen, die ich nicht lesen kann.",
 			"next": "search_study_2"
 		},
 		"search_study_2": {
@@ -128,7 +127,6 @@
 			"text": "Einen Anker. Das Wort wieder. Konrad hat es benutzt. Hilde auch. Und jetzt Großmutter. Bin ICH dieser Anker?",
 			"next": "set_found_journal"
 		},
-
 		"search_cellar": {
 			"type": "narration",
 			"text": "Der Keller riecht nach feuchter Erde und etwas Süßerem - Kräutern vielleicht. An der Wand hängen getrocknete Pflanzenbündel, sorgfältig beschriftet.",
@@ -162,7 +160,6 @@
 			"text": "Sie hat es für mich versteckt. Nicht im offensichtlichen Arbeitszimmer, nicht im Schlafzimmer. Hier unten, wo die Erde kalt ist und niemand sucht. Als wüsste sie, dass andere auch danach suchen würden.",
 			"next": "set_found_journal"
 		},
-
 		"search_bedroom": {
 			"type": "narration",
 			"text": "Großmutters Schlafzimmer sieht aus wie am Tag ihres Todes. Das Bett ordentlich gemacht, als hätte sie gewusst, dass sie nicht zurückkehren würde.",
@@ -180,15 +177,14 @@
 		},
 		"search_bedroom_3": {
 			"type": "narration",
-			"text": "Ein altes Heft, vollgeschrieben. Auf der ersten Seite steht: 'Aufzeichnungen über das Wesen unter Graubach. Begonnen 1893, fortgesetzt bis heute.'",
+			"text": "Ein altes Heft, eng vollgeschrieben. Auf der ersten Seite steht: 'Aufzeichnungen über das Wesen unter Graubach. Begonnen 1893, fortgeführt bis heute.'",
 			"next": "elise_bedroom_react"
 		},
 		"elise_bedroom_react": {
 			"type": "narration",
-			"text": "Sie hat das Versteck benutzt, das nur ich kannte. Den Ort, wo sie Süßigkeiten für mich versteckt hat. Eine letzte Botschaft von Großmutter an ihr Enkelkind.",
+			"text": "Sie hat das Versteck gewählt, das nur ich kannte. Den Ort, an dem sie mir früher Süßigkeiten versteckt hat. Eine letzte Botschaft - von Großmutter an mich.",
 			"next": "set_found_journal"
 		},
-
 		"set_found_journal": {
 			"type": "set_flag",
 			"flag": "found_journal",
@@ -242,7 +238,7 @@
 		},
 		"elise_journal_react_3": {
 			"type": "narration",
-			"text": "Konrad. Sie hat es schon 1921 gewusst. Zwei Jahre lang hat er vor meiner Tür gestanden und gelächelt, und hinter diesem Lächeln lebt etwas, das nicht er ist. Und gestern habe ich mit ihm gesprochen, als wäre alles normal.",
+			"text": "Konrad. Sie wusste es schon 1921. Zwei Jahre lang stand er vor meiner Tür und lächelte - und hinter diesem Lächeln lebte etwas, das nicht er war. Und ich habe gestern mit ihm gesprochen, als wäre alles normal.",
 			"next": "read_journal_6"
 		},
 		"read_journal_6": {
@@ -306,7 +302,7 @@
 		},
 		"elise_plan_2": {
 			"type": "narration",
-			"text": "Ich bin der Anker. Mein Name im Buch ist die Verbindung. Großmutter wollte diese Verbindung nicht zerstören - sie wollte sie NUTZEN. Nicht als Opfer, sondern als Bindeglied.",
+			"text": "Ich bin der Anker. Mein Name im Buch ist die Verbindung. Großmutter wollte sie nicht kappen - sie wollte sie nutzen. Nicht als Opfer, sondern als Bindeglied.",
 			"next": "elise_plan_3"
 		},
 		"elise_plan_3": {
@@ -316,7 +312,7 @@
 		},
 		"narration_plan": {
 			"type": "narration",
-			"text": "Es spielt keine Rolle. Es ist der einzige Plan, den ich habe. Und Großmutter hat dreißig Jahre daran gearbeitet. Das muss etwas bedeuten.",
+			"text": "Es ist der einzige Plan, den ich habe. Und Großmutter hat dreißig Jahre dafür geopfert. Das muss etwas bedeuten.",
 			"next": "choice_next_step"
 		},
 		"choice_next_step": {
