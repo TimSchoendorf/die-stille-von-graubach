@@ -1325,14 +1325,14 @@
     },
     "pact_begin": {
       "type": "narration",
-      "text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Aber diesmal ohne Kniefall: kein Dorf mehr als Viehherde, kein Mensch mehr als Pfand, kein erzwungenes Gefäß. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden - und Grenzen durchsetzen.",
+      "text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Aber diesmal ohne Kniefall: kein Dorf mehr als Viehherde, kein Mensch mehr als Pfand, kein erzwungenes Gefäß. Und jeder Kontakt bleibt freiwillig, planbar, überprüfbar. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden - und Grenzen durchsetzen.",
       "next": "elise_pact_1"
     },
     "elise_pact_1": {
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich schlage einen Pakt vor. Kein Opfer mehr. Nie wieder. Kein erzwungenes Gefäß mehr. Dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest: ein freiwilliges Gegenüber mit Bedingungen - und Grenzen.",
+      "text": "Ich schlage einen Pakt vor. Kein Opfer mehr. Nie wieder. Kein erzwungenes Gefäß mehr. Dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest: ein freiwilliges Gegenüber mit Bedingungen - und Grenzen. Wenn diese Grenzen fallen, endet der Pakt.",
       "next": "narration_pact_creature"
     },
     "narration_pact_creature": {
