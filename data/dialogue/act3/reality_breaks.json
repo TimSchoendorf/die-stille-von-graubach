@@ -123,7 +123,7 @@
     },
     "narration_6": {
       "type": "narration",
-      "text": "Ich muss jetzt Entscheidungen treffen, die morgen niemand mehr zurückdrehen kann. Morgen Nacht ist der dreißigste Jahrestag der letzten Fütterung: Läuft das alte Ritual weiter, stirbt wieder ein Mensch. Bricht es ohne Ersatz, reißt das Gefängnis auf.",
+      "text": "Ich muss jetzt Entscheidungen treffen, die morgen niemand mehr zurückdrehen kann. Morgen Nacht ist der dreißigste Jahrestag der letzten Fütterung: Läuft das alte Ritual weiter, stirbt wieder ein Mensch mit Gesicht und Namen. Bricht es ohne Ersatz, reißt das Gefängnis auf und etwas bricht frei, das nicht bei einem Dorf stehen bleibt.",
       "next": "narration_7"
     },
     "narration_7": {
@@ -562,14 +562,14 @@
       "type": "dialogue",
       "speaker": "anna",
       "expression": "afraid",
-      "text": "Du hast Abstand zu Konrad gehalten. Verständlich. Aber es hat das als Zurückweisung verstanden - und drückt jetzt umso härter in seine Träume.",
+      "text": "Du hast Abstand zu Konrad gehalten. Verständlich. Aber es hat das als Zurückweisung verstanden - und drückt jetzt umso härter in seine Träume. Wenn er heute Nacht fällt, fällt er nicht zufällig, sondern weil Einsamkeit immer den leisesten Spalt sucht.",
       "next": "anna_fear_detail_1"
     },
     "anna_konrad_tested_payoff": {
       "type": "dialogue",
       "speaker": "anna",
       "expression": "lucid",
-      "text": "Du hast Konrad geprüft, nicht blind geglaubt. Das war grausam - aber es hat ihn geweckt. Manchmal hält Misstrauen jemanden länger bei sich als Mitleid.",
+      "text": "Du hast Konrad geprüft, nicht blind geglaubt. Das war grausam - aber es hat ihn geweckt. Manchmal hält Misstrauen jemanden länger bei sich als Mitleid, weil es einen zwingt, sich jeden Tag neu für sich selbst zu entscheiden.",
       "next": "anna_fear_detail_1"
     }
   }

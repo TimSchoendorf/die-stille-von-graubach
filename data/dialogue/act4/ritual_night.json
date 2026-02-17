@@ -987,7 +987,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... verzeih mir. Wenn ich jetzt nachgebe, retten wir vielleicht dich - und verurteilen den nächsten Namen im Buch. Halt nur noch ein paar Minuten durch. Dann brechen wir den Kreis gemeinsam oder gar nicht.",
+      "text": "Konrad... verzeih mir. Wenn ich jetzt nachgebe, rette ich vielleicht dich - und schreibe damit schon den nächsten Namen ins Buch. Halt nur noch ein paar Minuten durch. Entweder wir brechen den Kreis heute gemeinsam, oder ich trage die Schuld mit offenem Blick bis ans Ende.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {
@@ -1026,7 +1026,7 @@
     },
     "narration_seal_creature": {
       "type": "narration",
-      "text": "DU WILLST MICH BINDEN? WIE SIE? WIEDER DREISSIG JAHRE DUNKELHEIT?",
+      "text": "DU WILLST MICH BINDEN? WIE SIE? WIEDER DREISSIG JAHRE DUNKELHEIT - UND WIEDER EINEN MENSCHEN ALS KETTE?",
       "next": "narration_seal_resist"
     },
     "narration_seal_resist": {
@@ -1047,7 +1047,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Nicht für immer! Nur bis wir einen Weg haben, der niemanden frisst - keine Namen mehr im Buch, keine Fütterung, keine geerbte Schuld alle dreißig Jahre!",
+      "text": "Nicht für immer! Nur bis wir einen Weg haben, der niemanden frisst - keine Namen mehr im Buch, keine Fütterung, keine geerbte Schuld alle dreißig Jahre. Ich verwechsle Mitgefühl nicht mehr mit Kapitulation!",
       "next": "check_seal_ready"
     },
     "check_seal_ready": {
@@ -1325,7 +1325,7 @@
     },
     "pact_begin": {
       "type": "narration",
-      "text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden.",
+      "text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Aber diesmal ohne Kniefall: kein Dorf mehr als Viehherde, kein Mensch mehr als Pfand. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden - und Grenzen durchsetzen.",
       "next": "elise_pact_1"
     },
     "elise_pact_1": {
