@@ -65,6 +65,18 @@
 		"narration_4": {
 			"type": "narration",
 			"text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
+			"next": "check_found_name_memory"
+		},
+		"check_found_name_memory": {
+			"type": "flag_check",
+			"flag": "found_name_in_book",
+			"value": 1,
+			"true_next": "found_name_memory",
+			"false_next": "narration_5"
+		},
+		"found_name_memory": {
+			"type": "narration",
+			"text": "Und da ist diese Erinnerung: mein eigener Name in diesem Buch, schwarz wie frische Tinte. Seitdem fühlt sich jeder Schritt hierher wie etwas an, das längst entschieden wurde.",
 			"next": "narration_5"
 		},
 		"narration_5": {
@@ -557,6 +569,18 @@
 		"narration_revelation_2": {
 			"type": "narration",
 			"text": "Es wartet auf meine Antwort. Das älteste Wesen der Welt wartet auf die Worte einer Folkloristin aus Berlin.",
+			"next": "check_anchor_awareness"
+		},
+		"check_anchor_awareness": {
+			"type": "flag_check",
+			"flag": "knows_anchor_role",
+			"value": 1,
+			"true_next": "anchor_awareness",
+			"false_next": "check_courage_high"
+		},
+		"anchor_awareness": {
+			"type": "narration",
+			"text": "Hildes Worte schlagen in mir nach: Anker. Verbindung. Kein Zufall. Vielleicht fragt das Wesen nicht irgendeinen Menschen. Vielleicht fragt es genau den, den es seit Jahren gesucht hat.",
 			"next": "check_courage_high"
 		},
 		"check_courage_high": {
@@ -837,6 +861,23 @@
 		"seal_chant_begin": {
 			"type": "narration",
 			"text": "Ich beginne zu singen. Die Worte, die Hilde mich gelehrt hat, fließen aus meinem Mund wie Wasser aus einer Quelle. Alt. Klar. Mächtig.",
+			"next": "check_practiced_chant"
+		},
+		"check_practiced_chant": {
+			"type": "flag_check",
+			"flag": "practiced_chant",
+			"value": 1,
+			"true_next": "seal_chant_practiced",
+			"false_next": "seal_chant_unpracticed"
+		},
+		"seal_chant_practiced": {
+			"type": "narration",
+			"text": "Die Übung bei Hilde trägt mich. Ich kenne die Atempausen, die Brüche, die alten Silben. Meine Stimme zittert - aber sie hält.",
+			"next": "route_seal"
+		},
+		"seal_chant_unpracticed": {
+			"type": "narration",
+			"text": "Ich taste mich durch die fremden Silben. Nicht sauber, nicht perfekt - aber entschlossen. Jeder Ton ist ein Risiko, jeder Ton ein Schritt näher zum Siegel.",
 			"next": "route_seal"
 		},
 		"check_hilde_backup": {
