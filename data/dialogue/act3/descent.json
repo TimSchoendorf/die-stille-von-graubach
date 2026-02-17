@@ -53,7 +53,7 @@
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Ich stehe vor der Treppe zur Kammer. Der Schlüssel in meiner Hand ist warm - nicht von meiner Körperhitze. Eigene Wärme.",
+			"text": "Ich stehe vor der Treppe zur Kammer. Der Schlüssel in meiner Hand ist warm - nicht von meiner Körperhitze. Als hätte er seine eigene.",
 			"next": "narration_resolve"
 		},
 		"narration_resolve": {
@@ -198,6 +198,20 @@
 			"speaker": "voss",
 			"expression": "praying",
 			"text": "Dreißig Jahre habe ich mich vor dieser Nacht gefürchtet. Aber jetzt... jetzt bin ich fast erleichtert, dass es endlich soweit ist.",
+			"next": "check_voss_careful_payoff"
+		},
+		"check_voss_careful_payoff": {
+			"type": "flag_check",
+			"flag": "voss_careful",
+			"value": 1,
+			"true_next": "voss_careful_payoff",
+			"false_next": "elise_ally_voss_2"
+		},
+		"voss_careful_payoff": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Sie haben mich damals in der Kirche vorsichtig gefragt. Kein Urteil, nur Fragen. Das hat mir den Mut gegeben, heute hier nicht mehr zu schweigen.",
 			"next": "elise_ally_voss_2"
 		},
 		"elise_ally_voss_2": {

@@ -65,6 +65,42 @@
     "narration_4": {
       "type": "narration",
       "text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
+      "next": "check_searched_study_memory"
+    },
+    "check_searched_study_memory": {
+      "type": "flag_check",
+      "flag": "searched_study",
+      "value": 1,
+      "true_next": "study_memory_line",
+      "false_next": "check_searched_cellar_memory"
+    },
+    "study_memory_line": {
+      "type": "narration",
+      "text": "Ich sehe wieder Großmutters Schreibtisch vor mir: Karten, Notizen, spiralförmige Skizzen bis in den Rand. Ihr Verstand hat mir den Weg in diese Kammer gezeichnet.",
+      "next": "check_searched_cellar_memory"
+    },
+    "check_searched_cellar_memory": {
+      "type": "flag_check",
+      "flag": "searched_cellar",
+      "value": 1,
+      "true_next": "cellar_memory_line",
+      "false_next": "check_searched_bedroom_memory"
+    },
+    "cellar_memory_line": {
+      "type": "narration",
+      "text": "Kalter Stein, der Geruch von Kräutern, die Blechdose hinter der losen Mauer: In der Tiefe des Hauses begann mein Abstieg lange vor dieser Nacht.",
+      "next": "check_searched_bedroom_memory"
+    },
+    "check_searched_bedroom_memory": {
+      "type": "flag_check",
+      "flag": "searched_bedroom",
+      "value": 1,
+      "true_next": "bedroom_memory_line",
+      "false_next": "check_anchor_memory"
+    },
+    "bedroom_memory_line": {
+      "type": "narration",
+      "text": "Unter der Diele neben Großmutters Bett - dort, wo früher Süßigkeiten lagen - fand ich ihre letzten Aufzeichnungen. Selbst jetzt fühlt sich das an wie eine Umarmung aus der Vergangenheit.",
       "next": "check_anchor_memory"
     },
     "check_anchor_memory": {
@@ -707,6 +743,32 @@
     "konrad_appears": {
       "type": "narration",
       "text": "Schritte auf der Treppe. Konrad. Er steht im Eingang der Kammer, halb im Schatten. Seine Augen flackern zwischen Braun und etwas Bodenlosem.",
+      "next": "check_konrad_suspicious_memory"
+    },
+    "check_konrad_suspicious_memory": {
+      "type": "flag_check",
+      "flag": "konrad_is_suspicious",
+      "value": 1,
+      "true_next": "konrad_suspicious_memory",
+      "false_next": "check_konrad_knows_plan_memory"
+    },
+    "konrad_suspicious_memory": {
+      "type": "narration",
+      "text": "Ich erinnere mich an jeden falschen Ton, jedes ausweichende Lächeln. Ich habe ihm misstraut - zu Recht. Und trotzdem steht er jetzt hier und kämpft.",
+      "next": "check_konrad_knows_plan_memory"
+    },
+    "check_konrad_knows_plan_memory": {
+      "type": "flag_check",
+      "flag": "konrad_knows_plan",
+      "value": 1,
+      "true_next": "konrad_knows_plan_memory",
+      "false_next": "check_opened_door_konrad"
+    },
+    "konrad_knows_plan_memory": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Du hast mich eingeweiht, Elise. Ich habe versucht, ihn von deinem Plan fernzuhalten. Nicht immer geschafft - aber ich habe es versucht.",
       "next": "check_opened_door_konrad"
     },
     "check_opened_door_konrad": {
