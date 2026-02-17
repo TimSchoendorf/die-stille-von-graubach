@@ -78,7 +78,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten. Jeden Tag. Bis zu ihrem Tod.",
+			"text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten - jeden Monat den Gesang, jeden Tag die Grenze. Bis zu ihrem Tod.",
 			"next": "creature_pact_5"
 		},
 		"creature_pact_5": {
@@ -127,7 +127,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet und bei klarem Verstand. Du wirst nie wieder vergessen werden.",
+			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet, bei klarem Verstand und mit Rückkehrrecht. Kein Name wird mehr zur Pflicht. Du wirst nie wieder vergessen werden.",
 			"next": "creature_pact_8"
 		},
 		"creature_pact_8": {
@@ -333,7 +333,7 @@
 		},
 		"narration_11": {
 			"type": "narration",
-			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur ein freiwilliger Besuch, einmal im Jahr, damit aus Hunger kein Griff nach Menschen mehr wird.",
+			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur ein freiwilliger Besuch, einmal im Jahr, mit klaren Grenzen und sofortigem Stopp-Recht, damit aus Hunger kein Griff nach Menschen mehr wird.",
 			"next": "narration_12"
 		},
 		"narration_12": {

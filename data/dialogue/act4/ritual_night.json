@@ -1356,7 +1356,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "thinking",
-      "text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten. Jeden Monat, jeden Gesang. Hat sie jemals gelogen?",
+      "text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten - jeden Monat den Gesang, jeden Tag die Grenze. Hat sie jemals gelogen?",
       "next": "narration_pact_creature_2"
     },
     "narration_pact_creature_2": {

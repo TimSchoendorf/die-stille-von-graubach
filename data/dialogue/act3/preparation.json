@@ -578,7 +578,7 @@
     },
     "approach_pact_2": {
       "type": "narration",
-      "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber und kein Schweigen mehr. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
+      "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber mit Rückkehrrecht - und wenn jemand 'Stopp' sagt, endet der Kontakt sofort. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
       "next": "narration_preparation"
     },
     "narration_preparation": {
