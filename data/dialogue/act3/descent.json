@@ -274,7 +274,7 @@
 			"type": "dialogue",
 			"speaker": "otto",
 			"expression": "threatening",
-			"text": "Damit dieses Dorf EXISTIERT! Glauben Sie, irgendjemand lebt gern neben einem solchen Wesen? Wir tun, was nötig ist!",
+			"text": "Damit dieses Dorf MORGEN NOCH AUFWACHT! Wir haben Kinder, Felder, Häuser. Ich opfere lieber mein Gewissen als sie alle dem Hunger zu überlassen!",
 			"next": "elise_otto_2"
 		},
 		"elise_otto_2": {
@@ -293,7 +293,7 @@
 		},
 		"narration_otto_silence": {
 			"type": "narration",
-			"text": "Die Worte treffen. Für einen Moment kann ich nicht atmen. Der Zweifel sticht tief: Was, wenn Großmutter wirklich keine Lösung mehr fand? Und was, wenn ich nur ihr letzter, verzweifelter Versuch bin?",
+			"text": "Die Worte treffen wie ein Hammer. Für einen Moment fällt alles in mir auseinander: Was, wenn Großmutter am Ende doch nur Zeit gekauft hat? Und was, wenn ich heute nicht ihre Lösung bin - sondern ihr letzter Irrtum?",
 			"next": "elise_otto_3"
 		},
 		"elise_otto_3": {
@@ -913,7 +913,7 @@
 		},
 		"narration_end_2": {
 			"type": "narration",
-			"text": "Morgen gibt es nur noch zwei Wahrheiten: Entweder endet der Kreislauf. Oder Graubach endet mit ihm.",
+			"text": "Morgen bleiben nur zwei Wahrheiten: Entweder endet der Kreislauf. Oder ich öffne mit meinen eigenen Händen die letzte Tür, die Großmutter ein Leben lang geschlossen hielt.",
 			"next": "effect_end_vignette"
 		},
 		"effect_end_vignette": {

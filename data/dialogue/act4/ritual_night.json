@@ -558,7 +558,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Du kennst mich. Mein Name stand in deinem Buch, bevor ich geboren wurde, und jede Glocke in diesem Dorf hat mich bis hierher getrieben. Ich bin nicht hier, um zu fliehen - ich bin hier, um zu entscheiden, was aus uns beiden wird.",
+      "text": "Du kennst mich. Mein Name stand in deinem Buch, bevor ich geboren wurde, und jede Entscheidung seit meiner Ankunft hat mich hierher geschoben. Ich bin nicht hier, um gefressen zu werden - ich bin hier, um die Regeln zwischen uns neu zu schreiben.",
       "next": "narration_creature_speak_3"
     },
     "narration_creature_speak_3": {
@@ -949,7 +949,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Konrad. Ich nehme deinen Platz ein. Heute endet deine Strafe, nicht dein Leben. Wenn jemand an diese Tiefe gebunden bleibt, dann aus freiem Willen - nicht weil ein Dorf wieder den Falschen opfert.",
+      "text": "Konrad. Ich nehme deinen Platz ein. Nicht weil das Dorf es verlangt, sondern weil ich es entscheide. Heute endet deine Strafe. Wenn jemand den Anker trägt, dann freiwillig - und mit offenen Augen.",
       "next": "konrad_sacrifice_react"
     },
     "konrad_sacrifice_react": {
@@ -987,7 +987,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... es tut mir leid. Wenn ich jetzt den Plan zerreiße, verliere ich vielleicht dich und das Dorf gleich mit. Ich trage diesen Hass später. Jetzt brauche ich von dir noch ein paar Minuten Widerstand.",
+      "text": "Konrad... verzeih mir. Wenn ich jetzt den Plan zerreiße, sterben vielleicht wir beide und am Ende wieder irgendein Fremder in dreißig Jahren. Ich brauche von dir noch ein paar Minuten Kampf - dann brechen wir den Kreis gemeinsam oder gar nicht.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {
@@ -1047,7 +1047,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Nicht für immer! Nur bis wir einen Weg haben, der niemanden frisst - keine Namen mehr im Buch, keine Fütterung, keine dreißig Jahre Schuld.",
+      "text": "Nicht für immer! Nur bis wir einen Weg haben, der niemanden frisst - keine Namen mehr im Buch, keine Fütterung, keine geerbte Schuld alle dreißig Jahre!",
       "next": "check_seal_ready"
     },
     "check_seal_ready": {

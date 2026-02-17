@@ -517,7 +517,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "smiling",
-      "text": "Kommen Sie. Lassen Sie mich Ihnen etwas zeigen. Den Wald hinter der Schule - dort gibt es einen Ort, den Ihre Großmutter geliebt hat.",
+      "text": "Kommen Sie. Ich zeige Ihnen den Wald hinter der Schule - den Ort, an dem Ihre Großmutter schwor, den Kreis zu brechen. Wenn Sie wirklich die Wahrheit wollen, wartet sie dort. Wenn nicht, gehen Sie jetzt weg.",
       "next": "elise_forest_hesitate"
     },
     "elise_forest_hesitate": {
@@ -689,7 +689,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "worried",
-      "text": "Es IST nicht Ihre Schuld. Jemand hat Sie jahrzehntelang zum Blitzableiter gemacht. Aber wir lassen es heute nicht dabei, Konrad.",
+      "text": "Es ist nicht Ihre Schuld. Ein ganzes Dorf hat Sie zur Mauer zwischen sich und der Tiefe gemacht. Aber heute Nacht entscheide nicht mehr nur ich über Ihr Schicksal - wir beide tun es.",
       "next": "konrad_humming_3"
     },
     "konrad_humming_3": {
@@ -749,7 +749,7 @@
     },
     "elise_return_thought": {
       "type": "narration",
-      "text": "Kann man ein Gefäß befreien, ohne es zu zerbrechen? Wenn ich mich irre, stirbt entweder ein Unschuldiger - oder etwas uraltes geht frei. Vielleicht beides.",
+      "text": "Kann man ein Gefäß befreien, ohne es zu zerbrechen? Wenn ich falsch liege, verliere ich Konrad an die Tiefe - und Graubach lernt wieder, dass Töten einfacher ist als Verstehen.",
       "next": "effect_return_flicker"
     },
     "effect_return_flicker": {
