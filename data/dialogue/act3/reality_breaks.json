@@ -123,12 +123,12 @@
     },
     "narration_6": {
       "type": "narration",
-      "text": "Ich muss jetzt Entscheidungen treffen, die morgen niemand mehr zurückdrehen kann. Morgen Nacht ist der dreißigste Jahrestag der letzten Fütterung: Wenn das alte Ritual läuft, stirbt ein Mensch. Wenn es ausfällt, bricht das Gefängnis auf.",
+      "text": "Ich muss jetzt Entscheidungen treffen, die morgen niemand mehr zurückdrehen kann. Morgen Nacht ist der dreißigste Jahrestag der letzten Fütterung: Läuft das alte Ritual weiter, stirbt wieder ein Mensch. Bricht es ohne Ersatz, reißt das Gefängnis auf.",
       "next": "narration_7"
     },
     "narration_7": {
       "type": "narration",
-      "text": "Und dann gibt es kein Dorfproblem mehr, sondern nur noch das, was aus der Tiefe aufsteigt. Vielleicht bis in jede Stadt, in jedes Haus, in jeden Traum.",
+      "text": "Dann bleibt nicht einmal Graubach das Problem. Dann steigt etwas aus der Tiefe auf, das Grenzen nicht kennt - vielleicht bis in jede Stadt, in jedes Haus, in jeden Traum.",
       "next": "effect_dread"
     },
     "effect_dread": {
@@ -467,7 +467,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich werde es beenden, Anna. Für dich, für Konrad, für alle. Ich verspreche es.",
+      "text": "Ich werde es beenden, Anna. Aber diesmal nicht mit noch einem Opfer, das wir hinterher schönreden. Für dich, für Konrad, für alle - ich finde einen Weg, der nicht wieder ein Leben frisst.",
       "next": "hide_anna"
     },
     "hide_anna": {
@@ -486,7 +486,7 @@
     },
     "narration_determination": {
       "type": "narration",
-      "text": "Als Anna zwischen den Bäumen verschwindet, spüre ich etwas Neues. Nicht Angst - Entschlossenheit. Das Wesen hat Angst vor mir. Dann habe ich eine Chance.",
+      "text": "Als Anna zwischen den Bäumen verschwindet, bleibt keine heldenhafte Ruhe zurück - nur eine harte, klare Entschlossenheit. Das Wesen hat Angst vor mir. Gut. Angst macht Fehler.",
       "next": "journal_reality"
     },
     "journal_reality": {

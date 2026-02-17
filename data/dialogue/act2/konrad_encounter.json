@@ -182,12 +182,12 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "suspicious",
-      "text": "Ihre Großmutter hatte immer ein Geheimnis. Etwas, das sie niemandem gezeigt hat. Haben Sie es gefunden?",
+      "text": "Ihre Großmutter hatte immer ein Geheimnis. Etwas, das sie niemandem gezeigt hat. Haben Sie es gefunden - oder hat es zuerst Sie gefunden?",
       "next": "narration_test_moment"
     },
     "narration_test_moment": {
       "type": "narration",
-      "text": "Die Frage kommt zu schnell. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als bräuchte er nur ein falsches Wort von mir.",
+      "text": "Die Frage kommt zu schnell. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als müsste er nur wissen, wie viel Zeit uns noch bleibt.",
       "next": "choice_konrad_trust"
     },
     "choice_konrad_trust": {

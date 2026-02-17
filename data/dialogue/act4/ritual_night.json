@@ -933,14 +933,14 @@
       "type": "choice",
       "choices": [
         {
-          "text": "Konrads Platz einnehmen - ihn heute befreien und selbst den Anker tragen",
+          "text": "Konrads Platz einnehmen - ihn heute befreien und selbst den Anker tragen (du bleibst unten)",
           "set_flags": {
             "chose_sacrifice": 1
           },
           "next": "sacrifice_decision"
         },
         {
-          "text": "Am ursprünglichen Plan festhalten - Risiko für Konrad in Kauf nehmen",
+          "text": "Am Plan festhalten - Chance auf Rettung für alle, aber Konrad könnte daran zerbrechen",
           "next": "plan_decision"
         }
       ]
@@ -949,7 +949,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Konrad. Ich nehme deinen Platz ein.",
+      "text": "Konrad. Ich nehme deinen Platz ein. Heute endet deine Strafe, nicht dein Leben.",
       "next": "konrad_sacrifice_react"
     },
     "konrad_sacrifice_react": {
@@ -963,7 +963,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Niemand sollte allein sein. Nicht einmal etwas, das älter ist als die Berge. Und du hast dreißig Jahre gelitten. Das reicht.",
+      "text": "Niemand sollte allein in dieser Tiefe verrotten. Nicht einmal etwas, das älter ist als die Berge. Du hast dreißig Jahre bezahlt, Konrad. Jetzt bin ich dran.",
       "next": "narration_sacrifice_creature"
     },
     "narration_sacrifice_creature": {
@@ -987,7 +987,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... es tut mir leid. Aber ich habe einen Plan. Vertrau mir.",
+      "text": "Konrad... es tut mir leid. Aber wenn ich jetzt den Plan breche, verlieren wir vielleicht euch beide. Vertrau mir noch ein paar Minuten.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {
@@ -1332,7 +1332,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich schlage einen Deal vor. Kein Opfer mehr. Nie wieder. Dafür... dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest.",
+      "text": "Ich schlage einen Pakt vor. Kein Opfer mehr. Nie wieder. Dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest: ein Gegenüber mit Bedingungen - und Grenzen.",
       "next": "narration_pact_creature"
     },
     "narration_pact_creature": {
@@ -1365,7 +1365,7 @@
     },
     "destroy_begin": {
       "type": "narration",
-      "text": "Genug Worte. Genug Ausreden. Sechshundert Jahre lang wurden hier Menschen geopfert, damit dieses Schweigen weiteratmet. Ob es leidet oder liebt - heute endet diese Rechnung.",
+      "text": "Genug Worte. Sechshundert Jahre lang wurden hier Menschen geopfert, damit dieses Schweigen weiteratmet. Ob du leidest oder liebst - heute endet die Rechnung mit Gewalt, wenn es sein muss.",
       "next": "elise_destroy_1"
     },
     "elise_destroy_1": {
