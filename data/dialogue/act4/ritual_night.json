@@ -45,7 +45,7 @@
     "narration_2": {
       "type": "narration",
       "text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füßen spüre ich es: riesig, alt, erwachend.",
-      "next": "effect_breathing"
+      "next": "check_has_key_ritual"
     },
     "effect_breathing": {
       "type": "effect",
@@ -65,7 +65,7 @@
     "narration_4": {
       "type": "narration",
       "text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
-      "next": "check_searched_study_memory"
+      "next": "check_read_final_entries_memory"
     },
     "check_searched_study_memory": {
       "type": "flag_check",
@@ -1039,7 +1039,7 @@
     "seal_ritual_begin": {
       "type": "narration",
       "text": "Das Siegel. Großmutters Weg. Ich öffne das Journal, finde die Seite mit dem Gesang. Die Worte sind alt, in keiner Sprache, die ich kenne - und trotzdem brennen sie in meinem Mund, als hätte ich sie mein ganzes Leben geübt.",
-      "next": "elise_seal_begin"
+      "next": "check_knows_tradition_seal"
     },
     "elise_seal_begin": {
       "type": "dialogue",
@@ -1482,6 +1482,42 @@
       "value": 1,
       "true_next": "route_escape",
       "false_next": "check_voss_escape"
+    },
+    "check_has_key_ritual": {
+      "type": "flag_check",
+      "flag": "has_key",
+      "value": 1,
+      "true_next": "narration_3",
+      "false_next": "narration_3_no_key"
+    },
+    "narration_3_no_key": {
+      "type": "narration",
+      "text": "Die letzte Tür zur Kammer steht offen. Irgendjemand hat sie rechtzeitig geöffnet. Hildes Kräuter brennen in einer Schale neben mir, ihr Rauch steigt spiralförmig auf. Großmutters Journal liegt aufgeschlagen.",
+      "next": "narration_4"
+    },
+    "check_read_final_entries_memory": {
+      "type": "flag_check",
+      "flag": "read_final_entries",
+      "value": 1,
+      "true_next": "read_final_entries_memory",
+      "false_next": "check_searched_study_memory"
+    },
+    "read_final_entries_memory": {
+      "type": "narration",
+      "text": "Ich denke an die letzte Seite: \"Manche Wege entstehen erst im Moment.\" Kein Befehl, nur Verantwortung. Genau dafür stehe ich jetzt hier.",
+      "next": "check_searched_study_memory"
+    },
+    "check_knows_tradition_seal": {
+      "type": "flag_check",
+      "flag": "knows_tradition",
+      "value": 1,
+      "true_next": "seal_tradition_memory",
+      "false_next": "elise_seal_begin"
+    },
+    "seal_tradition_memory": {
+      "type": "narration",
+      "text": "Die Gespräche mit Voss und Konrad schneiden durch meine Panik: Tradition ohne Mitgefühl wurde zur Fütterung. Ich wiederhole den Gesang anders - als Grenze, nicht als Opferbefehl.",
+      "next": "elise_seal_begin"
     }
   }
 }
