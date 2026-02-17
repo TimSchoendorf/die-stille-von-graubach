@@ -738,7 +738,31 @@
       "flag": "trusted_konrad",
       "value": 1,
       "true_next": "konrad_appears",
+      "false_next": "check_konrad_distrust_memory"
+    },
+    "check_konrad_distrust_memory": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "konrad_distrust_memory",
+      "false_next": "check_tested_konrad_memory"
+    },
+    "konrad_distrust_memory": {
+      "type": "narration",
+      "text": "Ich habe Konrad auf Abstand gehalten. Aus Angst, aus Vernunft - vielleicht aus beidem. Jetzt spüre ich, wie das Wesen genau diese Distanz nutzt und ihn tiefer in sich hineinzieht.",
+      "next": "check_approach"
+    },
+    "check_tested_konrad_memory": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "konrad_tested_memory",
       "false_next": "check_approach"
+    },
+    "konrad_tested_memory": {
+      "type": "narration",
+      "text": "Ich habe ihn geprüft statt ihm zu vertrauen. Jede Frage ein Messer, jedes Schweigen eine Wunde. Vielleicht hat genau das ihn lange genug wach gehalten, um heute noch kämpfen zu können.",
+      "next": "check_approach"
     },
     "konrad_appears": {
       "type": "narration",

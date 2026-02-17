@@ -542,6 +542,13 @@
 			"flag": "distrusted_konrad",
 			"value": 1,
 			"true_next": "anna_konrad_distrust_payoff",
+			"false_next": "check_konrad_tested_anna"
+		},
+		"check_konrad_tested_anna": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "anna_konrad_tested_payoff",
 			"false_next": "anna_fear_detail_1"
 		},
 		"anna_konrad_trust_payoff": {
@@ -556,6 +563,13 @@
 			"speaker": "anna",
 			"expression": "afraid",
 			"text": "Du hast Abstand zu Konrad gehalten. Verständlich. Aber es hat das als Zurückweisung verstanden - und drückt jetzt umso härter in seine Träume.",
+			"next": "anna_fear_detail_1"
+		},
+		"anna_konrad_tested_payoff": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Du hast Konrad geprüft, nicht blind geglaubt. Das war grausam - aber es hat ihn geweckt. Manchmal hält Misstrauen jemanden länger bei sich als Mitleid.",
 			"next": "anna_fear_detail_1"
 		}
 	}
