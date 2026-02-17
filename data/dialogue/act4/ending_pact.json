@@ -144,7 +144,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Brandts brechen ihre Versprechen nicht.",
+			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Und keine Brandt wird ihr Versprechen brechen.",
 			"next": "effect_pact_forming"
 		},
 		"effect_pact_forming": {
@@ -333,7 +333,7 @@
 		},
 		"narration_11": {
 			"type": "narration",
-			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer. Nur eine Frau, die einmal im Jahr in einen Keller steigt und einem uralten Wesen Gesellschaft leistet.",
+			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur ein freiwilliger Besuch, einmal im Jahr, damit aus Hunger kein Griff nach Menschen mehr wird.",
 			"next": "narration_12"
 		},
 		"narration_12": {
@@ -350,7 +350,7 @@
 			"type": "journal",
 			"entry_id": "ending_pact",
 			"title": "Der Pakt",
-			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich zurück und leiste dem Wesen Gesellschaft. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
+			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich freiwillig zurück und leiste dem Wesen Gesellschaft, und ich werde Nachfolger vorbereiten, bevor ich gehe. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
 			"next": "check_packed_pact"
 		},
 		"check_packed_pact": {

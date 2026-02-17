@@ -1332,7 +1332,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich schlage einen Pakt vor. Kein Opfer mehr. Nie wieder. Dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest: ein Gegenüber mit Bedingungen - und Grenzen.",
+      "text": "Ich schlage einen Pakt vor. Kein Opfer mehr. Nie wieder. Kein erzwungenes Gefäß mehr. Dafür biete ich dir etwas, das du in sechshundert Jahren nie hattest: ein Gegenüber mit Bedingungen - und Grenzen.",
       "next": "narration_pact_creature"
     },
     "narration_pact_creature": {
