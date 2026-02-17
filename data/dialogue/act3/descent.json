@@ -33,7 +33,7 @@
 		},
 		"narration_1": {
 			"type": "narration",
-			"text": "Tag sieben. Abend. Die Kirche sieht nicht mehr aus wie eine Kirche. Die Bänke sind verschoben, manche schweben Zentimeter über dem Boden. Die Kirchenfenster zeigen Bilder, die nicht in Glas gehören.",
+			"text": "Tag sechs. Abend. Die Kirche sieht nicht mehr aus wie eine Kirche. Die Bänke sind verschoben, manche schweben Zentimeter über dem Boden. Die Kirchenfenster zeigen Bilder, die nicht in Glas gehören.",
 			"next": "narration_2"
 		},
 		"narration_2": {

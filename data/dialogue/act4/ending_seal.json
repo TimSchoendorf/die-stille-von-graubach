@@ -344,7 +344,7 @@
 		},
 		"narration_letter_seal": {
 			"type": "narration",
-			"text": "'Elise, wenn du das liest, hast du es geschafft. Du warst nie in Gefahr. Du warst die Lösung. Immer.'",
+			"text": "'Elise, wenn du das liest, hast du es geschafft. Du warst nie allein. Du warst die Lösung. Immer.'",
 			"next": "elise_letter_react"
 		},
 		"elise_letter_react": {

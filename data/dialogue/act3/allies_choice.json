@@ -84,7 +84,7 @@
 		},
 		"ally_solo_2": {
 			"type": "narration",
-			"text": "Großmutter hat dreißig Jahre allein gekämpft. Sie hat niemanden hinuntergezogen, niemanden geopfert, niemanden riskiert. Wenn ich ihre Enkelin bin, kann ich das auch.",
+			"text": "Großmutter hat dreißig Jahre die Last getragen, ohne sie auf andere abzuwälzen. Wenn ich ihre Enkelin bin, kann ich das auch.",
 			"next": "ally_solo_3"
 		},
 		"ally_solo_3": {

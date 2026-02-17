@@ -39,7 +39,7 @@
     },
     "narration_1": {
       "type": "narration",
-      "text": "Tag acht. Sonnenuntergang. Die Kammer unter der Kirche pulsiert wie ein Herz. Die Spiralen an den Wänden drehen sich. Das Singen füllt alles.",
+      "text": "Tag sieben. Sonnenuntergang. Die Kammer unter der Kirche pulsiert wie ein Herz. Die Spiralen an den Wänden drehen sich. Das Singen füllt alles.",
       "next": "narration_2"
     },
     "narration_2": {
@@ -691,7 +691,7 @@
     },
     "courage_high_2": {
       "type": "narration",
-      "text": "DU HAST KEINE ANGST. DAS IST... NEU. SECHSHUNDERT JAHRE UND KEINER STAND SO RUHIG VOR MIR.",
+      "text": "DEINE ANGST FRISST DICH NICHT MEHR. DAS IST... NEU. SECHSHUNDERT JAHRE UND KEINER STAND SO RUHIG VOR MIR.",
       "next": "courage_high_3"
     },
     "courage_high_3": {

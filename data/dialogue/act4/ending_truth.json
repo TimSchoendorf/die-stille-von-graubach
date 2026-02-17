@@ -25,7 +25,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Ich bin nicht hier um zu kämpfen. Ich bin hier um zuzuhören. Zeig mir, was du bist.",
+			"text": "Ich bin nicht hier, um zu kämpfen. Ich bin hier, um zuzuhören. Zeig mir, was du bist.",
 			"next": "narration_creature_hears"
 		},
 		"narration_creature_hears": {
