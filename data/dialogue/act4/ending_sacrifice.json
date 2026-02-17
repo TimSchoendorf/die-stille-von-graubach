@@ -5,6 +5,23 @@
 		"narration_1": {
 			"type": "narration",
 			"text": "Ich schaue Konrad an. Er zittert. Schweißtropfen auf seiner Stirn. Hinter seinen Augen kämpft ein Mann gegen einen Ozean.",
+			"next": "check_konrad_help_sacrifice_intro"
+		},
+		"check_konrad_help_sacrifice_intro": {
+			"type": "flag_check",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"true_next": "narration_1_helped_konrad",
+			"false_next": "narration_1_distanced_konrad"
+		},
+		"narration_1_helped_konrad": {
+			"type": "narration",
+			"text": "Er hat mich um Hilfe gebeten, als er kaum noch sprechen konnte. Dieses Versprechen steht jetzt zwischen uns wie eine brennende Linie.",
+			"next": "snd_dark"
+		},
+		"narration_1_distanced_konrad": {
+			"type": "narration",
+			"text": "Ich bin ihm aus dem Weg gegangen, aus Angst vor dem, was durch ihn spricht. Und trotzdem stehe ich jetzt hier, um ihn zu retten.",
 			"next": "snd_dark"
 		},
 		"snd_dark": {
@@ -23,7 +40,7 @@
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Er hat mir den Wächterbaum gezeigt. Er hat um Hilfe gebeten, als niemand sonst es tat. Dreißig Jahre Gefangenschaft, und er hat nie aufgehört, Mensch zu sein.",
+			"text": "Er hat mir den Wächterbaum gezeigt. Dreißig Jahre Gefangenschaft - und trotzdem hat er nie aufgehört, Mensch zu sein.",
 			"next": "narration_3"
 		},
 		"narration_3": {

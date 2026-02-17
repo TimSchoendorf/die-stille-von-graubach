@@ -491,7 +491,19 @@
 		"truth_epilog_transition": {
 			"type": "narration",
 			"text": "Morgendämmerung. Die längste Nacht meines Lebens ist vorbei. Und mit ihr dreißig Jahre Lügen.",
-			"next": "truth_konrad_epilog"
+			"next": "check_konrad_help_truth"
+		},
+		"check_konrad_help_truth": {
+			"type": "flag_check",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"true_next": "truth_konrad_epilog_helped",
+			"false_next": "truth_konrad_epilog"
+		},
+		"truth_konrad_epilog_helped": {
+			"type": "narration",
+			"text": "Konrad wartet am Kircheneingang, bleich aber wach. Als er mich sieht, atmet er aus, als hätte er seit Stunden die Luft angehalten. 'Du hast dein Versprechen gehalten', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+			"next": "truth_otto_epilog"
 		},
 		"truth_konrad_epilog": {
 			"type": "narration",
