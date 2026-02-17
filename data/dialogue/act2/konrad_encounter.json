@@ -38,7 +38,7 @@
 		},
 		"georg_warned_2": {
 			"type": "narration",
-			"text": "Ich werde freundlich sein. Aber auf der Hut. Jede Frage, die ich stelle, jede Antwort, die er gibt - ich werde genau zuhören. Nicht nur auf die Worte. Auf das, was zwischen den Worten liegt.",
+			"text": "Ich bleibe freundlich. Aber wachsam. Jede Frage, jede Antwort - ich höre heute auf alles. Vor allem auf das, was zwischen den Worten hängt.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -95,7 +95,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "charming",
-			"text": "Ich wollte mein Beileid aussprechen. Alte Gewohnheit - Margarethe und ich haben oft am Abend gesprochen.",
+			"text": "Ich wollte mein Beileid aussprechen. Alte Gewohnheit - Margarethe und ich haben oft noch spät gesprochen.",
 			"next": "narration_door"
 		},
 		"narration_door": {
@@ -168,12 +168,12 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "suspicious",
-			"text": "Ihre Großmutter hatte immer ein Geheimnis. Etwas, das sie mit niemandem geteilt hat. Haben Sie es gefunden?",
+			"text": "Ihre Großmutter hatte immer ein Geheimnis. Etwas, das sie niemandem gezeigt hat. Haben Sie es gefunden?",
 			"next": "narration_test_moment"
 		},
 		"narration_test_moment": {
 			"type": "narration",
-			"text": "Er fragt zu direkt. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als würde er auf das eine falsche Wort warten.",
+			"text": "Die Frage kommt zu schnell. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als warte er nur auf ein falsches Wort.",
 			"next": "choice_konrad_trust"
 		},
 		"choice_konrad_trust": {
@@ -230,7 +230,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Ich weiß es. Ich habe es immer gewusst, glaube ich. Nicht die Details, aber... das Gefühl. Dass etwas nicht stimmt in diesem Dorf. Dass ICH nicht stimme.",
+			"text": "Ich weiß. Irgendwie wusste ich es immer. Nicht die Details - nur dieses Gefühl. Dass in diesem Dorf etwas falsch läuft. Und mit mir auch.",
 			"next": "elise_trust_ask"
 		},
 		"elise_trust_ask": {
@@ -244,7 +244,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "dark",
-			"text": "Stellen Sie sich vor, Sie stehen in einem dunklen Raum. Sie wissen, dass Sie nicht allein sind. Etwas atmet hinter Ihnen. Aber wenn Sie sich umdrehen, sehen Sie nur... sich selbst.",
+			"text": "Stellen Sie sich vor, Sie stehen in einem dunklen Raum. Sie wissen, Sie sind nicht allein. Etwas atmet hinter Ihnen. Aber wenn Sie sich umdrehen, sehen Sie nur... Ihr eigenes Gesicht.",
 			"next": "fx_trust_glitch"
 		},
 		"fx_trust_glitch": {
@@ -428,7 +428,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "charming",
-			"text": "Verzeihen Sie. Ich bin heute etwas... durcheinander. Der Schlaf war nicht gut.",
+			"text": "Verzeihen Sie. Ich bin heute etwas... neben mir. Schlechte Nacht.",
 			"next": "konrad_converge"
 		},
 		"elise_test_1": {
@@ -482,7 +482,7 @@
 		},
 		"narration_test_lie": {
 			"type": "narration",
-			"text": "Er lügt. Und er weiß, dass ich es weiß. Die Luft zwischen uns wird schwer. Ich sage nichts weiter - manchmal ist Schweigen aufschlussreicher als Fragen.",
+			"text": "Er lügt. Und er weiß, dass ich es merke. Die Luft zwischen uns wird schwer. Ich frage nicht weiter - manchmal verrät Schweigen mehr als Worte.",
 			"next": "set_konrad_suspicious"
 		},
 		"set_konrad_suspicious": {
