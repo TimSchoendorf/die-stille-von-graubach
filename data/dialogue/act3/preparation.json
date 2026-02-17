@@ -5,6 +5,18 @@
     "narration_return": {
       "type": "narration",
       "text": "Ich klettere die Treppe hinauf, zurück durch die Kirche, hinaus in die Nacht. Die frische Luft brennt in meinen Lungen. Der Himmel über Graubach ist klar, aber die Sterne sehen falsch aus. Zu nah. Zu hell.",
+      "next": "check_act2_complete_memory"
+    },
+    "check_act2_complete_memory": {
+      "type": "flag_check",
+      "flag": "act2_complete",
+      "value": 1,
+      "true_next": "act2_complete_memory",
+      "false_next": "bg_grandmother_night"
+    },
+    "act2_complete_memory": {
+      "type": "narration",
+      "text": "Letzte Nacht in der Kammer, mein Name im Buch, Ottos Drohung vor der Kirchentür - seitdem gibt es kein Zurück mehr. Heute ist kein Rätselabend mehr. Heute entscheide ich, ob dieser Ort weiter frisst.",
       "next": "bg_grandmother_night"
     },
     "bg_grandmother_night": {

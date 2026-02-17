@@ -45,6 +45,18 @@
     "narration_2": {
       "type": "narration",
       "text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füßen spüre ich es: riesig, alt, erwachend.",
+      "next": "check_reached_chamber_memory"
+    },
+    "check_reached_chamber_memory": {
+      "type": "flag_check",
+      "flag": "reached_chamber",
+      "value": 1,
+      "true_next": "reached_chamber_memory",
+      "false_next": "check_has_key_ritual"
+    },
+    "reached_chamber_memory": {
+      "type": "narration",
+      "text": "Nicht zum ersten Mal. Ich erinnere mich an den ersten Abstieg in diese Tiefe: dieselbe warme Luft, derselbe Druck im Kopf, derselbe Moment, in dem klar wurde, dass man hier unten nicht gewinnen kann, indem man so tut, als wäre alles normal.",
       "next": "check_has_key_ritual"
     },
     "effect_breathing": {
@@ -1405,11 +1417,35 @@
       "flag": "lied_to_voss",
       "value": 1,
       "true_next": "pact_lied_to_voss_payoff",
-      "false_next": "elise_pact_1"
+      "false_next": "check_questioned_letter_pact"
     },
     "pact_lied_to_voss_payoff": {
       "type": "narration",
       "text": "Und ich denke an die Lüge in der Kirche. Angst hat mich damals eng gemacht. Nicht wieder. Wer ein uraltes Wesen an Bedingungen binden will, muss selbst ohne Täuschung sprechen.",
+      "next": "check_questioned_letter_pact"
+    },
+    "check_questioned_letter_pact": {
+      "type": "flag_check",
+      "flag": "questioned_letter",
+      "value": 1,
+      "true_next": "questioned_letter_pact_payoff",
+      "false_next": "check_questioned_candle_pact"
+    },
+    "questioned_letter_pact_payoff": {
+      "type": "narration",
+      "text": "Schon bei Georg am ersten Abend habe ich nach dem Brief gefragt statt nur zu nicken. Genau dort hat es begonnen: Erst fragen, dann glauben. Diese Regel gilt auch hier unten.",
+      "next": "check_questioned_candle_pact"
+    },
+    "check_questioned_candle_pact": {
+      "type": "flag_check",
+      "flag": "questioned_candle",
+      "value": 1,
+      "true_next": "questioned_candle_pact_payoff",
+      "false_next": "elise_pact_1"
+    },
+    "questioned_candle_pact_payoff": {
+      "type": "narration",
+      "text": "Und ich erinnere mich an seine Kerze - an den Moment, in dem ich gelernt habe, dass selbst Schutz ein Preisetikett tragen kann. Ein Pakt ohne klare Grenzen wäre nur ein neues Opfer mit schönerem Namen.",
       "next": "elise_pact_1"
     },
     "elise_pact_1": {
