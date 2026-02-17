@@ -542,7 +542,21 @@
 			"speaker": "konrad",
 			"expression": "possessed",
 			"text": "Elise... es ist HIER... es spricht durch mich... ich kann nicht...",
-			"next": "elise_konrad_reach"
+			"next": "check_konrad_suspicion_callback"
+		},
+		"check_konrad_suspicion_callback": {
+			"type": "flag_check",
+			"flag": "konrad_is_suspicious",
+			"value": 1,
+			"true_next": "elise_konrad_reach_tested",
+			"false_next": "elise_konrad_reach"
+		},
+		"elise_konrad_reach_tested": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Konrad, hör zu! Ich habe dich damals getestet, weil ich dir nicht geglaubt habe. Es tut mir leid. Bleib jetzt bei mir. DU bist Konrad Müller.",
+			"next": "konrad_final_5"
 		},
 		"elise_konrad_reach": {
 			"type": "dialogue",
@@ -635,6 +649,13 @@
 			"flag": "distrusted_konrad",
 			"value": 1,
 			"true_next": "elise_assess_distrusted_konrad",
+			"false_next": "check_konrad_tested"
+		},
+		"check_konrad_tested": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "elise_assess_tested_konrad",
 			"false_next": "elise_assess"
 		},
 		"elise_assess_trusted_konrad": {
@@ -645,6 +666,11 @@
 		"elise_assess_distrusted_konrad": {
 			"type": "narration",
 			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten. Vielleicht rettet uns das. Vielleicht war es ein Fehler.",
+			"next": "elise_decide"
+		},
+		"elise_assess_tested_konrad": {
+			"type": "narration",
+			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn getestet, statt ihm zu vertrauen. Seitdem weiß ich: Er verbirgt etwas - und vielleicht kämpft er gleichzeitig dagegen an.",
 			"next": "elise_decide"
 		},
 		"check_anna_warning_konrad": {
