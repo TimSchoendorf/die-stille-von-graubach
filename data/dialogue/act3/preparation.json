@@ -1,722 +1,722 @@
 {
-	"title": "Akt 3 - Vorbereitung",
-	"start": "narration_return",
-	"nodes": {
-		"narration_return": {
-			"type": "narration",
-			"text": "Ich klettere die Treppe hinauf, zurück durch die Kirche, hinaus in die Nacht. Die frische Luft brennt in meinen Lungen. Der Himmel über Graubach ist klar, aber die Sterne sehen falsch aus. Zu nah. Zu hell.",
-			"next": "bg_grandmother_night"
-		},
-		"bg_grandmother_night": {
-			"type": "background",
-			"background": "grandmother_house_night",
-			"transition": "fade",
-			"next": "snd_grandmother"
-		},
-		"snd_grandmother": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_mood",
-			"path": "grandmother.wav"
-		},
-		"effect_mood": {
-			"type": "effect",
-			"effect": "vignette",
-			"params": {
-				"intensity": 0.4,
-				"duration": 1.5
-			},
-			"next": "narration_1"
-		},
-		"narration_1": {
-			"type": "narration",
-			"text": "Die letzte Nacht vor dem Ritual. Ich sitze am Tisch meiner Großmutter, ihre Kerze brennt. Wie oft hat sie hier gesessen?",
-			"next": "narration_2"
-		},
-		"narration_2": {
-			"type": "narration",
-			"text": "Draußen ist der Himmel falsch. Sterne, die es nicht geben sollte, in Mustern, die an Spiralen erinnern. Der Mond ist zu groß und zu nah.",
-			"next": "effect_sky_glitch"
-		},
-		"effect_sky_glitch": {
-			"type": "effect",
-			"effect": "color_glitch",
-			"params": {
-				"duration": 0.5
-			},
-			"next": "narration_3"
-		},
-		"narration_3": {
-			"type": "narration",
-			"text": "Das Haus knarrt im Wind. Oder vielleicht ist es kein Wind. Vielleicht atmet das Haus, wie alles in Graubach zu atmen scheint.",
-			"next": "narration_hands"
-		},
-		"narration_hands": {
-			"type": "narration",
-			"text": "Meine Hände liegen auf dem Tisch. Großmutters Hände, hat Georg gesagt. Ich betrachte sie. Feine Finger, keine Schwielen. Was sollen diese Hände morgen tun?",
-			"next": "check_has_journal"
-		},
-		"check_has_journal": {
-			"type": "flag_check",
-			"flag": "found_journal",
-			"value": 1,
-			"true_next": "narration_journal_open",
-			"false_next": "narration_no_journal"
-		},
-		"narration_no_journal": {
-			"type": "narration",
-			"text": "Ich habe kein Journal, keine Aufzeichnungen. Nur das, was mir die anderen erzählt haben. Hilde, Georg, Voss - jeder hat mir ein Stück der Wahrheit gegeben. Jetzt muss ich die Teile zusammensetzen.",
-			"next": "narration_no_journal_2"
-		},
-		"narration_no_journal_2": {
-			"type": "narration",
-			"text": "Großmutter, was hast du gewusst? Was hättest du mir gesagt, wenn du noch da wärst? Ich muss es ohne deine Worte schaffen. Aber vielleicht hat sie mir genug hinterlassen - in den Menschen, die sie kannte.",
-			"next": "check_ally_visit"
-		},
-		"narration_journal_open": {
-			"type": "narration",
-			"text": "Ich lese Großmutters letzte Einträge noch einmal. Die letzten Seiten, geschrieben in den Tagen vor ihrem Tod. Die Schrift wird gegen Ende unsicher, zittrig.",
-			"next": "narration_journal_1"
-		},
-		"narration_journal_1": {
-			"type": "narration",
-			"text": "'Ich bin zu alt. Mein Körper gibt nach. Aber Elise wird kommen. Das Wesen zeigt es mir in seinen Träumen - nicht als Drohung, als Prophezeiung.'",
-			"next": "narration_react_1"
-		},
-		"narration_react_1": {
-			"type": "narration",
-			"text": "Es hat von mir geträumt. Dieses uralte Ding hat von MIR geträumt. Der Gedanke lässt mich frösteln.",
-			"next": "narration_journal_2"
-		},
-		"narration_journal_2": {
-			"type": "narration",
-			"text": "'Sie hat mein Blut. Sie hat meinen Willen. Und sie hat etwas, das ich nie hatte: die Fähigkeit, das Unbekannte zu akzeptieren, ohne es zu fürchten.'",
-			"next": "narration_react_2"
-		},
-		"narration_react_2": {
-			"type": "narration",
-			"text": "Ohne es zu fürchten? Großmutter, wenn du mich jetzt sehen könntest. Meine Hände zittern, und das Singen in meinem Kopf wird jede Stunde lauter.",
-			"next": "narration_journal_3"
-		},
-		"narration_journal_3": {
-			"type": "effect",
-			"effect": "flicker",
-			"params": {
-				"count": 2,
-				"interval": 0.2
-			},
-			"next": "narration_journal_4"
-		},
-		"narration_journal_4": {
-			"type": "narration",
-			"text": "'Das Ritual hat viele mögliche Ausgänge. Der Gesang kann binden, befreien, öffnen oder zerstören. Und manche Wege entstehen erst im Moment.'",
-			"next": "narration_react_3"
-		},
-		"narration_react_3": {
-			"type": "narration",
-			"text": "Binden, verstehen, zerstören, verhandeln - und was auch immer im Moment selbst geschieht. Jeder Weg hat seinen Preis.",
-			"next": "narration_journal_5"
-		},
-		"narration_journal_5": {
-			"type": "narration",
-			"text": "'Elise, wenn du das liest: Vertrau deinem Instinkt. Das Wesen ist nicht böse. Es ist nur alt und hungrig und allein. Manchmal ist das schlimmer als Bosheit.'",
-			"next": "narration_react_4"
-		},
-		"narration_react_4": {
-			"type": "narration",
-			"text": "Alt und hungrig und allein. Wie jemand, der in einem dunklen Zimmer sitzt und auf Besuch wartet, der nie kommt. Sechshundert Jahre lang.",
-			"next": "narration_letter"
-		},
-		"narration_letter": {
-			"type": "narration",
-			"text": "Zwischen den letzten Seiten liegt ein Umschlag. 'Für Elise' steht darauf, in Großmutters bester Schrift. Mein Name in Tinte, nicht in Blut.",
-			"next": "narration_letter_read"
-		},
-		"narration_letter_read": {
-			"type": "narration",
-			"text": "'Meine liebste Elise. Wenn du das liest, bin ich nicht mehr da. Aber ich bin bei dir. In den Kräutern, die Hilde dir gibt. In der Stärke, die Georg dir zeigt. In diesem Haus, das dich beschützt.'",
-			"next": "narration_letter_2"
-		},
-		"narration_letter_2": {
-			"type": "narration",
-			"text": "'Ich habe dich gerufen, weil du die Einzige bist, die es beenden kann. Nicht weil dein Name im Buch steht. Sondern weil du MEINE Enkelin bist. Und meine Enkelin gibt nicht auf.'",
-			"next": "narration_letter_cry"
-		},
-		"narration_letter_cry": {
-			"type": "narration",
-			"text": "Die Tinte verschwimmt. Nein - das bin ich. Ich weine. Zum ersten Mal seit ich in Graubach angekommen bin, weine ich richtig. Nicht leise. Nicht tapfer. Ich heule wie ein Kind, das seine Großmutter verloren hat.",
-			"next": "narration_letter_3"
-		},
-		"narration_letter_3": {
-			"type": "narration",
-			"text": "'Vergib mir, dass ich dich gerufen habe. Vergib mir, dass ich nicht stark genug war, es allein zu beenden. Und vergib dem Wesen, wenn du kannst. Es weiß nicht, was es tut. Es weiß nur, dass es hungrig ist.'",
-			"next": "narration_letter_end"
-		},
-		"narration_letter_end": {
-			"type": "narration",
-			"text": "'In Liebe, immer. Deine Großmutter Margarethe.'",
-			"next": "narration_after_letter"
-		},
-		"narration_after_letter": {
-			"type": "narration",
-			"text": "Ich falte den Brief zusammen und stecke ihn in meine Brusttasche. Neben Hildes Amulett. Nah am Herzen.",
-			"next": "set_read_final_entries"
-		},
-		"set_read_final_entries": {
-			"type": "set_flag",
-			"flag": "read_final_entries",
-			"value": 1,
-			"next": "check_ally_visit"
-		},
-		"check_ally_visit": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "show_georg_visit",
-			"false_next": "check_hilde_visit"
-		},
-		"show_georg_visit": {
-			"type": "character",
-			"character": "georg",
-			"expression": "neutral",
-			"position": "left",
-			"action": "show",
-			"next": "narration_georg_knock"
-		},
-		"narration_georg_knock": {
-			"type": "narration",
-			"text": "Ein Klopfen an der Tür. Ich wische mir die Augen, bevor ich öffne. Georg steht draußen, eine Laterne in der Hand.",
-			"next": "georg_visit_1"
-		},
-		"georg_visit_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "neutral",
-			"text": "Konnte auch nicht schlafen. Darf ich reinkommen?",
-			"next": "elise_georg_visit_1"
-		},
-		"elise_georg_visit_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Bitte. Ich... habe gerade Großmutters letzten Brief gelesen.",
-			"next": "georg_visit_2"
-		},
-		"georg_visit_2": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "sad",
-			"text": "Sie hat mir gesagt, dass sie dir einen hinterlässt. Sie hat monatelang daran geschrieben.",
-			"next": "elise_georg_visit_2"
-		},
-		"elise_georg_visit_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Georg... was passiert morgen wirklich? Nicht die Kurzfassung. Die Wahrheit.",
-			"next": "georg_visit_3"
-		},
-		"georg_visit_3": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "guilty",
-			"text": "Du steigst in die Kammer. Du trittst vor das Wesen. Und dann... dann liegt es an dir. An dem was du wählst.",
-			"next": "elise_georg_visit_3"
-		},
-		"elise_georg_visit_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Habe ich eine Chance?",
-			"next": "georg_visit_4"
-		},
-		"georg_visit_4": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Deine Großmutter glaubte daran. Dreißig Jahre lang. Das muss reichen.",
-			"next": "elise_georg_visit_4"
-		},
-		"elise_georg_visit_4": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Und wenn nicht?",
-			"next": "narration_georg_silence"
-		},
-		"narration_georg_silence": {
-			"type": "narration",
-			"text": "Stille. Georg sieht mich an, und in seinen Augen liegt etwas, das er nie aussprechen wird. Er hat Angst. Nicht um sich. Um mich.",
-			"next": "georg_visit_5"
-		},
-		"georg_visit_5": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "protective",
-			"text": "Dann bin ich bei dir. Was auch passiert.",
-			"next": "narration_georg_leave"
-		},
-		"narration_georg_leave": {
-			"type": "narration",
-			"text": "Er drückt meine Schulter, steht auf, geht. An der Tür dreht er sich noch einmal um, sagt nichts, nickt nur. Dann ist er weg.",
-			"next": "hide_georg_visit"
-		},
-		"hide_georg_visit": {
-			"type": "character",
-			"character": "georg",
-			"expression": "protective",
-			"position": "left",
-			"action": "hide",
-			"next": "narration_approach"
-		},
-		"check_hilde_visit": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "show_hilde_visit",
-			"false_next": "check_voss_visit"
-		},
-		"show_hilde_visit": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "left",
-			"action": "show",
-			"next": "narration_hilde_knock"
-		},
-		"narration_hilde_knock": {
-			"type": "narration",
-			"text": "Klopfen. Leise, bestimmt. Ich öffne. Hilde steht vor der Tür, einen Beutel Kräuter in der Hand. Sie sieht meine Augen und nickt wissend.",
-			"next": "hilde_visit_1"
-		},
-		"hilde_visit_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Du hast geweint. Gut. Wer vor der Schlacht weint, hat danach keine Tränen mehr übrig.",
-			"next": "elise_hilde_visit_1"
-		},
-		"elise_hilde_visit_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Großmutters Brief. Sie hat... sie hat sich entschuldigt. Dass sie mich gerufen hat.",
-			"next": "hilde_visit_2"
-		},
-		"hilde_visit_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Sie hat sich dreißig Jahre lang entschuldigt. Bei mir, bei Georg, bei den Sternen. Aber du warst immer die Einzige, bei der es zählte.",
-			"next": "elise_hilde_visit_2"
-		},
-		"elise_hilde_visit_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Hilde... hatte sie Angst? Am Ende?",
-			"next": "hilde_visit_3"
-		},
-		"hilde_visit_3": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Nein. Am Ende war sie ruhig. Sie sagte: 'Elise wird kommen. Sie wird den richtigen Weg finden.' Dann hat sie gelächelt und die Augen geschlossen.",
-			"next": "elise_hilde_visit_3"
-		},
-		"elise_hilde_visit_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Woher diese Sicherheit? Ich bin nicht sicher. Nicht einmal annähernd.",
-			"next": "hilde_visit_4"
-		},
-		"hilde_visit_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Deine Großmutter fasste meine Hände, kurz bevor sie ging. Und sagte: 'Elise wird stärker sein als ich.' Du bist ihr ähnlicher als du denkst. Und das Wesen weiß es.",
-			"next": "narration_hilde_leave"
-		},
-		"narration_hilde_leave": {
-			"type": "narration",
-			"text": "Hilde legt die Kräuter auf den Tisch, streicht mir übers Haar wie es Großmutter früher tat, und geht leise hinaus.",
-			"next": "hide_hilde_visit"
-		},
-		"hide_hilde_visit": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "left",
-			"action": "hide",
-			"next": "narration_approach"
-		},
-		"check_voss_visit": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "show_voss_visit",
-			"false_next": "narration_alone_night"
-		},
-		"show_voss_visit": {
-			"type": "character",
-			"character": "voss",
-			"expression": "neutral",
-			"position": "left",
-			"action": "show",
-			"next": "narration_voss_knock"
-		},
-		"narration_voss_knock": {
-			"type": "narration",
-			"text": "Ein Klopfen. Zögernd, fast schüchtern. Voss steht vor der Tür, seinen Kragen hochgeschlagen gegen die Nacht. Er sieht aus, als hätte er seit Tagen nicht geschlafen.",
-			"next": "voss_visit_1"
-		},
-		"voss_visit_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "worried",
-			"text": "Fräulein Brandt... Elise. Ich wollte... ich muss Ihnen etwas sagen. Bevor morgen...",
-			"next": "elise_voss_visit_1"
-		},
-		"elise_voss_visit_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Kommen Sie rein, Pfarrer. Es ist kalt draußen.",
-			"next": "voss_visit_2"
-		},
-		"voss_visit_2": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "1893... als Friedrich starb... ich war nicht nur dabei. Ich habe gebetet. Nicht gegen das Ritual. FÜR das Ritual. Ich habe Gott angefleht, dass es funktioniert. Dass das Opfer angenommen wird.",
-			"next": "elise_voss_visit_2"
-		},
-		"elise_voss_visit_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Sie waren jung. Und verängstigt. Jeder hätte--",
-			"next": "voss_visit_3"
-		},
-		"voss_visit_3": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Nein. Nicht jeder. Ihre Großmutter nicht. Sie war die Einzige, die geschrien hat. Die Einzige, die versucht hat, es zu stoppen. Und ich... ich habe weiter gebetet.",
-			"next": "elise_voss_visit_3"
-		},
-		"elise_voss_visit_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Dann beten Sie morgen für das Richtige. Das ist genug, Pfarrer.",
-			"next": "voss_visit_4"
-		},
-		"voss_visit_4": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "praying",
-			"text": "Morgen bete ich für SIE. Das ist mehr, als ich für Friedrich getan habe.",
-			"next": "narration_voss_leave"
-		},
-		"narration_voss_leave": {
-			"type": "narration",
-			"text": "Voss steht auf, verneigt sich tief - tiefer als ein Pfarrer es vor einem Gemeindemitglied tun sollte - und geht hinaus in die Nacht.",
-			"next": "hide_voss_visit"
-		},
-		"hide_voss_visit": {
-			"type": "character",
-			"character": "voss",
-			"expression": "praying",
-			"position": "left",
-			"action": "hide",
-			"next": "narration_approach"
-		},
-		"narration_alone_night": {
-			"type": "narration",
-			"text": "Niemand klopft. Ich bin allein. Wie Großmutter es dreißig Jahre lang war. Allein mit dem Singen und den Schatten und der Frage, ob morgen der letzte Tag meines Lebens sein wird.",
-			"next": "narration_alone_night_2"
-		},
-		"narration_alone_night_2": {
-			"type": "narration",
-			"text": "Ich schreibe einen Brief. Für den Fall, dass ich nicht zurückkomme. An niemanden bestimmten. An die Welt, die nichts von Graubach weiß.",
-			"next": "narration_approach"
-		},
-		"narration_approach": {
-			"type": "narration",
-			"text": "Die Nacht wird älter. Das Singen leiser, als hielte das Wesen den Atem an. Es wartet auf meine Entscheidung.",
-			"next": "check_journal_approach_reflection"
-		},
-		"check_journal_approach_reflection": {
-			"type": "flag_check",
-			"flag": "found_journal",
-			"value": 1,
-			"true_next": "narration_approach_think_journal",
-			"false_next": "narration_approach_think_nojournal"
-		},
-		"narration_approach_think_journal": {
-			"type": "narration",
-			"text": "Ich klappe das Journal zu. Meine Hände sind ruhig. Merkwürdig ruhig für jemanden, der morgen einem uralten Wesen gegenübertritt.",
-			"next": "narration_approach_seal"
-		},
-		"narration_approach_think_nojournal": {
-			"type": "narration",
-			"text": "Ich falte meine Notizen zusammen. Keine alten Antworten, nur Bruchstücke aus Gesprächen und Beobachtungen. Trotzdem sind meine Hände ruhig.",
-			"next": "narration_approach_seal"
-		},
-		"narration_approach_seal": {
-			"type": "narration",
-			"text": "Siegeln: Großmutters Weg. Es binden, nicht töten. Sicher. Erprobt. Aber es hält nur dreißig Jahre. Dann muss jemand anderes diese Nacht durchleben.",
-			"next": "narration_approach_understand"
-		},
-		"narration_approach_understand": {
-			"type": "narration",
-			"text": "Verstehen: Was will es? Warum ist es hier? Sechshundert Jahre opfern wir ihm, ohne es jemals zu fragen. Vielleicht ist die Antwort die Lösung.",
-			"next": "narration_approach_destroy"
-		},
-		"narration_approach_destroy": {
-			"type": "narration",
-			"text": "Zerstören: Endgültig. Für immer. Kein Siegel, das erneuert werden muss. Kein Opfer mehr. Aber der Preis... Großmutter hat geschrieben, dass Zerstörung den Zerstörer kostet.",
-			"next": "narration_approach_pact"
-		},
-		"narration_approach_pact": {
-			"type": "narration",
-			"text": "Verhandeln: Ein Pakt. Geben und Nehmen. Weniger als Opfer, mehr als Ignoranz. Aber: kann man einem Wesen vertrauen, das sechshundert Jahre Menschenopfer hingenommen hat?",
-			"next": "check_courage_for_destroy"
-		},
-		"check_courage_for_destroy": {
-			"type": "flag_check",
-			"flag": "courage",
-			"value": 12,
-			"compare": "gte",
-			"true_next": "set_destroy_available",
-			"false_next": "choice_approach"
-		},
-		"set_destroy_available": {
-			"type": "set_flag",
-			"flag": "destroy_available",
-			"value": 1,
-			"next": "choice_approach"
-		},
-		"choice_approach": {
-			"type": "choice",
-			"choices": [
-				{
-					"text": "Das Siegel erneuern - Großmutters Weg. Es binden, nicht töten.",
-					"set_flags": {
-						"approach_seal": 1
-					},
-					"require_flags": {
-						"found_journal": 1
-					},
-					"next": "approach_seal"
-				},
-				{
-					"text": "Es verstehen versuchen - kommunizieren statt kämpfen",
-					"set_flags": {
-						"approach_understand": 1
-					},
-					"next": "approach_understand"
-				},
-				{
-					"text": "Es zerstören - was auch immer es kostet",
-					"set_flags": {
-						"approach_destroy": 1
-					},
-					"add_flags": {
-						"courage": 5
-					},
-					"require_flags": {
-						"destroy_available": 1
-					},
-					"next": "approach_destroy"
-				},
-				{
-					"text": "Einen Pakt schließen - Verhandeln statt Gewalt",
-					"set_flags": {
-						"approach_pact": 1
-					},
-					"next": "approach_pact"
-				}
-			]
-		},
-		"approach_seal": {
-			"type": "narration",
-			"text": "Großmutters Weg. Das Siegel erneuern, das Wesen zurück in den tiefen Schlaf singen. Nicht für immer - aber für weitere dreißig Jahre. Genug Zeit für die nächste Generation.",
-			"next": "approach_seal_2"
-		},
-		"approach_seal_2": {
-			"type": "narration",
-			"text": "Großmutter hat es vorgemacht. Ich muss nur ihren Spuren folgen. Der Gesang, das Erdzeichen, der Anker. Drei Komponenten, ein Ritual. Ich kann das.",
-			"next": "narration_preparation"
-		},
-		"approach_understand": {
-			"type": "narration",
-			"text": "Was ist es? Warum ist es hier? Sechshundert Jahre opfern wir ihm, ohne es jemals zu fragen, was es will. Vielleicht gibt es einen Weg, den niemand gesehen hat.",
-			"next": "approach_understand_2"
-		},
-		"approach_understand_2": {
-			"type": "narration",
-			"text": "Ich bin Folkloristin. Ich studiere das Unbekannte. Wenn irgendjemand fähig ist, mit etwas zu kommunizieren, das kein Mensch versteht, dann sollte ich es sein.",
-			"next": "narration_preparation"
-		},
-		"approach_destroy": {
-			"type": "narration",
-			"text": "Genug. Keine Kompromisse, keine Verhandlungen, kein Siegel, das in dreißig Jahren erneuert werden muss. Es endet hier. Heute. Für immer.",
-			"next": "approach_destroy_2"
-		},
-		"approach_destroy_2": {
-			"type": "narration",
-			"text": "Großmutter hat geschrieben, dass Zerstörung den Zerstörer kostet. Ich bin bereit, diesen Preis zu zahlen. Sechshundert Jahre Blut sind genug.",
-			"next": "narration_preparation"
-		},
-		"approach_pact": {
-			"type": "narration",
-			"text": "Verhandeln. Es ist intelligent genug, um einen Pakt zu verstehen. Vielleicht gibt es etwas, das es will, das kein Menschenopfer kostet. Einen Handel.",
-			"next": "approach_pact_2"
-		},
-		"approach_pact_2": {
-			"type": "narration",
-			"text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
-			"next": "narration_preparation"
-		},
-		"narration_preparation": {
-			"type": "flag_check",
-			"flag": "found_journal",
-			"value": 1,
-			"true_next": "narration_preparation_journal",
-			"false_next": "narration_preparation_nojournal"
-		},
-		"narration_preparation_journal": {
-			"type": "narration",
-			"text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Großmutters Journal. Die Kerze, die nicht erlischt.",
-			"next": "narration_preparation_2"
-		},
-		"narration_preparation_nojournal": {
-			"type": "narration",
-			"text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Die Kerze, die nicht erlischt.",
-			"next": "narration_preparation_2"
-		},
-		"narration_preparation_2": {
-			"type": "narration",
-			"text": "Und den Brief. Großmutters Brief. Nicht weil er ein Werkzeug ist. Sondern weil ich ihn bei mir haben will, wenn es soweit ist.",
-			"next": "check_has_items"
-		},
-		"check_has_items": {
-			"type": "flag_check",
-			"flag": "has_amulet",
-			"value": 1,
-			"true_next": "narration_ready",
-			"false_next": "narration_unprepared"
-		},
-		"narration_ready": {
-			"type": "narration",
-			"text": "Hildes Amulett wärmt meine Hand. Der Stein pulsiert im gleichen Rhythmus wie der Boden in der Kammer. Zwei Herzen, die im Takt schlagen.",
-			"next": "narration_write_letter"
-		},
-		"narration_unprepared": {
-			"type": "narration",
-			"text": "Mir fehlen Dinge. Aber die Zeit läuft ab. Ich werde mit dem arbeiten müssen, was ich habe. Mut und Verzweiflung müssen reichen.",
-			"next": "narration_write_letter"
-		},
-		"narration_write_letter": {
-			"type": "narration",
-			"text": "Ich nehme einen Stift. Falls ich nicht zurückkomme, soll jemand wissen, was hier geschehen ist. Was ich versucht habe.",
-			"next": "narration_write_letter_2"
-		},
-		"narration_write_letter_2": {
-			"type": "narration",
-			"text": "'Wer auch immer das liest: Unter der Kirche von Graubach schläft etwas Altes. Es ist nicht böse. Es ist hungrig. Und die Menschen, die über ihm leben, haben sechshundert Jahre lang den falschen Weg gewählt, es zu füttern.'",
-			"next": "narration_write_letter_3"
-		},
-		"narration_write_letter_3": {
-			"type": "narration",
-			"text": "'Ich heiße Elise Brandt, und heute Nacht versuche ich, einen besseren Weg zu finden. Wenn ich scheitere, bitte - kommt nicht nach Graubach. Nicht in dreißig Jahren. Nicht in hundert. Lasst es in Frieden.'",
-			"next": "narration_write_letter_end"
-		},
-		"narration_write_letter_end": {
-			"type": "narration",
-			"text": "Ich lege den Stift weg. Es gibt nichts mehr zu schreiben. Nichts mehr zu tun. Nur noch warten.",
-			"next": "narration_dawn"
-		},
-		"narration_dawn": {
-			"type": "effect",
-			"effect": "ui_degradation",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "snd_tension_dawn"
-		},
-		"snd_tension_dawn": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "narration_dawn_2",
-			"path": "tension.wav"
-		},
-		"narration_dawn_2": {
-			"type": "narration",
-			"text": "Die Morgendämmerung bricht an. Sie ist rot. Blutrot. Nicht der Sonnenaufgang - der Himmel selbst scheint zu bluten.",
-			"next": "effect_dawn_corrupt"
-		},
-		"effect_dawn_corrupt": {
-			"type": "effect",
-			"effect": "bg_corruption",
-			"params": {
-				"intensity": 0.6,
-				"duration": 2.0
-			},
-			"next": "narration_dawn_3"
-		},
-		"narration_dawn_3": {
-			"type": "narration",
-			"text": "Ich stehe auf. Strecke den Rücken. Atme ein, atme aus. Die letzte normale Handlung meines alten Lebens.",
-			"next": "narration_dawn_4"
-		},
-		"narration_dawn_4": {
-			"type": "narration",
-			"text": "Heute endet die Geschichte von Graubach. Sechshundert Jahre Tradition, sechshundert Jahre Angst, sechshundert Jahre Blut. Heute entscheide ich, wie.",
-			"next": "narration_dawn_5"
-		},
-		"narration_dawn_5": {
-			"type": "narration",
-			"text": "Ich nehme Großmutters Schlüssel, stecke den Brief ein, lösche die Kerze. Sie geht nicht aus. Natürlich nicht.",
-			"next": "narration_dawn_final"
-		},
-		"narration_dawn_final": {
-			"type": "narration",
-			"text": "Ich lasse sie brennen. Vielleicht leuchtet sie mir den Weg zurück. Wenn es einen Rückweg gibt.",
-			"next": "set_act3_complete"
-		},
-		"set_act3_complete": {
-			"type": "set_flag",
-			"flag": "act3_complete",
-			"value": 1,
-			"next": "journal_preparation"
-		},
-		"journal_preparation": {
-			"type": "journal",
-			"entry_id": "final_preparation",
-			"title": "Die letzte Nacht",
-			"content": "Großmutters letzten Brief gelesen. Sie hat sich entschuldigt - und mir Mut gemacht. Das Ritual hat viele mögliche Ausgänge. Ich habe meinen Weg gewählt. Einen eigenen Brief geschrieben, für den Fall. Der Morgen ist blutrot. Es ist soweit.",
-			"next": "narration_end"
-		},
-		"narration_end": {
-			"type": "narration",
-			"text": "Ende Akt 3",
-			"next": "effect_end_glitch"
-		},
-		"effect_end_glitch": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "res://data/dialogue/act4/ritual_night.json"
-		}
-	}
+  "title": "Akt 3 - Vorbereitung",
+  "start": "narration_return",
+  "nodes": {
+    "narration_return": {
+      "type": "narration",
+      "text": "Ich klettere die Treppe hinauf, zurück durch die Kirche, hinaus in die Nacht. Die frische Luft brennt in meinen Lungen. Der Himmel über Graubach ist klar, aber die Sterne sehen falsch aus. Zu nah. Zu hell.",
+      "next": "bg_grandmother_night"
+    },
+    "bg_grandmother_night": {
+      "type": "background",
+      "background": "grandmother_house_night",
+      "transition": "fade",
+      "next": "snd_grandmother"
+    },
+    "snd_grandmother": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "effect_mood",
+      "path": "grandmother.wav"
+    },
+    "effect_mood": {
+      "type": "effect",
+      "effect": "vignette",
+      "params": {
+        "intensity": 0.4,
+        "duration": 1.5
+      },
+      "next": "narration_1"
+    },
+    "narration_1": {
+      "type": "narration",
+      "text": "Die letzte Nacht vor dem Ritual. Ich sitze am Tisch meiner Großmutter, ihre Kerze brennt. Wie oft hat sie hier gesessen?",
+      "next": "narration_2"
+    },
+    "narration_2": {
+      "type": "narration",
+      "text": "Draußen ist der Himmel falsch. Sterne, die es nicht geben sollte, in Mustern, die an Spiralen erinnern. Der Mond ist zu groß und zu nah.",
+      "next": "effect_sky_glitch"
+    },
+    "effect_sky_glitch": {
+      "type": "effect",
+      "effect": "color_glitch",
+      "params": {
+        "duration": 0.5
+      },
+      "next": "narration_3"
+    },
+    "narration_3": {
+      "type": "narration",
+      "text": "Das Haus knarrt im Wind. Oder vielleicht ist es kein Wind. Vielleicht atmet das Haus, wie alles in Graubach zu atmen scheint.",
+      "next": "narration_hands"
+    },
+    "narration_hands": {
+      "type": "narration",
+      "text": "Meine Hände liegen auf dem Tisch. Großmutters Hände, hat Georg gesagt. Ich betrachte sie. Feine Finger, keine Schwielen. Was sollen diese Hände morgen tun?",
+      "next": "check_has_journal"
+    },
+    "check_has_journal": {
+      "type": "flag_check",
+      "flag": "found_journal",
+      "value": 1,
+      "true_next": "narration_journal_open",
+      "false_next": "narration_no_journal"
+    },
+    "narration_no_journal": {
+      "type": "narration",
+      "text": "Ich habe kein Journal, keine Aufzeichnungen. Nur das, was mir die anderen erzählt haben. Hilde, Georg, Voss - jeder hat mir ein Stück der Wahrheit gegeben. Jetzt muss ich die Teile zusammensetzen.",
+      "next": "narration_no_journal_2"
+    },
+    "narration_no_journal_2": {
+      "type": "narration",
+      "text": "Großmutter, was hast du gewusst? Was hättest du mir gesagt, wenn du noch da wärst? Ich muss es ohne deine Worte schaffen. Aber vielleicht hat sie mir genug hinterlassen - in den Menschen, die sie kannte.",
+      "next": "check_ally_visit"
+    },
+    "narration_journal_open": {
+      "type": "narration",
+      "text": "Ich lese Großmutters letzte Einträge noch einmal. Die letzten Seiten, geschrieben in den Tagen vor ihrem Tod. Die Schrift wird gegen Ende unsicher, zittrig.",
+      "next": "narration_journal_1"
+    },
+    "narration_journal_1": {
+      "type": "narration",
+      "text": "'Ich bin zu alt. Mein Körper gibt nach. Aber Elise wird kommen. Das Wesen zeigt es mir in seinen Träumen - nicht als Drohung, als Prophezeiung.'",
+      "next": "narration_react_1"
+    },
+    "narration_react_1": {
+      "type": "narration",
+      "text": "Es hat von mir geträumt. Dieses uralte Ding hat von MIR geträumt. Der Gedanke lässt mich frösteln.",
+      "next": "narration_journal_2"
+    },
+    "narration_journal_2": {
+      "type": "narration",
+      "text": "'Sie hat mein Blut. Sie hat meinen Willen. Und sie hat etwas, das ich nie hatte: die Fähigkeit, das Unbekannte zu akzeptieren, ohne es zu fürchten.'",
+      "next": "narration_react_2"
+    },
+    "narration_react_2": {
+      "type": "narration",
+      "text": "Ohne es zu fürchten? Großmutter, wenn du mich jetzt sehen könntest. Meine Hände zittern, und das Singen in meinem Kopf wird jede Stunde lauter.",
+      "next": "narration_journal_3"
+    },
+    "narration_journal_3": {
+      "type": "effect",
+      "effect": "flicker",
+      "params": {
+        "count": 2,
+        "interval": 0.2
+      },
+      "next": "narration_journal_4"
+    },
+    "narration_journal_4": {
+      "type": "narration",
+      "text": "'Das Ritual hat viele mögliche Ausgänge. Der Gesang kann binden, befreien, öffnen oder zerstören. Und manche Wege entstehen erst im Moment.'",
+      "next": "narration_react_3"
+    },
+    "narration_react_3": {
+      "type": "narration",
+      "text": "Binden, verstehen, zerstören, verhandeln - und was auch immer im Moment selbst geschieht. Jeder Weg hat seinen Preis.",
+      "next": "narration_journal_5"
+    },
+    "narration_journal_5": {
+      "type": "narration",
+      "text": "'Elise, wenn du das liest: Vertrau deinem Instinkt. Das Wesen ist nicht böse. Es ist nur alt und hungrig und allein. Manchmal ist das schlimmer als Bosheit.'",
+      "next": "narration_react_4"
+    },
+    "narration_react_4": {
+      "type": "narration",
+      "text": "Alt und hungrig und allein. Wie jemand, der in einem dunklen Zimmer sitzt und auf Besuch wartet, der nie kommt. Sechshundert Jahre lang.",
+      "next": "narration_letter"
+    },
+    "narration_letter": {
+      "type": "narration",
+      "text": "Zwischen den letzten Seiten liegt ein Umschlag. 'Für Elise' steht darauf, in Großmutters bester Schrift. Mein Name in Tinte, nicht in Blut.",
+      "next": "narration_letter_read"
+    },
+    "narration_letter_read": {
+      "type": "narration",
+      "text": "'Meine liebste Elise. Wenn du das liest, bin ich nicht mehr da. Aber ich bin bei dir. In den Kräutern, die Hilde dir gibt. In der Stärke, die Georg dir zeigt. In diesem Haus, das dich beschützt.'",
+      "next": "narration_letter_2"
+    },
+    "narration_letter_2": {
+      "type": "narration",
+      "text": "'Ich habe dich gerufen, weil du die Einzige bist, die es beenden kann. Nicht weil dein Name im Buch steht. Sondern weil du MEINE Enkelin bist. Und meine Enkelin gibt nicht auf.'",
+      "next": "narration_letter_cry"
+    },
+    "narration_letter_cry": {
+      "type": "narration",
+      "text": "Die Tinte verschwimmt. Nein - das bin ich. Ich weine. Zum ersten Mal seit ich in Graubach angekommen bin, weine ich richtig. Nicht leise. Nicht tapfer. Ich heule wie ein Kind, das seine Großmutter verloren hat.",
+      "next": "narration_letter_3"
+    },
+    "narration_letter_3": {
+      "type": "narration",
+      "text": "'Vergib mir, dass ich dich gerufen habe. Vergib mir, dass ich nicht stark genug war, es allein zu beenden. Und vergib dem Wesen, wenn du kannst. Es weiß nicht, was es tut. Es weiß nur, dass es hungrig ist.'",
+      "next": "narration_letter_end"
+    },
+    "narration_letter_end": {
+      "type": "narration",
+      "text": "'In Liebe, immer. Deine Großmutter Margarethe.'",
+      "next": "narration_after_letter"
+    },
+    "narration_after_letter": {
+      "type": "narration",
+      "text": "Ich falte den Brief zusammen und stecke ihn in meine Brusttasche. Neben Hildes Amulett. Nah am Herzen.",
+      "next": "set_read_final_entries"
+    },
+    "set_read_final_entries": {
+      "type": "set_flag",
+      "flag": "read_final_entries",
+      "value": 1,
+      "next": "check_ally_visit"
+    },
+    "check_ally_visit": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "show_georg_visit",
+      "false_next": "check_hilde_visit"
+    },
+    "show_georg_visit": {
+      "type": "character",
+      "character": "georg",
+      "expression": "neutral",
+      "position": "left",
+      "action": "show",
+      "next": "narration_georg_knock"
+    },
+    "narration_georg_knock": {
+      "type": "narration",
+      "text": "Ein Klopfen an der Tür. Ich wische mir die Augen, bevor ich öffne. Georg steht draußen, eine Laterne in der Hand.",
+      "next": "georg_visit_1"
+    },
+    "georg_visit_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "neutral",
+      "text": "Konnte auch nicht schlafen. Darf ich reinkommen?",
+      "next": "elise_georg_visit_1"
+    },
+    "elise_georg_visit_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Bitte. Ich... habe gerade Großmutters letzten Brief gelesen.",
+      "next": "georg_visit_2"
+    },
+    "georg_visit_2": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Sie hat mir gesagt, dass sie dir einen hinterlässt. Sie hat monatelang daran geschrieben.",
+      "next": "elise_georg_visit_2"
+    },
+    "elise_georg_visit_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Georg... was passiert morgen wirklich? Nicht die Kurzfassung. Die Wahrheit.",
+      "next": "georg_visit_3"
+    },
+    "georg_visit_3": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "guilty",
+      "text": "Du steigst in die Kammer. Du trittst vor das Wesen. Und dann... dann liegt es an dir. An dem was du wählst.",
+      "next": "elise_georg_visit_3"
+    },
+    "elise_georg_visit_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Habe ich eine Chance?",
+      "next": "georg_visit_4"
+    },
+    "georg_visit_4": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Deine Großmutter hielt dreißig Jahre lang dagegen, obwohl jeder Winter sie ein Stück gebrochen hat. Wenn du jetzt umkehrst, war alles umsonst.",
+      "next": "elise_georg_visit_4"
+    },
+    "elise_georg_visit_4": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Und wenn nicht?",
+      "next": "narration_georg_silence"
+    },
+    "narration_georg_silence": {
+      "type": "narration",
+      "text": "Stille. Georg sieht mich an, und in seinen Augen liegt etwas, das er nie aussprechen wird. Er hat Angst. Nicht um sich. Um mich.",
+      "next": "georg_visit_5"
+    },
+    "georg_visit_5": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "protective",
+      "text": "Dann bin ich bei dir. Was auch passiert.",
+      "next": "narration_georg_leave"
+    },
+    "narration_georg_leave": {
+      "type": "narration",
+      "text": "Er drückt meine Schulter, steht auf, geht. An der Tür dreht er sich noch einmal um, sagt nichts, nickt nur. Dann ist er weg.",
+      "next": "hide_georg_visit"
+    },
+    "hide_georg_visit": {
+      "type": "character",
+      "character": "georg",
+      "expression": "protective",
+      "position": "left",
+      "action": "hide",
+      "next": "narration_approach"
+    },
+    "check_hilde_visit": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "show_hilde_visit",
+      "false_next": "check_voss_visit"
+    },
+    "show_hilde_visit": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "left",
+      "action": "show",
+      "next": "narration_hilde_knock"
+    },
+    "narration_hilde_knock": {
+      "type": "narration",
+      "text": "Klopfen. Leise, bestimmt. Ich öffne. Hilde steht vor der Tür, einen Beutel Kräuter in der Hand. Sie sieht meine Augen und nickt wissend.",
+      "next": "hilde_visit_1"
+    },
+    "hilde_visit_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du hast geweint. Gut. Wer vor der Schlacht weint, hat danach keine Tränen mehr übrig.",
+      "next": "elise_hilde_visit_1"
+    },
+    "elise_hilde_visit_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Großmutters Brief. Sie hat... sie hat sich entschuldigt. Dass sie mich gerufen hat.",
+      "next": "hilde_visit_2"
+    },
+    "hilde_visit_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Sie hat sich dreißig Jahre lang entschuldigt. Bei mir, bei Georg, bei den Sternen. Aber du warst immer die Einzige, bei der es zählte.",
+      "next": "elise_hilde_visit_2"
+    },
+    "elise_hilde_visit_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Hilde... hatte sie Angst? Am Ende?",
+      "next": "hilde_visit_3"
+    },
+    "hilde_visit_3": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Nein. Am Ende war sie ruhig. Sie sagte: 'Elise wird kommen. Sie wird den richtigen Weg finden.' Dann hat sie gelächelt und die Augen geschlossen.",
+      "next": "elise_hilde_visit_3"
+    },
+    "elise_hilde_visit_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Woher diese Sicherheit? Ich bin nicht sicher. Nicht einmal annähernd.",
+      "next": "hilde_visit_4"
+    },
+    "hilde_visit_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Deine Großmutter fasste meine Hände, kurz bevor sie ging. Und sagte: 'Elise wird stärker sein als ich.' Du bist ihr ähnlicher als du denkst. Und das Wesen weiß es.",
+      "next": "narration_hilde_leave"
+    },
+    "narration_hilde_leave": {
+      "type": "narration",
+      "text": "Hilde legt die Kräuter auf den Tisch, streicht mir übers Haar wie es Großmutter früher tat, und geht leise hinaus.",
+      "next": "hide_hilde_visit"
+    },
+    "hide_hilde_visit": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "left",
+      "action": "hide",
+      "next": "narration_approach"
+    },
+    "check_voss_visit": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "show_voss_visit",
+      "false_next": "narration_alone_night"
+    },
+    "show_voss_visit": {
+      "type": "character",
+      "character": "voss",
+      "expression": "neutral",
+      "position": "left",
+      "action": "show",
+      "next": "narration_voss_knock"
+    },
+    "narration_voss_knock": {
+      "type": "narration",
+      "text": "Ein Klopfen. Zögernd, fast schüchtern. Voss steht vor der Tür, seinen Kragen hochgeschlagen gegen die Nacht. Er sieht aus, als hätte er seit Tagen nicht geschlafen.",
+      "next": "voss_visit_1"
+    },
+    "voss_visit_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "worried",
+      "text": "Fräulein Brandt... Elise. Ich wollte... ich muss Ihnen etwas sagen. Bevor morgen...",
+      "next": "elise_voss_visit_1"
+    },
+    "elise_voss_visit_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Kommen Sie rein, Pfarrer. Es ist kalt draußen.",
+      "next": "voss_visit_2"
+    },
+    "voss_visit_2": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "1893... als Friedrich starb... ich war nicht nur dabei. Ich habe gebetet. Nicht gegen das Ritual. FÜR das Ritual. Ich habe Gott angefleht, dass es funktioniert. Dass das Opfer angenommen wird.",
+      "next": "elise_voss_visit_2"
+    },
+    "elise_voss_visit_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Sie waren jung. Und verängstigt. Jeder hätte--",
+      "next": "voss_visit_3"
+    },
+    "voss_visit_3": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Nein. Nicht jeder. Ihre Großmutter nicht. Sie war die Einzige, die geschrien hat. Die Einzige, die versucht hat, es zu stoppen. Und ich... ich habe weiter gebetet.",
+      "next": "elise_voss_visit_3"
+    },
+    "elise_voss_visit_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Dann beten Sie morgen für das Richtige. Das ist genug, Pfarrer.",
+      "next": "voss_visit_4"
+    },
+    "voss_visit_4": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Morgen bete ich für SIE. Das ist mehr, als ich für Friedrich getan habe.",
+      "next": "narration_voss_leave"
+    },
+    "narration_voss_leave": {
+      "type": "narration",
+      "text": "Voss steht auf, verneigt sich tief - tiefer als ein Pfarrer es vor einem Gemeindemitglied tun sollte - und geht hinaus in die Nacht.",
+      "next": "hide_voss_visit"
+    },
+    "hide_voss_visit": {
+      "type": "character",
+      "character": "voss",
+      "expression": "praying",
+      "position": "left",
+      "action": "hide",
+      "next": "narration_approach"
+    },
+    "narration_alone_night": {
+      "type": "narration",
+      "text": "Niemand klopft. Ich bin allein. Wie Großmutter es dreißig Jahre lang war. Allein mit dem Singen und den Schatten und der Frage, ob morgen der letzte Tag meines Lebens sein wird.",
+      "next": "narration_alone_night_2"
+    },
+    "narration_alone_night_2": {
+      "type": "narration",
+      "text": "Ich schreibe einen Brief. Für den Fall, dass ich nicht zurückkomme. An niemanden bestimmten. An die Welt, die nichts von Graubach weiß.",
+      "next": "narration_approach"
+    },
+    "narration_approach": {
+      "type": "narration",
+      "text": "Die Nacht wird älter. Das Singen leiser, als hielte das Wesen den Atem an. Es wartet auf meine Entscheidung.",
+      "next": "check_journal_approach_reflection"
+    },
+    "check_journal_approach_reflection": {
+      "type": "flag_check",
+      "flag": "found_journal",
+      "value": 1,
+      "true_next": "narration_approach_think_journal",
+      "false_next": "narration_approach_think_nojournal"
+    },
+    "narration_approach_think_journal": {
+      "type": "narration",
+      "text": "Ich klappe das Journal zu. Meine Hände sind ruhig. Merkwürdig ruhig für jemanden, der morgen einem uralten Wesen gegenübertritt.",
+      "next": "narration_approach_seal"
+    },
+    "narration_approach_think_nojournal": {
+      "type": "narration",
+      "text": "Ich falte meine Notizen zusammen. Keine alten Antworten, nur Bruchstücke aus Gesprächen und Beobachtungen. Trotzdem sind meine Hände ruhig.",
+      "next": "narration_approach_seal"
+    },
+    "narration_approach_seal": {
+      "type": "narration",
+      "text": "Siegeln: Großmutters Weg. Es binden, nicht töten. Sicher. Erprobt. Aber es hält nur dreißig Jahre. Dann muss jemand anderes diese Nacht durchleben.",
+      "next": "narration_approach_understand"
+    },
+    "narration_approach_understand": {
+      "type": "narration",
+      "text": "Verstehen: Was will es? Warum ist es hier? Sechshundert Jahre opfern wir ihm, ohne es jemals zu fragen. Vielleicht ist die Antwort die Lösung.",
+      "next": "narration_approach_destroy"
+    },
+    "narration_approach_destroy": {
+      "type": "narration",
+      "text": "Zerstören: Endgültig. Für immer. Kein Siegel, das erneuert werden muss. Kein Opfer mehr. Aber der Preis... Großmutter hat geschrieben, dass Zerstörung den Zerstörer kostet.",
+      "next": "narration_approach_pact"
+    },
+    "narration_approach_pact": {
+      "type": "narration",
+      "text": "Verhandeln: Ein Pakt. Geben und Nehmen. Weniger als Opfer, mehr als Ignoranz. Aber: kann man einem Wesen vertrauen, das sechshundert Jahre Menschenopfer hingenommen hat?",
+      "next": "check_courage_for_destroy"
+    },
+    "check_courage_for_destroy": {
+      "type": "flag_check",
+      "flag": "courage",
+      "value": 12,
+      "compare": "gte",
+      "true_next": "set_destroy_available",
+      "false_next": "choice_approach"
+    },
+    "set_destroy_available": {
+      "type": "set_flag",
+      "flag": "destroy_available",
+      "value": 1,
+      "next": "choice_approach"
+    },
+    "choice_approach": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Das Siegel erneuern - Großmutters Weg. Es binden, nicht töten.",
+          "set_flags": {
+            "approach_seal": 1
+          },
+          "require_flags": {
+            "found_journal": 1
+          },
+          "next": "approach_seal"
+        },
+        {
+          "text": "Es verstehen versuchen - kommunizieren statt kämpfen",
+          "set_flags": {
+            "approach_understand": 1
+          },
+          "next": "approach_understand"
+        },
+        {
+          "text": "Es zerstören - was auch immer es kostet",
+          "set_flags": {
+            "approach_destroy": 1
+          },
+          "add_flags": {
+            "courage": 5
+          },
+          "require_flags": {
+            "destroy_available": 1
+          },
+          "next": "approach_destroy"
+        },
+        {
+          "text": "Einen Pakt schließen - Verhandeln statt Gewalt",
+          "set_flags": {
+            "approach_pact": 1
+          },
+          "next": "approach_pact"
+        }
+      ]
+    },
+    "approach_seal": {
+      "type": "narration",
+      "text": "Großmutters Weg. Das Siegel erneuern, das Wesen zurück in den tiefen Schlaf singen. Nicht für immer - aber für weitere dreißig Jahre. Genug Zeit für die nächste Generation.",
+      "next": "approach_seal_2"
+    },
+    "approach_seal_2": {
+      "type": "narration",
+      "text": "Großmutter hat es vorgemacht. Ich muss nur ihren Spuren folgen. Der Gesang, das Erdzeichen, der Anker. Drei Komponenten, ein Ritual. Ich kann das.",
+      "next": "narration_preparation"
+    },
+    "approach_understand": {
+      "type": "narration",
+      "text": "Was ist es? Warum ist es hier? Sechshundert Jahre opfern wir ihm, ohne es jemals zu fragen, was es will. Vielleicht gibt es einen Weg, den niemand gesehen hat.",
+      "next": "approach_understand_2"
+    },
+    "approach_understand_2": {
+      "type": "narration",
+      "text": "Ich bin Folkloristin. Ich studiere das Unbekannte. Wenn irgendjemand fähig ist, mit etwas zu kommunizieren, das kein Mensch versteht, dann sollte ich es sein.",
+      "next": "narration_preparation"
+    },
+    "approach_destroy": {
+      "type": "narration",
+      "text": "Genug. Keine Kompromisse, keine Verhandlungen, kein Siegel, das in dreißig Jahren erneuert werden muss. Es endet hier. Heute. Für immer.",
+      "next": "approach_destroy_2"
+    },
+    "approach_destroy_2": {
+      "type": "narration",
+      "text": "Großmutter hat geschrieben, dass Zerstörung den Zerstörer kostet. Ich bin bereit, diesen Preis zu zahlen. Sechshundert Jahre Blut sind genug.",
+      "next": "narration_preparation"
+    },
+    "approach_pact": {
+      "type": "narration",
+      "text": "Verhandeln. Es ist intelligent genug, um einen Pakt zu verstehen. Vielleicht gibt es etwas, das es will, das kein Menschenopfer kostet. Einen Handel.",
+      "next": "approach_pact_2"
+    },
+    "approach_pact_2": {
+      "type": "narration",
+      "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
+      "next": "narration_preparation"
+    },
+    "narration_preparation": {
+      "type": "flag_check",
+      "flag": "found_journal",
+      "value": 1,
+      "true_next": "narration_preparation_journal",
+      "false_next": "narration_preparation_nojournal"
+    },
+    "narration_preparation_journal": {
+      "type": "narration",
+      "text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Großmutters Journal. Die Kerze, die nicht erlischt.",
+      "next": "narration_preparation_2"
+    },
+    "narration_preparation_nojournal": {
+      "type": "narration",
+      "text": "Ich lege die Dinge bereit, die ich brauche: Georgs Schlüssel. Hildes Amulett und Kräuter. Die Kerze, die nicht erlischt.",
+      "next": "narration_preparation_2"
+    },
+    "narration_preparation_2": {
+      "type": "narration",
+      "text": "Und den Brief. Großmutters Brief. Nicht weil er ein Werkzeug ist. Sondern weil ich ihn bei mir haben will, wenn es soweit ist.",
+      "next": "check_has_items"
+    },
+    "check_has_items": {
+      "type": "flag_check",
+      "flag": "has_amulet",
+      "value": 1,
+      "true_next": "narration_ready",
+      "false_next": "narration_unprepared"
+    },
+    "narration_ready": {
+      "type": "narration",
+      "text": "Hildes Amulett wärmt meine Hand. Der Stein pulsiert im gleichen Rhythmus wie der Boden in der Kammer. Zwei Herzen, die im Takt schlagen.",
+      "next": "narration_write_letter"
+    },
+    "narration_unprepared": {
+      "type": "narration",
+      "text": "Mir fehlen Dinge. Aber die Zeit läuft ab. Ich werde mit dem arbeiten müssen, was ich habe. Mut und Verzweiflung müssen reichen.",
+      "next": "narration_write_letter"
+    },
+    "narration_write_letter": {
+      "type": "narration",
+      "text": "Ich nehme einen Stift. Falls ich nicht zurückkomme, soll jemand wissen, was hier geschehen ist. Was ich versucht habe.",
+      "next": "narration_write_letter_2"
+    },
+    "narration_write_letter_2": {
+      "type": "narration",
+      "text": "'Wer auch immer das liest: Unter der Kirche von Graubach schläft etwas Altes. Es ist nicht böse. Es ist hungrig. Und die Menschen, die über ihm leben, haben sechshundert Jahre lang den falschen Weg gewählt, es zu füttern.'",
+      "next": "narration_write_letter_3"
+    },
+    "narration_write_letter_3": {
+      "type": "narration",
+      "text": "'Ich heiße Elise Brandt, und heute Nacht versuche ich, einen besseren Weg zu finden. Wenn ich scheitere, bitte - kommt nicht nach Graubach. Nicht in dreißig Jahren. Nicht in hundert. Lasst es in Frieden.'",
+      "next": "narration_write_letter_end"
+    },
+    "narration_write_letter_end": {
+      "type": "narration",
+      "text": "Ich lege den Stift weg. Es gibt nichts mehr zu schreiben. Nichts mehr zu tun. Nur noch warten.",
+      "next": "narration_dawn"
+    },
+    "narration_dawn": {
+      "type": "effect",
+      "effect": "ui_degradation",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "snd_tension_dawn"
+    },
+    "snd_tension_dawn": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "narration_dawn_2",
+      "path": "tension.wav"
+    },
+    "narration_dawn_2": {
+      "type": "narration",
+      "text": "Die Morgendämmerung bricht an. Sie ist rot. Blutrot. Nicht der Sonnenaufgang - der Himmel selbst scheint zu bluten.",
+      "next": "effect_dawn_corrupt"
+    },
+    "effect_dawn_corrupt": {
+      "type": "effect",
+      "effect": "bg_corruption",
+      "params": {
+        "intensity": 0.6,
+        "duration": 2.0
+      },
+      "next": "narration_dawn_3"
+    },
+    "narration_dawn_3": {
+      "type": "narration",
+      "text": "Ich stehe auf. Strecke den Rücken. Atme ein, atme aus. Die letzte normale Handlung meines alten Lebens.",
+      "next": "narration_dawn_4"
+    },
+    "narration_dawn_4": {
+      "type": "narration",
+      "text": "Heute endet die Geschichte von Graubach. Sechshundert Jahre Tradition, sechshundert Jahre Angst, sechshundert Jahre Blut. Heute entscheide ich, wie.",
+      "next": "narration_dawn_5"
+    },
+    "narration_dawn_5": {
+      "type": "narration",
+      "text": "Ich nehme Großmutters Schlüssel, stecke den Brief ein, lösche die Kerze. Sie geht nicht aus. Natürlich nicht.",
+      "next": "narration_dawn_final"
+    },
+    "narration_dawn_final": {
+      "type": "narration",
+      "text": "Ich lasse sie brennen. Vielleicht leuchtet sie mir den Weg zurück. Wenn es einen Rückweg gibt.",
+      "next": "set_act3_complete"
+    },
+    "set_act3_complete": {
+      "type": "set_flag",
+      "flag": "act3_complete",
+      "value": 1,
+      "next": "journal_preparation"
+    },
+    "journal_preparation": {
+      "type": "journal",
+      "entry_id": "final_preparation",
+      "title": "Die letzte Nacht",
+      "content": "Großmutters letzten Brief gelesen. Sie hat sich entschuldigt - und mir Mut gemacht. Das Ritual hat viele mögliche Ausgänge. Ich habe meinen Weg gewählt. Einen eigenen Brief geschrieben, für den Fall. Der Morgen ist blutrot. Es ist soweit.",
+      "next": "narration_end"
+    },
+    "narration_end": {
+      "type": "narration",
+      "text": "Ende Akt 3",
+      "next": "effect_end_glitch"
+    },
+    "effect_end_glitch": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "res://data/dialogue/act4/ritual_night.json"
+    }
+  }
 }

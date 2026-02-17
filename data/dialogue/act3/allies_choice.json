@@ -1,773 +1,773 @@
 {
-	"title": "Akt 3 - Verbündete",
-	"start": "bg_village",
-	"nodes": {
-		"bg_village": {
-			"type": "background",
-			"background": "village_corrupted",
-			"transition": "fade",
-			"next": "snd_tension"
-		},
-		"snd_tension": {
-			"type": "sound",
-			"sound_type": "music",
-			"path": "tension.wav",
-			"next": "effect_mood"
-		},
-		"effect_mood": {
-			"type": "effect",
-			"effect": "bg_corruption",
-			"params": {
-				"intensity": 0.3,
-				"duration": 1.5
-			},
-			"next": "narration_1"
-		},
-		"narration_1": {
-			"type": "narration",
-			"text": "Tag sechs, Nachmittag. Morgen ist der Jahrestag. Ich brauche Hilfe - und ich muss mich entscheiden, wem ich vertraue.",
-			"next": "check_konrad_history"
-		},
-		"elise_assess": {
-			"type": "narration",
-			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... Konrad ist der Schlüssel zu allem - oder die größte Gefahr.",
-			"next": "elise_decide"
-		},
-		"elise_decide": {
-			"type": "narration",
-			"text": "Ich kann nicht alle gleichzeitig einweihen. Otto hat Augen überall. Einer muss mein Hauptverbündeter sein - derjenige, auf den ich mich morgen Nacht verlasse.",
-			"next": "choice_primary_ally"
-		},
-		"choice_primary_ally": {
-			"type": "choice",
-			"choices": [
-				{
-					"text": "Georg als Hauptverbündeten wählen - Stärke und Loyalität",
-					"set_flags": {
-						"allied_georg": 1,
-						"georg_trust": 10
-					},
-					"next": "ally_georg"
-				},
-				{
-					"text": "Hilde als Hauptverbündete wählen - Wissen und Erfahrung",
-					"set_flags": {
-						"allied_hilde": 1,
-						"hilde_trust": 10
-					},
-					"next": "ally_hilde"
-				},
-				{
-					"text": "Voss als Hauptverbündeten wählen - Zugang und Reue",
-					"set_flags": {
-						"allied_voss": 1,
-						"voss_trust": 10
-					},
-					"next": "ally_voss"
-				},
-				{
-					"text": "Niemanden einweihen - ich will niemanden in Gefahr bringen",
-					"set_flags": {
-						"chose_solo": 1
-					},
-					"add_flags": {
-						"courage": 3
-					},
-					"next": "ally_solo"
-				}
-			]
-		},
-		"ally_solo": {
-			"type": "narration",
-			"text": "Niemanden. Ich werde niemanden in Gefahr bringen. Nicht Georg, nicht Hilde, nicht Voss. Was auch immer in der Kammer wartet - es ist zwischen mir und dem Wesen. Nur uns zwei.",
-			"next": "ally_solo_2"
-		},
-		"ally_solo_2": {
-			"type": "narration",
-			"text": "Großmutter hat dreißig Jahre die Last getragen, ohne sie auf andere abzuwälzen. Wenn ich ihre Enkelin bin, kann ich das auch.",
-			"next": "ally_solo_3"
-		},
-		"ally_solo_3": {
-			"type": "narration",
-			"text": "Es ist einsam. Aber Einsamkeit ist kein Todesurteil. Das sollte ich wissen - ich bin Folkloristin, nicht Soldatin. Mein Werkzeug ist Verständnis, nicht Gewalt. Dafür brauche ich keine Armee.",
-			"next": "ally_converge"
-		},
-		"ally_georg": {
-			"type": "background",
-			"background": "blacksmith_shop",
-			"transition": "fade",
-			"next": "show_georg_ally"
-		},
-		"show_georg_ally": {
-			"type": "character",
-			"character": "georg",
-			"expression": "determined",
-			"position": "right",
-			"action": "show",
-			"next": "georg_ally_1"
-		},
-		"georg_ally_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "guilty",
-			"text": "Du willst es wirklich durchziehen. Margarethes Ritual. Ich habe gehofft, dass du gehst, Elise. Aber ich habe auch gewusst, dass du bleibst.",
-			"next": "check_saw_name_in_book_georg"
-		},
-		"check_saw_name_in_book_georg": {
-			"type": "flag_check",
-			"flag": "saw_name_in_book",
-			"value": 1,
-			"true_next": "elise_georg_1_book",
-			"false_next": "elise_georg_1_no_book"
-		},
-		"elise_georg_1_book": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Gehen war nie wirklich eine Option. Nicht seit ich meinen Namen in dem Buch gesehen habe.",
-			"next": "check_demanded_truth_callback"
-		},
-		"elise_georg_1_no_book": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Gehen war nie wirklich eine Option. Nicht seit ich verstanden habe, was unter dieser Kirche wartet.",
-			"next": "check_demanded_truth_callback"
-		},
-		"check_demanded_truth_callback": {
-			"type": "flag_check",
-			"flag": "demanded_truth",
-			"value": 1,
-			"true_next": "georg_demanded_truth_callback",
-			"false_next": "check_stayed_quiet_callback"
-		},
-		"georg_demanded_truth_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "guilty",
-			"text": "Du hast mich in der ersten Nacht unter Druck gesetzt, bis ich reden musste. Das war hart - aber richtig. Ohne das wären wir heute nicht hier.",
-			"next": "check_tried_to_flee"
-		},
-		"check_stayed_quiet_callback": {
-			"type": "flag_check",
-			"flag": "stayed_quiet",
-			"value": 1,
-			"true_next": "georg_stayed_quiet_callback",
-			"false_next": "check_wanted_to_follow_callback"
-		},
-		"georg_stayed_quiet_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "protective",
-			"text": "Du warst in der ersten Nacht stiller als alle anderen. Ich dachte erst, du gibst auf. Dabei hast du nur zugehört - und alles zusammengesetzt.",
-			"next": "check_tried_to_flee"
-		},
-		"check_wanted_to_follow_callback": {
-			"type": "flag_check",
-			"flag": "wanted_to_follow",
-			"value": 1,
-			"true_next": "georg_wanted_follow_callback",
-			"false_next": "check_tried_to_flee"
-		},
-		"georg_wanted_follow_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "sad",
-			"text": "Du wolltest mir in der ersten Nacht nachgehen. Ich habe dich damals weggeschickt. Heute nicht mehr. Heute gehen wir den Weg zusammen.",
-			"next": "check_tried_to_flee"
-		},
-		"check_tried_to_flee": {
-			"type": "flag_check",
-			"flag": "tried_to_flee",
-			"value": 1,
-			"true_next": "georg_flee_callback",
-			"false_next": "georg_ally_2"
-		},
-		"georg_flee_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "protective",
-			"text": "Du wolltest fliehen, damals. Das war vernünftig. Aber du bist geblieben. Das war mutig. Deine Großmutter wäre stolz.",
-			"next": "elise_georg_flee"
-		},
-		"elise_georg_flee": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Der Wald hat mich nicht gelassen. Aber selbst wenn er es hätte... ich glaube, ich wäre zurückgekommen.",
-			"next": "georg_ally_2"
-		},
-		"georg_ally_2": {
-			"type": "character",
-			"character": "georg",
-			"expression": "protective",
-			"position": "right",
-			"action": "show",
-			"next": "elise_georg_question"
-		},
-		"elise_georg_question": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Georg, was passiert wenn ich scheitere? Was passiert mit dir, mit Graubach?",
-			"next": "georg_ally_answer"
-		},
-		"georg_ally_answer": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Dann war alles umsonst. Dreißig Jahre. Margarethes Opfer. Meine Schuld.",
-			"next": "check_asked_about_entity_callback"
-		},
-		"check_asked_about_entity_callback": {
-			"type": "flag_check",
-			"flag": "asked_about_entity",
-			"value": 1,
-			"true_next": "georg_entity_callback",
-			"false_next": "check_asked_about_police_callback"
-		},
-		"georg_entity_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "guilty",
-			"text": "Du hast mich schon in der Schmiede gefragt, was da unten wirklich lebt. Ich hab dir nur die halbe Wahrheit gesagt. Heute gibt es keine halben Wahrheiten mehr.",
-			"next": "elise_georg_risk"
-		},
-		"check_asked_about_police_callback": {
-			"type": "flag_check",
-			"flag": "asked_about_police",
-			"value": 1,
-			"true_next": "georg_police_callback",
-			"false_next": "elise_georg_risk"
-		},
-		"georg_police_callback": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "angry",
-			"text": "Du hast nach der Polizei gefragt, als gäbe es da Hilfe. In Graubach hilft uns niemand von außen. Heute Nacht sind nur wir hier.",
-			"next": "elise_georg_risk"
-		},
-		"elise_georg_risk": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Und du? Was riskierst du? Du könntest fliehen - du bist nicht im Buch.",
-			"next": "georg_ally_3"
-		},
-		"georg_ally_3": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Ich hätte vor dreißig Jahren fliehen sollen. Jetzt ist es zu spät für Feigheit. Ich bin dabei. Ich werde Otto aufhalten, wenn er kommt.",
-			"next": "elise_georg_otto"
-		},
-		"elise_georg_otto": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Otto hat Männer. Was wenn sie bewaffnet sind?",
-			"next": "georg_ally_hammer"
-		},
-		"georg_ally_hammer": {
-			"type": "narration",
-			"text": "Georg nimmt einen schweren Schmiedehammer von der Wand. In seinen Augen brennt ein Feuer, das ich noch nie gesehen habe.",
-			"next": "georg_ally_4"
-		},
-		"georg_ally_4": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Er hat Männer, aber ich habe Hämmer. Und dreißig Jahre aufgestaute Wut. Für Margarethe.",
-			"next": "elise_georg_grateful"
-		},
-		"elise_georg_grateful": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Danke, Georg. Großmutter hätte sich keinen besseren Verbündeten wünschen können.",
-			"next": "hide_georg_ally"
-		},
-		"hide_georg_ally": {
-			"type": "character",
-			"character": "georg",
-			"expression": "determined",
-			"position": "right",
-			"action": "hide",
-			"next": "ally_converge"
-		},
-		"ally_hilde": {
-			"type": "background",
-			"background": "hilde_cottage",
-			"transition": "fade",
-			"next": "show_hilde_ally"
-		},
-		"show_hilde_ally": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_ally_1"
-		},
-		"hilde_ally_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Morgen also. Der Gesang muss bei Sonnenuntergang beginnen, wenn das Wesen zwischen Schlaf und Wachen liegt. Dann ist es am verwundbarsten.",
-			"next": "elise_hilde_1"
-		},
-		"elise_hilde_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Hilde, der Gesang... ich schaffe das nicht allein. Als ich es bei Ihnen versucht habe, hat meine Stimme kaum gereicht.",
-			"next": "hilde_ally_2"
-		},
-		"hilde_ally_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Deshalb bin ich hier. Wir singen zusammen. Meine Stimme mag alt sein, aber zusammen - vielleicht reicht es. Die alten Völker haben immer im Chor gesungen.",
-			"next": "elise_hilde_chance"
-		},
-		"elise_hilde_chance": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Was wenn die Kreatur den Gesang nicht akzeptiert? Was wenn es nicht reicht?",
-			"next": "hilde_ally_improvise"
-		},
-		"hilde_ally_improvise": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Dann improvisieren wir. Wie deine Großmutter es getan hätte. Margarethe hat nie aufgegeben - und wir werden es auch nicht.",
-			"next": "hilde_ally_personal"
-		},
-		"hilde_ally_personal": {
-			"type": "narration",
-			"text": "Hilde fasst meine Hände. Ihre Finger sind rau und warm, voller Leben trotz ihres Alters.",
-			"next": "hilde_ally_hands"
-		},
-		"hilde_ally_hands": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Du bist ihr ähnlicher, als du denkst, Kind. Dieselbe Sturheit. Dieselbe Güte. Und dieselbe Angst, die sie nie zugegeben hat.",
-			"next": "elise_hilde_personal"
-		},
-		"elise_hilde_personal": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Hatte sie Angst? Großmutter wirkte immer so... unerschütterlich.",
-			"next": "hilde_ally_truth"
-		},
-		"hilde_ally_truth": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Natürlich hatte sie Angst. Jede Nacht. Aber sie hat die Angst benutzt - als Brennstoff. Du kannst das auch.",
-			"next": "hilde_ally_3"
-		},
-		"hilde_ally_3": {
-			"type": "narration",
-			"text": "Hilde beginnt, Kräuterbündel zusammenzubinden und Zeichen auf Stoffstreifen zu malen. Sie murmelt dabei leise den Gesang. Die Luft in der Hütte verdichtet sich.",
-			"next": "hide_hilde_ally"
-		},
-		"hide_hilde_ally": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "center",
-			"action": "hide",
-			"next": "ally_converge"
-		},
-		"ally_voss": {
-			"type": "background",
-			"background": "church_interior",
-			"transition": "fade",
-			"next": "show_voss_ally"
-		},
-		"show_voss_ally": {
-			"type": "character",
-			"character": "voss",
-			"expression": "praying",
-			"position": "right",
-			"action": "show",
-			"next": "voss_ally_1"
-		},
-		"voss_ally_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "angry",
-			"text": "Dreißig Jahre habe ich geschwiegen. Dreißig Jahre habe ich zugesehen. Das endet morgen.",
-			"next": "elise_voss_1"
-		},
-		"elise_voss_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Pfarrer Voss, Sie haben dreißig Jahre unter Schuldgefühlen gelitten. Das reicht.",
-			"next": "voss_reacts"
-		},
-		"voss_reacts": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Nichts reicht jemals. Nicht für Friedrich Meier. Nicht für all die anderen.",
-			"next": "elise_voss_lead"
-		},
-		"elise_voss_lead": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Dann helfen Sie mir, es zu beenden. Nicht für die Schuld - für die Zukunft. Damit nie wieder jemand geopfert wird.",
-			"next": "check_confronted_voss"
-		},
-		"check_confronted_voss": {
-			"type": "flag_check",
-			"flag": "confronted_voss",
-			"value": 1,
-			"true_next": "voss_confronted_callback",
-			"false_next": "voss_ally_2"
-		},
-		"voss_confronted_callback": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Sie haben mich in der Kirche gefragt, was ich über die Fütterung weiß. Ich habe damals nicht alles gesagt. Aber jetzt schulde ich Ihnen die volle Wahrheit.",
-			"next": "elise_voss_truth"
-		},
-		"elise_voss_truth": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Was haben Sie zurückgehalten?",
-			"next": "voss_confession"
-		},
-		"voss_confession": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Friedrich hat geschrien. Die ganze Nacht. Und ich... ich habe gebetet, statt ihm zu helfen. Ich habe mein Gebet lauter gesprochen als seine Schreie. Das verzeihe ich mir nie.",
-			"next": "elise_voss_forgive"
-		},
-		"elise_voss_forgive": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Sie können es nicht rückgängig machen. Aber Sie können dafür sorgen, dass es das letzte Mal war.",
-			"next": "voss_ally_2"
-		},
-		"voss_ally_2": {
-			"type": "character",
-			"character": "voss",
-			"expression": "broken",
-			"position": "right",
-			"action": "show",
-			"next": "voss_ally_3"
-		},
-		"voss_ally_3": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "warning",
-			"text": "Ich kenne jeden Stein in dieser Kammer. Ich weiß, wo die Fallen sind, wo der Boden dünn ist, wo das Singen am lautesten wird. Ich werde Sie führen.",
-			"next": "elise_voss_risk"
-		},
-		"elise_voss_risk": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Was wenn Otto uns aufhält? Er kontrolliert das Dorf.",
-			"next": "voss_ally_4"
-		},
-		"voss_ally_4": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Und wenn es schiefgeht... dann gehe ich als Erster. Das bin ich Friedrich Meier schuldig. Allen bin ich das schuldig.",
-			"next": "elise_voss_no"
-		},
-		"elise_voss_no": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Niemand muss sterben, Pfarrer. Nicht Sie, nicht ich. Dafür machen wir das.",
-			"next": "hide_voss_ally"
-		},
-		"hide_voss_ally": {
-			"type": "character",
-			"character": "voss",
-			"expression": "broken",
-			"position": "right",
-			"action": "hide",
-			"next": "ally_converge"
-		},
-		"ally_converge": {
-			"type": "flag_check",
-			"flag": "chose_solo",
-			"value": 1,
-			"true_next": "ally_converge_solo",
-			"false_next": "ally_converge_allied"
-		},
-		"ally_converge_solo": {
-			"type": "narration",
-			"text": "Ich bin allein. Wie Großmutter. Aber ich habe ihr Wissen, ihre Vorbereitung. Das muss reichen.",
-			"next": "check_anna_warning_konrad"
-		},
-		"ally_converge_allied": {
-			"type": "narration",
-			"text": "Ich habe einen Verbündeten. Jemanden, der morgen Nacht neben mir stehen wird, wenn ich mich dem stellen muss, was unter der Erde wartet.",
-			"next": "check_anna_warning_konrad"
-		},
-		"elise_konrad_consider": {
-			"type": "narration",
-			"text": "Aber da ist noch Konrad. Das Gefäß. Der Mann, der zwischen sich selbst und dem Wesen gefangen ist. Kann er mir helfen - oder wird er mich verraten?",
-			"next": "choice_konrad_final"
-		},
-		"choice_konrad_final": {
-			"type": "choice",
-			"choices": [
-				{
-					"text": "Konrad aufsuchen - vielleicht kann er dem Wesen widerstehen",
-					"set_flags": {
-						"sought_konrad": 1
-					},
-					"next": "konrad_final"
-				},
-				{
-					"text": "Konrad meiden - er ist zu gefährlich",
-					"set_flags": {
-						"avoided_konrad": 1
-					},
-					"next": "avoided_konrad"
-				}
-			]
-		},
-		"konrad_final": {
-			"type": "background",
-			"background": "village_school",
-			"transition": "fade",
-			"next": "show_konrad_final"
-		},
-		"show_konrad_final": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "center",
-			"action": "show",
-			"next": "konrad_final_1"
-		},
-		"konrad_final_1": {
-			"type": "narration",
-			"text": "Konrad sitzt allein im Klassenzimmer. Er hat Spiralen an die Tafel gezeichnet - Dutzende, ineinander verschlungen. Als ich eintrete, wischt er sie hastig ab.",
-			"next": "elise_konrad_enter"
-		},
-		"elise_konrad_enter": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Konrad. Wie geht es dir?",
-			"next": "konrad_final_2"
-		},
-		"konrad_final_2": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "dark",
-			"text": "Elise. Ich... es wird schlimmer. Ich verliere mich. Nachts wache ich an Orten auf, an die ich nicht gegangen bin. Meine Hände tun Dinge, die ich nicht will.",
-			"next": "elise_konrad_concern"
-		},
-		"elise_konrad_concern": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Wann hast du zuletzt geschlafen? Richtig geschlafen?",
-			"next": "konrad_final_sleep"
-		},
-		"konrad_final_sleep": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Ich weiß es nicht mehr. Die Nächte verschwimmen. Manchmal weiß ich nicht, ob ich wach bin oder träume. Ob ICH denke oder ES.",
-			"next": "effect_konrad_glitch"
-		},
-		"effect_konrad_glitch": {
-			"type": "effect",
-			"effect": "sprite_distortion",
-			"params": {
-				"duration": 1.0
-			},
-			"next": "konrad_final_3"
-		},
-		"konrad_final_3": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "possessed",
-			"position": "center",
-			"action": "show",
-			"next": "konrad_final_4"
-		},
-		"konrad_final_4": {
-			"type": "narration",
-			"text": "Seine Augen flackern - braun, dann etwas anderes, tiefer, älter. Für einen Moment sehe ich etwas Riesiges hinter seinen Pupillen, wie einen Ozean hinter einer Glasscheibe.",
-			"next": "effect_possession"
-		},
-		"effect_possession": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 0.8
-			},
-			"next": "konrad_creature_voice"
-		},
-		"konrad_creature_voice": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "possessed",
-			"text": "Elise... es ist HIER... es spricht durch mich... ich kann nicht...",
-			"next": "check_konrad_suspicion_callback"
-		},
-		"check_konrad_suspicion_callback": {
-			"type": "flag_check",
-			"flag": "konrad_is_suspicious",
-			"value": 1,
-			"true_next": "elise_konrad_reach_tested",
-			"false_next": "elise_konrad_reach"
-		},
-		"elise_konrad_reach_tested": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Konrad, hör zu! Ich habe dich damals getestet, weil ich dir nicht geglaubt habe. Es tut mir leid. Bleib jetzt bei mir. DU bist Konrad Müller.",
-			"next": "konrad_final_5"
-		},
-		"elise_konrad_reach": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Konrad! Hör auf meine Stimme. DU bist Konrad Müller. Du bist Lehrer. Du hast von Großmutter lesen gelernt.",
-			"next": "konrad_final_5"
-		},
-		"konrad_final_5": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "center",
-			"action": "show",
-			"next": "konrad_final_6"
-		},
-		"konrad_final_6": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Hilf mir, Elise. Bitte. Bevor es mich ganz hat. Ich will nicht sein Werkzeug sein.",
-			"next": "elise_konrad_promise"
-		},
-		"elise_konrad_promise": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Ich werde dich befreien, Konrad. Oder es zumindest versuchen. Das verspreche ich.",
-			"next": "konrad_final_hope"
-		},
-		"konrad_final_hope": {
-			"type": "narration",
-			"text": "Ein schwaches Lächeln. Das erste echte Lächeln, das ich bei ihm gesehen habe - nicht charmant, nicht verführerisch. Nur dankbar. Nur menschlich.",
-			"next": "set_konrad_plea"
-		},
-		"set_konrad_plea": {
-			"type": "set_flag",
-			"flag": "konrad_asked_help",
-			"value": 1,
-			"next": "hide_konrad_final"
-		},
-		"hide_konrad_final": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "center",
-			"action": "hide",
-			"next": "ally_final_converge"
-		},
-		"avoided_konrad": {
-			"type": "narration",
-			"text": "Konrad ist nicht mehr Konrad. Nicht ganz. Ich kann das Risiko nicht eingehen, dass das Wesen durch ihn von meinem Plan erfährt.",
-			"next": "elise_konrad_regret"
-		},
-		"elise_konrad_regret": {
-			"type": "narration",
-			"text": "Es tut mir leid, Konrad. Vielleicht kann ich dir helfen, wenn das hier vorbei ist. Aber jetzt... jetzt muss ich dich meiden. Zu deinem eigenen Schutz.",
-			"next": "ally_final_converge"
-		},
-		"ally_final_converge": {
-			"type": "narration",
-			"text": "Der Abend bricht herein. Der Himmel färbt sich in Farben, die es nicht geben sollte - violett und grün und ein Rot, das an Wunden erinnert.",
-			"next": "elise_final_thought"
-		},
-		"elise_final_thought": {
-			"type": "narration",
-			"text": "Morgen ist der Tag. Morgen stehe ich in der Kammer, über dem dünnsten Stein, und singe den Gesang, den Hilde mich gelehrt hat. Und das Wesen wird antworten.",
-			"next": "journal_allies"
-		},
-		"journal_allies": {
-			"type": "journal",
-			"entry_id": "allies_chosen",
-			"title": "Verbündete gewählt",
-			"content": "Morgen ist der Tag der Fütterung. Ich habe meine Verbündeten gewählt und den Plan besprochen. Großmutters Bindungsritual statt des Blutrituals. Anna sagt, das Wesen hat Angst vor mir. Das macht zwei von uns.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "res://data/dialogue/act3/descent.json"
-		},
-		"check_konrad_history": {
-			"type": "flag_check",
-			"flag": "trusted_konrad",
-			"value": 1,
-			"true_next": "elise_assess_trusted_konrad",
-			"false_next": "check_konrad_distrust"
-		},
-		"check_konrad_distrust": {
-			"type": "flag_check",
-			"flag": "distrusted_konrad",
-			"value": 1,
-			"true_next": "elise_assess_distrusted_konrad",
-			"false_next": "check_konrad_tested"
-		},
-		"check_konrad_tested": {
-			"type": "flag_check",
-			"flag": "tested_konrad",
-			"value": 1,
-			"true_next": "elise_assess_tested_konrad",
-			"false_next": "elise_assess"
-		},
-		"elise_assess_trusted_konrad": {
-			"type": "narration",
-			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn eingeweiht. Wenn das ein Fehler war, bezahlen wir morgen Nacht dafür.",
-			"next": "elise_decide"
-		},
-		"elise_assess_distrusted_konrad": {
-			"type": "narration",
-			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten. Vielleicht rettet uns das. Vielleicht war es ein Fehler.",
-			"next": "elise_decide"
-		},
-		"elise_assess_tested_konrad": {
-			"type": "narration",
-			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn getestet, statt ihm zu vertrauen. Seitdem weiß ich: Er verbirgt etwas - und vielleicht kämpft er gleichzeitig dagegen an.",
-			"next": "elise_decide"
-		},
-		"check_anna_warning_konrad": {
-			"type": "flag_check",
-			"flag": "anna_warning",
-			"value": 1,
-			"true_next": "elise_konrad_consider_anna",
-			"false_next": "elise_konrad_consider"
-		},
-		"elise_konrad_consider_anna": {
-			"type": "narration",
-			"text": "Annas Worte lassen mich nicht los: Das Wesen hat Angst, verlassen zu werden. Und Konrad steckt genau dazwischen - Mensch und Echo zugleich. Wenn ich ihn falsch einschätze, verliere ich ihn. Wenn ich ihn ignoriere, vielleicht auch.",
-			"next": "elise_konrad_consider"
-		}
-	}
+  "title": "Akt 3 - Verbündete",
+  "start": "bg_village",
+  "nodes": {
+    "bg_village": {
+      "type": "background",
+      "background": "village_corrupted",
+      "transition": "fade",
+      "next": "snd_tension"
+    },
+    "snd_tension": {
+      "type": "sound",
+      "sound_type": "music",
+      "path": "tension.wav",
+      "next": "effect_mood"
+    },
+    "effect_mood": {
+      "type": "effect",
+      "effect": "bg_corruption",
+      "params": {
+        "intensity": 0.3,
+        "duration": 1.5
+      },
+      "next": "narration_1"
+    },
+    "narration_1": {
+      "type": "narration",
+      "text": "Tag sechs, Nachmittag. Morgen ist der Jahrestag. Ich brauche Hilfe - und ich muss mich entscheiden, wem ich vertraue.",
+      "next": "check_konrad_history"
+    },
+    "elise_assess": {
+      "type": "narration",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... Konrad ist der Schlüssel zu allem - oder die größte Gefahr.",
+      "next": "elise_decide"
+    },
+    "elise_decide": {
+      "type": "narration",
+      "text": "Ich kann nicht alle gleichzeitig einweihen. Otto hat Augen überall. Einer muss mein Hauptverbündeter sein - derjenige, auf den ich mich morgen Nacht verlasse.",
+      "next": "choice_primary_ally"
+    },
+    "choice_primary_ally": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Georg als Hauptverbündeten wählen - Stärke und Loyalität",
+          "set_flags": {
+            "allied_georg": 1,
+            "georg_trust": 10
+          },
+          "next": "ally_georg"
+        },
+        {
+          "text": "Hilde als Hauptverbündete wählen - Wissen und Erfahrung",
+          "set_flags": {
+            "allied_hilde": 1,
+            "hilde_trust": 10
+          },
+          "next": "ally_hilde"
+        },
+        {
+          "text": "Voss als Hauptverbündeten wählen - Zugang und Reue",
+          "set_flags": {
+            "allied_voss": 1,
+            "voss_trust": 10
+          },
+          "next": "ally_voss"
+        },
+        {
+          "text": "Niemanden einweihen - ich will niemanden in Gefahr bringen",
+          "set_flags": {
+            "chose_solo": 1
+          },
+          "add_flags": {
+            "courage": 3
+          },
+          "next": "ally_solo"
+        }
+      ]
+    },
+    "ally_solo": {
+      "type": "narration",
+      "text": "Niemanden. Ich werde niemanden in Gefahr bringen. Nicht Georg, nicht Hilde, nicht Voss. Was auch immer in der Kammer wartet - es ist zwischen mir und dem Wesen. Nur uns zwei.",
+      "next": "ally_solo_2"
+    },
+    "ally_solo_2": {
+      "type": "narration",
+      "text": "Großmutter hat dreißig Jahre die Last getragen, ohne sie auf andere abzuwälzen. Wenn ich ihre Enkelin bin, kann ich das auch.",
+      "next": "ally_solo_3"
+    },
+    "ally_solo_3": {
+      "type": "narration",
+      "text": "Es ist einsam. Aber Einsamkeit ist kein Todesurteil. Das sollte ich wissen - ich bin Folkloristin, nicht Soldatin. Mein Werkzeug ist Verständnis, nicht Gewalt. Dafür brauche ich keine Armee.",
+      "next": "ally_converge"
+    },
+    "ally_georg": {
+      "type": "background",
+      "background": "blacksmith_shop",
+      "transition": "fade",
+      "next": "show_georg_ally"
+    },
+    "show_georg_ally": {
+      "type": "character",
+      "character": "georg",
+      "expression": "determined",
+      "position": "right",
+      "action": "show",
+      "next": "georg_ally_1"
+    },
+    "georg_ally_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "guilty",
+      "text": "Du willst es wirklich durchziehen. Margarethes Ritual. Ich habe gehofft, dass du gehst, Elise. Aber ich habe auch gewusst, dass du bleibst.",
+      "next": "check_saw_name_in_book_georg"
+    },
+    "check_saw_name_in_book_georg": {
+      "type": "flag_check",
+      "flag": "saw_name_in_book",
+      "value": 1,
+      "true_next": "elise_georg_1_book",
+      "false_next": "elise_georg_1_no_book"
+    },
+    "elise_georg_1_book": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Gehen war nie wirklich eine Option. Nicht seit ich meinen Namen in dem Buch gesehen habe.",
+      "next": "check_demanded_truth_callback"
+    },
+    "elise_georg_1_no_book": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Gehen war nie wirklich eine Option. Nicht seit ich verstanden habe, was unter dieser Kirche wartet.",
+      "next": "check_demanded_truth_callback"
+    },
+    "check_demanded_truth_callback": {
+      "type": "flag_check",
+      "flag": "demanded_truth",
+      "value": 1,
+      "true_next": "georg_demanded_truth_callback",
+      "false_next": "check_stayed_quiet_callback"
+    },
+    "georg_demanded_truth_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "guilty",
+      "text": "Du hast mich in der ersten Nacht unter Druck gesetzt, bis ich reden musste. Das war hart - aber richtig. Ohne das wären wir heute nicht hier.",
+      "next": "check_tried_to_flee"
+    },
+    "check_stayed_quiet_callback": {
+      "type": "flag_check",
+      "flag": "stayed_quiet",
+      "value": 1,
+      "true_next": "georg_stayed_quiet_callback",
+      "false_next": "check_wanted_to_follow_callback"
+    },
+    "georg_stayed_quiet_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "protective",
+      "text": "Du warst in der ersten Nacht stiller als alle anderen. Ich dachte erst, du gibst auf. Dabei hast du nur zugehört - und alles zusammengesetzt.",
+      "next": "check_tried_to_flee"
+    },
+    "check_wanted_to_follow_callback": {
+      "type": "flag_check",
+      "flag": "wanted_to_follow",
+      "value": 1,
+      "true_next": "georg_wanted_follow_callback",
+      "false_next": "check_tried_to_flee"
+    },
+    "georg_wanted_follow_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Du wolltest mir in der ersten Nacht nachgehen. Ich habe dich damals weggeschickt. Heute nicht mehr. Heute gehen wir den Weg zusammen.",
+      "next": "check_tried_to_flee"
+    },
+    "check_tried_to_flee": {
+      "type": "flag_check",
+      "flag": "tried_to_flee",
+      "value": 1,
+      "true_next": "georg_flee_callback",
+      "false_next": "georg_ally_2"
+    },
+    "georg_flee_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "protective",
+      "text": "Du wolltest fliehen, damals. Das war vernünftig. Aber du bist geblieben. Das war mutig. Deine Großmutter wäre stolz.",
+      "next": "elise_georg_flee"
+    },
+    "elise_georg_flee": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Der Wald hat mich nicht gelassen. Aber selbst wenn er es hätte... ich glaube, ich wäre zurückgekommen.",
+      "next": "georg_ally_2"
+    },
+    "georg_ally_2": {
+      "type": "character",
+      "character": "georg",
+      "expression": "protective",
+      "position": "right",
+      "action": "show",
+      "next": "elise_georg_question"
+    },
+    "elise_georg_question": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Georg, was passiert wenn ich scheitere? Was passiert mit dir, mit Graubach?",
+      "next": "georg_ally_answer"
+    },
+    "georg_ally_answer": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Dann war alles umsonst. Dreißig Jahre. Margarethes Opfer. Meine Schuld.",
+      "next": "check_asked_about_entity_callback"
+    },
+    "check_asked_about_entity_callback": {
+      "type": "flag_check",
+      "flag": "asked_about_entity",
+      "value": 1,
+      "true_next": "georg_entity_callback",
+      "false_next": "check_asked_about_police_callback"
+    },
+    "georg_entity_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "guilty",
+      "text": "Du hast mich schon in der Schmiede gefragt, was da unten wirklich lebt. Ich hab dir nur die halbe Wahrheit gesagt. Heute gibt es keine halben Wahrheiten mehr.",
+      "next": "elise_georg_risk"
+    },
+    "check_asked_about_police_callback": {
+      "type": "flag_check",
+      "flag": "asked_about_police",
+      "value": 1,
+      "true_next": "georg_police_callback",
+      "false_next": "elise_georg_risk"
+    },
+    "georg_police_callback": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "angry",
+      "text": "Du hast nach der Polizei gefragt, als gäbe es da Hilfe. In Graubach hilft uns niemand von außen. Heute Nacht sind nur wir hier.",
+      "next": "elise_georg_risk"
+    },
+    "elise_georg_risk": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Und du? Was riskierst du? Du könntest fliehen - du bist nicht im Buch.",
+      "next": "georg_ally_3"
+    },
+    "georg_ally_3": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Ich hätte vor dreißig Jahren fliehen sollen. Jetzt ist es zu spät für Feigheit. Ich bin dabei. Ich werde Otto aufhalten, wenn er kommt.",
+      "next": "elise_georg_otto"
+    },
+    "elise_georg_otto": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Otto hat Männer. Was wenn sie bewaffnet sind?",
+      "next": "georg_ally_hammer"
+    },
+    "georg_ally_hammer": {
+      "type": "narration",
+      "text": "Georg nimmt einen schweren Schmiedehammer von der Wand. In seinen Augen brennt ein Feuer, das ich noch nie gesehen habe.",
+      "next": "georg_ally_4"
+    },
+    "georg_ally_4": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Er hat Männer, aber ich habe Hämmer. Und dreißig Jahre aufgestaute Wut. Für Margarethe.",
+      "next": "elise_georg_grateful"
+    },
+    "elise_georg_grateful": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Danke, Georg. Großmutter hätte sich keinen besseren Verbündeten wünschen können.",
+      "next": "hide_georg_ally"
+    },
+    "hide_georg_ally": {
+      "type": "character",
+      "character": "georg",
+      "expression": "determined",
+      "position": "right",
+      "action": "hide",
+      "next": "ally_converge"
+    },
+    "ally_hilde": {
+      "type": "background",
+      "background": "hilde_cottage",
+      "transition": "fade",
+      "next": "show_hilde_ally"
+    },
+    "show_hilde_ally": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "ritual",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_ally_1"
+    },
+    "hilde_ally_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Morgen also. Der Gesang muss bei Sonnenuntergang beginnen, wenn das Wesen zwischen Schlaf und Wachen liegt. Dann ist es am verwundbarsten.",
+      "next": "elise_hilde_1"
+    },
+    "elise_hilde_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Hilde, der Gesang... ich schaffe das nicht allein. Als ich es bei Ihnen versucht habe, hat meine Stimme kaum gereicht.",
+      "next": "hilde_ally_2"
+    },
+    "hilde_ally_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Deshalb bin ich hier. Wir singen zusammen. Meine Stimme mag alt sein, aber zusammen - vielleicht reicht es. Die alten Völker haben immer im Chor gesungen.",
+      "next": "elise_hilde_chance"
+    },
+    "elise_hilde_chance": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Was wenn die Kreatur den Gesang nicht akzeptiert? Was wenn es nicht reicht?",
+      "next": "hilde_ally_improvise"
+    },
+    "hilde_ally_improvise": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Dann improvisieren wir. Wie deine Großmutter es getan hätte. Margarethe hat nie aufgegeben - und wir werden es auch nicht.",
+      "next": "hilde_ally_personal"
+    },
+    "hilde_ally_personal": {
+      "type": "narration",
+      "text": "Hilde fasst meine Hände. Ihre Finger sind rau und warm, voller Leben trotz ihres Alters.",
+      "next": "hilde_ally_hands"
+    },
+    "hilde_ally_hands": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du bist ihr ähnlicher, als du denkst, Kind. Dieselbe Sturheit. Dieselbe Güte. Und dieselbe Angst, die sie nie zugegeben hat.",
+      "next": "elise_hilde_personal"
+    },
+    "elise_hilde_personal": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Hatte sie Angst? Großmutter wirkte immer so... unerschütterlich.",
+      "next": "hilde_ally_truth"
+    },
+    "hilde_ally_truth": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Natürlich hatte sie Angst. Jede Nacht. Aber sie hat die Angst benutzt - als Brennstoff. Du kannst das auch.",
+      "next": "hilde_ally_3"
+    },
+    "hilde_ally_3": {
+      "type": "narration",
+      "text": "Hilde beginnt, Kräuterbündel zusammenzubinden und Zeichen auf Stoffstreifen zu malen. Sie murmelt dabei leise den Gesang. Die Luft in der Hütte verdichtet sich.",
+      "next": "hide_hilde_ally"
+    },
+    "hide_hilde_ally": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "ritual",
+      "position": "center",
+      "action": "hide",
+      "next": "ally_converge"
+    },
+    "ally_voss": {
+      "type": "background",
+      "background": "church_interior",
+      "transition": "fade",
+      "next": "show_voss_ally"
+    },
+    "show_voss_ally": {
+      "type": "character",
+      "character": "voss",
+      "expression": "praying",
+      "position": "right",
+      "action": "show",
+      "next": "voss_ally_1"
+    },
+    "voss_ally_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "angry",
+      "text": "Dreißig Jahre habe ich geschwiegen. Dreißig Jahre habe ich zugesehen. Das endet morgen.",
+      "next": "elise_voss_1"
+    },
+    "elise_voss_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Pfarrer Voss, Sie haben dreißig Jahre unter Schuldgefühlen gelitten. Das reicht.",
+      "next": "voss_reacts"
+    },
+    "voss_reacts": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Nichts reicht jemals. Nicht für Friedrich Meier. Nicht für all die anderen.",
+      "next": "elise_voss_lead"
+    },
+    "elise_voss_lead": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Dann helfen Sie mir, es zu beenden. Nicht für die Schuld - für die Zukunft. Damit nie wieder jemand geopfert wird.",
+      "next": "check_confronted_voss"
+    },
+    "check_confronted_voss": {
+      "type": "flag_check",
+      "flag": "confronted_voss",
+      "value": 1,
+      "true_next": "voss_confronted_callback",
+      "false_next": "voss_ally_2"
+    },
+    "voss_confronted_callback": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Sie haben mich in der Kirche gefragt, was ich über die Fütterung weiß. Ich habe damals nicht alles gesagt. Aber jetzt schulde ich Ihnen die volle Wahrheit.",
+      "next": "elise_voss_truth"
+    },
+    "elise_voss_truth": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Was haben Sie zurückgehalten?",
+      "next": "voss_confession"
+    },
+    "voss_confession": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Friedrich hat geschrien. Die ganze Nacht. Und ich... ich habe gebetet, statt ihm zu helfen. Ich habe mein Gebet lauter gesprochen als seine Schreie. Das verzeihe ich mir nie.",
+      "next": "elise_voss_forgive"
+    },
+    "elise_voss_forgive": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Sie können es nicht rückgängig machen. Aber Sie können dafür sorgen, dass es das letzte Mal war.",
+      "next": "voss_ally_2"
+    },
+    "voss_ally_2": {
+      "type": "character",
+      "character": "voss",
+      "expression": "broken",
+      "position": "right",
+      "action": "show",
+      "next": "voss_ally_3"
+    },
+    "voss_ally_3": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Ich kenne jeden Stein in dieser Kammer: dort bricht der Boden, dort schnappt die alte Falle zu, dort trägt das Singen weiter als ein Schrei. Ich werde Sie führen.",
+      "next": "elise_voss_risk"
+    },
+    "elise_voss_risk": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Was wenn Otto uns aufhält? Er kontrolliert das Dorf.",
+      "next": "voss_ally_4"
+    },
+    "voss_ally_4": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Und wenn es schiefgeht... dann gehe ich als Erster. Das bin ich Friedrich Meier schuldig. Allen bin ich das schuldig.",
+      "next": "elise_voss_no"
+    },
+    "elise_voss_no": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Niemand muss sterben, Pfarrer. Nicht Sie, nicht ich. Dafür machen wir das.",
+      "next": "hide_voss_ally"
+    },
+    "hide_voss_ally": {
+      "type": "character",
+      "character": "voss",
+      "expression": "broken",
+      "position": "right",
+      "action": "hide",
+      "next": "ally_converge"
+    },
+    "ally_converge": {
+      "type": "flag_check",
+      "flag": "chose_solo",
+      "value": 1,
+      "true_next": "ally_converge_solo",
+      "false_next": "ally_converge_allied"
+    },
+    "ally_converge_solo": {
+      "type": "narration",
+      "text": "Ich bin allein. Wie Großmutter. Aber ich habe ihr Wissen, ihre Vorbereitung. Wenn ich heute Nacht zögere, stirbt Graubach mit mir - also muss es reichen.",
+      "next": "check_anna_warning_konrad"
+    },
+    "ally_converge_allied": {
+      "type": "narration",
+      "text": "Ich habe einen Verbündeten. Jemanden, der morgen Nacht neben mir stehen wird, wenn ich mich dem stellen muss, was unter der Erde wartet.",
+      "next": "check_anna_warning_konrad"
+    },
+    "elise_konrad_consider": {
+      "type": "narration",
+      "text": "Aber da ist noch Konrad. Das Gefäß. Der Mann, der zwischen sich selbst und dem Wesen gefangen ist. Kann er mir helfen - oder wird er mich verraten?",
+      "next": "choice_konrad_final"
+    },
+    "choice_konrad_final": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Konrad aufsuchen - vielleicht kann er dem Wesen widerstehen",
+          "set_flags": {
+            "sought_konrad": 1
+          },
+          "next": "konrad_final"
+        },
+        {
+          "text": "Konrad meiden - er ist zu gefährlich",
+          "set_flags": {
+            "avoided_konrad": 1
+          },
+          "next": "avoided_konrad"
+        }
+      ]
+    },
+    "konrad_final": {
+      "type": "background",
+      "background": "village_school",
+      "transition": "fade",
+      "next": "show_konrad_final"
+    },
+    "show_konrad_final": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "center",
+      "action": "show",
+      "next": "konrad_final_1"
+    },
+    "konrad_final_1": {
+      "type": "narration",
+      "text": "Konrad sitzt allein im Klassenzimmer. Er hat Spiralen an die Tafel gezeichnet - Dutzende, ineinander verschlungen. Als ich eintrete, wischt er sie hastig ab.",
+      "next": "elise_konrad_enter"
+    },
+    "elise_konrad_enter": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad. Wie geht es dir?",
+      "next": "konrad_final_2"
+    },
+    "konrad_final_2": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "dark",
+      "text": "Elise. Ich... es wird schlimmer. Ich verliere mich. Nachts wache ich an Orten auf, an die ich nicht gegangen bin. Meine Hände tun Dinge, die ich nicht will.",
+      "next": "elise_konrad_concern"
+    },
+    "elise_konrad_concern": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Wann hast du zuletzt geschlafen? Richtig geschlafen?",
+      "next": "konrad_final_sleep"
+    },
+    "konrad_final_sleep": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Ich kann es kaum noch trennen. Die Nächte verschwimmen. Manchmal wache ich auf und finde Worte in meinem Mund, die ich nie gelernt habe. Dann weiß ich nicht, ob ICH denke oder ES.",
+      "next": "effect_konrad_glitch"
+    },
+    "effect_konrad_glitch": {
+      "type": "effect",
+      "effect": "sprite_distortion",
+      "params": {
+        "duration": 1.0
+      },
+      "next": "konrad_final_3"
+    },
+    "konrad_final_3": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "possessed",
+      "position": "center",
+      "action": "show",
+      "next": "konrad_final_4"
+    },
+    "konrad_final_4": {
+      "type": "narration",
+      "text": "Seine Augen flackern - braun, dann etwas anderes, tiefer, älter. Für einen Moment sehe ich etwas Riesiges hinter seinen Pupillen, wie einen Ozean hinter einer Glasscheibe.",
+      "next": "effect_possession"
+    },
+    "effect_possession": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 0.8
+      },
+      "next": "konrad_creature_voice"
+    },
+    "konrad_creature_voice": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "possessed",
+      "text": "Elise... es ist HIER... es spricht durch mich... ich kann nicht...",
+      "next": "check_konrad_suspicion_callback"
+    },
+    "check_konrad_suspicion_callback": {
+      "type": "flag_check",
+      "flag": "konrad_is_suspicious",
+      "value": 1,
+      "true_next": "elise_konrad_reach_tested",
+      "false_next": "elise_konrad_reach"
+    },
+    "elise_konrad_reach_tested": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Konrad, hör zu! Ich habe dich damals getestet, weil ich dir nicht geglaubt habe. Es tut mir leid. Bleib jetzt bei mir. DU bist Konrad Müller.",
+      "next": "konrad_final_5"
+    },
+    "elise_konrad_reach": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Konrad! Hör auf meine Stimme. DU bist Konrad Müller. Du bist Lehrer. Du hast von Großmutter lesen gelernt.",
+      "next": "konrad_final_5"
+    },
+    "konrad_final_5": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "center",
+      "action": "show",
+      "next": "konrad_final_6"
+    },
+    "konrad_final_6": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Hilf mir, Elise. Bitte. Bevor es mich ganz hat. Ich will nicht sein Werkzeug sein.",
+      "next": "elise_konrad_promise"
+    },
+    "elise_konrad_promise": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich werde dich befreien, Konrad. Oder es zumindest versuchen. Das verspreche ich.",
+      "next": "konrad_final_hope"
+    },
+    "konrad_final_hope": {
+      "type": "narration",
+      "text": "Ein schwaches Lächeln. Das erste echte Lächeln, das ich bei ihm gesehen habe - nicht charmant, nicht verführerisch. Nur dankbar. Nur menschlich.",
+      "next": "set_konrad_plea"
+    },
+    "set_konrad_plea": {
+      "type": "set_flag",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "next": "hide_konrad_final"
+    },
+    "hide_konrad_final": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "center",
+      "action": "hide",
+      "next": "ally_final_converge"
+    },
+    "avoided_konrad": {
+      "type": "narration",
+      "text": "Konrad ist nicht mehr Konrad. Nicht ganz. Ich kann das Risiko nicht eingehen, dass das Wesen durch ihn von meinem Plan erfährt.",
+      "next": "elise_konrad_regret"
+    },
+    "elise_konrad_regret": {
+      "type": "narration",
+      "text": "Es tut mir leid, Konrad. Vielleicht kann ich dir helfen, wenn das hier vorbei ist. Aber jetzt... jetzt muss ich dich meiden. Zu deinem eigenen Schutz.",
+      "next": "ally_final_converge"
+    },
+    "ally_final_converge": {
+      "type": "narration",
+      "text": "Der Abend bricht herein. Der Himmel färbt sich in Farben, die es nicht geben sollte - violett und grün und ein Rot, das an Wunden erinnert.",
+      "next": "elise_final_thought"
+    },
+    "elise_final_thought": {
+      "type": "narration",
+      "text": "Morgen ist der Tag. Morgen stehe ich in der Kammer, über dem dünnsten Stein, und singe den Gesang, den Hilde mich gelehrt hat. Und das Wesen wird antworten.",
+      "next": "journal_allies"
+    },
+    "journal_allies": {
+      "type": "journal",
+      "entry_id": "allies_chosen",
+      "title": "Verbündete gewählt",
+      "content": "Morgen ist der Tag der Fütterung. Ich habe meine Verbündeten gewählt und den Plan besprochen. Großmutters Bindungsritual statt des Blutrituals. Anna sagt, das Wesen hat Angst vor mir. Das macht zwei von uns.",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "res://data/dialogue/act3/descent.json"
+    },
+    "check_konrad_history": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "elise_assess_trusted_konrad",
+      "false_next": "check_konrad_distrust"
+    },
+    "check_konrad_distrust": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "elise_assess_distrusted_konrad",
+      "false_next": "check_konrad_tested"
+    },
+    "check_konrad_tested": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "elise_assess_tested_konrad",
+      "false_next": "elise_assess"
+    },
+    "elise_assess_trusted_konrad": {
+      "type": "narration",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn eingeweiht. Wenn das ein Fehler war, bezahlen wir morgen Nacht dafür.",
+      "next": "elise_decide"
+    },
+    "elise_assess_distrusted_konrad": {
+      "type": "narration",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten. Vielleicht rettet uns das. Vielleicht war es ein Fehler.",
+      "next": "elise_decide"
+    },
+    "elise_assess_tested_konrad": {
+      "type": "narration",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn getestet, statt ihm zu vertrauen. Seitdem weiß ich: Er verbirgt etwas - und vielleicht kämpft er gleichzeitig dagegen an.",
+      "next": "elise_decide"
+    },
+    "check_anna_warning_konrad": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "elise_konrad_consider_anna",
+      "false_next": "elise_konrad_consider"
+    },
+    "elise_konrad_consider_anna": {
+      "type": "narration",
+      "text": "Annas Worte lassen mich nicht los: Das Wesen hat Angst, verlassen zu werden. Und Konrad steckt genau dazwischen - Mensch und Echo zugleich. Wenn ich ihn falsch einschätze, verliere ich ihn. Wenn ich ihn ignoriere, vielleicht auch.",
+      "next": "elise_konrad_consider"
+    }
+  }
 }

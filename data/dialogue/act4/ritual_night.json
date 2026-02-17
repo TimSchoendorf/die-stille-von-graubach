@@ -558,7 +558,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Ich weiß, dass du mich kennst. Mein Name stand in deinem Buch, bevor ich geboren wurde. Ich bin nicht hier, um zu fliehen - ich bin hier, um zu entscheiden, was aus uns beiden wird.",
+      "text": "Du kennst mich. Mein Name stand in deinem Buch, bevor ich geboren wurde, und jede Glocke in diesem Dorf hat mich bis hierher getrieben. Ich bin nicht hier, um zu fliehen - ich bin hier, um zu entscheiden, was aus uns beiden wird.",
       "next": "narration_creature_speak_3"
     },
     "narration_creature_speak_3": {
@@ -914,7 +914,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Ich weiß. Ich habe es gehört, bis mir die Knochen weh taten. Es will nicht nur fressen - es will festhalten. Aber niemand hat das Recht, Liebe als Kette zu tragen.",
+      "text": "Ja. Ich habe es gehört, bis mir die Knochen weh taten. Es will nicht nur fressen - es will festhalten. Aber niemand hat das Recht, Liebe als Kette zu tragen.",
       "next": "konrad_4"
     },
     "konrad_4": {
@@ -1014,7 +1014,7 @@
     },
     "seal_ritual_begin": {
       "type": "narration",
-      "text": "Das Siegel. Großmutters Weg. Ich öffne das Journal, finde die Seite mit dem Gesang. Die Worte sind alt, in keiner Sprache, die ich kenne, aber irgendwie verstehe ich sie.",
+      "text": "Das Siegel. Großmutters Weg. Ich öffne das Journal, finde die Seite mit dem Gesang. Die Worte sind alt, in keiner Sprache, die ich kenne - und trotzdem brennen sie in meinem Mund, als hätte ich sie mein ganzes Leben geübt.",
       "next": "elise_seal_begin"
     },
     "elise_seal_begin": {

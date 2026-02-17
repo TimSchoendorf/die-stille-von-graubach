@@ -3,6 +3,7 @@
 
 import json
 import os
+import subprocess
 import sys
 from collections import defaultdict
 
@@ -177,6 +178,13 @@ def check_reachability(all_files_data):
     unreachable = endings - reachable_files
     return unreachable
 
+
+def run_impact_lint():
+    """Run act2/3/4 impact lint as part of validation loop."""
+    script = os.path.join(os.path.dirname(__file__), "dialogue_impact_lint.py")
+    result = subprocess.run([sys.executable, script], capture_output=True, text=True)
+    return result.returncode, (result.stdout or "").strip(), (result.stderr or "").strip()
+
 def main():
     build_expression_map()
     files = find_all_json_files()
@@ -255,12 +263,21 @@ def main():
     else:
         print("=== ALL 6 ENDINGS REACHABLE ===")
 
+    # Impact lint
+    print()
+    lint_code, lint_stdout, lint_stderr = run_impact_lint()
+    if lint_stdout:
+        print("=== IMPACT LINT ===")
+        print(lint_stdout)
+    if lint_stderr:
+        print(lint_stderr)
+
     # Node counts
     print()
     total = sum(len(d.get("nodes", {})) for d in all_data.values())
     print(f"=== TOTAL NODES: {total} ===")
 
-    return 1 if all_errors else 0
+    return 1 if (all_errors or lint_code != 0) else 0
 
 if __name__ == "__main__":
     sys.exit(main())

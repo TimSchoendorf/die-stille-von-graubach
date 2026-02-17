@@ -126,7 +126,7 @@
     },
     "narration_suspicious": {
       "type": "narration",
-      "text": "Ich weiß, was Großmutter über ihn geschrieben hat. Das Gefäß. Seine Augen, die nicht seine eigenen sind. Ich muss vorsichtig sein - aber ich muss auch verstehen.",
+      "text": "Großmutter nannte ihn das Gefäß, und heute Morgen habe ich denselben glasigen Blick in seinen Augen gesehen wie in ihrer Skizze. Ich muss vorsichtig sein - aber ich muss auch verstehen.",
       "next": "konrad_2"
     },
     "narration_charmed": {
@@ -224,7 +224,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Herr Müller... Konrad. Ich weiß von der Tradition. Vom Buch unter der Kirche. Von der Fütterung alle dreißig Jahre.",
+      "text": "Herr Müller... Konrad. Im Journal stehen die alte Tradition, das Buch unter der Kirche und die Fütterung alle dreißig Jahre. Ich komme nicht mit Gerüchten, ich komme mit Namen und Daten.",
       "next": "konrad_trust_react"
     },
     "konrad_trust_react": {
@@ -244,7 +244,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Ich weiß. Nicht aus Beweisen - aus Jahren voller falscher Glockenschläge und Blicke, die zu lange an mir hingen. Irgendetwas in diesem Dorf ist krank. Und irgendetwas in mir hängt daran.",
+      "text": "Nicht aus Beweisen - aus Jahren voller falscher Glockenschläge und Blicke, die zu lange an mir hingen. Seit drei Nächten wache ich mit Schlamm an den Schuhen auf, ohne den Weg gegangen zu sein. Irgendetwas in diesem Dorf ist krank. Und irgendetwas in mir hängt daran.",
       "next": "elise_trust_ask"
     },
     "elise_trust_ask": {

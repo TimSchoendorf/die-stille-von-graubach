@@ -543,12 +543,12 @@
     },
     "narration_epilog_3_georg": {
       "type": "narration",
-      "text": "Hat Georg überlebt? Ich weiß es nicht. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet.",
+      "text": "Hat Georg überlebt? Keine Liste, keine Zeitung, keine Behörde nennt je wieder seinen Namen. Graubach existiert auf keiner Karte mehr. Der Wald hat sich geschlossen. Aber manchmal träume ich, dass er am Brunnen steht und wartet.",
       "next": "narration_epilog_4"
     },
     "narration_epilog_3_hilde": {
       "type": "narration",
-      "text": "Hat Hilde überlebt? Ich weiß es nicht. Ihr Gesang war das Letzte, was ich hörte, bevor die Erde alles verschluckte. Manchmal glaube ich, ihn noch zu hören - zwischen den Noten des Singens.",
+      "text": "Hat Hilde überlebt? Ich fand nie eine Spur von ihr - nur den Nachhall ihres Gesangs, als die Erde sich schloss. Manchmal glaube ich, ihn noch zu hören, zwischen den Noten des Singens.",
       "next": "narration_epilog_4"
     },
     "narration_epilog_3_other": {
