@@ -86,7 +86,7 @@
 		},
 		"narration_3": {
 			"type": "narration",
-			"text": "Ich oeffne den Brief vorsichtig. Das Papier riecht nach... Krautern? Und nach etwas Anderem. Erde, vielleicht. Oder Asche.",
+			"text": "Ich öffne den Brief vorsichtig. Das Papier riecht nach... Kräutern? Und nach etwas Anderem. Erde, vielleicht. Oder Asche.",
 			"next": "narration_3b"
 		},
 		"narration_3b": {
@@ -204,7 +204,7 @@
 		},
 		"pack_books": {
 			"type": "narration",
-			"text": "Ich packe drei Bücher ein: Grimms Sagen, eine Abhandlung ueber germanische Schutzrituale und meine eigenen Notizen zur Schwarzwälder Folklore.",
+			"text": "Ich packe drei Bücher ein: Grimms Sagen, eine Abhandlung über germanische Schutzrituale und meine eigenen Notizen zur Schwarzwälder Folklore.",
 			"next": "pack_books_2"
 		},
 		"pack_books_2": {
@@ -249,7 +249,7 @@
 		},
 		"pack_camera_3": {
 			"type": "narration",
-			"text": "Ich lade den ersten Film ein und mache ein Testbild von dem Brief. Durch den Sucher wirkt die Spirale auf der Rückseite grösser, als sie sein sollte.",
+			"text": "Ich lade den ersten Film ein und mache ein Testbild von dem Brief. Durch den Sucher wirkt die Spirale auf der Rückseite größer, als sie sein sollte.",
 			"next": "journal_pack"
 		},
 		"journal_pack": {
@@ -332,7 +332,7 @@
 		},
 		"narration_train_2": {
 			"type": "narration",
-			"text": "Gegenüber sitzt eine aeltere Frau mit einem Korb auf dem Schoss. Sie strickt und summt leise. Die Melodie...",
+			"text": "Gegenüber sitzt eine ältere Frau mit einem Korb auf dem Schoß. Sie strickt und summt leise. Die Melodie...",
 			"next": "narration_train_3"
 		},
 		"narration_train_3": {
@@ -419,7 +419,7 @@
 		},
 		"narration_train_4": {
 			"type": "narration",
-			"text": "In Freiburg steige ich um. Der Anschlusszug ist kleiner, aelter. Er riecht nach Kohlerauch und nassem Holz.",
+			"text": "In Freiburg steige ich um. Der Anschlusszug ist kleiner, älter. Er riecht nach Kohlerauch und nassem Holz.",
 			"next": "elise_train_3"
 		},
 		"elise_train_3": {
@@ -448,7 +448,7 @@
 		},
 		"narration_train_7": {
 			"type": "narration",
-			"text": "Ich war aufgewacht, weil ich Gesang gehört hatte. Aus dem Boden. Großmutter sass neben meinem Bett und hielt meine Hand. \"Schlaf weiter\", hatte sie gesagt. \"Es singt nur der Wind.\"",
+			"text": "Ich war aufgewacht, weil ich Gesang gehört hatte. Aus dem Boden. Großmutter saß neben meinem Bett und hielt meine Hand. \"Schlaf weiter\", hatte sie gesagt. \"Es singt nur der Wind.\"",
 			"next": "narration_train_8"
 		},
 		"narration_train_8": {

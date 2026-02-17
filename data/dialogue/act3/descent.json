@@ -33,12 +33,12 @@
 		},
 		"narration_1": {
 			"type": "narration",
-			"text": "Tag sieben. Abend. Die Kirche sieht nicht mehr aus wie eine Kirche. Die Bänke sind verschoben, manche schweben Zentimeter ueber dem Boden. Die Kirchenfenster zeigen Bilder, die nicht in Glas gehören.",
+			"text": "Tag sieben. Abend. Die Kirche sieht nicht mehr aus wie eine Kirche. Die Bänke sind verschoben, manche schweben Zentimeter über dem Boden. Die Kirchenfenster zeigen Bilder, die nicht in Glas gehören.",
 			"next": "narration_2"
 		},
 		"narration_2": {
 			"type": "narration",
-			"text": "Das Singen ist ueberall. Nicht mehr nur aus der Tiefe - es kommt aus den Wänden, aus der Luft, aus meinem eigenen Kopf. Hildes Amulett pulst warm an meiner Brust.",
+			"text": "Das Singen ist überall. Nicht mehr nur aus der Tiefe - es kommt aus den Wänden, aus der Luft, aus meinem eigenen Kopf. Hildes Amulett pulst warm an meiner Brust.",
 			"next": "effect_singing_pulse"
 		},
 		"effect_singing_pulse": {
