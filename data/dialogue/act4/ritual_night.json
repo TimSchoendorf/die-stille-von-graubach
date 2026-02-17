@@ -359,7 +359,7 @@
     },
     "narration_alone_ritual": {
       "type": "narration",
-      "text": "Ich bin allein. So wie Großmutter es dreißig Jahre lang war. Vielleicht ist das der richtige Weg. Dieses Treffen war immer nur für uns zwei bestimmt.",
+      "text": "Ich bin allein. So wie Großmutter es dreißig Jahre lang war. Vielleicht ist das der richtige Weg. Aber diesmal trage ich jede Stimme mit mir, die mich bis hierher gebracht hat - Georgs Treue, Hildes Wissen, Voss' Schuld. Dieses Treffen endet nicht mehr im Schweigen.",
       "next": "narration_begin_ritual"
     },
     "narration_ally_ready": {
@@ -926,7 +926,7 @@
     },
     "narration_konrad_choice": {
       "type": "narration",
-      "text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Er kämpft gegen sich selbst. Gegen das Wesen. Gegen dreißig Jahre Gefangenschaft.",
+      "text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Er kämpft gegen sich selbst, gegen das Wesen, gegen dreißig Jahre Gefangenschaft - und ich sehe, wie jede Sekunde, die ich zögere, ihn tiefer unter Wasser drückt.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {
@@ -949,7 +949,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Konrad. Ich nehme deinen Platz ein. Heute endet deine Strafe, nicht dein Leben.",
+      "text": "Konrad. Ich nehme deinen Platz ein. Heute endet deine Strafe, nicht dein Leben. Wenn jemand an diese Tiefe gebunden bleibt, dann aus freiem Willen - nicht weil ein Dorf wieder den Falschen opfert.",
       "next": "konrad_sacrifice_react"
     },
     "konrad_sacrifice_react": {
@@ -987,7 +987,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... es tut mir leid. Aber wenn ich jetzt den Plan breche, verlieren wir vielleicht euch beide. Vertrau mir noch ein paar Minuten.",
+      "text": "Konrad... es tut mir leid. Aber wenn ich jetzt den Plan breche, verlieren wir vielleicht euch beide - und schenken dem Wesen weitere dreißig Jahre Hunger. Hass mich dafür, wenn wir leben. Aber halte noch ein paar Minuten durch.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {

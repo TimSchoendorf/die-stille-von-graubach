@@ -945,12 +945,12 @@
 		},
 		"konrad_choice_sought_payoff": {
 			"type": "narration",
-			"text": "Beim ersten Schritt in die Tiefe höre ich Konrads Stimme wieder: Hilf mir, bevor es mich ganz hat. Sein Blick klebt an mir wie ein Schwur. Heute Nacht steige ich nicht nur für Graubach hinab - ich steige für ihn.",
+			"text": "Beim ersten Schritt in die Tiefe höre ich Konrads Stimme wieder: Hilf mir, bevor es mich ganz hat. Sein Blick klebt an mir wie ein Schwur. Heute Nacht steige ich nicht nur für Graubach hinab - ich steige mit seinem Namen auf den Lippen, damit ich im entscheidenden Moment nicht vergesse, wen ich retten will.",
 			"next": "descent_start"
 		},
 		"konrad_choice_avoided_payoff": {
 			"type": "narration",
-			"text": "Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, auf der Treppe, fühlt es sich an wie ein offener Schnitt: vernünftig - und trotzdem grausam. Wenn ich scheitere, habe ich ihn ohne Grund allein gelassen.",
+			"text": "Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, auf der Treppe, fühlt es sich an wie ein offener Schnitt: vernünftig - und trotzdem grausam. Wenn ich scheitere, habe ich nicht nur Graubach verraten, sondern auch den Mann, den ich bewusst allein in dieser Hölle ließ.",
 			"next": "descent_start"
 		},
 		"check_anna_warning_chamber": {

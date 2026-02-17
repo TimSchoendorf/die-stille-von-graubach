@@ -288,7 +288,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Aber es gibt Momente... wenn ich aufhöre zu kämpfen... dann ist es fast friedlich. Als würde man neben jemandem sitzen, nicht in jemandem gefangen sein.",
+      "text": "Aber es gibt Momente... wenn ich aufhöre zu kämpfen... dann wird es still. Nicht gut - nur still. Als säße etwas direkt neben mir und wartet darauf, dass ich zuerst nachgebe.",
       "next": "elise_coexistence_react"
     },
     "elise_coexistence_react": {
@@ -749,7 +749,7 @@
     },
     "elise_return_thought": {
       "type": "narration",
-      "text": "Kann man ein Gefäß befreien, ohne es zu zerbrechen? Oder ist Konrad Müller schon lange nicht mehr Konrad Müller?",
+      "text": "Kann man ein Gefäß befreien, ohne es zu zerbrechen? Wenn ich mich irre, stirbt entweder ein Unschuldiger - oder etwas uraltes geht frei. Vielleicht beides.",
       "next": "effect_return_flicker"
     },
     "effect_return_flicker": {
