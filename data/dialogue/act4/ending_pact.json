@@ -159,7 +159,7 @@
 		},
 		"creature_pact_10": {
 			"type": "narration",
-			"text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT.",
+			"text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT. DEIN STOPP GILT. FÄLLT DEIN GEGENÜBER AUS, RUHE ICH IM ÜBERGANGS-SIEGEL.",
 			"next": "narration_anchor_pact"
 		},
 		"narration_anchor_pact": {
@@ -222,7 +222,7 @@
 			"type": "dialogue",
 			"speaker": "georg",
 			"expression": "sad",
-			"text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg.",
+			"text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg. Ich halte dir den Rücken frei, Elise - und wenn das Übergangs-Siegel gebraucht wird, öffne ich dir jede Tür.",
 			"next": "hide_georg_pact"
 		},
 		"hide_georg_pact": {
@@ -266,7 +266,7 @@
 			"type": "dialogue",
 			"speaker": "hilde",
 			"expression": "kind",
-			"text": "Gesellschaft. So einfach. Und so schwer.",
+			"text": "Gesellschaft. So einfach. Und so schwer. Ich lehre die Freiwilligen den alten Gesang - und vor allem, wann sie Stopp sagen müssen.",
 			"next": "hide_hilde_pact"
 		},
 		"hide_hilde_pact": {
@@ -310,7 +310,7 @@
 			"type": "dialogue",
 			"speaker": "voss",
 			"expression": "praying",
-			"text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten.",
+			"text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten. Ich dokumentiere jede Vereinbarung im Kirchenarchiv - keine Geheimnisse mehr.",
 			"next": "hide_voss_pact"
 		},
 		"hide_voss_pact": {
@@ -333,7 +333,7 @@
 		},
 		"narration_11": {
 			"type": "narration",
-			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur freiwillige Besuche mit klaren Grenzen, sofortigem Stopp-Recht und dokumentiertem Notfallprotokoll mit Übergangs-Siegel, damit aus Hunger kein Griff nach Menschen mehr wird.",
+			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur freiwillige Besuche mit klaren Grenzen, sofortigem Stopp-Recht und dokumentiertem Notfallprotokoll mit Übergangs-Siegel. Georg bewacht die Zugänge, Hilde schult die Freiwilligen, Voss archiviert jede Abmachung - damit aus Hunger kein Griff nach Menschen mehr wird.",
 			"next": "narration_12"
 		},
 		"narration_12": {
