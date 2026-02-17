@@ -220,6 +220,20 @@
       "expression": "determined",
       "position": "left",
       "action": "show",
+      "next": "check_georg_trust_ritual"
+    },
+    "check_georg_trust_ritual": {
+      "type": "flag_check",
+      "flag": "georg_trust",
+      "value": 10,
+      "true_next": "georg_ritual_trust_line",
+      "false_next": "georg_ritual_1"
+    },
+    "georg_ritual_trust_line": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "protective",
+      "text": "Du hast mir dein Leben anvertraut, Elise. Das vergesse ich nicht.",
       "next": "georg_ritual_1"
     },
     "georg_ritual_1": {
@@ -256,6 +270,20 @@
       "expression": "ritual",
       "position": "left",
       "action": "show",
+      "next": "check_hilde_trust_ritual"
+    },
+    "check_hilde_trust_ritual": {
+      "type": "flag_check",
+      "flag": "hilde_trust",
+      "value": 10,
+      "true_next": "hilde_ritual_trust_line",
+      "false_next": "hilde_ritual_entry_1"
+    },
+    "hilde_ritual_trust_line": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du hast auf eine alte Frau gehört, als alle anderen nur Angst hatten. Das war klug - und mutig.",
       "next": "hilde_ritual_entry_1"
     },
     "hilde_ritual_entry_1": {
@@ -292,6 +320,20 @@
       "expression": "praying",
       "position": "left",
       "action": "show",
+      "next": "check_voss_trust_ritual"
+    },
+    "check_voss_trust_ritual": {
+      "type": "flag_check",
+      "flag": "voss_trust",
+      "value": 10,
+      "true_next": "voss_ritual_trust_line",
+      "false_next": "voss_ritual_1"
+    },
+    "voss_ritual_trust_line": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Sie haben einem gebrochenen Priester vertraut. Dafür schulde ich Ihnen heute mehr als ein Gebet.",
       "next": "voss_ritual_1"
     },
     "voss_ritual_1": {

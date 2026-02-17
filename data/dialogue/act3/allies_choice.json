@@ -118,6 +118,48 @@
 			"speaker": "elise",
 			"expression": "determined",
 			"text": "Gehen war nie wirklich eine Option. Nicht seit ich meinen Namen in dem Buch gesehen habe.",
+			"next": "check_demanded_truth_callback"
+		},
+		"check_demanded_truth_callback": {
+			"type": "flag_check",
+			"flag": "demanded_truth",
+			"value": 1,
+			"true_next": "georg_demanded_truth_callback",
+			"false_next": "check_stayed_quiet_callback"
+		},
+		"georg_demanded_truth_callback": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Du hast mich in der ersten Nacht unter Druck gesetzt, bis ich reden musste. Das war hart - aber richtig. Ohne das wären wir heute nicht hier.",
+			"next": "check_tried_to_flee"
+		},
+		"check_stayed_quiet_callback": {
+			"type": "flag_check",
+			"flag": "stayed_quiet",
+			"value": 1,
+			"true_next": "georg_stayed_quiet_callback",
+			"false_next": "check_wanted_to_follow_callback"
+		},
+		"georg_stayed_quiet_callback": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "protective",
+			"text": "Du warst in der ersten Nacht stiller als alle anderen. Ich dachte erst, du gibst auf. Dabei hast du nur zugehört - und alles zusammengesetzt.",
+			"next": "check_tried_to_flee"
+		},
+		"check_wanted_to_follow_callback": {
+			"type": "flag_check",
+			"flag": "wanted_to_follow",
+			"value": 1,
+			"true_next": "georg_wanted_follow_callback",
+			"false_next": "check_tried_to_flee"
+		},
+		"georg_wanted_follow_callback": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Du wolltest mir in der ersten Nacht nachgehen. Ich habe dich damals weggeschickt. Heute nicht mehr. Heute gehen wir den Weg zusammen.",
 			"next": "check_tried_to_flee"
 		},
 		"check_tried_to_flee": {
@@ -161,6 +203,34 @@
 			"speaker": "georg",
 			"expression": "determined",
 			"text": "Dann war alles umsonst. Dreißig Jahre. Margarethes Opfer. Meine Schuld.",
+			"next": "check_asked_about_entity_callback"
+		},
+		"check_asked_about_entity_callback": {
+			"type": "flag_check",
+			"flag": "asked_about_entity",
+			"value": 1,
+			"true_next": "georg_entity_callback",
+			"false_next": "check_asked_about_police_callback"
+		},
+		"georg_entity_callback": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Du hast mich schon in der Schmiede gefragt, was da unten wirklich lebt. Ich hab dir nur die halbe Wahrheit gesagt. Heute gibt es keine halben Wahrheiten mehr.",
+			"next": "elise_georg_risk"
+		},
+		"check_asked_about_police_callback": {
+			"type": "flag_check",
+			"flag": "asked_about_police",
+			"value": 1,
+			"true_next": "georg_police_callback",
+			"false_next": "elise_georg_risk"
+		},
+		"georg_police_callback": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "angry",
+			"text": "Du hast nach der Polizei gefragt, als gäbe es da Hilfe. In Graubach hilft uns niemand von außen. Heute Nacht sind nur wir hier.",
 			"next": "elise_georg_risk"
 		},
 		"elise_georg_risk": {

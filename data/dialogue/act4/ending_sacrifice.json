@@ -46,6 +46,18 @@
 		"narration_3": {
 			"type": "narration",
 			"text": "Und ich habe in Großmutters Journal gelesen, was das Gefäß ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäß kann es nicht hier bleiben.",
+			"next": "check_chose_sacrifice_callback"
+		},
+		"check_chose_sacrifice_callback": {
+			"type": "flag_check",
+			"flag": "chose_sacrifice",
+			"value": 1,
+			"true_next": "narration_chose_sacrifice_callback",
+			"false_next": "elise_sacrifice_decision"
+		},
+		"narration_chose_sacrifice_callback": {
+			"type": "narration",
+			"text": "Diesmal wurde die Entscheidung nicht von einem Buch getroffen, nicht von Otto und nicht von Tradition. Ich habe sie selbst getroffen.",
 			"next": "elise_sacrifice_decision"
 		},
 		"elise_sacrifice_decision": {

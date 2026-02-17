@@ -89,7 +89,21 @@
 			"speaker": "elise",
 			"expression": "thinking",
 			"text": "Ja, es hat mich überrascht. Was hat Sie nachts zu Großmutters Haus geführt?",
-			"next": "konrad_door_excuse"
+			"next": "check_questioned_door_visitor"
+		},
+		"check_questioned_door_visitor": {
+			"type": "flag_check",
+			"flag": "questioned_door_visitor",
+			"value": 1,
+			"true_next": "konrad_door_excuse_defensive",
+			"false_next": "konrad_door_excuse"
+		},
+		"konrad_door_excuse_defensive": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "suspicious",
+			"text": "Sie haben mich letzte Nacht schon durch die geschlossene Tür ausgefragt. Ich verstehe Ihre Vorsicht. Wirklich. Ich wollte trotzdem nur mein Beileid aussprechen.",
+			"next": "narration_door"
 		},
 		"konrad_door_excuse": {
 			"type": "dialogue",
