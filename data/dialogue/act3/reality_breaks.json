@@ -400,7 +400,7 @@
 			"speaker": "anna",
 			"expression": "lucid",
 			"text": "Es hat Angst vor dir, Elise. Deshalb werden die Träume stärker. Es versucht, dich zu verwirren, bevor du handeln kannst.",
-			"next": "anna_fear_detail_1"
+			"next": "check_konrad_history_anna"
 		},
 		"anna_fear_detail_1": {
 			"type": "dialogue",
@@ -529,6 +529,34 @@
 			"type": "narration",
 			"text": "Seit dem Fund am Wächterbaum weiß ich: Das hier ist kein Aberglaube. Der Boden selbst reagiert auf das Wesen. Und heute reagiert ganz Graubach mit.",
 			"next": "elise_mirror"
+		},
+		"check_konrad_history_anna": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "anna_konrad_trust_payoff",
+			"false_next": "check_konrad_distrust_anna"
+		},
+		"check_konrad_distrust_anna": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "anna_konrad_distrust_payoff",
+			"false_next": "anna_fear_detail_1"
+		},
+		"anna_konrad_trust_payoff": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Du hast Konrad vertraut, obwohl alle dich gewarnt haben. Das hat es gespürt. Für einen Moment hat es geglaubt, es könnte durch dich etwas anderes sein als nur Hunger.",
+			"next": "anna_fear_detail_1"
+		},
+		"anna_konrad_distrust_payoff": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "afraid",
+			"text": "Du hast Abstand zu Konrad gehalten. Verständlich. Aber es hat das als Zurückweisung verstanden - und drückt jetzt umso härter in seine Träume.",
+			"next": "anna_fear_detail_1"
 		}
 	}
 }

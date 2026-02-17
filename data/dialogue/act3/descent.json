@@ -351,7 +351,7 @@
 			"expression": "determined",
 			"position": "left",
 			"action": "hide",
-			"next": "descent_start"
+			"next": "check_konrad_choice_payoff"
 		},
 		"check_any_ally_otto": {
 			"type": "flag_check",
@@ -411,7 +411,7 @@
 			"expression": "desperate",
 			"position": "right",
 			"action": "hide",
-			"next": "descent_start"
+			"next": "check_konrad_choice_payoff"
 		},
 		"otto_blocks": {
 			"type": "dialogue",
@@ -452,7 +452,7 @@
 			"expression": "angry",
 			"position": "right",
 			"action": "hide",
-			"next": "descent_start"
+			"next": "check_konrad_choice_payoff"
 		},
 		"otto_surprise": {
 			"type": "narration",
@@ -462,7 +462,7 @@
 		"narration_otto_surprise_2": {
 			"type": "narration",
 			"text": "Oder vielleicht lässt mich etwas absichtlich durch. Der Gedanke ist schlimmer als jede Konfrontation.",
-			"next": "descent_start"
+			"next": "check_konrad_choice_payoff"
 		},
 		"descent_start": {
 			"type": "background",
@@ -775,7 +775,7 @@
 		"narration_chamber_withdraw": {
 			"type": "narration",
 			"text": "Ich ziehe die Hand zurück. Mein Herz hämmert. Nicht vor Angst - vor Ehrfurcht. Was auch immer dort unten liegt, es ist RIESIG. Größer als Graubach, größer als alles was ich mir vorstellen kann.",
-			"next": "check_ally_chamber_react"
+			"next": "check_anna_warning_chamber"
 		},
 		"check_ally_chamber_react": {
 			"type": "flag_check",
@@ -914,6 +914,42 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/preparation.json"
+		},
+		"check_konrad_choice_payoff": {
+			"type": "flag_check",
+			"flag": "sought_konrad",
+			"value": 1,
+			"true_next": "konrad_choice_sought_payoff",
+			"false_next": "check_avoided_konrad_payoff"
+		},
+		"check_avoided_konrad_payoff": {
+			"type": "flag_check",
+			"flag": "avoided_konrad",
+			"value": 1,
+			"true_next": "konrad_choice_avoided_payoff",
+			"false_next": "descent_start"
+		},
+		"konrad_choice_sought_payoff": {
+			"type": "narration",
+			"text": "Beim ersten Schritt in die Tiefe höre ich Konrads Stimme wieder: Hilf mir, bevor es mich ganz hat. Sein Blick klebt an mir wie ein Schwur. Heute Nacht steige ich nicht nur für Graubach hinab - ich steige für ihn.",
+			"next": "descent_start"
+		},
+		"konrad_choice_avoided_payoff": {
+			"type": "narration",
+			"text": "Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, auf der Treppe, fühlt es sich an wie ein offener Schnitt: vernünftig - und trotzdem grausam. Wenn ich scheitere, habe ich ihn ohne Grund allein gelassen.",
+			"next": "descent_start"
+		},
+		"check_anna_warning_chamber": {
+			"type": "flag_check",
+			"flag": "anna_warning",
+			"value": 1,
+			"true_next": "anna_warning_chamber_payoff",
+			"false_next": "check_ally_chamber_react"
+		},
+		"anna_warning_chamber_payoff": {
+			"type": "narration",
+			"text": "Anna hatte recht: Hinter der Wucht liegt keine blinde Gier, sondern panische Sehnsucht. Das macht es nicht harmlos - nur tragischer. Und gefährlicher, wenn ich zögere.",
+			"next": "check_ally_chamber_react"
 		}
 	}
 }

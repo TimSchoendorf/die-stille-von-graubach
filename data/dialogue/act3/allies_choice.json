@@ -430,12 +430,12 @@
 		"ally_converge_solo": {
 			"type": "narration",
 			"text": "Ich bin allein. Wie Großmutter. Aber ich habe ihr Wissen, ihre Vorbereitung. Das muss reichen.",
-			"next": "elise_konrad_consider"
+			"next": "check_anna_warning_konrad"
 		},
 		"ally_converge_allied": {
 			"type": "narration",
 			"text": "Ich habe einen Verbündeten. Jemanden, der morgen Nacht neben mir stehen wird, wenn ich mich dem stellen muss, was unter der Erde wartet.",
-			"next": "elise_konrad_consider"
+			"next": "check_anna_warning_konrad"
 		},
 		"elise_konrad_consider": {
 			"type": "narration",
@@ -646,6 +646,18 @@
 			"type": "narration",
 			"text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten. Vielleicht rettet uns das. Vielleicht war es ein Fehler.",
 			"next": "elise_decide"
+		},
+		"check_anna_warning_konrad": {
+			"type": "flag_check",
+			"flag": "anna_warning",
+			"value": 1,
+			"true_next": "elise_konrad_consider_anna",
+			"false_next": "elise_konrad_consider"
+		},
+		"elise_konrad_consider_anna": {
+			"type": "narration",
+			"text": "Annas Worte lassen mich nicht los: Das Wesen hat Angst, verlassen zu werden. Und Konrad steckt genau dazwischen - Mensch und Echo zugleich. Wenn ich ihn falsch einschätze, verliere ich ihn. Wenn ich ihn ignoriere, vielleicht auch.",
+			"next": "elise_konrad_consider"
 		}
 	}
 }
