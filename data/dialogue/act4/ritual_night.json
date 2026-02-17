@@ -96,12 +96,24 @@
       "flag": "searched_bedroom",
       "value": 1,
       "true_next": "bedroom_memory_line",
+      "false_next": "check_anna_spirale_memory"
+    },
+    "check_anna_spirale_memory": {
+      "type": "flag_check",
+      "flag": "anna_spirale",
+      "value": 1,
+      "true_next": "anna_spirale_memory",
       "false_next": "check_anchor_memory"
+    },
+    "anna_spirale_memory": {
+      "type": "narration",
+      "text": "Ich sehe Annas Kreidezeichnung vor mir: Spirale über Spirale, ein Kreis im Kreis - genau wie hier im Stein. Ein Kind hat erkannt, was die Erwachsenen verschwiegen haben.",
+      "next": "check_anchor_memory"
     },
     "bedroom_memory_line": {
       "type": "narration",
       "text": "Unter der Diele neben Großmutters Bett - dort, wo früher Süßigkeiten lagen - fand ich ihre letzten Aufzeichnungen. Selbst jetzt fühlt sich das an wie eine Umarmung aus der Vergangenheit.",
-      "next": "check_anchor_memory"
+      "next": "check_anna_spirale_memory"
     },
     "check_anchor_memory": {
       "type": "flag_check",
@@ -649,6 +661,18 @@
     "narration_creature_hunger": {
       "type": "narration",
       "text": "HUNGER IST KEIN WORT. ES IST EINE LEERE. SECHSHUNDERT JAHRE HABT IHR MIR EURE TOTEN GEGEBEN. SIE SCHMECKEN NACH ANGST. ICH WILL KEINE ANGST MEHR.",
+      "next": "check_heard_singing_payoff"
+    },
+    "check_heard_singing_payoff": {
+      "type": "flag_check",
+      "flag": "heard_singing",
+      "value": 1,
+      "true_next": "heard_singing_payoff",
+      "false_next": "creature_names_1"
+    },
+    "heard_singing_payoff": {
+      "type": "narration",
+      "text": "Das ist es also: das Singen aus meiner ersten Nacht. Keine Halluzination, kein Wind in alten Balken - eine Sprache aus Hunger und Bitte. Damals hat es mich nur erreicht. Jetzt antworte ich.",
       "next": "creature_names_1"
     },
     "creature_names_1": {

@@ -28,6 +28,18 @@
     "elise_wakes": {
       "type": "narration",
       "text": "Irgendwann in der Nacht wurde das Singen lauter. Es formte Worte, die ich im Halbschlaf fast verstand. Jetzt, im Morgenlicht, sind sie wieder verschwunden - wie Traumfetzen, die man nicht festhalten kann.",
+      "next": "check_heard_singing_memory"
+    },
+    "check_heard_singing_memory": {
+      "type": "flag_check",
+      "flag": "heard_singing",
+      "value": 1,
+      "true_next": "heard_singing_memory",
+      "false_next": "check_fled"
+    },
+    "heard_singing_memory": {
+      "type": "narration",
+      "text": "Das Singen aus der Nacht hängt noch in meinen Ohren. Nicht mehr nur Angst - ein Muster. Drei tiefe Töne, zwei hohe, immer wieder. Als ich später Großmutters Journal lese, erkenne ich dieselbe Struktur im \"Gesang der Alten\".",
       "next": "check_fled"
     },
     "check_fled": {

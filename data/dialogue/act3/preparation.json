@@ -376,6 +376,34 @@
       "speaker": "voss",
       "expression": "worried",
       "text": "Fräulein Brandt... Elise. Ich wollte... ich muss Ihnen etwas sagen. Bevor morgen...",
+      "next": "check_defied_voss_memory"
+    },
+    "check_defied_voss_memory": {
+      "type": "flag_check",
+      "flag": "defied_voss",
+      "value": 1,
+      "true_next": "defied_voss_memory",
+      "false_next": "check_questioned_voss_memory"
+    },
+    "defied_voss_memory": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Sie haben mir auf dem Platz widersprochen. Öffentlich. Das hat wehgetan - und ich brauchte genau das. Zum ersten Mal seit Jahren hat mich jemand daran erinnert, dass Schuld kein Alibi ist.",
+      "next": "check_questioned_voss_memory"
+    },
+    "check_questioned_voss_memory": {
+      "type": "flag_check",
+      "flag": "questioned_voss",
+      "value": 1,
+      "true_next": "questioned_voss_memory",
+      "false_next": "elise_voss_visit_1"
+    },
+    "questioned_voss_memory": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "worried",
+      "text": "Und Sie haben die richtigen Fragen gestellt. Nicht höflich, aber ehrlich. Ich schulde Ihnen Antworten, keine Ausflüchte.",
       "next": "elise_voss_visit_1"
     },
     "elise_voss_visit_1": {
