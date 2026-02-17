@@ -115,7 +115,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Keine Opfer mehr. Kein Blut. Kein Gefäß. Stattdessen komme ich freiwillig. Jedes Jahr, zu klaren Zeiten, mit Vorbereitung und Rückkehrrecht. Ich setze mich hierher und lasse dich meine Gedanken berühren.",
+			"text": "Keine Opfer mehr. Kein Blut. Kein Gefäß. Stattdessen komme ich freiwillig. Jedes Jahr, zu klaren Zeiten, mit Vorbereitung und Rückkehrrecht. In den ersten Jahren zusätzlich bei Bedarf zur Stabilisierung. Ich setze mich hierher und lasse dich meine Gedanken berühren.",
 			"next": "creature_pact_7"
 		},
 		"creature_pact_7": {
@@ -127,7 +127,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet, bei klarem Verstand und mit Rückkehrrecht. Kein Name wird mehr zur Pflicht. Du wirst nie wieder vergessen werden.",
+			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet, bei klarem Verstand und mit Rückkehrrecht. Kein Name wird mehr zur Pflicht. Dazu dokumentieren wir ein Notfallprotokoll: Übergangs-Siegel statt Opfer, falls ein Termin ausfällt.",
 			"next": "creature_pact_8"
 		},
 		"creature_pact_8": {
@@ -144,7 +144,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Kein Zwang, keine Blutlinie als Kette. Und wenn einer von uns 'Stopp' sagt, gilt es sofort.",
+			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Kein Zwang, keine Blutlinie als Kette. Und wenn einer von uns 'Stopp' sagt, gilt es sofort. Bis zur Übergabe sichert ein Übergangs-Siegel die Grenze.",
 			"next": "effect_pact_forming"
 		},
 		"effect_pact_forming": {
@@ -333,7 +333,7 @@
 		},
 		"narration_11": {
 			"type": "narration",
-			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur ein freiwilliger Besuch, einmal im Jahr, mit klaren Grenzen und sofortigem Stopp-Recht, damit aus Hunger kein Griff nach Menschen mehr wird.",
+			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur freiwillige Besuche mit klaren Grenzen, sofortigem Stopp-Recht und dokumentiertem Notfallprotokoll mit Übergangs-Siegel, damit aus Hunger kein Griff nach Menschen mehr wird.",
 			"next": "narration_12"
 		},
 		"narration_12": {
@@ -350,7 +350,7 @@
 			"type": "journal",
 			"entry_id": "ending_pact",
 			"title": "Der Pakt",
-			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Jedes Jahr kehre ich freiwillig zurück und leiste dem Wesen Gesellschaft; ich bereite freiwillige Nachfolger vor, und klare Grenzen bleiben verhandelbar und widerrufbar. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
+			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Ich kehre freiwillig und planbar zurück, bereite freiwillige Nachfolger vor, und klare Grenzen bleiben widerrufbar. Fällt jemand aus, greift ein Übergangs-Siegel statt eines Opfers. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
 			"next": "check_packed_pact"
 		},
 		"check_packed_pact": {
