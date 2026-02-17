@@ -14,6 +14,11 @@
 - Door scene now supports extra option: ask through closed door before deciding.
 - Konrad now references Elise's scream as reason for checking in.
 
+## Process improvement (implemented this run)
+- **Bottleneck identified:** Rewrite passes were scattered across files without a fixed "impact pass" checklist, causing uneven quality and missed Act 2/3/4 beats.
+- **Fix applied:** Adopted a per-ship-block loop: (a) one tension beat, (b) one character-truth beat, (c) one consequence-choice wording upgrade, then validation + commit.
+- **Next concrete automation step:** add `scripts_locale/dialogue_impact_lint.py` to flag generic fallback phrases (e.g., "So oder so", "Ich weiß") for rewrite candidates.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

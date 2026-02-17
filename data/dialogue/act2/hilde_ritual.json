@@ -431,12 +431,12 @@
 			"type": "dialogue",
 			"speaker": "hilde",
 			"expression": "warning",
-			"text": "Margarethe war nicht sicher. Niemand hat es je versucht. Sie ist gestorben, bevor sie die Antwort finden konnte.",
+			"text": "Margarethe hatte nur Fragmente - keine Gewissheit. Niemand hat den Anker je bis zum Ende getragen und danach noch klar darüber gesprochen. Wir wissen nur: Es kann dich töten. Oder dich zurücklassen, aber nicht mehr ganz als du selbst.",
 			"next": "narration_anchor_weight"
 		},
 		"narration_anchor_weight": {
 			"type": "narration",
-			"text": "Nicht sicher. Das heißt, es könnte mich töten. Oder schlimmer - es könnte mich verändern. So wie es Konrad verändert hat.",
+			"text": "Keine Gewissheit. Das heißt: Ich kann sterben. Oder überleben und mich dabei verlieren, Stück für Stück, wie Konrad. Ein Körper, der bleibt - und ein Ich, das langsam verblasst.",
 			"next": "choice_anchor_reaction"
 		},
 		"choice_anchor_reaction": {

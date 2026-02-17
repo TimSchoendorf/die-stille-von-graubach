@@ -629,7 +629,7 @@
     },
     "narration_creature_speak_5": {
       "type": "narration",
-      "text": "SIE WAR DIE EINZIGE, DIE GESUNGEN HAT. NICHT AUS ANGST. AUS... ICH HABE KEIN WORT DAFÜR. IHR SAGT VIELLEICHT: MITGEFÜHL.",
+      "text": "SIE WAR DIE EINZIGE, DIE GESUNGEN HAT. NICHT AUS ANGST. AUS... ICH HABE KEIN WORT DAFÜR. IHR SAGT VIELLEICHT: MITGEFÜHL. ODER TREUE.",
       "next": "effect_creature_pulse"
     },
     "effect_creature_pulse": {
@@ -685,7 +685,7 @@
     },
     "narration_creature_speak_7": {
       "type": "narration",
-      "text": "DASS JEMAND BLEIBT. NICHT STIRBT. BLEIBT. SECHSHUNDERT JAHRE UND NIEMAND HAT JE GEFRAGT.",
+      "text": "DASS JEMAND BLEIBT. NICHT ALS OPFER. ALS GEGENÜBER. SECHSHUNDERT JAHRE UND NIEMAND HAT JE GEFRAGT.",
       "next": "effect_revelation_glitch"
     },
     "effect_revelation_glitch": {
@@ -933,14 +933,14 @@
       "type": "choice",
       "choices": [
         {
-          "text": "Konrads Platz einnehmen - ihn befreien, koste es, was es wolle",
+          "text": "Konrads Platz einnehmen - ihn heute befreien und selbst den Anker tragen",
           "set_flags": {
             "chose_sacrifice": 1
           },
           "next": "sacrifice_decision"
         },
         {
-          "text": "Am ursprünglichen Plan festhalten",
+          "text": "Am ursprünglichen Plan festhalten - Risiko für Konrad in Kauf nehmen",
           "next": "plan_decision"
         }
       ]

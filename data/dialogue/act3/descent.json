@@ -293,7 +293,7 @@
 		},
 		"narration_otto_silence": {
 			"type": "narration",
-			"text": "Die Worte treffen. Für einen Moment kann ich nicht atmen. Er hat recht. Großmutter hat dreißig Jahre gesucht und ist gestorben, ohne eine Lösung zu finden.",
+			"text": "Die Worte treffen. Für einen Moment kann ich nicht atmen. Der Zweifel sticht tief: Was, wenn Großmutter wirklich keine Lösung mehr fand? Und was, wenn ich nur ihr letzter, verzweifelter Versuch bin?",
 			"next": "elise_otto_3"
 		},
 		"elise_otto_3": {
@@ -913,7 +913,7 @@
 		},
 		"narration_end_2": {
 			"type": "narration",
-			"text": "Morgen endet es. So oder so.",
+			"text": "Morgen gibt es nur noch zwei Wahrheiten: Entweder endet der Kreislauf. Oder Graubach endet mit ihm.",
 			"next": "effect_end_vignette"
 		},
 		"effect_end_vignette": {
