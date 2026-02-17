@@ -26,7 +26,7 @@
 		"narration_1": {
 			"type": "narration",
 			"text": "Tag sechs. Etwas ist anders. Als ich aus dem Fenster sehe, stimmen die Farben nicht. Der Himmel ist zu violett für den Morgen. Die Schatten fallen in die falsche Richtung.",
-			"next": "elise_mirror"
+			"next": "check_church_spirals_seen"
 		},
 		"elise_mirror": {
 			"type": "narration",
@@ -56,7 +56,6 @@
 			"text": "Morgen ist der dreißigste Jahrestag. Ich habe einen Tag. EINEN Tag, um alles vorzubereiten. Verbündete finden, den Gesang üben, mich der Kammer stellen.",
 			"next": "bg_village_corrupted"
 		},
-
 		"bg_village_corrupted": {
 			"type": "background",
 			"background": "village_corrupted",
@@ -95,7 +94,6 @@
 			},
 			"next": "villager_scene"
 		},
-
 		"villager_scene": {
 			"type": "narration",
 			"text": "Eine alte Frau steht vor ihrem Haus und starrt ins Nichts. Ich kenne sie - sie hat mir gestern auf dem Markt Brot verkauft. Heute erkennt sie mich nicht.",
@@ -142,7 +140,6 @@
 			},
 			"next": "nightmare_intro"
 		},
-
 		"nightmare_intro": {
 			"type": "narration",
 			"text": "Plötzlich wird mir schwindelig. Die Welt kippt. Ich greife nach dem Türpfosten, aber er ist nicht mehr da.",
@@ -255,7 +252,6 @@
 			"text": "Es ist real. Kein Aberglaube, kein Märchen, kein Wahn einer alten Frau. Es ist dort unten, und es ist wacher als je zuvor. Und es kennt meinen Namen.",
 			"next": "check_defied_otto"
 		},
-
 		"check_defied_otto": {
 			"type": "flag_check",
 			"flag": "defied_otto",
@@ -298,7 +294,6 @@
 			"text": "Georg hat Stärke und Loyalität. Hilde kennt die alten Wege. Voss kennt die Kammer. Und Konrad... Konrad ist entweder der Schlüssel oder die größte Gefahr.",
 			"next": "bg_forest_corrupted"
 		},
-
 		"bg_forest_corrupted": {
 			"type": "background",
 			"background": "forest_corrupted",
@@ -344,7 +339,6 @@
 			"path": "heartbeat.wav",
 			"next": "show_anna"
 		},
-
 		"show_anna": {
 			"type": "character",
 			"character": "anna",
@@ -511,6 +505,30 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act3/allies_choice.json"
+		},
+		"check_church_spirals_seen": {
+			"type": "flag_check",
+			"flag": "found_church_spirals",
+			"value": 1,
+			"true_next": "narration_spiral_payoff",
+			"false_next": "check_found_tree_payoff"
+		},
+		"check_found_tree_payoff": {
+			"type": "flag_check",
+			"flag": "found_guardian_tree",
+			"value": 1,
+			"true_next": "narration_tree_payoff",
+			"false_next": "elise_mirror"
+		},
+		"narration_spiral_payoff": {
+			"type": "narration",
+			"text": "Die Spiralen an den Hauswänden treffen mich diesmal nicht unvorbereitet. Dieselben Zeichen habe ich in der Kirche gesehen - älter als das Dorf, älter als jede Lüge, die man mir erzählt hat.",
+			"next": "check_found_tree_payoff"
+		},
+		"narration_tree_payoff": {
+			"type": "narration",
+			"text": "Seit dem Fund am Wächterbaum weiß ich: Das hier ist kein Aberglaube. Der Boden selbst reagiert auf das Wesen. Und heute reagiert ganz Graubach mit.",
+			"next": "elise_mirror"
 		}
 	}
 }
