@@ -244,7 +244,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "dark",
-			"text": "Stellen Sie sich vor, Sie stehen in einem dunklen Raum. Sie wissen, dass Sie nicht allein sind. Etwas atmet hinter Ihnen. Aber wenn Sie sich umdrehen, ist da nur... Sie selbst.",
+			"text": "Stellen Sie sich vor, Sie stehen in einem dunklen Raum. Sie wissen, dass Sie nicht allein sind. Etwas atmet hinter Ihnen. Aber wenn Sie sich umdrehen, sehen Sie nur... sich selbst.",
 			"next": "fx_trust_glitch"
 		},
 		"fx_trust_glitch": {
@@ -279,7 +279,7 @@
 		},
 		"elise_coexistence_react": {
 			"type": "narration",
-			"text": "Nicht kämpfen, sondern koexistieren? Der Gedanke ist verstörender als alles andere. Und trotzdem - irgendetwas daran klingt wahr.",
+			"text": "Nicht kämpfen, sondern koexistieren? Der Gedanke ist verstörender als alles andere. Und trotzdem klingt etwas daran wahr.",
 			"next": "elise_trust_vessel"
 		},
 		"elise_trust_vessel": {
