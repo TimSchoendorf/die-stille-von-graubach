@@ -1060,6 +1060,18 @@
     "seal_chant_begin": {
       "type": "narration",
       "text": "Ich beginne zu singen. Die Worte, die Hilde mich gelehrt hat, fließen aus meinem Mund wie Wasser aus einer Quelle. Alt. Klar. Mächtig.",
+      "next": "check_voss_anchor_callback"
+    },
+    "check_voss_anchor_callback": {
+      "type": "flag_check",
+      "flag": "voss_midnight_meeting",
+      "value": 1,
+      "true_next": "seal_anchor_callback",
+      "false_next": "check_practiced_chant"
+    },
+    "seal_anchor_callback": {
+      "type": "narration",
+      "text": "Voss' Warnung trifft mich mitten im Lärm: Hand auf den Stein. Einen geliebten Namen nennen. Ich presse die Finger in die kalte Spirale und flüstere: Konrad. Dann: Margarethe. Der Druck in meinem Kopf lässt nicht nach - aber er bekommt eine Richtung. Ich bleibe ich.",
       "next": "check_practiced_chant"
     },
     "check_practiced_chant": {
