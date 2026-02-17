@@ -467,7 +467,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich werde es beenden, Anna. Aber diesmal nicht mit noch einem Opfer, das wir hinterher schönreden. Für dich, für Konrad, für alle - ich finde einen Weg, der nicht wieder ein Leben frisst.",
+      "text": "Ich werde es beenden, Anna. Aber diesmal nicht mit noch einem Opfer, das wir hinterher schönreden. Für dich, für Konrad, für alle - ich breche den Dreißig-Jahre-Kreis, statt ihn nur weiterzureichen.",
       "next": "hide_anna"
     },
     "hide_anna": {
@@ -486,7 +486,7 @@
     },
     "narration_determination": {
       "type": "narration",
-      "text": "Als Anna zwischen den Bäumen verschwindet, bleibt keine heldenhafte Ruhe zurück - nur eine harte, klare Entschlossenheit. Das Wesen hat Angst vor mir. Gut. Angst macht Fehler.",
+      "text": "Als Anna zwischen den Bäumen verschwindet, bleibt keine heldenhafte Ruhe zurück - nur eine harte, klare Entschlossenheit. Das Wesen hat Angst vor mir. Gut. Angst macht ungenau. Und heute brauche ich nur einen Fehler von ihm.",
       "next": "journal_reality"
     },
     "journal_reality": {

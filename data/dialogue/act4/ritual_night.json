@@ -765,7 +765,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Ich habe solche Angst. Aber ich kann nicht weg. Nicht jetzt. Nicht nach allem.",
+      "text": "Ich habe solche Angst, dass mir die Knie nachgeben. Aber Weglaufen hieße, das nächste Opfer schon heute zu wählen. Also bleibe ich.",
       "next": "check_konrad_sacrifice"
     },
     "check_konrad_sacrifice": {
@@ -987,7 +987,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Konrad... es tut mir leid. Aber wenn ich jetzt den Plan breche, verlieren wir vielleicht euch beide - und schenken dem Wesen weitere dreißig Jahre Hunger. Hass mich dafür, wenn wir leben. Aber halte noch ein paar Minuten durch.",
+      "text": "Konrad... es tut mir leid. Wenn ich jetzt den Plan zerreiße, verliere ich vielleicht dich und das Dorf gleich mit. Ich trage diesen Hass später. Jetzt brauche ich von dir noch ein paar Minuten Widerstand.",
       "next": "konrad_plan_react"
     },
     "konrad_plan_react": {
@@ -1047,7 +1047,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Nicht für immer! Nur bis... bis wir einen besseren Weg finden. Bitte!",
+      "text": "Nicht für immer! Nur bis wir einen Weg haben, der niemanden frisst - keine Namen mehr im Buch, keine Fütterung, keine dreißig Jahre Schuld.",
       "next": "check_seal_ready"
     },
     "check_seal_ready": {
@@ -1287,7 +1287,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Nein. Aber ich frage trotzdem.",
+      "text": "Nein. Ich bin nicht bereit. Aber ich gehe trotzdem nicht weg - also frag ich jetzt.",
       "next": "check_knowledge"
     },
     "check_knowledge": {
@@ -1372,7 +1372,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "angry",
-      "text": "Es reicht. Sechshundert Jahre Blut. Sechshundert Jahre Angst. Heute stirbst du!",
+      "text": "Es reicht. Sechshundert Jahre Blut, sechshundert Jahre erzwungenes Schweigen. Heute endet das - notfalls mit dir.",
       "next": "narration_destroy_creature"
     },
     "narration_destroy_creature": {

@@ -442,7 +442,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "charming",
-      "text": "Verzeihen Sie. Ich bin heute etwas... neben mir. Schlechte Nacht.",
+      "text": "Verzeihen Sie. Für einen Augenblick war ich weg - als hätte jemand anderes meine Zunge benutzt. Wenn ich seltsam wirke, dann weil ich seit Nächten gegen etwas in mir wachbleiben muss.",
       "next": "konrad_converge"
     },
     "elise_test_1": {
@@ -689,7 +689,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "worried",
-      "text": "Schon gut. Es ist nicht Ihre Schuld, Konrad.",
+      "text": "Es IST nicht Ihre Schuld. Jemand hat Sie jahrzehntelang zum Blitzableiter gemacht. Aber wir lassen es heute nicht dabei, Konrad.",
       "next": "konrad_humming_3"
     },
     "konrad_humming_3": {
