@@ -226,13 +226,13 @@ def _add_act4_ritual_night(tr):
        it="Le mie mani tremano sulla pietra. Ma non per la paura. Per la comprensione. Non è un mostro. È qualcosa di vecchio è di solo che non ha mai avuto altra scelta se non prendere ciò che gli veniva dato.")
 
     _t(tr, F, "elise_creature_4",
-       en="What do you really want? Not sacrifices. Not blood. What do you WANT?",
+       en="What do you really want? Not sacrifice. Not blood. Say it plainly—what do you need from us?",
        fr="Que veux-tu vraiment ? Pas des sacrifices. Pas du sang. Que VEUX-tu ?",
        es="¿Qué quieres realmente? No sacrificios. No sangre. ¿Qué QUIERES?",
        it="Cosa vuoi davvero? Non sacrifici. Non sangue. Cosa VUOI?")
 
     _t(tr, F, "narration_creature_speak_7",
-       en="FOR SOMEONE TO STAY. NOT DIE. STAY. SIX HUNDRED YEARS AND NOBODY EVER ASKED.",
+       en="FOR SOMEONE TO STAY WITHOUT DYING. TO RETURN BY CHOICE. SIX HUNDRED YEARS AND NOBODY EVER ASKED.",
        fr="QUE QUELQU'UN RESTE. QU'IL NE MEURE PAS. QU'IL RESTE. SIX CENTS ANS ET PERSONNE N'A JAMAIS DEMANDÉ.",
        es="QUE ALGUIEN SE QUEDE. QUE NO MUERA. QUE SE QUEDE. SEISCIENTOS AÑOS Y NADIE PREGUNTÓ JAMÁS.",
        it="CHE QUALCUNO RESTI. CHE NON MUOIA. CHE RESTI. SEICENTO ANNI È NESSUNO HA MAI CHIESTO.")
@@ -245,7 +245,7 @@ def _add_act4_ritual_night(tr):
        it="Silenzio. Nella mia mente, nella camera, ovunque. Il canto si è fermato. Per la prima volta da quando sono arrivata a Graubach, c'è silenzio.")
 
     _t(tr, F, "narration_revelation_2",
-       en="It is waiting for my answer. The oldest being beneath these mountains is holding its breath for the words of one exhausted folklorist from Berlin.",
+       en="It is waiting for my answer. The oldest being beneath these mountains is holding its breath for the terms of a conversation no one ever offered.",
        fr="Il attend mà réponse. L'être le plus ancien du monde attend les mots d'une folkloriste de Berlin.",
        es="Espera mi respuesta. El ser más antiguo del mundo espera las palabras de una folclorista de Berlín.",
        it="Aspetta la mia risposta. L'essere più antico del mondo aspetta le parole di una folklorista di Berlino.")
@@ -508,7 +508,7 @@ def _add_act4_ritual_night(tr):
        it="Un patto. Negoziare. Il mio nome nel libro mi dà voce. Per la prima volta in seicento anni, qualcuno parlerà con l'entità.")
 
     _t(tr, F, "elise_pact_1",
-       en="I propose a deal. No more sacrifices. Never again. In return... in return I offer you something you never had in six hundred years.",
+       en="I propose a deal. No more sacrifices. Never again. In return, we give what was never offered in six hundred years: chosen presence, without death.",
        fr="Je propose un marché. Plus de sacrifices. Plus jamais. En échange... en échange, je t'offre quelque chose que tu n'as jamais eu en six cents ans.",
        es="Propongo un trato. No más sacrificios. Nunca más. A cambio... a cambio te ofrezco algo que nunca tuviste en seiscientos años.",
        it="Propongo un accordo. Niente più sacrifici. Mai più. In cambio... in cambio ti offro qualcosa che non hai mai avuto in seicento anni.")

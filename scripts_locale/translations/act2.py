@@ -274,7 +274,7 @@ def _add_act2_investigation_morning(tr):
        it="Tre componenti. Il segno della terra - forse nella camera sotto la chiesa. Il canto degli antichi - Hilde lo conosce. E un'ancora.")
 
     _t(tr, F, "elise_plan_2",
-       en="I am the anchor. My name in the book is the connection. Grandmother did not want to destroy this connection - she wanted to USE it. Not as a sacrifice, but as a link.",
+       en="I am the anchor. My name in the book is the connection. Grandmother didn't try to cut that thread - she taught me to hold it on my own terms. Not as a sacrifice, but as a bridge.",
        fr="Je suis l'ancre. Mon nom dans le livre est le lien. Grand-mère ne voulait pas detruire cette connexion - elle voulait l'UTILISER. Non comme sacrifice, mais comme lien.",
        es="Yo soy el ancla. Mi nombre en el libro es la conexion. La abuela no queria destruir esta conexion - queria USARLA. No como sacrificio, sino como vinculo.",
        it="Io sono l'ancora. Il mio nome nel libro e il legame. La nonna non voleva distruggere questa connessione - voleva USARLA. Non come sacrificio, ma come tramite.")
