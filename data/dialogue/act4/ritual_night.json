@@ -65,6 +65,30 @@
 		"narration_4": {
 			"type": "narration",
 			"text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
+			"next": "check_anchor_memory"
+		},
+		"check_anchor_memory": {
+			"type": "flag_check",
+			"flag": "asked_about_margarethe_anchor",
+			"value": 1,
+			"true_next": "anchor_memory_line",
+			"false_next": "check_asked_about_death"
+		},
+		"anchor_memory_line": {
+			"type": "narration",
+			"text": "Hilde hatte recht: Der Anker ist keine Kette, sondern eine Beziehung. Großmutter hat es getragen, und jetzt liegt diese Rolle bei mir.",
+			"next": "check_asked_about_death"
+		},
+		"check_asked_about_death": {
+			"type": "flag_check",
+			"flag": "asked_about_death",
+			"value": 1,
+			"true_next": "death_memory_line",
+			"false_next": "check_found_name_memory"
+		},
+		"death_memory_line": {
+			"type": "narration",
+			"text": "\"Und wenn ich sterbe?\" hatte ich Hilde gefragt. Ihre Antwort dröhnt noch in mir nach. Angst ist erlaubt - weglaufen nicht.",
 			"next": "check_found_name_memory"
 		},
 		"check_found_name_memory": {
@@ -351,8 +375,10 @@
 		"hide_hilde_ritual": {
 			"type": "character",
 			"character": "hilde",
+			"expression": "ritual",
+			"position": "left",
 			"action": "hide",
-			"next": "effect_text_glitch"
+			"next": "route_seal"
 		},
 		"check_hide_voss_ritual": {
 			"type": "flag_check",
@@ -664,6 +690,20 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Du hast mir die Tür geöffnet, als alle anderen sie verschlossen hielten. In der ersten Nacht. Das... das war ich, Elise. Nicht ES. Das war ich.",
+			"next": "check_tested_konrad"
+		},
+		"check_tested_konrad": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "konrad_test_payoff",
+			"false_next": "show_konrad"
+		},
+		"konrad_test_payoff": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Du hast mich damals mit den Spiralen getestet. Gut so. Hier unten sollte man niemandem blind vertrauen - nicht mal mir.",
 			"next": "show_konrad"
 		},
 		"show_konrad": {
@@ -919,14 +959,6 @@
 			"text": "Hildes Stimme erhebt sich neben meiner, brüchig aber sicher. Sie kennt jedes Wort, jede Wendung. Die Melodie wird stärker, füllt die Kammer.",
 			"next": "hide_hilde_ritual"
 		},
-		"hide_hilde_ritual": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "left",
-			"action": "hide",
-			"next": "route_seal"
-		},
 		"route_seal": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act4/ending_seal.json"
@@ -1054,6 +1086,30 @@
 		"understand_begin": {
 			"type": "narration",
 			"text": "Verstehen. Nicht kämpfen, nicht binden. Verstehen. Ich bin Folkloristin. Ich studiere das Unbekannte. Es ist Zeit, das in die Praxis umzusetzen.",
+			"next": "check_investigation_order"
+		},
+		"check_investigation_order": {
+			"type": "flag_check",
+			"flag": "investigation_hilde_first",
+			"value": 1,
+			"true_next": "understand_hilde_payoff",
+			"false_next": "check_investigation_church_first"
+		},
+		"understand_hilde_payoff": {
+			"type": "narration",
+			"text": "Ich habe auf mein Bauchgefühl gehört und zuerst Hilde aufgesucht. Nicht die Steine, sondern eine Stimme hat mir gezeigt, wie man zuhört.",
+			"next": "elise_understand_1"
+		},
+		"check_investigation_church_first": {
+			"type": "flag_check",
+			"flag": "investigation_church_first",
+			"value": 1,
+			"true_next": "understand_church_payoff",
+			"false_next": "elise_understand_1"
+		},
+		"understand_church_payoff": {
+			"type": "narration",
+			"text": "Ich bin zuerst in die Kirche gegangen. Zu den Zeichen im Stein. Vielleicht beginnt echtes Verstehen genau dort: am Ort, an dem die Angst Form annimmt.",
 			"next": "elise_understand_1"
 		},
 		"elise_understand_1": {
