@@ -1068,7 +1068,7 @@ def _add_act4_ending_seal(tr):
 
     # --- Phase 10 Story-Konsistenz-Fixes ---
     _t(tr, F, "narration_anchor_seal",
-       en="Three parts join together - the chant, the sign beneath my feet, and myself. The anchor. Grandmother's plan, fulfilled.",
+       en="Three parts lock into place - the chant, the sign beneath my feet, and me. The anchor. Not a martyr's chain, but a chosen bond I can still survive.",
        fr="Trois parties se rejoignent - le chant, le signe sous mes pieds, et moi-même. L'ancre. Le plan de grand-mère, accompli.",
        es="Tres partes se unen - el canto, el signo bajo mis pies, y yo misma. El ancla. El plan de la abuela, cumplido.",
        it="Tre parti si uniscono - il canto, il segno sotto i miei piedi, e io stessa. L'ancora. Il piano della nonna, compiuto.")
@@ -1641,7 +1641,7 @@ def _add_act4_ending_pact(tr):
 
     # --- Phase 10 Story-Konsistenz-Fixes ---
     _t(tr, F, "narration_anchor_pact",
-       en="I stand on the sign, the chant fades, and the anchor holds - not as a chain, but as a bridge. The pact forms not from power, but from trust.",
+       en="I stand on the sign, the chant thins, and the anchor holds - by consent, not coercion. The pact forms not from power, but from trust.",
        fr="Je me tiens sur le signe, le chant s'estompe, et l'ancre tient - non comme une chaîne, mais comme un pont. Le pacte se forme non par la puissance, mais par la confiance.",
        es="Me alzo sobre el signo, el canto se desvanece, y el ancla sostiene - no como una cadena, sino como un puente. El pacto se forma no por el poder, sino por la confianza.",
        it="Mi ergo sul segno, il canto sfuma, e l'ancora tiene - non come una catena, ma come un ponte. Il patto si forma non dal potere, ma dalla fiducia.")
@@ -1984,7 +1984,7 @@ def _add_act4_ending_truth(tr):
 
     # --- Phase 10 Story-Konsistenz-Fixes ---
     _t(tr, F, "narration_anchor_truth",
-       en="The sign pulses beneath me, the chant echoes, and the anchor - I - holds the connection. But instead of binding, it opens. Understanding flows in both directions.",
+       en="The sign pulses beneath me, the chant echoes, and the anchor - I - keeps the connection open. Not as a prison, but as a threshold we both can step back from.",
        fr="Le signe pulse sous moi, le chant résonne, et l'ancre - moi - maintient la connexion. Mais au lieu de lier, elle ouvre. La compréhension coule dans les deux sens.",
        es="El signo pulsa debajo de mí, el canto resuena, y el ancla - yo - mantiene la conexión. Pero en vez de atar, abre. La comprensión fluye en ambas direcciones.",
        it="Il segno pulsa sotto di me, il canto riecheggia, e l'ancora - io - mantiene la connessione. Ma invece di legare, apre. La comprensione fluisce in entrambe le direzioni.")
