@@ -17,7 +17,8 @@
 ## Process improvement (implemented this run)
 - **Bottleneck identified:** Rewrite passes were scattered across files without a fixed "impact pass" checklist, causing uneven quality and missed Act 2/3/4 beats.
 - **Fix applied:** Adopted a per-ship-block loop: (a) one tension beat, (b) one character-truth beat, (c) one consequence-choice wording upgrade, then validation + commit.
-- **Next concrete automation step:** add `scripts_locale/dialogue_impact_lint.py` to flag generic fallback phrases (e.g., "So oder so", "Ich weiß") for rewrite candidates.
+- **Fix applied now:** added `scripts_locale/dialogue_impact_lint.py` to flag generic fallback phrases (e.g., "So oder so", "Ich weiß") in Act 2/3/4.
+- **Next concrete automation step:** wire this lint into ship-block validation (`validate_dialogue.py && dialogue_impact_lint.py`) and track down the top 10 recurring weak patterns each pass.
 
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**

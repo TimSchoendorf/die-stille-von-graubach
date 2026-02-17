@@ -558,7 +558,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Ich... ich weiß. Ich weiß, dass du mich kennst. Ich bin gekommen, um--",
+      "text": "Ich weiß, dass du mich kennst. Mein Name stand in deinem Buch, bevor ich geboren wurde. Ich bin nicht hier, um zu fliehen - ich bin hier, um zu entscheiden, was aus uns beiden wird.",
       "next": "narration_creature_speak_3"
     },
     "narration_creature_speak_3": {
@@ -740,7 +740,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Ich habe Angst. Aber ich habe gelernt, dass Angst nicht das Letzte sein muss, was man fühlt.",
+      "text": "Ich habe Angst. Aber Angst ist ein Kompass, kein Käfig. Sie zeigt mir, dass heute etwas zählt - und dass ich trotzdem weitergehe.",
       "next": "check_konrad_sacrifice"
     },
     "check_courage_low": {
@@ -914,7 +914,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "sad",
-      "text": "Ich weiß. Ich habe es gehört. Es will nicht fressen. Es will nicht töten. Es will nur, dass jemand bleibt.",
+      "text": "Ich weiß. Ich habe es gehört, bis mir die Knochen weh taten. Es will nicht nur fressen - es will festhalten. Aber niemand hat das Recht, Liebe als Kette zu tragen.",
       "next": "konrad_4"
     },
     "konrad_4": {
@@ -1365,7 +1365,7 @@
     },
     "destroy_begin": {
       "type": "narration",
-      "text": "Genug Reden. Genug Mitleid. Dieses Ding hat sechshundert Jahre Menschenopfer hingenommen. Egal was es fühlt - es muss enden.",
+      "text": "Genug Worte. Genug Ausreden. Sechshundert Jahre lang wurden hier Menschen geopfert, damit dieses Schweigen weiteratmet. Ob es leidet oder liebt - heute endet diese Rechnung.",
       "next": "elise_destroy_1"
     },
     "elise_destroy_1": {
