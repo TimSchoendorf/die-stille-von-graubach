@@ -53,7 +53,7 @@
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "charming",
-			"text": "Fräulein Brandt - was für eine angenehme Überraschung. Setzen Sie sich gern. Ich habe sogar echten Kaffee aufgetrieben, keinen Ersatz.",
+			"text": "Fräulein Brandt - was für eine angenehme Überraschung. Setzen Sie sich doch. Ich habe sogar echten Kaffee aufgetrieben, keinen Ersatz.",
 			"next": "elise_greet"
 		},
 		"elise_greet": {
@@ -131,7 +131,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Das wusste ich nicht. Sie hat nie viel über Graubach gesprochen. Jedenfalls nicht... nicht in den letzten Jahren.",
+			"text": "Das wusste ich nicht. Sie hat fast nie über Graubach gesprochen. Jedenfalls nicht in den letzten Jahren.",
 			"next": "konrad_expr_sad"
 		},
 		"konrad_expr_sad": {
@@ -173,7 +173,7 @@
 		},
 		"narration_test_moment": {
 			"type": "narration",
-			"text": "Die Frage kommt zu schnell. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als warte er nur auf ein falsches Wort.",
+			"text": "Die Frage kommt zu schnell. Seine Augen halten meinen Blick - ruhig, aufmerksam. Zu aufmerksam. Als bräuchte er nur ein falsches Wort von mir.",
 			"next": "choice_konrad_trust"
 		},
 		"choice_konrad_trust": {
