@@ -96,11 +96,30 @@
 			"flag": "found_name_in_book",
 			"value": 1,
 			"true_next": "found_name_memory",
+			"false_next": "check_saw_name_memory"
+		},
+		"check_saw_name_memory": {
+			"type": "flag_check",
+			"flag": "saw_name_in_book",
+			"value": 1,
+			"true_next": "found_name_memory",
 			"false_next": "narration_5"
 		},
 		"found_name_memory": {
 			"type": "narration",
 			"text": "Und da ist diese Erinnerung: mein eigener Name in diesem Buch, schwarz wie frische Tinte. Seitdem fühlt sich jeder Schritt hierher wie etwas an, das längst entschieden wurde.",
+			"next": "check_tried_erase_name"
+		},
+		"check_tried_erase_name": {
+			"type": "flag_check",
+			"flag": "tried_erase_name",
+			"value": 1,
+			"true_next": "erase_name_memory",
+			"false_next": "narration_5"
+		},
+		"erase_name_memory": {
+			"type": "narration",
+			"text": "Ich habe versucht, meinen Namen aus den Seiten zu kratzen. Die Tinte ließ sich nicht bewegen - nur meine Finger blieben schwarz. Manche Dinge wollen gelesen werden.",
 			"next": "narration_5"
 		},
 		"narration_5": {
@@ -273,6 +292,18 @@
 		"narration_begin_ritual": {
 			"type": "narration",
 			"text": "Ich lege meine Hände auf das Zeichen der Erde. Der pulsierende Punkt in der Mitte des Kreises. Und diesmal ziehe ich sie nicht zurück.",
+			"next": "check_knows_earth_sign"
+		},
+		"check_knows_earth_sign": {
+			"type": "flag_check",
+			"flag": "knows_earth_sign",
+			"value": 1,
+			"true_next": "earth_sign_memory",
+			"false_next": "check_gave_book_back"
+		},
+		"earth_sign_memory": {
+			"type": "narration",
+			"text": "Hilde hat mir gezeigt, wie das Zeichen gelesen werden will: nicht als Kreis, sondern als geöffnete Hand. Als Einladung - und als Grenze.",
 			"next": "check_gave_book_back"
 		},
 		"check_gave_book_back": {
