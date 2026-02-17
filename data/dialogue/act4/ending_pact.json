@@ -127,7 +127,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "thinking",
-			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden andere kommen. Du wirst nie wieder vergessen werden.",
+			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet und bei klarem Verstand. Du wirst nie wieder vergessen werden.",
 			"next": "creature_pact_8"
 		},
 		"creature_pact_8": {
@@ -144,7 +144,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "determined",
-			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Und keine Brandt wird ihr Versprechen brechen.",
+			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Kein Zwang, keine Blutlinie als Kette.",
 			"next": "effect_pact_forming"
 		},
 		"effect_pact_forming": {
