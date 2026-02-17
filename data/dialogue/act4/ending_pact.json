@@ -392,21 +392,33 @@
 		"pact_epilog_transition": {
 			"type": "narration",
 			"text": "Wochen vergehen. Monate. Die Erinnerung an jene Nacht verblasst wie ein Traum - aber der Pakt bleibt.",
-			"next": "pact_konrad_epilog"
+			"next": "check_konrad_help_pact"
+		},
+		"check_konrad_help_pact": {
+			"type": "flag_check",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"true_next": "pact_konrad_epilog_helped",
+			"false_next": "pact_konrad_epilog"
+		},
+		"pact_konrad_epilog_helped": {
+			"type": "narration",
+			"text": "Konrad wartet am Brunnen, als ich aus der Kirche trete. Er sieht mich, nickt nur und sagt dann: 'Du hast dein Versprechen gehalten.' Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+			"next": "pact_konrad_epilog_2"
 		},
 		"pact_konrad_epilog": {
 			"type": "narration",
-			"text": "Konrad steht am Brunnen, als Elise die Kammer verlässt. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+			"text": "Konrad steht am Brunnen, als ich aus der Kirche trete. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
 			"next": "pact_konrad_epilog_2"
 		},
 		"pact_konrad_epilog_2": {
 			"type": "narration",
-			"text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer. Vor Erleichterung.",
+			"text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
 			"next": "pact_anna_epilog"
 		},
 		"pact_anna_epilog": {
 			"type": "narration",
-			"text": "Anna besucht Elise jeden Herbst. 'Es singt anders', sagt sie. 'Zufriedener.' Anna lächelt - zum ersten Mal ohne Furcht.",
+			"text": "Anna besucht mich jeden Herbst. 'Es singt anders', sagt sie. 'Zufriedener.' Sie lächelt - zum ersten Mal ohne Furcht.",
 			"next": "pact_otto_epilog"
 		},
 		"pact_otto_epilog": {

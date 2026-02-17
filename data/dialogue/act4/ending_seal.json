@@ -389,11 +389,23 @@
 			"flag": "trusted_konrad",
 			"value": 1,
 			"true_next": "konrad_trusted_seal",
+			"false_next": "check_tested_konrad_seal"
+		},
+		"check_tested_konrad_seal": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "konrad_tested_seal",
 			"false_next": "konrad_untrusted_seal"
 		},
 		"konrad_trusted_seal": {
 			"type": "narration",
 			"text": "Konrad taucht am nächsten Morgen auf. Die Spiralen auf seiner Hand verblassen. Er weint. 'Ich bin frei', flüstert er. Und zum ersten Mal glaube ich ihm.",
+			"next": "seal_candle_epilog"
+		},
+		"konrad_tested_seal": {
+			"type": "narration",
+			"text": "Konrad taucht am nächsten Morgen auf, erschöpft, aber klar. 'Du hattest recht, misstrauisch zu sein', sagt er mit rauer Stimme. 'Dass du mich geprüft hast, hat mich wach gehalten.' Als die Spiralen auf seiner Hand verblassen, nicke ich nur. Zwischen uns ist noch Vorsicht - aber auch Hoffnung.",
 			"next": "seal_candle_epilog"
 		},
 		"konrad_untrusted_seal": {

@@ -517,7 +517,7 @@
 		},
 		"truth_mathilde_epilog": {
 			"type": "narration",
-			"text": "Elise denkt an die blinde Frau im Zug. Mathilde. Sie hat es gewusst, seit sechzig Jahren. Sie summte die Melodie nicht aus Wahnsinn - sondern aus Verständnis.",
+			"text": "Ich denke an die blinde Frau im Zug. Mathilde. Sie hat es gewusst, seit sechzig Jahren. Sie summte die Melodie nicht aus Wahnsinn - sondern aus Verständnis.",
 			"next": "truth_candle_epilog"
 		},
 		"truth_candle_epilog": {
