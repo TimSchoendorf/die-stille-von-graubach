@@ -1362,6 +1362,54 @@
     "pact_begin": {
       "type": "narration",
       "text": "Ein Pakt. Verhandeln. Mein Name im Buch gibt mir eine Stimme. Aber diesmal ohne Kniefall: kein Dorf mehr als Viehherde, kein Mensch mehr als Pfand, kein erzwungenes Gefäß. Jeder Kontakt bleibt freiwillig, planbar, überprüfbar - und bei Ausfall greift eine Notfallklausel mit Übergangs-Siegel statt Blut. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen reden - und Grenzen durchsetzen.",
+      "next": "check_pact_investigation_hilde"
+    },
+    "check_pact_investigation_hilde": {
+      "type": "flag_check",
+      "flag": "investigation_hilde_first",
+      "value": 1,
+      "true_next": "pact_hilde_payoff",
+      "false_next": "check_pact_investigation_church"
+    },
+    "pact_hilde_payoff": {
+      "type": "narration",
+      "text": "Ich höre Hildes Stimme in mir: Ein Gegenüber ist kein Opfer. Wer verhandelt, hält die Grenze UND die Beziehung. Genau so trete ich dir jetzt entgegen.",
+      "next": "check_pact_confronted_voss"
+    },
+    "check_pact_investigation_church": {
+      "type": "flag_check",
+      "flag": "investigation_church_first",
+      "value": 1,
+      "true_next": "pact_church_payoff",
+      "false_next": "check_pact_confronted_voss"
+    },
+    "pact_church_payoff": {
+      "type": "narration",
+      "text": "Ich sehe wieder die Spiralen im Stein unter dem Altar. Damals habe ich gelernt, dass Angst einen Ort hat - und dass man sie benennen kann. Genau deshalb kann ich heute Bedingungen stellen.",
+      "next": "check_pact_confronted_voss"
+    },
+    "check_pact_confronted_voss": {
+      "type": "flag_check",
+      "flag": "confronted_voss",
+      "value": 1,
+      "true_next": "pact_confronted_voss_payoff",
+      "false_next": "check_pact_lied_to_voss"
+    },
+    "pact_confronted_voss_payoff": {
+      "type": "narration",
+      "text": "Ich habe Voss zur Wahrheit gezwungen, obwohl sie uns beide verletzt hat. Das hier folgt derselben Regel: Kein Pakt ohne Wahrheit, keine Grenze ohne Verantwortung.",
+      "next": "check_pact_lied_to_voss"
+    },
+    "check_pact_lied_to_voss": {
+      "type": "flag_check",
+      "flag": "lied_to_voss",
+      "value": 1,
+      "true_next": "pact_lied_to_voss_payoff",
+      "false_next": "elise_pact_1"
+    },
+    "pact_lied_to_voss_payoff": {
+      "type": "narration",
+      "text": "Und ich denke an die Lüge in der Kirche. Angst hat mich damals eng gemacht. Nicht wieder. Wer ein uraltes Wesen an Bedingungen binden will, muss selbst ohne Täuschung sprechen.",
       "next": "elise_pact_1"
     },
     "elise_pact_1": {

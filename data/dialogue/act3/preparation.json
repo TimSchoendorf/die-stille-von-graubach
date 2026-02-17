@@ -607,6 +607,30 @@
     "approach_pact_2": {
       "type": "narration",
       "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber mit Rückkehrrecht - und wenn jemand 'Stopp' sagt, endet der Kontakt sofort. Zusätzlich gilt eine Notfallklausel: Fällt das Gegenüber aus, greift sofort ein Übergangs-Siegel, bis freiwillige Nachfolge bereit ist. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
+      "next": "check_confronted_voss_pact"
+    },
+    "check_confronted_voss_pact": {
+      "type": "flag_check",
+      "flag": "confronted_voss",
+      "value": 1,
+      "true_next": "confronted_voss_pact_memory",
+      "false_next": "check_lied_to_voss_pact"
+    },
+    "confronted_voss_pact_memory": {
+      "type": "narration",
+      "text": "In der Kirche habe ich Voss zur Wahrheit gezwungen. Das Gespräch tat weh - uns beiden. Aber genau das ist der Punkt: Ein tragfähiger Pakt beginnt nicht mit Höflichkeit, sondern mit Wahrheit, die man aushält.",
+      "next": "check_lied_to_voss_pact"
+    },
+    "check_lied_to_voss_pact": {
+      "type": "flag_check",
+      "flag": "lied_to_voss",
+      "value": 1,
+      "true_next": "lied_to_voss_pact_memory",
+      "false_next": "narration_preparation"
+    },
+    "lied_to_voss_pact_memory": {
+      "type": "narration",
+      "text": "Und ich habe selbst gelogen, als ich Angst hatte. Nie wieder. Wenn ich mit einem uralten Bewusstsein verhandle, dann ohne Hintertüren. Ehrlichkeit ist nicht naiv - sie ist hier überlebenswichtig.",
       "next": "narration_preparation"
     },
     "narration_preparation": {
