@@ -280,7 +280,7 @@ def _add_act2_investigation_morning(tr):
        it="Io sono l'ancora. Il mio nome nel libro e il legame. La nonna non voleva distruggere questa connessione - voleva USARLA. Non come sacrificio, ma come tramite.")
 
     _t(tr, F, "elise_plan_3",
-       en="Can this work? Or was grandmother just as desperate as I am, grasping at any straw?",
+       en="Can this work? Or am I reading hope into notes written by a woman who was running out of time and refused to admit it?",
        fr="Est-ce que ça peut fonctionner ? Ou est-ce que grand-mère était aussi désespérée que moi, se raccrochant a n'importe quelle branche ?",
        es="Puede funcionar esto? O la abuela estaba tan desesperada como yo, aferrandose a cualquier esperanza?",
        it="Puo funzionare? O la nonna era disperata quanto me, aggrappandosi a qualsiasi appiglio?")
@@ -412,7 +412,7 @@ def _add_act2_church_secrets(tr):
        it="Anche sua nonna veniva spesso qui. Non pregava. Lei... cercava. Come lei adesso, Fräulein Brandt. Proprio come lei.")
 
     _t(tr, F, "voss_converge_2",
-       en="If you truly want to know what lies beneath this church... come tonight. At midnight. I will show you the entrance to the chamber.",
+       en="If you truly want to know what lies beneath this church, come at midnight. Come alone. If Otto's men see us, neither of us will leave that chamber.",
        fr="Si vous voulez vraiment savoir ce qui se cache sous cette église... venez cette nuit. À minuit. Je vous montrerai l'accès à là chambre.",
        es="Si realmente quiere saber qué yace bajo esta iglesia... venga esta noche. A medianoche. Le mostraré el acceso a la cámara.",
        it="Se vuole davvero sapere cosa giace sotto questa chiesa... venga stanotte. A mezzanotte. Le mostrerò l'accesso alla camera.")
@@ -463,7 +463,7 @@ def _add_act2_church_secrets(tr):
        it="Queste spirali. Sulle lapidi, sulla mano di Konrad, nel diario della nonna. Ora qui, sotto l'altare. Tutte indicano la stessa direzione: verso il basso.")
 
     _t(tr, F, "elise_heartbeat_react",
-       en="It's alive. Right beneath me, under stone and earth. I feel it - not just with my fingers, but somewhere deeper, in a part of me that has no words. As if it recognizes me.",
+       en="It's alive. Right beneath me, under stone and earth. I feel it not only in my fingertips, but in the place where my name is tied to it. As if the thing below has been waiting for this exact touch.",
        fr="C'est vivant. Juste en dessous de moi, sous la pierre et la terre. Je le sens - pas seulement avec mes doigts, mais quelque part de plus profond, dans une partie de moi qui n'a pas de mots. Comme s'il me reconnaissait.",
        es="Esta vivo. Justo debajo de mi, bajo piedra y tierra. Lo siento - no solo con los dedos, sino en algun lugar mas profundo, en una parte de mi que no tiene palabras. Como si me reconociera.",
        it="E vivo. Proprio sotto di me, sotto pietra e terra. Lo sento - non solo con le dita, ma da qualche parte più in profondo, in una parte di me che non ha parole. Come se mi riconoscesse.")

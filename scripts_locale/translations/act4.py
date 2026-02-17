@@ -245,7 +245,7 @@ def _add_act4_ritual_night(tr):
        it="Silenzio. Nella mia mente, nella camera, ovunque. Il canto si è fermato. Per la prima volta da quando sono arrivata a Graubach, c'è silenzio.")
 
     _t(tr, F, "narration_revelation_2",
-       en="It is waiting for my answer. The oldest being in the world is waiting for the words of a folklorist from Berlin.",
+       en="It is waiting for my answer. The oldest being beneath these mountains is holding its breath for the words of one exhausted folklorist from Berlin.",
        fr="Il attend mà réponse. L'être le plus ancien du monde attend les mots d'une folkloriste de Berlin.",
        es="Espera mi respuesta. El ser más antiguo del mundo espera las palabras de una folclorista de Berlín.",
        it="Aspetta la mia risposta. L'essere più antico del mondo aspetta le parole di una folklorista di Berlino.")
@@ -520,7 +520,7 @@ def _add_act4_ritual_night(tr):
        it="GLI UMANI INFRANGONO LE PROMESSE. PERCHÉ DOVREI CREDERTI?")
 
     _t(tr, F, "elise_pact_2",
-       en="My grandmother kept her promise for thirty years. Every month, every chant. Did she ever lie?",
+       en="My grandmother kept her promise for thirty years—month after month, chant after chant. Tell me one time she lied to you.",
        fr="Mà grand-mère à tenu sà promesse pendant trente ans. Chaque mois, chaque chant. A-t-elle jamais menti ?",
        es="Mi abuela cumplió su promesa durante treinta años. Cada mes, cada canto. ¿Mintió alguna vez?",
        it="Mia nonna ha mantenuto la sua promessa per trent'anni. Ogni mese, ogni canto. Ha mai mentito?")
@@ -618,7 +618,7 @@ def _add_act4_ritual_night(tr):
        it="MINACCE. MA LE TUE MINACCE HANNO DENTI. QUESTO È... NUOVO.")
 
     _t(tr, F, "destroy_to_pact_2",
-       en="For the first time, a human negotiates with the entity from a position of strength. Grandmother would have laughed.",
+       en="For the first time, a human bargains with the entity from strength instead of terror. Grandmother would have called that progress.",
        fr="Pour la première fois, un humain négocie avec l'entité en position de force. Grand-mère aurait ri.",
        es="Por primera vez, un humano negocia con la entidad desde una posición de fuerza. La abuela se habría reído.",
        it="Per la prima volta, un umano negozia con l'entità da una posizione di forza. La nonna avrebbe riso.")
