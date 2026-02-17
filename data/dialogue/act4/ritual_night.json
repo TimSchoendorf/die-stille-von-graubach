@@ -791,7 +791,7 @@
     },
     "konrad_distrust_memory": {
       "type": "narration",
-      "text": "Ich habe Konrad auf Abstand gehalten. Aus Angst, aus Vernunft - vielleicht aus beidem. Jetzt spüre ich, wie das Wesen genau diese Distanz nutzt und ihn tiefer in sich hineinzieht.",
+      "text": "Ich habe Konrad auf Abstand gehalten. Aus Angst, aus Vernunft - vielleicht aus beidem. Jetzt spüre ich, wie das Wesen genau diese Distanz als Hebel benutzt und ihn tiefer in sich hineinzieht.",
       "next": "check_approach"
     },
     "check_tested_konrad_memory": {
@@ -834,7 +834,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Du hast mich eingeweiht, Elise. Ich habe versucht, ihn von deinem Plan fernzuhalten. Nicht immer geschafft - aber ich habe es versucht.",
+      "text": "Du hast mich eingeweiht, Elise. Jedes Mal, wenn ES in meinen Kopf griff, habe ich ihm einen falschen Ort, eine falsche Uhrzeit gegeben. Nicht immer geschafft - aber jede gelogene Minute hat dir diese Nacht gekauft.",
       "next": "check_opened_door_konrad"
     },
     "check_opened_door_konrad": {

@@ -470,12 +470,12 @@
 		},
 		"otto_surprise": {
 			"type": "narration",
-			"text": "Niemand hat mich aufgehalten. Vielleicht weiß Otto nichts. Vielleicht ist er anderswo beschäftigt.",
+			"text": "Niemand hat mich aufgehalten. Entweder Otto weiß noch nichts - oder er hat beschlossen, dass das hier ohne ihn enden soll.",
 			"next": "narration_otto_surprise_2"
 		},
 		"narration_otto_surprise_2": {
 			"type": "narration",
-			"text": "Oder vielleicht lässt mich etwas absichtlich durch. Der Gedanke ist schlimmer als jede Konfrontation.",
+			"text": "Oder etwas lässt mich absichtlich durch, weil es mich genau dort haben will, wo der Stein am dünnsten ist. Der Gedanke ist schlimmer als jeder bewaffnete Mann vor einer Tür.",
 			"next": "check_konrad_choice_payoff"
 		},
 		"descent_start": {

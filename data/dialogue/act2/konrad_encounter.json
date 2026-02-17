@@ -114,7 +114,7 @@
     },
     "narration_door": {
       "type": "narration",
-      "text": "Er lügt. Oder er lässt den entscheidenden Teil weg. In Großmutters Tagebuch steht nichts von harmlosen Abendgesprächen.",
+      "text": "Er lügt. Oder schlimmer: Er erzählt nur den Teil, mit dem ich mich sicher fühle. In Großmutters Tagebuch steht nichts von harmlosen Abendgesprächen - nur von Nächten, in denen man besser nicht öffnet.",
       "next": "check_journal_read"
     },
     "check_journal_read": {
@@ -224,7 +224,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Herr Müller... Konrad. Im Journal stehen die alte Tradition, das Buch unter der Kirche und die Fütterung alle dreißig Jahre. Ich komme nicht mit Gerüchten, ich komme mit Namen und Daten.",
+      "text": "Herr Müller... Konrad. Im Journal stehen die alte Tradition, das Buch unter der Kirche und die Fütterung alle dreißig Jahre. Ich komme nicht mit Gerüchten - ich komme mit Namen, Daten und einem Eintrag, in dem mein eigener Name als Nächste steht.",
       "next": "konrad_trust_react"
     },
     "konrad_trust_react": {
@@ -244,7 +244,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Nicht aus Beweisen - aus Jahren voller falscher Glockenschläge und Blicke, die zu lange an mir hingen. Seit drei Nächten wache ich mit Schlamm an den Schuhen auf, ohne den Weg gegangen zu sein. Irgendetwas in diesem Dorf ist krank. Und irgendetwas in mir hängt daran.",
+      "text": "Nicht aus Beweisen - aus Jahren voller falscher Glockenschläge und Blicke, die zu lange an mir hingen. Seit drei Nächten wache ich mit Schlamm an den Schuhen auf, ohne den Weg gegangen zu sein. Und heute Morgen waren unter meinen Nägeln Steinspäne aus der Kirchenkrypta. Irgendetwas in diesem Dorf ist krank. Und irgendetwas in mir führt es dorthin.",
       "next": "elise_trust_ask"
     },
     "elise_trust_ask": {
