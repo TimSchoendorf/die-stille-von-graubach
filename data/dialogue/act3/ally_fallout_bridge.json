@@ -101,7 +101,7 @@
       "type": "set_flag",
       "flag": "ally_fallout_payoff_pending",
       "value": 1,
-      "next": "bridge_end"
+      "next": "bridge_rehearsal_intro"
     },
     "bridge_hilde_1": {
       "type": "dialogue",
@@ -164,7 +164,7 @@
       "type": "set_flag",
       "flag": "ally_fallout_payoff_pending",
       "value": 1,
-      "next": "bridge_end"
+      "next": "bridge_rehearsal_intro"
     },
     "bridge_voss_1": {
       "type": "dialogue",
@@ -227,7 +227,7 @@
       "type": "set_flag",
       "flag": "ally_fallout_payoff_pending",
       "value": 1,
-      "next": "bridge_end"
+      "next": "bridge_rehearsal_intro"
     },
     "bridge_solo_1": {
       "type": "narration",
@@ -299,6 +299,91 @@
       "type": "set_flag",
       "flag": "ally_fallout_payoff_pending",
       "value": 1,
+      "next": "bridge_rehearsal_intro"
+    },
+    "bridge_rehearsal_intro": {
+      "type": "narration",
+      "text": "Bevor wir auseinandergehen, halten wir kurz inne. Keine große Versöhnung - nur die nüchterne Frage, ob unser Notplan unter Druck wirklich trägt.",
+      "next": "choice_bridge_rehearsal"
+    },
+    "choice_bridge_rehearsal": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Eine kurze Trockenübung machen - jetzt Fehler finden statt unten",
+          "next": "check_rehearsal_counter_chant"
+        },
+        {
+          "text": "Nicht üben - wir sparen Kraft für die Nacht",
+          "set_flags": {
+            "skipped_rehearsal_night6": 1
+          },
+          "next": "bridge_rehearsal_skip"
+        }
+      ]
+    },
+    "check_rehearsal_counter_chant": {
+      "type": "flag_check",
+      "flag": "contingency_counter_chant",
+      "value": 1,
+      "true_next": "rehearsal_counter_chant",
+      "false_next": "check_rehearsal_iron_hook"
+    },
+    "rehearsal_counter_chant": {
+      "type": "narration",
+      "text": "Hilde zählt vier Schläge mit den Knöcheln auf dem Tisch und singt dann nur eine halbe Zeile. Kurz, rau, präzise. " ,
+      "next": "check_rehearsal_iron_hook"
+    },
+    "check_rehearsal_iron_hook": {
+      "type": "flag_check",
+      "flag": "contingency_iron_hook",
+      "value": 1,
+      "true_next": "rehearsal_iron_hook",
+      "false_next": "check_rehearsal_chalk_route"
+    },
+    "rehearsal_iron_hook": {
+      "type": "narration",
+      "text": "Georg legt den Haken in meine Hand, lässt mich einmal eine verkeilte Klappe anheben und nickt erst, als ich den Hebel sauber setze.",
+      "next": "check_rehearsal_chalk_route"
+    },
+    "check_rehearsal_chalk_route": {
+      "type": "flag_check",
+      "flag": "contingency_chalk_route",
+      "value": 1,
+      "true_next": "rehearsal_chalk_route",
+      "false_next": "check_rehearsal_bell_protocol"
+    },
+    "rehearsal_chalk_route": {
+      "type": "narration",
+      "text": "Voss zeichnet mit Kreide drei Striche auf eine Schieferplatte und zwingt mich, den sicheren Pfad laut zu wiederholen: rechts am letzten Pfeiler, dann erst in den Kreis.",
+      "next": "check_rehearsal_bell_protocol"
+    },
+    "check_rehearsal_bell_protocol": {
+      "type": "flag_check",
+      "flag": "contingency_bell_protocol",
+      "value": 1,
+      "true_next": "rehearsal_bell_protocol",
+      "false_next": "set_rehearsed_signal_flag"
+    },
+    "rehearsal_bell_protocol": {
+      "type": "narration",
+      "text": "Wir zählen gemeinsam bis drei und schlagen den Tisch im Glockenrhythmus. Zum ersten Mal klingt das Signal nicht wie Panik, sondern wie Abmachung.",
+      "next": "set_rehearsed_signal_flag"
+    },
+    "set_rehearsed_signal_flag": {
+      "type": "set_flag",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "next": "bridge_rehearsal_done"
+    },
+    "bridge_rehearsal_done": {
+      "type": "narration",
+      "text": "Die Übung dauert kaum eine Minute. Trotzdem fühlt sich der Plan danach weniger wie Hoffnung an - mehr wie etwas, das Hände und Stimmen tatsächlich tragen können.",
+      "next": "bridge_end"
+    },
+    "bridge_rehearsal_skip": {
+      "type": "narration",
+      "text": "Wir sparen uns die Probe. Niemand widerspricht laut, aber in den Pausen zwischen unseren Sätzen bleibt ein Rest Unsicherheit hängen, den ich erst unten wieder treffen werde.",
       "next": "bridge_end"
     },
     "bridge_end": {

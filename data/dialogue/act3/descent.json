@@ -161,6 +161,30 @@
     "contingency_bell_protocol_payoff": {
       "type": "narration",
       "text": "Ich zähle unwillkürlich die Sekunden bis zum vereinbarten Glockenzeichen. Der Plan beruhigt mich - draußen wartet jemand auf ein Lebenszeichen, auch wenn ich allein hinabsteige.",
+      "next": "check_rehearsed_signal_night6"
+    },
+    "check_rehearsed_signal_night6": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "rehearsed_signal_night6_payoff",
+      "false_next": "check_skipped_rehearsal_night6"
+    },
+    "rehearsed_signal_night6_payoff": {
+      "type": "narration",
+      "text": "Wir haben den Ablauf vorhin trocken geübt - nur ein paar Atemzüge lang, aber jetzt sitzt er im Körper. Unter dem Lärm des Wesens finde ich den Rhythmus wieder, den wir oben gemeinsam gesetzt haben.",
+      "next": "check_ally_present"
+    },
+    "check_skipped_rehearsal_night6": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "skipped_rehearsal_night6_payoff",
+      "false_next": "check_ally_present"
+    },
+    "skipped_rehearsal_night6_payoff": {
+      "type": "narration",
+      "text": "Wir haben uns die Probe gespart. Jetzt muss ich jeden Schritt neu aus dem Kopf ziehen, während die Stimmen an mir reißen. Es geht - aber es kostet Zeit, die ich eigentlich nicht habe.",
       "next": "check_ally_present"
     },
     "check_ally_present": {

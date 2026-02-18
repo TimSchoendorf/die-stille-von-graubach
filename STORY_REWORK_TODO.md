@@ -20,6 +20,11 @@
 - **Fix applied now:** added `scripts_locale/dialogue_impact_lint.py` to flag generic fallback phrases (e.g., "So oder so", "Ich weiß") in Act 2/3/4.
 - **Next concrete automation step:** wire this lint into ship-block validation (`validate_dialogue.py && dialogue_impact_lint.py`) and track down the top 10 recurring weak patterns each pass.
 
+## Process improvement (implemented in latest autonomous loop)
+- **Bottleneck identified:** Act bridges often delivered consequences only as narration, with limited player agency right before major escalation scenes.
+- **Fix applied:** Added a "bridge agency checkpoint" rule for ship-block loops: each transition scene (especially end-of-act bridges) should include at least one actionable choice that changes downstream emotional/pacing payoff.
+- **Applied now:** inserted a new rehearsal micro-scene + choice in `act3/ally_fallout_bridge.json` and paid it off in `act3/descent.json` via new flags (`rehearsed_signal_night6`, `skipped_rehearsal_night6`).
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.
