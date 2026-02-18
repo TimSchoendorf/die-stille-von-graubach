@@ -702,7 +702,7 @@
     "narration_write_letter_end": {
       "type": "narration",
       "text": "Ich lege den Stift weg. Es gibt nichts mehr zu schreiben. Nichts mehr zu tun. Nur noch warten.",
-      "next": "narration_dawn"
+      "next": "check_otto_pressure_event"
     },
     "narration_dawn": {
       "type": "effect",
@@ -805,6 +805,72 @@
       "type": "narration",
       "text": "Ich habe versucht zu fliehen, und der Wald hat mich zurückgetragen wie eine Hand im Nacken. Heute bleibe ich nicht, weil ich muss - ich bleibe, weil ich entschieden habe, den Kreis selbst zu brechen.",
       "next": "bg_grandmother_night"
+    },
+    "check_otto_pressure_event": {
+      "type": "flag_check",
+      "flag": "otto_pressure_event_seen",
+      "value": 1,
+      "true_next": "narration_dawn",
+      "false_next": "narration_otto_outside"
+    },
+    "narration_otto_outside": {
+      "type": "narration",
+      "text": "Schritte vor dem Haus. Nicht Georgs schwerer Gang, nicht Hildes leise Sohlen. Otto. Er hämmert gegen die Tür, als wäre sie ein Feind.",
+      "next": "otto_outside_1"
+    },
+    "otto_outside_1": {
+      "type": "narration",
+      "text": "\"Brandt!\", ruft er durch das Holz. \"Dämmerung entscheidet. Nicht dein Gefühl. Entweder du kommst mit mir zur Kirche - oder ich läute die Glocke und hole das ganze Dorf.\"",
+      "next": "choice_otto_pressure_response"
+    },
+    "choice_otto_pressure_response": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Tür aufreißen und Otto offen widersprechen",
+          "set_flags": {
+            "otto_pressure_defied": 1,
+            "otto_pressure_event_seen": 1
+          },
+          "add_flags": {
+            "courage": 1
+          },
+          "next": "otto_defied_1"
+        },
+        {
+          "text": "Still bleiben und Otto mit einer knappen Zusage beruhigen",
+          "set_flags": {
+            "otto_pressure_complied": 1,
+            "otto_pressure_event_seen": 1
+          },
+          "next": "otto_complied_1"
+        }
+      ]
+    },
+    "otto_defied_1": {
+      "type": "narration",
+      "text": "Ich reiße die Tür auf, bevor er noch einmal schlagen kann. \"Kein Dorf. Keine Glocke. Keine Bühne für deine Angst, Otto. Du hältst dich aus der Kammer raus.\"",
+      "next": "otto_defied_2"
+    },
+    "otto_defied_2": {
+      "type": "narration",
+      "text": "Er weicht keinen Schritt. \"Dann halte ich wenigstens Wache\", zischt er. \"Wenn du uns belügst, trage ich dich persönlich in Ketten da runter.\" Er bleibt im Hof zurück, die Augen auf meine Fenster gerichtet.",
+      "next": "narration_after_otto_pressure"
+    },
+    "otto_complied_1": {
+      "type": "narration",
+      "text": "Ich antworte nicht sofort. Dann laut genug, dass er es hört: \"Beim ersten Glockenschlag bin ich dort. Allein.\" Das Wort \"allein\" schmeckt wie Metall.",
+      "next": "otto_complied_2"
+    },
+    "otto_complied_2": {
+      "type": "narration",
+      "text": "Das Hämmern endet. \"Gut\", sagt Otto durch die Tür. \"Ich warte vor der Kirche. Kein Trick.\" Seine Schritte entfernen sich nicht weit genug. Er richtet Posten ein - für den Fall, dass ich fliehe.",
+      "next": "narration_after_otto_pressure"
+    },
+    "narration_after_otto_pressure": {
+      "type": "narration",
+      "text": "Mit der Szene an meiner Tür hat Otto die Nacht in Bewegung gesetzt. Ab jetzt entscheidet nicht nur das Wesen über den Druck dieser Stunden, sondern auch ein Mann, der Angst für Ordnung hält.",
+      "next": "narration_dawn"
     }
   }
 }

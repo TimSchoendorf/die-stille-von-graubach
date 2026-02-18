@@ -394,7 +394,7 @@
     "narration_begin_ritual": {
       "type": "narration",
       "text": "Ich lege meine Hände auf das Zeichen der Erde. Der pulsierende Punkt in der Mitte des Kreises. Und diesmal ziehe ich sie nicht zurück.",
-      "next": "check_knows_earth_sign"
+      "next": "check_otto_pressure_defied_payoff"
     },
     "check_knows_earth_sign": {
       "type": "flag_check",
@@ -1650,6 +1650,30 @@
       "type": "narration",
       "text": "Ich war schon einmal auf der Flucht, im Kreis durch denselben Wald. Der Unterschied ist: Heute renne ich nicht mehr vor etwas weg. Heute gehe ich auf etwas zu.",
       "next": "narration_5"
+    },
+    "check_otto_pressure_defied_payoff": {
+      "type": "flag_check",
+      "flag": "otto_pressure_defied",
+      "value": 1,
+      "true_next": "otto_pressure_defied_payoff",
+      "false_next": "check_otto_pressure_complied_payoff"
+    },
+    "otto_pressure_defied_payoff": {
+      "type": "narration",
+      "text": "Ich sehe Otto vor mir, wie er im Hof stand und drohte, das Dorf zu holen. Ich habe ihm widersprochen - und genau deshalb zittert meine Stimme jetzt nicht. Diese Nacht gehört nicht seiner Panik.",
+      "next": "check_knows_earth_sign"
+    },
+    "check_otto_pressure_complied_payoff": {
+      "type": "flag_check",
+      "flag": "otto_pressure_complied",
+      "value": 1,
+      "true_next": "otto_pressure_complied_payoff",
+      "false_next": "check_knows_earth_sign"
+    },
+    "otto_pressure_complied_payoff": {
+      "type": "narration",
+      "text": "Ottos Ultimatum hängt mir noch im Nacken: erster Glockenschlag, keine Verzögerung. Ich habe ihm zugesagt, um Zeit zu gewinnen - jetzt muss ich liefern, bevor seine Angst oben in der Kirche zur Meute wird.",
+      "next": "check_knows_earth_sign"
     }
   }
 }
