@@ -223,7 +223,7 @@
       "speaker": "georg",
       "expression": "sad",
       "text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg. Ich halte dir den Rücken frei, Elise - und wenn das Übergangs-Siegel gebraucht wird, öffne ich dir jede Tür.",
-      "next": "hide_georg_pact"
+      "next": "check_georg_hurt_pact_payoff"
     },
     "hide_georg_pact": {
       "type": "character",
@@ -267,7 +267,7 @@
       "speaker": "hilde",
       "expression": "kind",
       "text": "Gesellschaft. So einfach. Und so schwer. Ich lehre die Freiwilligen den alten Gesang - und vor allem, wann sie Stopp sagen müssen.",
-      "next": "hide_hilde_pact"
+      "next": "check_hilde_hurt_pact_payoff"
     },
     "hide_hilde_pact": {
       "type": "character",
@@ -311,7 +311,7 @@
       "speaker": "voss",
       "expression": "praying",
       "text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten. Ich dokumentiere jede Vereinbarung im Kirchenarchiv - keine Geheimnisse mehr.",
-      "next": "hide_voss_pact"
+      "next": "check_voss_hurt_pact_payoff"
     },
     "hide_voss_pact": {
       "type": "character",
@@ -494,6 +494,48 @@
     "scene_end": {
       "type": "scene_end",
       "next_file": "ending:pact"
+    },
+    "check_georg_hurt_pact_payoff": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "georg_hurt_pact_payoff",
+      "false_next": "hide_georg_pact"
+    },
+    "georg_hurt_pact_payoff": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Und... ich schulde dir noch etwas. Als du mich damals nicht gewählt hast, war ich verletzt und laut. Heute ist klar: Wir waren trotzdem auf derselben Seite. Tut mir leid.",
+      "next": "hide_georg_pact"
+    },
+    "check_hilde_hurt_pact_payoff": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "hilde_hurt_pact_payoff",
+      "false_next": "hide_hilde_pact"
+    },
+    "hilde_hurt_pact_payoff": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Und was gestern wehgetan hat, lasse ich heute los. Kränkung ist klein neben dem, was du gerade beendet hast.",
+      "next": "hide_hilde_pact"
+    },
+    "check_voss_hurt_pact_payoff": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "voss_hurt_pact_payoff",
+      "false_next": "hide_voss_pact"
+    },
+    "voss_hurt_pact_payoff": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Und falls ich gestern gekränkt klang: Das war Eitelkeit, nicht Weisheit. Danke, dass Sie trotzdem weiter mit uns geredet haben.",
+      "next": "hide_voss_pact"
     }
   }
 }
