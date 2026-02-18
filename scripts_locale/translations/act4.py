@@ -232,7 +232,7 @@ def _add_act4_ritual_night(tr):
        it="Cosa vuoi davvero? Non sacrifici. Non sangue. Cosa VUOI?")
 
     _t(tr, F, "narration_creature_speak_7",
-       en="FOR SOMEONE TO STAY WITHOUT DYING. TO RETURN BY CHOICE. SIX HUNDRED YEARS AND NOBODY EVER ASKED.",
+       en="FOR SOMEONE TO STAY WITHOUT DYING. TO RETURN BY CHOICE, AND LEAVE BY CHOICE. SIX HUNDRED YEARS AND NOBODY EVER ASKED.",
        fr="QUE QUELQU'UN RESTE. QU'IL NE MEURE PAS. QU'IL RESTE. SIX CENTS ANS ET PERSONNE N'A JAMAIS DEMANDÉ.",
        es="QUE ALGUIEN SE QUEDE. QUE NO MUERA. QUE SE QUEDE. SEISCIENTOS AÑOS Y NADIE PREGUNTÓ JAMÁS.",
        it="CHE QUALCUNO RESTI. CHE NON MUOIA. CHE RESTI. SEICENTO ANNI È NESSUNO HA MAI CHIESTO.")
@@ -508,7 +508,7 @@ def _add_act4_ritual_night(tr):
        it="Un patto. Negoziare. Il mio nome nel libro mi dà voce. Per la prima volta in seicento anni, qualcuno parlerà con l'entità.")
 
     _t(tr, F, "elise_pact_1",
-       en="I propose a deal. No more sacrifices. Never again. In return, we give what was never offered in six hundred years: chosen presence, without death.",
+       en="I propose a deal. No more sacrifices. Never again. In return, we offer what was never offered in six hundred years: chosen presence, explicit consent, and no death.",
        fr="Je propose un marché. Plus de sacrifices. Plus jamais. En échange... en échange, je t'offre quelque chose que tu n'as jamais eu en six cents ans.",
        es="Propongo un trato. No más sacrificios. Nunca más. A cambio... a cambio te ofrezco algo que nunca tuviste en seiscientos años.",
        it="Propongo un accordo. Niente più sacrifici. Mai più. In cambio... in cambio ti offro qualcosa che non hai mai avuto in seicento anni.")
@@ -606,7 +606,7 @@ def _add_act4_ritual_night(tr):
         it_choices=["Attaccare di nuovo - distruggerlo definitivamente", "Usare la mia forza - dettare le condizioni"])
 
     _t(tr, F, "destroy_to_pact",
-       en="No more sacrifices. Never again. No blood, no vessel, no tradition. You accept my terms. Or I attack again.",
+       en="No more sacrifices. Never again. No blood, no forced vessel, no tradition. Chosen presence only, with consent and the right to stop. You accept my terms. Or I attack again.",
        fr="Plus de sacrifices. Plus jamais. Pas de sang, pas de réceptacle, pas de tradition. Tu acceptes mes conditions. Ou j'attaque de nouveau.",
        es="No más sacrificios. Nunca más. Sin sangre, sin recipiente, sin tradición. Aceptas mis condiciones. O ataco de nuevo.",
        it="Niente più sacrifici. Mai più. Niente sangue, niente recipiente, niente tradizione. Accetti le mie condizioni. O attacco di nuovo.")
