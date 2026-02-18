@@ -30,6 +30,11 @@
 - **Fix applied:** Added an "ending fallout closure checkpoint" rule: every ending that can follow `ally_fallout_payoff_pending=1` must include explicit reconciliation beats and clear the pending flag.
 - **Applied now:** extended `act4/ending_seal.json` with a new post-ritual reconciliation event on the church steps, conditional lines for Georg/Hilde/Voss hurt states, and cleanup via `ally_fallout_payoff_pending=0`.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Branch-specific ending polish drifted: some endings explicitly resolved `ally_fallout_payoff_pending`, while others relied on implicit emotional closure. This weakens setup→escalation→payoff coherence across routes.
+- **Fix applied:** Added an "ending parity checkpoint" for ship-block runs: every ending reachable after ally fallout must either clear `ally_fallout_payoff_pending` on-screen or justify why it intentionally remains open.
+- **Applied now:** extended `act4/ending_pact.json` with a dedicated fallout-resolution beat + explicit flag cleanup (`ally_fallout_payoff_pending=0`) before ally epilog reactions.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

@@ -187,6 +187,24 @@
       "type": "effect",
       "effect": "clear",
       "params": {},
+      "next": "check_ally_fallout_pact"
+    },
+    "check_ally_fallout_pact": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "fallout_pact_intro",
+      "false_next": "check_ally_pact_georg"
+    },
+    "fallout_pact_intro": {
+      "type": "narration",
+      "text": "Der Pakt beruhigt den Stein sofort - Menschen nicht. Die Verletzungen von gestern sind noch da, und genau deshalb müssen wir sie jetzt aussprechen, bevor aus Erleichterung neues Schweigen wird.",
+      "next": "clear_fallout_pact"
+    },
+    "clear_fallout_pact": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
       "next": "check_ally_pact_georg"
     },
     "check_ally_pact_georg": {
