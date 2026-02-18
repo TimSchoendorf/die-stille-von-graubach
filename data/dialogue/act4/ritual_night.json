@@ -45,6 +45,18 @@
     "narration_2": {
       "type": "narration",
       "text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füßen spüre ich es: riesig, alt, erwachend.",
+      "next": "check_bridge_fallout_seen_memory"
+    },
+    "check_bridge_fallout_seen_memory": {
+      "type": "flag_check",
+      "flag": "bridge_fallout_seen",
+      "value": 1,
+      "true_next": "bridge_fallout_seen_memory",
+      "false_next": "check_reached_chamber_memory"
+    },
+    "bridge_fallout_seen_memory": {
+      "type": "narration",
+      "text": "Auf der Brücke ist alles endgültig geworden. Worte wurden zu Wunden, Loyalität zu Entscheidung. Seitdem weiß ich, was diese Nacht jeden kosten kann.",
       "next": "check_reached_chamber_memory"
     },
     "check_reached_chamber_memory": {

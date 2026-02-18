@@ -26,6 +26,90 @@
     "narration_1": {
       "type": "narration",
       "text": "Tag sechs, Nachmittag. Morgen ist der Jahrestag. Ich brauche Hilfe - und ich muss mich entscheiden, wem ich vertraue.",
+      "next": "check_prologue_complete_memory"
+    },
+    "check_prologue_complete_memory": {
+      "type": "flag_check",
+      "flag": "prologue_complete",
+      "value": 1,
+      "true_next": "prologue_complete_memory",
+      "false_next": "check_act1_complete_memory"
+    },
+    "prologue_complete_memory": {
+      "type": "narration",
+      "text": "Seit der Zugfahrt nach Graubach fühlt sich jeder Tag wie ein geliehener Atemzug an. Damals hat es begonnen; heute entscheide ich, wie es endet.",
+      "next": "check_act1_complete_memory"
+    },
+    "check_act1_complete_memory": {
+      "type": "flag_check",
+      "flag": "act1_complete",
+      "value": 1,
+      "true_next": "act1_complete_memory",
+      "false_next": "check_met_georg_memory"
+    },
+    "act1_complete_memory": {
+      "type": "narration",
+      "text": "Die erste Nacht im Dorf hat mir jede Illusion genommen. Seitdem geht es nicht mehr darum, ob ich glaube - sondern ob ich standhalte.",
+      "next": "check_met_georg_memory"
+    },
+    "check_met_georg_memory": {
+      "type": "flag_check",
+      "flag": "met_georg",
+      "value": 1,
+      "true_next": "met_georg_memory",
+      "false_next": "check_met_anna_memory"
+    },
+    "met_georg_memory": {
+      "type": "narration",
+      "text": "Georg war der Erste, der mir trotz Angst die Tür offenhielt. Ohne ihn hätte ich den Weg bis hierher nicht gefunden.",
+      "next": "check_met_anna_memory"
+    },
+    "check_met_anna_memory": {
+      "type": "flag_check",
+      "flag": "met_anna",
+      "value": 1,
+      "true_next": "met_anna_memory",
+      "false_next": "check_met_otto_memory"
+    },
+    "met_anna_memory": {
+      "type": "narration",
+      "text": "Und Anna - mit Kreide an den Fingern und Wahrheiten, die Erwachsene nicht aussprechen. Ihre Zeichnungen haben mir mehr gezeigt als jedes Protokoll.",
+      "next": "check_met_otto_memory"
+    },
+    "check_met_otto_memory": {
+      "type": "flag_check",
+      "flag": "met_otto",
+      "value": 1,
+      "true_next": "met_otto_memory",
+      "false_next": "check_met_voss_memory"
+    },
+    "met_otto_memory": {
+      "type": "narration",
+      "text": "Otto nannte es Ordnung, als er mir Grenzen setzte. Seitdem weiß ich: Kontrolle trägt hier oft nur ein höfliches Gesicht.",
+      "next": "check_met_voss_memory"
+    },
+    "check_met_voss_memory": {
+      "type": "flag_check",
+      "flag": "met_voss",
+      "value": 1,
+      "true_next": "met_voss_memory",
+      "false_next": "check_met_konrad_memory"
+    },
+    "met_voss_memory": {
+      "type": "narration",
+      "text": "Bei Voss roch ich Weihrauch und Schuld im selben Atemzug. Seine Reue ist echt - aber sie macht ihn nicht ungefährlich.",
+      "next": "check_met_konrad_memory"
+    },
+    "check_met_konrad_memory": {
+      "type": "flag_check",
+      "flag": "met_konrad",
+      "value": 1,
+      "true_next": "met_konrad_memory",
+      "false_next": "check_konrad_history"
+    },
+    "met_konrad_memory": {
+      "type": "narration",
+      "text": "Konrad war von Anfang an der Riss im Bild: zu vertraut, zu glatt, zu nah an dem, was unter uns singt.",
       "next": "check_konrad_history"
     },
     "elise_assess": {
