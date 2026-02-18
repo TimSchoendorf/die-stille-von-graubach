@@ -40,6 +40,11 @@
 - **Fix applied:** Added a "carry-forward contingency checkpoint" to the loop: any new tactical choice introduced in Act 3 must be checked for at least one explicit Act-4 consequence beat (success cadence or failure cost).
 - **Applied now:** extended `act4/ending_escape.json` with rehearsal-dependent crisis beats (`rehearsed_signal_night6` vs `skipped_rehearsal_night6`) before ally-arrival branching.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Sacrifice route had strong core emotion but weak bridge-to-ending continuity: Act-3 rehearsal/fallout flags were underpaid compared with other endings, flattening branch differentiation.
+- **Fix applied:** Added a "sacrifice continuity checkpoint" to the loop: before shipping, verify Sacrifice also resolves `ally_fallout_payoff_pending` on-screen and pays rehearsal choice (`rehearsed_signal_night6` vs `skipped_rehearsal_night6`) with concrete cadence/cost.
+- **Applied now:** inserted a new fallout-reconciliation mini-scene in `act4/ending_sacrifice.json` (includes rehearsal payoff/cost lines, hurt-flag reconciliations, explicit cleanup `ally_fallout_payoff_pending=0`).
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

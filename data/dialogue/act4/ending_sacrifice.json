@@ -325,7 +325,7 @@
       "type": "character",
       "character": "georg",
       "action": "hide",
-      "next": "narration_10"
+      "next": "check_fallout_pending_sacrifice"
     },
     "check_ally_sacrifice_hilde": {
       "type": "flag_check",
@@ -360,7 +360,7 @@
       "type": "character",
       "character": "hilde",
       "action": "hide",
-      "next": "narration_10"
+      "next": "check_fallout_pending_sacrifice"
     },
     "check_ally_sacrifice_voss": {
       "type": "flag_check",
@@ -395,11 +395,100 @@
       "type": "character",
       "character": "voss",
       "action": "hide",
-      "next": "narration_10"
+      "next": "check_fallout_pending_sacrifice"
     },
     "narration_sacrifice_solo": {
       "type": "narration",
       "text": "Stille. Nur das Singen - leiser jetzt, zufriedener. Niemand ist hier, um mich aufzuhalten. Niemand, um mich zu trösten. Nur ich und das Wesen, das langsam seinen neuen Platz findet.",
+      "next": "check_fallout_pending_sacrifice"
+    },
+    "check_fallout_pending_sacrifice": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "sacrifice_fallout_intro",
+      "false_next": "narration_10"
+    },
+    "sacrifice_fallout_intro": {
+      "type": "narration",
+      "text": "Bevor wir die Kammer verlassen, holt uns der Abend von gestern ein: die harten Worte, der Riss zwischen uns, alles noch offen.",
+      "next": "check_rehearsed_signal_sacrifice"
+    },
+    "check_rehearsed_signal_sacrifice": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "sacrifice_rehearsed_payoff",
+      "false_next": "check_skipped_rehearsal_sacrifice"
+    },
+    "sacrifice_rehearsed_payoff": {
+      "type": "narration",
+      "text": "Wir fallen automatisch in die geübten Zeichen zurück: ein Blick, ein kurzes Nicken, klare Sätze statt Vorwürfe. Die Probe von gestern hält uns heute zusammen.",
+      "next": "check_skipped_rehearsal_sacrifice"
+    },
+    "check_skipped_rehearsal_sacrifice": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "sacrifice_skipped_rehearsal_cost",
+      "false_next": "check_georg_hurt_sacrifice"
+    },
+    "sacrifice_skipped_rehearsal_cost": {
+      "type": "narration",
+      "text": "Die fehlende Probe hängt uns nach. Zweimal reden wir aneinander vorbei, bis Konrad uns hart stoppt und jeder nur einen Satz sagt. Erst dann wird aus Panik wieder ein Plan.",
+      "next": "check_georg_hurt_sacrifice"
+    },
+    "check_georg_hurt_sacrifice": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "sacrifice_georg_reconcile",
+      "false_next": "check_hilde_hurt_sacrifice"
+    },
+    "sacrifice_georg_reconcile": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "guilty",
+      "text": "Ich war gestern nur noch Zorn. Heute sehe ich, dass du uns trotzdem vertraut hast, Elise. Wenn du bleibst, bleibe ich auch - als jemand, der mitträgt statt drängt.",
+      "next": "check_hilde_hurt_sacrifice"
+    },
+    "check_hilde_hurt_sacrifice": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "sacrifice_hilde_reconcile",
+      "false_next": "check_voss_hurt_sacrifice"
+    },
+    "sacrifice_hilde_reconcile": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Auch ich war hart zu dir, Kind. Nicht weil ich dich klein sah, sondern weil ich Angst hatte, dich zu verlieren. Ab jetzt singen wir nicht gegeneinander, sondern mit dir.",
+      "next": "check_voss_hurt_sacrifice"
+    },
+    "check_voss_hurt_sacrifice": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "sacrifice_voss_reconcile",
+      "false_next": "set_sacrifice_fallout_resolved"
+    },
+    "sacrifice_voss_reconcile": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Ich habe mein schlechtes Gewissen gestern als Rat verkleidet. Das war feige. Heute sage ich es klar: Danke, dass du uns nicht aus der Verantwortung entlässt.",
+      "next": "set_sacrifice_fallout_resolved"
+    },
+    "set_sacrifice_fallout_resolved": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
+      "next": "sacrifice_fallout_outro"
+    },
+    "sacrifice_fallout_outro": {
+      "type": "narration",
+      "text": "Kein großes Happy End. Aber wir gehen die Stufen hinauf, ohne dass jemand zurückbleibt. Für Graubach ist das fast schon ein Wunder.",
       "next": "narration_10"
     },
     "narration_10": {
