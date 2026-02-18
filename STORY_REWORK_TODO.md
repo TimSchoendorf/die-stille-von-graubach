@@ -65,6 +65,11 @@
 - **Fix applied:** Added a "symptom probe checkpoint" to ship-block loops: when a branch introduces crucial possession data, force one player-led diagnostic choice and require a downstream callback in the next act.
 - **Applied now:** inserted a new investigative micro-choice in `act2/konrad_encounter.json` (missing-time vs spiral-sign focus; flags `asked_konrad_missing_time` / `asked_konrad_spiral_signs`) and paid it off in `act3/allies_choice.json` during Konrad's relapse scene.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** The new Act-2 Konrad diagnostic probe (`asked_konrad_missing_time` vs `asked_konrad_spiral_signs`) had escalation payoff in Act 3, but ritual-night execution still converged too early, so the setup lost tactical identity in Act 4.
+- **Fix applied:** Added a "probe-to-ritual continuity checkpoint" to the loop: any investigative branch introduced before Act 3 must get at least one distinct ritual handling beat (not just memory text) in Act 4.
+- **Applied now:** extended `act4/ritual_night.json` with probe-dependent pre-appearance tactics and callout dialogue (bell-gap control vs spiral-hand cue), plus continuity flags (`ritual_timing_from_missing_time`, `ritual_spiral_tell_prepared`).
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

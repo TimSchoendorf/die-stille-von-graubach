@@ -1057,11 +1057,41 @@
       "flag": "konrad_anchor_phrase_prepared",
       "value": 1,
       "true_next": "konrad_anchor_phrase_ritual_payoff",
-      "false_next": "konrad_appears"
+      "false_next": "check_konrad_probe_memory_ritual"
     },
     "konrad_anchor_phrase_ritual_payoff": {
       "type": "narration",
       "text": "Noch bevor ich ihn sehe, spreche ich leise Annas Drei-Anker-Satz: \"Konrad Müller. Lehrer. Klassenzimmer.\" Kein Zauber, nur Identität. Aber in dieser Kammer ist Identität die schärfste Klinge gegen das Verschlucktwerden.",
+      "next": "check_konrad_probe_memory_ritual"
+    },
+    "check_konrad_probe_memory_ritual": {
+      "type": "flag_check",
+      "flag": "asked_konrad_missing_time",
+      "value": 1,
+      "true_next": "konrad_missing_time_ritual_payoff",
+      "false_next": "check_konrad_spiral_signs_ritual_payoff"
+    },
+    "konrad_missing_time_ritual_payoff": {
+      "type": "narration",
+      "text": "Am Brunnen sprach Konrad von fehlender Zeit nach dem Glockenton. Genau daran halte ich mich jetzt: Ich lasse zwischen seinen Blickwechseln keine Lücke, nenne seinen Namen sofort und zwinge die Stille klein zu bleiben.",
+      "set_flags": {
+        "ritual_timing_from_missing_time": 1
+      },
+      "next": "konrad_appears"
+    },
+    "check_konrad_spiral_signs_ritual_payoff": {
+      "type": "flag_check",
+      "flag": "asked_konrad_spiral_signs",
+      "value": 1,
+      "true_next": "konrad_spiral_signs_ritual_payoff",
+      "false_next": "konrad_appears"
+    },
+    "konrad_spiral_signs_ritual_payoff": {
+      "type": "narration",
+      "text": "Ich erinnere mich an seine verkrampften Finger vom Brunnen. Bevor Konrad überhaupt spricht, achte ich auf seine Handgelenke statt auf seine Augen - sobald sie zucken, setze ich den Gegengesang früher an.",
+      "set_flags": {
+        "ritual_spiral_tell_prepared": 1
+      },
       "next": "konrad_appears"
     },
     "konrad_appears": {
@@ -1136,7 +1166,35 @@
       "speaker": "konrad",
       "expression": "possessed",
       "text": "Elise... es hat mich hergebracht. Es... ES SPRICHT DURCH MICH. Aber ein Teil von mir ist noch da. Noch.",
-      "next": "elise_konrad_ritual_1"
+      "next": "check_konrad_probe_callout"
+    },
+    "check_konrad_probe_callout": {
+      "type": "flag_check",
+      "flag": "asked_konrad_missing_time",
+      "value": 1,
+      "true_next": "elise_konrad_callout_missing_time",
+      "false_next": "check_konrad_spiral_callout"
+    },
+    "elise_konrad_callout_missing_time": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad, hör auf mich. Wenn die Glocke in deinem Kopf losgeht, folgst du nur meiner Stimme. Keine Stille dazwischen. Bleib hier!",
+      "next": "effect_konrad_glitch"
+    },
+    "check_konrad_spiral_callout": {
+      "type": "flag_check",
+      "flag": "asked_konrad_spiral_signs",
+      "value": 1,
+      "true_next": "elise_konrad_callout_spiral_signs",
+      "false_next": "elise_konrad_ritual_1"
+    },
+    "elise_konrad_callout_spiral_signs": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad! Schau auf deine Hände. Nicht auf ES. Öffne die Finger, eins nach dem anderen. Du bist hier, bei mir, in dieser Kammer!",
+      "next": "effect_konrad_glitch"
     },
     "elise_konrad_ritual_1": {
       "type": "dialogue",
