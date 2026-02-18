@@ -2023,7 +2023,7 @@ def _add_act4_ending_sacrifice(tr):
        es="Miro a Konrad. Está temblando. Gotas de sudor en su frente. Detrás de sus ojos, un hombre lucha contra un océano.",
        it="Guardo Konrad. Trema. Gocce di sudore sulla sua fronte. Dietro i suoi occhi, un uomo lotta contro un oceano.")
     _t(tr, F, "narration_1_helped_konrad",
-       en="He asked me for help when he could barely speak. That promise stands between us now like a burning line.",
+       en="In the schoolhouse he asked for help when he could barely speak. That promise stands between us now like a burning line.",
        fr="Il m'a demandé de l'aide alors qu'il arrivait à peine à parler. Cette promesse se tient maintenant entre nous comme une ligne brûlante.",
        es="Me pidió ayuda cuando apenas podía hablar. Esa promesa ahora se alza entre nosotros como una línea ardiente.",
        it="Mi ha chiesto aiuto quando riusciva a malapena a parlare. Ora quella promessa sta tra noi come una linea ardente.")
@@ -2069,7 +2069,7 @@ def _add_act4_ending_sacrifice(tr):
        it="Elise, NO! Che cosa fai?!")
 
     _t(tr, F, "narration_6",
-       en="'I am giving you your life back, Konrad.' My voice sounds calm. Calmer than I feel.",
+       en="'I promised to give you your life back, Konrad. This is me keeping it.' My voice sounds calm. Calmer than I feel.",
        fr="« Je te rends tà vie, Konrad. » Mà voix est calme. Plus calme que je ne le suis.",
        es="«Te devuelvo tu vida, Konrad.» Mi voz suena tranquila. Más tranquila de lo que me siento.",
        it="«Ti restituisco la tua vita, Konrad.» La mia voce suona calma. Più calma di quanto mi senta.")

@@ -186,7 +186,7 @@ def _add_act3_allies_choice(tr):
        es="\u00a1Konrad! Escucha mi voz. T\u00da eres Konrad M\u00fcller. Eres maestro. Aprendiste a leer con la abuela.",
        it="Konrad! Ascolta la mia voce. TU sei Konrad M\u00fcller. Sei un insegnante. Hai imparato a leggere dalla nonna.")
     _t(tr, F, "elise_konrad_promise",
-       en="I will free you, Konrad. Or at least try. I promise.",
+       en="I will free you, Konrad. I promise — on our terms, not Otto's.",
        fr="Je vous lib\u00e9rerai, Konrad. Ou du moins j'essaierai. Je vous le promets.",
        es="Te liberar\u00e9, Konrad. O al menos lo intentar\u00e9. Te lo prometo.",
        it="Ti liberer\u00f2, Konrad. O almeno ci prover\u00f2. Te lo prometto.")
