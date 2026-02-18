@@ -70,6 +70,11 @@
 - **Fix applied:** Added a "probe-to-ritual continuity checkpoint" to the loop: any investigative branch introduced before Act 3 must get at least one distinct ritual handling beat (not just memory text) in Act 4.
 - **Applied now:** extended `act4/ritual_night.json` with probe-dependent pre-appearance tactics and callout dialogue (bell-gap control vs spiral-hand cue), plus continuity flags (`ritual_timing_from_missing_time`, `ritual_spiral_tell_prepared`).
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Avoided-Konrad command choice in `act4/ritual_night.json` (`issued_schoolhouse_hold_order` vs tempo discipline) had immediate tension flavor, but little/no end-state memory payoff in the Escape ending, weakening setup→escalation→payoff continuity.
+- **Fix applied:** Added an "end-state tactical memory checkpoint" rule: any late-ritual command/tactics flag must get at least one explicit epilog reflection in the corresponding ending branch.
+- **Applied now:** extended `act4/ending_escape.json` with a new schoolhouse-order epilog gate (`check_schoolhouse_order_escape_memory`) and differentiated aftermath text for hold-order vs tempo-only choices.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.
