@@ -230,6 +230,24 @@
     "narration_9b": {
       "type": "narration",
       "text": "Aber bevor es geht, spüre ich etwas. Wie eine Hand, die meine berührt. Eine Geste, die kein menschliches Wort beschreibt. Abschied? Dankbarkeit? Hoffnung auf Wiedersehen?",
+      "next": "check_ally_fallout_truth"
+    },
+    "check_ally_fallout_truth": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "fallout_truth_intro",
+      "false_next": "check_ally_truth_georg"
+    },
+    "fallout_truth_intro": {
+      "type": "narration",
+      "text": "Die Wahrheit löst den Knoten nicht sofort. Die Verletzungen von vorhin stehen noch zwischen uns - und gerade deshalb fühlt sich dieser Frieden verdient an.",
+      "next": "clear_fallout_truth"
+    },
+    "clear_fallout_truth": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
       "next": "check_ally_truth_georg"
     },
     "check_ally_truth_georg": {

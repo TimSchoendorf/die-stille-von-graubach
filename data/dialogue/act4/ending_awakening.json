@@ -60,7 +60,7 @@
 		},
 		"creature_awake_2": {
 			"type": "narration",
-			"text": "VERSUCHT. JA. ALLE VERSUCHEN. NIEMAND FRAGT. NIEMAND HÖRT ZU. IHR KOMMT MIT FEUER UND GESANG UND KETTEN. SECHSHUNDERT JAHRE.",
+			"text": "VERSUCHT. JA. ALLE VERSUCHEN. FAST NIEMAND FRAGT. FAST NIEMAND HÖRT ZU. IHR KOMMT MIT FEUER UND GESANG UND KETTEN. SECHSHUNDERT JAHRE.",
 			"next": "effect_awakening"
 		},
 		"effect_awakening": {
@@ -89,7 +89,61 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "shocked",
-			"text": "Großmutter... es tut mir leid. Ich habe versagt.",
+			"text": "Großmutter... es tut mir leid. Ich habe versagt. Ich wollte Kontrolle erzwingen, wo ich zuerst hätte fragen müssen.",
+			"next": "check_ally_fallout_awakening"
+		},
+		"check_ally_fallout_awakening": {
+			"type": "flag_check",
+			"flag": "ally_fallout_payoff_pending",
+			"value": 1,
+			"true_next": "fallout_awake_intro",
+			"false_next": "check_ally_awake_georg"
+		},
+		"fallout_awake_intro": {
+			"type": "narration",
+			"text": "Ihre Stimmen von vorhin schneiden durch den Lärm: verletzt, widersprechend, trotzdem geblieben. Genau diese Risse reißen jetzt mit auf.",
+			"next": "check_georg_hurt_awake"
+		},
+		"check_georg_hurt_awake": {
+			"type": "flag_check",
+			"flag": "georg_hurt_day6",
+			"value": 1,
+			"true_next": "georg_hurt_awake",
+			"false_next": "check_hilde_hurt_awake"
+		},
+		"georg_hurt_awake": {
+			"type": "narration",
+			"text": "Georg hatte recht mit seinem Zorn: Mut ohne Team ist nur ein anderes Wort für Risiko.",
+			"next": "check_hilde_hurt_awake"
+		},
+		"check_hilde_hurt_awake": {
+			"type": "flag_check",
+			"flag": "hilde_hurt_day6",
+			"value": 1,
+			"true_next": "hilde_hurt_awake",
+			"false_next": "check_voss_hurt_awake"
+		},
+		"hilde_hurt_awake": {
+			"type": "narration",
+			"text": "Hilde hat vor Stolz ohne Zeugen gewarnt. Jetzt höre ich jedes Wort wieder, nur lauter.",
+			"next": "check_voss_hurt_awake"
+		},
+		"check_voss_hurt_awake": {
+			"type": "flag_check",
+			"flag": "voss_hurt_day6",
+			"value": 1,
+			"true_next": "voss_hurt_awake",
+			"false_next": "clear_fallout_awake"
+		},
+		"voss_hurt_awake": {
+			"type": "narration",
+			"text": "Voss klang müde, aber ehrlich: Schuld ersetzt kein Protokoll. Ich wollte es schneller als die Regeln erlaubten.",
+			"next": "clear_fallout_awake"
+		},
+		"clear_fallout_awake": {
+			"type": "set_flag",
+			"flag": "ally_fallout_payoff_pending",
+			"value": 0,
 			"next": "check_ally_awake_georg"
 		},
 		"check_ally_awake_georg": {
