@@ -88,11 +88,47 @@
       "flag": "bridge_fallout_seen",
       "value": 1,
       "true_next": "bridge_fallout_seen_memory",
-      "false_next": "check_reached_chamber_memory"
+      "false_next": "check_rehearsed_signal_ritual_memory"
     },
     "bridge_fallout_seen_memory": {
       "type": "narration",
       "text": "Auf der Brücke ist alles endgültig geworden. Worte wurden zu Wunden, Loyalität zu Entscheidung. Seitdem weiß ich, was diese Nacht jeden kosten kann.",
+      "next": "check_rehearsed_signal_ritual_memory"
+    },
+    "check_rehearsed_signal_ritual_memory": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "rehearsed_signal_ritual_memory",
+      "false_next": "check_skipped_rehearsal_ritual_memory"
+    },
+    "rehearsed_signal_ritual_memory": {
+      "type": "narration",
+      "text": "Bevor es ernst wurde, haben wir den Notablauf trocken geübt - Schläge, Atem, Einsatz. Jetzt, im Lärm der Kammer, liegt der Rhythmus schon in meinem Körper. Ich muss ihn nur abrufen.",
+      "next": "set_ritual_signal_confident"
+    },
+    "set_ritual_signal_confident": {
+      "type": "set_flag",
+      "flag": "ritual_signal_confident",
+      "value": 1,
+      "next": "check_reached_chamber_memory"
+    },
+    "check_skipped_rehearsal_ritual_memory": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "skipped_rehearsal_ritual_memory",
+      "false_next": "check_reached_chamber_memory"
+    },
+    "skipped_rehearsal_ritual_memory": {
+      "type": "narration",
+      "text": "Wir haben auf die Probe verzichtet. Jetzt muss ich jedes Zeichen unter Druck neu sortieren, während die Stimme unter dem Stein drängt. Jeder Atemzug kostet mehr Konzentration als geplant.",
+      "next": "set_ritual_signal_unsteady"
+    },
+    "set_ritual_signal_unsteady": {
+      "type": "set_flag",
+      "flag": "ritual_signal_unsteady",
+      "value": 1,
       "next": "check_reached_chamber_memory"
     },
     "check_reached_chamber_memory": {
@@ -1096,11 +1132,35 @@
       "flag": "anna_warning",
       "value": 1,
       "true_next": "anna_warning_konrad_choice",
-      "false_next": "choice_sacrifice_override"
+      "false_next": "check_ritual_signal_state_choice"
     },
     "anna_warning_konrad_choice": {
       "type": "narration",
       "text": "Ich höre Annas Stimme aus dem Wald: 'Beeil dich.' Nicht als Drohung - als letzte Bitte von jemandem, der jeden Tag ein Stück weiter verschwindet und nur bleiben will. Diese Entscheidung betrifft nicht nur Konrad und mich. Sie entscheidet, ob Anna morgen noch Anna ist.",
+      "next": "check_ritual_signal_state_choice"
+    },
+    "check_ritual_signal_state_choice": {
+      "type": "flag_check",
+      "flag": "ritual_signal_confident",
+      "value": 1,
+      "true_next": "ritual_signal_confident_choice",
+      "false_next": "check_ritual_signal_unsteady_choice"
+    },
+    "ritual_signal_confident_choice": {
+      "type": "narration",
+      "text": "Ich zähle den Takt aus der Probe von gestern leise mit: drei, zwei, eins. Der Ablauf hält. Nicht perfekt - aber stabil genug, um eine klare Entscheidung zu treffen.",
+      "next": "choice_sacrifice_override"
+    },
+    "check_ritual_signal_unsteady_choice": {
+      "type": "flag_check",
+      "flag": "ritual_signal_unsteady",
+      "value": 1,
+      "true_next": "ritual_signal_unsteady_choice",
+      "false_next": "choice_sacrifice_override"
+    },
+    "ritual_signal_unsteady_choice": {
+      "type": "narration",
+      "text": "Mir fehlt der eintrainierte Takt. Die Kammer schreit, Konrad schwankt, und ich muss den Ablauf im Kopf zusammensetzen, während die Zeit davonläuft. Jede Option fühlt sich riskanter an.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {
