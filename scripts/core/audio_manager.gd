@@ -77,8 +77,18 @@ func stop_music(fade_duration: float = 1.0) -> void:
 func play_sfx(path: String) -> void:
 	var full_path := "res://assets/audio/sfx/" + path
 	if not ResourceLoader.exists(full_path):
-		push_warning("SFX not found: " + full_path)
-		return
+		# TODO(audio): Replace fallback once dedicated sfx_knock_3x.wav is finalized in assets/audio/sfx.
+		if path == "sfx_knock_3x.wav":
+			var fallback_path := "res://assets/audio/sfx/door_creak.wav"
+			if ResourceLoader.exists(fallback_path):
+				push_warning("SFX not found: " + full_path + " — using fallback: " + fallback_path)
+				full_path = fallback_path
+			else:
+				push_warning("SFX not found: " + full_path + " (fallback missing: " + fallback_path + ")")
+				return
+		else:
+			push_warning("SFX not found: " + full_path)
+			return
 
 	sfx_player.stream = load(full_path)
 	sfx_player.volume_db = linear_to_db(sfx_volume * master_volume)

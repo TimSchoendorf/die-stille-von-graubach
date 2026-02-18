@@ -319,7 +319,7 @@
 			"type": "sound",
 			"sound_type": "sfx",
 			"path": "heartbeat.wav",
-			"next": "effect_knock"
+			"next": "snd_knock_3x"
 		},
 		"effect_knock": {
 			"type": "effect",
@@ -396,7 +396,7 @@
 		},
 		"voice_reply_1": {
 			"type": "narration",
-			"text": "\"Konrad Müller. Entschuldigen Sie die Stunde – ich war noch beim Schulhaus und habe Ihren Schrei gehört. Ist alles in Ordnung bei Ihnen?\"",
+			"text": "\"Konrad Müller. Entschuldigen Sie die späte Stunde – ich war noch im Schulhaus und habe Ihren Schrei gehört. Geht es Ihnen gut?\"",
 			"next": "elise_through_door_2"
 		},
 		"elise_through_door_2": {
@@ -408,7 +408,7 @@
 		},
 		"voice_reply_2": {
 			"type": "narration",
-			"text": "Eine kurze Stille. Dann ruhiger: \"Das war vernünftig von ihm. Nach so einer Nacht wäre jeder vorsichtig.\"",
+			"text": "Eine kurze Stille. Dann ruhiger: \"Hat er recht mit. Nach so einer Nacht wäre ich auch vorsichtig.\"",
 			"next": "elise_through_door_3"
 		},
 		"elise_through_door_3": {
@@ -420,12 +420,12 @@
 		},
 		"voice_reply_3": {
 			"type": "narration",
-			"text": "Ein leises Ausatmen vor der Antwort. \"Man kennt sich hier. Neue Gesichter fallen auf – erst recht in diesem Haus.\"",
+			"text": "Ein leises Ausatmen vor der Antwort. \"Hier bleibt kaum etwas unbemerkt. Neue Gesichter erst recht – besonders in diesem Haus.\"",
 			"next": "open_door_decide"
 		},
 		"open_door_decide": {
 			"type": "narration",
-			"text": "Seine Stimme bleibt ruhig, als würde er absichtlich jedes Wort weich zeichnen. Gegen mein besseres Urteil schiebe ich den Riegel zurück und öffne die Tür.",
+			"text": "Seine Stimme bleibt ruhig, fast zu ruhig. Gegen mein besseres Urteil schiebe ich den Riegel zurück und öffne die Tür.",
 			"next": "open_door_2"
 		},
 		"open_door_2": {
@@ -450,14 +450,14 @@
 		"konrad_1": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Sie müssen Elise sein, Margarethes Enkelin? Ich bin Konrad Müller. Dorflehrer.",
+			"text": "Sie sind Elise, Margarethes Enkelin, oder? Ich bin Konrad Müller. Ich unterrichte hier im Dorf.",
 			"next": "konrad_2"
 		},
 		"konrad_2": {
 			"type": "dialogue",
 			"speaker": "konrad",
 			"expression": "sad",
-			"text": "Es tut mir leid wegen Ihrer Großmutter. Das ganze Dorf redet darüber. Wenn Sie etwas brauchen, sagen Sie es.",
+			"text": "Es tut mir leid wegen Ihrer Großmutter. Das hat alle hier getroffen. Wenn Sie irgendwas brauchen, sagen Sie Bescheid.",
 			"next": "elise_responds_konrad"
 		},
 		"elise_responds_konrad": {
@@ -500,7 +500,7 @@
 		"konrad_continue": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Ich wollte nur sehen, ob bei Ihnen alles in Ordnung ist. Es ist spät, und das Haus stand seit Tagen leer. Wenn Sie etwas brauchen: Schulhaus, direkt neben der Kirche.",
+			"text": "Ich wollte nur nach Ihnen sehen. Es ist spät, und das Haus stand seit Tagen leer. Falls etwas ist: Ich bin im Schulhaus, direkt neben der Kirche.",
 			"next": "elise_responds_konrad_2"
 		},
 		"elise_responds_konrad_2": {
@@ -521,7 +521,7 @@
 		"konrad_6": {
 			"type": "dialogue",
 			"speaker": "konrad",
-			"text": "Versuchen Sie zu schlafen, Elise. Und machen Sie sich keine Sorgen. Graubach wirkt nachts schlimmer, als es ist.",
+			"text": "Versuchen Sie etwas zu schlafen, Elise. Und keine Sorge – Graubach wirkt nachts oft schlimmer, als es ist.",
 			"next": "konrad_leave"
 		},
 		"konrad_leave": {
@@ -682,6 +682,12 @@
 			"text": "Dann: drei harte Schläge an der Tür. Auf einmal ist das Summen weg. Kein Beben. Nur mein Atem. War das eben noch der Traum – oder hat er gerade erst angefangen?",
 			"next": "snd_heartbeat"
 		},
+		"snd_knock_3x": {
+			"type": "sound",
+			"sound_type": "sfx",
+			"path": "sfx_knock_3x.wav",
+			"next": "effect_knock"
+		},
 		"door_questions_1": {
 			"type": "dialogue",
 			"speaker": "elise",
@@ -691,7 +697,7 @@
 		},
 		"door_questions_2": {
 			"type": "narration",
-			"text": "\"Konrad Müller. Ich war noch beim Schulhaus. Dann habe ich Ihren Schrei gehört.\" Eine Pause. \"Ich wollte nur nachsehen, ob Sie verletzt sind.\"",
+			"text": "\"Konrad Müller. Ich war noch im Schulhaus, dann habe ich Ihren Schrei gehört.\" Eine Pause. \"Ich wollte nur nachsehen, ob Sie verletzt sind.\"",
 			"next": "door_questions_3"
 		},
 		"door_questions_3": {
@@ -715,7 +721,7 @@
 		},
 		"bg_door_open": {
 			"type": "background",
-			"background": "grandmother_house_night",
+			"background": "grandmother_house_night_open_door",
 			"transition": "fade",
 			"next": "open_door_1b"
 		},
