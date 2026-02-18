@@ -348,6 +348,12 @@
       "type": "set_flag",
       "flag": "saw_name_in_book",
       "value": 1,
+      "next": "set_found_name_legacy"
+    },
+    "set_found_name_legacy": {
+      "type": "set_flag",
+      "flag": "found_name_in_book",
+      "value": 1,
       "next": "narration_silence"
     },
     "narration_silence": {

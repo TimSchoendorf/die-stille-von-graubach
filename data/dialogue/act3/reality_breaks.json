@@ -26,6 +26,25 @@
     "narration_1": {
       "type": "narration",
       "text": "Tag sechs. Etwas ist anders. Als ich aus dem Fenster sehe, stimmen die Farben nicht. Der Himmel ist zu violett für den Morgen. Die Schatten fallen in die falsche Richtung.",
+      "next": "check_saw_name_memory"
+    },
+    "check_saw_name_memory": {
+      "type": "flag_check",
+      "flag": "saw_name_in_book",
+      "value": 1,
+      "true_next": "name_in_book_memory",
+      "false_next": "check_found_name_memory_legacy"
+    },
+    "check_found_name_memory_legacy": {
+      "type": "flag_check",
+      "flag": "found_name_in_book",
+      "value": 1,
+      "true_next": "name_in_book_memory",
+      "false_next": "check_church_spirals_seen"
+    },
+    "name_in_book_memory": {
+      "type": "narration",
+      "text": "Seit letzter Nacht bekomme ich den Blick auf meinen Namen im Buch nicht aus dem Kopf - diese pulsierende Tinte, als hätte die Seite meinen Herzschlag gelernt. Vielleicht kippt die Welt heute nicht nur um mich herum. Vielleicht hat sie mich längst eingetragen.",
       "next": "check_church_spirals_seen"
     },
     "elise_mirror": {
