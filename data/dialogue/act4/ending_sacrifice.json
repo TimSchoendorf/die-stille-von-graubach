@@ -214,7 +214,7 @@
     },
     "sacrifice_sought_konrad_memory": {
       "type": "narration",
-      "text": "Ich höre wieder seine Worte aus dem Schulhaus - Hilf mir, bevor es mich ganz hat. Dass ich ihn gesucht habe, war riskant. Aber dieser Blick hat mich bis zu diesem Altar getragen.",
+      "text": "Ich höre wieder seine Worte aus dem Schulhaus - 'Hilf mir, Elise. Bitte. Bevor es mich ganz hat.' Dass ich ihn gesucht habe, war riskant. Aber dieser Blick hat mich bis zu diesem Altar getragen.",
       "next": "check_trusted_konrad_sacrifice"
     },
     "sacrifice_avoided_konrad_memory": {

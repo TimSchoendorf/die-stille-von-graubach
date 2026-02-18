@@ -658,7 +658,7 @@
     },
     "escape_konrad_epilog_helped": {
       "type": "narration",
-      "text": "Konrad. Ich höre noch, wie er in der Schule sagte: 'Hilf mir, solange ich noch ich bin.' Ich hatte ihm versprochen, ihn nicht fallen zu lassen. In manchen Nächten frage ich mich, ob ich dieses Versprechen in der Kammer gehalten habe - oder erst gebrochen, als ich lief.",
+      "text": "Konrad. Ich höre noch, wie er in der Schule sagte: 'Hilf mir, Elise. Bitte. Bevor es mich ganz hat.' Ich hatte ihm versprochen, ihn nicht fallen zu lassen. In manchen Nächten frage ich mich, ob ich dieses Versprechen in der Kammer gehalten habe - oder erst gebrochen, als ich lief.",
       "next": "check_anna_warning_escape"
     },
     "escape_konrad_epilog_tested": {

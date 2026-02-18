@@ -512,7 +512,7 @@
     },
     "awakening_konrad_epilog_helped": {
       "type": "narration",
-      "text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
+      "text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, Elise. Bitte. Bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
       "next": "check_anna_warning_awakening"
     },
     "awakening_konrad_epilog_tested": {
