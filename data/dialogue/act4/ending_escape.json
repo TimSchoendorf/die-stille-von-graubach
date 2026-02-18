@@ -578,7 +578,7 @@
     "packed_books_escape": {
       "type": "narration",
       "text": "Meine Bücher liegen irgendwo unter den Trümmern. Die Folklore, die Mythen - alles nutzlos gegen etwas, das älter ist als Geschichten. Aber ich werde neue schreiben. Warnungen.",
-      "next": "check_konrad_help_escape"
+      "next": "check_anchor_escape_memory"
     },
     "check_packed_cross_escape": {
       "type": "flag_check",
@@ -590,7 +590,7 @@
     "packed_cross_escape": {
       "type": "narration",
       "text": "Das Kruzifix meiner Mutter baumelt noch an meinem Hals. Hat es geholfen? Nein. Aber es hat mich an etwas erinnert: Es gibt eine Welt jenseits von Graubach. Und ich bin auf dem Weg zurück dorthin.",
-      "next": "check_konrad_help_escape"
+      "next": "check_anchor_escape_memory"
     },
     "check_packed_camera_escape": {
       "type": "flag_check",
@@ -602,6 +602,30 @@
     "packed_camera_escape": {
       "type": "narration",
       "text": "Die Kamera hat ein letztes Bild: Graubach, versinkend, aufgelöst. Der einzige Beweis neben Großmutters Journal. Manchmal betrachte ich es in schlaflosen Nächten und frage mich, ob es real war.",
+      "next": "check_anchor_escape_memory"
+    },
+    "check_anchor_escape_memory": {
+      "type": "flag_check",
+      "flag": "knows_anchor_role",
+      "value": 1,
+      "true_next": "check_voss_anchor_escape_memory",
+      "false_next": "check_konrad_help_escape"
+    },
+    "check_voss_anchor_escape_memory": {
+      "type": "flag_check",
+      "flag": "voss_midnight_meeting",
+      "value": 1,
+      "true_next": "escape_anchor_memory_voss",
+      "false_next": "escape_anchor_memory_hilde"
+    },
+    "escape_anchor_memory_voss": {
+      "type": "narration",
+      "text": "Seit der Flucht kehrt immer dieselbe Übung zurück: Hand auf Stein. Einen geliebten Namen nennen. Voss hatte sie mir als Anker beigebracht, Hilde als Verantwortung erklärt. In der Kammer hielt mich dieser Satz nur Sekunden über Wasser - aber diese Sekunden reichen, um im Traum bis heute zu wissen, wo ich aufhöre und es beginnt.",
+      "next": "check_konrad_help_escape"
+    },
+    "escape_anchor_memory_hilde": {
+      "type": "narration",
+      "text": "Hilde nannte den Anker eine Beziehung, keine Kette. Seit der Flucht frage ich mich, ob ich diese Rolle verraten habe, als ich lief - oder ob ich sie nur aufgeschoben habe, um nicht mit dem Dorf unterzugehen.",
       "next": "check_konrad_help_escape"
     },
     "check_konrad_help_escape": {
