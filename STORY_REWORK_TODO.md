@@ -20,6 +20,11 @@
 - **Fix applied now:** added `scripts_locale/dialogue_impact_lint.py` to flag generic fallback phrases (e.g., "So oder so", "Ich weiß") in Act 2/3/4.
 - **Next concrete automation step:** wire this lint into ship-block validation (`validate_dialogue.py && dialogue_impact_lint.py`) and track down the top 10 recurring weak patterns each pass.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Sought-Konrad route carried strong emotional setup, but lacked a player-owned tactical rehearsal beat before ritual night; payoff text in Act 4 therefore converged too early and weakened branch differentiation.
+- **Fix applied:** Added a "trusted-ally tactical rehearsal checkpoint" to the loop: if an Act-2 diagnostic branch feeds Act-4 ritual handling, Act-3 sought path must include one explicit practice choice with a distinct Act-4 execution callback.
+- **Applied now:** inserted a new Konrad grounding rehearsal choice in `act3/allies_choice.json` (voice rhythm vs hand-anchor) and paid both variants off in `act4/ritual_night.json` with distinct pre-appearance narration + crisis callout lines.
+
 ## Process improvement (implemented in latest autonomous loop)
 - **Bottleneck identified:** Act bridges often delivered consequences only as narration, with limited player agency right before major escalation scenes.
 - **Fix applied:** Added a "bridge agency checkpoint" rule for ship-block loops: each transition scene (especially end-of-act bridges) should include at least one actionable choice that changes downstream emotional/pacing payoff.

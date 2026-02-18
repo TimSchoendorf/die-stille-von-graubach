@@ -1077,14 +1077,14 @@
       "set_flags": {
         "ritual_timing_from_missing_time": 1
       },
-      "next": "konrad_appears"
+      "next": "check_konrad_grounding_plan_payoff"
     },
     "check_konrad_spiral_signs_ritual_payoff": {
       "type": "flag_check",
       "flag": "asked_konrad_spiral_signs",
       "value": 1,
       "true_next": "konrad_spiral_signs_ritual_payoff",
-      "false_next": "konrad_appears"
+      "false_next": "check_konrad_grounding_plan_payoff"
     },
     "konrad_spiral_signs_ritual_payoff": {
       "type": "narration",
@@ -1092,6 +1092,30 @@
       "set_flags": {
         "ritual_spiral_tell_prepared": 1
       },
+      "next": "check_konrad_grounding_plan_payoff"
+    },
+    "check_konrad_grounding_plan_payoff": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "konrad_voice_rhythm_ritual_payoff",
+      "false_next": "check_konrad_hand_anchor_payoff"
+    },
+    "konrad_voice_rhythm_ritual_payoff": {
+      "type": "narration",
+      "text": "Im Schulhaus haben wir den Rufrhythmus geübt wie einen Drill. Heute ist er mein Metronom: Name, Ort, Jetzt - ohne Pause, bis seine Pupillen wieder auf mich einrasten.",
+      "next": "konrad_appears"
+    },
+    "check_konrad_hand_anchor_payoff": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "konrad_hand_anchor_ritual_payoff",
+      "false_next": "konrad_appears"
+    },
+    "konrad_hand_anchor_ritual_payoff": {
+      "type": "narration",
+      "text": "Ich halte seine Hand so, wie wir es geübt haben: Daumen auf Fingerkuppen, eins bis vier. Kein großes Wunder - nur ein Weg zurück in Fleisch und Atem, bevor ES ihn wieder flachzieht.",
       "next": "konrad_appears"
     },
     "konrad_appears": {
@@ -1180,6 +1204,20 @@
       "speaker": "elise",
       "expression": "worried",
       "text": "Konrad, hör auf mich. Wenn die Glocke in deinem Kopf losgeht, folgst du nur meiner Stimme. Keine Stille dazwischen. Bleib hier!",
+      "next": "check_prepared_konrad_voice_callout"
+    },
+    "check_prepared_konrad_voice_callout": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "elise_konrad_voice_rhythm_callout",
+      "false_next": "effect_konrad_glitch"
+    },
+    "elise_konrad_voice_rhythm_callout": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Jetzt der Takt, Konrad! Name - Ort - Jetzt. 'Konrad Müller. Unter der Kirche. Jetzt.' Mit mir. Nochmal!",
       "next": "effect_konrad_glitch"
     },
     "check_konrad_spiral_callout": {
@@ -1194,6 +1232,20 @@
       "speaker": "elise",
       "expression": "worried",
       "text": "Konrad! Schau auf deine Hände. Nicht auf ES. Öffne die Finger, eins nach dem anderen. Du bist hier, bei mir, in dieser Kammer!",
+      "next": "check_prepared_konrad_hand_callout"
+    },
+    "check_prepared_konrad_hand_callout": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "elise_konrad_hand_anchor_callout",
+      "false_next": "effect_konrad_glitch"
+    },
+    "elise_konrad_hand_anchor_callout": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Fingeranker, wie geübt! Daumen auf Zeigefinger - Mittelfinger - Ringfinger - kleiner Finger. Zähl mit mir, Konrad. Eins, zwei, drei, vier!",
       "next": "effect_konrad_glitch"
     },
     "elise_konrad_ritual_1": {

@@ -782,6 +782,35 @@
     "konrad_final_hope": {
       "type": "narration",
       "text": "Ein schwaches Lächeln. Das erste echte Lächeln, das ich bei ihm gesehen habe - nicht charmant, nicht verführerisch. Nur dankbar. Nur menschlich.",
+      "next": "konrad_grounding_plan_choice"
+    },
+    "konrad_grounding_plan_choice": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Einen festen Rufrhythmus für die Kammer einüben (Name -> Ort -> Jetzt)",
+          "set_flags": {
+            "prepared_konrad_voice_rhythm": 1
+          },
+          "next": "konrad_grounding_voice_plan"
+        },
+        {
+          "text": "Ein Handanker-Signal üben (Daumen auf jeden Finger im Takt)",
+          "set_flags": {
+            "prepared_konrad_hand_anchor": 1
+          },
+          "next": "konrad_grounding_hand_plan"
+        }
+      ]
+    },
+    "konrad_grounding_voice_plan": {
+      "type": "narration",
+      "text": "Wir gehen den Ablauf drei Mal durch: 'Konrad Müller. Unter der Kirche. Jetzt.' Kurz, scharf, ohne Leerstellen. Beim dritten Mal fällt sein Blick nicht mehr weg.",
+      "next": "set_konrad_plea"
+    },
+    "konrad_grounding_hand_plan": {
+      "type": "narration",
+      "text": "Ich lege ihm die Hand auf den Unterarm und zähle leise mit: Daumen auf Zeigefinger, Mittelfinger, Ringfinger, kleiner Finger. 'Wenn ES zieht, gehst du diese Route zurück in deinen Körper.' Beim zweiten Durchlauf atmet er wieder im eigenen Takt.",
       "next": "set_konrad_plea"
     },
     "set_konrad_plea": {
