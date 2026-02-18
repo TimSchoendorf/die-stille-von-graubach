@@ -816,6 +816,13 @@
             "kept_distance_konrad": 1
           },
           "next": "konrad_distance_choice"
+        },
+        {
+          "text": "Mit Georg ein stilles Sicherungszeichen fürs Schulhaus absprechen",
+          "set_flags": {
+            "asked_georg_watch_school": 1
+          },
+          "next": "konrad_watch_plan"
         }
       ]
     },
@@ -939,6 +946,16 @@
       "expression": "worried",
       "text": "Konrad. Ich habe dich damals getestet statt dir zu glauben. Heute will ich keine Rätsel mehr. Wie geht es dir?",
       "next": "konrad_final_2"
+    },
+    "konrad_watch_plan": {
+      "type": "narration",
+      "text": "Ich gehe nicht hinein, aber ich klopfe dreimal kurz an den Pfosten der Schmiede. Georg versteht den Code sofort: Wenn Konrad in der Nacht aus dem Schulhaus taumelt, hält er Abstand - und hält ihn trotzdem von Otto fern.",
+      "next": "konrad_watch_plan_2"
+    },
+    "konrad_watch_plan_2": {
+      "type": "narration",
+      "text": "Kein Heldentum, nur ein dünnes Sicherheitsnetz. Vielleicht ist das alles, was Verantwortung heute sein kann: jemanden nicht im Stich lassen, ohne den Plan zu verraten.",
+      "next": "ally_final_converge"
     }
   }
 }

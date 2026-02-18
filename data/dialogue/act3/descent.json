@@ -1097,7 +1097,7 @@
       "type": "flag_check",
       "flag": "avoided_konrad",
       "value": 1,
-      "true_next": "konrad_choice_avoided_payoff",
+      "true_next": "check_asked_georg_watch_school_payoff",
       "false_next": "descent_start"
     },
     "konrad_choice_sought_payoff": {
@@ -1145,6 +1145,18 @@
       "type": "narration",
       "text": "Ich denke an den Abend am Brunnen, als ich Konrad mit einem einzigen Wort testete und seine Hand wie ertappt ans Handgelenk schoss. Diese Vorsicht hat mich bis hierher gebracht. In der Kammer wird sie zur Methode: erst prüfen, dann handeln - aber nie so kalt werden, dass ich den Menschen im Gefäß vergesse.",
       "next": "check_ally_chamber_react"
+    },
+    "check_asked_georg_watch_school_payoff": {
+      "type": "flag_check",
+      "flag": "asked_georg_watch_school",
+      "value": 1,
+      "true_next": "konrad_choice_avoided_watch_payoff",
+      "false_next": "konrad_choice_avoided_payoff"
+    },
+    "konrad_choice_avoided_watch_payoff": {
+      "type": "narration",
+      "text": "Ich habe Konrad gemieden, aber nicht völlig allein gelassen: Georg kennt das Zeichen am Schulhaus und hält in der Nacht Wache auf Distanz. Es ist kein Trost, nur eine kleine Korrektur gegen die Grausamkeit dieser Entscheidung.",
+      "next": "konrad_choice_avoided_payoff"
     }
   }
 }

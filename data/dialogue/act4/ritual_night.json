@@ -966,7 +966,7 @@
       "flag": "kept_distance_konrad",
       "value": 1,
       "true_next": "konrad_distance_ritual_memory",
-      "false_next": "check_approach"
+      "false_next": "check_asked_georg_watch_school_ritual"
     },
     "konrad_distance_ritual_memory": {
       "type": "narration",
@@ -1848,6 +1848,18 @@
       "type": "narration",
       "text": "Ottos Ultimatum hängt mir noch im Nacken: erster Glockenschlag, keine Verzögerung. Ich habe ihm zugesagt, um Zeit zu gewinnen - jetzt muss ich liefern, bevor seine Angst oben in der Kirche zur Meute wird.",
       "next": "check_knows_earth_sign"
+    },
+    "check_asked_georg_watch_school_ritual": {
+      "type": "flag_check",
+      "flag": "asked_georg_watch_school",
+      "value": 1,
+      "true_next": "konrad_watch_ritual_memory",
+      "false_next": "check_approach"
+    },
+    "konrad_watch_ritual_memory": {
+      "type": "narration",
+      "text": "Zwischen zwei Glockenschlägen höre ich oben drei dumpfe Schläge Metall auf Holz - Georgs Antwort auf unser Sicherungszeichen vom Schulhaus. Kein Entwarnen. Nur das Versprechen, dass Konrad nicht unbeobachtet zwischen Otto und das Wesen gerät.",
+      "next": "check_approach"
     }
   }
 }
