@@ -378,12 +378,12 @@
 			"entry_id": "ending_awakening",
 			"title": "Das Erwachen",
 			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Und das Singen... das Singen hört nicht mehr auf.",
-			"next": "awakening_konrad_epilog"
+			"next": "check_konrad_help_awakening"
 		},
 		"awakening_konrad_epilog": {
 			"type": "narration",
 			"text": "Konrad steht mitten auf dem Dorfplatz. Er lächelt. Die Spiralen auf seinen Händen leuchten. Zum ersten Mal ist er nicht mehr Gefäß - er ist Brücke. Das Wesen fließt durch ihn hindurch in die Welt, und Konrad lässt es geschehen. Dreißig Jahre Kampf, und am Ende ergibt er sich - nicht aus Schwäche, sondern aus Müdigkeit.",
-			"next": "awakening_anna_epilog"
+			"next": "check_anna_warning_awakening"
 		},
 		"awakening_anna_epilog": {
 			"type": "narration",
@@ -403,6 +403,78 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "ending:awakening"
+		},
+		"check_konrad_help_awakening": {
+			"type": "flag_check",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"true_next": "awakening_konrad_epilog_helped",
+			"false_next": "check_tested_konrad_awakening"
+		},
+		"check_tested_konrad_awakening": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "awakening_konrad_epilog_tested",
+			"false_next": "check_trusted_konrad_awakening"
+		},
+		"check_trusted_konrad_awakening": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "awakening_konrad_epilog_trusted",
+			"false_next": "check_distrusted_konrad_awakening"
+		},
+		"check_distrusted_konrad_awakening": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "awakening_konrad_epilog_distrusted",
+			"false_next": "awakening_konrad_epilog"
+		},
+		"awakening_konrad_epilog_helped": {
+			"type": "narration",
+			"text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
+			"next": "check_anna_warning_awakening"
+		},
+		"awakening_konrad_epilog_tested": {
+			"type": "narration",
+			"text": "Konrad steht mitten auf dem Dorfplatz. Ich hatte ihn geprüft, Spiralen als Falle, weil Vorsicht sich sicherer anfühlte als Vertrauen. Nun leuchten genau diese Spiralen auf seinen Händen wie ein Urteil, und das Wesen benutzt seinen Körper als Tür.",
+			"next": "check_anna_warning_awakening"
+		},
+		"awakening_konrad_epilog_trusted": {
+			"type": "narration",
+			"text": "Konrad steht mitten auf dem Dorfplatz, und ich erkenne den Mann wieder, dem ich in der Schule die Wahrheit über Großmutters Plan anvertraut hatte. Dieses Vertrauen hat ihn nicht geschützt. Es hat ihm nur den klaren Blick geschenkt, als das Wesen ihn zur Brücke machte.",
+			"next": "check_anna_warning_awakening"
+		},
+		"awakening_konrad_epilog_distrusted": {
+			"type": "narration",
+			"text": "Konrad steht mitten auf dem Dorfplatz und lächelt, als gehörte ihm endlich der eigene Körper. Ich habe ihn auf Abstand gehalten, um den Plan zu schützen. Jetzt gibt es keinen Plan mehr, nur ihn als offene Wunde zwischen Mensch und Wesen.",
+			"next": "check_anna_warning_awakening"
+		},
+		"check_anna_warning_awakening": {
+			"type": "flag_check",
+			"flag": "anna_warning",
+			"value": 1,
+			"true_next": "awakening_anna_epilog_warned",
+			"false_next": "check_anna_spirale_awakening"
+		},
+		"check_anna_spirale_awakening": {
+			"type": "flag_check",
+			"flag": "anna_spirale",
+			"value": 1,
+			"true_next": "awakening_anna_epilog_spirale",
+			"false_next": "awakening_anna_epilog"
+		},
+		"awakening_anna_epilog_warned": {
+			"type": "narration",
+			"text": "Anna lächelt nicht triumphierend, nur müde. Im Wald hatte sie gewarnt: \"Beeil dich.\" Jetzt wirkt ihr Blick wie der einer Zeugin, die den Unfall kommen sah und trotzdem nichts mehr aufhalten konnte.",
+			"next": "awakening_otto_epilog"
+		},
+		"awakening_anna_epilog_spirale": {
+			"type": "narration",
+			"text": "Anna betrachtet die aufreißenden Wände wie ihre Kreidespiralen - als hätte sie das Muster längst verstanden. Ein Kind, das die Form des Unheils früher las als wir Erwachsenen, und darum zuerst lernt, nicht mehr überrascht zu sein.",
+			"next": "awakening_otto_epilog"
 		}
 	}
 }
