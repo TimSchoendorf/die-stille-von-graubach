@@ -241,7 +241,67 @@
     },
     "fallout_truth_intro": {
       "type": "narration",
-      "text": "Die Wahrheit löst den Knoten nicht sofort. Die Verletzungen von vorhin stehen noch zwischen uns - und gerade deshalb fühlt sich dieser Frieden verdient an.",
+      "text": "Die Wahrheit löst den Knoten nicht sofort. Auf den Stufen vor der Kammer stehen wir einander gegenüber - erschöpft, verschmiert, lebendig. Niemand jubelt. Erst klären wir, was zwischen uns offen geblieben ist.",
+      "next": "check_rehearsed_truth_fallout"
+    },
+    "check_rehearsed_truth_fallout": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "truth_rehearsed_fallout_payoff",
+      "false_next": "check_skipped_truth_fallout"
+    },
+    "truth_rehearsed_fallout_payoff": {
+      "type": "narration",
+      "text": "Georg tippt gegen die Steinbrüstung: vier kurze Schläge, genau wie in unserer Probe. Hilde antwortet mit der halben Gegenzeile. Die alte Unsicherheit ist weg - unser Notfallplan war nicht Symbolik, sondern hat diese Nacht tatsächlich getragen.",
+      "next": "check_georg_hurt_truth_fallout"
+    },
+    "check_skipped_truth_fallout": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "truth_skipped_fallout_cost",
+      "false_next": "check_georg_hurt_truth_fallout"
+    },
+    "truth_skipped_fallout_cost": {
+      "type": "narration",
+      "text": "Niemand erwähnt die ausgelassene Probe direkt. Trotzdem liegt sie zwischen uns: ein Moment, in dem wir Glück hatten, wo Vorbereitung besser gewesen wäre. Gerade deshalb reden wir jetzt klarer als zuvor.",
+      "next": "check_georg_hurt_truth_fallout"
+    },
+    "check_georg_hurt_truth_fallout": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "truth_georg_hurt_fallout_payoff",
+      "false_next": "check_hilde_hurt_truth_fallout"
+    },
+    "truth_georg_hurt_fallout_payoff": {
+      "type": "narration",
+      "text": "Georg reibt sich über die Stirn. 'Vorhin klang ich, als müsstest du dich für jede Entscheidung entschuldigen', sagt er rau. 'Musst du nicht. Ich war verletzt - nicht fair.'",
+      "next": "check_hilde_hurt_truth_fallout"
+    },
+    "check_hilde_hurt_truth_fallout": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "truth_hilde_hurt_fallout_payoff",
+      "false_next": "check_voss_hurt_truth_fallout"
+    },
+    "truth_hilde_hurt_fallout_payoff": {
+      "type": "narration",
+      "text": "Hilde legt zwei Finger an den Hals, als prüfe sie nachhallende Töne. 'Ich habe aus Kränkung gewarnt', sagt sie leise. 'Heute warst du klüger als mein Stolz.'",
+      "next": "check_voss_hurt_truth_fallout"
+    },
+    "check_voss_hurt_truth_fallout": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "truth_voss_hurt_fallout_payoff",
+      "false_next": "clear_fallout_truth"
+    },
+    "truth_voss_hurt_fallout_payoff": {
+      "type": "narration",
+      "text": "Voss bleibt einen Schritt zurück. 'Ich habe meinen Schmerz als Autorität verkleidet', sagt er. 'Danke, dass Sie trotzdem weitergeredet haben, Fräulein Brandt.'",
       "next": "clear_fallout_truth"
     },
     "clear_fallout_truth": {

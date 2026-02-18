@@ -45,6 +45,11 @@
 - **Fix applied:** Added a "sacrifice continuity checkpoint" to the loop: before shipping, verify Sacrifice also resolves `ally_fallout_payoff_pending` on-screen and pays rehearsal choice (`rehearsed_signal_night6` vs `skipped_rehearsal_night6`) with concrete cadence/cost.
 - **Applied now:** inserted a new fallout-reconciliation mini-scene in `act4/ending_sacrifice.json` (includes rehearsal payoff/cost lines, hurt-flag reconciliations, explicit cleanup `ally_fallout_payoff_pending=0`).
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Truth ending resolved cosmic stakes, but Act-3 rehearsal and hurt-state fallout had weaker on-screen payoff than other endings, reducing branch differentiation at the finale.
+- **Fix applied:** Added a "truth-route closure checkpoint" to ship-block runs: if `ally_fallout_payoff_pending=1`, Truth ending must (a) pay rehearsal vs skipped-rehearsal cadence, (b) resolve hurt flags with explicit reconciliation beats, then (c) clear pending fallout on-screen.
+- **Applied now:** expanded `act4/ending_truth.json` with a new church-steps reconciliation micro-scene (rehearsal/cost + hurt-flag payoffs) before the existing ally epilog branch.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.
