@@ -124,12 +124,12 @@
       "flag": "pact_terms_written",
       "value": 1,
       "true_next": "pact_terms_written_payoff",
-      "false_next": "check_ritual_breath_count_prepared"
+      "false_next": "check_approach_commitment_seal"
     },
     "pact_terms_written_payoff": {
       "type": "narration",
       "text": "Die Paktklauseln liegen nicht nur in meinem Kopf, sondern schwarz auf Papier neben dem Journal. Falls ich schwanke, verhandle ich nicht aus Stimmung, sondern aus klaren Sätzen.",
-      "next": "check_ritual_breath_count_prepared"
+      "next": "check_approach_commitment_seal"
     },
     "check_bridge_fallout_seen_memory": {
       "type": "flag_check",
@@ -2038,6 +2038,54 @@
       "expression": "determined",
       "text": "Nicht jetzt. Konrad, halt durch. Ich hole dich da raus - aber nur, wenn ich ES zuerst binde.",
       "next": "check_approach"
+    },
+    "check_approach_commitment_seal": {
+      "type": "flag_check",
+      "flag": "approach_commitment_seal",
+      "value": 1,
+      "true_next": "approach_commitment_seal_payoff",
+      "false_next": "check_approach_commitment_understand"
+    },
+    "approach_commitment_seal_payoff": {
+      "type": "narration",
+      "text": "Der Kreidering aus der Nacht erscheint vor meinem inneren Auge: \"Bleiben\". Nicht am Ritual kleben um jeden Preis - am Ziel. Dreißig Jahre Zeit kaufen, ohne die Lüge weiterzureichen.",
+      "next": "check_approach_commitment_understand"
+    },
+    "check_approach_commitment_understand": {
+      "type": "flag_check",
+      "flag": "approach_commitment_understand",
+      "value": 1,
+      "true_next": "approach_commitment_understand_payoff",
+      "false_next": "check_approach_commitment_destroy"
+    },
+    "approach_commitment_understand_payoff": {
+      "type": "narration",
+      "text": "Unter meinen drei Fragen höre ich den vierten Satz mit: Wenn ich nur noch staune, frage ich weiter. Genau das hält mich im Gespräch, als das Summen nach Ehrfurcht schmeckt.",
+      "next": "check_approach_commitment_destroy"
+    },
+    "check_approach_commitment_destroy": {
+      "type": "flag_check",
+      "flag": "approach_commitment_destroy",
+      "value": 1,
+      "true_next": "approach_commitment_destroy_payoff",
+      "false_next": "check_approach_commitment_pact"
+    },
+    "approach_commitment_destroy_payoff": {
+      "type": "narration",
+      "text": "Ich sehe den eingeklemmten Keil an der Türfuge vor mir. Das ist der Deal mit mir selbst: Wenn der Boden bricht, zählt nicht Stolz, nur Exit und Konsequenz.",
+      "next": "check_approach_commitment_pact"
+    },
+    "check_approach_commitment_pact": {
+      "type": "flag_check",
+      "flag": "approach_commitment_pact",
+      "value": 1,
+      "true_next": "approach_commitment_pact_payoff",
+      "false_next": "check_ritual_breath_count_prepared"
+    },
+    "approach_commitment_pact_payoff": {
+      "type": "narration",
+      "text": "Im Journal steckt das gefaltete Klauselblatt auf Großmutters letzter Seite. Das erinnert mich: verhandeln heißt weder kuschen noch vernichten, sondern Grenzen so klar sprechen, dass auch Angst sie nicht verschiebt.",
+      "next": "check_ritual_breath_count_prepared"
     }
   }
 }

@@ -642,7 +642,7 @@
       "type": "set_flag",
       "flag": "seal_protocol_practiced",
       "value": 1,
-      "next": "narration_preparation"
+      "next": "seal_commitment_event"
     },
     "approach_understand_rehearsal": {
       "type": "narration",
@@ -653,7 +653,7 @@
       "type": "set_flag",
       "flag": "understand_questions_prepared",
       "value": 1,
-      "next": "narration_preparation"
+      "next": "understand_commitment_event"
     },
     "approach_destroy_rehearsal": {
       "type": "narration",
@@ -664,7 +664,7 @@
       "type": "set_flag",
       "flag": "destroy_charge_prepared",
       "value": 1,
-      "next": "narration_preparation"
+      "next": "destroy_commitment_event"
     },
     "approach_pact_rehearsal": {
       "type": "narration",
@@ -675,7 +675,7 @@
       "type": "set_flag",
       "flag": "pact_terms_written",
       "value": 1,
-      "next": "narration_preparation"
+      "next": "pact_commitment_event"
     },
     "check_confronted_voss_pact": {
       "type": "flag_check",
@@ -973,6 +973,50 @@
       "flag": "extra_support_bundle",
       "value": 1,
       "next": "narration_approach"
+    },
+    "seal_commitment_event": {
+      "type": "narration",
+      "text": "Ich ziehe mit Kreide einen dünnen Ring um den Tischfuß und schreibe innen ein einziges Wort: \"Bleiben\". Wenn ich morgen schwanke, erinnere ich mich daran, dass das Siegel eine Brücke auf Zeit sein soll - kein neues Wegsehen.",
+      "next": "set_approach_commitment_seal"
+    },
+    "set_approach_commitment_seal": {
+      "type": "set_flag",
+      "flag": "approach_commitment_seal",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "understand_commitment_event": {
+      "type": "narration",
+      "text": "Ich nehme Annas Kreidestummel und schreibe unter meine drei Fragen einen vierten Satz: \"Wenn ich nur noch staune, frage ich weiter.\" Das ist mein Geländer gegen den Schock.",
+      "next": "set_approach_commitment_understand"
+    },
+    "set_approach_commitment_understand": {
+      "type": "set_flag",
+      "flag": "approach_commitment_understand",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "destroy_commitment_event": {
+      "type": "narration",
+      "text": "Ich klemme den Metallkeil aus dem Bündel in die Bodenspalte neben der Tür. Kein Symbol, ein Werkzeug: Wenn der Rückzug kommt, darf ich nicht diskutieren - ich folge der markierten Linie und lebe.",
+      "next": "set_approach_commitment_destroy"
+    },
+    "set_approach_commitment_destroy": {
+      "type": "set_flag",
+      "flag": "approach_commitment_destroy",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "pact_commitment_event": {
+      "type": "narration",
+      "text": "Ich falte das Blatt mit den Klauseln einmal quer, einmal längs und stecke es in Großmutters Journal auf die Seite mit ihrem letzten Satz. Vertrag und Vermächtnis im selben Griff - damit ich morgen weder weich werde noch hart um des Härte willen.",
+      "next": "set_approach_commitment_pact"
+    },
+    "set_approach_commitment_pact": {
+      "type": "set_flag",
+      "flag": "approach_commitment_pact",
+      "value": 1,
+      "next": "narration_preparation"
     }
   }
 }
