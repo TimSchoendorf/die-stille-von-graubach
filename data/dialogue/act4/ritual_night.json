@@ -2037,7 +2037,7 @@
       "speaker": "elise",
       "expression": "determined",
       "text": "Nicht jetzt. Konrad, halt durch. Ich hole dich da raus - aber nur, wenn ich ES zuerst binde.",
-      "next": "check_approach"
+      "next": "check_avoided_konrad_command_event"
     },
     "check_approach_commitment_seal": {
       "type": "flag_check",
@@ -2086,6 +2086,70 @@
       "type": "narration",
       "text": "Im Journal steckt das gefaltete Klauselblatt auf Großmutters letzter Seite. Das erinnert mich: verhandeln heißt weder kuschen noch vernichten, sondern Grenzen so klar sprechen, dass auch Angst sie nicht verschiebt.",
       "next": "check_ritual_breath_count_prepared"
+    },
+    "check_avoided_konrad_command_event": {
+      "type": "flag_check",
+      "flag": "avoided_konrad",
+      "value": 1,
+      "true_next": "schoolhouse_command_intro",
+      "false_next": "check_approach"
+    },
+    "schoolhouse_command_intro": {
+      "type": "narration",
+      "text": "Der Drang, zur Schule hochzurennen, sitzt mir wie ein Haken unter dem Brustbein. Ich kann den Plan jetzt nur halten, wenn ich meine Sorge in einen klaren Befehl verwandle.",
+      "next": "choice_schoolhouse_command"
+    },
+    "choice_schoolhouse_command": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Über Georgs Klopfcode den Haltebefehl senden: Konrad sichern, Tür geschlossen lassen, bis der zweite Kehrvers steht.",
+          "set_flags": {
+            "issued_schoolhouse_hold_order": 1
+          },
+          "next": "schoolhouse_command_hold"
+        },
+        {
+          "text": "Kein Zusatzbefehl - Atem zählen, Kreidekreis halten, dem Köder keinen Zentimeter geben.",
+          "next": "schoolhouse_command_tempo"
+        }
+      ]
+    },
+    "schoolhouse_command_hold": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Drei kurz, eins lang, drei kurz. Georg versteht: halten, nicht jagen. Wenn Konrad heute bricht, dann hinter einer verriegelten Tür - nicht im Ritualkreis.",
+      "next": "schoolhouse_command_commit"
+    },
+    "schoolhouse_command_tempo": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Ich sende nichts. Jeder Zusatzton wäre ein Riss im Takt. Also nur Atem, Stein, Kehrvers - und der Entschluss, Konrad später zu retten, nicht jetzt.",
+      "next": "schoolhouse_command_commit"
+    },
+    "schoolhouse_command_commit": {
+      "type": "narration",
+      "text": "Die Entscheidung tut weh, aber sie schließt die innere Fluchtluke. Von hier an gibt es nur noch vorwärts: binden, dann bergen.",
+      "next": "check_schoolhouse_command_choice_memory"
+    },
+    "check_schoolhouse_command_choice_memory": {
+      "type": "flag_check",
+      "flag": "issued_schoolhouse_hold_order",
+      "value": 1,
+      "true_next": "schoolhouse_command_choice_hold_payoff",
+      "false_next": "schoolhouse_command_choice_tempo_payoff"
+    },
+    "schoolhouse_command_choice_hold_payoff": {
+      "type": "narration",
+      "text": "Unten bleibt mein Takt sauber, oben hält Georg die Linie. Der Befehl kostet Vertrauen - aber er verhindert, dass Sorge zur Panik wird.",
+      "next": "check_approach"
+    },
+    "schoolhouse_command_choice_tempo_payoff": {
+      "type": "narration",
+      "text": "Ich tue nichts außer zählen, und genau das stabilisiert den Kreis. Kein Heldensprung, kein Umweg - nur Disziplin, die uns beide am Leben hält.",
+      "next": "check_approach"
     }
   }
 }
