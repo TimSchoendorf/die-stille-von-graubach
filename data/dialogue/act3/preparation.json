@@ -618,7 +618,7 @@
     },
     "approach_pact_2": {
       "type": "narration",
-      "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber mit Rückkehrrecht - und wenn jemand 'Stopp' sagt, endet der Kontakt sofort. Zusätzlich gilt eine Notfallklausel: Fällt das Gegenüber aus, greift sofort ein Übergangs-Siegel, bis freiwillige Nachfolge bereit ist. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
+      "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber mit Rückkehrrecht - und wenn jemand 'Stopp' sagt, endet der Kontakt sofort. Damit das mehr ist als Mut in einer Nacht, halte ich die Regeln als offenes Protokoll fest: Zeugen, feste Termine, klare Abbruchzeichen. Zusätzlich gilt eine Notfallklausel: Fällt das Gegenüber aus, greift sofort ein Übergangs-Siegel, bis freiwillige Nachfolge bereit ist. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
       "next": "check_confronted_voss_pact"
     },
     "check_confronted_voss_pact": {

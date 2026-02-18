@@ -496,7 +496,7 @@
     },
     "narration_test_lie": {
       "type": "narration",
-      "text": "Er lügt. Und er weiß, dass ich es merke. Die Luft zwischen uns wird schwer. Ich frage nicht weiter - manchmal verrät Schweigen mehr als Worte.",
+      "text": "Er lügt. Und er weiß, dass ich es merke. Die Luft zwischen uns wird schwer. Ich frage nicht weiter - manchmal verrät Schweigen mehr als Worte. Und manchmal ist ein Test der einzige Weg, jemanden später retten zu können, ohne blind zu werden.",
       "next": "set_konrad_suspicious"
     },
     "set_konrad_suspicious": {
