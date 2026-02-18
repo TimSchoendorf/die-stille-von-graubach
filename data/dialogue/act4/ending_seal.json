@@ -139,7 +139,7 @@
 		},
 		"narration_9": {
 			"type": "narration",
-			"text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit, um Wissen offen weiterzugeben, damit nie wieder heimlich ein Name ins Buch geschrieben wird.",
+			"text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit, um Wissen offen weiterzugeben, mit klaren Regeln: freiwilliger Kontakt statt Zwang, widerrufbar mit einem Wort, und ein Übergangs-Siegel, falls niemand bereit ist.",
 			"next": "narration_10"
 		},
 		"narration_10": {
@@ -354,7 +354,7 @@
 		},
 		"narration_12": {
 			"type": "narration",
-			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. Nicht in dreißig Jahren. Vorher. Viel vorher.",
+			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. Nicht in dreißig Jahren. Vorher. Viel vorher - mit Protokollen, Verbündeten und einem Plan, der niemanden heimlich zum nächsten Anker macht.",
 			"next": "narration_12b"
 		},
 		"narration_12b": {
