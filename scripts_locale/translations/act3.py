@@ -1142,7 +1142,7 @@ def _add_act3_preparation(tr):
        es="Pongo las manos planas sobre la mesa. Están tranquilas. Extrañamente tranquilas para alguien que mañana se enfrentará a una entidad ancestral.",
        it="Appoggio le mani sul tavolo. Sono calme. Stranamente calme per qualcuno che domani affronterà un'entità ancestrale.")
     _t(tr, F, "narration_approach_seal",
-       en="Seal: Grandmother's way. Bind it, not kill it. Safe. Proven. But it lasts only thirty years. Then someone else must live through this night.",
+       en="Seal: Grandmother's way. Bind it, not kill it. It works — but it asks for discipline, an anchor, and someone willing to carry the burden. And it lasts only thirty years.",
        fr="Sceller : là voie de grand-mère. Le lier, pas le tuer. Sûr. Éprouvé. Mais çà ne dure que trente ans. Ensuite quelqu'un d'autre devrà vivre cette nuit.",
        es="Sellar: el camino de la abuela. Atarlo, no matarlo. Seguro. Probado. Pero solo dura treinta años. Luego alguien más deberá vivir esta noche.",
        it="Sigillare: la via della nonna. Legarlo, non ucciderlo. Sicuro. Collaudato. Ma dura solo trent'anni. Poi qualcun altro dovrà vivere questa notte.")
@@ -1162,7 +1162,7 @@ def _add_act3_preparation(tr):
        es="Negociar: un pacto. Dar y recibir. Menos que un sacrificio, más que la ignorancia. Pero: ¿se puede confiar en una entidad que ha aceptado seiscientos años de sacrificios humanos?",
        it="Negoziare: un patto. Dare è ricevere. Meno di un sacrificio, più dell'ignoranza. Ma: ci si può fidare di un'entità che ha accettato seicento anni di sacrifici umani?")
     _t(tr, F, "approach_seal_2",
-       en="Grandmother showed the way. I just need to follow her footsteps. The chant, the earth sign, the anchor. Three components, one ritual. I can do this.",
+       en="Grandmother showed the way. I just need to follow her footsteps without repeating the old cruelty. The chant, the earth sign, the anchor. Three components, one ritual — and the anchor must remain a person, not a sacrifice.",
        fr="Grand-mère à montré le chemin. Je n'ai qu'à suivre ses traces. Le chant, le signe de terre, l'ancre. Trois composantes, un rituel. J'en suis capable.",
        es="La abuela mostró el camino. Solo debo seguir sus pasos. El canto, el signo de la tierra, el ancla. Tres componentes, un ritual. Puedo hacerlo.",
        it="La nonna ha mostrato la via. Devo solo seguire le sue orme. Il canto, il segno della terra, l'ancora. Tre componenti, un rituale. Ce la posso fare.")
@@ -1177,7 +1177,7 @@ def _add_act3_preparation(tr):
        es="La abuela escribió que la destrucción cuesta al destructor. Estoy dispuesta a pagar ese precio. Seiscientos años de sangre son suficientes.",
        it="La nonna ha scritto che la distruzione costa al distruttore. Sono pronta a pagare quel prezzo. Seicento anni di sangue sono abbastanza.")
     _t(tr, F, "approach_pact_2",
-       en="My name is in the book. That gives me a connection, a voice. For the first time in six hundred years, someone will TALK to the entity, not sacrifice to it.",
+       en="My name is in the book. That gives me a connection, a voice. For the first time in six hundred years, someone will TALK to the entity and set terms — consent instead of sacrifice.",
        fr="Mon nom est dans le livre. Celà me donne un lien, une voix. Pour là première fois en six cents ans, quelqu'un và PARLER à l'entité, pas lui faire un sacrifice.",
        es="Mi nombre está en el libro. Eso me da una conexión, una voz. Por primera vez en seiscientos años, alguien va a HABLAR con la entidad, no sacrificarle.",
        it="Il mio nome è nel libro. Questo mi dà un legame, una voce. Per la prima volta in seicento anni, qualcuno PARLERÀ con l'entità, non le sacrificherà.")

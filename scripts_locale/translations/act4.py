@@ -2045,7 +2045,7 @@ def _add_act4_ending_sacrifice(tr):
        it="Mi ha insegnato a leggere — no, quella era la nonna. Mi ha mostrato l'albero del guardiano. Ha chiesto aiuto quando nessun altro lo ha fatto.")
 
     _t(tr, F, "narration_3",
-       en="And I read in Grandmother's journal what the vessel is: a bridge. The entity needs a human mind as an anchor in our world. Without a vessel, it cannot stay here.",
+       en="And I read in Grandmother's journal what the vessel is: a bridge. The entity has relied on a human mind as an anchor in our world. Without that bridge, it thrashes, reaches, and drags others down.",
        fr="Et j'ai lu dans le journal de grand-mère ce qu'est le réceptacle : un pont. L'entité à besoin d'un esprit humain comme ancre dans notre monde. Sans réceptacle, elle ne peut pas rester ici.",
        es="Y leí en el diario de la abuela lo que es el receptáculo: un puente. La entidad necesita una mente humana como ancla en nuestro mundo. Sin receptáculo, no puede permanecer aquí.",
        it="E ho letto nel diario della nonna cos'è il ricettacolo: un ponte. L'entità ha bisogno di una mente umana come àncora nel nostro mondo. Senza ricettacolo, non può restare qui.")
@@ -2057,7 +2057,7 @@ def _add_act4_ending_sacrifice(tr):
        it="Konrad non è mai stato il ricettacolo di sua volontà. È stato scelto prima di nascere. Selezionato come un agnello sacrificale.")
 
     _t(tr, F, "narration_5",
-       en="I step onto the earth sign. I open my mind — not to bind the entity or to understand it, but to invite it. Into me.",
+       en="I step onto the earth sign. I open my mind — not to bind the entity or to worship it, but to make a chosen offer. Into me, on terms I can still speak.",
        fr="Je me place sur le signe de terre. J'ouvre mon esprit — non pour lier l'entité ni pour là comprendre, mais pour l'inviter. En moi.",
        es="Me coloco sobre el signo de la tierra. Abro mi mente — no para atar a la entidad ni para comprenderla, sino para invitarla. Dentro de mí.",
        it="Mi posiziono sul segno della terra. Apro la mia mente — non per legare l'entità né per comprenderla, ma per invitarla. Dentro di me.")
