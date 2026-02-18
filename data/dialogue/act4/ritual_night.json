@@ -1023,7 +1023,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Niemand sollte allein in dieser Tiefe verrotten. Nicht einmal etwas, das älter ist als die Berge. Du hast dreißig Jahre bezahlt, Konrad. Jetzt bin ich dran.",
+      "text": "Niemand sollte allein in dieser Tiefe verrotten. Nicht einmal etwas, das älter ist als die Berge. Du hast dreißig Jahre bezahlt, Konrad. Ich entscheide mich bewusst dafür, die Last jetzt zu tragen - nicht als Tradition, sondern damit sie heute bei dir endet.",
       "next": "narration_sacrifice_creature"
     },
     "narration_sacrifice_creature": {
