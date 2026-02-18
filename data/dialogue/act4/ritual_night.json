@@ -2144,11 +2144,23 @@
     "schoolhouse_command_choice_hold_payoff": {
       "type": "narration",
       "text": "Unten bleibt mein Takt sauber, oben hält Georg die Linie. Der Befehl kostet Vertrauen - aber er verhindert, dass Sorge zur Panik wird.",
-      "next": "check_approach"
+      "next": "check_promised_konrad_after_ritual_ritual"
     },
     "schoolhouse_command_choice_tempo_payoff": {
       "type": "narration",
       "text": "Ich tue nichts außer zählen, und genau das stabilisiert den Kreis. Kein Heldensprung, kein Umweg - nur Disziplin, die uns beide am Leben hält.",
+      "next": "check_promised_konrad_after_ritual_ritual"
+    },
+    "check_promised_konrad_after_ritual_ritual": {
+      "type": "flag_check",
+      "flag": "promised_konrad_after_ritual",
+      "value": 1,
+      "true_next": "promised_konrad_after_ritual_ritual_payoff",
+      "false_next": "check_approach"
+    },
+    "promised_konrad_after_ritual_ritual_payoff": {
+      "type": "narration",
+      "text": "Der alte Schwur aus der Nacht am Schulhaus sitzt noch immer fest: erst binden, dann Konrad holen. Genau dieser Satz hält meine Hände ruhig, als das Summen mir eine Abkürzung ins Gewissen flüstert.",
       "next": "check_approach"
     }
   }

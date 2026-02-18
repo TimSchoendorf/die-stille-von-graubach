@@ -853,12 +853,12 @@
     "konrad_ward_choice": {
       "type": "narration",
       "text": "Ich zeichne mit zitternder Hand drei gebrochene Spiralen auf den Türrahmen - Hildes Notzeichen gegen Durchgriffe. Dann flüstere ich: 'Halte bis morgen durch.' Drinnen stoppt das Kreidekratzen für genau einen Atemzug.",
-      "next": "check_anna_schoolyard_event"
+      "next": "school_bell_omen_intro"
     },
     "konrad_distance_choice": {
       "type": "narration",
       "text": "Ich gehe weiter, ohne mich umzudrehen. Jeder zusätzliche Blick wäre eine Einladung. Wenn ich ihn retten will, muss ich heute streng bleiben - auch gegen mein eigenes Mitleid.",
-      "next": "check_anna_schoolyard_event"
+      "next": "school_bell_omen_intro"
     },
     "ally_final_converge": {
       "type": "narration",
@@ -979,6 +979,51 @@
     "konrad_watch_plan_2": {
       "type": "narration",
       "text": "Kein Heldentum, nur ein dünnes Sicherheitsnetz. Vielleicht ist das alles, was Verantwortung heute sein kann: jemanden nicht im Stich lassen, ohne den Plan zu verraten.",
+      "next": "school_bell_omen_intro"
+    },
+    "school_bell_omen_intro": {
+      "type": "narration",
+      "text": "Als ich vom Schulhaus weg bin, schlägt drinnen die Pausenglocke - einmal, mitten in der Nacht. Kein Nachhallen, nur ein einzelner Metallton, als würde jemand einen Termin setzen.",
+      "next": "school_bell_omen_2"
+    },
+    "school_bell_omen_2": {
+      "type": "narration",
+      "text": "Ich bleibe im Schatten stehen und zwinge mich, nicht zurückzugehen. Wenn ich jetzt kippe, kippt der ganze Plan mit. Also brauche ich einen Satz, der mich bis zur Ritualnacht auf Kurs hält.",
+      "next": "choice_school_bell_vow"
+    },
+    "choice_school_bell_vow": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Mir selbst schwören: Erst binden, dann Konrad holen - in genau dieser Reihenfolge",
+          "set_flags": {
+            "promised_konrad_after_ritual": 1
+          },
+          "next": "school_bell_vow_commit"
+        },
+        {
+          "text": "Den Gedanken wegdrücken und nur den Ablauf im Kopf wiederholen",
+          "next": "school_bell_vow_suppress"
+        }
+      ]
+    },
+    "school_bell_vow_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Erst binden. Dann Konrad. Kein Tausch, kein Heldensprung dazwischen. Wenn ich diesen Satz halte, überleben wir vielleicht beide.",
+      "next": "school_bell_vow_converge"
+    },
+    "school_bell_vow_suppress": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Kein Schwur. Nur Schritte: Kreis, Kehrvers, Knoten. Gefühle später. Jetzt darf nur die Reihenfolge zählen.",
+      "next": "school_bell_vow_converge"
+    },
+    "school_bell_vow_converge": {
+      "type": "narration",
+      "text": "Der Ton aus der Schule hängt mir noch im Ohr, aber er treibt mich jetzt vorwärts statt zurück. Morgen Nacht gibt es keinen zweiten Versuch.",
       "next": "check_anna_schoolyard_event"
     },
     "check_konrad_anchor_event": {

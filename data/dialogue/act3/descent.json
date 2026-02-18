@@ -1120,6 +1120,18 @@
     "konrad_choice_avoided_payoff": {
       "type": "narration",
       "text": "Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, auf der Treppe, fühlt es sich an wie ein offener Schnitt: vernünftig - und trotzdem grausam. Wenn ich scheitere, habe ich nicht nur Graubach verraten, sondern auch den Mann, den ich bewusst allein in dieser Hölle ließ.",
+      "next": "check_promised_konrad_after_ritual_descent"
+    },
+    "check_promised_konrad_after_ritual_descent": {
+      "type": "flag_check",
+      "flag": "promised_konrad_after_ritual",
+      "value": 1,
+      "true_next": "promised_konrad_after_ritual_descent_payoff",
+      "false_next": "descent_start"
+    },
+    "promised_konrad_after_ritual_descent_payoff": {
+      "type": "narration",
+      "text": "Vor der Schultür habe ich mir die Reihenfolge eingebrannt: erst binden, dann bergen. Auf den letzten Stufen wird daraus mehr als Taktik - ein Geländer gegen Schuldpanik, damit ich im falschen Moment nicht nach oben renne und alles zerreiße.",
       "next": "descent_start"
     },
     "check_anna_warning_chamber": {
