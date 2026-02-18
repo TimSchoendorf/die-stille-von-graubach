@@ -851,7 +851,7 @@
     },
     "konrad_tested_memory": {
       "type": "narration",
-      "text": "Ich habe ihn geprüft statt ihm zu vertrauen. Jede Frage ein Messer, jedes Schweigen eine Wunde. Vielleicht hat genau das ihn lange genug wach gehalten, um heute noch kämpfen zu können.",
+      "text": "Ich habe ihn geprüft statt ihm zu vertrauen: ein beiläufiges Wort über Spiralen, seine Hand sofort am Handgelenk, ein Blick wie ertappt. Jede Frage ein Messer, jedes Schweigen eine Wunde. Vielleicht hat genau diese Vorsicht ihn lange genug wach gehalten, um heute noch kämpfen zu können.",
       "next": "check_approach"
     },
     "konrad_appears": {
@@ -910,7 +910,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Du hast mich damals mit den Spiralen getestet. Gut so. Hier unten sollte man niemandem blind vertrauen - nicht mal mir.",
+      "text": "Du hast mich damals mit den Spiralen getestet - und gesehen, wie ich sofort ans Handgelenk griff. Gut so. Hier unten sollte man niemandem blind vertrauen, nicht mal mir.",
       "next": "show_konrad"
     },
     "show_konrad": {
@@ -986,7 +986,7 @@
     },
     "anna_warning_konrad_choice": {
       "type": "narration",
-      "text": "Ich höre Annas Stimme aus dem Wald: 'Beeil dich.' Nicht als Drohung - als letzte Bitte von jemandem, der jeden Tag ein Stück weiter verschwindet. Diese Entscheidung betrifft nicht nur Konrad und mich. Sie entscheidet, ob Anna morgen noch Anna ist.",
+      "text": "Ich höre Annas Stimme aus dem Wald: 'Beeil dich.' Nicht als Drohung - als letzte Bitte von jemandem, der jeden Tag ein Stück weiter verschwindet und nur bleiben will. Diese Entscheidung betrifft nicht nur Konrad und mich. Sie entscheidet, ob Anna morgen noch Anna ist.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {

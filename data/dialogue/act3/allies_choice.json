@@ -639,7 +639,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "afraid",
-      "text": "Konrad, hör zu! Ich habe dich damals getestet, weil ich dir nicht geglaubt habe. Es tut mir leid. Bleib jetzt bei mir. DU bist Konrad Müller.",
+      "text": "Konrad, hör zu! Ich habe dich damals getestet - Spiralen, Handgelenk, die ganze feige Nummer. Es tut mir leid. Bleib jetzt bei mir. DU bist Konrad Müller.",
       "next": "konrad_final_5"
     },
     "elise_konrad_reach": {
@@ -754,7 +754,7 @@
     },
     "elise_assess_tested_konrad": {
       "type": "narration",
-      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn getestet, statt ihm zu vertrauen. Seitdem weiß ich: Er verbirgt etwas - und vielleicht kämpft er gleichzeitig dagegen an.",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn getestet, beiläufig die Spiralen erwähnt, und seine Hand schoss sofort ans Handgelenk. Seitdem weiß ich: Er verbirgt etwas - und vielleicht kämpft er gleichzeitig dagegen an.",
       "next": "elise_decide"
     },
     "check_anna_warning_konrad": {
