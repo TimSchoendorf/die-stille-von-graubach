@@ -458,6 +458,35 @@
       "speaker": "voss",
       "expression": "praying",
       "text": "Morgen bete ich für SIE. Das ist mehr, als ich für Friedrich getan habe.",
+      "next": "choice_voss_focus_tool"
+    },
+    "choice_voss_focus_tool": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Mit Voss eine Atemlitanei als Bodenanker üben",
+          "set_flags": {
+            "voss_breath_litany_prepared": 1
+          },
+          "next": "voss_breath_litany_result"
+        },
+        {
+          "text": "Mit Voss eine Wahrheitsformel für Panikmomente festlegen",
+          "set_flags": {
+            "voss_truth_litany_prepared": 1
+          },
+          "next": "voss_truth_litany_result"
+        }
+      ]
+    },
+    "voss_breath_litany_result": {
+      "type": "narration",
+      "text": "Ich stelle mich mit Voss ans Fenster, Hand auf Brustbein, und wir zählen Atemzüge gegen das Zittern: vier ein, vier halten, vier aus. Er murmelt dazu leise dieselbe Zeile wie ein Metronom. Nach fünf Runden ist mein Puls nicht weg - aber führbar.",
+      "next": "narration_voss_leave"
+    },
+    "voss_truth_litany_result": {
+      "type": "narration",
+      "text": "Wir schreiben einen einzigen Satz auf die Rückseite von Großmutters Brief: \"Ich bin nicht allein in dieser Kammer.\" Voss lässt mich ihn dreimal laut sprechen, bis die Worte nicht mehr klingen wie Trost, sondern wie ein Befehl an meinen eigenen Panikreflex.",
       "next": "narration_voss_leave"
     },
     "narration_voss_leave": {

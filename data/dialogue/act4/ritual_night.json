@@ -525,14 +525,42 @@
       "flag": "voss_hurt_day6",
       "value": 1,
       "true_next": "voss_ritual_hurt_line",
+      "false_next": "check_voss_focus_tool_ritual"
+    },
+    "check_voss_focus_tool_ritual": {
+      "type": "flag_check",
+      "flag": "voss_breath_litany_prepared",
+      "value": 1,
+      "true_next": "voss_breath_litany_ritual_payoff",
+      "false_next": "check_voss_truth_litany_ritual"
+    },
+    "voss_breath_litany_ritual_payoff": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Mit mir, Elise. Vier ein, vier halten, vier aus. Kein Heldentakt - nur Atem. Wir haben das geübt.",
+      "next": "voss_ritual_1"
+    },
+    "check_voss_truth_litany_ritual": {
+      "type": "flag_check",
+      "flag": "voss_truth_litany_prepared",
+      "value": 1,
+      "true_next": "voss_truth_litany_ritual_payoff",
       "false_next": "voss_ritual_1"
+    },
+    "voss_truth_litany_ritual_payoff": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich wiederhole unseren Satz, Pfarrer: Ich bin nicht allein in dieser Kammer. Nicht heute. Nicht mit Ihnen hier.",
+      "next": "voss_ritual_1"
     },
     "voss_ritual_hurt_line": {
       "type": "dialogue",
       "speaker": "voss",
       "expression": "broken",
       "text": "Gestern klang in mir noch Enttäuschung. Heute bleibt davon nur Scham. Ich habe zu oft zugesehen, während andere hinabstiegen. Das wiederhole ich nicht.",
-      "next": "voss_ritual_1"
+      "next": "check_voss_focus_tool_ritual"
     },
     "voss_ritual_1": {
       "type": "dialogue",

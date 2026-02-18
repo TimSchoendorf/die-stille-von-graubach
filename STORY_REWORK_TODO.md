@@ -95,6 +95,11 @@
 - **Fix applied:** Added a "mnemonic carryover checkpoint" to ship-block loops: when a branch introduces psychological self-regulation, add one compact player-owned cue in setup and require explicit callbacks in escalation and ritual payoff beats.
 - **Applied now:** inserted a new Act-2 micro-choice in `act2/konrad_encounter.json` (Notfall-Stoppwort "Mittwoch", flag `prepared_konrad_interrupt_word`) and paid it off in `act3/allies_choice.json` + `act4/ritual_night.json` with distinct recall/callout narration.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Voss-alliance path in Act 3 delivered emotional confession but almost no player-owned tactical prep, so Act-4 priest support beats converged into generic prayer lines and undercut branch differentiation.
+- **Fix applied:** Added a "confession-to-technique checkpoint" to ship-block loops: when an ally confesses high-stakes guilt in setup, require one actionable co-regulation choice in the same scene and a direct execution callback in ritual escalation.
+- **Applied now:** inserted a new Voss prep micro-scene + choice in `act3/preparation.json` (`voss_breath_litany_prepared` vs `voss_truth_litany_prepared`) and paid both variants off in `act4/ritual_night.json` with distinct ritual callout lines.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.
