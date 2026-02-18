@@ -175,12 +175,12 @@
       "flag": "tried_erase_name",
       "value": 1,
       "true_next": "erase_name_memory",
-      "false_next": "narration_5"
+      "false_next": "check_stayed_in_village_ritual"
     },
     "erase_name_memory": {
       "type": "narration",
       "text": "Ich habe versucht, meinen Namen aus den Seiten zu kratzen. Die Tinte ließ sich nicht bewegen - nur meine Finger blieben schwarz. Manche Dinge wollen gelesen werden.",
-      "next": "narration_5"
+      "next": "check_stayed_in_village_ritual"
     },
     "narration_5": {
       "type": "narration",
@@ -1626,6 +1626,30 @@
       "type": "narration",
       "text": "Die Gespräche mit Voss und Konrad schneiden durch meine Panik: Tradition ohne Mitgefühl wurde zur Fütterung. Ich wiederhole den Gesang anders - als Grenze, nicht als Opferbefehl.",
       "next": "elise_seal_begin"
+    },
+    "check_stayed_in_village_ritual": {
+      "type": "flag_check",
+      "flag": "stayed_in_village",
+      "value": 1,
+      "true_next": "stayed_in_village_ritual_memory",
+      "false_next": "check_tried_to_flee_ritual"
+    },
+    "stayed_in_village_ritual_memory": {
+      "type": "narration",
+      "text": "Ich sehe die Entscheidung wieder vor mir: bleiben oder wegrennen. Damals habe ich den härteren Weg gewählt. Heute ist derselbe Weg nur tiefer geworden.",
+      "next": "narration_5"
+    },
+    "check_tried_to_flee_ritual": {
+      "type": "flag_check",
+      "flag": "tried_to_flee",
+      "value": 1,
+      "true_next": "tried_to_flee_ritual_memory",
+      "false_next": "narration_5"
+    },
+    "tried_to_flee_ritual_memory": {
+      "type": "narration",
+      "text": "Ich war schon einmal auf der Flucht, im Kreis durch denselben Wald. Der Unterschied ist: Heute renne ich nicht mehr vor etwas weg. Heute gehe ich auf etwas zu.",
+      "next": "narration_5"
     }
   }
 }

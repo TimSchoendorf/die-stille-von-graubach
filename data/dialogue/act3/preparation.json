@@ -12,12 +12,12 @@
       "flag": "act2_complete",
       "value": 1,
       "true_next": "act2_complete_memory",
-      "false_next": "bg_grandmother_night"
+      "false_next": "check_stayed_commitment_memory"
     },
     "act2_complete_memory": {
       "type": "narration",
       "text": "Letzte Nacht in der Kammer, mein Name im Buch, Ottos Drohung vor der Kirchentür - seitdem gibt es kein Zurück mehr. Heute ist kein Rätselabend mehr. Heute entscheide ich, ob dieser Ort weiter frisst.",
-      "next": "bg_grandmother_night"
+      "next": "check_stayed_commitment_memory"
     },
     "bg_grandmother_night": {
       "type": "background",
@@ -781,6 +781,30 @@
     "scene_end": {
       "type": "scene_end",
       "next_file": "res://data/dialogue/act4/ritual_night.json"
+    },
+    "check_stayed_commitment_memory": {
+      "type": "flag_check",
+      "flag": "stayed_in_village",
+      "value": 1,
+      "true_next": "stayed_commitment_memory",
+      "false_next": "check_tried_to_flee_memory"
+    },
+    "stayed_commitment_memory": {
+      "type": "narration",
+      "text": "Ich denke an den Abend in Georgs Schmiede, als ich bleiben konnte oder fliehen. Ich bin geblieben - mit Angst in den Knien und trotzdem mit offenen Augen. Diese Entscheidung trägt mich bis hierher.",
+      "next": "bg_grandmother_night"
+    },
+    "check_tried_to_flee_memory": {
+      "type": "flag_check",
+      "flag": "tried_to_flee",
+      "value": 1,
+      "true_next": "tried_to_flee_memory",
+      "false_next": "bg_grandmother_night"
+    },
+    "tried_to_flee_memory": {
+      "type": "narration",
+      "text": "Ich habe versucht zu fliehen, und der Wald hat mich zurückgetragen wie eine Hand im Nacken. Heute bleibe ich nicht, weil ich muss - ich bleibe, weil ich entschieden habe, den Kreis selbst zu brechen.",
+      "next": "bg_grandmother_night"
     }
   }
 }
