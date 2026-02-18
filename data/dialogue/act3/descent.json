@@ -1163,11 +1163,35 @@
       "flag": "asked_georg_watch_school",
       "value": 1,
       "true_next": "konrad_choice_avoided_watch_payoff",
-      "false_next": "konrad_choice_avoided_payoff"
+      "false_next": "check_left_konrad_ward_payoff"
     },
     "konrad_choice_avoided_watch_payoff": {
       "type": "narration",
       "text": "Ich habe Konrad gemieden, aber nicht völlig allein gelassen: Georg kennt das Zeichen am Schulhaus und hält in der Nacht Wache auf Distanz. Es ist kein Trost, nur eine kleine Korrektur gegen die Grausamkeit dieser Entscheidung.",
+      "next": "konrad_choice_avoided_payoff"
+    },
+    "check_left_konrad_ward_payoff": {
+      "type": "flag_check",
+      "flag": "left_konrad_ward",
+      "value": 1,
+      "true_next": "konrad_choice_avoided_ward_payoff",
+      "false_next": "check_kept_distance_konrad_payoff"
+    },
+    "konrad_choice_avoided_ward_payoff": {
+      "type": "narration",
+      "text": "Ich habe Konrad gemieden, aber ich habe an der Schultür einen Schutzkreis gelassen und seinen Namen geflüstert. Vielleicht war es nur Aberglaube. Vielleicht war es genau das kleine Stück Menschlichkeit, das ihn heute Nacht nicht ganz sinken lässt.",
+      "next": "konrad_choice_avoided_payoff"
+    },
+    "check_kept_distance_konrad_payoff": {
+      "type": "flag_check",
+      "flag": "kept_distance_konrad",
+      "value": 1,
+      "true_next": "konrad_choice_avoided_distance_payoff",
+      "false_next": "konrad_choice_avoided_payoff"
+    },
+    "konrad_choice_avoided_distance_payoff": {
+      "type": "narration",
+      "text": "Ich habe jeden Kontakt vermieden, sauber, logisch, ohne Risiko. Auf dieser Treppe fühlt sich diese Klarheit plötzlich kalt an - als hätte ich nicht nur einen Plan geschützt, sondern eine Tür zugeschlagen, hinter der noch ein Mensch stand.",
       "next": "konrad_choice_avoided_payoff"
     }
   }
