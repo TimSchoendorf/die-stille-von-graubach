@@ -210,6 +210,13 @@
 			"flag": "tested_konrad",
 			"value": 1,
 			"true_next": "konrad_tested_sacrifice",
+			"false_next": "check_distrusted_konrad_sacrifice"
+		},
+		"check_distrusted_konrad_sacrifice": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "konrad_distrusted_sacrifice",
 			"false_next": "konrad_untrusted_sacrifice"
 		},
 		"konrad_trusted_sacrifice": {
@@ -224,6 +231,13 @@
 			"speaker": "konrad",
 			"expression": "sad",
 			"text": "Du hast mir nicht blind vertraut. Du hast mich geprüft, bis du sicher warst, dass ich noch ich bin. Und trotzdem tust du das für mich.",
+			"next": "elise_sacrifice_5"
+		},
+		"konrad_distrusted_sacrifice": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "sad",
+			"text": "Du hast mich auf Abstand gehalten, um deinen Plan zu schützen. Du hattest Gründe. Und jetzt gibst du trotzdem alles, um mich freizubekommen.",
 			"next": "elise_sacrifice_5"
 		},
 		"konrad_untrusted_sacrifice": {
@@ -510,6 +524,18 @@
 		"sacrifice_anna_epilog": {
 			"type": "narration",
 			"text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt mir die Hand auf die Schulter.",
+			"next": "check_anna_warning_sacrifice"
+		},
+		"check_anna_warning_sacrifice": {
+			"type": "flag_check",
+			"flag": "anna_warning",
+			"value": 1,
+			"true_next": "sacrifice_anna_warning_payoff",
+			"false_next": "sacrifice_mathilde_epilog"
+		},
+		"sacrifice_anna_warning_payoff": {
+			"type": "narration",
+			"text": "Ich denke an die Nacht, in der Anna mich gewarnt hat: Das Wesen fürchte nicht mich, sondern Verlassenwerden. Jetzt sehe ich, wie präzise sie war - seit ich bleibe, ist aus dem Drohen ein Dialog geworden.",
 			"next": "sacrifice_mathilde_epilog"
 		},
 		"sacrifice_mathilde_epilog": {
