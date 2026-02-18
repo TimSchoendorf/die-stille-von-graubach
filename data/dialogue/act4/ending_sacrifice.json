@@ -177,7 +177,7 @@
 		},
 		"narration_8": {
 			"type": "narration",
-			"text": "Es ist... nicht wie erwartet. Kein Schmerz. Kein Horror. Es ist wie ein Meer, das sich in einen Teich ergießt. Zu groß, zu alt, zu anders. Aber es passt. Irgendwie.",
+			"text": "Es ist... nicht wie erwartet. Schmerz ist da - scharf, blendend - aber er zerreißt mich nicht. Es ist wie ein Meer, das in einen viel zu kleinen Teich drängt. Zu groß, zu alt, zu anders. Und doch finde ich einen Rhythmus, in dem wir beide atmen können.",
 			"next": "narration_8b"
 		},
 		"narration_8b": {
@@ -237,7 +237,7 @@
 			"type": "dialogue",
 			"speaker": "elise",
 			"expression": "happy",
-			"text": "Weil du es verdienst, frei zu sein. Weil Großmutter es so gewollt hätte. Und weil... weil das Wesen mich braucht. Und ich es brauche.",
+			"text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann, ohne dich weiter dafür zahlen zu lassen.",
 			"next": "konrad_5"
 		},
 		"konrad_5": {
@@ -392,7 +392,7 @@
 		},
 		"narration_12": {
 			"type": "narration",
-			"text": "Ich werde in Graubach bleiben. Ich werde Konrads Platz einnehmen - als Lehrerin, als Hüterin, als Gefäß. Aber nicht als Gefangene. Als Gastgeberin.",
+			"text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp.",
 			"next": "anna_sacrifice_appears"
 		},
 		"anna_sacrifice_appears": {
@@ -426,7 +426,7 @@
 			"type": "dialogue",
 			"speaker": "anna",
 			"expression": "lucid",
-			"text": "Du bist ein besseres Zuhause als Konrad. Es mag dich.",
+			"text": "Bei dir klingt es nicht mehr wie Gefangenschaft. Mehr wie ein Gespräch. Es hört auf dich.",
 			"next": "elise_anna_2"
 		},
 		"elise_anna_2": {
@@ -463,7 +463,7 @@
 			"type": "journal",
 			"entry_id": "ending_sacrifice",
 			"title": "Das Opfer",
-			"content": "Ich habe Konrads Platz als Gefäß eingenommen. Freiwillig. Das Wesen und ich teilen nun einen Körper, einen Geist. Es ist nicht das Ende. Es ist der Anfang einer Koexistenz.",
+			"content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit Regeln, Grenzen und täglicher Aushandlung. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
 			"next": "check_packed_sacrifice"
 		},
 		"check_packed_sacrifice": {
