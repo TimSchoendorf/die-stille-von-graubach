@@ -106,7 +106,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Georg, nein! Ich kann es noch schaffen - gib mir noch eine Minute -",
+      "text": "Georg, nein! Du warst gestern noch verletzt wegen meiner Entscheidung - ich kann nicht auch noch dich verlieren!",
       "next": "narration_3"
     },
     "narration_3": {
@@ -132,7 +132,7 @@
       "type": "dialogue",
       "speaker": "georg",
       "expression": "sad",
-      "text": "Ich habe dreißig Jahre geschwiegen, Elise. Dreißig Jahre Feigheit. Lass mich wenigstens einmal das Richtige tun.",
+      "text": "Ich war verletzt, ja. Aber nie gegen dich. Nur gegen die Angst in mir. Lauf jetzt, Elise. Gib meiner Wut wenigstens einen Sinn.",
       "next": "elise_escape_4"
     },
     "elise_escape_4": {
@@ -248,6 +248,24 @@
     "narration_6_voss": {
       "type": "narration",
       "text": "Wir rennen durch den engen Gang, gebückt, halb kriechend. Hinter uns bricht die Kirche zusammen. Staub regnet von der Decke, und das Singen wird zum Brüllen.",
+      "next": "voss_archive_event_intro"
+    },
+    "voss_archive_event_intro": {
+      "type": "narration",
+      "text": "Im Fluchttunnel stolpert Voss über eine lose Steinplatte. Dahinter steckt eine wasserdichte Kassette mit den alten Kirchenregistern - Namen, Übergaben, Zahlungen. Das Protokoll des Schweigens.",
+      "next": "voss_archive_event_dialogue"
+    },
+    "voss_archive_event_dialogue": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Nehmen Sie sie, Elise. Wenn Graubach fällt, darf wenigstens die Lüge nicht mit ihm sterben.",
+      "next": "set_voss_archive_saved"
+    },
+    "set_voss_archive_saved": {
+      "type": "set_flag",
+      "flag": "voss_archive_ledgers_saved",
+      "value": 1,
       "next": "effect_escape"
     },
     "narration_hilde_sings": {
@@ -281,7 +299,7 @@
       "type": "dialogue",
       "speaker": "hilde",
       "expression": "kind",
-      "text": "Ich bin alt, Elise. Zu alt zum Rennen. Aber nicht zu alt zum Singen. Deine Großmutter würde mir nie vergeben, wenn ich dich hier sterben lasse.",
+      "text": "Ich bin alt, Elise. Zu alt zum Rennen. Aber nicht zu alt zum Singen. Und falls du dich fragst, ob ich dir deine Entscheidung verziehen habe: Ich singe noch immer für dich.",
       "next": "narration_hilde_chant"
     },
     "narration_hilde_chant": {
@@ -533,7 +551,19 @@
     },
     "narration_epilog_voss": {
       "type": "narration",
-      "text": "Wochen später, in Berlin. Voss hat sich in einem Kloster nahe München eingefunden. Er schreibt mir Briefe. Kurze, traurige Briefe. Er betet für die Seelen von Graubach.",
+      "text": "Wochen später, in Berlin. Voss hat sich in einem Kloster nahe München eingefunden. Er schreibt mir kurze, traurige Briefe. Neben Großmutters Journal liegen die geretteten Kirchenregister aus dem Fluchttunnel - genug Namen und Daten, um zu beweisen, dass Graubach kein Märchen war.",
+      "next": "check_voss_archive_epilog"
+    },
+    "check_voss_archive_epilog": {
+      "type": "flag_check",
+      "flag": "voss_archive_ledgers_saved",
+      "value": 1,
+      "true_next": "narration_voss_archive_epilog",
+      "false_next": "narration_epilog_2"
+    },
+    "narration_voss_archive_epilog": {
+      "type": "narration",
+      "text": "Ich anonymisiere die Namen der Kinder und veröffentliche den Rest als versiegeltes Dossier bei zwei Redaktionen und einer Kanzlei. Wenn wieder jemand von \"notwendigem Schweigen\" spricht, hat diese Ausrede ab jetzt Aktenzeichen.",
       "next": "narration_epilog_2"
     },
     "narration_epilog_hilde": {

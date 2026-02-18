@@ -9,6 +9,7 @@
 6. Commit with compact message (no push).
 
 ## This run's process improvement
-- Introduced a **micro-prep handshake rule for optional branch events**: if a new side event is added in Act 3, it must set exactly one reusable `*_prepared` flag and must be consumed by an early Ritual-Nacht payoff node.
-- Applied in this run with `ritual_breath_count_prepared` (Anna schoolyard tactic in Act 3 -> opening pressure-control payoff in Act 4).
-- This keeps branch additions compact, testable, and coherence-safe without bloating later scenes.
+- **Bottleneck identified:** Escape ending branches were emotionally similar at the collapse beat, especially around ally fallout resolution.
+- **Process improvement applied:** Added a "branch identity anchor" check in the loop: for each ending branch touched, enforce one unique physical evidence token and one explicit emotional callback to Day-6 fallout.
+- Applied here by adding a Voss-only archive-rescue event (`voss_archive_ledgers_saved`) plus direct reconciliation lines in Georg/Hilde escape beats.
+- This creates clearer branch differentiation while preserving setup->escalation->payoff continuity.
