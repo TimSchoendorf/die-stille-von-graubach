@@ -950,11 +950,42 @@
 		"narration_end_1": {
 			"type": "narration",
 			"text": "Ich stehe in der Kammer, und das Wesen weiß, dass ich hier bin. Zwischen uns liegt nur dünner Stein und Jahrhunderte des Wartens - und die drei Pfeiler, die mich bis hier getragen haben: Zeichen, Gesang, Anker.",
-			"next": "narration_end_1b"
+			"next": "check_stance_regelorientiert_descent"
 		},
-		"narration_end_1b": {
+		"check_stance_regelorientiert_descent": {
+			"type": "flag_check",
+			"flag": "stance_regelorientiert",
+			"value": 1,
+			"true_next": "narration_end_stance_regelorientiert",
+			"false_next": "check_stance_beziehungsorientiert_descent"
+		},
+		"check_stance_beziehungsorientiert_descent": {
+			"type": "flag_check",
+			"flag": "stance_beziehungsorientiert",
+			"value": 1,
+			"true_next": "narration_end_stance_beziehungsorientiert",
+			"false_next": "check_stance_pragmatisch_descent"
+		},
+		"check_stance_pragmatisch_descent": {
+			"type": "flag_check",
+			"flag": "stance_pragmatisch",
+			"value": 1,
+			"true_next": "narration_end_stance_pragmatisch",
+			"false_next": "narration_end_stance_regelorientiert"
+		},
+		"narration_end_stance_regelorientiert": {
 			"type": "narration",
-			"text": "Und morgen... morgen fällt der Stein. Wenn ich durchgehe, dann nur mit Regeln: freiwilliger Kontakt, sofortiges Stopp-Recht und ein Übergangs-Siegel, falls jemand ausfällt.",
+			"text": "Und morgen... morgen fällt der Stein. Ich gehe mit klaren Regeln hinein: freiwilliger Kontakt, sofortiges Stopp-Recht und ein Übergangs-Siegel, falls jemand ausfällt.",
+			"next": "effect_end_corruption"
+		},
+		"narration_end_stance_beziehungsorientiert": {
+			"type": "narration",
+			"text": "Und morgen... morgen fällt der Stein. Ich gehe nicht gegen jemanden hinab, sondern zu jemandem hin: Ich will Konrad erreichen, das Wesen hören und trotzdem niemanden opfern.",
+			"next": "effect_end_corruption"
+		},
+		"narration_end_stance_pragmatisch": {
+			"type": "narration",
+			"text": "Und morgen... morgen fällt der Stein. Ich brauche keinen perfekten Plan - nur einen, der trägt. Wenn etwas kippt, entscheide ich schnell und halte den Schaden so klein wie möglich.",
 			"next": "effect_end_corruption"
 		},
 		"effect_end_corruption": {

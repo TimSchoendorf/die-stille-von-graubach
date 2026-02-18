@@ -35,5 +35,8 @@
 	"relationship_konrad": 0,
 	"relationship_georg": 0,
 	"knowledge_entity": 0,
+	"stance_regelorientiert": 0,
+	"stance_beziehungsorientiert": 0,
+	"stance_pragmatisch": 0,
 	"courage": 5
 }

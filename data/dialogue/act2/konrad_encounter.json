@@ -197,7 +197,10 @@
           "text": "Ihm vertrauen und von der Tradition erzählen",
           "set_flags": {
             "trusted_konrad": 1,
-            "konrad_knows_plan": 1
+            "konrad_knows_plan": 1,
+            "stance_regelorientiert": 0,
+            "stance_beziehungsorientiert": 1,
+            "stance_pragmatisch": 0
           },
           "require_flags": {
             "knows_tradition": 1
@@ -207,14 +210,20 @@
         {
           "text": "Ausweichend antworten",
           "set_flags": {
-            "distrusted_konrad": 1
+            "distrusted_konrad": 1,
+            "stance_regelorientiert": 1,
+            "stance_beziehungsorientiert": 0,
+            "stance_pragmatisch": 0
           },
           "next": "elise_distrust_1"
         },
         {
           "text": "Ihn testen: Beiläufig die Spiralen erwähnen",
           "set_flags": {
-            "tested_konrad": 1
+            "tested_konrad": 1,
+            "stance_regelorientiert": 0,
+            "stance_beziehungsorientiert": 0,
+            "stance_pragmatisch": 1
           },
           "next": "elise_test_1"
         }

@@ -545,7 +545,10 @@
         {
           "text": "Das Siegel erneuern - Großmutters Weg. Es binden, nicht töten.",
           "set_flags": {
-            "approach_seal": 1
+            "approach_seal": 1,
+            "stance_regelorientiert": 1,
+            "stance_beziehungsorientiert": 0,
+            "stance_pragmatisch": 0
           },
           "require_flags": {
             "found_journal": 1
@@ -555,14 +558,20 @@
         {
           "text": "Es verstehen versuchen - kommunizieren statt kämpfen",
           "set_flags": {
-            "approach_understand": 1
+            "approach_understand": 1,
+            "stance_regelorientiert": 0,
+            "stance_beziehungsorientiert": 1,
+            "stance_pragmatisch": 0
           },
           "next": "approach_understand"
         },
         {
           "text": "Es zerstören - was auch immer es kostet",
           "set_flags": {
-            "approach_destroy": 1
+            "approach_destroy": 1,
+            "stance_regelorientiert": 0,
+            "stance_beziehungsorientiert": 0,
+            "stance_pragmatisch": 1
           },
           "add_flags": {
             "courage": 5
@@ -575,7 +584,10 @@
         {
           "text": "Einen Pakt schließen - Verhandeln statt Gewalt",
           "set_flags": {
-            "approach_pact": 1
+            "approach_pact": 1,
+            "stance_regelorientiert": 0,
+            "stance_beziehungsorientiert": 1,
+            "stance_pragmatisch": 0
           },
           "next": "approach_pact"
         }

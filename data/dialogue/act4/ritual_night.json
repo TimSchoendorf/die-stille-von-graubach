@@ -45,6 +45,42 @@
     "narration_2": {
       "type": "narration",
       "text": "Ich stehe auf dem Zeichen der Erde, dem Punkt, wo der Stein am dünnsten ist. Unter meinen Füßen spüre ich es: riesig, alt, erwachend.",
+      "next": "check_stance_regelorientiert_ritual"
+    },
+    "check_stance_regelorientiert_ritual": {
+      "type": "flag_check",
+      "flag": "stance_regelorientiert",
+      "value": 1,
+      "true_next": "stance_regelorientiert_ritual",
+      "false_next": "check_stance_beziehungsorientiert_ritual"
+    },
+    "check_stance_beziehungsorientiert_ritual": {
+      "type": "flag_check",
+      "flag": "stance_beziehungsorientiert",
+      "value": 1,
+      "true_next": "stance_beziehungsorientiert_ritual",
+      "false_next": "check_stance_pragmatisch_ritual"
+    },
+    "check_stance_pragmatisch_ritual": {
+      "type": "flag_check",
+      "flag": "stance_pragmatisch",
+      "value": 1,
+      "true_next": "stance_pragmatisch_ritual",
+      "false_next": "stance_regelorientiert_ritual"
+    },
+    "stance_regelorientiert_ritual": {
+      "type": "narration",
+      "text": "Ich gehe den Ablauf im Kopf noch einmal durch: Zeichen prüfen, Stimmen synchronisieren, Abbruchsignal bereit. Ordnung ist heute kein Trost - sie ist Überlebensbedingung.",
+      "next": "check_bridge_fallout_seen_memory"
+    },
+    "stance_beziehungsorientiert_ritual": {
+      "type": "narration",
+      "text": "Ich denke an die Gesichter über mir: Konrad, die Verbündeten, selbst Otto in seiner Angst. Wenn ich heute handle, dann so, dass danach noch Menschen zueinander finden können.",
+      "next": "check_bridge_fallout_seen_memory"
+    },
+    "stance_pragmatisch_ritual": {
+      "type": "narration",
+      "text": "Ich sortiere alles auf eine Frage herunter: Was funktioniert in den nächsten Minuten? Kein Pathos, kein Dogma - nur Entscheidungen, die uns lebend bis zum Morgengrauen bringen.",
       "next": "check_bridge_fallout_seen_memory"
     },
     "check_bridge_fallout_seen_memory": {
