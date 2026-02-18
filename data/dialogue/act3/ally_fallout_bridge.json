@@ -26,7 +26,6 @@
       "true_next": "bridge_solo_1",
       "false_next": "check_bridge_georg"
     },
-
     "check_bridge_georg": {
       "type": "flag_check",
       "flag": "allied_georg",
@@ -41,7 +40,6 @@
       "true_next": "bridge_hilde_1",
       "false_next": "bridge_voss_1"
     },
-
     "bridge_georg_1": {
       "type": "dialogue",
       "speaker": "elise",
@@ -66,6 +64,19 @@
     "bridge_georg_elise": {
       "type": "narration",
       "text": "Hilde wirkt verletzt, Voss klingt nüchtern und müde. Beide helfen trotzdem. Vertrauen und Kränkung können offenbar gleichzeitig existieren.",
+      "next": "bridge_georg_signal_plan"
+    },
+    "bridge_georg_signal_plan": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Noch etwas: Wenn ihr bis zur zweiten Nachtglocke nicht zurück seid, beginne ich oben den Gegenvers. Kurz. Laut. Das verschafft dir unten Atem.",
+      "next": "set_bridge_georg_signal_plan"
+    },
+    "set_bridge_georg_signal_plan": {
+      "type": "set_flag",
+      "flag": "contingency_counter_chant",
+      "value": 1,
       "next": "set_bridge_georg_flags"
     },
     "set_bridge_georg_flags": {
@@ -92,7 +103,6 @@
       "value": 1,
       "next": "bridge_end"
     },
-
     "bridge_hilde_1": {
       "type": "dialogue",
       "speaker": "elise",
@@ -117,6 +127,19 @@
     "bridge_hilde_elise": {
       "type": "narration",
       "text": "Georgs Blick bleibt warm, aber verletzt. Voss versteckt seine Enttäuschung hinter Ratschlägen. Niemand ist unbeteiligt.",
+      "next": "bridge_hilde_contingency"
+    },
+    "bridge_hilde_contingency": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Nimm das hier. Ein kalter Eisenhaken aus der Esse. Wenn eine Tür im Schacht klemmt, hebel nicht mit den Fingern.",
+      "next": "set_bridge_hilde_contingency"
+    },
+    "set_bridge_hilde_contingency": {
+      "type": "set_flag",
+      "flag": "contingency_iron_hook",
+      "value": 1,
       "next": "set_bridge_hilde_flags"
     },
     "set_bridge_hilde_flags": {
@@ -143,7 +166,6 @@
       "value": 1,
       "next": "bridge_end"
     },
-
     "bridge_voss_1": {
       "type": "dialogue",
       "speaker": "elise",
@@ -168,6 +190,19 @@
     "bridge_voss_elise": {
       "type": "narration",
       "text": "Georgs Misstrauen ist offen, Hilde spricht leiser - aber nicht weniger deutlich. Ihre Kränkung wird zur Sorge, nicht zum Rückzug.",
+      "next": "bridge_voss_contingency"
+    },
+    "bridge_voss_contingency": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Ich zeichne dir drei Kreidestriche an den letzten Pfeiler vor der Kammer. Nur dort trägt der Boden noch. Verlier die Linie nicht.",
+      "next": "set_bridge_voss_contingency"
+    },
+    "set_bridge_voss_contingency": {
+      "type": "set_flag",
+      "flag": "contingency_chalk_route",
+      "value": 1,
       "next": "set_bridge_voss_flags"
     },
     "set_bridge_voss_flags": {
@@ -194,7 +229,6 @@
       "value": 1,
       "next": "bridge_end"
     },
-
     "bridge_solo_1": {
       "type": "narration",
       "text": "Als ich sage, dass ich allein gehe, ist es erst still. Dann brechen die Reaktionen nacheinander über mich.",
@@ -224,6 +258,17 @@
     "bridge_solo_elise": {
       "type": "narration",
       "text": "Sie sind wütend. Verletzt. Und trotzdem helfen sie mir mit letzten Hinweisen, als wären wir noch ein Team. Vielleicht sind wir das - nur auf Distanz.",
+      "next": "bridge_solo_contingency"
+    },
+    "bridge_solo_contingency": {
+      "type": "narration",
+      "text": "Bevor wir auseinandergehen, handeln wir ein Notfallzeichen aus: drei schnelle Glockenschläge, falls ich unten zu lange verstumme. Zum ersten Mal heute klingt Schweigen wie ein Plan und nicht wie Aufgabe.",
+      "next": "set_bridge_solo_contingency"
+    },
+    "set_bridge_solo_contingency": {
+      "type": "set_flag",
+      "flag": "contingency_bell_protocol",
+      "value": 1,
       "next": "set_bridge_solo_flags"
     },
     "set_bridge_solo_flags": {
@@ -256,7 +301,6 @@
       "value": 1,
       "next": "bridge_end"
     },
-
     "bridge_end": {
       "type": "scene_end",
       "next_file": "res://data/dialogue/act3/descent.json"

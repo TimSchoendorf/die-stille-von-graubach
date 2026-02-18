@@ -185,6 +185,13 @@ def run_impact_lint():
     result = subprocess.run([sys.executable, script], capture_output=True, text=True)
     return result.returncode, (result.stdout or "").strip(), (result.stderr or "").strip()
 
+
+def run_cross_act_coherence_check():
+    """Run cross-act setup->escalation->payoff coherence checks."""
+    script = os.path.join(os.path.dirname(__file__), "cross_act_coherence_check.py")
+    result = subprocess.run([sys.executable, script], capture_output=True, text=True)
+    return result.returncode, (result.stdout or "").strip(), (result.stderr or "").strip()
+
 def main():
     build_expression_map()
     files = find_all_json_files()
@@ -272,12 +279,21 @@ def main():
     if lint_stderr:
         print(lint_stderr)
 
+    # Cross-act coherence check
+    print()
+    coherence_code, coherence_stdout, coherence_stderr = run_cross_act_coherence_check()
+    if coherence_stdout:
+        print("=== CROSS-ACT COHERENCE ===")
+        print(coherence_stdout)
+    if coherence_stderr:
+        print(coherence_stderr)
+
     # Node counts
     print()
     total = sum(len(d.get("nodes", {})) for d in all_data.values())
     print(f"=== TOTAL NODES: {total} ===")
 
-    return 1 if (all_errors or lint_code != 0) else 0
+    return 1 if (all_errors or lint_code != 0 or coherence_code != 0) else 0
 
 if __name__ == "__main__":
     sys.exit(main())
