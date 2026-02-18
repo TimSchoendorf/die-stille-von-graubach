@@ -578,7 +578,7 @@
     "packed_books_escape": {
       "type": "narration",
       "text": "Meine Bücher liegen irgendwo unter den Trümmern. Die Folklore, die Mythen - alles nutzlos gegen etwas, das älter ist als Geschichten. Aber ich werde neue schreiben. Warnungen.",
-      "next": "escape_konrad_epilog"
+      "next": "check_konrad_help_escape"
     },
     "check_packed_cross_escape": {
       "type": "flag_check",
@@ -590,24 +590,72 @@
     "packed_cross_escape": {
       "type": "narration",
       "text": "Das Kruzifix meiner Mutter baumelt noch an meinem Hals. Hat es geholfen? Nein. Aber es hat mich an etwas erinnert: Es gibt eine Welt jenseits von Graubach. Und ich bin auf dem Weg zurück dorthin.",
-      "next": "escape_konrad_epilog"
+      "next": "check_konrad_help_escape"
     },
     "check_packed_camera_escape": {
       "type": "flag_check",
       "flag": "packed_item",
       "value": 3,
       "true_next": "packed_camera_escape",
-      "false_next": "escape_konrad_epilog"
+      "false_next": "check_konrad_help_escape"
     },
     "packed_camera_escape": {
       "type": "narration",
       "text": "Die Kamera hat ein letztes Bild: Graubach, versinkend, aufgelöst. Der einzige Beweis neben Großmutters Journal. Manchmal betrachte ich es in schlaflosen Nächten und frage mich, ob es real war.",
-      "next": "escape_konrad_epilog"
+      "next": "check_konrad_help_escape"
+    },
+    "check_konrad_help_escape": {
+      "type": "flag_check",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "true_next": "escape_konrad_epilog_helped",
+      "false_next": "check_tested_konrad_escape"
+    },
+    "check_tested_konrad_escape": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "escape_konrad_epilog_tested",
+      "false_next": "escape_konrad_epilog"
+    },
+    "escape_konrad_epilog_helped": {
+      "type": "narration",
+      "text": "Konrad. Ich höre noch, wie er in der Schule sagte: 'Hilf mir, solange ich noch ich bin.' Ich hatte ihm versprochen, ihn nicht fallen zu lassen. In manchen Nächten frage ich mich, ob ich dieses Versprechen in der Kammer gehalten habe - oder erst gebrochen, als ich lief.",
+      "next": "check_anna_warning_escape"
+    },
+    "escape_konrad_epilog_tested": {
+      "type": "narration",
+      "text": "Konrad. Ich habe ihn geprüft, bevor ich ihm glaubte - aus Vernunft, aus Angst. In manchen Nächten frage ich mich, ob genau diese Vorsicht ihn länger am Leben hielt, oder ob sie nur erklärt, warum sein Gesicht mich bis heute im Traum ansieht.",
+      "next": "check_anna_warning_escape"
     },
     "escape_konrad_epilog": {
       "type": "narration",
       "text": "Konrad. In manchen Nächten denke ich an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
-      "next": "escape_anna_epilog"
+      "next": "check_anna_warning_escape"
+    },
+    "check_anna_warning_escape": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "escape_anna_epilog_warned",
+      "false_next": "check_anna_spirale_escape"
+    },
+    "escape_anna_epilog_warned": {
+      "type": "narration",
+      "text": "Anna hatte im Wald geflüstert: 'Beeil dich.' Erst nach der Flucht begreife ich, wie präzise diese Warnung war. In meinen dunkelsten Nächten frage ich mich, ob ich schnell genug war - oder ob mein Zögern sie trotzdem verschlungen hat.",
+      "next": "escape_otto_epilog"
+    },
+    "check_anna_spirale_escape": {
+      "type": "flag_check",
+      "flag": "anna_spirale",
+      "value": 1,
+      "true_next": "escape_anna_epilog_spirale",
+      "false_next": "escape_anna_epilog"
+    },
+    "escape_anna_epilog_spirale": {
+      "type": "narration",
+      "text": "Ich sehe noch Annas Kreidespiralen vor mir, präziser als jede Dorflegende. Ein Kind, das Muster erkannte, die wir Erwachsenen wegredeten. In meinen dunkelsten Nächten frage ich mich, ob sie diesem Wissen entkam - oder daran zerbrach.",
+      "next": "escape_otto_epilog"
     },
     "escape_anna_epilog": {
       "type": "narration",
