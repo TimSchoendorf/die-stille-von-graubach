@@ -562,7 +562,7 @@
     "konrad_final_1": {
       "type": "narration",
       "text": "Konrad sitzt allein im Klassenzimmer. Er hat Spiralen an die Tafel gezeichnet - Dutzende, ineinander verschlungen. Als ich eintrete, wischt er sie hastig ab.",
-      "next": "elise_konrad_enter"
+      "next": "check_konrad_prior_stance"
     },
     "elise_konrad_enter": {
       "type": "dialogue",
@@ -768,6 +768,48 @@
       "type": "narration",
       "text": "Annas Worte lassen mich nicht los: Das Wesen hat Angst, verlassen zu werden. Und Konrad steckt genau dazwischen - Mensch und Echo zugleich. Wenn ich ihn falsch einschätze, verliere ich ihn. Wenn ich ihn ignoriere, vielleicht auch.",
       "next": "elise_konrad_consider"
+    },
+    "check_konrad_prior_stance": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "elise_konrad_enter_trusted",
+      "false_next": "check_konrad_prior_distrust"
+    },
+    "check_konrad_prior_distrust": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "elise_konrad_enter_distrusted",
+      "false_next": "check_konrad_prior_tested"
+    },
+    "check_konrad_prior_tested": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "elise_konrad_enter_tested",
+      "false_next": "elise_konrad_enter"
+    },
+    "elise_konrad_enter_trusted": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad... ich habe dir vertraut, als alles in mir Nein geschrien hat. Sag mir, dass noch genug von dir da ist.",
+      "next": "konrad_final_2"
+    },
+    "elise_konrad_enter_distrusted": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad. Nach dem Brunnen und diesem fremden Ton in deiner Stimme habe ich dich auf Abstand gehalten. Aber ich bin trotzdem hier. Wie geht es dir wirklich?",
+      "next": "konrad_final_2"
+    },
+    "elise_konrad_enter_tested": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Konrad. Ich habe dich damals getestet statt dir zu glauben. Heute will ich keine Rätsel mehr. Wie geht es dir?",
+      "next": "konrad_final_2"
     }
   }
 }

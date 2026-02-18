@@ -839,7 +839,7 @@
     },
     "konrad_distrust_memory": {
       "type": "narration",
-      "text": "Ich habe Konrad auf Abstand gehalten. Nicht grundlos: Am Brunnen kippte seine Stimme plötzlich in dieses kalte 'ICH lüge nie'. Jetzt spüre ich, wie das Wesen genau diese Distanz als Hebel benutzt und ihn tiefer in sich hineinzieht.",
+      "text": "Ich habe Konrad auf Abstand gehalten. Nicht grundlos: Am Brunnen kippte seine Stimme in dieses kalte 'ICH lüge nie'. Und trotzdem habe ich ihn gestern im Schulhaus aufgesucht. Jetzt sehe ich den Preis beider Entscheidungen - Distanz hat uns gewarnt, Nähe hält ihn gerade noch bei sich.",
       "next": "check_approach"
     },
     "check_tested_konrad_memory": {
@@ -851,7 +851,7 @@
     },
     "konrad_tested_memory": {
       "type": "narration",
-      "text": "Ich habe ihn geprüft statt ihm zu vertrauen: ein beiläufiges Wort über Spiralen, seine Hand sofort am Handgelenk, ein Blick wie ertappt. Jede Frage ein Messer, jedes Schweigen eine Wunde. Vielleicht hat genau diese Vorsicht ihn lange genug wach gehalten, um heute noch kämpfen zu können.",
+      "text": "Ich habe ihn geprüft statt ihm zu vertrauen: ein beiläufiges Wort über Spiralen, seine Hand sofort am Handgelenk, ein Blick wie ertappt. Gestern im Klassenzimmer bat er mich trotzdem um Hilfe. Jede Frage war ein Messer - aber vielleicht war genau diese Vorsicht der Grund, warum er heute noch gegen das Wesen ankämpft.",
       "next": "check_approach"
     },
     "konrad_appears": {
@@ -910,7 +910,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Du hast mich damals mit den Spiralen getestet - und gesehen, wie ich sofort ans Handgelenk griff. Gut so. Hier unten sollte man niemandem blind vertrauen, nicht mal mir.",
+      "text": "Du hast mich damals mit den Spiralen getestet - und gesehen, wie ich sofort ans Handgelenk griff. Gut so. Hier unten sollte man niemandem blind vertrauen, nicht mal mir. Aber du bist trotzdem wiedergekommen.",
       "next": "show_konrad"
     },
     "show_konrad": {

@@ -545,7 +545,7 @@
     },
     "truth_konrad_epilog_tested": {
       "type": "narration",
-      "text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Gut so. Das hat mich lange genug wach gehalten.' Dann blickt er in die Kammer hinab. 'Jetzt schläft es friedlich. Zum ersten Mal nicht durch mich.'",
+      "text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Damals mit den Spiralen - das hat mich wachgerüttelt.' Er atmet aus, als würde er zum ersten Mal seit Wochen Luft bekommen. 'Und dass du später trotzdem zurückkamst, hat mich gehalten.'",
       "next": "truth_otto_epilog"
     },
     "truth_konrad_epilog_trusted": {
@@ -598,12 +598,12 @@
     },
     "truth_sought_konrad_memory": {
       "type": "narration",
-      "text": "Am Kircheneingang denke ich an den Moment zurück, in dem ich Konrad gesucht habe, obwohl jede Vernunft dagegen sprach. Dieses Risiko hat mich gelehrt, dass Rettung ohne Nähe nur ein anderes Wort für Kontrolle ist.",
+      "text": "Am Kircheneingang denke ich an den Moment in der Schule zurück, in dem ich Konrad trotz aller Warnzeichen aufgesucht habe. Dieses Risiko hat mich gelehrt, dass Rettung ohne Nähe nur ein anderes Wort für Kontrolle ist.",
       "next": "check_konrad_help_truth"
     },
     "truth_avoided_konrad_memory": {
       "type": "narration",
-      "text": "Am Kircheneingang sticht die Erinnerung: Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, wo die Nacht vorbei ist, weiß ich: Vorsicht hat uns durchgebracht, aber sie hinterlässt Rechnungen, die man nur mit Ehrlichkeit bezahlen kann.",
+      "text": "Am Kircheneingang sticht die Erinnerung: Ich habe Konrad gemieden, um den Plan zu schützen. Die Vorsicht war nicht sinnlos - aber sie hat die Nacht härter gemacht, als sie sein musste.",
       "next": "check_konrad_help_truth"
     },
     "check_anna_warning_truth": {
