@@ -993,7 +993,7 @@
       "type": "choice",
       "choices": [
         {
-          "text": "Konrads Platz einnehmen - ihn heute befreien und selbst den Anker tragen (du bleibst unten)",
+          "text": "Konrads Platz einnehmen - ihn heute befreien und selbst freiwillig den Anker tragen (mit Stopp-Regel und Rückfall-Siegel)",
           "set_flags": {
             "chose_sacrifice": 1
           },
@@ -1009,7 +1009,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "determined",
-      "text": "Konrad. Ich nehme deinen Platz ein. Nicht weil das Dorf es verlangt, sondern weil ich es entscheide. Heute endet deine Strafe. Wenn jemand den Anker trägt, dann freiwillig - und mit offenen Augen.",
+      "text": "Konrad. Ich nehme deinen Platz ein. Nicht weil das Dorf es verlangt, sondern weil ich es entscheide. Heute endet deine Strafe. Wenn jemand den Anker trägt, dann freiwillig, widerrufbar und mit offenen Augen.",
       "next": "konrad_sacrifice_react"
     },
     "konrad_sacrifice_react": {

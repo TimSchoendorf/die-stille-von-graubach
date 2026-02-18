@@ -275,7 +275,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "happy",
-      "text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann - kein ungefragter Zugriff, kein Zwang, jederzeit Stopp - ohne dich weiter dafür zahlen zu lassen.",
+      "text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann - kein ungefragter Zugriff, kein Zwang, jederzeit Stopp, plus Rückfall-Siegel falls ich ausfalle - ohne dich weiter dafür zahlen zu lassen.",
       "next": "konrad_5"
     },
     "konrad_5": {
@@ -430,7 +430,7 @@
     },
     "narration_12": {
       "type": "narration",
-      "text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp.",
+      "text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp. Und wenn ich diese Regeln nicht mehr halten kann, greift sofort ein Rückfall-Siegel.",
       "next": "anna_sacrifice_appears"
     },
     "anna_sacrifice_appears": {
