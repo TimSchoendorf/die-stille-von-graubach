@@ -80,6 +80,11 @@
 - **Fix applied:** Added an "escape fallout closure checkpoint" to the loop: if `ally_fallout_payoff_pending=1`, Escape must include hurt-flag reconciliation beats and clear the pending fallout flag before aftermath epilog.
 - **Applied now:** extended `act4/ending_escape.json` with a new post-collapse reconciliation micro-sequence (`georg_hurt_day6` / `hilde_hurt_day6` / `voss_hurt_day6`) and explicit cleanup via `ally_fallout_payoff_pending=0`.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** The Awakening failure route had strong cosmic spectacle but weak tactical memory payoff from Night-6 rehearsal/contingency setup, so setup→escalation→payoff continuity lagged behind other endings.
+- **Fix applied:** Added an "awakening tactical echo checkpoint" for ship-block loops: failure endings must still pay at least one rehearsal decision and one contingency memory beat before collapse fully takes over.
+- **Applied now:** expanded `act4/ending_awakening.json` with a new fallback-signal micro-sequence (rehearsed vs skipped cadence) plus contingency callbacks (`contingency_counter_chant`, `contingency_iron_hook`, `contingency_chalk_route`, `contingency_bell_protocol`) before final failure escalation.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

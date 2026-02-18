@@ -211,7 +211,7 @@
       "speaker": "elise",
       "expression": "determined",
       "text": "Du hast recht. Ich versuche es noch einmal. Ich MUSS es versuchen.",
-      "next": "elise_awake_fight"
+      "next": "check_awakening_fallback_signal"
     },
     "check_ally_awake_hilde": {
       "type": "flag_check",
@@ -288,6 +288,78 @@
     "narration_alone_awake": {
       "type": "narration",
       "text": "Ich bin allein. Niemand ist hier, um mir zu helfen. Aber ich gebe nicht auf. Noch nicht.",
+      "next": "check_awakening_fallback_signal"
+    },
+    "check_awakening_fallback_signal": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "awakening_rehearsed_signal_payoff",
+      "false_next": "check_awakening_skipped_signal"
+    },
+    "awakening_rehearsed_signal_payoff": {
+      "type": "narration",
+      "text": "Instinktiv zähle ich in den geübten Takt: drei kurz, ein Atemzug, dann der Gegenton. Für einen Herzschlag greift das Muster - der Riss flackert, als hätte er die Abmachung erkannt.",
+      "next": "check_awakening_contingency_chain"
+    },
+    "check_awakening_skipped_signal": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "awakening_skipped_signal_cost",
+      "false_next": "check_awakening_contingency_chain"
+    },
+    "awakening_skipped_signal_cost": {
+      "type": "narration",
+      "text": "Ich versuche das Notsignal aus dem Kopf zu rekonstruieren - zu spät, zu ungenau. Der erste Ton kippt, und der Boden antwortet schneller als ich.",
+      "next": "check_awakening_contingency_chain"
+    },
+    "check_awakening_contingency_chain": {
+      "type": "flag_check",
+      "flag": "contingency_counter_chant",
+      "value": 1,
+      "true_next": "awakening_counter_chant_memory",
+      "false_next": "check_awakening_iron_hook_memory"
+    },
+    "awakening_counter_chant_memory": {
+      "type": "narration",
+      "text": "Ich höre Hildes halbe Zeile in mir nachklingen - kurz, rau, präzise. Sie gibt mir keinen Sieg, nur zwei gestohlene Sekunden.",
+      "next": "check_awakening_iron_hook_memory"
+    },
+    "check_awakening_iron_hook_memory": {
+      "type": "flag_check",
+      "flag": "contingency_iron_hook",
+      "value": 1,
+      "true_next": "awakening_iron_hook_memory",
+      "false_next": "check_awakening_chalk_route_memory"
+    },
+    "awakening_iron_hook_memory": {
+      "type": "narration",
+      "text": "Der Eisenhaken an meinem Gürtel schlägt gegen den Stein. Georgs Lektion rettet mir die Hand, als eine Platte wegbricht - mehr kann er heute nicht retten.",
+      "next": "check_awakening_chalk_route_memory"
+    },
+    "check_awakening_chalk_route_memory": {
+      "type": "flag_check",
+      "flag": "contingency_chalk_route",
+      "value": 1,
+      "true_next": "awakening_chalk_route_memory",
+      "false_next": "check_awakening_bell_protocol_memory"
+    },
+    "awakening_chalk_route_memory": {
+      "type": "narration",
+      "text": "Drei Kreidestriche blitzen unter Staub hervor. Ich setze den nächsten Schritt genau dort - und entgehe nur knapp einem zweiten Einbruch.",
+      "next": "check_awakening_bell_protocol_memory"
+    },
+    "check_awakening_bell_protocol_memory": {
+      "type": "flag_check",
+      "flag": "contingency_bell_protocol",
+      "value": 1,
+      "true_next": "awakening_bell_protocol_memory",
+      "false_next": "elise_awake_fight"
+    },
+    "awakening_bell_protocol_memory": {
+      "type": "narration",
+      "text": "Über dem Dröhnen bilde ich mir drei ferne Schläge ein. Vielleicht nur Erinnerung. Vielleicht hält oben noch jemand die Abmachung, obwohl schon alles fällt.",
       "next": "elise_awake_fight"
     },
     "elise_awake_fight": {
