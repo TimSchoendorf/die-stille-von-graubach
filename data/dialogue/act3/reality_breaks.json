@@ -461,6 +461,18 @@
       "speaker": "anna",
       "expression": "afraid",
       "text": "Bitte, Elise. Beeile dich. Ich kann seine Stimme immer lauter hören. Bald werde ich nichts anderes mehr hören.",
+      "next": "check_voss_anchor_drill"
+    },
+    "check_voss_anchor_drill": {
+      "type": "flag_check",
+      "flag": "voss_midnight_meeting",
+      "value": 1,
+      "true_next": "elise_voss_anchor_drill",
+      "false_next": "elise_anna_promise"
+    },
+    "elise_voss_anchor_drill": {
+      "type": "narration",
+      "text": "Voss' Warnung aus der Kirche hämmert noch in meinem Kopf: Hand auf Stein, den Namen eines geliebten Menschen nennen. Ich habe das seit Mitternacht wie ein Gebet geübt - nicht um brav zu gehorchen, sondern um in dieser Nacht nicht an den falschen Stimmen zu zerbrechen.",
       "next": "elise_anna_promise"
     },
     "elise_anna_promise": {

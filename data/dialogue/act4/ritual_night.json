@@ -777,7 +777,7 @@
       "speaker": "elise",
       "expression": "determined",
       "text": "Ich habe Angst. Aber Angst ist ein Kompass, kein Käfig. Sie zeigt mir, dass heute etwas zählt - und dass ich trotzdem weitergehe.",
-      "next": "check_konrad_sacrifice"
+      "next": "check_voss_anchor_memory_global"
     },
     "check_courage_low": {
       "type": "flag_check",
@@ -802,6 +802,18 @@
       "speaker": "elise",
       "expression": "afraid",
       "text": "Ich habe solche Angst, dass mir die Knie nachgeben. Aber Weglaufen hieße, das nächste Opfer schon heute zu wählen. Also bleibe ich.",
+      "next": "check_voss_anchor_memory_global"
+    },
+    "check_voss_anchor_memory_global": {
+      "type": "flag_check",
+      "flag": "voss_midnight_meeting",
+      "value": 1,
+      "true_next": "voss_anchor_memory_global",
+      "false_next": "check_konrad_sacrifice"
+    },
+    "voss_anchor_memory_global": {
+      "type": "narration",
+      "text": "Mitten im Druck fällt mir Voss' Satz wieder ein: Hand auf den Stein. Einen Namen nennen, der mich an die Lebenden bindet. Ich drücke die Finger in die Spirale und flüstere erst 'Margarethe', dann 'Anna'. Die Stimmen werden nicht leiser - aber sie tragen mein Gesicht nicht mehr fort.",
       "next": "check_konrad_sacrifice"
     },
     "check_konrad_sacrifice": {
@@ -963,6 +975,18 @@
     "narration_konrad_choice": {
       "type": "narration",
       "text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Er kämpft gegen sich selbst, gegen das Wesen, gegen dreißig Jahre Gefangenschaft - und ich sehe, wie jede Sekunde, die ich zögere, ihn tiefer unter Wasser drückt.",
+      "next": "check_anna_warning_konrad_choice"
+    },
+    "check_anna_warning_konrad_choice": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "anna_warning_konrad_choice",
+      "false_next": "choice_sacrifice_override"
+    },
+    "anna_warning_konrad_choice": {
+      "type": "narration",
+      "text": "Ich höre Annas Stimme aus dem Wald: 'Beeil dich.' Nicht als Drohung - als letzte Bitte von jemandem, der jeden Tag ein Stück weiter verschwindet. Diese Entscheidung betrifft nicht nur Konrad und mich. Sie entscheidet, ob Anna morgen noch Anna ist.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {
