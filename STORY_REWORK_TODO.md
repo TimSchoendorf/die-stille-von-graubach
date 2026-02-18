@@ -25,6 +25,11 @@
 - **Fix applied:** Added a "bridge agency checkpoint" rule for ship-block loops: each transition scene (especially end-of-act bridges) should include at least one actionable choice that changes downstream emotional/pacing payoff.
 - **Applied now:** inserted a new rehearsal micro-scene + choice in `act3/ally_fallout_bridge.json` and paid it off in `act3/descent.json` via new flags (`rehearsed_signal_night6`, `skipped_rehearsal_night6`).
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** The Seal ending resolved the cosmic plot but underpaid ally-fallout emotion flags (`*_hurt_day6`) set in Act 3, so setup→escalation→payoff coherence weakened in this branch.
+- **Fix applied:** Added an "ending fallout closure checkpoint" rule: every ending that can follow `ally_fallout_payoff_pending=1` must include explicit reconciliation beats and clear the pending flag.
+- **Applied now:** extended `act4/ending_seal.json` with a new post-ritual reconciliation event on the church steps, conditional lines for Georg/Hilde/Voss hurt states, and cleanup via `ally_fallout_payoff_pending=0`.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

@@ -145,7 +145,7 @@
     "narration_10": {
       "type": "narration",
       "text": "Ich steige die Treppe hinauf, durch die Kirche, ins Morgenlicht. Es ist ein neuer Tag. Der Himmel ist blau. Richtig blau.",
-      "next": "check_ally_seal_georg"
+      "next": "check_ally_fallout_pending_seal"
     },
     "check_ally_seal_georg": {
       "type": "flag_check",
@@ -457,6 +457,92 @@
       "type": "narration",
       "text": "Ich höre Annas Stimme aus dem Wald wieder: 'Es hat Angst, verlassen zu werden.' Genau dort lag der Schlüssel. Nicht im Blut, sondern darin, dass jemand blieb, zuhörte und klare Grenzen setzte.",
       "next": "seal_otto_epilog"
+    },
+    "check_ally_fallout_pending_seal": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "seal_fallout_event_intro",
+      "false_next": "check_ally_seal_georg"
+    },
+    "seal_fallout_event_intro": {
+      "type": "narration",
+      "text": "Vor der Kirchentreppe bleiben wir einen Moment stehen. Nicht feierlich - nur ehrlich. Die Nacht hat gewonnen, aber die Risse zwischen uns sind noch da.",
+      "next": "check_seal_georg_hurt"
+    },
+    "check_seal_georg_hurt": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "seal_georg_hurt_payoff",
+      "false_next": "check_seal_hilde_hurt"
+    },
+    "seal_georg_hurt_payoff": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Wegen gestern ... ich war wütend, weil ich Angst hatte. Nicht auf dich. Vor dem, was ich wieder verlieren könnte.",
+      "next": "seal_elise_georg_repair"
+    },
+    "seal_elise_georg_repair": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Ich habe es dir am Blick gestern schon angesehen. Danke, dass du trotzdem geblieben bist, auch als ich es dir schwer gemacht habe.",
+      "next": "check_seal_hilde_hurt"
+    },
+    "check_seal_hilde_hurt": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "seal_hilde_hurt_payoff",
+      "false_next": "check_seal_voss_hurt"
+    },
+    "seal_hilde_hurt_payoff": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Deine Wahl gestern hat gestochen. Aber heute hast du gezeigt, dass du Verantwortung nicht mit Gehorsam verwechselst. Das war wichtig.",
+      "next": "seal_elise_hilde_repair"
+    },
+    "seal_elise_hilde_repair": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Dann lass uns ab jetzt offen streiten, bevor wir schweigen. Schweigen war lange genug unser Fluch.",
+      "next": "check_seal_voss_hurt"
+    },
+    "check_seal_voss_hurt": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "seal_voss_hurt_payoff",
+      "false_next": "seal_fallout_event_close"
+    },
+    "seal_voss_hurt_payoff": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Ich habe Ihre Entscheidung gestern als Urteil gehört. Heute klingt sie wie Beginn. Vielleicht darf ich das noch lernen.",
+      "next": "seal_elise_voss_repair"
+    },
+    "seal_elise_voss_repair": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Wir lernen es zusammen. Aber ohne Geheimnisse. Ohne Opfer.",
+      "next": "seal_fallout_event_close"
+    },
+    "seal_fallout_event_close": {
+      "type": "narration",
+      "text": "Niemand sagt \"alles gut\". Muss auch nicht. Für Graubach reicht, dass wir dieselbe Richtung haben - und diesmal laut genug, um einander zu hören.",
+      "next": "clear_ally_fallout_pending_seal"
+    },
+    "clear_ally_fallout_pending_seal": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
+      "next": "check_ally_seal_georg"
     }
   }
 }
