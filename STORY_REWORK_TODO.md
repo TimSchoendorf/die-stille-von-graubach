@@ -90,6 +90,11 @@
 - **Fix applied:** Added an "awakening tactical echo checkpoint" for ship-block loops: failure endings must still pay at least one rehearsal decision and one contingency memory beat before collapse fully takes over.
 - **Applied now:** expanded `act4/ending_awakening.json` with a new fallback-signal micro-sequence (rehearsed vs skipped cadence) plus contingency callbacks (`contingency_counter_chant`, `contingency_iron_hook`, `contingency_chalk_route`, `contingency_bell_protocol`) before final failure escalation.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Konrad trust route still delivered key regulation tactics mostly as one-off exposition; without an early mnemonic hook, the setup from Act 2 could fade before Act-3/Act-4 possession spikes.
+- **Fix applied:** Added a "mnemonic carryover checkpoint" to ship-block loops: when a branch introduces psychological self-regulation, add one compact player-owned cue in setup and require explicit callbacks in escalation and ritual payoff beats.
+- **Applied now:** inserted a new Act-2 micro-choice in `act2/konrad_encounter.json` (Notfall-Stoppwort "Mittwoch", flag `prepared_konrad_interrupt_word`) and paid it off in `act3/allies_choice.json` + `act4/ritual_night.json` with distinct recall/callout narration.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

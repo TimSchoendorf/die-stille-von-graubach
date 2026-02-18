@@ -1092,6 +1092,18 @@
       "set_flags": {
         "ritual_spiral_tell_prepared": 1
       },
+      "next": "check_konrad_interrupt_word_ritual"
+    },
+    "check_konrad_interrupt_word_ritual": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "konrad_interrupt_word_ritual_payoff",
+      "false_next": "check_konrad_grounding_plan_payoff"
+    },
+    "konrad_interrupt_word_ritual_payoff": {
+      "type": "narration",
+      "text": "Wir haben ein einziges Notwort vereinbart: Mittwoch. Ich lege es mir wie einen Kiesel auf die Zunge - klein, klar, vertraut. Falls er kippt, werfe ich genau dieses Wort in die Stille.",
       "next": "check_konrad_grounding_plan_payoff"
     },
     "check_konrad_grounding_plan_payoff": {

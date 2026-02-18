@@ -350,6 +350,41 @@
     "elise_coexistence_react": {
       "type": "narration",
       "text": "Nicht kämpfen, sondern koexistieren? Der Gedanke ist verstörender als alles andere. Und trotzdem klingt etwas daran wahr.",
+      "next": "konrad_interrupt_word_choice"
+    },
+    "konrad_interrupt_word_choice": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Ein Notfall-Stoppwort festlegen ('Mittwoch'), um ihn im Hier und Jetzt zu halten",
+          "set_flags": {
+            "prepared_konrad_interrupt_word": 1
+          },
+          "next": "konrad_interrupt_word_set"
+        },
+        {
+          "text": "Kein weiteres Experiment - nur weitersprechen",
+          "next": "konrad_interrupt_word_skip"
+        }
+      ]
+    },
+    "konrad_interrupt_word_set": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Wenn du wieder wegrutschst, sage ich nur ein Wort: 'Mittwoch'. Der Tag, an dem Großmutter dir vorgelesen hat. Nicht Magie - Erinnerung.",
+      "next": "konrad_interrupt_word_response"
+    },
+    "konrad_interrupt_word_response": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Mittwoch. Gut. Wenn ich nicht mehr weiß, wer spricht, halte ich mich daran fest.",
+      "next": "elise_trust_vessel"
+    },
+    "konrad_interrupt_word_skip": {
+      "type": "narration",
+      "text": "Ich lasse den Impuls los, noch eine Technik auszuprobieren. Gerade jetzt braucht er keine neue Regel, sondern eine klare, ruhige Stimme.",
       "next": "elise_trust_vessel"
     },
     "elise_trust_vessel": {
