@@ -124,12 +124,12 @@
       "flag": "pact_terms_written",
       "value": 1,
       "true_next": "pact_terms_written_payoff",
-      "false_next": "check_bridge_fallout_seen_memory"
+      "false_next": "check_ritual_breath_count_prepared"
     },
     "pact_terms_written_payoff": {
       "type": "narration",
       "text": "Die Paktklauseln liegen nicht nur in meinem Kopf, sondern schwarz auf Papier neben dem Journal. Falls ich schwanke, verhandle ich nicht aus Stimmung, sondern aus klaren Sätzen.",
-      "next": "check_bridge_fallout_seen_memory"
+      "next": "check_ritual_breath_count_prepared"
     },
     "check_bridge_fallout_seen_memory": {
       "type": "flag_check",
@@ -1908,6 +1908,18 @@
       "type": "narration",
       "text": "Zwischen zwei Glockenschlägen höre ich oben drei dumpfe Schläge Metall auf Holz - Georgs Antwort auf unser Sicherungszeichen vom Schulhaus. Kein Entwarnen. Nur das Versprechen, dass Konrad nicht unbeobachtet zwischen Otto und das Wesen gerät.",
       "next": "check_approach"
+    },
+    "check_ritual_breath_count_prepared": {
+      "type": "flag_check",
+      "flag": "ritual_breath_count_prepared",
+      "value": 1,
+      "true_next": "ritual_breath_count_payoff",
+      "false_next": "check_bridge_fallout_seen_memory"
+    },
+    "ritual_breath_count_payoff": {
+      "type": "narration",
+      "text": "Annas Vier-Atemzüge-Takt sitzt noch: ein, zwei, drei, vier - erst dann spreche ich. Das nimmt dem Summen den Taktvorteil und hält meine Stimme bei mir.",
+      "next": "check_bridge_fallout_seen_memory"
     }
   }
 }

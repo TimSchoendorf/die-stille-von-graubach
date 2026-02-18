@@ -829,12 +829,12 @@
     "konrad_ward_choice": {
       "type": "narration",
       "text": "Ich zeichne mit zitternder Hand drei gebrochene Spiralen auf den Türrahmen - Hildes Notzeichen gegen Durchgriffe. Dann flüstere ich: 'Halte bis morgen durch.' Drinnen stoppt das Kreidekratzen für genau einen Atemzug.",
-      "next": "ally_final_converge"
+      "next": "check_anna_schoolyard_event"
     },
     "konrad_distance_choice": {
       "type": "narration",
       "text": "Ich gehe weiter, ohne mich umzudrehen. Jeder zusätzliche Blick wäre eine Einladung. Wenn ich ihn retten will, muss ich heute streng bleiben - auch gegen mein eigenes Mitleid.",
-      "next": "ally_final_converge"
+      "next": "check_anna_schoolyard_event"
     },
     "ally_final_converge": {
       "type": "narration",
@@ -955,6 +955,86 @@
     "konrad_watch_plan_2": {
       "type": "narration",
       "text": "Kein Heldentum, nur ein dünnes Sicherheitsnetz. Vielleicht ist das alles, was Verantwortung heute sein kann: jemanden nicht im Stich lassen, ohne den Plan zu verraten.",
+      "next": "check_anna_schoolyard_event"
+    },
+    "check_anna_schoolyard_event": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "anna_schoolyard_event_intro",
+      "false_next": "ally_final_converge"
+    },
+    "anna_schoolyard_event_intro": {
+      "type": "background",
+      "background": "village_square",
+      "transition": "fade",
+      "next": "show_anna_schoolyard"
+    },
+    "show_anna_schoolyard": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "show",
+      "next": "anna_schoolyard_1"
+    },
+    "anna_schoolyard_1": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "afraid",
+      "text": "Du hast ihn gemieden. Das war nicht feige. Das war sauber. Wenn ES zwei Türen sieht, nimmt es die lautere - mach deine leise.",
+      "next": "elise_schoolyard_1"
+    },
+    "elise_schoolyard_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Leise heißt heute: kein Heldentum, keine Extraschritte. Nur Plan.",
+      "next": "anna_schoolyard_2"
+    },
+    "anna_schoolyard_2": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "lucid",
+      "text": "Dann merk dir meinen Trick: Wenn die Stimmen drücken, zähl vier Atemzüge und sag erst dann den nächsten Satz. Sonst redet ES zwischen deine Worte.",
+      "next": "choice_anna_schoolyard_commit"
+    },
+    "choice_anna_schoolyard_commit": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Den Vier-Atemzüge-Takt übernehmen",
+          "set_flags": {
+            "ritual_breath_count_prepared": 1
+          },
+          "next": "anna_schoolyard_commit"
+        },
+        {
+          "text": "Dankbar nicken, aber ohne neuen Takt weiterziehen",
+          "next": "anna_schoolyard_skip"
+        }
+      ]
+    },
+    "anna_schoolyard_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Vier Atemzüge. Dann sprechen. Danke, Anna. Ich nehme dich mit in den Takt.",
+      "next": "hide_anna_schoolyard"
+    },
+    "anna_schoolyard_skip": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Ich darf jetzt nichts mehr ändern. Aber danke. Allein dass du hier stehst, hält mich gerade.",
+      "next": "hide_anna_schoolyard"
+    },
+    "hide_anna_schoolyard": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "hide",
       "next": "ally_final_converge"
     }
   }
