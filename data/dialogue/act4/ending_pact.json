@@ -399,6 +399,20 @@
 			"flag": "konrad_asked_help",
 			"value": 1,
 			"true_next": "pact_konrad_epilog_helped",
+			"false_next": "check_avoided_konrad_pact"
+		},
+		"check_avoided_konrad_pact": {
+			"type": "flag_check",
+			"flag": "avoided_konrad",
+			"value": 1,
+			"true_next": "pact_konrad_epilog_avoided",
+			"false_next": "check_distrusted_konrad_pact"
+		},
+		"check_distrusted_konrad_pact": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "pact_konrad_epilog_distrusted",
 			"false_next": "check_tested_konrad_pact"
 		},
 		"check_tested_konrad_pact": {
@@ -411,6 +425,16 @@
 		"pact_konrad_epilog_helped": {
 			"type": "narration",
 			"text": "Konrad wartet am Brunnen, als ich aus der Kirche trete. Er sieht mich, nickt nur und sagt dann: 'Du hast dein Versprechen gehalten.' Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+			"next": "pact_konrad_epilog_2"
+		},
+		"pact_konrad_epilog_avoided": {
+			"type": "narration",
+			"text": "Konrad steht abseits vom Brunnen, als hätte er nicht sicher gewusst, ob er mir überhaupt begegnen darf. 'Du bist auf Abstand geblieben', sagt er leise. 'Vielleicht musstest du das.' Dann zeigt er mir seine Hände: Die Spiralen verblassen trotzdem. Nicht wegen Vertrauen - wegen der Entscheidung in der Kammer.",
+			"next": "pact_konrad_epilog_2"
+		},
+		"pact_konrad_epilog_distrusted": {
+			"type": "narration",
+			"text": "Konrad lehnt am Brunnenrand und hält meinen Blick aus. 'Du hast mir nicht vertraut', sagt er ohne Vorwurf. 'Ich habe es dir leicht gemacht.' Er atmet zittrig aus, als die Spiralen auf seiner Haut matter werden. 'Danke, dass du mich trotzdem nicht aufgegeben hast.'",
 			"next": "pact_konrad_epilog_2"
 		},
 		"pact_konrad_epilog_tested": {
@@ -426,7 +450,19 @@
 		"pact_konrad_epilog_2": {
 			"type": "narration",
 			"text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
-			"next": "pact_anna_epilog"
+			"next": "check_anna_warning_pact"
+		},
+		"check_anna_warning_pact": {
+			"type": "flag_check",
+			"flag": "anna_warning",
+			"value": 1,
+			"true_next": "pact_anna_epilog_warning",
+			"false_next": "pact_anna_epilog"
+		},
+		"pact_anna_epilog_warning": {
+			"type": "narration",
+			"text": "Anna besucht mich jeden Herbst und bleibt diesmal nicht auf Abstand stehen. 'Weißt du noch, wie ich im Wald gesagt habe, du sollst dich beeilen?' fragt sie. Dann lächelt sie. 'Jetzt singt es anders. Nicht hungrig. Eher... dankbar.'",
+			"next": "pact_otto_epilog"
 		},
 		"pact_anna_epilog": {
 			"type": "narration",
