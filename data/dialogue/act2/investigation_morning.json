@@ -67,6 +67,32 @@
     "elise_cup": {
       "type": "narration",
       "text": "Ich halte die Tasse in beiden Händen. Sie ist kalt. Aber für einen Moment kann ich Großmutters Hände spüren, die diese Tasse gehalten haben. Jeden Morgen. Dreißig Jahre lang.",
+      "next": "choice_with_cup"
+    },
+    "choice_with_cup": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Einen Tropfen probieren",
+          "next": "taste_cup"
+        },
+        {
+          "text": "Die Küche gründlich absuchen",
+          "set_flags": {
+            "noticed_cellar_hint": 1
+          },
+          "next": "search_kitchen_hint"
+        }
+      ]
+    },
+    "taste_cup": {
+      "type": "narration",
+      "text": "Der Tee ist bitter, fast metallisch. Beifuß, Schafgarbe, ein Hauch Eisenkraut. Dieselbe Mischung, die Hilde mir gegen den Nebel gegeben hat. Großmutter hat sich jeden Morgen damit geschützt.",
+      "next": "elise_morning_resolve"
+    },
+    "search_kitchen_hint": {
+      "type": "narration",
+      "text": "Ich öffne Schubladen und Dosen, bis ich zwischen alten Rezeptkarten einen Zettel finde: 'Frische Bündel kühl halten - hinter der losen Kellerwand'. Kein Kochhinweis. Ein Versteckhinweis.",
       "next": "elise_morning_resolve"
     },
     "elise_morning_resolve": {
@@ -77,6 +103,18 @@
     "narration_2": {
       "type": "narration",
       "text": "Großmutters Haus birgt Antworten. Wenn sie dreißig Jahre lang an einem anderen Ritual gearbeitet hat, müssen ihre Aufzeichnungen hier sein.",
+      "next": "check_cellar_hint"
+    },
+    "check_cellar_hint": {
+      "type": "flag_check",
+      "flag": "noticed_cellar_hint",
+      "value": 1,
+      "true_next": "narration_cellar_hint_payoff",
+      "false_next": "choice_search"
+    },
+    "narration_cellar_hint_payoff": {
+      "type": "narration",
+      "text": "Der Zettel aus der Küche lässt mir keine Ruhe: 'hinter der losen Kellerwand'. Wenn sie etwas vor anderen verstecken wollte, dann dort.",
       "next": "choice_search"
     },
     "choice_search": {
@@ -270,11 +308,29 @@
     "elise_journal_react_4": {
       "type": "narration",
       "text": "1923. Mein Name stand in dem Buch, bevor ich geboren wurde. Das Wesen kannte mich, bevor es mich gab. Es hat auf MICH gewartet.",
-      "next": "elise_journal_react_5"
+      "next": "choice_journal_composure"
     },
-    "elise_journal_react_5": {
+    "choice_journal_composure": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Das Journal hinlegen und mich sammeln",
+          "next": "journal_composure_grounded"
+        },
+        {
+          "text": "Sofort weiterlesen, trotz Zittern",
+          "next": "journal_composure_forced"
+        }
+      ]
+    },
+    "journal_composure_grounded": {
       "type": "narration",
-      "text": "Meine Hände zittern so stark, dass ich das Journal kaum halten kann. Ich lege es hin. Atme. Eins. Zwei. Drei. Dann nehme ich es wieder auf.",
+      "text": "Ich lege das Heft auf den Tisch. Drei Atemzüge. Hände auf Holz, Blick auf die Kante der Tischplatte, bis die Linien wieder stillstehen. Dann nehme ich das Journal wieder auf.",
+      "next": "read_journal_7"
+    },
+    "journal_composure_forced": {
+      "type": "narration",
+      "text": "Ich blättere weiter, bevor der Mut mich verlässt. Die Seiten rascheln unter meinen zitternden Fingern, die Worte springen - aber ich zwinge mich, jede Zeile zu lesen.",
       "next": "read_journal_7"
     },
     "read_journal_7": {
@@ -320,11 +376,29 @@
     "elise_plan_3": {
       "type": "narration",
       "text": "Kann das funktionieren? Oder war Großmutter genauso verzweifelt wie ich und hat sich an jeden Strohhalm geklammert?",
-      "next": "narration_plan"
+      "next": "choice_plan_attitude"
     },
-    "narration_plan": {
+    "choice_plan_attitude": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Ihr vertrauen - sie hatte dreißig Jahre Vorsprung",
+          "next": "narration_plan_trust"
+        },
+        {
+          "text": "Skeptisch bleiben - aber handeln",
+          "next": "narration_plan_pragmatic"
+        }
+      ]
+    },
+    "narration_plan_trust": {
       "type": "narration",
-      "text": "Es ist der einzige Plan, den ich habe. Großmutter hat dreißig Jahre Schlaf, Blut und Freunde dafür bezahlt. Wenn ich ihn fallenlasse, war ihr Opfer nur ein weiteres Grab.",
+      "text": "Es ist der einzige Plan, den ich habe - und er ist ihrer. Großmutter hat dreißig Jahre Schlaf, Blut und Freunde dafür bezahlt. Wenn ich ihn fallenlasse, war ihr Opfer nur ein weiteres Grab.",
+      "next": "choice_next_step"
+    },
+    "narration_plan_pragmatic": {
+      "type": "narration",
+      "text": "Vielleicht ist der Plan lückenhaft. Vielleicht war er nur ihre beste Wette. Aber Nichtstun ist sicherer Tod. Ich arbeite mit dem, was ich habe - und teste jeden Schritt.",
       "next": "choice_next_step"
     },
     "choice_next_step": {
