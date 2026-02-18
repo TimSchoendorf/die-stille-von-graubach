@@ -75,6 +75,11 @@
 - **Fix applied:** Added an "end-state tactical memory checkpoint" rule: any late-ritual command/tactics flag must get at least one explicit epilog reflection in the corresponding ending branch.
 - **Applied now:** extended `act4/ending_escape.json` with a new schoolhouse-order epilog gate (`check_schoolhouse_order_escape_memory`) and differentiated aftermath text for hold-order vs tempo-only choices.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Escape ending still lacked explicit Act-3 ally-fallout closure (`ally_fallout_payoff_pending`) while other major endings resolved it on-screen, weakening setup→escalation→payoff parity for this branch.
+- **Fix applied:** Added an "escape fallout closure checkpoint" to the loop: if `ally_fallout_payoff_pending=1`, Escape must include hurt-flag reconciliation beats and clear the pending fallout flag before aftermath epilog.
+- **Applied now:** extended `act4/ending_escape.json` with a new post-collapse reconciliation micro-sequence (`georg_hurt_day6` / `hilde_hurt_day6` / `voss_hurt_day6`) and explicit cleanup via `ally_fallout_payoff_pending=0`.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

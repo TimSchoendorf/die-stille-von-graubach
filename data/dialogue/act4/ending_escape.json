@@ -404,6 +404,60 @@
     "narration_9": {
       "type": "narration",
       "text": "Nur Wald. Als hätte es Graubach nie gegeben.",
+      "next": "check_escape_fallout_pending"
+    },
+    "check_escape_fallout_pending": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "escape_fallout_intro",
+      "false_next": "check_aftermath_georg"
+    },
+    "escape_fallout_intro": {
+      "type": "narration",
+      "text": "Im Laufen höre ich unsere Stimmen von vor dem Ritual wieder - scharf, verletzt, zu schnell. Wir sind trotzdem geblieben. Diese Entscheidung hat mich hierher gebracht, lebend, aber nicht unversehrt.",
+      "next": "check_escape_georg_hurt_resolution"
+    },
+    "check_escape_georg_hurt_resolution": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "escape_georg_hurt_resolution",
+      "false_next": "check_escape_hilde_hurt_resolution"
+    },
+    "escape_georg_hurt_resolution": {
+      "type": "narration",
+      "text": "Georgs Zorn galt nie nur mir - er galt der Art, wie Angst uns in Einzelkämpfer zwingt. Dass er trotzdem zurück in die Kammer ging, ist kein Widerruf. Es ist seine härteste Form von Treue.",
+      "next": "check_escape_hilde_hurt_resolution"
+    },
+    "check_escape_hilde_hurt_resolution": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "escape_hilde_hurt_resolution",
+      "false_next": "check_escape_voss_hurt_resolution"
+    },
+    "escape_hilde_hurt_resolution": {
+      "type": "narration",
+      "text": "Hilde hatte recht: Ein Ritual ohne Zeugen ist nur Hoffnung mit schöner Sprache. Ihr letztes Lied in der Kammer war keine Vergebung umsonst - es war die Rechnung für unseren Stolz.",
+      "next": "check_escape_voss_hurt_resolution"
+    },
+    "check_escape_voss_hurt_resolution": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "escape_voss_hurt_resolution",
+      "false_next": "clear_escape_fallout_pending"
+    },
+    "escape_voss_hurt_resolution": {
+      "type": "narration",
+      "text": "Voss hatte um Regeln gebeten, nicht um Mutproben. Im Tunnel mit seinen Registern in der Hand begreife ich: Schuld ist nur dann nützlich, wenn sie in dokumentierte Verantwortung übergeht.",
+      "next": "clear_escape_fallout_pending"
+    },
+    "clear_escape_fallout_pending": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
       "next": "check_aftermath_georg"
     },
     "check_aftermath_georg": {
