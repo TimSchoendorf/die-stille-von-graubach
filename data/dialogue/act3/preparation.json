@@ -601,7 +601,7 @@
     "approach_seal_2": {
       "type": "narration",
       "text": "Großmutter hat es vorgemacht. Ich muss nur ihren Spuren folgen. Der Gesang, das Erdzeichen, der Anker. Drei Komponenten, ein Ritual. Ich kann das.",
-      "next": "narration_preparation"
+      "next": "approach_seal_rehearsal"
     },
     "approach_understand": {
       "type": "narration",
@@ -611,7 +611,7 @@
     "approach_understand_2": {
       "type": "narration",
       "text": "Ich bin Folkloristin. Ich studiere das Unbekannte. Wenn irgendjemand fähig ist, mit etwas zu kommunizieren, das kein Mensch versteht, dann sollte ich es sein.",
-      "next": "narration_preparation"
+      "next": "approach_understand_rehearsal"
     },
     "approach_destroy": {
       "type": "narration",
@@ -621,7 +621,7 @@
     "approach_destroy_2": {
       "type": "narration",
       "text": "Großmutter hat geschrieben, dass Zerstörung den Zerstörer kostet. Ich bin bereit, diesen Preis zu zahlen. Sechshundert Jahre Blut sind genug.",
-      "next": "narration_preparation"
+      "next": "approach_destroy_rehearsal"
     },
     "approach_pact": {
       "type": "narration",
@@ -631,7 +631,51 @@
     "approach_pact_2": {
       "type": "narration",
       "text": "Mein Name steht im Buch. Das gibt mir eine Verbindung, eine Stimme. Wenn ich verhandle, dann mit klaren Bedingungen: keine Opfer, kein erzwungenes Gefäß, nur freiwillige Gegenüber mit Rückkehrrecht - und wenn jemand 'Stopp' sagt, endet der Kontakt sofort. Damit das mehr ist als Mut in einer Nacht, halte ich die Regeln als offenes Protokoll fest: Zeugen, feste Termine, klare Abbruchzeichen. Zusätzlich gilt eine Notfallklausel: Fällt das Gegenüber aus, greift sofort ein Übergangs-Siegel, bis freiwillige Nachfolge bereit ist. Zum ersten Mal in sechshundert Jahren wird jemand mit dem Wesen REDEN, nicht an es opfern.",
-      "next": "check_confronted_voss_pact"
+      "next": "approach_pact_rehearsal"
+    },
+    "approach_seal_rehearsal": {
+      "type": "narration",
+      "text": "Ich zeichne das Erdzeichen mit Kreide auf den Boden und gehe den Ablauf trocken durch: Stimme setzen, Atem halten, Abbruchsignal. Beim dritten Versuch zittern meine Knie weniger. Nicht weg - weniger.",
+      "next": "set_seal_protocol_practiced"
+    },
+    "set_seal_protocol_practiced": {
+      "type": "set_flag",
+      "flag": "seal_protocol_practiced",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "approach_understand_rehearsal": {
+      "type": "narration",
+      "text": "Ich schreibe drei Fragen auf einen Zettel und falte ihn in den Brief: Was brauchst du ohne Opfer? Wo endet dein Zugriff? Wie beweisen wir morgen, dass niemand gezwungen wird? Wenn ich in Panik gerate, halte ich mich an diese Reihenfolge.",
+      "next": "set_understand_questions_prepared"
+    },
+    "set_understand_questions_prepared": {
+      "type": "set_flag",
+      "flag": "understand_questions_prepared",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "approach_destroy_rehearsal": {
+      "type": "narration",
+      "text": "Ich richte die Kräuterschale neu aus, prüfe den Stein auf Risse und markiere mit Kreide den Rückweg zur Treppe. Wenn der Plan kippt, darf ich nicht heroisch erstarren - ich brauche eine harte Exit-Linie.",
+      "next": "set_destroy_charge_prepared"
+    },
+    "set_destroy_charge_prepared": {
+      "type": "set_flag",
+      "flag": "destroy_charge_prepared",
+      "value": 1,
+      "next": "narration_preparation"
+    },
+    "approach_pact_rehearsal": {
+      "type": "narration",
+      "text": "Ich notiere die Paktklauseln groß und lesbar auf ein frisches Blatt: freiwillig, widerrufbar, mit Zeugen, mit Notfall-Siegel. Dann spreche ich sie laut. Ein Vertrag, den ich nur flüstere, hält im Lärm der Kammer nicht.",
+      "next": "set_pact_terms_written"
+    },
+    "set_pact_terms_written": {
+      "type": "set_flag",
+      "flag": "pact_terms_written",
+      "value": 1,
+      "next": "narration_preparation"
     },
     "check_confronted_voss_pact": {
       "type": "flag_check",

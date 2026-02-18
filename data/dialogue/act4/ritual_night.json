@@ -71,16 +71,64 @@
     "stance_regelorientiert_ritual": {
       "type": "narration",
       "text": "Ich gehe den Ablauf im Kopf noch einmal durch: Zeichen prüfen, Stimmen synchronisieren, Abbruchsignal bereit. Ordnung ist heute kein Trost - sie ist Überlebensbedingung.",
-      "next": "check_bridge_fallout_seen_memory"
+      "next": "check_seal_protocol_practiced"
     },
     "stance_beziehungsorientiert_ritual": {
       "type": "narration",
       "text": "Ich denke an die Gesichter über mir: Konrad, die Verbündeten, selbst Otto in seiner Angst. Wenn ich heute handle, dann so, dass danach noch Menschen zueinander finden können.",
-      "next": "check_bridge_fallout_seen_memory"
+      "next": "check_seal_protocol_practiced"
     },
     "stance_pragmatisch_ritual": {
       "type": "narration",
       "text": "Ich sortiere alles auf eine Frage herunter: Was funktioniert in den nächsten Minuten? Kein Pathos, kein Dogma - nur Entscheidungen, die uns lebend bis zum Morgengrauen bringen.",
+      "next": "check_seal_protocol_practiced"
+    },
+    "check_seal_protocol_practiced": {
+      "type": "flag_check",
+      "flag": "seal_protocol_practiced",
+      "value": 1,
+      "true_next": "seal_protocol_practiced_payoff",
+      "false_next": "check_understand_questions_prepared"
+    },
+    "seal_protocol_practiced_payoff": {
+      "type": "narration",
+      "text": "Meine Kreidelinie aus der Nacht sitzt noch im Muskelgedächtnis: drei Atemzüge, ein Einsatz, ein klares Stopp-Zeichen. Der Ablauf ist nicht hübsch, aber belastbar.",
+      "next": "check_understand_questions_prepared"
+    },
+    "check_understand_questions_prepared": {
+      "type": "flag_check",
+      "flag": "understand_questions_prepared",
+      "value": 1,
+      "true_next": "understand_questions_prepared_payoff",
+      "false_next": "check_destroy_charge_prepared"
+    },
+    "understand_questions_prepared_payoff": {
+      "type": "narration",
+      "text": "In meiner Tasche knistert der gefaltete Zettel mit den drei Fragen. Als das Summen in meinem Kopf anschwillt, zwingt mich die Reihenfolge zurück in Sprache statt Panik.",
+      "next": "check_destroy_charge_prepared"
+    },
+    "check_destroy_charge_prepared": {
+      "type": "flag_check",
+      "flag": "destroy_charge_prepared",
+      "value": 1,
+      "true_next": "destroy_charge_prepared_payoff",
+      "false_next": "check_pact_terms_written"
+    },
+    "destroy_charge_prepared_payoff": {
+      "type": "narration",
+      "text": "Ich sehe die Kreidemarkierung zum Treppenansatz sofort wieder. Wenn heute etwas reißt, verliere ich keine Sekunden mit Stolz. Ich kenne meinen Rückzugspfad.",
+      "next": "check_pact_terms_written"
+    },
+    "check_pact_terms_written": {
+      "type": "flag_check",
+      "flag": "pact_terms_written",
+      "value": 1,
+      "true_next": "pact_terms_written_payoff",
+      "false_next": "check_bridge_fallout_seen_memory"
+    },
+    "pact_terms_written_payoff": {
+      "type": "narration",
+      "text": "Die Paktklauseln liegen nicht nur in meinem Kopf, sondern schwarz auf Papier neben dem Journal. Falls ich schwanke, verhandle ich nicht aus Stimmung, sondern aus klaren Sätzen.",
       "next": "check_bridge_fallout_seen_memory"
     },
     "check_bridge_fallout_seen_memory": {
