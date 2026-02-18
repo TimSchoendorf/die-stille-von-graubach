@@ -60,6 +60,11 @@
 - **Fix applied:** Added a "branch parity checkpoint" for ship-block runs: if one branch gains a concrete pre-ritual tactic, the neighboring branch must get an equivalent (not identical) tactical beat with its own flag + downstream payoff.
 - **Applied now:** introduced a new sought-Konrad mini-scene in `act3/allies_choice.json` (Anna's Drei-Anker identity tactic, flag `konrad_anchor_phrase_prepared`) and paid it off in both `act3/descent.json` and `act4/ritual_night.json`.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Konrad's Act-2 trust path still front-loaded key vessel symptoms in long monologue blocks, so player agency and memory retention weakened before Act-3 escalation.
+- **Fix applied:** Added a "symptom probe checkpoint" to ship-block loops: when a branch introduces crucial possession data, force one player-led diagnostic choice and require a downstream callback in the next act.
+- **Applied now:** inserted a new investigative micro-choice in `act2/konrad_encounter.json` (missing-time vs spiral-sign focus; flags `asked_konrad_missing_time` / `asked_konrad_spiral_signs`) and paid it off in `act3/allies_choice.json` during Konrad's relapse scene.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

@@ -254,6 +254,53 @@
       "speaker": "konrad",
       "expression": "sad",
       "text": "Nicht aus Beweisen - aus Jahren voller falscher Glockenschläge und Blicke, die zu lange an mir hingen. Seit drei Nächten wache ich mit Schlamm an den Schuhen auf, ohne den Weg gegangen zu sein. Und heute Morgen waren unter meinen Nägeln Steinspäne aus der Kirchenkrypta. Irgendetwas in diesem Dorf ist krank. Und irgendetwas in mir führt es dorthin.",
+      "next": "konrad_trust_probe_choice"
+    },
+    "konrad_trust_probe_choice": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Nach den Erinnerungslücken fragen",
+          "set_flags": {
+            "asked_konrad_missing_time": 1
+          },
+          "next": "elise_missing_time_ask"
+        },
+        {
+          "text": "Nach den Spiralen und den Händen fragen",
+          "set_flags": {
+            "asked_konrad_spiral_signs": 1
+          },
+          "next": "elise_spiral_signs_ask"
+        }
+      ]
+    },
+    "elise_missing_time_ask": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Wenn dir Stunden fehlen: Gibt es einen Auslöser? Glocken? Orte? Irgendetwas, das kurz davor immer gleich ist?",
+      "next": "konrad_missing_time_answer"
+    },
+    "konrad_missing_time_answer": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Ja. Erst wird alles zu still, als hätte jemand Watte in die Welt gestopft. Dann höre ich eine einzelne Glocke, obwohl niemand läutet. Wenn ich wieder da bin, stehe ich meistens näher an der Kirche als vorher.",
+      "next": "elise_trust_ask"
+    },
+    "elise_spiral_signs_ask": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Und die Spiralen? Tauchen sie auf, bevor du wegkippst oder erst danach?",
+      "next": "konrad_spiral_signs_answer"
+    },
+    "konrad_spiral_signs_answer": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "dark",
+      "text": "Danach. Immer an den Händen, als hätte jemand meine Finger geführt. Wenn ich sie wegwasche, brennen die Linien noch stundenlang, als lägen sie unter der Haut.",
       "next": "elise_trust_ask"
     },
     "elise_trust_ask": {

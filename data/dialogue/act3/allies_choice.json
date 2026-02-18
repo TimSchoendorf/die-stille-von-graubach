@@ -674,6 +674,30 @@
       "speaker": "konrad",
       "expression": "sad",
       "text": "Ich kann es kaum noch trennen. Die Nächte verschwimmen. Manchmal wache ich auf und finde Worte in meinem Mund, die ich nie gelernt habe. Dann weiß ich nicht, ob ICH denke oder ES.",
+      "next": "check_konrad_missing_time_callback"
+    },
+    "check_konrad_missing_time_callback": {
+      "type": "flag_check",
+      "flag": "asked_konrad_missing_time",
+      "value": 1,
+      "true_next": "konrad_missing_time_callback",
+      "false_next": "check_konrad_spiral_signs_callback"
+    },
+    "konrad_missing_time_callback": {
+      "type": "narration",
+      "text": "Die alte Frage aus dem Brunnen kehrt zurück: erst Stille, dann eine Glocke, dann fehlende Zeit. Jetzt höre ich genau diese Stille im Raum, also spreche ich sofort weiter, bevor sie ihn wieder wegzieht.",
+      "next": "effect_konrad_glitch"
+    },
+    "check_konrad_spiral_signs_callback": {
+      "type": "flag_check",
+      "flag": "asked_konrad_spiral_signs",
+      "value": 1,
+      "true_next": "konrad_spiral_signs_callback",
+      "false_next": "effect_konrad_glitch"
+    },
+    "konrad_spiral_signs_callback": {
+      "type": "narration",
+      "text": "Ich denke an seine Hände und die unsichtbaren Linien unter der Haut. Als seine Finger jetzt krampfen, wirkt es nicht wie Theatralik, sondern wie ein altes Muster, das zurück in seinen Körper will.",
       "next": "effect_konrad_glitch"
     },
     "effect_konrad_glitch": {
