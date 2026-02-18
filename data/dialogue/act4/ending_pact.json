@@ -1,499 +1,499 @@
 {
-	"title": "Ende - Der Pakt",
-	"start": "narration_1",
-	"nodes": {
-		"narration_1": {
-			"type": "narration",
-			"text": "Ich spreche zum Wesen. Nicht mit Worten - mit Gedanken, mit Willen. Ich stelle mich auf das Zeichen der Erde und öffne meinen Geist.",
-			"next": "snd_cosmic"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_contact",
-			"path": "cosmic_horror.wav"
-		},
-		"effect_contact": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 0.8
-			},
-			"next": "elise_pact_1"
-		},
-		"elise_pact_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Ich bin nicht hier um dich zu binden. Nicht um dich zu töten. Ich schlage einen Handel vor.",
-			"next": "creature_pact_1"
-		},
-		"creature_pact_1": {
-			"type": "narration",
-			"text": "EINEN HANDEL? MENSCHEN HANDELN MIT GOLD UND VIEH. WAS HAST DU, DAS ICH WILL?",
-			"next": "elise_pact_2"
-		},
-		"elise_pact_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Bewusstsein. Kontakt. Du hungerst nicht nach Blut. Du hungerst nach Aufmerksamkeit. Nach jemand, der da ist.",
-			"next": "creature_pact_2"
-		},
-		"creature_pact_2": {
-			"type": "narration",
-			"text": "Stille. Lange Stille. Dann: WOHER WEISST DU DAS?",
-			"next": "elise_pact_3"
-		},
-		"elise_pact_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Meine Großmutter hat es verstanden. Am Ende ihres Lebens. Sie hat es in ihr Journal geschrieben. Und sie hat mich hergerufen, damit ich es zu Ende bringe.",
-			"next": "creature_pact_3"
-		},
-		"creature_pact_3": {
-			"type": "narration",
-			"text": "DIE ALTE. SIE HAT MIT MIR GESPROCHEN. AM ENDE. ALS IHR LICHT SCHON SCHWACH WAR. SIE HAT GESAGT: MEINE ENKELIN WIRD KOMMEN.",
-			"next": "narration_2"
-		},
-		"narration_2": {
-			"type": "narration",
-			"text": "Großmutter. Selbst im Sterben hat sie vorausgeplant. Selbst im letzten Atemzug hat sie an mich gedacht.",
-			"next": "elise_pact_4"
-		},
-		"elise_pact_4": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Und hier bin ich. Wie sie es versprochen hat.",
-			"next": "creature_pact_4"
-		},
-		"creature_pact_4": {
-			"type": "narration",
-			"text": "MENSCHEN BRECHEN VERSPRECHEN. EURE LEBEN SIND KURZ. IHR VERGESST.",
-			"next": "elise_pact_5"
-		},
-		"elise_pact_5": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten - jeden Monat den Gesang, jeden Tag die Grenze. Bis zu ihrem Tod.",
-			"next": "creature_pact_5"
-		},
-		"creature_pact_5": {
-			"type": "narration",
-			"text": "JA. SIE WAR... ANDERS. SIE HAT NICHT GEFÜTTERT. SIE HAT GESPROCHEN. IN DEN LETZTEN JAHREN. LEISE. ICH HABE ZUGEHÖRT.",
-			"next": "narration_revelation"
-		},
-		"narration_revelation": {
-			"type": "narration",
-			"text": "Meine Augen brennen. Großmutter hat mit dem Wesen gesprochen. In den letzten Jahren, als sie krank wurde, als niemand hinschaute. Sie hat ihm Gesellschaft geleistet.",
-			"next": "elise_pact_6"
-		},
-		"elise_pact_6": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Ich bin ihre Enkelin. Und ich halte meine Versprechen.",
-			"next": "creature_pact_6"
-		},
-		"creature_pact_6": {
-			"type": "narration",
-			"text": "DAS WEISS ICH. DESHALB HÖRE ICH ZU. WAS BIETEST DU AN?",
-			"next": "effect_visions"
-		},
-		"effect_visions": {
-			"type": "effect",
-			"effect": "color_glitch",
-			"params": {
-				"duration": 1.0
-			},
-			"next": "elise_pact_7"
-		},
-		"elise_pact_7": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Keine Opfer mehr. Kein Blut. Kein Gefäß. Stattdessen komme ich freiwillig. Jedes Jahr, zu klaren Zeiten, mit Vorbereitung und Rückkehrrecht. In den ersten Jahren zusätzlich bei Bedarf zur Stabilisierung. Ich setze mich hierher und lasse dich meine Gedanken berühren.",
-			"next": "creature_pact_7"
-		},
-		"creature_pact_7": {
-			"type": "narration",
-			"text": "EINMAL IM JAHR. DAS IST... WENIG. FÜR SECHSHUNDERT JAHRE HUNGER.",
-			"next": "elise_pact_8"
-		},
-		"elise_pact_8": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet, bei klarem Verstand und mit Rückkehrrecht. Kein Name wird mehr zur Pflicht. Dazu dokumentieren wir ein Notfallprotokoll: Übergangs-Siegel statt Opfer, falls ein Termin ausfällt.",
-			"next": "creature_pact_8"
-		},
-		"creature_pact_8": {
-			"type": "narration",
-			"text": "Stille. Ich spüre es denken. Abwägen. Sechshundert Jahre Erfahrung gegen ein Versprechen eines einzigen Menschenlebens.",
-			"next": "creature_pact_9"
-		},
-		"creature_pact_9": {
-			"type": "narration",
-			"text": "UND WENN DU STIRBST? WIE DEINE ALTE?",
-			"next": "elise_pact_9"
-		},
-		"elise_pact_9": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Kein Zwang, keine Blutlinie als Kette. Und wenn einer von uns 'Stopp' sagt, gilt es sofort. Bis zur Übergabe sichert ein Übergangs-Siegel die Grenze.",
-			"next": "effect_pact_forming"
-		},
-		"effect_pact_forming": {
-			"type": "effect",
-			"effect": "breathing_darkness",
-			"params": {
-				"min": 0.3,
-				"max": 1.0,
-				"cycle": 2.0
-			},
-			"next": "creature_pact_10"
-		},
-		"creature_pact_10": {
-			"type": "narration",
-			"text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT. DEIN STOPP GILT. FÄLLT DEIN GEGENÜBER AUS, RUHE ICH IM ÜBERGANGS-SIEGEL.",
-			"next": "narration_anchor_pact"
-		},
-		"narration_anchor_pact": {
-			"type": "narration",
-			"text": "Ich stehe auf dem Zeichen, der Gesang verklingt, und der Anker hält - nicht als Kette, sondern als Brücke. Der Pakt formt sich nicht aus Macht, sondern aus Vertrauen.",
-			"next": "snd_dark"
-		},
-		"snd_dark": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "narration_5",
-			"path": "ending_dark.wav"
-		},
-		"narration_5": {
-			"type": "narration",
-			"text": "Ich spüre den Pakt sich formen - nicht als Vertrag, sondern als Verbindung. Ein dünner Faden zwischen seinem Bewusstsein und meinem. Warm. Lebendig. Stark genug zu tragen, klar genug, um Grenzen zu respektieren.",
-			"next": "narration_5b"
-		},
-		"narration_5b": {
-			"type": "narration",
-			"text": "Das Singen wird leiser. Sanfter. Zufrieden. Das Pulsieren unter meinen Füßen verlangsamt sich zu einem ruhigen Rhythmus. Wie ein Herzschlag, der zur Ruhe kommt.",
-			"next": "effect_calm"
-		},
-		"effect_calm": {
-			"type": "effect",
-			"effect": "clear",
-			"params": {},
-			"next": "check_ally_pact_georg"
-		},
-		"check_ally_pact_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "show_georg_pact",
-			"false_next": "check_ally_pact_hilde"
-		},
-		"show_georg_pact": {
-			"type": "character",
-			"character": "georg",
-			"expression": "afraid",
-			"position": "right",
-			"action": "show",
-			"next": "georg_pact_1"
-		},
-		"georg_pact_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "afraid",
-			"text": "Elise! Was ist passiert? Das Singen hat aufgehört, und dann...",
-			"next": "elise_georg_pact"
-		},
-		"elise_georg_pact": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Es ist vorbei, Georg. Keine Opfer mehr. Ich habe einen Pakt geschlossen. Einen fairen.",
-			"next": "georg_pact_2"
-		},
-		"georg_pact_2": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "sad",
-			"text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg. Ich halte dir den Rücken frei, Elise - und wenn das Übergangs-Siegel gebraucht wird, öffne ich dir jede Tür.",
-			"next": "hide_georg_pact"
-		},
-		"hide_georg_pact": {
-			"type": "character",
-			"character": "georg",
-			"expression": "sad",
-			"position": "right",
-			"action": "hide",
-			"next": "narration_9"
-		},
-		"check_ally_pact_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "show_hilde_pact",
-			"false_next": "check_ally_pact_voss"
-		},
-		"show_hilde_pact": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "mysterious",
-			"position": "right",
-			"action": "show",
-			"next": "hilde_pact_1"
-		},
-		"hilde_pact_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Ich spüre die Verbindung. Einen Faden. Dünn, aber stark. Was hast du getan, Kind?",
-			"next": "elise_hilde_pact"
-		},
-		"elise_hilde_pact": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Verhandelt. Wie Großmutter es am Ende gewollt hätte. Kein Blut mehr. Nur Gesellschaft.",
-			"next": "hilde_pact_2"
-		},
-		"hilde_pact_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Gesellschaft. So einfach. Und so schwer. Ich lehre die Freiwilligen den alten Gesang - und vor allem, wann sie Stopp sagen müssen.",
-			"next": "hide_hilde_pact"
-		},
-		"hide_hilde_pact": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "right",
-			"action": "hide",
-			"next": "narration_9"
-		},
-		"check_ally_pact_voss": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "show_voss_pact",
-			"false_next": "narration_9"
-		},
-		"show_voss_pact": {
-			"type": "character",
-			"character": "voss",
-			"expression": "afraid",
-			"position": "right",
-			"action": "show",
-			"next": "voss_pact_1"
-		},
-		"voss_pact_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "afraid",
-			"text": "Was habe ich verpasst? Was ist da unten geschehen?",
-			"next": "elise_voss_pact"
-		},
-		"elise_voss_pact": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Frieden, Pfarrer. Zum ersten Mal seit sechshundert Jahren. Kein Opfer mehr. Kein Blut. Nur ein Versprechen.",
-			"next": "voss_pact_2"
-		},
-		"voss_pact_2": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "praying",
-			"text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten. Ich dokumentiere jede Vereinbarung im Kirchenarchiv - keine Geheimnisse mehr.",
-			"next": "hide_voss_pact"
-		},
-		"hide_voss_pact": {
-			"type": "character",
-			"character": "voss",
-			"expression": "praying",
-			"position": "right",
-			"action": "hide",
-			"next": "narration_9"
-		},
-		"narration_9": {
-			"type": "narration",
-			"text": "Ich verlasse die Kammer. Das Dorf draußen sieht wieder normal aus. Die Häuser stehen gerade, der Himmel ist grau und gewöhnlich. Graubach atmet auf.",
-			"next": "narration_10"
-		},
-		"narration_10": {
-			"type": "narration",
-			"text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Und dann, jedes Jahr im Herbst, werde ich den Zug nach Graubach nehmen.",
-			"next": "narration_11"
-		},
-		"narration_11": {
-			"type": "narration",
-			"text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur freiwillige Besuche mit klaren Grenzen, sofortigem Stopp-Recht und dokumentiertem Notfallprotokoll mit Übergangs-Siegel. Georg bewacht die Zugänge, Hilde schult die Freiwilligen, Voss archiviert jede Abmachung - damit aus Hunger kein Griff nach Menschen mehr wird.",
-			"next": "narration_12"
-		},
-		"narration_12": {
-			"type": "narration",
-			"text": "Manchmal, in ruhigen Nächten in Berlin, höre ich das Singen. Leise, fern, fast wie ein Wiegenlied. Es ist nicht mehr bedrohlich. Es klingt... wie Warten. Geduldiges, hoffnungsvolles Warten.",
-			"next": "narration_13"
-		},
-		"narration_13": {
-			"type": "narration",
-			"text": "Großmutter, du hast es mir überlassen. Nicht als Bürde. Als Erbe. Und ich nehme es an.",
-			"next": "journal_pact"
-		},
-		"journal_pact": {
-			"type": "journal",
-			"entry_id": "ending_pact",
-			"title": "Der Pakt",
-			"content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Ich kehre freiwillig und planbar zurück, bereite freiwillige Nachfolger vor, und klare Grenzen bleiben widerrufbar. Fällt jemand aus, greift ein Übergangs-Siegel statt eines Opfers. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
-			"next": "check_packed_pact"
-		},
-		"check_packed_pact": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 1,
-			"true_next": "packed_books_pact",
-			"false_next": "check_packed_cross_pact"
-		},
-		"packed_books_pact": {
-			"type": "narration",
-			"text": "Meine Bücher liegen aufgeschlagen neben mir. Die alten Texte über Rituale und Bindungen - sie haben mich hierher geführt. Aber das wahre Wissen lag nie in Büchern. Es lag im Zuhören.",
-			"next": "pact_epilog_transition"
-		},
-		"check_packed_cross_pact": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 2,
-			"true_next": "packed_cross_pact",
-			"false_next": "check_packed_camera_pact"
-		},
-		"packed_cross_pact": {
-			"type": "narration",
-			"text": "Das Kruzifix meiner Mutter liegt warm in meiner Hand. Glaube gegen das Unbekannte - aber das Unbekannte war nie der Feind. Es war nur einsam.",
-			"next": "pact_epilog_transition"
-		},
-		"check_packed_camera_pact": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 3,
-			"true_next": "packed_camera_pact",
-			"false_next": "pact_konrad_epilog"
-		},
-		"packed_camera_pact": {
-			"type": "narration",
-			"text": "Meine Kamera hängt unbenutzt um meinen Hals. Manche Wahrheiten lassen sich nicht fotografieren. Aber ich werde sie aufschreiben - jedes Wort, jede Begegnung.",
-			"next": "pact_epilog_transition"
-		},
-		"pact_epilog_transition": {
-			"type": "narration",
-			"text": "Wochen vergehen. Monate. Die Erinnerung an jene Nacht verblasst wie ein Traum - aber der Pakt bleibt.",
-			"next": "check_konrad_help_pact"
-		},
-		"check_konrad_help_pact": {
-			"type": "flag_check",
-			"flag": "konrad_asked_help",
-			"value": 1,
-			"true_next": "pact_konrad_epilog_helped",
-			"false_next": "check_avoided_konrad_pact"
-		},
-		"check_avoided_konrad_pact": {
-			"type": "flag_check",
-			"flag": "avoided_konrad",
-			"value": 1,
-			"true_next": "pact_konrad_epilog_avoided",
-			"false_next": "check_distrusted_konrad_pact"
-		},
-		"check_distrusted_konrad_pact": {
-			"type": "flag_check",
-			"flag": "distrusted_konrad",
-			"value": 1,
-			"true_next": "pact_konrad_epilog_distrusted",
-			"false_next": "check_tested_konrad_pact"
-		},
-		"check_tested_konrad_pact": {
-			"type": "flag_check",
-			"flag": "tested_konrad",
-			"value": 1,
-			"true_next": "pact_konrad_epilog_tested",
-			"false_next": "check_trusted_konrad_pact"
-		},
-		"check_trusted_konrad_pact": {
-			"type": "flag_check",
-			"flag": "trusted_konrad",
-			"value": 1,
-			"true_next": "pact_konrad_epilog_trusted",
-			"false_next": "pact_konrad_epilog"
-		},
-		"pact_konrad_epilog_helped": {
-			"type": "narration",
-			"text": "Konrad wartet am Brunnen, als ich aus der Kirche trete. Er sieht mich, nickt nur und sagt dann: 'Du hast dein Versprechen gehalten.' Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog_avoided": {
-			"type": "narration",
-			"text": "Konrad steht abseits vom Brunnen, als hätte er nicht sicher gewusst, ob er mir überhaupt begegnen darf. 'Du bist auf Abstand geblieben', sagt er leise. 'Vielleicht musstest du das.' Dann zeigt er mir seine Hände: Die Spiralen verblassen trotzdem. Nicht wegen Vertrauen - wegen der Entscheidung in der Kammer.",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog_distrusted": {
-			"type": "narration",
-			"text": "Konrad lehnt am Brunnenrand und hält meinen Blick aus. 'Du hast mir nicht vertraut', sagt er ohne Vorwurf. 'Ich habe es dir leicht gemacht.' Er atmet zittrig aus, als die Spiralen auf seiner Haut matter werden. 'Danke, dass du mich trotzdem nicht aufgegeben hast.'",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog_tested": {
-			"type": "narration",
-			"text": "Konrad wartet am Brunnen, still und erschöpft. 'Du hast mich geprüft, bevor du mir geglaubt hast', sagt er. 'Das war richtig.' Er hebt die Hand; die Spiralen verblassen sichtbar. 'Jetzt muss ich nicht mehr kämpfen, um ich selbst zu bleiben.'",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog_trusted": {
-			"type": "narration",
-			"text": "Konrad steht schon am Brunnen, als hätte er auf genau diesen Moment gewartet. 'Du hast damals den stillen Rand gesehen', sagt er leise. 'Nicht das Monster. Mich.' Er öffnet die Hand; die Spiralen sind nur noch blasse Schatten. 'Jetzt ist es wirklich still - und ich bleibe ich.'",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog": {
-			"type": "narration",
-			"text": "Konrad steht am Brunnen, als ich aus der Kirche trete. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
-			"next": "pact_konrad_epilog_2"
-		},
-		"pact_konrad_epilog_2": {
-			"type": "narration",
-			"text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
-			"next": "check_anna_warning_pact"
-		},
-		"check_anna_warning_pact": {
-			"type": "flag_check",
-			"flag": "anna_warning",
-			"value": 1,
-			"true_next": "pact_anna_epilog_warning",
-			"false_next": "pact_anna_epilog"
-		},
-		"pact_anna_epilog_warning": {
-			"type": "narration",
-			"text": "Anna besucht mich jeden Herbst und bleibt diesmal nicht auf Abstand stehen. 'Weißt du noch, wie ich im Wald gesagt habe, du sollst dich beeilen?' fragt sie. Dann lächelt sie schief. 'Du hattest recht mit deiner Vermutung: Es hatte Angst, verlassen zu werden. Jetzt, mit Regeln, klingt es nicht mehr hungrig - nur noch... dankbar.'",
-			"next": "pact_otto_epilog"
-		},
-		"pact_anna_epilog": {
-			"type": "narration",
-			"text": "Anna besucht mich jeden Herbst. 'Es singt anders', sagt sie. 'Zufriedener.' Sie lächelt - zum ersten Mal ohne Furcht.",
-			"next": "pact_otto_epilog"
-		},
-		"pact_otto_epilog": {
-			"type": "narration",
-			"text": "Otto verlässt das Dorf, als er begreift, dass die Tradition vorbei ist. Sein Lebenswerk - bedeutungslos.",
-			"next": "pact_candle_epilog"
-		},
-		"pact_candle_epilog": {
-			"type": "narration",
-			"text": "Die Kerze auf Großmutters Nachttisch brennt ruhiger. Nicht mehr verzweifelt, nicht mehr wartend. Eine stetige, zufriedene Flamme.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "ending:pact"
-		}
-	}
+  "title": "Ende - Der Pakt",
+  "start": "narration_1",
+  "nodes": {
+    "narration_1": {
+      "type": "narration",
+      "text": "Ich spreche zum Wesen. Nicht mit Worten - mit Gedanken, mit Willen. Ich stelle mich auf das Zeichen der Erde und öffne meinen Geist.",
+      "next": "snd_cosmic"
+    },
+    "snd_cosmic": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "effect_contact",
+      "path": "cosmic_horror.wav"
+    },
+    "effect_contact": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 0.8
+      },
+      "next": "elise_pact_1"
+    },
+    "elise_pact_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich bin nicht hier um dich zu binden. Nicht um dich zu töten. Ich schlage einen Handel vor.",
+      "next": "creature_pact_1"
+    },
+    "creature_pact_1": {
+      "type": "narration",
+      "text": "EINEN HANDEL? MENSCHEN HANDELN MIT GOLD UND VIEH. WAS HAST DU, DAS ICH WILL?",
+      "next": "elise_pact_2"
+    },
+    "elise_pact_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Bewusstsein. Kontakt. Du hungerst nicht nach Blut. Du hungerst nach Aufmerksamkeit. Nach jemand, der da ist.",
+      "next": "creature_pact_2"
+    },
+    "creature_pact_2": {
+      "type": "narration",
+      "text": "Stille. Lange Stille. Dann: WOHER WEISST DU DAS?",
+      "next": "elise_pact_3"
+    },
+    "elise_pact_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Meine Großmutter hat es verstanden. Am Ende ihres Lebens. Sie hat es in ihr Journal geschrieben. Und sie hat mich hergerufen, damit ich es zu Ende bringe.",
+      "next": "creature_pact_3"
+    },
+    "creature_pact_3": {
+      "type": "narration",
+      "text": "DIE ALTE. SIE HAT MIT MIR GESPROCHEN. AM ENDE. ALS IHR LICHT SCHON SCHWACH WAR. SIE HAT GESAGT: MEINE ENKELIN WIRD KOMMEN.",
+      "next": "narration_2"
+    },
+    "narration_2": {
+      "type": "narration",
+      "text": "Großmutter. Selbst im Sterben hat sie vorausgeplant. Selbst im letzten Atemzug hat sie an mich gedacht.",
+      "next": "elise_pact_4"
+    },
+    "elise_pact_4": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Und hier bin ich. Wie sie es versprochen hat.",
+      "next": "creature_pact_4"
+    },
+    "creature_pact_4": {
+      "type": "narration",
+      "text": "MENSCHEN BRECHEN VERSPRECHEN. EURE LEBEN SIND KURZ. IHR VERGESST.",
+      "next": "elise_pact_5"
+    },
+    "elise_pact_5": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Meine Großmutter hat dreißig Jahre lang ihr Versprechen gehalten - jeden Monat den Gesang, jeden Tag die Grenze. Bis zu ihrem Tod.",
+      "next": "creature_pact_5"
+    },
+    "creature_pact_5": {
+      "type": "narration",
+      "text": "JA. SIE WAR... ANDERS. SIE HAT NICHT GEFÜTTERT. SIE HAT GESPROCHEN. IN DEN LETZTEN JAHREN. LEISE. ICH HABE ZUGEHÖRT.",
+      "next": "narration_revelation"
+    },
+    "narration_revelation": {
+      "type": "narration",
+      "text": "Meine Augen brennen. Großmutter hat mit dem Wesen gesprochen. In den letzten Jahren, als sie krank wurde, als niemand hinschaute. Sie hat ihm Gesellschaft geleistet.",
+      "next": "elise_pact_6"
+    },
+    "elise_pact_6": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Ich bin ihre Enkelin. Und ich halte meine Versprechen.",
+      "next": "creature_pact_6"
+    },
+    "creature_pact_6": {
+      "type": "narration",
+      "text": "DAS WEISS ICH. DESHALB HÖRE ICH ZU. WAS BIETEST DU AN?",
+      "next": "effect_visions"
+    },
+    "effect_visions": {
+      "type": "effect",
+      "effect": "color_glitch",
+      "params": {
+        "duration": 1.0
+      },
+      "next": "elise_pact_7"
+    },
+    "elise_pact_7": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Keine Opfer mehr. Kein Blut. Kein Gefäß. Stattdessen komme ich freiwillig. Jedes Jahr, zu klaren Zeiten, mit Vorbereitung und Rückkehrrecht. In den ersten Jahren zusätzlich bei Bedarf zur Stabilisierung. Ich setze mich hierher und lasse dich meine Gedanken berühren.",
+      "next": "creature_pact_7"
+    },
+    "creature_pact_7": {
+      "type": "narration",
+      "text": "EINMAL IM JAHR. DAS IST... WENIG. FÜR SECHSHUNDERT JAHRE HUNGER.",
+      "next": "elise_pact_8"
+    },
+    "elise_pact_8": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Einmal im Jahr ist mehr als dreißig Jahre Schweigen. Und ich werde andere lehren. Nach mir werden Freiwillige kommen - vorbereitet, bei klarem Verstand und mit Rückkehrrecht. Kein Name wird mehr zur Pflicht. Dazu dokumentieren wir ein Notfallprotokoll: Übergangs-Siegel statt Opfer, falls ein Termin ausfällt.",
+      "next": "creature_pact_8"
+    },
+    "creature_pact_8": {
+      "type": "narration",
+      "text": "Stille. Ich spüre es denken. Abwägen. Sechshundert Jahre Erfahrung gegen ein Versprechen eines einzigen Menschenlebens.",
+      "next": "creature_pact_9"
+    },
+    "creature_pact_9": {
+      "type": "narration",
+      "text": "UND WENN DU STIRBST? WIE DEINE ALTE?",
+      "next": "elise_pact_9"
+    },
+    "elise_pact_9": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Dann wird jemand kommen. Wie ich gekommen bin. Ich bilde Nachfolger aus - freiwillig, vorbereitet, bei klarem Verstand. Kein Zwang, keine Blutlinie als Kette. Und wenn einer von uns 'Stopp' sagt, gilt es sofort. Bis zur Übergabe sichert ein Übergangs-Siegel die Grenze.",
+      "next": "effect_pact_forming"
+    },
+    "effect_pact_forming": {
+      "type": "effect",
+      "effect": "breathing_darkness",
+      "params": {
+        "min": 0.3,
+        "max": 1.0,
+        "cycle": 2.0
+      },
+      "next": "creature_pact_10"
+    },
+    "creature_pact_10": {
+      "type": "narration",
+      "text": "ICH... NEHME AN. NICHT WEIL ICH DIR VERTRAUE. WEIL ICH MÜDE BIN. UND WEIL DEINE ALTE MIR DAS VERTRAUEN BEIGEBRACHT HAT. DEIN STOPP GILT. FÄLLT DEIN GEGENÜBER AUS, RUHE ICH IM ÜBERGANGS-SIEGEL.",
+      "next": "narration_anchor_pact"
+    },
+    "narration_anchor_pact": {
+      "type": "narration",
+      "text": "Ich stehe auf dem Zeichen, der Gesang verklingt, und der Anker hält - nicht als Kette, sondern als Brücke. Der Pakt formt sich nicht aus Macht, sondern aus Vertrauen.",
+      "next": "snd_dark"
+    },
+    "snd_dark": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "narration_5",
+      "path": "ending_dark.wav"
+    },
+    "narration_5": {
+      "type": "narration",
+      "text": "Ich spüre den Pakt sich formen - nicht als Vertrag, sondern als Verbindung. Ein dünner Faden zwischen seinem Bewusstsein und meinem. Warm. Lebendig. Stark genug zu tragen, klar genug, um Grenzen zu respektieren.",
+      "next": "narration_5b"
+    },
+    "narration_5b": {
+      "type": "narration",
+      "text": "Das Singen wird leiser. Sanfter. Zufrieden. Das Pulsieren unter meinen Füßen verlangsamt sich zu einem ruhigen Rhythmus. Wie ein Herzschlag, der zur Ruhe kommt.",
+      "next": "effect_calm"
+    },
+    "effect_calm": {
+      "type": "effect",
+      "effect": "clear",
+      "params": {},
+      "next": "check_ally_pact_georg"
+    },
+    "check_ally_pact_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "show_georg_pact",
+      "false_next": "check_ally_pact_hilde"
+    },
+    "show_georg_pact": {
+      "type": "character",
+      "character": "georg",
+      "expression": "afraid",
+      "position": "right",
+      "action": "show",
+      "next": "georg_pact_1"
+    },
+    "georg_pact_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "afraid",
+      "text": "Elise! Was ist passiert? Das Singen hat aufgehört, und dann...",
+      "next": "elise_georg_pact"
+    },
+    "elise_georg_pact": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Es ist vorbei, Georg. Keine Opfer mehr. Ich habe einen Pakt geschlossen. Einen fairen.",
+      "next": "georg_pact_2"
+    },
+    "georg_pact_2": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Einen Pakt... Margarethe hätte das gewollt. Frieden statt Krieg. Ich halte dir den Rücken frei, Elise - und wenn das Übergangs-Siegel gebraucht wird, öffne ich dir jede Tür.",
+      "next": "hide_georg_pact"
+    },
+    "hide_georg_pact": {
+      "type": "character",
+      "character": "georg",
+      "expression": "sad",
+      "position": "right",
+      "action": "hide",
+      "next": "narration_9"
+    },
+    "check_ally_pact_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "show_hilde_pact",
+      "false_next": "check_ally_pact_voss"
+    },
+    "show_hilde_pact": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "mysterious",
+      "position": "right",
+      "action": "show",
+      "next": "hilde_pact_1"
+    },
+    "hilde_pact_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Ich spüre die Verbindung. Einen Faden. Dünn, aber stark. Was hast du getan, Kind?",
+      "next": "elise_hilde_pact"
+    },
+    "elise_hilde_pact": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Verhandelt. Wie Großmutter es am Ende gewollt hätte. Kein Blut mehr. Nur Gesellschaft.",
+      "next": "hilde_pact_2"
+    },
+    "hilde_pact_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Gesellschaft. So einfach. Und so schwer. Ich lehre die Freiwilligen den alten Gesang - und vor allem, wann sie Stopp sagen müssen.",
+      "next": "hide_hilde_pact"
+    },
+    "hide_hilde_pact": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "right",
+      "action": "hide",
+      "next": "narration_9"
+    },
+    "check_ally_pact_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "show_voss_pact",
+      "false_next": "narration_9"
+    },
+    "show_voss_pact": {
+      "type": "character",
+      "character": "voss",
+      "expression": "afraid",
+      "position": "right",
+      "action": "show",
+      "next": "voss_pact_1"
+    },
+    "voss_pact_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "afraid",
+      "text": "Was habe ich verpasst? Was ist da unten geschehen?",
+      "next": "elise_voss_pact"
+    },
+    "elise_voss_pact": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Frieden, Pfarrer. Zum ersten Mal seit sechshundert Jahren. Kein Opfer mehr. Kein Blut. Nur ein Versprechen.",
+      "next": "voss_pact_2"
+    },
+    "voss_pact_2": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Ein Versprechen... Gott sei Dank. Oder wem auch immer wir danken sollten. Ich dokumentiere jede Vereinbarung im Kirchenarchiv - keine Geheimnisse mehr.",
+      "next": "hide_voss_pact"
+    },
+    "hide_voss_pact": {
+      "type": "character",
+      "character": "voss",
+      "expression": "praying",
+      "position": "right",
+      "action": "hide",
+      "next": "narration_9"
+    },
+    "narration_9": {
+      "type": "narration",
+      "text": "Ich verlasse die Kammer. Das Dorf draußen sieht wieder normal aus. Die Häuser stehen gerade, der Himmel ist grau und gewöhnlich. Graubach atmet auf.",
+      "next": "narration_10"
+    },
+    "narration_10": {
+      "type": "narration",
+      "text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Und dann, jedes Jahr im Herbst, werde ich den Zug nach Graubach nehmen.",
+      "next": "narration_11"
+    },
+    "narration_11": {
+      "type": "narration",
+      "text": "Die Tradition lebt weiter. Aber sie ist eine andere geworden. Kein Blut, kein Opfer, kein erzwungenes Gefäß. Nur freiwillige Besuche mit klaren Grenzen, sofortigem Stopp-Recht und dokumentiertem Notfallprotokoll mit Übergangs-Siegel. Georg bewacht die Zugänge, Hilde schult die Freiwilligen, Voss archiviert jede Abmachung - damit aus Hunger kein Griff nach Menschen mehr wird.",
+      "next": "narration_12"
+    },
+    "narration_12": {
+      "type": "narration",
+      "text": "Manchmal, in ruhigen Nächten in Berlin, höre ich das Singen. Leise, fern, fast wie ein Wiegenlied. Es ist nicht mehr bedrohlich. Es klingt... wie Warten. Geduldiges, hoffnungsvolles Warten.",
+      "next": "narration_13"
+    },
+    "narration_13": {
+      "type": "narration",
+      "text": "Großmutter, du hast es mir überlassen. Nicht als Bürde. Als Erbe. Und ich nehme es an.",
+      "next": "journal_pact"
+    },
+    "journal_pact": {
+      "type": "journal",
+      "entry_id": "ending_pact",
+      "title": "Der Pakt",
+      "content": "Kein Blut. Kein Opfer. Kein Gefäß. Nur ein Versprechen: Ich kehre freiwillig und planbar zurück, bereite freiwillige Nachfolger vor, und klare Grenzen bleiben widerrufbar. Fällt jemand aus, greift ein Übergangs-Siegel statt eines Opfers. Es hat angenommen. Großmutter hat den Weg geebnet. Ich gehe ihn zu Ende.",
+      "next": "check_packed_pact"
+    },
+    "check_packed_pact": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 1,
+      "true_next": "packed_books_pact",
+      "false_next": "check_packed_cross_pact"
+    },
+    "packed_books_pact": {
+      "type": "narration",
+      "text": "Meine Bücher liegen aufgeschlagen neben mir. Die alten Texte über Rituale und Bindungen - sie haben mich hierher geführt. Aber das wahre Wissen lag nie in Büchern. Es lag im Zuhören.",
+      "next": "pact_epilog_transition"
+    },
+    "check_packed_cross_pact": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 2,
+      "true_next": "packed_cross_pact",
+      "false_next": "check_packed_camera_pact"
+    },
+    "packed_cross_pact": {
+      "type": "narration",
+      "text": "Das Kruzifix meiner Mutter liegt warm in meiner Hand. Glaube gegen das Unbekannte - aber das Unbekannte war nie der Feind. Es war nur einsam.",
+      "next": "pact_epilog_transition"
+    },
+    "check_packed_camera_pact": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 3,
+      "true_next": "packed_camera_pact",
+      "false_next": "pact_konrad_epilog"
+    },
+    "packed_camera_pact": {
+      "type": "narration",
+      "text": "Meine Kamera hängt unbenutzt um meinen Hals. Manche Wahrheiten lassen sich nicht fotografieren. Aber ich werde sie aufschreiben - jedes Wort, jede Begegnung.",
+      "next": "pact_epilog_transition"
+    },
+    "pact_epilog_transition": {
+      "type": "narration",
+      "text": "Wochen vergehen. Monate. Die Erinnerung an jene Nacht verblasst wie ein Traum - aber der Pakt bleibt.",
+      "next": "check_konrad_help_pact"
+    },
+    "check_konrad_help_pact": {
+      "type": "flag_check",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "true_next": "pact_konrad_epilog_helped",
+      "false_next": "check_avoided_konrad_pact"
+    },
+    "check_avoided_konrad_pact": {
+      "type": "flag_check",
+      "flag": "avoided_konrad",
+      "value": 1,
+      "true_next": "pact_konrad_epilog_avoided",
+      "false_next": "check_distrusted_konrad_pact"
+    },
+    "check_distrusted_konrad_pact": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "pact_konrad_epilog_distrusted",
+      "false_next": "check_tested_konrad_pact"
+    },
+    "check_tested_konrad_pact": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "pact_konrad_epilog_tested",
+      "false_next": "check_trusted_konrad_pact"
+    },
+    "check_trusted_konrad_pact": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "pact_konrad_epilog_trusted",
+      "false_next": "pact_konrad_epilog"
+    },
+    "pact_konrad_epilog_helped": {
+      "type": "narration",
+      "text": "Konrad wartet am Brunnen, als ich aus der Kirche trete. Er sieht mich, nickt nur und sagt dann: 'Du hast dein Versprechen gehalten.' Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog_avoided": {
+      "type": "narration",
+      "text": "Konrad steht abseits vom Brunnen, als hätte er nicht sicher gewusst, ob er mir überhaupt begegnen darf. 'Du bist auf Abstand geblieben', sagt er leise. 'Vielleicht musstest du das.' Dann zeigt er mir seine Hände: Die Spiralen verblassen trotzdem. Nicht wegen Vertrauen - wegen der Entscheidung in der Kammer.",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog_distrusted": {
+      "type": "narration",
+      "text": "Konrad lehnt am Brunnenrand und hält meinen Blick aus. 'Du hast mir nicht vertraut', sagt er ohne Vorwurf. 'Nach dem Satz auf dem Dorfplatz - du weißt schon, als meine Stimme plötzlich sagte: ICH lüge nie - hätte ich mir selbst auch nicht vertraut.' Er atmet zittrig aus, während die Spiralen auf seiner Haut matter werden. 'Danke, dass du mich trotzdem nicht aufgegeben hast.'",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog_tested": {
+      "type": "narration",
+      "text": "Konrad wartet am Brunnen, still und erschöpft. 'Du hast mich mit den Spiralen am Handgelenk geprüft, bevor du mir geglaubt hast', sagt er. 'Das war richtig.' Er hebt die Hand; die Muster verblassen sichtbar. 'Jetzt muss ich nicht mehr kämpfen, um ich selbst zu bleiben.'",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog_trusted": {
+      "type": "narration",
+      "text": "Konrad steht schon am Brunnen, als hätte er auf genau diesen Moment gewartet. 'Du hast damals den stillen Rand gesehen', sagt er leise. 'Nicht das Monster. Mich.' Er öffnet die Hand; die Spiralen sind nur noch blasse Schatten. 'Jetzt ist es wirklich still - und ich bleibe ich.'",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog": {
+      "type": "narration",
+      "text": "Konrad steht am Brunnen, als ich aus der Kirche trete. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
+      "next": "pact_konrad_epilog_2"
+    },
+    "pact_konrad_epilog_2": {
+      "type": "narration",
+      "text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
+      "next": "check_anna_warning_pact"
+    },
+    "check_anna_warning_pact": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "pact_anna_epilog_warning",
+      "false_next": "pact_anna_epilog"
+    },
+    "pact_anna_epilog_warning": {
+      "type": "narration",
+      "text": "Anna besucht mich jeden Herbst und bleibt diesmal nicht auf Abstand stehen. 'Weißt du noch, wie ich im Wald gesagt habe, du sollst dich beeilen?' fragt sie. Dann lächelt sie schief. 'Du hattest recht mit deiner Vermutung: Es hatte Angst, verlassen zu werden. Jetzt, mit Regeln, klingt es nicht mehr hungrig - nur noch... dankbar.'",
+      "next": "pact_otto_epilog"
+    },
+    "pact_anna_epilog": {
+      "type": "narration",
+      "text": "Anna besucht mich jeden Herbst. 'Es singt anders', sagt sie. 'Zufriedener.' Sie lächelt - zum ersten Mal ohne Furcht.",
+      "next": "pact_otto_epilog"
+    },
+    "pact_otto_epilog": {
+      "type": "narration",
+      "text": "Otto verlässt das Dorf, als er begreift, dass die Tradition vorbei ist. Sein Lebenswerk - bedeutungslos.",
+      "next": "pact_candle_epilog"
+    },
+    "pact_candle_epilog": {
+      "type": "narration",
+      "text": "Die Kerze auf Großmutters Nachttisch brennt ruhiger. Nicht mehr verzweifelt, nicht mehr wartend. Eine stetige, zufriedene Flamme.",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "ending:pact"
+    }
+  }
 }

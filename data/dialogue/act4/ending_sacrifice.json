@@ -1,561 +1,561 @@
 {
-	"title": "Ende - Das Opfer",
-	"start": "narration_1",
-	"nodes": {
-		"narration_1": {
-			"type": "narration",
-			"text": "Ich schaue Konrad an. Er zittert. Schweißtropfen auf seiner Stirn. Hinter seinen Augen kämpft ein Mann gegen einen Ozean.",
-			"next": "check_konrad_help_sacrifice_intro"
-		},
-		"check_konrad_help_sacrifice_intro": {
-			"type": "flag_check",
-			"flag": "konrad_asked_help",
-			"value": 1,
-			"true_next": "narration_1_helped_konrad",
-			"false_next": "narration_1_distanced_konrad"
-		},
-		"narration_1_helped_konrad": {
-			"type": "narration",
-			"text": "Er hat mich um Hilfe gebeten, als er kaum noch sprechen konnte. Dieses Versprechen steht jetzt zwischen uns wie eine brennende Linie.",
-			"next": "snd_dark"
-		},
-		"narration_1_distanced_konrad": {
-			"type": "narration",
-			"text": "Ich bin ihm aus dem Weg gegangen, aus Angst vor dem, was durch ihn spricht. Und trotzdem stehe ich jetzt hier, um ihn zu retten.",
-			"next": "snd_dark"
-		},
-		"snd_dark": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "show_konrad",
-			"path": "ending_dark.wav"
-		},
-		"show_konrad": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "possessed",
-			"position": "right",
-			"action": "show",
-			"next": "narration_2"
-		},
-		"narration_2": {
-			"type": "narration",
-			"text": "Er hat mir den Wächterbaum gezeigt. Dreißig Jahre Gefangenschaft - und trotzdem hat er nie aufgehört, Mensch zu sein.",
-			"next": "narration_3"
-		},
-		"narration_3": {
-			"type": "narration",
-			"text": "Und ich habe in Großmutters Journal gelesen, was das Gefäß ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäß kann es nicht hier bleiben.",
-			"next": "check_chose_sacrifice_callback"
-		},
-		"check_chose_sacrifice_callback": {
-			"type": "flag_check",
-			"flag": "chose_sacrifice",
-			"value": 1,
-			"true_next": "narration_chose_sacrifice_callback",
-			"false_next": "elise_sacrifice_decision"
-		},
-		"narration_chose_sacrifice_callback": {
-			"type": "narration",
-			"text": "Diesmal wurde die Entscheidung nicht von einem Buch getroffen, nicht von Otto und nicht von Tradition. Ich habe sie selbst getroffen.",
-			"next": "elise_sacrifice_decision"
-		},
-		"elise_sacrifice_decision": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Konrad. Sieh mich an.",
-			"next": "konrad_look"
-		},
-		"konrad_look": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "right",
-			"action": "show",
-			"next": "konrad_sacrifice_1"
-		},
-		"konrad_sacrifice_1": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Elise... bitte tu es nicht. Ich kann es ertragen. Ich habe es dreißig Jahre ertragen.",
-			"next": "elise_sacrifice_1"
-		},
-		"elise_sacrifice_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Niemand sollte es ertragen MÜSSEN. Weder du noch irgendwer sonst.",
-			"next": "effect_decision"
-		},
-		"effect_decision": {
-			"type": "effect",
-			"effect": "vignette",
-			"params": {
-				"intensity": 0.5,
-				"duration": 1.0
-			},
-			"next": "narration_4"
-		},
-		"narration_4": {
-			"type": "narration",
-			"text": "Konrad war nie freiwillig das Gefäß. Er wurde gewählt, bevor er geboren wurde. Ausgesucht wie ein Opferlamm.",
-			"next": "elise_sacrifice_2"
-		},
-		"elise_sacrifice_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Ich wähle es freiwillig. Das ist der Unterschied. Großmutter hat mir beigebracht, dass Mut nicht die Abwesenheit von Angst ist. Es ist die Entscheidung, trotzdem zu handeln.",
-			"next": "narration_5"
-		},
-		"narration_5": {
-			"type": "narration",
-			"text": "Ich trete auf das Zeichen der Erde. Ich öffne meinen Geist - nicht um das Wesen zu binden oder zu verstehen, sondern um es einzuladen. In mich.",
-			"next": "elise_sacrifice_3"
-		},
-		"elise_sacrifice_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Komm. Ich bin bereit. Nimm mich statt ihm.",
-			"next": "narration_creature_sacrifice"
-		},
-		"narration_creature_sacrifice": {
-			"type": "narration",
-			"text": "WARUM? WARUM GIBST DU DICH FREIWILLIG?",
-			"next": "elise_sacrifice_4"
-		},
-		"elise_sacrifice_4": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Weil niemand allein sein sollte. Nicht einmal du. Und weil Konrad es verdient, frei zu sein.",
-			"next": "narration_creature_sacrifice_2"
-		},
-		"narration_creature_sacrifice_2": {
-			"type": "narration",
-			"text": "DU BIST WIE SIE. DIE ALTE. SIE HÄTTE DASSELBE GETAN. ABER SIE WAR ZU ALT. ZU MÜDE. DU BIST... JUNG. WARM.",
-			"next": "effect_invitation"
-		},
-		"effect_invitation": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 1.0
-			},
-			"next": "narration_6"
-		},
-		"narration_6": {
-			"type": "narration",
-			"text": "ICH NEHME DEIN ANGEBOT AN. ABER ICH WERDE NICHT NEHMEN. ICH WERDE TEILEN. WIR WERDEN ZUSAMMEN SEIN. NICHT WIRT UND PARASIT. NACHBARN.",
-			"next": "effect_transfer"
-		},
-		"effect_transfer": {
-			"type": "effect",
-			"effect": "breathing_darkness",
-			"params": {
-				"min": 0.2,
-				"max": 1.0,
-				"cycle": 1.5
-			},
-			"next": "narration_7"
-		},
-		"narration_7": {
-			"type": "narration",
-			"text": "Das Wesen bewegt sich. Ich spüre es - wie Wasser, das von einem Gefäß ins andere fließt. Aus Konrad heraus, durch den Stein, in mich hinein.",
-			"next": "effect_sprite_distort"
-		},
-		"effect_sprite_distort": {
-			"type": "effect",
-			"effect": "sprite_distortion",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "narration_8"
-		},
-		"narration_8": {
-			"type": "narration",
-			"text": "Es ist... nicht wie erwartet. Schmerz ist da - scharf, blendend - aber er zerreißt mich nicht. Es ist wie ein Meer, das in einen viel zu kleinen Teich drängt. Zu groß, zu alt, zu anders. Und doch finde ich einen Rhythmus, in dem wir beide atmen können.",
-			"next": "narration_8b"
-		},
-		"narration_8b": {
-			"type": "narration",
-			"text": "Ich spüre seine Einsamkeit. Sechshundert Jahre, eingesperrt in Dunkelheit, mit nichts als dem Hunger und dem Singen. Und jetzt... jetzt ist da Licht. Mein Licht.",
-			"next": "konrad_free"
-		},
-		"konrad_free": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "right",
-			"action": "show",
-			"next": "konrad_3"
-		},
-		"konrad_3": {
-			"type": "narration",
-			"text": "Konrads Augen werden klar. Zum ersten Mal in seinem Leben vollständig klar. Und sie füllen sich mit Tränen.",
-			"next": "check_trusted_konrad_sacrifice"
-		},
-		"check_trusted_konrad_sacrifice": {
-			"type": "flag_check",
-			"flag": "trusted_konrad",
-			"value": 1,
-			"true_next": "konrad_trusted_sacrifice",
-			"false_next": "check_tested_konrad_sacrifice"
-		},
-		"check_tested_konrad_sacrifice": {
-			"type": "flag_check",
-			"flag": "tested_konrad",
-			"value": 1,
-			"true_next": "konrad_tested_sacrifice",
-			"false_next": "check_distrusted_konrad_sacrifice"
-		},
-		"check_distrusted_konrad_sacrifice": {
-			"type": "flag_check",
-			"flag": "distrusted_konrad",
-			"value": 1,
-			"true_next": "konrad_distrusted_sacrifice",
-			"false_next": "konrad_untrusted_sacrifice"
-		},
-		"konrad_trusted_sacrifice": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Du hast mir geglaubt. Am Dorfplatz, als alle anderen mich fürchteten. Du hast mich angesehen und einen Menschen gesehen, nicht ein Monster.",
-			"next": "elise_sacrifice_5"
-		},
-		"konrad_tested_sacrifice": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Du hast mir nicht blind vertraut. Du hast mich geprüft, bis du sicher warst, dass ich noch ich bin. Und trotzdem tust du das für mich.",
-			"next": "elise_sacrifice_5"
-		},
-		"konrad_distrusted_sacrifice": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Du hast mich auf Abstand gehalten, um deinen Plan zu schützen. Du hattest Gründe. Und jetzt gibst du trotzdem alles, um mich freizubekommen.",
-			"next": "elise_sacrifice_5"
-		},
-		"konrad_untrusted_sacrifice": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Du kanntest mich kaum. Und trotzdem... warum? Warum für mich?",
-			"next": "elise_sacrifice_5"
-		},
-		"elise_sacrifice_5": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann, ohne dich weiter dafür zahlen zu lassen.",
-			"next": "konrad_5"
-		},
-		"konrad_5": {
-			"type": "dialogue",
-			"speaker": "konrad",
-			"expression": "sad",
-			"text": "Ich werde nie vergessen, was du getan hast. Nie.",
-			"next": "elise_sacrifice_6"
-		},
-		"elise_sacrifice_6": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Leb dein Leben, Konrad. Dreißig Jahre hast du verloren. Hol sie dir zurück.",
-			"next": "check_ally_sacrifice_georg"
-		},
-		"check_ally_sacrifice_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "show_georg_sacrifice",
-			"false_next": "check_ally_sacrifice_hilde"
-		},
-		"show_georg_sacrifice": {
-			"type": "character",
-			"character": "georg",
-			"expression": "afraid",
-			"position": "left",
-			"action": "show",
-			"next": "georg_sacrifice_1"
-		},
-		"georg_sacrifice_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "afraid",
-			"text": "Elise, nein! Du kannst nicht - das ist Wahnsinn! Es muss einen anderen Weg geben!",
-			"next": "elise_georg_sacrifice"
-		},
-		"elise_georg_sacrifice": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Es ist kein Wahnsinn, Georg. Es ist eine Entscheidung. Meine Entscheidung. Pass auf das Dorf auf.",
-			"next": "hide_georg_sacrifice"
-		},
-		"hide_georg_sacrifice": {
-			"type": "character",
-			"character": "georg",
-			"action": "hide",
-			"next": "narration_10"
-		},
-		"check_ally_sacrifice_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "show_hilde_sacrifice",
-			"false_next": "check_ally_sacrifice_voss"
-		},
-		"show_hilde_sacrifice": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "left",
-			"action": "show",
-			"next": "hilde_sacrifice_1"
-		},
-		"hilde_sacrifice_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Du bist mutiger als deine Großmutter. Sie hätte es getan, wenn sie gekonnt hätte. Ich segne dich, Kind.",
-			"next": "elise_hilde_sacrifice"
-		},
-		"elise_hilde_sacrifice": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Danke, Hilde. Für alles.",
-			"next": "hide_hilde_sacrifice"
-		},
-		"hide_hilde_sacrifice": {
-			"type": "character",
-			"character": "hilde",
-			"action": "hide",
-			"next": "narration_10"
-		},
-		"check_ally_sacrifice_voss": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "show_voss_sacrifice",
-			"false_next": "narration_sacrifice_solo"
-		},
-		"show_voss_sacrifice": {
-			"type": "character",
-			"character": "voss",
-			"expression": "praying",
-			"position": "left",
-			"action": "show",
-			"next": "voss_sacrifice_1"
-		},
-		"voss_sacrifice_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "praying",
-			"text": "Gott sei mit dir, Kind. Was du tust, ist... heilig. Auf eine Art, die kein Gebet erreichen kann.",
-			"next": "elise_voss_sacrifice"
-		},
-		"elise_voss_sacrifice": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Beten Sie für mich, Pfarrer. Nicht für meine Seele. Für meine Stärke.",
-			"next": "hide_voss_sacrifice"
-		},
-		"hide_voss_sacrifice": {
-			"type": "character",
-			"character": "voss",
-			"action": "hide",
-			"next": "narration_10"
-		},
-		"narration_sacrifice_solo": {
-			"type": "narration",
-			"text": "Stille. Nur das Singen - leiser jetzt, zufriedener. Niemand ist hier, um mich aufzuhalten. Niemand, um mich zu trösten. Nur ich und das Wesen, das langsam seinen neuen Platz findet.",
-			"next": "narration_10"
-		},
-		"narration_10": {
-			"type": "narration",
-			"text": "In meinem Kopf, neben meinen Gedanken, beginnt leise das Singen. Nicht bedrohlich. Nicht hungrig. Zufrieden. Wie eine Katze, die schnurrt.",
-			"next": "effect_final"
-		},
-		"effect_final": {
-			"type": "effect",
-			"effect": "color_glitch",
-			"params": {
-				"duration": 0.5
-			},
-			"next": "narration_11"
-		},
-		"narration_11": {
-			"type": "narration",
-			"text": "Konrad nimmt meine Hand. Er weint. Ich lächle. Es ist nicht mein Lächeln allein - aber es ist echt.",
-			"next": "hide_konrad"
-		},
-		"hide_konrad": {
-			"type": "character",
-			"character": "konrad",
-			"expression": "sad",
-			"position": "right",
-			"action": "hide",
-			"next": "narration_12"
-		},
-		"narration_12": {
-			"type": "narration",
-			"text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp.",
-			"next": "anna_sacrifice_appears"
-		},
-		"anna_sacrifice_appears": {
-			"type": "character",
-			"character": "anna",
-			"expression": "lucid",
-			"position": "left",
-			"action": "show",
-			"next": "anna_sacrifice_1"
-		},
-		"anna_sacrifice_1": {
-			"type": "narration",
-			"text": "Tage später finde ich Anna vor dem Schulhaus. Sie zeichnet - nicht mehr Spiralen. Blumen. Bäume. Normale Dinge.",
-			"next": "anna_sacrifice_2"
-		},
-		"anna_sacrifice_2": {
-			"type": "dialogue",
-			"speaker": "anna",
-			"expression": "lucid",
-			"text": "Das Singen klingt anders, Elise. Seit du hier bist. Es ist... glücklicher.",
-			"next": "elise_anna_sacrifice"
-		},
-		"elise_anna_sacrifice": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "happy",
-			"text": "Es hat jemanden zum Reden. Zum ersten Mal seit sechshundert Jahren.",
-			"next": "anna_sacrifice_3"
-		},
-		"anna_sacrifice_3": {
-			"type": "dialogue",
-			"speaker": "anna",
-			"expression": "lucid",
-			"text": "Bei dir klingt es nicht mehr wie Gefangenschaft. Mehr wie ein Gespräch. Es hört auf dich.",
-			"next": "elise_anna_2"
-		},
-		"elise_anna_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Und ich... ich glaube, ich mag es auch. Auf eine seltsame, unmenschliche Art.",
-			"next": "hide_anna_sacrifice"
-		},
-		"hide_anna_sacrifice": {
-			"type": "character",
-			"character": "anna",
-			"expression": "lucid",
-			"position": "left",
-			"action": "hide",
-			"next": "narration_13"
-		},
-		"narration_13": {
-			"type": "narration",
-			"text": "Das Wesen und ich werden lernen, zusammen zu existieren. Zwei Bewusstseine in einem Körper. Es wird nicht einfach sein. Aber es ist besser als sechshundert Jahre Blut.",
-			"next": "narration_14"
-		},
-		"narration_14": {
-			"type": "narration",
-			"text": "Großmutter, du hast mir beigebracht, das Unbekannte nicht zu fürchten. Jetzt lebe ich mit dem Unbekannten. Buchstäblich.",
-			"next": "narration_15"
-		},
-		"narration_15": {
-			"type": "narration",
-			"text": "Das Singen in meinem Kopf wird leiser. Sanfter. Fast wie ein Wiegenlied. Vielleicht ist es eines.",
-			"next": "journal_sacrifice"
-		},
-		"journal_sacrifice": {
-			"type": "journal",
-			"entry_id": "ending_sacrifice",
-			"title": "Das Opfer",
-			"content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit Regeln, Grenzen und täglicher Aushandlung. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
-			"next": "check_packed_sacrifice"
-		},
-		"check_packed_sacrifice": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 1,
-			"true_next": "packed_books_sacrifice",
-			"false_next": "check_packed_cross_sacrifice"
-		},
-		"packed_books_sacrifice": {
-			"type": "narration",
-			"text": "Meine Bücher stehen jetzt in Großmutters Regal. Ich lese sie manchmal, wenn das Wesen schläft. Folklore hat eine neue Bedeutung bekommen - nicht mehr Studium, sondern lebende Erfahrung.",
-			"next": "sacrifice_epilog_transition"
-		},
-		"check_packed_cross_sacrifice": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 2,
-			"true_next": "packed_cross_sacrifice",
-			"false_next": "check_packed_camera_sacrifice"
-		},
-		"packed_cross_sacrifice": {
-			"type": "narration",
-			"text": "Das Kruzifix hängt über meinem Bett. Manchmal, wenn das Wesen durch meine Augen auf das Kreuz blickt, spüre ich seine Neugier. Es kennt keine Götter. Aber es versteht den Trost.",
-			"next": "sacrifice_epilog_transition"
-		},
-		"check_packed_camera_sacrifice": {
-			"type": "flag_check",
-			"flag": "packed_item",
-			"value": 3,
-			"true_next": "packed_camera_sacrifice",
-			"false_next": "sacrifice_anna_epilog"
-		},
-		"packed_camera_sacrifice": {
-			"type": "narration",
-			"text": "Die Kamera steht verstaubt im Regal. Ich fotografiere nicht mehr. Wozu auch? Was ich sehe, kann keine Linse einfangen. Aber manchmal, in klaren Momenten, halte ich die Welt in Worten fest.",
-			"next": "sacrifice_epilog_transition"
-		},
-		"sacrifice_epilog_transition": {
-			"type": "narration",
-			"text": "Tage werden zu Wochen. Wochen zu Monaten. Ich lerne, mit meinem Gast zu leben. Und mein Gast lernt, mich nicht zu verschlingen.",
-			"next": "sacrifice_anna_epilog"
-		},
-		"sacrifice_anna_epilog": {
-			"type": "narration",
-			"text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt mir die Hand auf die Schulter.",
-			"next": "check_anna_warning_sacrifice"
-		},
-		"check_anna_warning_sacrifice": {
-			"type": "flag_check",
-			"flag": "anna_warning",
-			"value": 1,
-			"true_next": "sacrifice_anna_warning_payoff",
-			"false_next": "sacrifice_mathilde_epilog"
-		},
-		"sacrifice_anna_warning_payoff": {
-			"type": "narration",
-			"text": "Ich denke an die Nacht, in der Anna mich gewarnt hat: Das Wesen fürchte nicht mich, sondern Verlassenwerden. Jetzt sehe ich, wie präzise sie war - seit ich bleibe, ist aus dem Drohen ein Dialog geworden.",
-			"next": "sacrifice_mathilde_epilog"
-		},
-		"sacrifice_mathilde_epilog": {
-			"type": "narration",
-			"text": "Mathilde, die Blinde aus dem Zug, überlebte das Ritual vor sechzig Jahren. Allein, vergessen. Ich werde nicht vergessen werden.",
-			"next": "sacrifice_otto_epilog"
-		},
-		"sacrifice_otto_epilog": {
-			"type": "narration",
-			"text": "Otto versteht es nie. Er geht, weil die Tradition keinen Sinn mehr hat. Sein letzter Blick zurück ist leer.",
-			"next": "sacrifice_candle_epilog"
-		},
-		"sacrifice_candle_epilog": {
-			"type": "narration",
-			"text": "In Großmutters Haus brennt die Kerze weiter. Aber ihr Licht ist wärmer jetzt, goldener. Als wüsste sie, dass Elise geblieben ist.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "ending:sacrifice"
-		}
-	}
+  "title": "Ende - Das Opfer",
+  "start": "narration_1",
+  "nodes": {
+    "narration_1": {
+      "type": "narration",
+      "text": "Ich schaue Konrad an. Er zittert. Schweißtropfen auf seiner Stirn. Hinter seinen Augen kämpft ein Mann gegen einen Ozean.",
+      "next": "check_konrad_help_sacrifice_intro"
+    },
+    "check_konrad_help_sacrifice_intro": {
+      "type": "flag_check",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "true_next": "narration_1_helped_konrad",
+      "false_next": "narration_1_distanced_konrad"
+    },
+    "narration_1_helped_konrad": {
+      "type": "narration",
+      "text": "Er hat mich um Hilfe gebeten, als er kaum noch sprechen konnte. Dieses Versprechen steht jetzt zwischen uns wie eine brennende Linie.",
+      "next": "snd_dark"
+    },
+    "narration_1_distanced_konrad": {
+      "type": "narration",
+      "text": "Ich bin ihm aus dem Weg gegangen, seit der Moment am Dorfplatz, als nicht er, sondern etwas Älteres durch ihn sprach. Aus Angst vor dem, was durch ihn hört. Und trotzdem stehe ich jetzt hier, um ihn zu retten.",
+      "next": "snd_dark"
+    },
+    "snd_dark": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "show_konrad",
+      "path": "ending_dark.wav"
+    },
+    "show_konrad": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "possessed",
+      "position": "right",
+      "action": "show",
+      "next": "narration_2"
+    },
+    "narration_2": {
+      "type": "narration",
+      "text": "Er hat mir den Wächterbaum gezeigt. Dreißig Jahre Gefangenschaft - und trotzdem hat er nie aufgehört, Mensch zu sein.",
+      "next": "narration_3"
+    },
+    "narration_3": {
+      "type": "narration",
+      "text": "Und ich habe in Großmutters Journal gelesen, was das Gefäß ist: Eine Brücke. Das Wesen braucht einen menschlichen Geist als Anker in unserer Welt. Ohne Gefäß kann es nicht hier bleiben.",
+      "next": "check_chose_sacrifice_callback"
+    },
+    "check_chose_sacrifice_callback": {
+      "type": "flag_check",
+      "flag": "chose_sacrifice",
+      "value": 1,
+      "true_next": "narration_chose_sacrifice_callback",
+      "false_next": "elise_sacrifice_decision"
+    },
+    "narration_chose_sacrifice_callback": {
+      "type": "narration",
+      "text": "Diesmal wurde die Entscheidung nicht von einem Buch getroffen, nicht von Otto und nicht von Tradition. Ich habe sie selbst getroffen.",
+      "next": "elise_sacrifice_decision"
+    },
+    "elise_sacrifice_decision": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Konrad. Sieh mich an.",
+      "next": "konrad_look"
+    },
+    "konrad_look": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "right",
+      "action": "show",
+      "next": "konrad_sacrifice_1"
+    },
+    "konrad_sacrifice_1": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Elise... bitte tu es nicht. Ich kann es ertragen. Ich habe es dreißig Jahre ertragen.",
+      "next": "elise_sacrifice_1"
+    },
+    "elise_sacrifice_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Niemand sollte es ertragen MÜSSEN. Weder du noch irgendwer sonst.",
+      "next": "effect_decision"
+    },
+    "effect_decision": {
+      "type": "effect",
+      "effect": "vignette",
+      "params": {
+        "intensity": 0.5,
+        "duration": 1.0
+      },
+      "next": "narration_4"
+    },
+    "narration_4": {
+      "type": "narration",
+      "text": "Konrad war nie freiwillig das Gefäß. Er wurde gewählt, bevor er geboren wurde. Ausgesucht wie ein Opferlamm.",
+      "next": "elise_sacrifice_2"
+    },
+    "elise_sacrifice_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich wähle es freiwillig. Das ist der Unterschied. Großmutter hat mir beigebracht, dass Mut nicht die Abwesenheit von Angst ist. Es ist die Entscheidung, trotzdem zu handeln.",
+      "next": "narration_5"
+    },
+    "narration_5": {
+      "type": "narration",
+      "text": "Ich trete auf das Zeichen der Erde. Ich öffne meinen Geist - nicht um das Wesen zu binden oder zu verstehen, sondern um es einzuladen. In mich.",
+      "next": "elise_sacrifice_3"
+    },
+    "elise_sacrifice_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Komm. Ich bin bereit. Nimm mich statt ihm.",
+      "next": "narration_creature_sacrifice"
+    },
+    "narration_creature_sacrifice": {
+      "type": "narration",
+      "text": "WARUM? WARUM GIBST DU DICH FREIWILLIG?",
+      "next": "elise_sacrifice_4"
+    },
+    "elise_sacrifice_4": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Weil niemand allein sein sollte. Nicht einmal du. Und weil Konrad es verdient, frei zu sein.",
+      "next": "narration_creature_sacrifice_2"
+    },
+    "narration_creature_sacrifice_2": {
+      "type": "narration",
+      "text": "DU BIST WIE SIE. DIE ALTE. SIE HÄTTE DASSELBE GETAN. ABER SIE WAR ZU ALT. ZU MÜDE. DU BIST... JUNG. WARM.",
+      "next": "effect_invitation"
+    },
+    "effect_invitation": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 1.0
+      },
+      "next": "narration_6"
+    },
+    "narration_6": {
+      "type": "narration",
+      "text": "ICH NEHME DEIN ANGEBOT AN. ABER ICH WERDE NICHT NEHMEN. ICH WERDE TEILEN. WIR WERDEN ZUSAMMEN SEIN. NICHT WIRT UND PARASIT. NACHBARN.",
+      "next": "effect_transfer"
+    },
+    "effect_transfer": {
+      "type": "effect",
+      "effect": "breathing_darkness",
+      "params": {
+        "min": 0.2,
+        "max": 1.0,
+        "cycle": 1.5
+      },
+      "next": "narration_7"
+    },
+    "narration_7": {
+      "type": "narration",
+      "text": "Das Wesen bewegt sich. Ich spüre es - wie Wasser, das von einem Gefäß ins andere fließt. Aus Konrad heraus, durch den Stein, in mich hinein.",
+      "next": "effect_sprite_distort"
+    },
+    "effect_sprite_distort": {
+      "type": "effect",
+      "effect": "sprite_distortion",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "narration_8"
+    },
+    "narration_8": {
+      "type": "narration",
+      "text": "Es ist... nicht wie erwartet. Schmerz ist da - scharf, blendend - aber er zerreißt mich nicht. Es ist wie ein Meer, das in einen viel zu kleinen Teich drängt. Zu groß, zu alt, zu anders. Und doch finde ich einen Rhythmus, in dem wir beide atmen können.",
+      "next": "narration_8b"
+    },
+    "narration_8b": {
+      "type": "narration",
+      "text": "Ich spüre seine Einsamkeit. Sechshundert Jahre, eingesperrt in Dunkelheit, mit nichts als dem Hunger und dem Singen. Und jetzt... jetzt ist da Licht. Mein Licht.",
+      "next": "konrad_free"
+    },
+    "konrad_free": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "right",
+      "action": "show",
+      "next": "konrad_3"
+    },
+    "konrad_3": {
+      "type": "narration",
+      "text": "Konrads Augen werden klar. Zum ersten Mal in seinem Leben vollständig klar. Und sie füllen sich mit Tränen.",
+      "next": "check_trusted_konrad_sacrifice"
+    },
+    "check_trusted_konrad_sacrifice": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "konrad_trusted_sacrifice",
+      "false_next": "check_tested_konrad_sacrifice"
+    },
+    "check_tested_konrad_sacrifice": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "konrad_tested_sacrifice",
+      "false_next": "check_distrusted_konrad_sacrifice"
+    },
+    "check_distrusted_konrad_sacrifice": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "konrad_distrusted_sacrifice",
+      "false_next": "konrad_untrusted_sacrifice"
+    },
+    "konrad_trusted_sacrifice": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Du hast mir geglaubt. Am Dorfplatz, als alle anderen mich fürchteten. Du hast mich angesehen und einen Menschen gesehen, nicht ein Monster.",
+      "next": "elise_sacrifice_5"
+    },
+    "konrad_tested_sacrifice": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Du hast mir nicht blind vertraut. Du hast mich geprüft, bis du sicher warst, dass ich noch ich bin. Und trotzdem tust du das für mich.",
+      "next": "elise_sacrifice_5"
+    },
+    "konrad_distrusted_sacrifice": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Du hast mich auf Abstand gehalten, um deinen Plan zu schützen. Nach dem, was am Brunnen aus meinem Mund kam, war das kein Verrat, sondern Selbstschutz. Und jetzt gibst du trotzdem alles, um mich freizubekommen.",
+      "next": "elise_sacrifice_5"
+    },
+    "konrad_untrusted_sacrifice": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Du kanntest mich kaum. Und trotzdem... warum? Warum für mich?",
+      "next": "elise_sacrifice_5"
+    },
+    "elise_sacrifice_5": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann - kein ungefragter Zugriff, kein Zwang, jederzeit Stopp - ohne dich weiter dafür zahlen zu lassen.",
+      "next": "konrad_5"
+    },
+    "konrad_5": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Ich werde nie vergessen, was du getan hast. Nie.",
+      "next": "elise_sacrifice_6"
+    },
+    "elise_sacrifice_6": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Leb dein Leben, Konrad. Dreißig Jahre hast du verloren. Hol sie dir zurück.",
+      "next": "check_ally_sacrifice_georg"
+    },
+    "check_ally_sacrifice_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "show_georg_sacrifice",
+      "false_next": "check_ally_sacrifice_hilde"
+    },
+    "show_georg_sacrifice": {
+      "type": "character",
+      "character": "georg",
+      "expression": "afraid",
+      "position": "left",
+      "action": "show",
+      "next": "georg_sacrifice_1"
+    },
+    "georg_sacrifice_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "afraid",
+      "text": "Elise, nein! Du kannst nicht - das ist Wahnsinn! Es muss einen anderen Weg geben!",
+      "next": "elise_georg_sacrifice"
+    },
+    "elise_georg_sacrifice": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Es ist kein Wahnsinn, Georg. Es ist eine Entscheidung. Meine Entscheidung. Pass auf das Dorf auf.",
+      "next": "hide_georg_sacrifice"
+    },
+    "hide_georg_sacrifice": {
+      "type": "character",
+      "character": "georg",
+      "action": "hide",
+      "next": "narration_10"
+    },
+    "check_ally_sacrifice_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "show_hilde_sacrifice",
+      "false_next": "check_ally_sacrifice_voss"
+    },
+    "show_hilde_sacrifice": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "left",
+      "action": "show",
+      "next": "hilde_sacrifice_1"
+    },
+    "hilde_sacrifice_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du bist mutiger als deine Großmutter. Sie hätte es getan, wenn sie gekonnt hätte. Ich segne dich, Kind.",
+      "next": "elise_hilde_sacrifice"
+    },
+    "elise_hilde_sacrifice": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Danke, Hilde. Für alles.",
+      "next": "hide_hilde_sacrifice"
+    },
+    "hide_hilde_sacrifice": {
+      "type": "character",
+      "character": "hilde",
+      "action": "hide",
+      "next": "narration_10"
+    },
+    "check_ally_sacrifice_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "show_voss_sacrifice",
+      "false_next": "narration_sacrifice_solo"
+    },
+    "show_voss_sacrifice": {
+      "type": "character",
+      "character": "voss",
+      "expression": "praying",
+      "position": "left",
+      "action": "show",
+      "next": "voss_sacrifice_1"
+    },
+    "voss_sacrifice_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Gott sei mit dir, Kind. Was du tust, ist... heilig. Auf eine Art, die kein Gebet erreichen kann.",
+      "next": "elise_voss_sacrifice"
+    },
+    "elise_voss_sacrifice": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Beten Sie für mich, Pfarrer. Nicht für meine Seele. Für meine Stärke.",
+      "next": "hide_voss_sacrifice"
+    },
+    "hide_voss_sacrifice": {
+      "type": "character",
+      "character": "voss",
+      "action": "hide",
+      "next": "narration_10"
+    },
+    "narration_sacrifice_solo": {
+      "type": "narration",
+      "text": "Stille. Nur das Singen - leiser jetzt, zufriedener. Niemand ist hier, um mich aufzuhalten. Niemand, um mich zu trösten. Nur ich und das Wesen, das langsam seinen neuen Platz findet.",
+      "next": "narration_10"
+    },
+    "narration_10": {
+      "type": "narration",
+      "text": "In meinem Kopf, neben meinen Gedanken, beginnt leise das Singen. Nicht bedrohlich. Nicht hungrig. Zufrieden. Wie eine Katze, die schnurrt.",
+      "next": "effect_final"
+    },
+    "effect_final": {
+      "type": "effect",
+      "effect": "color_glitch",
+      "params": {
+        "duration": 0.5
+      },
+      "next": "narration_11"
+    },
+    "narration_11": {
+      "type": "narration",
+      "text": "Konrad nimmt meine Hand. Er weint. Ich lächle. Es ist nicht mein Lächeln allein - aber es ist echt.",
+      "next": "hide_konrad"
+    },
+    "hide_konrad": {
+      "type": "character",
+      "character": "konrad",
+      "expression": "sad",
+      "position": "right",
+      "action": "hide",
+      "next": "narration_12"
+    },
+    "narration_12": {
+      "type": "narration",
+      "text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp.",
+      "next": "anna_sacrifice_appears"
+    },
+    "anna_sacrifice_appears": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "show",
+      "next": "anna_sacrifice_1"
+    },
+    "anna_sacrifice_1": {
+      "type": "narration",
+      "text": "Tage später finde ich Anna vor dem Schulhaus. Sie zeichnet - nicht mehr Spiralen. Blumen. Bäume. Normale Dinge.",
+      "next": "anna_sacrifice_2"
+    },
+    "anna_sacrifice_2": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "lucid",
+      "text": "Das Singen klingt anders, Elise. Seit du hier bist. Es ist... glücklicher.",
+      "next": "elise_anna_sacrifice"
+    },
+    "elise_anna_sacrifice": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "happy",
+      "text": "Es hat jemanden zum Reden. Zum ersten Mal seit sechshundert Jahren.",
+      "next": "anna_sacrifice_3"
+    },
+    "anna_sacrifice_3": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "lucid",
+      "text": "Bei dir klingt es nicht mehr wie Gefangenschaft. Mehr wie ein Gespräch. Es hört auf dich.",
+      "next": "elise_anna_2"
+    },
+    "elise_anna_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Und ich... ich glaube, ich mag es auch. Auf eine seltsame, unmenschliche Art.",
+      "next": "hide_anna_sacrifice"
+    },
+    "hide_anna_sacrifice": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "hide",
+      "next": "narration_13"
+    },
+    "narration_13": {
+      "type": "narration",
+      "text": "Das Wesen und ich werden lernen, zusammen zu existieren. Zwei Bewusstseine in einem Körper. Es wird nicht einfach sein. Aber es ist besser als sechshundert Jahre Blut.",
+      "next": "narration_14"
+    },
+    "narration_14": {
+      "type": "narration",
+      "text": "Großmutter, du hast mir beigebracht, das Unbekannte nicht zu fürchten. Jetzt lebe ich mit dem Unbekannten. Buchstäblich.",
+      "next": "narration_15"
+    },
+    "narration_15": {
+      "type": "narration",
+      "text": "Das Singen in meinem Kopf wird leiser. Sanfter. Fast wie ein Wiegenlied. Vielleicht ist es eines.",
+      "next": "journal_sacrifice"
+    },
+    "journal_sacrifice": {
+      "type": "journal",
+      "entry_id": "ending_sacrifice",
+      "title": "Das Opfer",
+      "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit Regeln, Grenzen und täglicher Aushandlung. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
+      "next": "check_packed_sacrifice"
+    },
+    "check_packed_sacrifice": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 1,
+      "true_next": "packed_books_sacrifice",
+      "false_next": "check_packed_cross_sacrifice"
+    },
+    "packed_books_sacrifice": {
+      "type": "narration",
+      "text": "Meine Bücher stehen jetzt in Großmutters Regal. Ich lese sie manchmal, wenn das Wesen schläft. Folklore hat eine neue Bedeutung bekommen - nicht mehr Studium, sondern lebende Erfahrung.",
+      "next": "sacrifice_epilog_transition"
+    },
+    "check_packed_cross_sacrifice": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 2,
+      "true_next": "packed_cross_sacrifice",
+      "false_next": "check_packed_camera_sacrifice"
+    },
+    "packed_cross_sacrifice": {
+      "type": "narration",
+      "text": "Das Kruzifix hängt über meinem Bett. Manchmal, wenn das Wesen durch meine Augen auf das Kreuz blickt, spüre ich seine Neugier. Es kennt keine Götter. Aber es versteht den Trost.",
+      "next": "sacrifice_epilog_transition"
+    },
+    "check_packed_camera_sacrifice": {
+      "type": "flag_check",
+      "flag": "packed_item",
+      "value": 3,
+      "true_next": "packed_camera_sacrifice",
+      "false_next": "sacrifice_anna_epilog"
+    },
+    "packed_camera_sacrifice": {
+      "type": "narration",
+      "text": "Die Kamera steht verstaubt im Regal. Ich fotografiere nicht mehr. Wozu auch? Was ich sehe, kann keine Linse einfangen. Aber manchmal, in klaren Momenten, halte ich die Welt in Worten fest.",
+      "next": "sacrifice_epilog_transition"
+    },
+    "sacrifice_epilog_transition": {
+      "type": "narration",
+      "text": "Tage werden zu Wochen. Wochen zu Monaten. Ich lerne, mit meinem Gast zu leben. Und mein Gast lernt, mich nicht zu verschlingen.",
+      "next": "sacrifice_anna_epilog"
+    },
+    "sacrifice_anna_epilog": {
+      "type": "narration",
+      "text": "Anna versteht es als Erste. 'Das Singen klingt anders', flüstert sie. 'Wärmer. Wie ein Gespräch.' Sie legt mir die Hand auf die Schulter.",
+      "next": "check_anna_warning_sacrifice"
+    },
+    "check_anna_warning_sacrifice": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "sacrifice_anna_warning_payoff",
+      "false_next": "sacrifice_mathilde_epilog"
+    },
+    "sacrifice_anna_warning_payoff": {
+      "type": "narration",
+      "text": "Ich denke an die Nacht, in der Anna mich gewarnt hat: Das Wesen fürchte nicht mich, sondern Verlassenwerden. Jetzt sehe ich, wie präzise sie war - seit ich bleibe, ist aus dem Drohen ein Dialog geworden.",
+      "next": "sacrifice_mathilde_epilog"
+    },
+    "sacrifice_mathilde_epilog": {
+      "type": "narration",
+      "text": "Mathilde, die Blinde aus dem Zug, überlebte das Ritual vor sechzig Jahren. Allein, vergessen. Ich werde nicht vergessen werden.",
+      "next": "sacrifice_otto_epilog"
+    },
+    "sacrifice_otto_epilog": {
+      "type": "narration",
+      "text": "Otto versteht es nie. Er geht, weil die Tradition keinen Sinn mehr hat. Sein letzter Blick zurück ist leer.",
+      "next": "sacrifice_candle_epilog"
+    },
+    "sacrifice_candle_epilog": {
+      "type": "narration",
+      "text": "In Großmutters Haus brennt die Kerze weiter. Aber ihr Licht ist wärmer jetzt, goldener. Als wüsste sie, dass Elise geblieben ist.",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "ending:sacrifice"
+    }
+  }
 }

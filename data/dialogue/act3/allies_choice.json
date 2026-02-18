@@ -749,7 +749,7 @@
     },
     "elise_assess_distrusted_konrad": {
       "type": "narration",
-      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten, um den Plan zu schützen. Vielleicht rettet uns das. Vielleicht war es nur Angst mit einem vernünftigen Namen.",
+      "text": "Georg hat den Schlüssel und die Stärke. Hilde kennt den Gesang und die alten Wege. Voss kennt die Kammer und trägt dreißig Jahre Schuld. Und Konrad... ich habe ihn auf Abstand gehalten, seit seine Stimme am Brunnen für einen Herzschlag nicht mehr menschlich klang: 'ICH lüge nie.' Vielleicht schützt uns Distanz. Vielleicht war es nur Angst mit einem vernünftigen Namen.",
       "next": "elise_decide"
     },
     "elise_assess_tested_konrad": {

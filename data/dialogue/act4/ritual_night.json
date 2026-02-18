@@ -839,7 +839,7 @@
     },
     "konrad_distrust_memory": {
       "type": "narration",
-      "text": "Ich habe Konrad auf Abstand gehalten. Aus Angst, aus Vernunft - vielleicht aus beidem. Jetzt spüre ich, wie das Wesen genau diese Distanz als Hebel benutzt und ihn tiefer in sich hineinzieht.",
+      "text": "Ich habe Konrad auf Abstand gehalten. Nicht grundlos: Am Brunnen kippte seine Stimme plötzlich in dieses kalte 'ICH lüge nie'. Jetzt spüre ich, wie das Wesen genau diese Distanz als Hebel benutzt und ihn tiefer in sich hineinzieht.",
       "next": "check_approach"
     },
     "check_tested_konrad_memory": {
