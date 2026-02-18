@@ -50,6 +50,11 @@
 - **Fix applied:** Added a "truth-route closure checkpoint" to ship-block runs: if `ally_fallout_payoff_pending=1`, Truth ending must (a) pay rehearsal vs skipped-rehearsal cadence, (b) resolve hurt flags with explicit reconciliation beats, then (c) clear pending fallout on-screen.
 - **Applied now:** expanded `act4/ending_truth.json` with a new church-steps reconciliation micro-scene (rehearsal/cost + hurt-flag payoffs) before the existing ally epilog branch.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Multi-ally investment flattened late pacing on Night 6: even when players built trust with several allies, the preparation scene often felt like a single-ally lane, so setup value from other relationships underpaid before Act 4.
+- **Fix applied:** Added a "multi-ally carryover checkpoint" to the loop: if at least two allies are aligned, insert one concrete pre-ritual support event in Act 3 and require a mechanical/emotional payoff in Act 4 opening beats.
+- **Applied now:** introduced a new Night-6 support-bundle micro-scene in `act3/preparation.json` (sets `extra_support_bundle`) and integrated direct tactical payoff text in `act4/ritual_night.json`.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

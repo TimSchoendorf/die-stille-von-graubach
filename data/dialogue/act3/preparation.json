@@ -279,7 +279,7 @@
       "expression": "protective",
       "position": "left",
       "action": "hide",
-      "next": "narration_approach"
+      "next": "check_extra_support_bundle"
     },
     "check_hilde_visit": {
       "type": "flag_check",
@@ -361,7 +361,7 @@
       "expression": "kind",
       "position": "left",
       "action": "hide",
-      "next": "narration_approach"
+      "next": "check_extra_support_bundle"
     },
     "check_voss_visit": {
       "type": "flag_check",
@@ -471,7 +471,7 @@
       "expression": "praying",
       "position": "left",
       "action": "hide",
-      "next": "narration_approach"
+      "next": "check_extra_support_bundle"
     },
     "narration_alone_night": {
       "type": "narration",
@@ -481,7 +481,7 @@
     "narration_alone_night_2": {
       "type": "narration",
       "text": "Ich schreibe einen Brief. Für den Fall, dass ich nicht zurückkomme. An niemanden bestimmten. An die Welt, die nichts von Graubach weiß.",
-      "next": "narration_approach"
+      "next": "check_extra_support_bundle"
     },
     "narration_approach": {
       "type": "narration",
@@ -927,6 +927,52 @@
       "type": "narration",
       "text": "Mit der Szene an meiner Tür hat Otto die Nacht in Bewegung gesetzt. Ab jetzt entscheidet nicht nur das Wesen über den Druck dieser Stunden, sondern auch ein Mann, der Angst für Ordnung hält.",
       "next": "narration_dawn"
+    },
+    "check_extra_support_bundle": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "check_extra_support_georg_hilde",
+      "false_next": "check_extra_support_hilde"
+    },
+    "check_extra_support_georg_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "extra_support_bundle_scene",
+      "false_next": "check_extra_support_georg_voss"
+    },
+    "check_extra_support_georg_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "extra_support_bundle_scene",
+      "false_next": "check_extra_support_hilde"
+    },
+    "check_extra_support_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "check_extra_support_hilde_voss",
+      "false_next": "narration_approach"
+    },
+    "check_extra_support_hilde_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "extra_support_bundle_scene",
+      "false_next": "narration_approach"
+    },
+    "extra_support_bundle_scene": {
+      "type": "narration",
+      "text": "Später in der Nacht, als die Kerze fast bis zum Boden abgebrannt ist, finde ich vor der Tür ein Bündel: ein sauber gewickeltes Tuch mit drei Dingen aus dem Dorf - ein Metallkeil aus Georgs Werkbank, ein Kräuterfaden von Hilde und ein schmaler Papierstreifen mit Voss' Glockenzeiten. Nicht alle drei stammen immer von derselben Hand. Aber mindestens zwei Menschen haben beschlossen, dass ich diese Nacht nicht allein tragen soll.",
+      "next": "set_extra_support_bundle"
+    },
+    "set_extra_support_bundle": {
+      "type": "set_flag",
+      "flag": "extra_support_bundle",
+      "value": 1,
+      "next": "narration_approach"
     }
   }
 }

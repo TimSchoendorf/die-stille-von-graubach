@@ -209,7 +209,7 @@
     "narration_4": {
       "type": "narration",
       "text": "Großmutters Brief in meiner Brusttasche. Hildes Amulett um meinen Hals. Alles, was mich mit den Lebenden verbindet.",
-      "next": "check_read_final_entries_memory"
+      "next": "check_extra_support_bundle_ritual"
     },
     "check_searched_study_memory": {
       "type": "flag_check",
@@ -1920,6 +1920,18 @@
       "type": "narration",
       "text": "Annas Vier-Atemzüge-Takt sitzt noch: ein, zwei, drei, vier - erst dann spreche ich. Das nimmt dem Summen den Taktvorteil und hält meine Stimme bei mir.",
       "next": "check_bridge_fallout_seen_memory"
+    },
+    "check_extra_support_bundle_ritual": {
+      "type": "flag_check",
+      "flag": "extra_support_bundle",
+      "value": 1,
+      "true_next": "extra_support_bundle_ritual_payoff",
+      "false_next": "check_read_final_entries_memory"
+    },
+    "extra_support_bundle_ritual_payoff": {
+      "type": "narration",
+      "text": "Das Bündel von letzter Nacht liegt geöffnet neben der Schale. Der Metallkeil hält das Journal auf der richtigen Seite, der Kräuterfaden nimmt dem süßen Geruch die Spitze, und Voss' Glockenzeiten geben meinem Atem einen Takt. Kein Wundermittel. Aber genug, um aus Angst wieder Methode zu machen.",
+      "next": "check_read_final_entries_memory"
     }
   }
 }
