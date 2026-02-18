@@ -1567,7 +1567,7 @@ def _add_act4_ending_pact(tr):
        es="Siento la conexión. Un hilo. Delgado, pero fuerte. ¿Qué has hecho, niña?",
        it="Sento la connessione. Un filo. Sottile, ma forte. Che hai fatto, bambina?")
     _t(tr, F, "elise_hilde_pact",
-       en="Negotiated. As Grandmother would have wanted in the end. No more blood. Only company.",
+       en="Negotiated. As Grandmother would have wanted in the end. No more blood — only chosen company, with consent and the right to leave.",
        fr="Négocié. Comme grand-mère l'aurait voulu à là fin. Plus de sang. Seulement de là compagnie.",
        es="Negocié. Como la abuela habría querido al final. No más sangre. Solo compañía.",
        it="Negoziato. Come la nonna avrebbe voluto alla fine. Niente più sangue. Solo compagnia.")
@@ -1583,7 +1583,7 @@ def _add_act4_ending_pact(tr):
        es="¿Qué me perdí? ¿Qué pasó allá abajo?",
        it="Che cosa mi sono perso? Che è successo laggiù?")
     _t(tr, F, "elise_voss_pact",
-       en="Peace, Pastor. For the first time in six hundred years. No more sacrifice. No blood. Only a promise.",
+       en="Peace, Pastor. For the first time in six hundred years. No more sacrifice. No blood. A pact with terms: consent, chosen presence, and the right to stop.",
        fr="Là paix, Pasteur. Pour là première fois en six cents ans. Plus de sacrifice. Plus de sang. Seulement une promesse.",
        es="Paz, Pastor. Por primera vez en seiscientos años. No más sacrificios. Sin sangre. Solo una promesa.",
        it="Pace, Pastore. Per la prima volta in seicento anni. Nessun altro sacrificio. Niente sangue. Solo una promessa.")
@@ -1604,7 +1604,7 @@ def _add_act4_ending_pact(tr):
        it="Il patto",
        field="title")
     _t(tr, F, "journal_pact",
-       en="No blood. No sacrifice. No vessel. Only a promise: every year I will return and keep the entity company. It accepted. Grandmother paved the way. I will see it through.",
+       en="No blood. No sacrifice. No vessel. We set clear terms: chosen presence only, explicit consent, and the right to stop. I will return by choice, and if one day I cannot, another willing voice can take my place. It accepted. Grandmother paved the way.",
        fr="Pas de sang. Pas de sacrifice. Pas de réceptacle. Seulement une promesse : chaque année, je reviendrai tenir compagnie à l'entité. Elle à accepté. Grand-mère à ouvert là voie. Je là suivrai jusqu'au bout.",
        es="Sin sangre. Sin sacrificio. Sin receptáculo. Solo una promesa: cada año volveré y le haré compañía a la entidad. Aceptó. La abuela allanó el camino. Yo lo recorreré hasta el final.",
        it="Niente sangue. Niente sacrificio. Nessun ricettacolo. Solo una promessa: ogni anno tornerò è farò compagnia all'entità. Ha accettato. La nonna ha aperto la strada. Io la percorrerò fino in fondo.",
