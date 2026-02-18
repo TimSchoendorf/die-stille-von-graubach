@@ -196,6 +196,30 @@
     "konrad_3": {
       "type": "narration",
       "text": "Konrads Augen werden klar. Zum ersten Mal in seinem Leben vollständig klar. Und sie füllen sich mit Tränen.",
+      "next": "check_sought_konrad_sacrifice_memory"
+    },
+    "check_sought_konrad_sacrifice_memory": {
+      "type": "flag_check",
+      "flag": "sought_konrad",
+      "value": 1,
+      "true_next": "sacrifice_sought_konrad_memory",
+      "false_next": "check_avoided_konrad_sacrifice_memory"
+    },
+    "check_avoided_konrad_sacrifice_memory": {
+      "type": "flag_check",
+      "flag": "avoided_konrad",
+      "value": 1,
+      "true_next": "sacrifice_avoided_konrad_memory",
+      "false_next": "check_trusted_konrad_sacrifice"
+    },
+    "sacrifice_sought_konrad_memory": {
+      "type": "narration",
+      "text": "Ich höre wieder seine Worte aus dem Schulhaus - Hilf mir, bevor es mich ganz hat. Dass ich ihn gesucht habe, war riskant. Aber dieser Blick hat mich bis zu diesem Altar getragen.",
+      "next": "check_trusted_konrad_sacrifice"
+    },
+    "sacrifice_avoided_konrad_memory": {
+      "type": "narration",
+      "text": "Ich hatte ihn gemieden, um den Plan zu schützen. Der Abstand hat uns beide verletzt - und gerade deshalb weiß ich jetzt ohne Zweifel, was diese Freiheit kostet und warum ich sie ihm schulde.",
       "next": "check_trusted_konrad_sacrifice"
     },
     "check_trusted_konrad_sacrifice": {
@@ -230,7 +254,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Du hast mir nicht blind vertraut. Du hast mich geprüft, bis du sicher warst, dass ich noch ich bin. Und trotzdem tust du das für mich.",
+      "text": "Du hast mir nicht blind vertraut. Seit dem Abend mit den Spiralen hast du jede Regung geprüft, damit Vorsicht nicht zu Kälte wird. Und trotzdem tust du das jetzt für mich.",
       "next": "elise_sacrifice_5"
     },
     "konrad_distrusted_sacrifice": {
