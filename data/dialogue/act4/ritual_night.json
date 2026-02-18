@@ -251,13 +251,27 @@
       "flag": "georg_trust",
       "value": 10,
       "true_next": "georg_ritual_trust_line",
-      "false_next": "georg_ritual_1"
+      "false_next": "check_georg_hurt_day6"
     },
     "georg_ritual_trust_line": {
       "type": "dialogue",
       "speaker": "georg",
       "expression": "protective",
       "text": "Du hast mir dein Leben anvertraut, Elise. Das vergesse ich nicht.",
+      "next": "check_georg_hurt_day6"
+    },
+    "check_georg_hurt_day6": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "georg_ritual_hurt_line",
+      "false_next": "georg_ritual_1"
+    },
+    "georg_ritual_hurt_line": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Ich war gestern wütend, dass du mich erst draußen lassen wolltest. Bin ich ehrlich. Aber Wut ist kein Grund, dich heute allein in diese Kammer gehen zu lassen.",
       "next": "georg_ritual_1"
     },
     "georg_ritual_1": {
@@ -301,13 +315,27 @@
       "flag": "hilde_trust",
       "value": 10,
       "true_next": "hilde_ritual_trust_line",
-      "false_next": "hilde_ritual_entry_1"
+      "false_next": "check_hilde_hurt_day6"
     },
     "hilde_ritual_trust_line": {
       "type": "dialogue",
       "speaker": "hilde",
       "expression": "kind",
       "text": "Du hast auf eine alte Frau gehört, als alle anderen nur Angst hatten. Das war klug - und mutig.",
+      "next": "check_hilde_hurt_day6"
+    },
+    "check_hilde_hurt_day6": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "hilde_ritual_hurt_line",
+      "false_next": "hilde_ritual_entry_1"
+    },
+    "hilde_ritual_hurt_line": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Gestern hat deine Entscheidung gestochen, Kind. Ich wäre gern näher bei dir gewesen. Aber Kränkung ist kein Orakel - heute zählt nur, dass du lebend wieder hinausgehst.",
       "next": "hilde_ritual_entry_1"
     },
     "hilde_ritual_entry_1": {
@@ -351,13 +379,27 @@
       "flag": "voss_trust",
       "value": 10,
       "true_next": "voss_ritual_trust_line",
-      "false_next": "voss_ritual_1"
+      "false_next": "check_voss_hurt_day6"
     },
     "voss_ritual_trust_line": {
       "type": "dialogue",
       "speaker": "voss",
       "expression": "broken",
       "text": "Sie haben einem gebrochenen Priester vertraut. Dafür schulde ich Ihnen heute mehr als ein Gebet.",
+      "next": "check_voss_hurt_day6"
+    },
+    "check_voss_hurt_day6": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "voss_ritual_hurt_line",
+      "false_next": "voss_ritual_1"
+    },
+    "voss_ritual_hurt_line": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Gestern klang in mir noch Enttäuschung. Heute bleibt davon nur Scham. Ich habe zu oft zugesehen, während andere hinabstiegen. Das wiederhole ich nicht.",
       "next": "voss_ritual_1"
     },
     "voss_ritual_1": {
