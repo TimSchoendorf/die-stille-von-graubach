@@ -420,6 +420,13 @@
 			"flag": "tested_konrad",
 			"value": 1,
 			"true_next": "pact_konrad_epilog_tested",
+			"false_next": "check_trusted_konrad_pact"
+		},
+		"check_trusted_konrad_pact": {
+			"type": "flag_check",
+			"flag": "trusted_konrad",
+			"value": 1,
+			"true_next": "pact_konrad_epilog_trusted",
 			"false_next": "pact_konrad_epilog"
 		},
 		"pact_konrad_epilog_helped": {
@@ -442,6 +449,11 @@
 			"text": "Konrad wartet am Brunnen, still und erschöpft. 'Du hast mich geprüft, bevor du mir geglaubt hast', sagt er. 'Das war richtig.' Er hebt die Hand; die Spiralen verblassen sichtbar. 'Jetzt muss ich nicht mehr kämpfen, um ich selbst zu bleiben.'",
 			"next": "pact_konrad_epilog_2"
 		},
+		"pact_konrad_epilog_trusted": {
+			"type": "narration",
+			"text": "Konrad steht schon am Brunnen, als hätte er auf genau diesen Moment gewartet. 'Du hast damals den stillen Rand gesehen', sagt er leise. 'Nicht das Monster. Mich.' Er öffnet die Hand; die Spiralen sind nur noch blasse Schatten. 'Jetzt ist es wirklich still - und ich bleibe ich.'",
+			"next": "pact_konrad_epilog_2"
+		},
 		"pact_konrad_epilog": {
 			"type": "narration",
 			"text": "Konrad steht am Brunnen, als ich aus der Kirche trete. Die Spiralen auf seinen Händen verblassen bereits. Zum ersten Mal seit dreißig Jahren gehört sein Blick ihm selbst.",
@@ -461,7 +473,7 @@
 		},
 		"pact_anna_epilog_warning": {
 			"type": "narration",
-			"text": "Anna besucht mich jeden Herbst und bleibt diesmal nicht auf Abstand stehen. 'Weißt du noch, wie ich im Wald gesagt habe, du sollst dich beeilen?' fragt sie. Dann lächelt sie. 'Jetzt singt es anders. Nicht hungrig. Eher... dankbar.'",
+			"text": "Anna besucht mich jeden Herbst und bleibt diesmal nicht auf Abstand stehen. 'Weißt du noch, wie ich im Wald gesagt habe, du sollst dich beeilen?' fragt sie. Dann lächelt sie schief. 'Du hattest recht mit deiner Vermutung: Es hatte Angst, verlassen zu werden. Jetzt, mit Regeln, klingt es nicht mehr hungrig - nur noch... dankbar.'",
 			"next": "pact_otto_epilog"
 		},
 		"pact_anna_epilog": {
