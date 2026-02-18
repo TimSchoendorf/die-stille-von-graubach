@@ -1,534 +1,551 @@
 {
-	"title": "Ende - Das Erwachen",
-	"start": "narration_1",
-	"nodes": {
-		"narration_1": {
-			"type": "narration",
-			"text": "Ich versuche es. Mit aller Kraft, allem Willen, allem Wissen, das ich gesammelt habe. Aber es reicht nicht.",
-			"next": "check_destroy_awakening"
-		},
-		"check_destroy_awakening": {
-			"type": "flag_check",
-			"flag": "approach_destroy",
-			"value": 1,
-			"true_next": "destroy_awakening_intro",
-			"false_next": "snd_cosmic"
-		},
-		"destroy_awakening_intro": {
-			"type": "narration",
-			"text": "Ich wollte es vernichten. Dieser Hochmut - dieses menschliche Bedürfnis, alles zu kontrollieren, was wir nicht verstehen. Großmutter hat es anders versucht. Sie wollte einen Frieden. Ich wollte einen Sieg. Es gibt keinen Sieg gegen einen Berg.",
-			"next": "snd_cosmic"
-		},
-		"snd_cosmic": {
-			"type": "sound",
-			"sound_type": "music",
-			"next": "effect_failure",
-			"path": "cosmic_horror.wav"
-		},
-		"effect_failure": {
-			"type": "effect",
-			"effect": "shake",
-			"params": {
-				"intensity": 10.0,
-				"duration": 2.0
-			},
-			"next": "elise_awake_1"
-		},
-		"elise_awake_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Nein... nein, es funktioniert nicht. Der Gesang bricht ab, die Zeichen verblassen -",
-			"next": "narration_2"
-		},
-		"narration_2": {
-			"type": "narration",
-			"text": "Der Boden reißt auf. Nicht wie Stein reißt - wie Haut. Darunter ist Licht, aber kein Licht, das Augen sehen sollten. Es ist zu hell und zu dunkel gleichzeitig.",
-			"next": "creature_awake_1"
-		},
-		"creature_awake_1": {
-			"type": "narration",
-			"text": "DU HAST MICH GEWECKT. NACH SECHSHUNDERT JAHREN. GEWECKT. NICHT SANFT. NICHT WIE DIE ALTE. DU HAST GERISSEN.",
-			"next": "elise_awake_2"
-		},
-		"elise_awake_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Es tut mir leid - ich wollte nicht - ich habe versucht -",
-			"next": "creature_awake_2"
-		},
-		"creature_awake_2": {
-			"type": "narration",
-			"text": "VERSUCHT. JA. ALLE VERSUCHEN. FAST NIEMAND FRAGT. FAST NIEMAND HÖRT ZU. IHR KOMMT MIT FEUER UND GESANG UND KETTEN. SECHSHUNDERT JAHRE.",
-			"next": "effect_awakening"
-		},
-		"effect_awakening": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "effect_corruption"
-		},
-		"effect_corruption": {
-			"type": "effect",
-			"effect": "bg_corruption",
-			"params": {
-				"intensity": 0.8,
-				"duration": 2.0
-			},
-			"next": "narration_3"
-		},
-		"narration_3": {
-			"type": "narration",
-			"text": "Das Singen wird zum Brüllen. Ein Laut jenseits von Klang, der die Luft selbst verbiegt. Die Spiralen lösen sich von den Wänden und schweben.",
-			"next": "elise_awake_3"
-		},
-		"elise_awake_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "shocked",
-			"text": "Großmutter... es tut mir leid. Ich habe versagt. Ich wollte Kontrolle erzwingen, wo ich zuerst hätte fragen müssen.",
-			"next": "check_ally_fallout_awakening"
-		},
-		"check_ally_fallout_awakening": {
-			"type": "flag_check",
-			"flag": "ally_fallout_payoff_pending",
-			"value": 1,
-			"true_next": "fallout_awake_intro",
-			"false_next": "check_ally_awake_georg"
-		},
-		"fallout_awake_intro": {
-			"type": "narration",
-			"text": "Ihre Stimmen von vorhin schneiden durch den Lärm: verletzt, widersprechend, trotzdem geblieben. Genau diese Risse reißen jetzt mit auf - und mit ihnen die Regeln, die uns hätten halten sollen.",
-			"next": "check_georg_hurt_awake"
-		},
-		"check_georg_hurt_awake": {
-			"type": "flag_check",
-			"flag": "georg_hurt_day6",
-			"value": 1,
-			"true_next": "georg_hurt_awake",
-			"false_next": "check_hilde_hurt_awake"
-		},
-		"georg_hurt_awake": {
-			"type": "narration",
-			"text": "Georg hatte recht mit seinem Zorn: Mut ohne Team ist nur ein anderes Wort für Risiko. Ohne geteilte Verantwortung kippt jeder Plan in Alleingang.",
-			"next": "check_hilde_hurt_awake"
-		},
-		"check_hilde_hurt_awake": {
-			"type": "flag_check",
-			"flag": "hilde_hurt_day6",
-			"value": 1,
-			"true_next": "hilde_hurt_awake",
-			"false_next": "check_voss_hurt_awake"
-		},
-		"hilde_hurt_awake": {
-			"type": "narration",
-			"text": "Hilde hat vor Stolz ohne Zeugen gewarnt. Jetzt höre ich jedes Wort wieder, nur lauter: Ohne Zeugen werden aus Absprachen bloße Hoffnung.",
-			"next": "check_voss_hurt_awake"
-		},
-		"check_voss_hurt_awake": {
-			"type": "flag_check",
-			"flag": "voss_hurt_day6",
-			"value": 1,
-			"true_next": "voss_hurt_awake",
-			"false_next": "clear_fallout_awake"
-		},
-		"voss_hurt_awake": {
-			"type": "narration",
-			"text": "Voss klang müde, aber ehrlich: Schuld ersetzt kein Protokoll. Ich wollte es schneller als die Regeln erlaubten - ohne saubere Übergabe, ohne Sicherungs-Siegel.",
-			"next": "clear_fallout_awake"
-		},
-		"clear_fallout_awake": {
-			"type": "set_flag",
-			"flag": "ally_fallout_payoff_pending",
-			"value": 0,
-			"next": "check_ally_awake_georg"
-		},
-		"check_ally_awake_georg": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "show_georg_awake",
-			"false_next": "check_ally_awake_hilde"
-		},
-		"show_georg_awake": {
-			"type": "character",
-			"character": "georg",
-			"expression": "afraid",
-			"position": "left",
-			"action": "show",
-			"next": "georg_awake_1"
-		},
-		"georg_awake_1": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "afraid",
-			"text": "ELISE! Der Boden - alles bricht zusammen! Wir müssen -",
-			"next": "elise_georg_awake"
-		},
-		"elise_georg_awake": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Georg, es ist zu spät. Ich habe es geweckt. Ich konnte es nicht halten.",
-			"next": "georg_awake_2"
-		},
-		"georg_awake_2": {
-			"type": "dialogue",
-			"speaker": "georg",
-			"expression": "determined",
-			"text": "Dann kämpfen wir. Zusammen. Margarethe hätte nicht aufgegeben!",
-			"next": "elise_awake_fight_ally"
-		},
-		"elise_awake_fight_ally": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Du hast recht. Ich versuche es noch einmal. Ich MUSS es versuchen.",
-			"next": "elise_awake_fight"
-		},
-		"check_ally_awake_hilde": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "show_hilde_awake",
-			"false_next": "check_ally_awake_voss"
-		},
-		"show_hilde_awake": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "warning",
-			"position": "left",
-			"action": "show",
-			"next": "hilde_awake_1"
-		},
-		"hilde_awake_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Das Wesen erwacht! Elise, versuch den Gegengesang - schnell!",
-			"next": "elise_hilde_awake"
-		},
-		"elise_hilde_awake": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Ich kann nicht - die Worte - sie lösen sich auf in meinem Kopf -",
-			"next": "hilde_awake_2"
-		},
-		"hilde_awake_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "ritual",
-			"text": "Dann singe ICH! Halt durch, Kind!",
-			"next": "elise_awake_fight_ally"
-		},
-		"check_ally_awake_voss": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "show_voss_awake",
-			"false_next": "narration_alone_awake"
-		},
-		"show_voss_awake": {
-			"type": "character",
-			"character": "voss",
-			"expression": "praying",
-			"position": "left",
-			"action": "show",
-			"next": "voss_awake_1"
-		},
-		"voss_awake_1": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "praying",
-			"text": "Herr im Himmel - das Licht - es kommt von UNTEN -",
-			"next": "elise_voss_awake"
-		},
-		"elise_voss_awake": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Pfarrer, laufen Sie! Es ist zu spät für Gebete!",
-			"next": "voss_awake_2"
-		},
-		"voss_awake_2": {
-			"type": "dialogue",
-			"speaker": "voss",
-			"expression": "broken",
-			"text": "Nein. Nein, ich laufe nicht mehr. Dreißig Jahre bin ich gelaufen.",
-			"next": "elise_awake_fight_ally"
-		},
-		"narration_alone_awake": {
-			"type": "narration",
-			"text": "Ich bin allein. Niemand ist hier, um mir zu helfen. Aber ich gebe nicht auf. Noch nicht.",
-			"next": "elise_awake_fight"
-		},
-		"elise_awake_fight": {
-			"type": "narration",
-			"text": "Ich versuche es noch einmal. Sammle die Fragmente des Gesangs, die letzten Reste meines Willens. Aber das Wesen ist wach. Richtig wach. Und es ist wütend.",
-			"next": "check_hide_georg_awake"
-		},
-		"check_hide_georg_awake": {
-			"type": "flag_check",
-			"flag": "allied_georg",
-			"value": 1,
-			"true_next": "hide_georg_awake",
-			"false_next": "check_hide_hilde_awake"
-		},
-		"hide_georg_awake": {
-			"type": "character",
-			"character": "georg",
-			"action": "hide",
-			"next": "effect_ally_vanish"
-		},
-		"check_hide_hilde_awake": {
-			"type": "flag_check",
-			"flag": "allied_hilde",
-			"value": 1,
-			"true_next": "hide_hilde_awake",
-			"false_next": "check_hide_voss_awake"
-		},
-		"hide_hilde_awake": {
-			"type": "character",
-			"character": "hilde",
-			"action": "hide",
-			"next": "effect_ally_vanish"
-		},
-		"check_hide_voss_awake": {
-			"type": "flag_check",
-			"flag": "allied_voss",
-			"value": 1,
-			"true_next": "hide_voss_awake",
-			"false_next": "effect_ally_vanish"
-		},
-		"hide_voss_awake": {
-			"type": "character",
-			"character": "voss",
-			"action": "hide",
-			"next": "effect_ally_vanish"
-		},
-		"effect_ally_vanish": {
-			"type": "effect",
-			"effect": "text_glitch",
-			"params": {
-				"intensity": 0.6,
-				"duration": 2.0
-			},
-			"next": "narration_5"
-		},
-		"narration_5": {
-			"type": "narration",
-			"text": "Es wacht auf. Nicht langsam, nicht sanft. Es REISST sich aus dem Schlaf wie ein Ertrinkender an die Oberfläche. Sechshundert Jahre komprimierter Hunger entladen sich.",
-			"next": "creature_awake_3"
-		},
-		"creature_awake_3": {
-			"type": "narration",
-			"text": "ENDLICH. ENDLICH WACH. DIE KETTEN SIND GEBROCHEN. DIE DÜNNE STELLE REISST.",
-			"next": "effect_ui_break"
-		},
-		"effect_ui_break": {
-			"type": "effect",
-			"effect": "ui_degradation",
-			"params": {
-				"duration": 3.0
-			},
-			"next": "elise_awake_4"
-		},
-		"elise_awake_4": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Hör mich an! Bitte! Du musst nicht zerstören - du bist frei, du brauchst nicht -",
-			"next": "creature_awake_4"
-		},
-		"creature_awake_4": {
-			"type": "narration",
-			"text": "FREI? ICH KENNE KEIN FREI. ICH KENNE NUR HUNGER UND KETTEN UND DUNKELHEIT. UND JETZT KENNE ICH LICHT.",
-			"next": "narration_6"
-		},
-		"narration_6": {
-			"type": "narration",
-			"text": "Die Kammer bricht auseinander. Die Kirche darüber. Das Dorf. Die Realität selbst bekommt Risse, durch die etwas Anderes durchschimmert.",
-			"next": "bg_corrupted"
-		},
-		"bg_corrupted": {
-			"type": "background",
-			"background": "village_corrupted",
-			"transition": "fade",
-			"next": "effect_final_glitch"
-		},
-		"effect_final_glitch": {
-			"type": "effect",
-			"effect": "sprite_distortion",
-			"params": {
-				"duration": 2.0
-			},
-			"next": "narration_7"
-		},
-		"narration_7": {
-			"type": "narration",
-			"text": "Ich stehe im Zentrum des Zusammenbruchs. Die Dorfbewohner rennen, aber wohin? Der Wald ist keine Grenze mehr - er ist Teil des Wesens geworden.",
-			"next": "narration_8"
-		},
-		"narration_8": {
-			"type": "narration",
-			"text": "Otto schreit Befehle, die niemand hört. Voss betet, aber seine Worte lösen sich in der Luft auf. Anna steht still und lächelt. Sie hat es kommen sehen.",
-			"next": "elise_awake_5"
-		},
-		"elise_awake_5": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Großmutter... es tut mir leid. Ich war nicht stark genug. Ich war nicht weise genug.",
-			"next": "effect_text_corrupt"
-		},
-		"effect_text_corrupt": {
-			"type": "effect",
-			"effect": "text_glitch",
-			"params": {
-				"intensity": 0.8,
-				"duration": 3.0
-			},
-			"next": "narration_9"
-		},
-		"narration_9": {
-			"type": "narration",
-			"text": "Das Letzte, was ich sehe, bevor die Realität endgültig zerbricht: der Himmel öffnet sich. Nicht wie Wolken sich teilen. Wie Augen sich öffnen.",
-			"next": "narration_10"
-		},
-		"narration_10": {
-			"type": "narration",
-			"text": "Es sieht mich an. Es sieht alles an. Und alles sieht zurück.",
-			"next": "creature_awake_final"
-		},
-		"creature_awake_final": {
-			"type": "narration",
-			"text": "ICH SEHE EUCH. ICH SEHE EUCH ALLE. ENDLICH.",
-			"next": "effect_final"
-		},
-		"effect_final": {
-			"type": "effect",
-			"effect": "heavy_glitch",
-			"params": {
-				"duration": 3.0
-			},
-			"next": "narration_last_thought"
-		},
-		"narration_last_thought": {
-			"type": "narration",
-			"text": "Mein letzter bewusster Gedanke, bevor das Singen alles verschlingt: Großmutter hat mich nicht geschickt, um zu scheitern. Sie hat mir vertraut. Und ich habe... ich habe...",
-			"next": "narration_11"
-		},
-		"narration_11": {
-			"type": "narration",
-			"text": "Da̷n̸n̵ ̶i̸s̵t̷ ̶n̷u̴r̶ ̵n̸o̴c̵h̵ ̸S̸i̸n̷g̵e̶n̶.",
-			"next": "journal_awakening"
-		},
-		"journal_awakening": {
-			"type": "journal",
-			"entry_id": "ending_awakening",
-			"title": "Das Erwachen",
-			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Ich habe die drei Pfeiler zu spät geordnet - Zeichen, Gesang, Anker ohne belastbares Protokoll. Und das Singen... das Singen hört nicht mehr auf.",
-			"next": "check_konrad_help_awakening"
-		},
-		"awakening_konrad_epilog": {
-			"type": "narration",
-			"text": "Konrad steht mitten auf dem Dorfplatz. Er lächelt. Die Spiralen auf seinen Händen leuchten. Zum ersten Mal ist er nicht mehr Gefäß - er ist Brücke. Das Wesen fließt durch ihn hindurch in die Welt, und Konrad lässt es geschehen. Dreißig Jahre Kampf, und am Ende ergibt er sich - nicht aus Schwäche, sondern aus Müdigkeit.",
-			"next": "check_anna_warning_awakening"
-		},
-		"awakening_anna_epilog": {
-			"type": "narration",
-			"text": "Anna lächelt. Sie hat es immer gewusst. 'Es wollte nur gesehen werden', flüstert sie, während die Wände sich öffnen.",
-			"next": "awakening_otto_epilog"
-		},
-		"awakening_otto_epilog": {
-			"type": "narration",
-			"text": "Ottos Befehle verhallen. Sein Machtsystem - bedeutungslos vor etwas, das älter ist als Macht.",
-			"next": "awakening_candle_epilog"
-		},
-		"awakening_candle_epilog": {
-			"type": "narration",
-			"text": "Die Kerze auf dem Nachttisch lodert - eine wilde, hungrige Flamme - und erlischt dann mit einem Zischen, als hätte jemand sie ausgeblasen.",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "ending:awakening"
-		},
-		"check_konrad_help_awakening": {
-			"type": "flag_check",
-			"flag": "konrad_asked_help",
-			"value": 1,
-			"true_next": "awakening_konrad_epilog_helped",
-			"false_next": "check_tested_konrad_awakening"
-		},
-		"check_tested_konrad_awakening": {
-			"type": "flag_check",
-			"flag": "tested_konrad",
-			"value": 1,
-			"true_next": "awakening_konrad_epilog_tested",
-			"false_next": "check_trusted_konrad_awakening"
-		},
-		"check_trusted_konrad_awakening": {
-			"type": "flag_check",
-			"flag": "trusted_konrad",
-			"value": 1,
-			"true_next": "awakening_konrad_epilog_trusted",
-			"false_next": "check_distrusted_konrad_awakening"
-		},
-		"check_distrusted_konrad_awakening": {
-			"type": "flag_check",
-			"flag": "distrusted_konrad",
-			"value": 1,
-			"true_next": "awakening_konrad_epilog_distrusted",
-			"false_next": "awakening_konrad_epilog"
-		},
-		"awakening_konrad_epilog_helped": {
-			"type": "narration",
-			"text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
-			"next": "check_anna_warning_awakening"
-		},
-		"awakening_konrad_epilog_tested": {
-			"type": "narration",
-			"text": "Konrad steht mitten auf dem Dorfplatz. Ich hatte ihn geprüft, Spiralen als Falle, weil Vorsicht sich sicherer anfühlte als Vertrauen. Nun leuchten genau diese Spiralen auf seinen Händen wie ein Urteil, und das Wesen benutzt seinen Körper als Tür.",
-			"next": "check_anna_warning_awakening"
-		},
-		"awakening_konrad_epilog_trusted": {
-			"type": "narration",
-			"text": "Konrad steht mitten auf dem Dorfplatz, und ich erkenne den Mann wieder, dem ich in der Schule die Wahrheit über Großmutters Plan anvertraut hatte. Dieses Vertrauen hat ihn nicht geschützt. Es hat ihm nur den klaren Blick geschenkt, als das Wesen ihn zur Brücke machte.",
-			"next": "check_anna_warning_awakening"
-		},
-		"awakening_konrad_epilog_distrusted": {
-			"type": "narration",
-			"text": "Konrad steht mitten auf dem Dorfplatz und lächelt, als gehörte ihm endlich der eigene Körper. Ich habe ihn auf Abstand gehalten, um den Plan zu schützen. Jetzt gibt es keinen Plan mehr, nur ihn als offene Wunde zwischen Mensch und Wesen.",
-			"next": "check_anna_warning_awakening"
-		},
-		"check_anna_warning_awakening": {
-			"type": "flag_check",
-			"flag": "anna_warning",
-			"value": 1,
-			"true_next": "awakening_anna_epilog_warned",
-			"false_next": "check_anna_spirale_awakening"
-		},
-		"check_anna_spirale_awakening": {
-			"type": "flag_check",
-			"flag": "anna_spirale",
-			"value": 1,
-			"true_next": "awakening_anna_epilog_spirale",
-			"false_next": "awakening_anna_epilog"
-		},
-		"awakening_anna_epilog_warned": {
-			"type": "narration",
-			"text": "Anna lächelt nicht triumphierend, nur müde. Im Wald hatte sie gewarnt: \"Beeil dich.\" Jetzt wirkt ihr Blick wie der einer Zeugin, die den Unfall kommen sah und trotzdem nichts mehr aufhalten konnte.",
-			"next": "awakening_otto_epilog"
-		},
-		"awakening_anna_epilog_spirale": {
-			"type": "narration",
-			"text": "Anna betrachtet die aufreißenden Wände wie ihre Kreidespiralen - als hätte sie das Muster längst verstanden. Ein Kind, das die Form des Unheils früher las als wir Erwachsenen, und darum zuerst lernt, nicht mehr überrascht zu sein.",
-			"next": "awakening_otto_epilog"
-		}
-	}
+  "title": "Ende - Das Erwachen",
+  "start": "narration_1",
+  "nodes": {
+    "narration_1": {
+      "type": "narration",
+      "text": "Ich versuche es. Mit aller Kraft, allem Willen, allem Wissen, das ich gesammelt habe. Aber es reicht nicht.",
+      "next": "check_destroy_awakening"
+    },
+    "check_destroy_awakening": {
+      "type": "flag_check",
+      "flag": "approach_destroy",
+      "value": 1,
+      "true_next": "destroy_awakening_intro",
+      "false_next": "snd_cosmic"
+    },
+    "destroy_awakening_intro": {
+      "type": "narration",
+      "text": "Ich wollte es vernichten. Dieser Hochmut - dieses menschliche Bedürfnis, alles zu kontrollieren, was wir nicht verstehen. Großmutter hat es anders versucht. Sie wollte einen Frieden. Ich wollte einen Sieg. Es gibt keinen Sieg gegen einen Berg.",
+      "next": "snd_cosmic"
+    },
+    "snd_cosmic": {
+      "type": "sound",
+      "sound_type": "music",
+      "next": "effect_failure",
+      "path": "cosmic_horror.wav"
+    },
+    "effect_failure": {
+      "type": "effect",
+      "effect": "shake",
+      "params": {
+        "intensity": 10.0,
+        "duration": 2.0
+      },
+      "next": "elise_awake_1"
+    },
+    "elise_awake_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Nein... nein, es funktioniert nicht. Der Gesang bricht ab, die Zeichen verblassen -",
+      "next": "narration_2"
+    },
+    "narration_2": {
+      "type": "narration",
+      "text": "Der Boden reißt auf. Nicht wie Stein reißt - wie Haut. Darunter ist Licht, aber kein Licht, das Augen sehen sollten. Es ist zu hell und zu dunkel gleichzeitig.",
+      "next": "creature_awake_1"
+    },
+    "creature_awake_1": {
+      "type": "narration",
+      "text": "DU HAST MICH GEWECKT. NACH SECHSHUNDERT JAHREN. GEWECKT. NICHT SANFT. NICHT WIE DIE ALTE. DU HAST GERISSEN.",
+      "next": "elise_awake_2"
+    },
+    "elise_awake_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Es tut mir leid - ich wollte nicht - ich habe versucht -",
+      "next": "creature_awake_2"
+    },
+    "creature_awake_2": {
+      "type": "narration",
+      "text": "VERSUCHT. JA. ALLE VERSUCHEN. FAST NIEMAND FRAGT. FAST NIEMAND HÖRT ZU. IHR KOMMT MIT FEUER UND GESANG UND KETTEN. SECHSHUNDERT JAHRE.",
+      "next": "effect_awakening"
+    },
+    "effect_awakening": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "effect_corruption"
+    },
+    "effect_corruption": {
+      "type": "effect",
+      "effect": "bg_corruption",
+      "params": {
+        "intensity": 0.8,
+        "duration": 2.0
+      },
+      "next": "narration_3"
+    },
+    "narration_3": {
+      "type": "narration",
+      "text": "Das Singen wird zum Brüllen. Ein Laut jenseits von Klang, der die Luft selbst verbiegt. Die Spiralen lösen sich von den Wänden und schweben.",
+      "next": "elise_awake_3"
+    },
+    "elise_awake_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "shocked",
+      "text": "Großmutter... es tut mir leid. Ich habe versagt. Ich wollte Kontrolle erzwingen, wo ich zuerst hätte fragen müssen - und ich habe Regeln erst in der Krise sortiert, statt sie vorher tragfähig zu machen.",
+      "next": "check_ally_fallout_awakening"
+    },
+    "check_ally_fallout_awakening": {
+      "type": "flag_check",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "true_next": "fallout_awake_intro",
+      "false_next": "check_ally_awake_georg"
+    },
+    "fallout_awake_intro": {
+      "type": "narration",
+      "text": "Ihre Stimmen von vorhin schneiden durch den Lärm: verletzt, widersprechend, trotzdem geblieben. Genau diese Risse reißen jetzt mit auf - und mit ihnen die Regeln, die uns hätten halten sollen.",
+      "next": "check_georg_hurt_awake"
+    },
+    "check_georg_hurt_awake": {
+      "type": "flag_check",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "true_next": "georg_hurt_awake",
+      "false_next": "check_hilde_hurt_awake"
+    },
+    "georg_hurt_awake": {
+      "type": "narration",
+      "text": "Georg hatte recht mit seinem Zorn: Mut ohne Team ist nur ein anderes Wort für Risiko. Ohne geteilte Verantwortung kippt jeder Plan in Alleingang.",
+      "next": "check_hilde_hurt_awake"
+    },
+    "check_hilde_hurt_awake": {
+      "type": "flag_check",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "true_next": "hilde_hurt_awake",
+      "false_next": "check_voss_hurt_awake"
+    },
+    "hilde_hurt_awake": {
+      "type": "narration",
+      "text": "Hilde hat vor Stolz ohne Zeugen gewarnt. Jetzt höre ich jedes Wort wieder, nur lauter: Ohne Zeugen werden aus Absprachen bloße Hoffnung.",
+      "next": "check_voss_hurt_awake"
+    },
+    "check_voss_hurt_awake": {
+      "type": "flag_check",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "true_next": "voss_hurt_awake",
+      "false_next": "clear_fallout_awake"
+    },
+    "voss_hurt_awake": {
+      "type": "narration",
+      "text": "Voss klang müde, aber ehrlich: Schuld ersetzt kein Protokoll. Ich wollte es schneller als die Regeln erlaubten - ohne saubere Übergabe, ohne sofort greifendes Übergangs-Siegel, ohne belastbare Stop-Absicherung für alle Beteiligten.",
+      "next": "clear_fallout_awake"
+    },
+    "clear_fallout_awake": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 0,
+      "next": "check_ally_awake_georg"
+    },
+    "check_ally_awake_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "show_georg_awake",
+      "false_next": "check_ally_awake_hilde"
+    },
+    "show_georg_awake": {
+      "type": "character",
+      "character": "georg",
+      "expression": "afraid",
+      "position": "left",
+      "action": "show",
+      "next": "georg_awake_1"
+    },
+    "georg_awake_1": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "afraid",
+      "text": "ELISE! Der Boden - alles bricht zusammen! Wir müssen -",
+      "next": "elise_georg_awake"
+    },
+    "elise_georg_awake": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Georg, es ist zu spät. Ich habe es geweckt. Ich konnte es nicht halten.",
+      "next": "georg_awake_2"
+    },
+    "georg_awake_2": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "determined",
+      "text": "Dann kämpfen wir. Zusammen. Margarethe hätte nicht aufgegeben!",
+      "next": "elise_awake_fight_ally"
+    },
+    "elise_awake_fight_ally": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Du hast recht. Ich versuche es noch einmal. Ich MUSS es versuchen.",
+      "next": "elise_awake_fight"
+    },
+    "check_ally_awake_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "show_hilde_awake",
+      "false_next": "check_ally_awake_voss"
+    },
+    "show_hilde_awake": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "warning",
+      "position": "left",
+      "action": "show",
+      "next": "hilde_awake_1"
+    },
+    "hilde_awake_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Das Wesen erwacht! Elise, versuch den Gegengesang - schnell!",
+      "next": "elise_hilde_awake"
+    },
+    "elise_hilde_awake": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Ich kann nicht - die Worte - sie lösen sich auf in meinem Kopf -",
+      "next": "hilde_awake_2"
+    },
+    "hilde_awake_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "ritual",
+      "text": "Dann singe ICH! Halt durch, Kind!",
+      "next": "elise_awake_fight_ally"
+    },
+    "check_ally_awake_voss": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "show_voss_awake",
+      "false_next": "narration_alone_awake"
+    },
+    "show_voss_awake": {
+      "type": "character",
+      "character": "voss",
+      "expression": "praying",
+      "position": "left",
+      "action": "show",
+      "next": "voss_awake_1"
+    },
+    "voss_awake_1": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "praying",
+      "text": "Herr im Himmel - das Licht - es kommt von UNTEN -",
+      "next": "elise_voss_awake"
+    },
+    "elise_voss_awake": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Pfarrer, laufen Sie! Es ist zu spät für Gebete!",
+      "next": "voss_awake_2"
+    },
+    "voss_awake_2": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Nein. Nein, ich laufe nicht mehr. Dreißig Jahre bin ich gelaufen.",
+      "next": "elise_awake_fight_ally"
+    },
+    "narration_alone_awake": {
+      "type": "narration",
+      "text": "Ich bin allein. Niemand ist hier, um mir zu helfen. Aber ich gebe nicht auf. Noch nicht.",
+      "next": "elise_awake_fight"
+    },
+    "elise_awake_fight": {
+      "type": "narration",
+      "text": "Ich versuche es noch einmal. Sammle die Fragmente des Gesangs, die letzten Reste meines Willens. Aber das Wesen ist wach. Richtig wach. Und es ist wütend.",
+      "next": "check_hide_georg_awake"
+    },
+    "check_hide_georg_awake": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "hide_georg_awake",
+      "false_next": "check_hide_hilde_awake"
+    },
+    "hide_georg_awake": {
+      "type": "character",
+      "character": "georg",
+      "action": "hide",
+      "next": "effect_ally_vanish"
+    },
+    "check_hide_hilde_awake": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "hide_hilde_awake",
+      "false_next": "check_hide_voss_awake"
+    },
+    "hide_hilde_awake": {
+      "type": "character",
+      "character": "hilde",
+      "action": "hide",
+      "next": "effect_ally_vanish"
+    },
+    "check_hide_voss_awake": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "hide_voss_awake",
+      "false_next": "effect_ally_vanish"
+    },
+    "hide_voss_awake": {
+      "type": "character",
+      "character": "voss",
+      "action": "hide",
+      "next": "effect_ally_vanish"
+    },
+    "effect_ally_vanish": {
+      "type": "effect",
+      "effect": "text_glitch",
+      "params": {
+        "intensity": 0.6,
+        "duration": 2.0
+      },
+      "next": "narration_5"
+    },
+    "narration_5": {
+      "type": "narration",
+      "text": "Es wacht auf. Nicht langsam, nicht sanft. Es REISST sich aus dem Schlaf wie ein Ertrinkender an die Oberfläche. Sechshundert Jahre komprimierter Hunger entladen sich.",
+      "next": "creature_awake_3"
+    },
+    "creature_awake_3": {
+      "type": "narration",
+      "text": "ENDLICH. ENDLICH WACH. DIE KETTEN SIND GEBROCHEN. DIE DÜNNE STELLE REISST.",
+      "next": "effect_ui_break"
+    },
+    "effect_ui_break": {
+      "type": "effect",
+      "effect": "ui_degradation",
+      "params": {
+        "duration": 3.0
+      },
+      "next": "elise_awake_4"
+    },
+    "elise_awake_4": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Hör mich an! Bitte! Du musst nicht zerstören - du bist frei, du brauchst nicht -",
+      "next": "creature_awake_4"
+    },
+    "creature_awake_4": {
+      "type": "narration",
+      "text": "FREI? ICH KENNE KEIN FREI. ICH KENNE NUR HUNGER UND KETTEN UND DUNKELHEIT. UND JETZT KENNE ICH LICHT.",
+      "next": "narration_6"
+    },
+    "narration_6": {
+      "type": "narration",
+      "text": "Die Kammer bricht auseinander. Die Kirche darüber. Das Dorf. Die Realität selbst bekommt Risse, durch die etwas Anderes durchschimmert.",
+      "next": "bg_corrupted"
+    },
+    "bg_corrupted": {
+      "type": "background",
+      "background": "village_corrupted",
+      "transition": "fade",
+      "next": "effect_final_glitch"
+    },
+    "effect_final_glitch": {
+      "type": "effect",
+      "effect": "sprite_distortion",
+      "params": {
+        "duration": 2.0
+      },
+      "next": "narration_7"
+    },
+    "narration_7": {
+      "type": "narration",
+      "text": "Ich stehe im Zentrum des Zusammenbruchs. Die Dorfbewohner rennen, aber wohin? Der Wald ist keine Grenze mehr - er ist Teil des Wesens geworden.",
+      "next": "narration_8"
+    },
+    "narration_8": {
+      "type": "narration",
+      "text": "Otto schreit Befehle, die niemand hört. Voss betet, aber seine Worte lösen sich in der Luft auf. Anna steht still und lächelt. Sie hat es kommen sehen.",
+      "next": "elise_awake_5"
+    },
+    "elise_awake_5": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Großmutter... es tut mir leid. Ich war nicht stark genug. Ich war nicht weise genug.",
+      "next": "effect_text_corrupt"
+    },
+    "effect_text_corrupt": {
+      "type": "effect",
+      "effect": "text_glitch",
+      "params": {
+        "intensity": 0.8,
+        "duration": 3.0
+      },
+      "next": "narration_9"
+    },
+    "narration_9": {
+      "type": "narration",
+      "text": "Das Letzte, was ich sehe, bevor die Realität endgültig zerbricht: der Himmel öffnet sich. Nicht wie Wolken sich teilen. Wie Augen sich öffnen.",
+      "next": "narration_10"
+    },
+    "narration_10": {
+      "type": "narration",
+      "text": "Es sieht mich an. Es sieht alles an. Und alles sieht zurück.",
+      "next": "creature_awake_final"
+    },
+    "creature_awake_final": {
+      "type": "narration",
+      "text": "ICH SEHE EUCH. ICH SEHE EUCH ALLE. ENDLICH.",
+      "next": "effect_final"
+    },
+    "effect_final": {
+      "type": "effect",
+      "effect": "heavy_glitch",
+      "params": {
+        "duration": 3.0
+      },
+      "next": "narration_last_thought"
+    },
+    "narration_last_thought": {
+      "type": "narration",
+      "text": "Mein letzter bewusster Gedanke, bevor das Singen alles verschlingt: Großmutter hat mich nicht geschickt, um zu scheitern. Sie hat mir vertraut. Und ich habe... ich habe...",
+      "next": "check_konrad_promise_lastthought"
+    },
+    "narration_11": {
+      "type": "narration",
+      "text": "Da̷n̸n̵ ̶i̸s̵t̷ ̶n̷u̴r̶ ̵n̸o̴c̵h̵ ̸S̸i̸n̷g̵e̶n̶.",
+      "next": "journal_awakening"
+    },
+    "journal_awakening": {
+      "type": "journal",
+      "entry_id": "ending_awakening",
+      "title": "Das Erwachen",
+      "content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Ich habe die drei Pfeiler zu spät geordnet - Zeichen, Gesang, Anker ohne belastbares Protokoll. Und das Singen... das Singen hört nicht mehr auf.",
+      "next": "check_konrad_help_awakening"
+    },
+    "awakening_konrad_epilog": {
+      "type": "narration",
+      "text": "Konrad steht mitten auf dem Dorfplatz. Er lächelt. Die Spiralen auf seinen Händen leuchten. Zum ersten Mal ist er nicht mehr Gefäß - er ist Brücke. Das Wesen fließt durch ihn hindurch in die Welt, und Konrad lässt es geschehen. Dreißig Jahre Kampf, und am Ende ergibt er sich - nicht aus Schwäche, sondern aus Müdigkeit.",
+      "next": "check_anna_warning_awakening"
+    },
+    "awakening_anna_epilog": {
+      "type": "narration",
+      "text": "Anna lächelt. Sie hat es immer gewusst. 'Es wollte nur gesehen werden', flüstert sie, während die Wände sich öffnen.",
+      "next": "awakening_otto_epilog"
+    },
+    "awakening_otto_epilog": {
+      "type": "narration",
+      "text": "Ottos Befehle verhallen. Sein Machtsystem - bedeutungslos vor etwas, das älter ist als Macht.",
+      "next": "awakening_candle_epilog"
+    },
+    "awakening_candle_epilog": {
+      "type": "narration",
+      "text": "Die Kerze auf dem Nachttisch lodert - eine wilde, hungrige Flamme - und erlischt dann mit einem Zischen, als hätte jemand sie ausgeblasen.",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "ending:awakening"
+    },
+    "check_konrad_help_awakening": {
+      "type": "flag_check",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "true_next": "awakening_konrad_epilog_helped",
+      "false_next": "check_tested_konrad_awakening"
+    },
+    "check_tested_konrad_awakening": {
+      "type": "flag_check",
+      "flag": "tested_konrad",
+      "value": 1,
+      "true_next": "awakening_konrad_epilog_tested",
+      "false_next": "check_trusted_konrad_awakening"
+    },
+    "check_trusted_konrad_awakening": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "awakening_konrad_epilog_trusted",
+      "false_next": "check_distrusted_konrad_awakening"
+    },
+    "check_distrusted_konrad_awakening": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "awakening_konrad_epilog_distrusted",
+      "false_next": "awakening_konrad_epilog"
+    },
+    "awakening_konrad_epilog_helped": {
+      "type": "narration",
+      "text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
+      "next": "check_anna_warning_awakening"
+    },
+    "awakening_konrad_epilog_tested": {
+      "type": "narration",
+      "text": "Konrad steht mitten auf dem Dorfplatz. Ich hatte ihn geprüft, Spiralen als Falle, weil Vorsicht sich sicherer anfühlte als Vertrauen. Nun leuchten genau diese Spiralen auf seinen Händen wie ein Urteil, und das Wesen benutzt seinen Körper als Tür.",
+      "next": "check_anna_warning_awakening"
+    },
+    "awakening_konrad_epilog_trusted": {
+      "type": "narration",
+      "text": "Konrad steht mitten auf dem Dorfplatz, und ich erkenne den Mann wieder, dem ich in der Schule die Wahrheit über Großmutters Plan anvertraut hatte. Dieses Vertrauen hat ihn nicht geschützt. Es hat ihm nur den klaren Blick geschenkt, als das Wesen ihn zur Brücke machte.",
+      "next": "check_anna_warning_awakening"
+    },
+    "awakening_konrad_epilog_distrusted": {
+      "type": "narration",
+      "text": "Konrad steht mitten auf dem Dorfplatz und lächelt, als gehörte ihm endlich der eigene Körper. Ich habe ihn auf Abstand gehalten, um den Plan zu schützen. Jetzt gibt es keinen Plan mehr, nur ihn als offene Wunde zwischen Mensch und Wesen.",
+      "next": "check_anna_warning_awakening"
+    },
+    "check_anna_warning_awakening": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "awakening_anna_epilog_warned",
+      "false_next": "check_anna_spirale_awakening"
+    },
+    "check_anna_spirale_awakening": {
+      "type": "flag_check",
+      "flag": "anna_spirale",
+      "value": 1,
+      "true_next": "awakening_anna_epilog_spirale",
+      "false_next": "awakening_anna_epilog"
+    },
+    "awakening_anna_epilog_warned": {
+      "type": "narration",
+      "text": "Anna lächelt nicht triumphierend, nur müde. Im Wald hatte sie gewarnt: \"Beeil dich.\" Jetzt wirkt ihr Blick wie der einer Zeugin, die den Unfall kommen sah und trotzdem nichts mehr aufhalten konnte.",
+      "next": "awakening_otto_epilog"
+    },
+    "awakening_anna_epilog_spirale": {
+      "type": "narration",
+      "text": "Anna betrachtet die aufreißenden Wände wie ihre Kreidespiralen - als hätte sie das Muster längst verstanden. Ein Kind, das die Form des Unheils früher las als wir Erwachsenen, und darum zuerst lernt, nicht mehr überrascht zu sein.",
+      "next": "awakening_otto_epilog"
+    },
+    "check_konrad_promise_lastthought": {
+      "type": "flag_check",
+      "flag": "konrad_asked_help",
+      "value": 1,
+      "true_next": "narration_last_thought_promised",
+      "false_next": "narration_last_thought_default"
+    },
+    "narration_last_thought_promised": {
+      "type": "narration",
+      "text": "Mein letzter klarer Gedanke, bevor das Singen alles verschlingt: In der Schule hat Konrad geflüstert, ich solle ihm helfen, bevor es ihn ganz hat. Ich habe es versprochen. Und jetzt bricht genau dieses Versprechen mit mir zusammen.",
+      "next": "narration_11"
+    },
+    "narration_last_thought_default": {
+      "type": "narration",
+      "text": "Mein letzter bewusster Gedanke, bevor das Singen alles verschlingt: Großmutter hat mich nicht geschickt, um zu scheitern. Sie hat mir vertraut. Und ich habe... ich habe...",
+      "next": "narration_11"
+    }
+  }
 }
