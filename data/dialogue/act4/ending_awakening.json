@@ -90,6 +90,30 @@
       "speaker": "elise",
       "expression": "shocked",
       "text": "Großmutter... es tut mir leid. Ich habe versagt. Ich wollte Kontrolle erzwingen, wo ich zuerst hätte fragen müssen - und ich habe Regeln erst in der Krise sortiert, statt sie vorher tragfähig zu machen.",
+      "next": "check_asked_about_death_awake"
+    },
+    "check_asked_about_death_awake": {
+      "type": "flag_check",
+      "flag": "asked_about_death",
+      "value": 1,
+      "true_next": "death_warning_memory_awake",
+      "false_next": "check_approach_pact_awake"
+    },
+    "death_warning_memory_awake": {
+      "type": "narration",
+      "text": "Hildes Warnung schlägt in mir ein wie ein zweiter Einsturz: Wenn der Anker bricht, bricht das Siegel mit. Damals klang es wie Theorie. Jetzt hat es ein Geräusch, ein Gesicht, ein ganzes Dorf.",
+      "next": "check_approach_pact_awake"
+    },
+    "check_approach_pact_awake": {
+      "type": "flag_check",
+      "flag": "approach_pact",
+      "value": 1,
+      "true_next": "pact_failure_memory_awake",
+      "false_next": "check_ally_fallout_awakening"
+    },
+    "pact_failure_memory_awake": {
+      "type": "narration",
+      "text": "Ich wollte einen fairen Pakt statt Opfer. Aber zwischen 'wollen' und 'tragen' lag die Arbeit, die ich unterschätzt habe: Zeugen, Übergaben, Stop-Regeln unter Stress. Ohne gelebtes Protokoll blieb vom Plan nur gute Absicht.",
       "next": "check_ally_fallout_awakening"
     },
     "check_ally_fallout_awakening": {
