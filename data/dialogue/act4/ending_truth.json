@@ -1,550 +1,574 @@
 {
-  "title": "Ende - Die Wahrheit",
-  "start": "narration_1",
-  "nodes": {
-    "narration_1": {
-      "type": "narration",
-      "text": "Ich öffne meinen Geist. Nicht um zu binden, nicht um zu zerstören. Um zu verstehen. Großmutters Journal hat mich gelehrt, dass Wissen die stärkste Waffe ist.",
-      "next": "snd_cosmic"
-    },
-    "snd_cosmic": {
-      "type": "sound",
-      "sound_type": "music",
-      "next": "effect_opening",
-      "path": "cosmic_horror.wav"
-    },
-    "effect_opening": {
-      "type": "effect",
-      "effect": "desaturate",
-      "params": {
-        "amount": 0.5
-      },
-      "next": "elise_truth_1"
-    },
-    "elise_truth_1": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "determined",
-      "text": "Ich bin nicht hier, um zu kämpfen. Ich bin hier, um zuzuhören. Zeig mir, was du bist.",
-      "next": "narration_creature_hears"
-    },
-    "narration_creature_hears": {
-      "type": "narration",
-      "text": "Stille. Dann, wie ein Atemzug, der sechshundert Jahre angehalten wurde:",
-      "next": "creature_truth_1"
-    },
-    "creature_truth_1": {
-      "type": "narration",
-      "text": "DU WILLST SEHEN? WIRKLICH SEHEN? DIE LETZTE, DIE DAS WOLLTE, WAR VOR DREIHUNDERT JAHREN. SIE IST WAHNSINNIG GEWORDEN.",
-      "next": "elise_truth_2"
-    },
-    "elise_truth_2": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "determined",
-      "text": "Ich bin Folkloristin. Ich studiere das Unbekannte. Zeig es mir.",
-      "next": "creature_truth_2"
-    },
-    "creature_truth_2": {
-      "type": "narration",
-      "text": "SECHSHUNDERT JAHRE UND NIEMAND HAT DAS GEWOLLT. DEINE ALTE... SIE HAT GEFRAGT. ABER SIE WAR ZU MÜDE AM ENDE. ZU KRANK. ICH HABE... GEWARTET.",
-      "next": "narration_2"
-    },
-    "narration_2": {
-      "type": "narration",
-      "text": "Das Wesen spürt meine Absicht. Es zögert. Dann, wie eine Tür, die nach Jahrhunderten geöffnet wird, zeigt es mir alles.",
-      "next": "effect_visions"
-    },
-    "effect_visions": {
-      "type": "effect",
-      "effect": "heavy_glitch",
-      "params": {
-        "duration": 1.5
-      },
-      "next": "narration_3"
-    },
-    "narration_3": {
-      "type": "narration",
-      "text": "Bilder. Tausende Bilder. Die Erde, wie sie war, bevor Menschen sie betraten. Dinge, die unter der Oberfläche leben, älter als Stein, älter als Wasser.",
-      "next": "elise_truth_3"
-    },
-    "elise_truth_3": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "shocked",
-      "text": "Das... das ist die Erde? Vor den Menschen? Es ist... wunderschön. Und furchtbar.",
-      "next": "narration_4"
-    },
-    "narration_4": {
-      "type": "narration",
-      "text": "Graubach ist nicht einzigartig. Es gibt Hunderte solcher Stellen. Dünne Stellen, wo die Grenze zwischen oben und unten, zwischen unserer Welt und dem, was darunter liegt, fast nicht existiert.",
-      "next": "effect_revelation"
-    },
-    "effect_revelation": {
-      "type": "effect",
-      "effect": "color_glitch",
-      "params": {
-        "duration": 0.8
-      },
-      "next": "creature_truth_3"
-    },
-    "creature_truth_3": {
-      "type": "narration",
-      "text": "WIR WAREN HIER VOR EUCH. VOR EUREN BÄUMEN. VOR EUREM HIMMEL. EURE WELT IST EIN DÜNNER FILM AUF UNSERER.",
-      "next": "narration_5"
-    },
-    "narration_5": {
-      "type": "narration",
-      "text": "Unter dem Schwarzwald. Unter den Alpen. Unter den Meeren. Überall. Eine Welt unter der Welt, voll von Wesen wie diesem - und älteren, größeren, anderen.",
-      "next": "elise_truth_4"
-    },
-    "elise_truth_4": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "afraid",
-      "text": "Wie viele... wie viele seid ihr?",
-      "next": "creature_truth_4"
-    },
-    "creature_truth_4": {
-      "type": "narration",
-      "text": "MEHR ALS EURE STERNE. WENIGER ALS EURE GEDANKEN. WIR ZÄHLEN NICHT. WIR SIND.",
-      "next": "narration_tears"
-    },
-    "narration_tears": {
-      "type": "narration",
-      "text": "Ich weine. Nicht vor Angst. Vor Ehrfurcht. Vor der unfassbaren Größe dessen, was ich sehe. Mein Verstand ist ein Teelöffel, der versucht, einen Ozean zu fassen.",
-      "next": "effect_breathing"
-    },
-    "effect_breathing": {
-      "type": "effect",
-      "effect": "breathing_darkness",
-      "params": {
-        "min": 0.2,
-        "max": 1.0,
-        "cycle": 3.0
-      },
-      "next": "narration_7"
-    },
-    "narration_7": {
-      "type": "narration",
-      "text": "Das Wesen unter Graubach ist klein. Ein Kind, verglichen mit dem, was in den Tiefen des Ozeans schläft. Es ist nicht unser Feind. Es ist ein Nachbar, der zu nah lebt.",
-      "next": "elise_truth_5"
-    },
-    "elise_truth_5": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "sad",
-      "text": "Du bist... allein hier. Seit sechshundert Jahren allein. Getrennt von den anderen.",
-      "next": "creature_truth_5"
-    },
-    "creature_truth_5": {
-      "type": "narration",
-      "text": "DIE DÜNNE STELLE HAT MICH GEFANGEN. ICH BIN ZU NAH AN EURER WELT. ZU WEIT VON MEINER. ICH KANN NICHT ZURÜCK. ICH KANN NICHT VORWÄRTS. ICH BIN... DAZWISCHEN.",
-      "next": "elise_truth_6"
-    },
-    "elise_truth_6": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "thinking",
-      "text": "Deshalb der Hunger. Deshalb die Opfer. Du brauchst Kontakt zu bewusstem Leben, weil du von deinesgleichen abgeschnitten bist.",
-      "next": "creature_truth_6"
-    },
-    "creature_truth_6": {
-      "type": "narration",
-      "text": "JA. HUNGER IST KEIN WORT DAFÜR. ES IST WIE... WENN EURE AUGEN KEIN LICHT MEHR SEHEN. WENN EURE OHREN KEINE STIMMEN MEHR HÖREN. NUR STILLE. SECHSHUNDERT JAHRE STILLE.",
-      "next": "narration_8"
-    },
-    "narration_8": {
-      "type": "narration",
-      "text": "Und die Erkenntnis, die schwerste: Wir haben nie die Wahl gehabt, sie zu bekämpfen. Wir können nur lernen, neben ihnen zu existieren.",
-      "next": "elise_truth_7"
-    },
-    "elise_truth_7": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "determined",
-      "text": "Ich verstehe jetzt. Die Opfer waren nie nötig. Die Kreuze im Buch waren keine Naturgesetze - sie waren menschliche Angst, die zur Regel gemacht wurde.",
-      "next": "creature_truth_7"
-    },
-    "creature_truth_7": {
-      "type": "narration",
-      "text": "DEINE ALTE HAT DIE FRAGE GESTELLT. AM ENDE. ALS ES ZU SPÄT WAR. SIE HAT GEWEINT. ICH HABE... NICHT VERSTANDEN WARUM.",
-      "next": "narration_grandma"
-    },
-    "narration_grandma": {
-      "type": "narration",
-      "text": "Großmutter. Sie hat es gewusst. Am Ende ihres Lebens hat sie verstanden, was ich jetzt verstehe. Und sie hat mich gerufen, damit ich es zu Ende bringe.",
-      "next": "elise_truth_8"
-    },
-    "elise_truth_8": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "sad",
-      "text": "Sie hat geweint, weil sie dich verstanden hat. Weil dreißig Jahre Opfer unnötig waren. Weil sie es früher hätte sehen können.",
-      "next": "creature_truth_8"
-    },
-    "creature_truth_8": {
-      "type": "narration",
-      "text": "DU WEINST AUCH. WARUM?",
-      "next": "elise_truth_9"
-    },
-    "elise_truth_9": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "sad",
-      "text": "Weil du sechshundert Jahre allein warst. Und niemand hat gefragt, wie es dir geht.",
-      "next": "creature_truth_final"
-    },
-    "creature_truth_final": {
-      "type": "narration",
-      "text": "Stille. Lange Stille. Dann, leiser als je zuvor: DANKE.",
-      "next": "narration_truth_protocol"
-    },
-    "narration_anchor_truth": {
-      "type": "narration",
-      "text": "Das Zeichen pulst unter mir, der Gesang hallt nach, und der Anker - ich - hält die Verbindung. Aber statt zu binden, öffnet sie. Verständnis fließt in beide Richtungen.",
-      "next": "effect_understanding"
-    },
-    "effect_understanding": {
-      "type": "effect",
-      "effect": "clear",
-      "params": {},
-      "next": "snd_stop_amb"
-    },
-    "snd_stop_amb": {
-      "type": "sound",
-      "sound_type": "stop_ambience",
-      "next": "snd_peaceful"
-    },
-    "snd_peaceful": {
-      "type": "sound",
-      "sound_type": "music",
-      "next": "narration_9",
-      "path": "ending_peaceful.wav"
-    },
-    "narration_9": {
-      "type": "narration",
-      "text": "Das Wesen zieht sich zurück. Zufrieden. Zum ersten Mal in Jahrhunderten hat jemand es angesehen, ohne wegzulaufen. Es schläft ein - nicht aus Zwang, sondern aus Frieden.",
-      "next": "narration_9b"
-    },
-    "narration_9b": {
-      "type": "narration",
-      "text": "Aber bevor es geht, spüre ich etwas. Wie eine Hand, die meine berührt. Eine Geste, die kein menschliches Wort beschreibt. Abschied? Dankbarkeit? Hoffnung auf Wiedersehen?",
-      "next": "check_ally_truth_georg"
-    },
-    "check_ally_truth_georg": {
-      "type": "flag_check",
-      "flag": "allied_georg",
-      "value": 1,
-      "true_next": "show_georg_truth",
-      "false_next": "check_ally_truth_hilde"
-    },
-    "show_georg_truth": {
-      "type": "character",
-      "character": "georg",
-      "expression": "sad",
-      "position": "right",
-      "action": "show",
-      "next": "georg_truth_1"
-    },
-    "georg_truth_1": {
-      "type": "dialogue",
-      "speaker": "georg",
-      "expression": "sad",
-      "text": "Elise? Dein Gesicht... du weinst. Was ist passiert da unten?",
-      "next": "elise_georg_truth"
-    },
-    "elise_georg_truth": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "sad",
-      "text": "Ich habe es verstanden, Georg. Es ist nicht böse. Es war nie böse. Es ist nur... allein.",
-      "next": "georg_truth_2"
-    },
-    "georg_truth_2": {
-      "type": "dialogue",
-      "speaker": "georg",
-      "expression": "guilty",
-      "text": "Dreißig Jahre. Dreißig Jahre haben wir es gefüttert, als hätte es Blut gebraucht. Und alles, was es wollte...",
-      "next": "elise_georg_truth_2"
-    },
-    "elise_georg_truth_2": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "thinking",
-      "text": "War Gesellschaft. Ja. Großmutter hat es am Ende begriffen. Jetzt begreifen wir es auch.",
-      "next": "hide_georg_truth"
-    },
-    "hide_georg_truth": {
-      "type": "character",
-      "character": "georg",
-      "expression": "sad",
-      "position": "right",
-      "action": "hide",
-      "next": "anna_truth_appears"
-    },
-    "check_ally_truth_hilde": {
-      "type": "flag_check",
-      "flag": "allied_hilde",
-      "value": 1,
-      "true_next": "show_hilde_truth",
-      "false_next": "check_ally_truth_voss"
-    },
-    "show_hilde_truth": {
-      "type": "character",
-      "character": "hilde",
-      "expression": "wise",
-      "position": "right",
-      "action": "show",
-      "next": "hilde_truth_1"
-    },
-    "hilde_truth_1": {
-      "type": "dialogue",
-      "speaker": "hilde",
-      "expression": "wise",
-      "text": "Ich spüre es. Die Luft ist anders. Was hast du getan?",
-      "next": "elise_hilde_truth"
-    },
-    "elise_hilde_truth": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "thinking",
-      "text": "Zugehört. Mehr nicht. Es hat mir seine Geschichte gezeigt. Hilde... die ganze Tradition war ein Missverständnis.",
-      "next": "hilde_truth_2"
-    },
-    "hilde_truth_2": {
-      "type": "dialogue",
-      "speaker": "hilde",
-      "expression": "kind",
-      "text": "Margarethe hat das am Ende vermutet. Sie sagte: 'Es braucht keine Nahrung. Es braucht eine Stimme.'",
-      "next": "hide_hilde_truth"
-    },
-    "hide_hilde_truth": {
-      "type": "character",
-      "character": "hilde",
-      "expression": "kind",
-      "position": "right",
-      "action": "hide",
-      "next": "anna_truth_appears"
-    },
-    "check_ally_truth_voss": {
-      "type": "flag_check",
-      "flag": "allied_voss",
-      "value": 1,
-      "true_next": "show_voss_truth",
-      "false_next": "anna_truth_appears"
-    },
-    "show_voss_truth": {
-      "type": "character",
-      "character": "voss",
-      "expression": "afraid",
-      "position": "right",
-      "action": "show",
-      "next": "voss_truth_1"
-    },
-    "voss_truth_1": {
-      "type": "dialogue",
-      "speaker": "voss",
-      "expression": "afraid",
-      "text": "Das Singen hat aufgehört. Ist es... ist es tot?",
-      "next": "elise_voss_truth"
-    },
-    "elise_voss_truth": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "thinking",
-      "text": "Es schläft. Zufrieden. Pfarrer Voss... es war nie ein Dämon. Es war ein Wesen, das allein war. Sechshundert Jahre allein.",
-      "next": "voss_truth_2"
-    },
-    "voss_truth_2": {
-      "type": "dialogue",
-      "speaker": "voss",
-      "expression": "broken",
-      "text": "Kein Dämon? Dann war alles... die Opfer... Friedrich...",
-      "next": "elise_voss_truth_2"
-    },
-    "elise_voss_truth_2": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "sad",
-      "text": "Ja. Es war alles unnötig. Aber wir wussten es nicht. Niemand wusste es.",
-      "next": "hide_voss_truth"
-    },
-    "hide_voss_truth": {
-      "type": "character",
-      "character": "voss",
-      "expression": "broken",
-      "position": "right",
-      "action": "hide",
-      "next": "anna_truth_appears"
-    },
-    "anna_truth_appears": {
-      "type": "character",
-      "character": "anna",
-      "expression": "lucid",
-      "position": "left",
-      "action": "show",
-      "next": "anna_truth_1"
-    },
-    "anna_truth_1": {
-      "type": "narration",
-      "text": "Anna Voss steht am Eingang der Kammer. Ihre Augen sind klar - klarer als ich sie je gesehen habe. Zum ersten Mal sehe ich sie lächeln.",
-      "next": "anna_truth_2"
-    },
-    "anna_truth_2": {
-      "type": "dialogue",
-      "speaker": "anna",
-      "expression": "lucid",
-      "text": "Die Stille ist anders jetzt. Leichter. Es träumt friedlich, Elise. Zum ersten Mal.",
-      "next": "elise_anna_truth"
-    },
-    "elise_anna_truth": {
-      "type": "dialogue",
-      "speaker": "elise",
-      "expression": "happy",
-      "text": "Du hast es immer gespürt, nicht wahr? Die Spiralen, die Bilder. Du hast versucht, es uns zu zeigen.",
-      "next": "anna_truth_3"
-    },
-    "anna_truth_3": {
-      "type": "dialogue",
-      "speaker": "anna",
-      "expression": "lucid",
-      "text": "Es hat mir Bilder geschickt. Von seiner Welt. Aber ich konnte die Worte nicht finden. Du hast die Worte gefunden.",
-      "next": "hide_anna_truth"
-    },
-    "hide_anna_truth": {
-      "type": "character",
-      "character": "anna",
-      "expression": "lucid",
-      "position": "left",
-      "action": "hide",
-      "next": "letter_resolution_truth"
-    },
-    "letter_resolution_truth": {
-      "type": "narration",
-      "text": "Im Licht der Erkenntnis verstehe ich endlich Großmutters Brief. Sie schrieb keine Warnung - sie schrieb eine Einladung. 'Komm und sieh.' Sie wusste, dass ich die Erste sein würde, die hinsieht, ohne wegzulaufen.",
-      "next": "narration_10"
-    },
-    "narration_10": {
-      "type": "narration",
-      "text": "Ich stehe auf und steige hinauf ins Licht. Aber die Welt sieht anders aus. Ich spüre die dünnen Stellen - überall. Unter meinen Füßen, in der Ferne, am Horizont. Und ich weiß: Verstehen ohne Regeln wäre nur die nächste Form von Blindheit.",
-      "next": "narration_11"
-    },
-    "narration_11": {
-      "type": "narration",
-      "text": "Ich werde nie wieder unwissend sein. Das ist der Preis der Wahrheit. Und ihr Geschenk: Verantwortung, sie so zu ordnen, dass niemand mehr heimlich geopfert wird.",
-      "next": "narration_12"
-    },
-    "narration_12": {
-      "type": "narration",
-      "text": "Die Welt ist größer als wir dachten. Tiefer. Älter. Und unter jeder Stadt, unter jedem Wald, unter jedem Ozean schläft etwas, das wir nicht verstehen. Noch nicht.",
-      "next": "narration_13"
-    },
-    "narration_13": {
-      "type": "narration",
-      "text": "Aber ich bin die Erste, die es versucht. Großmutter, du hast mir den Weg gewiesen. Jetzt gehe ich ihn zu Ende.",
-      "next": "journal_truth"
-    },
-    "journal_truth": {
-      "type": "journal",
-      "entry_id": "ending_truth",
-      "title": "Die Wahrheit",
-      "content": "Das Wesen ist nicht unser Feind. Es ist ein Nachbar, gefangen zwischen den Welten, sechshundert Jahre allein. Die Opfer waren nie nötig. Es brauchte jemanden, der zuhört - und klare Grenzen: freiwilliger Kontakt, sofortiges Stopp-Recht und Übergangs-Siegel statt Menschenopfer.",
-      "next": "check_packed_truth"
-    },
-    "check_packed_truth": {
-      "type": "flag_check",
-      "flag": "packed_item",
-      "value": 1,
-      "true_next": "packed_books_truth",
-      "false_next": "check_packed_cross_truth"
-    },
-    "packed_books_truth": {
-      "type": "narration",
-      "text": "Meine Bücher - Folklore, Mythen, Bindungsrituale - sie haben mich auf das Fragen vorbereitet. Aber die Antworten kamen nicht aus Papier. Sie kamen aus dem Abgrund selbst.",
-      "next": "truth_epilog_transition"
-    },
-    "check_packed_cross_truth": {
-      "type": "flag_check",
-      "flag": "packed_item",
-      "value": 2,
-      "true_next": "packed_cross_truth",
-      "false_next": "check_packed_camera_truth"
-    },
-    "packed_cross_truth": {
-      "type": "narration",
-      "text": "Das Kruzifix meiner Mutter lag nutzlos in meiner Tasche. Kein Gott hat mich gerettet. Die Wahrheit hat mich gerettet - und die Bereitschaft, sie auszuhalten.",
-      "next": "truth_epilog_transition"
-    },
-    "check_packed_camera_truth": {
-      "type": "flag_check",
-      "flag": "packed_item",
-      "value": 3,
-      "true_next": "packed_camera_truth",
-      "false_next": "truth_konrad_epilog"
-    },
-    "packed_camera_truth": {
-      "type": "narration",
-      "text": "Die Kamera hätte nichts festhalten können, was ich gesehen habe. Sechshundert Jahre Einsamkeit passen nicht auf einen Filmstreifen. Aber ich werde darüber schreiben. Die Welt soll wissen, was hier war.",
-      "next": "truth_epilog_transition"
-    },
-    "truth_epilog_transition": {
-      "type": "narration",
-      "text": "Morgendämmerung. Die längste Nacht meines Lebens ist vorbei. Und mit ihr dreißig Jahre Lügen.",
-      "next": "check_konrad_help_truth"
-    },
-    "check_konrad_help_truth": {
-      "type": "flag_check",
-      "flag": "konrad_asked_help",
-      "value": 1,
-      "true_next": "truth_konrad_epilog_helped",
-      "false_next": "check_tested_konrad_truth"
-    },
-    "check_tested_konrad_truth": {
-      "type": "flag_check",
-      "flag": "tested_konrad",
-      "value": 1,
-      "true_next": "truth_konrad_epilog_tested",
-      "false_next": "truth_konrad_epilog"
-    },
-    "truth_konrad_epilog_helped": {
-      "type": "narration",
-      "text": "Konrad wartet am Kircheneingang, bleich aber wach. Als er mich sieht, atmet er aus, als hätte er seit Stunden die Luft angehalten. 'Du hast dein Versprechen gehalten', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
-      "next": "truth_otto_epilog"
-    },
-    "truth_konrad_epilog_tested": {
-      "type": "narration",
-      "text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Gut so. Das hat mich lange genug wach gehalten.' Dann blickt er in die Kammer hinab. 'Jetzt schläft es friedlich. Zum ersten Mal nicht durch mich.'",
-      "next": "truth_otto_epilog"
-    },
-    "truth_konrad_epilog": {
-      "type": "narration",
-      "text": "Konrad steht am Kircheneingang, als das Licht der Morgendämmerung durch die Fenster fällt. Die glasigen Momente sind vorbei. Seine Augen sind klar. 'Es schläft friedlich', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
-      "next": "truth_otto_epilog"
-    },
-    "truth_otto_epilog": {
-      "type": "narration",
-      "text": "Otto steht am Dorfrand und beobachtet den Sonnenaufgang. Er weint. Dreißig Jahre hat er geglaubt, die Opfer seien nötig. Jetzt muss er den Familien sagen, dass es eine Wahl gegeben hätte - und dass er sie nie gesucht hat.",
-      "next": "truth_mathilde_epilog"
-    },
-    "truth_mathilde_epilog": {
-      "type": "narration",
-      "text": "Ich denke an die blinde Frau im Zug. Mathilde. Sie hat es gewusst, seit sechzig Jahren. Sie summte die Melodie nicht aus Wahnsinn - sondern aus Verständnis.",
-      "next": "truth_candle_epilog"
-    },
-    "truth_candle_epilog": {
-      "type": "narration",
-      "text": "In Großmutters Haus erlischt die Kerze. Aber der Geruch nach Honig und Kräutern bleibt.",
-      "next": "scene_end"
-    },
-    "scene_end": {
-      "type": "scene_end",
-      "next_file": "ending:truth"
-    },
-    "narration_truth_protocol": {
-      "type": "narration",
-      "text": "Ich atme aus und setze Grenzen, bevor die Stille uns wieder verschluckt: Kein Zugriff auf ungefragte Gedanken. Kein Griff nach einem einzelnen Gefäß. Kontakt nur freiwillig, widerrufbar, mit klarer Übergabe - und wenn niemand bereit ist, bleibt das Übergangs-Siegel aktiv.",
-      "next": "narration_anchor_truth"
-    }
-  }
+	"title": "Ende - Die Wahrheit",
+	"start": "narration_1",
+	"nodes": {
+		"narration_1": {
+			"type": "narration",
+			"text": "Ich öffne meinen Geist. Nicht um zu binden, nicht um zu zerstören. Um zu verstehen. Großmutters Journal hat mich gelehrt, dass Wissen die stärkste Waffe ist.",
+			"next": "snd_cosmic"
+		},
+		"snd_cosmic": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "effect_opening",
+			"path": "cosmic_horror.wav"
+		},
+		"effect_opening": {
+			"type": "effect",
+			"effect": "desaturate",
+			"params": {
+				"amount": 0.5
+			},
+			"next": "elise_truth_1"
+		},
+		"elise_truth_1": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich bin nicht hier, um zu kämpfen. Ich bin hier, um zuzuhören. Zeig mir, was du bist.",
+			"next": "narration_creature_hears"
+		},
+		"narration_creature_hears": {
+			"type": "narration",
+			"text": "Stille. Dann, wie ein Atemzug, der sechshundert Jahre angehalten wurde:",
+			"next": "creature_truth_1"
+		},
+		"creature_truth_1": {
+			"type": "narration",
+			"text": "DU WILLST SEHEN? WIRKLICH SEHEN? DIE LETZTE, DIE DAS WOLLTE, WAR VOR DREIHUNDERT JAHREN. SIE IST WAHNSINNIG GEWORDEN.",
+			"next": "elise_truth_2"
+		},
+		"elise_truth_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich bin Folkloristin. Ich studiere das Unbekannte. Zeig es mir.",
+			"next": "creature_truth_2"
+		},
+		"creature_truth_2": {
+			"type": "narration",
+			"text": "SECHSHUNDERT JAHRE UND NIEMAND HAT DAS GEWOLLT. DEINE ALTE... SIE HAT GEFRAGT. ABER SIE WAR ZU MÜDE AM ENDE. ZU KRANK. ICH HABE... GEWARTET.",
+			"next": "narration_2"
+		},
+		"narration_2": {
+			"type": "narration",
+			"text": "Das Wesen spürt meine Absicht. Es zögert. Dann, wie eine Tür, die nach Jahrhunderten geöffnet wird, zeigt es mir alles.",
+			"next": "effect_visions"
+		},
+		"effect_visions": {
+			"type": "effect",
+			"effect": "heavy_glitch",
+			"params": {
+				"duration": 1.5
+			},
+			"next": "narration_3"
+		},
+		"narration_3": {
+			"type": "narration",
+			"text": "Bilder. Tausende Bilder. Die Erde, wie sie war, bevor Menschen sie betraten. Dinge, die unter der Oberfläche leben, älter als Stein, älter als Wasser.",
+			"next": "elise_truth_3"
+		},
+		"elise_truth_3": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "shocked",
+			"text": "Das... das ist die Erde? Vor den Menschen? Es ist... wunderschön. Und furchtbar.",
+			"next": "narration_4"
+		},
+		"narration_4": {
+			"type": "narration",
+			"text": "Graubach ist nicht einzigartig. Es gibt Hunderte solcher Stellen. Dünne Stellen, wo die Grenze zwischen oben und unten, zwischen unserer Welt und dem, was darunter liegt, fast nicht existiert.",
+			"next": "effect_revelation"
+		},
+		"effect_revelation": {
+			"type": "effect",
+			"effect": "color_glitch",
+			"params": {
+				"duration": 0.8
+			},
+			"next": "creature_truth_3"
+		},
+		"creature_truth_3": {
+			"type": "narration",
+			"text": "WIR WAREN HIER VOR EUCH. VOR EUREN BÄUMEN. VOR EUREM HIMMEL. EURE WELT IST EIN DÜNNER FILM AUF UNSERER.",
+			"next": "narration_5"
+		},
+		"narration_5": {
+			"type": "narration",
+			"text": "Unter dem Schwarzwald. Unter den Alpen. Unter den Meeren. Überall. Eine Welt unter der Welt, voll von Wesen wie diesem - und älteren, größeren, anderen.",
+			"next": "elise_truth_4"
+		},
+		"elise_truth_4": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "afraid",
+			"text": "Wie viele... wie viele seid ihr?",
+			"next": "creature_truth_4"
+		},
+		"creature_truth_4": {
+			"type": "narration",
+			"text": "MEHR ALS EURE STERNE. WENIGER ALS EURE GEDANKEN. WIR ZÄHLEN NICHT. WIR SIND.",
+			"next": "narration_tears"
+		},
+		"narration_tears": {
+			"type": "narration",
+			"text": "Ich weine. Nicht vor Angst. Vor Ehrfurcht. Vor der unfassbaren Größe dessen, was ich sehe. Mein Verstand ist ein Teelöffel, der versucht, einen Ozean zu fassen.",
+			"next": "effect_breathing"
+		},
+		"effect_breathing": {
+			"type": "effect",
+			"effect": "breathing_darkness",
+			"params": {
+				"min": 0.2,
+				"max": 1.0,
+				"cycle": 3.0
+			},
+			"next": "narration_7"
+		},
+		"narration_7": {
+			"type": "narration",
+			"text": "Das Wesen unter Graubach ist klein. Ein Kind, verglichen mit dem, was in den Tiefen des Ozeans schläft. Es ist nicht unser Feind. Es ist ein Nachbar, der zu nah lebt.",
+			"next": "elise_truth_5"
+		},
+		"elise_truth_5": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Du bist... allein hier. Seit sechshundert Jahren allein. Getrennt von den anderen.",
+			"next": "creature_truth_5"
+		},
+		"creature_truth_5": {
+			"type": "narration",
+			"text": "DIE DÜNNE STELLE HAT MICH GEFANGEN. ICH BIN ZU NAH AN EURER WELT. ZU WEIT VON MEINER. ICH KANN NICHT ZURÜCK. ICH KANN NICHT VORWÄRTS. ICH BIN... DAZWISCHEN.",
+			"next": "elise_truth_6"
+		},
+		"elise_truth_6": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Deshalb der Hunger. Deshalb die Opfer. Du brauchst Kontakt zu bewusstem Leben, weil du von deinesgleichen abgeschnitten bist.",
+			"next": "creature_truth_6"
+		},
+		"creature_truth_6": {
+			"type": "narration",
+			"text": "JA. HUNGER IST KEIN WORT DAFÜR. ES IST WIE... WENN EURE AUGEN KEIN LICHT MEHR SEHEN. WENN EURE OHREN KEINE STIMMEN MEHR HÖREN. NUR STILLE. SECHSHUNDERT JAHRE STILLE.",
+			"next": "narration_8"
+		},
+		"narration_8": {
+			"type": "narration",
+			"text": "Und die Erkenntnis, die schwerste: Wir haben nie die Wahl gehabt, sie zu bekämpfen. Wir können nur lernen, neben ihnen zu existieren.",
+			"next": "elise_truth_7"
+		},
+		"elise_truth_7": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "determined",
+			"text": "Ich verstehe jetzt. Die Opfer waren nie nötig. Die Kreuze im Buch waren keine Naturgesetze - sie waren menschliche Angst, die zur Regel gemacht wurde.",
+			"next": "creature_truth_7"
+		},
+		"creature_truth_7": {
+			"type": "narration",
+			"text": "DEINE ALTE HAT DIE FRAGE GESTELLT. AM ENDE. ALS ES ZU SPÄT WAR. SIE HAT GEWEINT. ICH HABE... NICHT VERSTANDEN WARUM.",
+			"next": "narration_grandma"
+		},
+		"narration_grandma": {
+			"type": "narration",
+			"text": "Großmutter. Sie hat es gewusst. Am Ende ihres Lebens hat sie verstanden, was ich jetzt verstehe. Und sie hat mich gerufen, damit ich es zu Ende bringe.",
+			"next": "elise_truth_8"
+		},
+		"elise_truth_8": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Sie hat geweint, weil sie dich verstanden hat. Weil dreißig Jahre Opfer unnötig waren. Weil sie es früher hätte sehen können.",
+			"next": "creature_truth_8"
+		},
+		"creature_truth_8": {
+			"type": "narration",
+			"text": "DU WEINST AUCH. WARUM?",
+			"next": "elise_truth_9"
+		},
+		"elise_truth_9": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Weil du sechshundert Jahre allein warst. Und niemand hat gefragt, wie es dir geht.",
+			"next": "creature_truth_final"
+		},
+		"creature_truth_final": {
+			"type": "narration",
+			"text": "Stille. Lange Stille. Dann, leiser als je zuvor: DANKE.",
+			"next": "narration_truth_protocol"
+		},
+		"narration_anchor_truth": {
+			"type": "narration",
+			"text": "Das Zeichen pulst unter mir, der Gesang hallt nach, und der Anker - ich - hält die Verbindung. Aber statt zu binden, öffnet sie. Verständnis fließt in beide Richtungen.",
+			"next": "effect_understanding"
+		},
+		"effect_understanding": {
+			"type": "effect",
+			"effect": "clear",
+			"params": {},
+			"next": "snd_stop_amb"
+		},
+		"snd_stop_amb": {
+			"type": "sound",
+			"sound_type": "stop_ambience",
+			"next": "snd_peaceful"
+		},
+		"snd_peaceful": {
+			"type": "sound",
+			"sound_type": "music",
+			"next": "narration_9",
+			"path": "ending_peaceful.wav"
+		},
+		"narration_9": {
+			"type": "narration",
+			"text": "Das Wesen zieht sich zurück. Zufrieden. Zum ersten Mal in Jahrhunderten hat jemand es angesehen, ohne wegzulaufen. Es schläft ein - nicht aus Zwang, sondern aus Frieden.",
+			"next": "narration_9b"
+		},
+		"narration_9b": {
+			"type": "narration",
+			"text": "Aber bevor es geht, spüre ich etwas. Wie eine Hand, die meine berührt. Eine Geste, die kein menschliches Wort beschreibt. Abschied? Dankbarkeit? Hoffnung auf Wiedersehen?",
+			"next": "check_ally_truth_georg"
+		},
+		"check_ally_truth_georg": {
+			"type": "flag_check",
+			"flag": "allied_georg",
+			"value": 1,
+			"true_next": "show_georg_truth",
+			"false_next": "check_ally_truth_hilde"
+		},
+		"show_georg_truth": {
+			"type": "character",
+			"character": "georg",
+			"expression": "sad",
+			"position": "right",
+			"action": "show",
+			"next": "georg_truth_1"
+		},
+		"georg_truth_1": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "sad",
+			"text": "Elise? Dein Gesicht... du weinst. Was ist passiert da unten?",
+			"next": "elise_georg_truth"
+		},
+		"elise_georg_truth": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ich habe es verstanden, Georg. Es ist nicht böse. Es war nie böse. Es ist nur... allein.",
+			"next": "georg_truth_2"
+		},
+		"georg_truth_2": {
+			"type": "dialogue",
+			"speaker": "georg",
+			"expression": "guilty",
+			"text": "Dreißig Jahre. Dreißig Jahre haben wir es gefüttert, als hätte es Blut gebraucht. Und alles, was es wollte...",
+			"next": "elise_georg_truth_2"
+		},
+		"elise_georg_truth_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "War Gesellschaft. Ja. Großmutter hat es am Ende begriffen. Jetzt begreifen wir es auch.",
+			"next": "hide_georg_truth"
+		},
+		"hide_georg_truth": {
+			"type": "character",
+			"character": "georg",
+			"expression": "sad",
+			"position": "right",
+			"action": "hide",
+			"next": "anna_truth_appears"
+		},
+		"check_ally_truth_hilde": {
+			"type": "flag_check",
+			"flag": "allied_hilde",
+			"value": 1,
+			"true_next": "show_hilde_truth",
+			"false_next": "check_ally_truth_voss"
+		},
+		"show_hilde_truth": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "wise",
+			"position": "right",
+			"action": "show",
+			"next": "hilde_truth_1"
+		},
+		"hilde_truth_1": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "wise",
+			"text": "Ich spüre es. Die Luft ist anders. Was hast du getan?",
+			"next": "elise_hilde_truth"
+		},
+		"elise_hilde_truth": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Zugehört. Mehr nicht. Es hat mir seine Geschichte gezeigt. Hilde... die ganze Tradition war ein Missverständnis.",
+			"next": "hilde_truth_2"
+		},
+		"hilde_truth_2": {
+			"type": "dialogue",
+			"speaker": "hilde",
+			"expression": "kind",
+			"text": "Margarethe hat das am Ende vermutet. Sie sagte: 'Es braucht keine Nahrung. Es braucht eine Stimme.'",
+			"next": "hide_hilde_truth"
+		},
+		"hide_hilde_truth": {
+			"type": "character",
+			"character": "hilde",
+			"expression": "kind",
+			"position": "right",
+			"action": "hide",
+			"next": "anna_truth_appears"
+		},
+		"check_ally_truth_voss": {
+			"type": "flag_check",
+			"flag": "allied_voss",
+			"value": 1,
+			"true_next": "show_voss_truth",
+			"false_next": "anna_truth_appears"
+		},
+		"show_voss_truth": {
+			"type": "character",
+			"character": "voss",
+			"expression": "afraid",
+			"position": "right",
+			"action": "show",
+			"next": "voss_truth_1"
+		},
+		"voss_truth_1": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "afraid",
+			"text": "Das Singen hat aufgehört. Ist es... ist es tot?",
+			"next": "elise_voss_truth"
+		},
+		"elise_voss_truth": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "thinking",
+			"text": "Es schläft. Zufrieden. Pfarrer Voss... es war nie ein Dämon. Es war ein Wesen, das allein war. Sechshundert Jahre allein.",
+			"next": "voss_truth_2"
+		},
+		"voss_truth_2": {
+			"type": "dialogue",
+			"speaker": "voss",
+			"expression": "broken",
+			"text": "Kein Dämon? Dann war alles... die Opfer... Friedrich...",
+			"next": "elise_voss_truth_2"
+		},
+		"elise_voss_truth_2": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "sad",
+			"text": "Ja. Es war alles unnötig. Aber wir wussten es nicht. Niemand wusste es.",
+			"next": "hide_voss_truth"
+		},
+		"hide_voss_truth": {
+			"type": "character",
+			"character": "voss",
+			"expression": "broken",
+			"position": "right",
+			"action": "hide",
+			"next": "anna_truth_appears"
+		},
+		"anna_truth_appears": {
+			"type": "character",
+			"character": "anna",
+			"expression": "lucid",
+			"position": "left",
+			"action": "show",
+			"next": "anna_truth_1"
+		},
+		"anna_truth_1": {
+			"type": "narration",
+			"text": "Anna Voss steht am Eingang der Kammer. Ihre Augen sind klar - klarer als ich sie je gesehen habe. Zum ersten Mal sehe ich sie lächeln.",
+			"next": "anna_truth_2"
+		},
+		"anna_truth_2": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Die Stille ist anders jetzt. Leichter. Es träumt friedlich, Elise. Zum ersten Mal.",
+			"next": "elise_anna_truth"
+		},
+		"elise_anna_truth": {
+			"type": "dialogue",
+			"speaker": "elise",
+			"expression": "happy",
+			"text": "Du hast es immer gespürt, nicht wahr? Die Spiralen, die Bilder. Du hast versucht, es uns zu zeigen.",
+			"next": "anna_truth_3"
+		},
+		"anna_truth_3": {
+			"type": "dialogue",
+			"speaker": "anna",
+			"expression": "lucid",
+			"text": "Es hat mir Bilder geschickt. Von seiner Welt. Aber ich konnte die Worte nicht finden. Du hast die Worte gefunden.",
+			"next": "hide_anna_truth"
+		},
+		"hide_anna_truth": {
+			"type": "character",
+			"character": "anna",
+			"expression": "lucid",
+			"position": "left",
+			"action": "hide",
+			"next": "letter_resolution_truth"
+		},
+		"letter_resolution_truth": {
+			"type": "narration",
+			"text": "Im Licht der Erkenntnis verstehe ich endlich Großmutters Brief. Sie schrieb keine Warnung - sie schrieb eine Einladung. 'Komm und sieh.' Sie wusste, dass ich die Erste sein würde, die hinsieht, ohne wegzulaufen.",
+			"next": "narration_10"
+		},
+		"narration_10": {
+			"type": "narration",
+			"text": "Ich stehe auf und steige hinauf ins Licht. Aber die Welt sieht anders aus. Ich spüre die dünnen Stellen - überall. Unter meinen Füßen, in der Ferne, am Horizont. Und ich weiß: Verstehen ohne Regeln wäre nur die nächste Form von Blindheit.",
+			"next": "narration_11"
+		},
+		"narration_11": {
+			"type": "narration",
+			"text": "Ich werde nie wieder unwissend sein. Das ist der Preis der Wahrheit. Und ihr Geschenk: Verantwortung, sie so zu ordnen, dass niemand mehr heimlich geopfert wird.",
+			"next": "narration_12"
+		},
+		"narration_12": {
+			"type": "narration",
+			"text": "Die Welt ist größer als wir dachten. Tiefer. Älter. Und unter jeder Stadt, unter jedem Wald, unter jedem Ozean schläft etwas, das wir nicht verstehen. Noch nicht.",
+			"next": "narration_13"
+		},
+		"narration_13": {
+			"type": "narration",
+			"text": "Aber ich bin die Erste, die es versucht. Großmutter, du hast mir den Weg gewiesen. Jetzt gehe ich ihn zu Ende.",
+			"next": "journal_truth"
+		},
+		"journal_truth": {
+			"type": "journal",
+			"entry_id": "ending_truth",
+			"title": "Die Wahrheit",
+			"content": "Das Wesen ist nicht unser Feind. Es ist ein Nachbar, gefangen zwischen den Welten, sechshundert Jahre allein. Die Opfer waren nie nötig. Es brauchte jemanden, der zuhört - und klare Grenzen: freiwilliger Kontakt, sofortiges Stopp-Recht und Übergangs-Siegel statt Menschenopfer.",
+			"next": "check_packed_truth"
+		},
+		"check_packed_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 1,
+			"true_next": "packed_books_truth",
+			"false_next": "check_packed_cross_truth"
+		},
+		"packed_books_truth": {
+			"type": "narration",
+			"text": "Meine Bücher - Folklore, Mythen, Bindungsrituale - sie haben mich auf das Fragen vorbereitet. Aber die Antworten kamen nicht aus Papier. Sie kamen aus dem Abgrund selbst.",
+			"next": "truth_epilog_transition"
+		},
+		"check_packed_cross_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 2,
+			"true_next": "packed_cross_truth",
+			"false_next": "check_packed_camera_truth"
+		},
+		"packed_cross_truth": {
+			"type": "narration",
+			"text": "Das Kruzifix meiner Mutter lag nutzlos in meiner Tasche. Kein Gott hat mich gerettet. Die Wahrheit hat mich gerettet - und die Bereitschaft, sie auszuhalten.",
+			"next": "truth_epilog_transition"
+		},
+		"check_packed_camera_truth": {
+			"type": "flag_check",
+			"flag": "packed_item",
+			"value": 3,
+			"true_next": "packed_camera_truth",
+			"false_next": "truth_konrad_epilog"
+		},
+		"packed_camera_truth": {
+			"type": "narration",
+			"text": "Die Kamera hätte nichts festhalten können, was ich gesehen habe. Sechshundert Jahre Einsamkeit passen nicht auf einen Filmstreifen. Aber ich werde darüber schreiben. Die Welt soll wissen, was hier war.",
+			"next": "truth_epilog_transition"
+		},
+		"truth_epilog_transition": {
+			"type": "narration",
+			"text": "Morgendämmerung. Die längste Nacht meines Lebens ist vorbei. Und mit ihr dreißig Jahre Lügen.",
+			"next": "check_sought_konrad_truth_memory"
+		},
+		"check_konrad_help_truth": {
+			"type": "flag_check",
+			"flag": "konrad_asked_help",
+			"value": 1,
+			"true_next": "truth_konrad_epilog_helped",
+			"false_next": "check_tested_konrad_truth"
+		},
+		"check_tested_konrad_truth": {
+			"type": "flag_check",
+			"flag": "tested_konrad",
+			"value": 1,
+			"true_next": "truth_konrad_epilog_tested",
+			"false_next": "truth_konrad_epilog"
+		},
+		"truth_konrad_epilog_helped": {
+			"type": "narration",
+			"text": "Konrad wartet am Kircheneingang, bleich aber wach. Als er mich sieht, atmet er aus, als hätte er seit Stunden die Luft angehalten. 'Du hast dein Versprechen gehalten', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+			"next": "truth_otto_epilog"
+		},
+		"truth_konrad_epilog_tested": {
+			"type": "narration",
+			"text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Gut so. Das hat mich lange genug wach gehalten.' Dann blickt er in die Kammer hinab. 'Jetzt schläft es friedlich. Zum ersten Mal nicht durch mich.'",
+			"next": "truth_otto_epilog"
+		},
+		"truth_konrad_epilog": {
+			"type": "narration",
+			"text": "Konrad steht am Kircheneingang, als das Licht der Morgendämmerung durch die Fenster fällt. Die glasigen Momente sind vorbei. Seine Augen sind klar. 'Es schläft friedlich', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+			"next": "truth_otto_epilog"
+		},
+		"truth_otto_epilog": {
+			"type": "narration",
+			"text": "Otto steht am Dorfrand und beobachtet den Sonnenaufgang. Er weint. Dreißig Jahre hat er geglaubt, die Opfer seien nötig. Jetzt muss er den Familien sagen, dass es eine Wahl gegeben hätte - und dass er sie nie gesucht hat.",
+			"next": "truth_mathilde_epilog"
+		},
+		"truth_mathilde_epilog": {
+			"type": "narration",
+			"text": "Ich denke an die blinde Frau im Zug. Mathilde. Sie hat es gewusst, seit sechzig Jahren. Sie summte die Melodie nicht aus Wahnsinn - sondern aus Verständnis.",
+			"next": "truth_candle_epilog"
+		},
+		"truth_candle_epilog": {
+			"type": "narration",
+			"text": "In Großmutters Haus erlischt die Kerze. Aber der Geruch nach Honig und Kräutern bleibt.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "scene_end",
+			"next_file": "ending:truth"
+		},
+		"narration_truth_protocol": {
+			"type": "narration",
+			"text": "Ich atme aus und setze Grenzen, bevor die Stille uns wieder verschluckt: Kein Zugriff auf ungefragte Gedanken. Kein Griff nach einem einzelnen Gefäß. Kontakt nur freiwillig, widerrufbar, mit klarer Übergabe - und wenn niemand bereit ist, bleibt das Übergangs-Siegel aktiv.",
+			"next": "narration_anchor_truth"
+		},
+		"check_sought_konrad_truth_memory": {
+			"type": "flag_check",
+			"flag": "sought_konrad",
+			"value": 1,
+			"true_next": "truth_sought_konrad_memory",
+			"false_next": "check_avoided_konrad_truth_memory"
+		},
+		"check_avoided_konrad_truth_memory": {
+			"type": "flag_check",
+			"flag": "avoided_konrad",
+			"value": 1,
+			"true_next": "truth_avoided_konrad_memory",
+			"false_next": "check_konrad_help_truth"
+		},
+		"truth_sought_konrad_memory": {
+			"type": "narration",
+			"text": "Am Kircheneingang denke ich an den Moment zurück, in dem ich Konrad gesucht habe, obwohl jede Vernunft dagegen sprach. Dieses Risiko hat mich gelehrt, dass Rettung ohne Nähe nur ein anderes Wort für Kontrolle ist.",
+			"next": "check_konrad_help_truth"
+		},
+		"truth_avoided_konrad_memory": {
+			"type": "narration",
+			"text": "Am Kircheneingang sticht die Erinnerung: Ich habe Konrad gemieden, um den Plan zu schützen. Jetzt, wo die Nacht vorbei ist, weiß ich: Vorsicht hat uns durchgebracht, aber sie hinterlässt Rechnungen, die man nur mit Ehrlichkeit bezahlen kann.",
+			"next": "check_konrad_help_truth"
+		}
+	}
 }
