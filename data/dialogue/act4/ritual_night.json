@@ -910,7 +910,7 @@
       "type": "dialogue",
       "speaker": "konrad",
       "expression": "sad",
-      "text": "Du hast mich damals mit den Spiralen getestet - und gesehen, wie ich sofort ans Handgelenk griff. Gut so. Hier unten sollte man niemandem blind vertrauen, nicht mal mir. Aber du bist trotzdem wiedergekommen.",
+      "text": "Du hast mich damals mit den Spiralen getestet - und gesehen, wie ich sofort ans Handgelenk griff. Gut so. Hier unten sollte man niemandem blind vertrauen, nicht mal mir. Aber du hast aus Vorsicht keinen Vorwand gemacht, wegzusehen. Du bist wiedergekommen.",
       "next": "show_konrad"
     },
     "show_konrad": {
