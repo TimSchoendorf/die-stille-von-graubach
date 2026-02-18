@@ -1007,7 +1007,7 @@
     "konrad_ward_ritual_memory": {
       "type": "narration",
       "text": "Auf der Treppe höre ich kurz Kreide auf Stein - drei schnelle Striche, dann Stille. Der Schutzkreis an der Schultür hat ihn nicht gerettet, aber vielleicht lang genug gebremst, dass das Wesen nicht beide Orte zugleich halten kann.",
-      "next": "check_approach"
+      "next": "check_schoolhouse_echo_event"
     },
     "check_kept_distance_konrad_ritual": {
       "type": "flag_check",
@@ -1019,7 +1019,7 @@
     "konrad_distance_ritual_memory": {
       "type": "narration",
       "text": "Ich habe mich gestern nicht einmal zur Schultür umgedreht. Jetzt trägt mich genau diese Härte: kein Kontakt, keine Lücke, kein zusätzlicher Weg für ES in meinen Plan.",
-      "next": "check_approach"
+      "next": "check_schoolhouse_echo_event"
     },
     "check_konrad_trust": {
       "type": "flag_check",
@@ -1919,7 +1919,7 @@
     "konrad_watch_ritual_memory": {
       "type": "narration",
       "text": "Zwischen zwei Glockenschlägen höre ich oben drei dumpfe Schläge Metall auf Holz - Georgs Antwort auf unser Sicherungszeichen vom Schulhaus. Kein Entwarnen. Nur das Versprechen, dass Konrad nicht unbeobachtet zwischen Otto und das Wesen gerät.",
-      "next": "check_approach"
+      "next": "check_schoolhouse_echo_event"
     },
     "check_ritual_breath_count_prepared": {
       "type": "flag_check",
@@ -1944,6 +1944,42 @@
       "type": "narration",
       "text": "Das Bündel von letzter Nacht liegt geöffnet neben der Schale. Der Metallkeil hält das Journal auf der richtigen Seite, der Kräuterfaden nimmt dem süßen Geruch die Spitze, und Voss' Glockenzeiten geben meinem Atem einen Takt. Kein Wundermittel. Aber genug, um aus Angst wieder Methode zu machen.",
       "next": "check_read_final_entries_memory"
+    },
+    "check_schoolhouse_echo_event": {
+      "type": "flag_check",
+      "flag": "asked_georg_watch_school",
+      "value": 1,
+      "true_next": "schoolhouse_echo_georg",
+      "false_next": "check_left_konrad_ward_echo"
+    },
+    "check_left_konrad_ward_echo": {
+      "type": "flag_check",
+      "flag": "left_konrad_ward",
+      "value": 1,
+      "true_next": "schoolhouse_echo_ward",
+      "false_next": "schoolhouse_echo_distance"
+    },
+    "schoolhouse_echo_georg": {
+      "type": "narration",
+      "text": "Aus Richtung Schule schlägt einmal eine Glocke gegen Metall - zu früh, zu schief für den Kirchturm. Dann zweimal kurz Holz auf Holz. Georgs Code. Keine Entwarnung, nur ein Lagebild: Konrad bewegt sich, aber er bleibt im Korridor zwischen Tür und Tafel.",
+      "next": "schoolhouse_echo_resolve"
+    },
+    "schoolhouse_echo_ward": {
+      "type": "narration",
+      "text": "Durch das Mauerwerk dringt ein trockenes Kreidekratzen bis in die Kammer. Dann ein dumpfer Ton, als würde jemand gegen den Türrahmen stoßen - genau dort, wo ich die drei gebrochenen Spiralen gezogen habe. Der Laut reißt ab. Der Kreis hält. Für jetzt.",
+      "next": "schoolhouse_echo_resolve"
+    },
+    "schoolhouse_echo_distance": {
+      "type": "narration",
+      "text": "Ein falscher Glockenschlag aus Richtung Schulhaus frisst sich in meinen Nacken - derselbe Köder wie im Wald: Komm zurück, sieh nach, verliere den Takt. Ich presse die Finger tiefer in den Stein und zähle meine Atemzüge statt Schritte. Wenn ich jetzt abbiege, stirbt der Plan vor der ersten Zeile.",
+      "next": "schoolhouse_echo_resolve"
+    },
+    "schoolhouse_echo_resolve": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Nicht jetzt. Konrad, halt durch. Ich hole dich da raus - aber nur, wenn ich ES zuerst binde.",
+      "next": "check_approach"
     }
   }
 }
