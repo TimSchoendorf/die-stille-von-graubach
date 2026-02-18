@@ -55,6 +55,11 @@
 - **Fix applied:** Added a "multi-ally carryover checkpoint" to the loop: if at least two allies are aligned, insert one concrete pre-ritual support event in Act 3 and require a mechanical/emotional payoff in Act 4 opening beats.
 - **Applied now:** introduced a new Night-6 support-bundle micro-scene in `act3/preparation.json` (sets `extra_support_bundle`) and integrated direct tactical payoff text in `act4/ritual_night.json`.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Sought-Konrad path had less tactical prep texture than the avoided-Konrad path, so branch differentiation depended mostly on emotion and less on actionable ritual technique.
+- **Fix applied:** Added a "branch parity checkpoint" for ship-block runs: if one branch gains a concrete pre-ritual tactic, the neighboring branch must get an equivalent (not identical) tactical beat with its own flag + downstream payoff.
+- **Applied now:** introduced a new sought-Konrad mini-scene in `act3/allies_choice.json` (Anna's Drei-Anker identity tactic, flag `konrad_anchor_phrase_prepared`) and paid it off in both `act3/descent.json` and `act4/ritual_night.json`.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

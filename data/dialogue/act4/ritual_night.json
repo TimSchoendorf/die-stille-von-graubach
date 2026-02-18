@@ -1025,7 +1025,7 @@
       "type": "flag_check",
       "flag": "trusted_konrad",
       "value": 1,
-      "true_next": "konrad_appears",
+      "true_next": "check_konrad_anchor_phrase_ritual",
       "false_next": "check_konrad_distrust_memory"
     },
     "check_konrad_distrust_memory": {
@@ -1051,6 +1051,18 @@
       "type": "narration",
       "text": "Ich habe ihn geprüft statt ihm zu vertrauen: ein beiläufiges Wort über Spiralen, seine Hand sofort am Handgelenk, ein Blick wie ertappt. Gestern im Klassenzimmer bat er mich trotzdem um Hilfe. Jede Frage war ein Messer - aber vielleicht war genau diese Vorsicht der Grund, warum er heute noch gegen das Wesen ankämpft.",
       "next": "check_approach"
+    },
+    "check_konrad_anchor_phrase_ritual": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "konrad_anchor_phrase_ritual_payoff",
+      "false_next": "konrad_appears"
+    },
+    "konrad_anchor_phrase_ritual_payoff": {
+      "type": "narration",
+      "text": "Noch bevor ich ihn sehe, spreche ich leise Annas Drei-Anker-Satz: \"Konrad Müller. Lehrer. Klassenzimmer.\" Kein Zauber, nur Identität. Aber in dieser Kammer ist Identität die schärfste Klinge gegen das Verschlucktwerden.",
+      "next": "konrad_appears"
     },
     "konrad_appears": {
       "type": "narration",

@@ -604,6 +604,18 @@
       "text": "Oder etwas lässt mich absichtlich durch, weil es mich genau dort haben will, wo der Stein am dünnsten ist. Der Gedanke ist schlimmer als jeder bewaffnete Mann vor einer Tür.",
       "next": "check_konrad_choice_payoff"
     },
+    "check_konrad_anchor_phrase_descent": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "konrad_anchor_phrase_descent_payoff",
+      "false_next": "descent_start"
+    },
+    "konrad_anchor_phrase_descent_payoff": {
+      "type": "narration",
+      "text": "Ich taste den Drei-Anker-Satz wie einen Talisman ab: Konrad Müller. Lehrer. Klassenzimmer. Falls seine Stimme kippt, habe ich keine Zeit für Improvisation - nur für klare Orientierung zurück ins Menschliche.",
+      "next": "descent_start"
+    },
     "descent_start": {
       "type": "background",
       "background": "church_basement",
@@ -1103,7 +1115,7 @@
     "konrad_choice_sought_payoff": {
       "type": "narration",
       "text": "Beim ersten Schritt in die Tiefe höre ich Konrads Stimme wieder: Hilf mir, bevor es mich ganz hat. Sein Blick klebt an mir wie ein Schwur. Heute Nacht steige ich nicht nur für Graubach hinab - ich steige mit seinem Namen auf den Lippen, damit ich im entscheidenden Moment nicht vergesse, wen ich retten will.",
-      "next": "descent_start"
+      "next": "check_konrad_anchor_phrase_descent"
     },
     "konrad_choice_avoided_payoff": {
       "type": "narration",

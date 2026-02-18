@@ -772,7 +772,7 @@
       "expression": "sad",
       "position": "center",
       "action": "hide",
-      "next": "ally_final_converge"
+      "next": "check_konrad_anchor_event"
     },
     "avoided_konrad": {
       "type": "narration",
@@ -956,6 +956,86 @@
       "type": "narration",
       "text": "Kein Heldentum, nur ein dünnes Sicherheitsnetz. Vielleicht ist das alles, was Verantwortung heute sein kann: jemanden nicht im Stich lassen, ohne den Plan zu verraten.",
       "next": "check_anna_schoolyard_event"
+    },
+    "check_konrad_anchor_event": {
+      "type": "flag_check",
+      "flag": "anna_warning",
+      "value": 1,
+      "true_next": "konrad_anchor_event_intro",
+      "false_next": "ally_final_converge"
+    },
+    "konrad_anchor_event_intro": {
+      "type": "background",
+      "background": "village_square",
+      "transition": "fade",
+      "next": "show_anna_konrad_anchor"
+    },
+    "show_anna_konrad_anchor": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "show",
+      "next": "anna_konrad_anchor_1"
+    },
+    "anna_konrad_anchor_1": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "afraid",
+      "text": "Du warst bei Konrad. Gut. Dann hör zu: Wenn ES seine Stimme nimmt, gib ihm drei Dinge zurück - seinen Namen, seinen Beruf, einen Ort aus seinem Leben. Namen halten besser als Schreien.",
+      "next": "elise_konrad_anchor_1"
+    },
+    "elise_konrad_anchor_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Konrad Müller. Lehrer. Das Klassenzimmer mit der schiefen Weltkarte. Drei Anker gegen einen Abgrund.",
+      "next": "anna_konrad_anchor_2"
+    },
+    "anna_konrad_anchor_2": {
+      "type": "dialogue",
+      "speaker": "anna",
+      "expression": "lucid",
+      "text": "Genau. Sag es im Takt. Nicht bitten - benennen. Dann weiß er, wo oben ist.",
+      "next": "choice_konrad_anchor_commit"
+    },
+    "choice_konrad_anchor_commit": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Den Drei-Anker-Satz für die Ritualnacht fest einprägen",
+          "set_flags": {
+            "konrad_anchor_phrase_prepared": 1
+          },
+          "next": "konrad_anchor_commit"
+        },
+        {
+          "text": "Bei meinem bisherigen Plan bleiben, ohne neue Formel",
+          "next": "konrad_anchor_skip"
+        }
+      ]
+    },
+    "konrad_anchor_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Konrad Müller. Lehrer. Klassenzimmer. Ich nehme es mit. Wenn es eng wird, halte ich ihn damit über Wasser.",
+      "next": "hide_anna_konrad_anchor"
+    },
+    "konrad_anchor_skip": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Ich darf den Ablauf jetzt nicht weiter umbauen. Aber danke, Anna. Ich vergesse den Satz nicht.",
+      "next": "hide_anna_konrad_anchor"
+    },
+    "hide_anna_konrad_anchor": {
+      "type": "character",
+      "character": "anna",
+      "expression": "lucid",
+      "position": "left",
+      "action": "hide",
+      "next": "ally_final_converge"
     },
     "check_anna_schoolyard_event": {
       "type": "flag_check",
