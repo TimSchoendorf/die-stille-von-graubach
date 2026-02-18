@@ -49,6 +49,44 @@ def collect_scene_end_targets(nodes: Dict[str, dict]) -> Set[str]:
     return out
 
 
+def reachable_count(nodes: Dict[str, dict], start: str, stop: str) -> int:
+    """Count reachable nodes from start until stop (inclusive), following next edges.
+
+    This is intentionally lightweight: it follows common VN edge fields used in this repo.
+    """
+    stack = [start]
+    seen: Set[str] = set()
+
+    while stack:
+        key = stack.pop()
+        if key in seen or key not in nodes:
+            continue
+        seen.add(key)
+        if key == stop:
+            continue
+
+        node = nodes[key]
+        node_type = node.get("type")
+
+        nxt = node.get("next")
+        if isinstance(nxt, str):
+            stack.append(nxt)
+
+        if node_type == "flag_check":
+            for edge in ("true_next", "false_next"):
+                target = node.get(edge)
+                if isinstance(target, str):
+                    stack.append(target)
+
+        if node_type == "choice":
+            for choice in node.get("choices", []):
+                target = choice.get("next")
+                if isinstance(target, str):
+                    stack.append(target)
+
+    return len(seen)
+
+
 def main() -> int:
     allies = load_nodes("data/dialogue/act3/allies_choice.json")
     bridge = load_nodes("data/dialogue/act3/ally_fallout_bridge.json")
@@ -92,6 +130,20 @@ def main() -> int:
     if "bridge_fallout_seen" not in ritual_checks:
         errors.append("ritual_night missing memory check for bridge_fallout_seen")
 
+    # Branch-density guardrail: avoid thin alternate routes that undercut Act3 setup.
+    sought_konrad_span = reachable_count(allies, "konrad_final", "ally_final_converge")
+    avoided_konrad_span = reachable_count(allies, "avoided_konrad", "ally_final_converge")
+    if avoided_konrad_span < 6:
+        errors.append(
+            "allies_choice avoided_konrad branch too thin "
+            f"({avoided_konrad_span} nodes < 6 minimum)"
+        )
+    if avoided_konrad_span * 4 < sought_konrad_span:
+        errors.append(
+            "allies_choice branch imbalance: avoided_konrad is less than a quarter of sought_konrad "
+            f"({avoided_konrad_span} vs {sought_konrad_span})"
+        )
+
     if errors:
         print("CROSS-ACT COHERENCE: FAIL")
         for e in errors:
@@ -102,6 +154,10 @@ def main() -> int:
     print("  setup: allies_choice -> ally_fallout_bridge")
     print("  escalation: ally fallout + hurt flags in bridge")
     print("  payoff: descent + ritual_night consume fallout memory")
+    print(
+        "  branch density: avoided_konrad path is substantial vs sought_konrad "
+        f"({avoided_konrad_span} vs {sought_konrad_span})"
+    )
     return 0
 
 

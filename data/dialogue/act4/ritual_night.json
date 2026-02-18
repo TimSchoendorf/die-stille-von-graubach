@@ -911,7 +911,31 @@
       "flag": "sought_konrad",
       "value": 1,
       "true_next": "check_konrad_trust",
+      "false_next": "check_left_konrad_ward_ritual"
+    },
+    "check_left_konrad_ward_ritual": {
+      "type": "flag_check",
+      "flag": "left_konrad_ward",
+      "value": 1,
+      "true_next": "konrad_ward_ritual_memory",
+      "false_next": "check_kept_distance_konrad_ritual"
+    },
+    "konrad_ward_ritual_memory": {
+      "type": "narration",
+      "text": "Auf der Treppe höre ich kurz Kreide auf Stein - drei schnelle Striche, dann Stille. Der Schutzkreis an der Schultür hat ihn nicht gerettet, aber vielleicht lang genug gebremst, dass das Wesen nicht beide Orte zugleich halten kann.",
+      "next": "check_approach"
+    },
+    "check_kept_distance_konrad_ritual": {
+      "type": "flag_check",
+      "flag": "kept_distance_konrad",
+      "value": 1,
+      "true_next": "konrad_distance_ritual_memory",
       "false_next": "check_approach"
+    },
+    "konrad_distance_ritual_memory": {
+      "type": "narration",
+      "text": "Ich habe mich gestern nicht einmal zur Schultür umgedreht. Jetzt trägt mich genau diese Härte: kein Kontakt, keine Lücke, kein zusätzlicher Weg für ES in meinen Plan.",
+      "next": "check_approach"
     },
     "check_konrad_trust": {
       "type": "flag_check",

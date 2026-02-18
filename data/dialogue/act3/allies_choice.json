@@ -782,6 +782,51 @@
     "elise_konrad_regret": {
       "type": "narration",
       "text": "Es tut mir leid, Konrad. Vielleicht kann ich dir helfen, wenn das hier vorbei ist. Aber jetzt... jetzt muss ich dich meiden. Zu deinem eigenen Schutz.",
+      "next": "konrad_avoid_detour"
+    },
+    "konrad_avoid_detour": {
+      "type": "background",
+      "background": "village_school",
+      "transition": "fade",
+      "next": "konrad_avoid_detour_1"
+    },
+    "konrad_avoid_detour_1": {
+      "type": "narration",
+      "text": "Trotzdem gehe ich am Schulhaus vorbei. Nicht hinein - nur bis zur Tür. Drinnen kratzt Kreide auf Holz, in einem Rhythmus, der zu gleichmäßig für eine menschliche Hand ist.",
+      "next": "konrad_avoid_detour_2"
+    },
+    "konrad_avoid_detour_2": {
+      "type": "narration",
+      "text": "Durch den Spalt sehe ich Spiralen an der Tafel und Konrad davor, reglos wie ein Mensch, der auf einen Einsatzbefehl wartet. Er hebt den Kopf nicht. Vielleicht merkt er nicht einmal, dass ich hier bin.",
+      "next": "choice_avoid_konrad_action"
+    },
+    "choice_avoid_konrad_action": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Schutzkreis aus Kreide an der Tür ziehen und leise seinen Namen sagen",
+          "set_flags": {
+            "left_konrad_ward": 1
+          },
+          "next": "konrad_ward_choice"
+        },
+        {
+          "text": "Nur weitergehen - kein Risiko, kein Kontakt",
+          "set_flags": {
+            "kept_distance_konrad": 1
+          },
+          "next": "konrad_distance_choice"
+        }
+      ]
+    },
+    "konrad_ward_choice": {
+      "type": "narration",
+      "text": "Ich zeichne mit zitternder Hand drei gebrochene Spiralen auf den Türrahmen - Hildes Notzeichen gegen Durchgriffe. Dann flüstere ich: 'Halte bis morgen durch.' Drinnen stoppt das Kreidekratzen für genau einen Atemzug.",
+      "next": "ally_final_converge"
+    },
+    "konrad_distance_choice": {
+      "type": "narration",
+      "text": "Ich gehe weiter, ohne mich umzudrehen. Jeder zusätzliche Blick wäre eine Einladung. Wenn ich ihn retten will, muss ich heute streng bleiben - auch gegen mein eigenes Mitleid.",
       "next": "ally_final_converge"
     },
     "ally_final_converge": {
