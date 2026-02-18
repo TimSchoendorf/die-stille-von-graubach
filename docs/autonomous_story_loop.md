@@ -9,7 +9,7 @@
 6. Commit with compact message (no push).
 
 ## This run's process improvement
-- **Bottleneck identified:** Approach choices (Siegel / Verstehen / Zerstören / Pakt) had strong strategic text but weak *pre-commitment embodiment* right before the finale; in play this can flatten branch identity at ritual start.
-- **Process improvement applied:** Added a **"commitment token" pass** to the loop: after every major approach choice, require one concrete physical action (token) in Act 3 and one explicit recall payoff in Act 4.
-- Implemented with four new Act-3 commitment micro-events (one per approach), four new flags, and mirrored Act-4 payoff checks before ritual escalation.
-- Result: better setup->escalation continuity and stronger branch differentiation through tactile memory anchors.
+- **Bottleneck identified:** Voss' grounding advice in Act 2 had low player agency (generic line, no committed anchor), so later pressure moments in Act 3/4 paid off emotionally but not *personally*.
+- **Process improvement applied:** Added an **"anchor commitment" pass** to the loop: if a mentor gives coping protocol, force an immediate commitment choice (who/what the anchor is), then require explicit callback during escalation and finale.
+- Implemented via a new Act-2 anchor choice event (Margarethe / Anna / Georg), new commitment flags, and mirrored payoff checks in both Act 3 (`descent`) and Act 4 (`ritual_night`).
+- Result: stronger setup->escalation->payoff coherence and clearer branch identity under stress without bloating core route structure.

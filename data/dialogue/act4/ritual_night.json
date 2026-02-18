@@ -982,7 +982,7 @@
       "type": "flag_check",
       "flag": "voss_midnight_meeting",
       "value": 1,
-      "true_next": "voss_anchor_memory_global",
+      "true_next": "check_anchor_name_margarethe_ritual",
       "false_next": "check_konrad_sacrifice"
     },
     "voss_anchor_memory_global": {
@@ -2226,6 +2226,42 @@
       "type": "narration",
       "text": "Der alte Schwur aus der Nacht am Schulhaus sitzt noch immer fest: erst binden, dann Konrad holen. Genau dieser Satz hält meine Hände ruhig, als das Summen mir eine Abkürzung ins Gewissen flüstert.",
       "next": "check_approach"
+    },
+    "check_anchor_name_margarethe_ritual": {
+      "type": "flag_check",
+      "flag": "anchor_name_margarethe",
+      "value": 1,
+      "true_next": "voss_anchor_margarethe_ritual",
+      "false_next": "check_anchor_name_anna_ritual"
+    },
+    "voss_anchor_margarethe_ritual": {
+      "type": "narration",
+      "text": "Mitten im Druck fällt mir mein fester Satz aus der Kirche wieder ein: Hand auf den Stein, Margarethes Name, dann erst sprechen. \"Margarethe.\" Die Stimmen werden nicht leiser - aber sie verlieren den Griff auf mein Gesicht.",
+      "next": "check_konrad_sacrifice"
+    },
+    "check_anchor_name_anna_ritual": {
+      "type": "flag_check",
+      "flag": "anchor_name_anna",
+      "value": 1,
+      "true_next": "voss_anchor_anna_ritual",
+      "false_next": "check_anchor_name_georg_ritual"
+    },
+    "voss_anchor_anna_ritual": {
+      "type": "narration",
+      "text": "Der Lärm will mich aus dem Takt reißen. Ich drücke die Finger tiefer in die Spirale und halte mich an den Namen, den ich vorher gewählt habe: \"Anna.\" Die Angst bleibt, aber sie richtet sich wieder nach vorn statt nach oben.",
+      "next": "check_konrad_sacrifice"
+    },
+    "check_anchor_name_georg_ritual": {
+      "type": "flag_check",
+      "flag": "anchor_name_georg",
+      "value": 1,
+      "true_next": "voss_anchor_georg_ritual",
+      "false_next": "voss_anchor_memory_global"
+    },
+    "voss_anchor_georg_ritual": {
+      "type": "narration",
+      "text": "Ich höre das Summen und denke an den Namen, den ich nicht improvisieren musste: \"Georg.\" Der Gedanke an seine ruhige Linie oben zwingt meine Stimme unten in denselben Takt.",
+      "next": "check_konrad_sacrifice"
     }
   }
 }

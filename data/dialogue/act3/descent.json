@@ -59,7 +59,7 @@
     "narration_resolve": {
       "type": "narration",
       "text": "Mein Herz hämmert. Aber meine Hände sind ruhig. Großmutters Hände, hat Georg gesagt. Hände, die nicht zittern, wenn es darauf ankommt.",
-      "next": "check_ally_fallout_payoff"
+      "next": "check_anchor_name_commitment_descent"
     },
     "check_ally_fallout_payoff": {
       "type": "flag_check",
@@ -1205,6 +1205,49 @@
       "type": "narration",
       "text": "Ich habe jeden Kontakt vermieden, sauber, logisch, ohne Risiko. Auf dieser Treppe fühlt sich diese Klarheit plötzlich kalt an - als hätte ich nicht nur einen Plan geschützt, sondern eine Tür zugeschlagen, hinter der noch ein Mensch stand.",
       "next": "konrad_choice_avoided_payoff"
+    },
+    "check_anchor_name_commitment_descent": {
+      "type": "flag_check",
+      "flag": "anchor_name_commitment",
+      "value": 1,
+      "true_next": "check_anchor_name_margarethe_descent",
+      "false_next": "check_ally_fallout_payoff"
+    },
+    "check_anchor_name_margarethe_descent": {
+      "type": "flag_check",
+      "flag": "anchor_name_margarethe",
+      "value": 1,
+      "true_next": "anchor_name_margarethe_descent",
+      "false_next": "check_anchor_name_anna_descent"
+    },
+    "anchor_name_margarethe_descent": {
+      "type": "narration",
+      "text": "Am Treppenabsatz drückt das Singen gegen meine Schläfen. Ich lege die Hand auf den Stein und flüstere wie verabredet: Margarethe. Der Druck bleibt - aber er bekommt eine Grenze.",
+      "next": "check_ally_fallout_payoff"
+    },
+    "check_anchor_name_anna_descent": {
+      "type": "flag_check",
+      "flag": "anchor_name_anna",
+      "value": 1,
+      "true_next": "anchor_name_anna_descent",
+      "false_next": "check_anchor_name_georg_descent"
+    },
+    "anchor_name_anna_descent": {
+      "type": "narration",
+      "text": "Die Stimmen versuchen, mich schneller zu machen. Ich presse die Finger in den kalten Stein und sage leise: Anna. Sofort steht wieder vor mir, wofür ich den Ablauf halte.",
+      "next": "check_ally_fallout_payoff"
+    },
+    "check_anchor_name_georg_descent": {
+      "type": "flag_check",
+      "flag": "anchor_name_georg",
+      "value": 1,
+      "true_next": "anchor_name_georg_descent",
+      "false_next": "check_ally_fallout_payoff"
+    },
+    "anchor_name_georg_descent": {
+      "type": "narration",
+      "text": "Ein falscher Hallschritt jagt mir Panik in den Nacken. Hand auf Stein, Name auf Atem: Georg. Oben hält er die Linie - also halte ich sie hier unten auch.",
+      "next": "check_ally_fallout_payoff"
     }
   }
 }
