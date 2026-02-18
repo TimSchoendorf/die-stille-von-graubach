@@ -719,7 +719,7 @@
     },
     "scene_end": {
       "type": "scene_end",
-      "next_file": "res://data/dialogue/act3/descent.json"
+      "next_file": "res://data/dialogue/act3/ally_fallout_bridge.json"
     },
     "check_konrad_history": {
       "type": "flag_check",

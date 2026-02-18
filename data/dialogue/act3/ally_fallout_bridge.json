@@ -1,0 +1,265 @@
+{
+  "title": "Akt 3 - Brücke: Verbündete & Folgen",
+  "start": "bg_bridge",
+  "nodes": {
+    "bg_bridge": {
+      "type": "background",
+      "background": "village_corrupted",
+      "transition": "fade",
+      "next": "snd_bridge"
+    },
+    "snd_bridge": {
+      "type": "sound",
+      "sound_type": "music",
+      "path": "tension.wav",
+      "next": "narration_bridge_1"
+    },
+    "narration_bridge_1": {
+      "type": "narration",
+      "text": "Später am Abend spreche ich mit den anderen. Die Entscheidung steht - aber Entscheidungen hinterlassen Spuren.",
+      "next": "check_bridge_solo"
+    },
+    "check_bridge_solo": {
+      "type": "flag_check",
+      "flag": "chose_solo",
+      "value": 1,
+      "true_next": "bridge_solo_1",
+      "false_next": "check_bridge_georg"
+    },
+
+    "check_bridge_georg": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "bridge_georg_1",
+      "false_next": "check_bridge_hilde"
+    },
+    "check_bridge_hilde": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "bridge_hilde_1",
+      "false_next": "bridge_voss_1"
+    },
+
+    "bridge_georg_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Ich gehe morgen mit Georg in die Kirche. Das ist keine Entscheidung gegen euch - aber ich kann nicht drei Wege gleichzeitig gehen.",
+      "next": "bridge_georg_hilde"
+    },
+    "bridge_georg_hilde": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Dann hör gut zu, Kind: Stärke ist gut, aber sie ersetzt keinen Gesang. Wenn du meine Stimme nicht willst, nimm wenigstens meine Warnungen mit.",
+      "next": "bridge_georg_voss"
+    },
+    "bridge_georg_voss": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Verständlich. Ein Schmied wirkt verlässlicher als ein Priester mit Blut an den Händen. Aber wenn ihr unten seid und der Gang nach links bricht, nehmt den rechten Bogen. Sonst stürzt ihr.",
+      "next": "bridge_georg_elise"
+    },
+    "bridge_georg_elise": {
+      "type": "narration",
+      "text": "Hilde wirkt verletzt, Voss klingt nüchtern und müde. Beide helfen trotzdem. Vertrauen und Kränkung können offenbar gleichzeitig existieren.",
+      "next": "set_bridge_georg_flags"
+    },
+    "set_bridge_georg_flags": {
+      "type": "set_flag",
+      "flag": "bridge_fallout_seen",
+      "value": 1,
+      "next": "set_bridge_georg_hilde_tension"
+    },
+    "set_bridge_georg_hilde_tension": {
+      "type": "set_flag",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_georg_voss_tension"
+    },
+    "set_bridge_georg_voss_tension": {
+      "type": "set_flag",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_georg_hook"
+    },
+    "set_bridge_georg_hook": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "next": "bridge_end"
+    },
+
+    "bridge_hilde_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich habe Hilde gewählt. Morgen brauche ich den Gesang mehr als rohe Kraft.",
+      "next": "bridge_hilde_georg"
+    },
+    "bridge_hilde_georg": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "sad",
+      "text": "Verstehe. Tut nur weh, das zu hören. Ich wollte nicht wieder danebenstehen, wenn jemand Brandt in diese Tiefe geht.",
+      "next": "bridge_hilde_voss"
+    },
+    "bridge_hilde_voss": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Dann hören Sie wenigstens auf einen alten Feigling: In der Kammer trägt jedes Flüstern. Sprecht dort nichts aus, was Otto oder ES gegen euch verwenden könnte.",
+      "next": "bridge_hilde_elise"
+    },
+    "bridge_hilde_elise": {
+      "type": "narration",
+      "text": "Georgs Blick bleibt warm, aber verletzt. Voss versteckt seine Enttäuschung hinter Ratschlägen. Niemand ist unbeteiligt.",
+      "next": "set_bridge_hilde_flags"
+    },
+    "set_bridge_hilde_flags": {
+      "type": "set_flag",
+      "flag": "bridge_fallout_seen",
+      "value": 1,
+      "next": "set_bridge_hilde_georg_tension"
+    },
+    "set_bridge_hilde_georg_tension": {
+      "type": "set_flag",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_hilde_voss_tension"
+    },
+    "set_bridge_hilde_voss_tension": {
+      "type": "set_flag",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_hilde_hook"
+    },
+    "set_bridge_hilde_hook": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "next": "bridge_end"
+    },
+
+    "bridge_voss_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Ich gehe morgen mit Voss. Er kennt die Kammer und die Wege dort unten besser als jeder andere.",
+      "next": "bridge_voss_georg"
+    },
+    "bridge_voss_georg": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "angry",
+      "text": "Der Mann hat dreißig Jahre geschwiegen. Wenn er diesmal wieder schweigt, seid ihr tot, bevor ihr den Kreis seht.",
+      "next": "bridge_voss_hilde"
+    },
+    "bridge_voss_hilde": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Lass den Zorn, Georg. Elise hat gewählt. Aber Elise: Schuld ist kein Kompass. Pass auf, dass du nicht seine Buße zu deiner Last machst.",
+      "next": "bridge_voss_elise"
+    },
+    "bridge_voss_elise": {
+      "type": "narration",
+      "text": "Georgs Misstrauen ist offen, Hilde spricht leiser - aber nicht weniger deutlich. Ihre Kränkung wird zur Sorge, nicht zum Rückzug.",
+      "next": "set_bridge_voss_flags"
+    },
+    "set_bridge_voss_flags": {
+      "type": "set_flag",
+      "flag": "bridge_fallout_seen",
+      "value": 1,
+      "next": "set_bridge_voss_georg_tension"
+    },
+    "set_bridge_voss_georg_tension": {
+      "type": "set_flag",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_voss_hilde_tension"
+    },
+    "set_bridge_voss_hilde_tension": {
+      "type": "set_flag",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_voss_hook"
+    },
+    "set_bridge_voss_hook": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "next": "bridge_end"
+    },
+
+    "bridge_solo_1": {
+      "type": "narration",
+      "text": "Als ich sage, dass ich allein gehe, ist es erst still. Dann brechen die Reaktionen nacheinander über mich.",
+      "next": "bridge_solo_georg"
+    },
+    "bridge_solo_georg": {
+      "type": "dialogue",
+      "speaker": "georg",
+      "expression": "angry",
+      "text": "Allein? Nach allem? Du nennst das Schutz - ich nenne es, uns draußen sterben zu lassen, während du unten fällst.",
+      "next": "bridge_solo_hilde"
+    },
+    "bridge_solo_hilde": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Mut ohne Zeugen wird leicht zu Stolz, Kind. Wenn du uns nicht mitnimmst, nimm wenigstens den Gesang vollständig mit. Kein Kürzen, kein Heldentod.",
+      "next": "bridge_solo_voss"
+    },
+    "bridge_solo_voss": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "broken",
+      "text": "Ich habe mein Leben damit verbracht, andere allein in diese Tiefe zu schicken. Ich dachte nicht, dass ich das noch einmal mitansehen muss.",
+      "next": "bridge_solo_elise"
+    },
+    "bridge_solo_elise": {
+      "type": "narration",
+      "text": "Sie sind wütend. Verletzt. Und trotzdem helfen sie mir mit letzten Hinweisen, als wären wir noch ein Team. Vielleicht sind wir das - nur auf Distanz.",
+      "next": "set_bridge_solo_flags"
+    },
+    "set_bridge_solo_flags": {
+      "type": "set_flag",
+      "flag": "bridge_fallout_seen",
+      "value": 1,
+      "next": "set_bridge_solo_georg_tension"
+    },
+    "set_bridge_solo_georg_tension": {
+      "type": "set_flag",
+      "flag": "georg_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_solo_hilde_tension"
+    },
+    "set_bridge_solo_hilde_tension": {
+      "type": "set_flag",
+      "flag": "hilde_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_solo_voss_tension"
+    },
+    "set_bridge_solo_voss_tension": {
+      "type": "set_flag",
+      "flag": "voss_hurt_day6",
+      "value": 1,
+      "next": "set_bridge_solo_hook"
+    },
+    "set_bridge_solo_hook": {
+      "type": "set_flag",
+      "flag": "ally_fallout_payoff_pending",
+      "value": 1,
+      "next": "bridge_end"
+    },
+
+    "bridge_end": {
+      "type": "scene_end",
+      "next_file": "res://data/dialogue/act3/descent.json"
+    }
+  }
+}
