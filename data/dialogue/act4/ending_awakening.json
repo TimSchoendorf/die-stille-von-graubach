@@ -101,7 +101,7 @@
 		},
 		"fallout_awake_intro": {
 			"type": "narration",
-			"text": "Ihre Stimmen von vorhin schneiden durch den Lärm: verletzt, widersprechend, trotzdem geblieben. Genau diese Risse reißen jetzt mit auf.",
+			"text": "Ihre Stimmen von vorhin schneiden durch den Lärm: verletzt, widersprechend, trotzdem geblieben. Genau diese Risse reißen jetzt mit auf - und mit ihnen die Regeln, die uns hätten halten sollen.",
 			"next": "check_georg_hurt_awake"
 		},
 		"check_georg_hurt_awake": {
@@ -113,7 +113,7 @@
 		},
 		"georg_hurt_awake": {
 			"type": "narration",
-			"text": "Georg hatte recht mit seinem Zorn: Mut ohne Team ist nur ein anderes Wort für Risiko.",
+			"text": "Georg hatte recht mit seinem Zorn: Mut ohne Team ist nur ein anderes Wort für Risiko. Ohne geteilte Verantwortung kippt jeder Plan in Alleingang.",
 			"next": "check_hilde_hurt_awake"
 		},
 		"check_hilde_hurt_awake": {
@@ -125,7 +125,7 @@
 		},
 		"hilde_hurt_awake": {
 			"type": "narration",
-			"text": "Hilde hat vor Stolz ohne Zeugen gewarnt. Jetzt höre ich jedes Wort wieder, nur lauter.",
+			"text": "Hilde hat vor Stolz ohne Zeugen gewarnt. Jetzt höre ich jedes Wort wieder, nur lauter: Ohne Zeugen werden aus Absprachen bloße Hoffnung.",
 			"next": "check_voss_hurt_awake"
 		},
 		"check_voss_hurt_awake": {
@@ -137,7 +137,7 @@
 		},
 		"voss_hurt_awake": {
 			"type": "narration",
-			"text": "Voss klang müde, aber ehrlich: Schuld ersetzt kein Protokoll. Ich wollte es schneller als die Regeln erlaubten.",
+			"text": "Voss klang müde, aber ehrlich: Schuld ersetzt kein Protokoll. Ich wollte es schneller als die Regeln erlaubten - ohne saubere Übergabe, ohne Sicherungs-Siegel.",
 			"next": "clear_fallout_awake"
 		},
 		"clear_fallout_awake": {
@@ -431,7 +431,7 @@
 			"type": "journal",
 			"entry_id": "ending_awakening",
 			"title": "Das Erwachen",
-			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Und das Singen... das Singen hört nicht mehr auf.",
+			"content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Ich habe die drei Pfeiler zu spät geordnet - Zeichen, Gesang, Anker ohne belastbares Protokoll. Und das Singen... das Singen hört nicht mehr auf.",
 			"next": "check_konrad_help_awakening"
 		},
 		"awakening_konrad_epilog": {

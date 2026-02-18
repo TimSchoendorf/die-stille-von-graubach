@@ -949,12 +949,12 @@
 		},
 		"narration_end_1": {
 			"type": "narration",
-			"text": "Ich stehe in der Kammer, und das Wesen weiß, dass ich hier bin. Zwischen uns liegt nur dünner Stein und Jahrhunderte des Wartens.",
+			"text": "Ich stehe in der Kammer, und das Wesen weiß, dass ich hier bin. Zwischen uns liegt nur dünner Stein und Jahrhunderte des Wartens - und die drei Pfeiler, die mich bis hier getragen haben: Zeichen, Gesang, Anker.",
 			"next": "narration_end_1b"
 		},
 		"narration_end_1b": {
 			"type": "narration",
-			"text": "Und morgen... morgen fällt der Stein.",
+			"text": "Und morgen... morgen fällt der Stein. Wenn ich durchgehe, dann nur mit Regeln: freiwilliger Kontakt, sofortiges Stopp-Recht und ein Übergangs-Siegel, falls jemand ausfällt.",
 			"next": "effect_end_corruption"
 		},
 		"effect_end_corruption": {
