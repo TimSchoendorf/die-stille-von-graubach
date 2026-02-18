@@ -35,6 +35,11 @@
 - **Fix applied:** Added an "ending parity checkpoint" for ship-block runs: every ending reachable after ally fallout must either clear `ally_fallout_payoff_pending` on-screen or justify why it intentionally remains open.
 - **Applied now:** extended `act4/ending_pact.json` with a dedicated fallout-resolution beat + explicit flag cleanup (`ally_fallout_payoff_pending=0`) before ally epilog reactions.
 
+## Process improvement (implemented in current autonomous loop)
+- **Bottleneck identified:** Late-Act branch differentiation flattened during failure routes: the rehearsal decision in `act3/ally_fallout_bridge.json` had immediate descent payoff, but little/no visible consequence in the Act-4 escape climax.
+- **Fix applied:** Added a "carry-forward contingency checkpoint" to the loop: any new tactical choice introduced in Act 3 must be checked for at least one explicit Act-4 consequence beat (success cadence or failure cost).
+- **Applied now:** extended `act4/ending_escape.json` with rehearsal-dependent crisis beats (`rehearsed_signal_night6` vs `skipped_rehearsal_night6`) before ally-arrival branching.
+
 ## Open issues (next pass)
 1. **Dedicated open-door background image needed**
    - Requested: opened door centered, exterior visible.

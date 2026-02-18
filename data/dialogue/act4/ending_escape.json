@@ -35,6 +35,30 @@
       "speaker": "elise",
       "expression": "afraid",
       "text": "Nein - NEIN! Der Gesang bricht - ich kann es nicht halten -",
+      "next": "check_escape_rehearsed_signal"
+    },
+    "check_escape_rehearsed_signal": {
+      "type": "flag_check",
+      "flag": "rehearsed_signal_night6",
+      "value": 1,
+      "true_next": "escape_rehearsed_signal_payoff",
+      "false_next": "check_escape_skipped_rehearsal"
+    },
+    "escape_rehearsed_signal_payoff": {
+      "type": "narration",
+      "text": "Dann greift etwas, das wir am Abend geübt haben: zwei Glockenschläge, ein kurzer Ruf, Schritte im richtigen Takt. Keine Heldenpose - nur ein Plan, der unter Panik nicht zerreißt.",
+      "next": "check_escape_georg"
+    },
+    "check_escape_skipped_rehearsal": {
+      "type": "flag_check",
+      "flag": "skipped_rehearsal_night6",
+      "value": 1,
+      "true_next": "escape_skipped_rehearsal_cost",
+      "false_next": "check_escape_georg"
+    },
+    "escape_skipped_rehearsal_cost": {
+      "type": "narration",
+      "text": "Niemand kennt den ersten Schritt. Für einen tödlichen Moment reden wir gleichzeitig, laufen gegeneinander, verlieren Zeit - genau die Minute, die wir am Abend sparen wollten.",
       "next": "check_escape_georg"
     },
     "check_escape_georg": {
