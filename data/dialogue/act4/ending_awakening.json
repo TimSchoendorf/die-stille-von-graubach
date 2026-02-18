@@ -455,7 +455,7 @@
       "type": "journal",
       "entry_id": "ending_awakening",
       "title": "Das Erwachen",
-      "content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Ich habe die drei Pfeiler zu spät geordnet - Zeichen, Gesang, Anker ohne belastbares Protokoll. Und das Singen... das Singen hört nicht mehr auf.",
+      "content": "Ich habe versagt. Das Wesen ist erwacht. Graubach existiert nicht mehr. Ich habe die drei Pfeiler zu spät geordnet - Zeichen, Gesang, Anker ohne belastbares Protokoll mit Zeugen, freiwilliger Übergabe, Stopp-Recht und Übergangs-Siegel. Und das Singen... das Singen hört nicht mehr auf.",
       "next": "check_konrad_help_awakening"
     },
     "awakening_konrad_epilog": {

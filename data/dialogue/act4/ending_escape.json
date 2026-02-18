@@ -565,7 +565,7 @@
       "type": "journal",
       "entry_id": "ending_escape",
       "title": "Die Flucht",
-      "content": "Graubach ist verschwunden. Ich bin entkommen - mit Großmutters Journal als einzigem Beweis. Ich dokumentiere jede Erinnerung sofort, damit aus Schuld wenigstens belastbares Wissen wird: keine Geheimabsprachen mehr, nur klare Regeln mit Zeugen, Stopp-Recht und Übergangs-Siegel. Und die Frage bleibt: Hätte ich es verhindern können?",
+      "content": "Graubach ist verschwunden. Ich bin entkommen - mit Großmutters Journal als einzigem Beweis. Ich dokumentiere jede Erinnerung sofort, damit aus Schuld wenigstens belastbares Wissen wird: keine Geheimabsprachen mehr, nur ein offenes Protokoll mit Zeugen, freiwilliger Nachfolge, Stopp-Recht und Übergangs-Siegel. Und die Frage bleibt: Hätte ich es verhindern können?",
       "next": "check_packed_escape"
     },
     "check_packed_escape": {

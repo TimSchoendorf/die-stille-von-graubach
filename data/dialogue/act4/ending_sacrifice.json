@@ -501,7 +501,7 @@
       "type": "journal",
       "entry_id": "ending_sacrifice",
       "title": "Das Opfer",
-      "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit klaren, widerrufbaren Regeln (kein ungefragter Zugriff, kein Zwang, jederzeit Stopp), offen dokumentiert und von Zeugen getragen. Fällt diese Struktur aus, greift sofort ein Übergangs-Siegel. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
+      "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: als klares, widerrufbares Protokoll (kein ungefragter Zugriff, kein Zwang, jederzeit Stopp), offen dokumentiert und von Zeugen getragen. Fällt diese Struktur aus, greift sofort ein Übergangs-Siegel. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
       "next": "check_packed_sacrifice"
     },
     "check_packed_sacrifice": {
