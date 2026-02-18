@@ -2022,6 +2022,21 @@ def _add_act4_ending_sacrifice(tr):
        fr="Je regarde Konrad. Il tremble. Des gouttes de sueur sur son front. Derrière ses yeux, un homme lutte contre un océan.",
        es="Miro a Konrad. Está temblando. Gotas de sudor en su frente. Detrás de sus ojos, un hombre lucha contra un océano.",
        it="Guardo Konrad. Trema. Gocce di sudore sulla sua fronte. Dietro i suoi occhi, un uomo lotta contro un oceano.")
+    _t(tr, F, "narration_1_helped_konrad",
+       en="He asked me for help when he could barely speak. That promise stands between us now like a burning line.",
+       fr="Il m'a demandé de l'aide alors qu'il arrivait à peine à parler. Cette promesse se tient maintenant entre nous comme une ligne brûlante.",
+       es="Me pidió ayuda cuando apenas podía hablar. Esa promesa ahora se alza entre nosotros como una línea ardiente.",
+       it="Mi ha chiesto aiuto quando riusciva a malapena a parlare. Ora quella promessa sta tra noi come una linea ardente.")
+    _t(tr, F, "narration_1_distanced_konrad",
+       en="I kept my distance to protect the plan, ever since the square, when something older spoke through him. But now I am here to free him anyway.",
+       fr="J'ai gardé mes distances pour protéger le plan, depuis la place, quand quelque chose de plus ancien a parlé à travers lui. Et pourtant je suis ici pour le libérer.",
+       es="Mantuve mi distancia para proteger el plan, desde la plaza, cuando algo más antiguo habló por su boca. Y aun así estoy aquí para liberarlo.",
+       it="Ho mantenuto le distanze per proteggere il piano, da quella piazza in cui qualcosa di più antico parlò attraverso di lui. Eppure ora sono qui per liberarlo.")
+    _t(tr, F, "narration_chose_sacrifice_callback",
+       en="This time the decision was not made by a book, not by Otto, and not by tradition. I made it myself.",
+       fr="Cette fois, la décision n'a pas été prise par un livre, ni par Otto, ni par la tradition. C'est moi qui l'ai prise.",
+       es="Esta vez la decisión no la tomó un libro, ni Otto, ni la tradición. La tomé yo.",
+       it="Questa volta la decisione non l'ha presa un libro, né Otto, né la tradizione. L'ho presa io.")
 
     _t(tr, F, "narration_2",
        en="He taught me to read — no, that was Grandmother. He showed me the guardian tree. He asked for help when no one else did.",
@@ -2102,7 +2117,7 @@ def _add_act4_ending_sacrifice(tr):
        it="Konrad prende la mia mano. Piange. Sorrido. Non è solo il mio sorriso — ma è reale.")
 
     _t(tr, F, "narration_12",
-       en="I will stay in Graubach. I will take Konrad's place — as teacher, as guardian, as vessel. But not as a prisoner. As a host.",
+       en="I will stay in Graubach. I take Konrad's place — as teacher and guardian of the boundary. Not as a mindless vessel, but as a negotiating partner with clear rules: no access without consent, no coercion, stop at any time.",
        fr="Je resterai à Graubach. Je prendrai là place de Konrad — comme institutrice, comme gardienne, comme réceptacle. Mais pas comme prisonnière. Comme hôte.",
        es="Me quedaré en Graubach. Ocuparé el lugar de Konrad — como maestra, como guardiana, como receptáculo. Pero no como prisionera. Como anfitriona.",
        it="Resterò a Graubach. Prenderò il posto di Konrad — come insegnante, come guardiana, come ricettacolo. Ma non come prigioniera. Come ospite.")
@@ -2188,7 +2203,7 @@ def _add_act4_ending_sacrifice(tr):
        es="Nunca olvidaré lo que has hecho. Nunca.",
        it="Non dimenticherò mai quello che hai fatto. Mai.")
     _t(tr, F, "elise_sacrifice_5",
-       en="Because you deserve to be free. Because Grandmother would have wanted it. And because... because the entity needs me. And I need it.",
+       en="Because you deserve to be free. Because Grandmother would have wanted us to choose, not obey. And because I can set boundaries with it — no access without consent, no coercion, stop at any time — without making you pay for it any longer.",
        fr="Parce que tu mérites d'être libre. Parce que grand-mère l'aurait voulu. Et parce que... parce que l'entité à besoin de moi. Et j'ai besoin d'elle.",
        es="Porque mereces ser libre. Porque la abuela lo habría querido. Y porque... porque la entidad me necesita. Y yo la necesito.",
        it="Perché meriti di essere libero. Perché la nonna lo avrebbe voluto. È perché... perché l'entità ha bisogno di me. È io ho bisogno di lei.")
@@ -2243,6 +2258,11 @@ def _add_act4_ending_sacrifice(tr):
        fr="Tu es un meilleur foyer que Konrad. Il t'aime bien.",
        es="Eres un mejor hogar que Konrad. Le agradas.",
        it="Sei una casa migliore di Konrad. Gli piaci.")
+    _t(tr, F, "sacrifice_anna_warning_payoff",
+       en="You listened when I warned you about him — and later you listened when I said there was still a person inside him. You held both truths. That is why this worked.",
+       fr="Tu as écouté quand je t'ai mise en garde contre lui — puis tu as écouté quand j'ai dit qu'il y avait encore une personne en lui. Tu as tenu les deux vérités. C'est pour ça que ça a marché.",
+       es="Escuchaste cuando te advertí sobre él, y después escuchaste cuando dije que aún había una persona dentro. Sostuviste ambas verdades. Por eso funcionó.",
+       it="Hai ascoltato quando ti ho avvertita su di lui — e poi hai ascoltato quando ho detto che dentro c'era ancora una persona. Hai tenuto insieme entrambe le verità. Per questo ha funzionato.")
     _t(tr, F, "elise_anna_2",
        en="And I... I think I like it too. In a strange, inhuman way.",
        fr="Et moi... je crois que je l'aime bien aussi. D'une manière étrange, inhumaine.",
@@ -2278,11 +2298,31 @@ def _add_act4_ending_sacrifice(tr):
        fr="Otto ne comprend jamais. Il part parce que la tradition n'a plus de sens. Son dernier regard en arrière est vide.",
        es="Otto nunca lo entiende. Se va porque la tradición ya no tiene sentido. Su última mirada atrás está vacía.",
        it="Otto non capisce mai. Se ne va perché la tradizione non ha più senso. Il suo ultimo sguardo indietro è vuoto.")
+    _t(tr, F, "sacrifice_sought_konrad_memory",
+       en="I hear his words from the schoolhouse again — help me before it has me completely. Seeking him out was risky, but that look carried me all the way to this altar.",
+       fr="Je réentends ses mots de l'école — aide-moi avant qu'il ne m'ait complètement. Le chercher était risqué, mais ce regard m'a portée jusqu'à cet autel.",
+       es="Vuelvo a oír sus palabras en la escuela: ayúdame antes de que me tenga por completo. Buscarlo fue arriesgado, pero esa mirada me trajo hasta este altar.",
+       it="Risento le sue parole nell'aula: aiutami prima che mi abbia del tutto. Cercarlo è stato rischioso, ma quello sguardo mi ha portata fino a questo altare.")
+    _t(tr, F, "sacrifice_avoided_konrad_memory",
+       en="I avoided him to protect the plan. That distance hurt us both — and that is exactly why I know what this freedom costs, and why I owe it to him.",
+       fr="Je l'ai évité pour protéger le plan. Cette distance nous a blessés tous les deux — et c'est justement pour cela que je sais ce que coûte cette liberté, et pourquoi je la lui dois.",
+       es="Lo evité para proteger el plan. Esa distancia nos hirió a los dos — y justo por eso sé lo que cuesta esta libertad y por qué se la debo.",
+       it="L'ho evitato per proteggere il piano. Quella distanza ha ferito entrambi — ed è proprio per questo che so quanto costa questa libertà e perché gliela devo.")
     _t(tr, F, "konrad_trusted_sacrifice",
        en="You believed me. At the village square, when all the others feared me. You looked at me and saw a person, not a monster.",
        fr="Tu m'as cru. Sur la place du village, quand tous les autres me craignaient. Tu m'as regardé et tu as vu un être humain, pas un monstre.",
        es="Me creíste. En la plaza del pueblo, cuando todos los demás me temían. Me miraste y viste a una persona, no a un monstruo.",
        it="Mi hai creduto. Nella piazza del villaggio, quando tutti gli altri mi temevano. Mi hai guardato e hai visto una persona, non un mostro.")
+    _t(tr, F, "konrad_tested_sacrifice",
+       en="You did not trust me blindly. Since that evening with the spirals, you weighed every reaction so caution would not turn into coldness. And still you do this for me.",
+       fr="Tu ne m'as pas fait confiance aveuglément. Depuis ce soir avec les spirales, tu as évalué chaque réaction pour que la prudence ne devienne pas froideur. Et malgré ça, tu fais ça pour moi.",
+       es="No confiaste en mí a ciegas. Desde aquella noche de las espirales, evaluaste cada reacción para que la cautela no se volviera frialdad. Y aun así haces esto por mí.",
+       it="Non ti sei fidata ciecamente di me. Da quella sera delle spirali hai valutato ogni reazione perché la prudenza non diventasse freddezza. E nonostante questo, lo fai per me.")
+    _t(tr, F, "konrad_distrusted_sacrifice",
+       en="You kept me at arm's length to protect your plan. After what spoke through my mouth at the fountain, that was not betrayal — it was self-protection. And now you still give everything to set me free.",
+       fr="Tu m'as tenu à distance pour protéger ton plan. Après ce qui a parlé par ma bouche à la fontaine, ce n'était pas une trahison — c'était de la protection. Et maintenant tu donnes quand même tout pour me libérer.",
+       es="Me mantuviste a distancia para proteger tu plan. Después de lo que habló por mi boca en la fuente, eso no fue traición — fue protección. Y aun así ahora lo das todo para liberarme.",
+       it="Mi hai tenuto a distanza per proteggere il tuo piano. Dopo ciò che ha parlato dalla mia bocca alla fontana, non era tradimento — era autodifesa. E ora dai comunque tutto per liberarmi.")
     _t(tr, F, "konrad_untrusted_sacrifice",
        en="You barely knew me. And yet... why? Why for me?",
        fr="Tu me connaissais à peine. Et pourtant... pourquoi ? Pourquoi pour moi ?",
