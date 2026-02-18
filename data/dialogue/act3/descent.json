@@ -1017,6 +1017,18 @@
 		"anna_warning_chamber_payoff": {
 			"type": "narration",
 			"text": "Anna hatte recht: Hinter der Wucht liegt keine blinde Gier, sondern panische Sehnsucht. Das macht es nicht harmlos - nur tragischer. Und gefährlicher, wenn ich zögere.",
+			"next": "check_distrusted_konrad_chamber"
+		},
+		"check_distrusted_konrad_chamber": {
+			"type": "flag_check",
+			"flag": "distrusted_konrad",
+			"value": 1,
+			"true_next": "distrusted_konrad_chamber_payoff",
+			"false_next": "check_tested_konrad_chamber"
+		},
+		"distrusted_konrad_chamber_payoff": {
+			"type": "narration",
+			"text": "Am Brunnen hörte ich dieses kalte 'ICH lüge nie' aus Konrads Mund und wusste: Wachsamkeit ist kein Verrat. Auf der letzten Stufe halte ich mich daran fest - Misstrauen als Alarm, nicht als Urteil. Wenn ich ihm heute begegne, prüfe ich jede Regung und lasse ihn trotzdem nicht fallen.",
 			"next": "check_tested_konrad_chamber"
 		},
 		"check_tested_konrad_chamber": {
@@ -1028,7 +1040,7 @@
 		},
 		"tested_konrad_chamber_payoff": {
 			"type": "narration",
-			"text": "Ich denke an den Abend am Brunnen, als ich Konrad mit einem einzigen Wort testete und seine Hand wie ertappt ans Handgelenk schoss. Diese Vorsicht hat mich bis hierher gebracht - aber in der Kammer darf sie nicht zu Kälte werden. Heute muss ich beides halten: prüfen und trotzdem retten.",
+			"text": "Ich denke an den Abend am Brunnen, als ich Konrad mit einem einzigen Wort testete und seine Hand wie ertappt ans Handgelenk schoss. Diese Vorsicht hat mich bis hierher gebracht. In der Kammer wird sie zur Methode: erst prüfen, dann handeln - aber nie so kalt werden, dass ich den Menschen im Gefäß vergesse.",
 			"next": "check_ally_chamber_react"
 		}
 	}

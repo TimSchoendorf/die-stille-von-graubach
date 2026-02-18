@@ -868,7 +868,7 @@
     },
     "konrad_suspicious_memory": {
       "type": "narration",
-      "text": "Ich erinnere mich an jeden falschen Ton, jedes ausweichende Lächeln. Ich habe ihm misstraut - zu Recht. Und trotzdem steht er jetzt hier und kämpft.",
+      "text": "Ich erinnere mich an jeden falschen Ton, jedes ausweichende Lächeln, an dieses abrupte Wegkippen in die fremde Stimme. Mein Misstrauen war nicht Grausamkeit, sondern ein Frühwarnsystem. Und trotzdem steht er jetzt hier und kämpft - also muss ich beides halten: Distanz im Kopf, Mitgefühl in den Händen.",
       "next": "check_konrad_knows_plan_memory"
     },
     "check_konrad_knows_plan_memory": {
@@ -974,7 +974,7 @@
     },
     "narration_konrad_choice": {
       "type": "narration",
-      "text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Er kämpft gegen sich selbst, gegen das Wesen, gegen dreißig Jahre Gefangenschaft - und ich sehe, wie jede Sekunde, die ich zögere, ihn tiefer unter Wasser drückt.",
+      "text": "Konrads Augen flackern. Braun. Bodenlos. Braun. Derselbe Bruch wie am Brunnen, nur näher, gefährlicher. Er kämpft gegen sich selbst, gegen das Wesen, gegen dreißig Jahre Gefangenschaft - und ich sehe, wie jede Sekunde, die ich zögere, ihn tiefer unter Wasser drückt.",
       "next": "check_anna_warning_konrad_choice"
     },
     "check_anna_warning_konrad_choice": {
