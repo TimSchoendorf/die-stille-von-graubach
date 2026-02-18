@@ -616,6 +616,20 @@
       "flag": "tested_konrad",
       "value": 1,
       "true_next": "escape_konrad_epilog_tested",
+      "false_next": "check_trusted_konrad_escape"
+    },
+    "check_trusted_konrad_escape": {
+      "type": "flag_check",
+      "flag": "trusted_konrad",
+      "value": 1,
+      "true_next": "escape_konrad_epilog_trusted",
+      "false_next": "check_distrusted_konrad_escape"
+    },
+    "check_distrusted_konrad_escape": {
+      "type": "flag_check",
+      "flag": "distrusted_konrad",
+      "value": 1,
+      "true_next": "escape_konrad_epilog_distrusted",
       "false_next": "escape_konrad_epilog"
     },
     "escape_konrad_epilog_helped": {
@@ -626,6 +640,16 @@
     "escape_konrad_epilog_tested": {
       "type": "narration",
       "text": "Konrad. Ich habe ihn geprüft, bevor ich ihm glaubte - aus Vernunft, aus Angst. In manchen Nächten frage ich mich, ob genau diese Vorsicht ihn länger am Leben hielt, oder ob sie nur erklärt, warum sein Gesicht mich bis heute im Traum ansieht.",
+      "next": "check_anna_warning_escape"
+    },
+    "escape_konrad_epilog_trusted": {
+      "type": "narration",
+      "text": "Konrad. Ich habe ihm geglaubt, als er sagte, dass in ihm noch ein stiller Ort übrig sei - ein schmaler Rand zwischen ihm und dem Wesen. Als ich lief, hoffte ich, dass genau dieser Rest ihn trägt. In meinen dunkelsten Nächten fürchte ich, dass ich nur gelernt habe, Hoffnung und Schuld mit derselben Stimme auszusprechen.",
+      "next": "check_anna_warning_escape"
+    },
+    "escape_konrad_epilog_distrusted": {
+      "type": "narration",
+      "text": "Konrad. Ich habe Abstand gehalten, um den Plan zu schützen. Vielleicht rettete mich diese Entscheidung, vielleicht tötete sie ihn früher. Seit der Flucht frage ich mich, ob Misstrauen manchmal nur der Name ist, den wir der Angst geben, wenn wir keine Zeit mehr für Mut haben.",
       "next": "check_anna_warning_escape"
     },
     "escape_konrad_epilog": {
