@@ -275,7 +275,7 @@
       "type": "dialogue",
       "speaker": "elise",
       "expression": "happy",
-      "text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann - kein ungefragter Zugriff, kein Zwang, jederzeit Stopp, plus Übergangs-Siegel, falls ich ausfalle - ohne dich weiter dafür zahlen zu lassen.",
+      "text": "Weil du es verdienst, frei zu sein. Weil Großmutter gewollt hätte, dass wir wählen statt gehorchen. Und weil ich ihm Grenzen geben kann - kein ungefragter Zugriff, kein Zwang, jederzeit Stopp. Diese Regeln gelten nicht im Geheimen: Wir halten sie mit Zeugen fest, schriftlich und widerrufbar. Wenn ich ausfalle, greift sofort ein Übergangs-Siegel, bis freiwillige Nachfolge bereit ist - ohne dass du weiter dafür zahlst.",
       "next": "konrad_5"
     },
     "konrad_5": {
@@ -430,7 +430,7 @@
     },
     "narration_12": {
       "type": "narration",
-      "text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp. Und wenn ich diese Regeln nicht mehr halten kann, greift sofort ein Übergangs-Siegel.",
+      "text": "Ich werde in Graubach bleiben. Ich nehme Konrads Platz ein - als Lehrerin und Hüterin der Grenze. Nicht als willenloses Gefäß, sondern als Verhandlungspartnerin mit klaren Regeln: kein ungefragter Zugriff, kein Zwang, jederzeit Stopp. Die Regeln liegen offen im Kirchenarchiv und werden regelmäßig mit Zeugen geprüft. Und wenn ich sie nicht mehr halten kann, greift sofort ein Übergangs-Siegel.",
       "next": "anna_sacrifice_appears"
     },
     "anna_sacrifice_appears": {
@@ -501,7 +501,7 @@
       "type": "journal",
       "entry_id": "ending_sacrifice",
       "title": "Das Opfer",
-      "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit Regeln, Grenzen und klaren Stopp-Regeln und dokumentiertem Übergangs-Siegel. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
+      "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: mit klaren, widerrufbaren Regeln (kein ungefragter Zugriff, kein Zwang, jederzeit Stopp), offen dokumentiert und von Zeugen getragen. Fällt diese Struktur aus, greift sofort ein Übergangs-Siegel. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
       "next": "check_packed_sacrifice"
     },
     "check_packed_sacrifice": {
@@ -569,7 +569,7 @@
     },
     "sacrifice_otto_epilog": {
       "type": "narration",
-      "text": "Otto versteht es nie. Er geht, weil die Tradition keinen Sinn mehr hat. Sein letzter Blick zurück ist leer.",
+      "text": "Otto versucht noch, die alte Geheimhaltung zurückzudrücken. Als die neuen Regeln offen aushängen und niemand mehr bereit ist, Zwang zu dulden, verlässt er das Dorf. Sein System hat keinen Halt mehr.",
       "next": "sacrifice_candle_epilog"
     },
     "sacrifice_candle_epilog": {
