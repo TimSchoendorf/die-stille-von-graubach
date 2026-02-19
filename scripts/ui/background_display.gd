@@ -26,12 +26,25 @@ func _ready() -> void:
 
 
 func change_background(bg_name: String, transition: String = "fade") -> void:
-	var bg_path := "res://assets/sprites/backgrounds/" + bg_name
-	if not bg_path.ends_with(".png") and not bg_path.ends_with(".jpg"):
-		bg_path += ".png"
+	var base := "res://assets/sprites/backgrounds/" + bg_name
+	var candidate_paths: Array[String] = []
 
-	if not ResourceLoader.exists(bg_path):
-		push_warning("Background not found: " + bg_path + " — keeping current")
+	if bg_name.ends_with(".png") or bg_name.ends_with(".jpg"):
+		candidate_paths.append(base)
+	else:
+		# Prefer v2 assets when present, fallback to legacy names
+		candidate_paths.append(base + "_v2.png")
+		candidate_paths.append(base + ".png")
+		candidate_paths.append(base + ".jpg")
+
+	var bg_path := ""
+	for p in candidate_paths:
+		if ResourceLoader.exists(p):
+			bg_path = p
+			break
+
+	if bg_path.is_empty():
+		push_warning("Background not found for: " + bg_name + " — keeping current")
 		return  # Keep current background visible instead of showing black
 
 	var new_texture: Texture2D = load(bg_path)

@@ -34,11 +34,21 @@ func _load_cached(path: String) -> Texture2D:
 
 
 func _resolve_sprite_path(char_id: String, expression: String) -> String:
+	# Prefer v2 sprites when available, fallback to legacy assets
+	var v2_path := "res://assets/sprites/characters/%s/%s_v2.png" % [char_id, expression]
+	if ResourceLoader.exists(v2_path):
+		return v2_path
+
 	var path := "res://assets/sprites/characters/%s/%s.png" % [char_id, expression]
 	if ResourceLoader.exists(path):
 		return path
-	# Fallback to neutral expression
+
+	# Fallback to neutral expression (v2 first, then legacy)
 	if expression != "neutral":
+		var neutral_v2_path := "res://assets/sprites/characters/%s/neutral_v2.png" % char_id
+		if ResourceLoader.exists(neutral_v2_path):
+			push_warning("Sprite not found: %s, using neutral_v2" % v2_path)
+			return neutral_v2_path
 		var neutral_path := "res://assets/sprites/characters/%s/neutral.png" % char_id
 		if ResourceLoader.exists(neutral_path):
 			push_warning("Sprite not found: %s, using neutral" % path)
