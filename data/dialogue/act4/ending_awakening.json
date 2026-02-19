@@ -533,7 +533,7 @@
     "awakening_konrad_epilog": {
       "type": "narration",
       "text": "Konrad steht mitten auf dem Dorfplatz. Er lächelt. Die Spiralen auf seinen Händen leuchten. Zum ersten Mal ist er nicht mehr Gefäß - er ist Brücke. Das Wesen fließt durch ihn hindurch in die Welt, und Konrad lässt es geschehen. Dreißig Jahre Kampf, und am Ende ergibt er sich - nicht aus Schwäche, sondern aus Müdigkeit.",
-      "next": "check_anna_warning_awakening"
+      "next": "check_awakening_konrad_tactic_voice"
     },
     "awakening_anna_epilog": {
       "type": "narration",
@@ -585,12 +585,12 @@
     "awakening_konrad_epilog_helped": {
       "type": "narration",
       "text": "Konrad steht mitten auf dem Dorfplatz, die Spiralen brennen unter seiner Haut. In der Schule hatte er geflüstert: \"Hilf mir, Elise. Bitte. Bevor es mich ganz hat.\" Ich hatte es versprochen. Jetzt sehe ich, wie das Wesen durch ihn in die Welt flutet, und begreife: Ich habe ihn nicht gerettet - ich habe ihm nur beim Untergehen zugesehen.",
-      "next": "check_anna_warning_awakening"
+      "next": "check_awakening_konrad_tactic_voice"
     },
     "awakening_konrad_epilog_tested": {
       "type": "narration",
       "text": "Konrad steht mitten auf dem Dorfplatz. Ich hatte ihn geprüft, Spiralen als Falle, weil Vorsicht sich sicherer anfühlte als Vertrauen. Nun leuchten genau diese Spiralen auf seinen Händen wie ein Urteil, und das Wesen benutzt seinen Körper als Tür.",
-      "next": "check_anna_warning_awakening"
+      "next": "check_awakening_konrad_tactic_voice"
     },
     "awakening_konrad_epilog_trusted": {
       "type": "narration",
@@ -600,6 +600,54 @@
     "awakening_konrad_epilog_distrusted": {
       "type": "narration",
       "text": "Konrad steht mitten auf dem Dorfplatz und lächelt, als gehörte ihm endlich der eigene Körper. Ich habe ihn auf Abstand gehalten, um den Plan zu schützen. Jetzt gibt es keinen Plan mehr, nur ihn als offene Wunde zwischen Mensch und Wesen.",
+      "next": "check_awakening_konrad_tactic_voice"
+    },
+    "check_awakening_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "awakening_konrad_tactic_voice",
+      "false_next": "check_awakening_konrad_tactic_hand"
+    },
+    "awakening_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Der geübte Stimmrhythmus hängt noch in der Luft - ein letzter menschlicher Takt in einer Stimme, die ihm nicht mehr ganz gehört.",
+      "next": "check_awakening_konrad_tactic_hand"
+    },
+    "check_awakening_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "awakening_konrad_tactic_hand",
+      "false_next": "check_awakening_konrad_tactic_interrupt"
+    },
+    "awakening_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Seine Hand sucht noch kurz den geübten Ankerpunkt, bevor die Bewegung kippt und etwas Fremdes übernimmt.",
+      "next": "check_awakening_konrad_tactic_interrupt"
+    },
+    "check_awakening_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "awakening_konrad_tactic_interrupt",
+      "false_next": "check_awakening_konrad_tactic_anchor_phrase"
+    },
+    "awakening_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "Ich höre das Stoppwort in meinem Kopf - zu spät, aber klar genug, dass der Verlust einen Namen bekommt.",
+      "next": "check_awakening_konrad_tactic_anchor_phrase"
+    },
+    "check_awakening_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "awakening_konrad_tactic_anchor_phrase",
+      "false_next": "check_anna_warning_awakening"
+    },
+    "awakening_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Selbst der Ankersatz bleibt nur einen Herzschlag lang stark. Dann antwortet nicht mehr Konrad.",
       "next": "check_anna_warning_awakening"
     },
     "check_anna_warning_awakening": {

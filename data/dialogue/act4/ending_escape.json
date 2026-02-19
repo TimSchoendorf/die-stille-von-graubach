@@ -791,26 +791,74 @@
     "escape_konrad_epilog_helped": {
       "type": "narration",
       "text": "Konrad. Ich höre noch, wie er in der Schule sagte: 'Hilf mir, Elise. Bitte. Bevor es mich ganz hat.' Ich hatte ihm versprochen, ihn nicht fallen zu lassen. In manchen Nächten frage ich mich, ob ich dieses Versprechen in der Kammer gehalten habe - oder erst gebrochen, als ich lief.",
-      "next": "check_anna_warning_escape"
+      "next": "check_escape_konrad_tactic_voice"
     },
     "escape_konrad_epilog_tested": {
       "type": "narration",
       "text": "Konrad. Ich habe ihn geprüft, bevor ich ihm glaubte - aus Vernunft, aus Angst. In manchen Nächten frage ich mich, ob genau diese Vorsicht ihn länger am Leben hielt, oder ob sie nur erklärt, warum sein Gesicht mich bis heute im Traum ansieht.",
-      "next": "check_anna_warning_escape"
+      "next": "check_escape_konrad_tactic_voice"
     },
     "escape_konrad_epilog_trusted": {
       "type": "narration",
       "text": "Konrad. Ich habe ihm geglaubt, als er sagte, dass in ihm noch ein stiller Ort übrig sei - ein schmaler Rand zwischen ihm und dem Wesen. Als ich lief, hoffte ich, dass genau dieser Rest ihn trägt. In meinen dunkelsten Nächten fürchte ich, dass ich nur gelernt habe, Hoffnung und Schuld mit derselben Stimme auszusprechen.",
-      "next": "check_anna_warning_escape"
+      "next": "check_escape_konrad_tactic_voice"
     },
     "escape_konrad_epilog_distrusted": {
       "type": "narration",
       "text": "Konrad. Ich habe Abstand gehalten, um den Plan zu schützen. Vielleicht rettete mich diese Entscheidung, vielleicht tötete sie ihn früher. Seit der Flucht frage ich mich, ob Misstrauen manchmal nur der Name ist, den wir der Angst geben, wenn wir keine Zeit mehr für Mut haben.",
-      "next": "check_anna_warning_escape"
+      "next": "check_escape_konrad_tactic_voice"
     },
     "escape_konrad_epilog": {
       "type": "narration",
       "text": "Konrad. In manchen Nächten denke ich an den Mann mit den glasigen Augen, der dreißig Jahre lang gefangen war. Hat das Erwachen ihn befreit? Oder hat es ihn mitgenommen?",
+      "next": "check_escape_konrad_tactic_voice"
+    },
+    "check_escape_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "escape_konrad_tactic_voice",
+      "false_next": "check_escape_konrad_tactic_hand"
+    },
+    "escape_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Im Zug klopfe ich manchmal den alten Rhythmus gegen die Scheibe. Dann höre ich wieder seine Stimme: langsam, im Takt, nicht im Sog.",
+      "next": "check_escape_konrad_tactic_hand"
+    },
+    "check_escape_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "escape_konrad_tactic_hand",
+      "false_next": "check_escape_konrad_tactic_interrupt"
+    },
+    "escape_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Ich sehe noch vor mir, wie seine Hand am Türrahmen Halt suchte - genau der Anker, den wir geübt hatten.",
+      "next": "check_escape_konrad_tactic_interrupt"
+    },
+    "check_escape_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "escape_konrad_tactic_interrupt",
+      "false_next": "check_escape_konrad_tactic_anchor_phrase"
+    },
+    "escape_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "Und manchmal schrecke ich mit dem Stoppwort auf den Lippen hoch - als könnte es die Nacht rückwirkend stoppen.",
+      "next": "check_escape_konrad_tactic_anchor_phrase"
+    },
+    "check_escape_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "escape_konrad_tactic_anchor_phrase",
+      "false_next": "check_anna_warning_escape"
+    },
+    "escape_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Den Ankersatz wiederhole ich in den dunkelsten Nächten wie eine Schuldformel - und wie ein Versprechen, ihn nicht zu vergessen.",
       "next": "check_anna_warning_escape"
     },
     "check_anna_warning_escape": {

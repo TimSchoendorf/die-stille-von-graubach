@@ -528,6 +528,54 @@
     "pact_konrad_epilog_2": {
       "type": "narration",
       "text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
+      "next": "check_pact_konrad_tactic_voice"
+    },
+    "check_pact_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "pact_konrad_tactic_voice",
+      "false_next": "check_pact_konrad_tactic_hand"
+    },
+    "pact_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Er summt den vorbereiteten Rhythmus unter dem Atem. 'Damit kippe ich nicht mehr so schnell', sagt er und lächelt schief.",
+      "next": "check_pact_konrad_tactic_hand"
+    },
+    "check_pact_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "pact_konrad_tactic_hand",
+      "false_next": "check_pact_konrad_tactic_interrupt"
+    },
+    "pact_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Seine rechte Hand findet den Brunnenrand, zwei Atemzüge, dann Ruhe. Der Handanker sitzt.",
+      "next": "check_pact_konrad_tactic_interrupt"
+    },
+    "check_pact_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "pact_konrad_tactic_interrupt",
+      "false_next": "check_pact_konrad_tactic_anchor_phrase"
+    },
+    "pact_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "'Wenn es wieder drückt, nehme ich erst das Stoppwort', sagt er. 'Nicht heroisch - nur wirksam.'",
+      "next": "check_pact_konrad_tactic_anchor_phrase"
+    },
+    "check_pact_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "pact_konrad_tactic_anchor_phrase",
+      "false_next": "check_konrad_ally_consequence_pact"
+    },
+    "pact_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Zum Schluss spricht er den Ankersatz, als prüfe er den Boden unter sich. Er trägt.",
       "next": "check_konrad_ally_consequence_pact"
     },
     "check_konrad_ally_consequence_pact": {

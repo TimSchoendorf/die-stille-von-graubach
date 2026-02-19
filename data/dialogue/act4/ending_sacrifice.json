@@ -632,6 +632,54 @@
     "sacrifice_epilog_transition": {
       "type": "narration",
       "text": "Tage werden zu Wochen. Wochen zu Monaten. Ich lerne, mit meinem Gast zu leben. Und mein Gast lernt, mich nicht zu verschlingen.",
+      "next": "check_sacrifice_konrad_tactic_voice"
+    },
+    "check_sacrifice_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "sacrifice_konrad_tactic_voice",
+      "false_next": "check_sacrifice_konrad_tactic_hand"
+    },
+    "sacrifice_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Was wir für Konrad geübt hatten - Rhythmus, Atem, klare Einsätze - nutze ich jetzt selbst, wenn die fremde Stimme in mir lauter wird.",
+      "next": "check_sacrifice_konrad_tactic_hand"
+    },
+    "check_sacrifice_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "sacrifice_konrad_tactic_hand",
+      "false_next": "check_sacrifice_konrad_tactic_interrupt"
+    },
+    "sacrifice_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Auch der Handanker hilft: Holzrahmen, kalter Tisch, drei Atemzüge. Dann gehört mein Körper wieder mir.",
+      "next": "check_sacrifice_konrad_tactic_interrupt"
+    },
+    "check_sacrifice_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "sacrifice_konrad_tactic_interrupt",
+      "false_next": "check_sacrifice_konrad_tactic_anchor_phrase"
+    },
+    "sacrifice_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "Das Stoppwort ist kein Wunder. Aber oft reicht genau diese kleine Unterbrechung, um nicht in den Sog zu kippen.",
+      "next": "check_sacrifice_konrad_tactic_anchor_phrase"
+    },
+    "check_sacrifice_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "sacrifice_konrad_tactic_anchor_phrase",
+      "false_next": "sacrifice_anna_epilog"
+    },
+    "sacrifice_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Und der Ankersatz bleibt mein täglicher Check: Wer spricht gerade - ich, oder das, was in mir wohnt?",
       "next": "sacrifice_anna_epilog"
     },
     "sacrifice_anna_epilog": {

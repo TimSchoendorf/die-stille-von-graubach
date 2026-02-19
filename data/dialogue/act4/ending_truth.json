@@ -609,31 +609,79 @@
     "truth_konrad_epilog_helped": {
       "type": "narration",
       "text": "Konrad wartet am Kircheneingang, bleich aber wach. Als er mich sieht, atmet er aus, als hätte er seit Stunden die Luft angehalten. 'Du hast dein Versprechen gehalten', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
-      "next": "truth_otto_epilog"
+      "next": "check_truth_konrad_tactic_voice"
     },
     "truth_konrad_epilog_avoided": {
       "type": "narration",
       "text": "Konrad bleibt erst im Schatten des Kircheneingangs stehen, als müsste er prüfen, ob er hier noch einen Platz hat. 'Du bist auf Abstand geblieben', sagt er heiser. 'Das hat wehgetan - aber vielleicht hat es den Plan geschützt.' Er zeigt auf seine Hände: Die Spiralen sind blasser als je zuvor. 'Es schläft jetzt ohne mich. Das reicht für den Anfang.'",
-      "next": "truth_otto_epilog"
+      "next": "check_truth_konrad_tactic_voice"
     },
     "truth_konrad_epilog_distrusted": {
       "type": "narration",
       "text": "Konrad lehnt am kalten Stein und hält meinem Blick stand. 'Nach dem Satz am Brunnen - du weißt schon: ICH lüge nie - war Misstrauen vernünftig', sagt er leise. Kein Vorwurf, nur Müdigkeit. Dann hebt er die Hände; die Spiralen verblassen im Morgengrau. 'Du hast mir nicht vertraut. Aber du hast mich trotzdem nicht aufgegeben.'",
-      "next": "truth_otto_epilog"
+      "next": "check_truth_konrad_tactic_voice"
     },
     "truth_konrad_epilog_tested": {
       "type": "narration",
       "text": "Konrad steht am Kircheneingang und wirkt zum ersten Mal wirklich anwesend. 'Du hast mir nicht blind vertraut', sagt er leise. 'Damals mit den Spiralen - das hat mich wachgerüttelt.' Er atmet aus, als würde er zum ersten Mal seit Wochen Luft bekommen. 'Und dass du später trotzdem zurückkamst, hat mich gehalten.'",
-      "next": "truth_otto_epilog"
+      "next": "check_truth_konrad_tactic_voice"
     },
     "truth_konrad_epilog_trusted": {
       "type": "narration",
       "text": "Konrad wartet im ersten Licht des Morgens, die Schultern endlich nicht mehr wie unter fremdem Gewicht. 'Du hast in mir den Menschen gesehen, bevor es sicher war', sagt er leise. Er öffnet die Hand; die Spiralen sind nur noch matte Schatten. 'Vielleicht hat genau dieses Vertrauen mich bis heute zusammengehalten.'",
-      "next": "truth_otto_epilog"
+      "next": "check_truth_konrad_tactic_voice"
     },
     "truth_konrad_epilog": {
       "type": "narration",
       "text": "Konrad steht am Kircheneingang, als das Licht der Morgendämmerung durch die Fenster fällt. Die glasigen Momente sind vorbei. Seine Augen sind klar. 'Es schläft friedlich', flüstert er. 'Zum ersten Mal träumt es nicht durch mich.'",
+      "next": "check_truth_konrad_tactic_voice"
+    },
+    "check_truth_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "truth_konrad_tactic_voice",
+      "false_next": "check_truth_konrad_tactic_hand"
+    },
+    "truth_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Er tippt zweimal an seinen Kehlkopf. 'Dein Rhythmus aus der Schule ist geblieben', sagt er. 'Wenn es drückt, finde ich damit wieder meinen Takt.'",
+      "next": "check_truth_konrad_tactic_hand"
+    },
+    "check_truth_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "truth_konrad_tactic_hand",
+      "false_next": "check_truth_konrad_tactic_interrupt"
+    },
+    "truth_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Dann legt er die Hand flach auf den kalten Stein - genau wie geübt. Die Finger zittern kurz, dann werden sie ruhig.",
+      "next": "check_truth_konrad_tactic_interrupt"
+    },
+    "check_truth_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "truth_konrad_tactic_interrupt",
+      "false_next": "check_truth_konrad_tactic_anchor_phrase"
+    },
+    "truth_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "'Und das Stoppwort funktioniert noch', fügt er leise hinzu. 'Kurz. Klar. Genug, um den Riss nicht aufgehen zu lassen.'",
+      "next": "check_truth_konrad_tactic_anchor_phrase"
+    },
+    "check_truth_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "truth_konrad_tactic_anchor_phrase",
+      "false_next": "truth_otto_epilog"
+    },
+    "truth_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Bevor wir gehen, sagt er den Ankersatz einmal laut. Kein Zauber - nur Orientierung. Heute reicht das.",
       "next": "truth_otto_epilog"
     },
     "truth_otto_epilog": {

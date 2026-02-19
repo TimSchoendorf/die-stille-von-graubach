@@ -449,16 +449,64 @@
     "konrad_trusted_seal": {
       "type": "narration",
       "text": "Konrad taucht am nächsten Morgen auf. Die Spiralen auf seiner Hand verblassen. Er weint. 'Ich bin frei', flüstert er. Und zum ersten Mal glaube ich ihm.",
-      "next": "check_konrad_ally_consequence_seal"
+      "next": "check_seal_konrad_tactic_voice"
     },
     "konrad_tested_seal": {
       "type": "narration",
       "text": "Konrad taucht am nächsten Morgen auf, erschöpft, aber klar. 'Du hattest recht, misstrauisch zu sein', sagt er mit rauer Stimme. 'Dass du mich geprüft hast, hat mich wach gehalten.' Als die Spiralen auf seiner Hand verblassen, nicke ich nur. Zwischen uns ist noch Vorsicht - aber auch Hoffnung.",
-      "next": "check_konrad_ally_consequence_seal"
+      "next": "check_seal_konrad_tactic_voice"
     },
     "konrad_untrusted_seal": {
       "type": "narration",
       "text": "Konrad verschwand in der Nacht des Rituals. Niemand sah ihn gehen. Manche sagen, er lebt jetzt im Wald. Manche sagen, der Wald hat ihn genommen.",
+      "next": "check_seal_konrad_tactic_voice"
+    },
+    "check_seal_konrad_tactic_voice": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_voice_rhythm",
+      "value": 1,
+      "true_next": "seal_konrad_tactic_voice",
+      "false_next": "check_seal_konrad_tactic_hand"
+    },
+    "seal_konrad_tactic_voice": {
+      "type": "narration",
+      "text": "Der Stimmrhythmus aus der Vorbereitung bleibt unser Notgeländer: langsam zählen, tief ausatmen, erst dann sprechen.",
+      "next": "check_seal_konrad_tactic_hand"
+    },
+    "check_seal_konrad_tactic_hand": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_hand_anchor",
+      "value": 1,
+      "true_next": "seal_konrad_tactic_hand",
+      "false_next": "check_seal_konrad_tactic_interrupt"
+    },
+    "seal_konrad_tactic_hand": {
+      "type": "narration",
+      "text": "Wenn die alten Reflexe kommen, legt Konrad die Hand auf Holz oder Stein und wartet, bis der Puls wieder ihm gehört.",
+      "next": "check_seal_konrad_tactic_interrupt"
+    },
+    "check_seal_konrad_tactic_interrupt": {
+      "type": "flag_check",
+      "flag": "prepared_konrad_interrupt_word",
+      "value": 1,
+      "true_next": "seal_konrad_tactic_interrupt",
+      "false_next": "check_seal_konrad_tactic_anchor_phrase"
+    },
+    "seal_konrad_tactic_interrupt": {
+      "type": "narration",
+      "text": "Für akute Momente reicht oft ein einziges Stoppwort. Unspektakulär, aber es unterbricht den Sog.",
+      "next": "check_seal_konrad_tactic_anchor_phrase"
+    },
+    "check_seal_konrad_tactic_anchor_phrase": {
+      "type": "flag_check",
+      "flag": "konrad_anchor_phrase_prepared",
+      "value": 1,
+      "true_next": "seal_konrad_tactic_anchor_phrase",
+      "false_next": "check_konrad_ally_consequence_seal"
+    },
+    "seal_konrad_tactic_anchor_phrase": {
+      "type": "narration",
+      "text": "Und der Ankersatz bleibt Teil jeder Kontrollnacht - nicht als Ritualpflicht, sondern als freiwillige Rückkehr zu sich.",
       "next": "check_konrad_ally_consequence_seal"
     },
     "check_konrad_ally_consequence_seal": {
