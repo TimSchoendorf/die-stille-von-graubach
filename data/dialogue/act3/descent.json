@@ -156,12 +156,60 @@
       "flag": "contingency_bell_protocol",
       "value": 1,
       "true_next": "contingency_bell_protocol_payoff",
-      "false_next": "check_ally_present"
+      "false_next": "check_hilde_counter_chant_descent"
     },
     "contingency_bell_protocol_payoff": {
       "type": "narration",
       "text": "Ich zähle unwillkürlich die Sekunden bis zum vereinbarten Glockenzeichen. Der Plan beruhigt mich - draußen wartet jemand auf ein Lebenszeichen, auch wenn ich allein hinabsteige.",
-      "next": "check_rehearsed_signal_night6"
+      "next": "check_hilde_counter_chant_descent"
+    },
+    "check_hilde_counter_chant_descent": {
+      "type": "flag_check",
+      "flag": "hilde_counter_chant_timed",
+      "value": 1,
+      "true_next": "hilde_counter_chant_descent_payoff",
+      "false_next": "check_hilde_single_voice_descent"
+    },
+    "hilde_counter_chant_descent_payoff": {
+      "type": "narration",
+      "text": "Zwischen zwei Wellen des Singens fällt von oben Hildes Zweitstimme in die Tiefe - dünn, aber präzise auf dem vereinbarten Glockentakt. Der Kontrapunkt schneidet mir einen klaren Pfad durch das Dröhnen.",
+      "next": "check_solo_contingency_descent"
+    },
+    "check_hilde_single_voice_descent": {
+      "type": "flag_check",
+      "flag": "hilde_single_voice_plan",
+      "value": 1,
+      "true_next": "hilde_single_voice_descent_payoff",
+      "false_next": "check_solo_contingency_descent"
+    },
+    "hilde_single_voice_descent_payoff": {
+      "type": "narration",
+      "text": "Von oben kommt keine Zweitstimme - genau wie verabredet. Nur mein eigener Einsatz auf dem nackten Takt. Die schlichte Linie hält überraschend gut; weniger Rettungsnetz, aber auch weniger Fehlzündung.",
+      "next": "check_solo_contingency_descent"
+    },
+    "check_solo_contingency_descent": {
+      "type": "flag_check",
+      "flag": "solo_chalk_route_prepared",
+      "value": 1,
+      "true_next": "solo_chalk_route_descent_payoff",
+      "false_next": "check_solo_breath_descent"
+    },
+    "solo_chalk_route_descent_payoff": {
+      "type": "narration",
+      "text": "An den unteren Pfeilern blitzen meine eigenen Kreidepunkte auf. Keine Heldengeste, nur Navigation: Distanz zum Treppenansatz, Winkel zum Kreis, Rückweg falls der Boden kippt. Allein heißt heute: vorbereitet.",
+      "next": "check_ally_present"
+    },
+    "check_solo_breath_descent": {
+      "type": "flag_check",
+      "flag": "solo_breath_protocol_prepared",
+      "value": 1,
+      "true_next": "solo_breath_descent_payoff",
+      "false_next": "check_ally_present"
+    },
+    "solo_breath_descent_payoff": {
+      "type": "narration",
+      "text": "Das Dröhnen will meinen Puls übernehmen. Ich zwinge den alten Takt zurück: vier ein, vier halten, vier aus. Mit jedem Zyklus wird die Kammer nicht leiser - aber ich werde wieder steuerbar.",
+      "next": "check_ally_present"
     },
     "check_rehearsed_signal_night6": {
       "type": "flag_check",

@@ -174,7 +174,7 @@
     "ally_solo_3": {
       "type": "narration",
       "text": "Es ist einsam. Aber Einsamkeit ist kein Todesurteil. Das sollte ich wissen - ich bin Folkloristin, nicht Soldatin. Mein Werkzeug ist Verständnis, nicht Gewalt. Dafür brauche ich keine Armee.",
-      "next": "ally_converge"
+      "next": "solo_tactical_beat_1"
     },
     "ally_georg": {
       "type": "background",
@@ -412,6 +412,72 @@
       "speaker": "hilde",
       "expression": "wise",
       "text": "Deshalb bin ich hier. Wir singen zusammen. Meine Stimme mag alt sein, aber zusammen - vielleicht reicht es. Die alten Völker haben immer im Chor gesungen.",
+      "next": "check_asked_about_death_hilde_callback"
+    },
+    "check_asked_about_death_hilde_callback": {
+      "type": "flag_check",
+      "flag": "asked_about_death",
+      "value": 1,
+      "true_next": "hilde_death_callback",
+      "false_next": "check_knows_earth_sign_hilde_callback"
+    },
+    "hilde_death_callback": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du hast mich gefragt, ob du an dieser Aufgabe sterben kannst. Das war keine Schwäche, Kind - das war Verstand. Genau deshalb legen wir heute einen Rückweg fest, bevor wir in die Kammer gehen.",
+      "next": "check_knows_earth_sign_hilde_callback"
+    },
+    "check_knows_earth_sign_hilde_callback": {
+      "type": "flag_check",
+      "flag": "knows_earth_sign",
+      "value": 1,
+      "true_next": "hilde_earth_sign_callback",
+      "false_next": "hilde_tactical_beat_1"
+    },
+    "hilde_earth_sign_callback": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Gut, dass du das Zeichen der Erde lesen kannst. Dann markieren wir die Kante mit Asche und Salbei - so erkennst du den sicheren Stand selbst dann, wenn das Singen die Sicht bricht.",
+      "next": "hilde_tactical_beat_1"
+    },
+    "hilde_tactical_beat_1": {
+      "type": "narration",
+      "text": "Hilde zieht Kreidelinien auf den Hüttentisch: Treppenabsatz, Glocke, Kammerkreis. Für jeden Abschnitt setzt sie einen Gegenvers und ein Handzeichen. Keine Mystik - ein Ablaufplan gegen Panik.",
+      "next": "choice_hilde_counter_chant_plan"
+    },
+    "choice_hilde_counter_chant_plan": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Hildes Zweitstimme als Gegengesang ab Glockenzeichen fest einplanen",
+          "set_flags": {
+            "hilde_counter_chant_timed": 1
+          },
+          "next": "hilde_counter_chant_commit"
+        },
+        {
+          "text": "Bei nur einer Stimme bleiben und den Ablauf möglichst schlank halten",
+          "set_flags": {
+            "hilde_single_voice_plan": 1
+          },
+          "next": "hilde_single_voice_commit"
+        }
+      ]
+    },
+    "hilde_counter_chant_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Beim zweiten Glockenschlag setzt du mit der Zweitstimme ein. Wenn ich wegrutsche, holst du mich damit zurück in den Takt.",
+      "next": "elise_hilde_chance"
+    },
+    "hilde_single_voice_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Keine Zusatzebene. Wir halten die Route klar: eine Stimme, ein Takt, keine offenen Flanken.",
       "next": "elise_hilde_chance"
     },
     "elise_hilde_chance": {
@@ -1228,6 +1294,49 @@
       "position": "left",
       "action": "hide",
       "next": "ally_final_converge"
+    },
+    "solo_tactical_beat_1": {
+      "type": "narration",
+      "text": "Ich breite Großmutters Notizen auf dem Küchentisch aus und zerlege den Weg in harte Schritte: Eingang sichern, Treppe zählen, Kreis prüfen, dann erst sprechen. Allein heißt nicht ungeplant.",
+      "next": "solo_tactical_beat_2"
+    },
+    "solo_tactical_beat_2": {
+      "type": "narration",
+      "text": "Mit Kreide markiere ich am Handgelenk vier kurze Striche. Kein Schmuck - ein stiller Taktgeber. Wenn die Stimmen drücken, gehe ich Strich für Strich zurück in meinen eigenen Atem.",
+      "next": "choice_solo_contingency_focus"
+    },
+    "choice_solo_contingency_focus": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Fluchtroute mit Kreidepunkten bis zum Treppenansatz vorbereiten",
+          "set_flags": {
+            "solo_chalk_route_prepared": 1
+          },
+          "next": "solo_chalk_route_commit"
+        },
+        {
+          "text": "Atemprotokoll (vier ein, vier halten, vier aus) als Notanker einprägen",
+          "set_flags": {
+            "solo_breath_protocol_prepared": 1
+          },
+          "next": "solo_breath_protocol_commit"
+        }
+      ]
+    },
+    "solo_chalk_route_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Wenn es kippt, keine Heldennummer: Kreidepunkte zählen, Rückweg halten, neu ansetzen. Ich schulde Graubach ein Ende - keinen dramatischen Abgang.",
+      "next": "ally_converge"
+    },
+    "solo_breath_protocol_commit": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Vier ein. Vier halten. Vier aus. So bleibe ich im Körper, auch wenn der Rest der Kammer mich wegziehen will.",
+      "next": "ally_converge"
     }
   }
 }
