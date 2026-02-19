@@ -362,6 +362,54 @@
     "narration_13": {
       "type": "narration",
       "text": "Großmutter, du hast es mir überlassen. Nicht als Bürde. Als Erbe. Und ich nehme es an.",
+      "next": "check_approach_commitment_pact_end"
+    },
+    "check_approach_commitment_pact_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_pact",
+      "value": 1,
+      "true_next": "pact_commitment_pact_epilog",
+      "false_next": "check_approach_commitment_understand_pact_end"
+    },
+    "pact_commitment_pact_epilog": {
+      "type": "narration",
+      "text": "Das Klauselblatt bleibt nicht im Journal. Ich tippe es ab, lasse es gegenlesen und hänge es in Berlin über meinen Schreibtisch: Nähe nur mit Regeln, und Regeln nur mit Zeugen.",
+      "next": "journal_pact"
+    },
+    "check_approach_commitment_understand_pact_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_understand",
+      "value": 1,
+      "true_next": "pact_commitment_understand_epilog",
+      "false_next": "check_approach_commitment_seal_pact_end"
+    },
+    "pact_commitment_understand_epilog": {
+      "type": "narration",
+      "text": "Mein Schwur bleibt derselbe wie in der Nacht: weiter fragen, auch wenn Antworten bequem wären. Der Pakt lebt nur, solange wir ihn lernfähig halten.",
+      "next": "journal_pact"
+    },
+    "check_approach_commitment_seal_pact_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_seal",
+      "value": 1,
+      "true_next": "pact_commitment_seal_epilog",
+      "false_next": "check_approach_commitment_destroy_pact_end"
+    },
+    "pact_commitment_seal_epilog": {
+      "type": "narration",
+      "text": "Auch mit Pakt denke ich in Siegeln: feste Intervalle, klare Vertretung, kein Termin ohne Rückfallebene. Haltbarkeit ist ab jetzt Teil der Fürsorge.",
+      "next": "journal_pact"
+    },
+    "check_approach_commitment_destroy_pact_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_destroy",
+      "value": 1,
+      "true_next": "pact_commitment_destroy_epilog",
+      "false_next": "journal_pact"
+    },
+    "pact_commitment_destroy_epilog": {
+      "type": "narration",
+      "text": "Der Teil in mir, der alles beenden wollte, bekommt einen Platz statt ein Steuer: als Notfallstimme für Abbruch, nie mehr als Vorwand für Kontrolle.",
       "next": "journal_pact"
     },
     "journal_pact": {
@@ -480,6 +528,52 @@
     "pact_konrad_epilog_2": {
       "type": "narration",
       "text": "'Es lässt mich los', sagt er leise. 'Ich kann es spüren. Es braucht mich nicht mehr.' Er weint - nicht vor Trauer, vor Erleichterung.",
+      "next": "check_konrad_ally_consequence_pact"
+    },
+    "check_konrad_ally_consequence_pact": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "pact_georg_konrad_consequence",
+      "false_next": "check_hilde_konrad_consequence_pact"
+    },
+    "pact_georg_konrad_consequence": {
+      "type": "narration",
+      "text": "Georg legt Konrad eine Hand auf die Schulter und teilt die Wachpläne neu ein. 'Du musst nicht mehr allein der Puffer sein', sagt er. Konrad atmet hörbar aus, als hätte er den Satz seit Jahren gebraucht.",
+      "next": "pact_future_cost_obligation"
+    },
+    "check_hilde_konrad_consequence_pact": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "pact_hilde_konrad_consequence",
+      "false_next": "check_voss_konrad_consequence_pact"
+    },
+    "pact_hilde_konrad_consequence": {
+      "type": "narration",
+      "text": "Hilde drückt Konrad ein dünnes Heft in die Hand: Atemrhythmen, Warnzeichen, Stopp-Formeln. 'Freiheit ist Pflegearbeit', sagt sie trocken. Er steckt es ein, ohne Widerspruch.",
+      "next": "pact_future_cost_obligation"
+    },
+    "check_voss_konrad_consequence_pact": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "pact_voss_konrad_consequence",
+      "false_next": "pact_no_ally_konrad_consequence"
+    },
+    "pact_voss_konrad_consequence": {
+      "type": "narration",
+      "text": "Voss nimmt Konrads Namen in das neue Archiv auf - nicht als Fall, als Mitverantwortlichen mit Rechten. Für Konrad ist es das erste Dokument seit Jahren, das ihn nicht zum Werkzeug macht.",
+      "next": "pact_future_cost_obligation"
+    },
+    "pact_no_ally_konrad_consequence": {
+      "type": "narration",
+      "text": "Ohne starken Rückhalt bleibt Konrad vorsichtig am Rand des Dorfes. Wir vereinbaren feste Check-ins und ein klares Notrufwort, damit Freiheit nicht wieder im Schweigen verschwindet.",
+      "next": "pact_future_cost_obligation"
+    },
+    "pact_future_cost_obligation": {
+      "type": "narration",
+      "text": "Der Pakt kostet konkret: Ich lehne ein Auslandssemester ab, spare jeden Monat für die Herbstreisen und halte zwei Bereitschaftswochen frei, falls die Verbindung instabil wird. Freiwilligkeit heißt hier auch: Ich plane mein Leben um diese Zusage herum.",
       "next": "check_anna_warning_pact"
     },
     "check_anna_warning_pact": {

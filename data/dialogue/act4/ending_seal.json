@@ -360,6 +360,54 @@
     "narration_12b": {
       "type": "narration",
       "text": "Denn unter dem Stein schläft etwas, dem ich ein Versprechen gegeben habe. Und Brandts halten ihre Versprechen.",
+      "next": "check_approach_commitment_seal_end"
+    },
+    "check_approach_commitment_seal_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_seal",
+      "value": 1,
+      "true_next": "seal_commitment_seal_epilog",
+      "false_next": "check_approach_commitment_understand_end"
+    },
+    "seal_commitment_seal_epilog": {
+      "type": "narration",
+      "text": "Das Wort aus meinem Kreidering bleibt: Bleiben. Nicht als Gefängnis, sondern als Dienstplan. Ich schreibe mir zwei feste Rückkehrtermine pro Jahr in den Kalender, damit aus Haltung keine improvisierte Heldentat wird.",
+      "next": "narration_13"
+    },
+    "check_approach_commitment_understand_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_understand",
+      "value": 1,
+      "true_next": "seal_commitment_understand_epilog",
+      "false_next": "check_approach_commitment_destroy_end"
+    },
+    "seal_commitment_understand_epilog": {
+      "type": "narration",
+      "text": "Ich halte an meinen Fragen fest, auch jetzt, wo es still ist. Verstehen heißt künftig Protokolle offen nachzuschärfen, statt sie aus Stolz als fertig zu behandeln.",
+      "next": "narration_13"
+    },
+    "check_approach_commitment_destroy_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_destroy",
+      "value": 1,
+      "true_next": "seal_commitment_destroy_epilog",
+      "false_next": "check_approach_commitment_pact_end"
+    },
+    "seal_commitment_destroy_epilog": {
+      "type": "narration",
+      "text": "Der alte Impuls, alles zu brechen, bleibt in mir wie ein Muskelreflex. Ich baue ihn in Sicherheitsarbeit um: jede Sitzung mit klarer Exit-Route, Übergangs-Siegel bereit, keine Alleingänge mehr.",
+      "next": "narration_13"
+    },
+    "check_approach_commitment_pact_end": {
+      "type": "flag_check",
+      "flag": "approach_commitment_pact",
+      "value": 1,
+      "true_next": "seal_commitment_pact_epilog",
+      "false_next": "narration_13"
+    },
+    "seal_commitment_pact_epilog": {
+      "type": "narration",
+      "text": "Ich behandle selbst das Schlaf-Siegel wie einen Vertrag: Zuständigkeiten, Stopprecht, Zeugen. Vertrauen bleibt Teil davon - aber nie wieder der einzige Träger.",
       "next": "narration_13"
     },
     "narration_13": {
@@ -401,16 +449,62 @@
     "konrad_trusted_seal": {
       "type": "narration",
       "text": "Konrad taucht am nächsten Morgen auf. Die Spiralen auf seiner Hand verblassen. Er weint. 'Ich bin frei', flüstert er. Und zum ersten Mal glaube ich ihm.",
-      "next": "seal_candle_epilog"
+      "next": "check_konrad_ally_consequence_seal"
     },
     "konrad_tested_seal": {
       "type": "narration",
       "text": "Konrad taucht am nächsten Morgen auf, erschöpft, aber klar. 'Du hattest recht, misstrauisch zu sein', sagt er mit rauer Stimme. 'Dass du mich geprüft hast, hat mich wach gehalten.' Als die Spiralen auf seiner Hand verblassen, nicke ich nur. Zwischen uns ist noch Vorsicht - aber auch Hoffnung.",
-      "next": "seal_candle_epilog"
+      "next": "check_konrad_ally_consequence_seal"
     },
     "konrad_untrusted_seal": {
       "type": "narration",
       "text": "Konrad verschwand in der Nacht des Rituals. Niemand sah ihn gehen. Manche sagen, er lebt jetzt im Wald. Manche sagen, der Wald hat ihn genommen.",
+      "next": "check_konrad_ally_consequence_seal"
+    },
+    "check_konrad_ally_consequence_seal": {
+      "type": "flag_check",
+      "flag": "allied_georg",
+      "value": 1,
+      "true_next": "seal_georg_konrad_consequence",
+      "false_next": "check_hilde_konrad_consequence_seal"
+    },
+    "seal_georg_konrad_consequence": {
+      "type": "narration",
+      "text": "Georg übernimmt die erste Nachtwache an der Schule, obwohl niemand ihn darum bitten muss. 'Frei heißt nicht allein', sagt er. Konrad nickt und bleibt diesmal an der Tür stehen statt zu fliehen.",
+      "next": "seal_future_cost_obligation"
+    },
+    "check_hilde_konrad_consequence_seal": {
+      "type": "flag_check",
+      "flag": "allied_hilde",
+      "value": 1,
+      "true_next": "seal_hilde_konrad_consequence",
+      "false_next": "check_voss_konrad_consequence_seal"
+    },
+    "seal_hilde_konrad_consequence": {
+      "type": "narration",
+      "text": "Hilde bindet Konrad noch in derselben Woche in ihre Atemübungen ein. 'Freiheit hält besser mit Technik', murmelt sie. Er rollt die Augen - und kommt trotzdem jeden Abend.",
+      "next": "seal_future_cost_obligation"
+    },
+    "check_voss_konrad_consequence_seal": {
+      "type": "flag_check",
+      "flag": "allied_voss",
+      "value": 1,
+      "true_next": "seal_voss_konrad_consequence",
+      "false_next": "seal_no_ally_konrad_consequence"
+    },
+    "seal_voss_konrad_consequence": {
+      "type": "narration",
+      "text": "Voss richtet für Konrad einen stillen Raum im Pfarrhaus ein - ohne Fragen, ohne Beichte. 'Heilung braucht manchmal nur eine Tür, die nicht zuschlägt', sagt er, und diesmal meint er es.",
+      "next": "seal_future_cost_obligation"
+    },
+    "seal_no_ally_konrad_consequence": {
+      "type": "narration",
+      "text": "Ohne verlässliche Verbündete bleibt Konrads Befreiung brüchig. Wir schreiben trotzdem einen Plan: tägliche Meldung, offene Türen, keine Nacht allein am Brunnen.",
+      "next": "seal_future_cost_obligation"
+    },
+    "seal_future_cost_obligation": {
+      "type": "narration",
+      "text": "Frieden ist nicht gratis: Ich nehme weniger Kurse in Berlin, arbeite nebenbei und zahle jede zweite Fahrt nach Graubach selbst. Zweimal im Jahr Kontrollnacht, dazwischen monatliche Protokollprüfung per Brief - damit aus meinem Versprechen keine hübsche Erinnerung wird.",
       "next": "seal_candle_epilog"
     },
     "seal_candle_epilog": {
