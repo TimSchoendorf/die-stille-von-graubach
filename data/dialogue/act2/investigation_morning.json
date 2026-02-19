@@ -88,12 +88,12 @@
     "taste_cup": {
       "type": "narration",
       "text": "Der Tee ist bitter, fast metallisch. Beifuß, Schafgarbe, ein Hauch Eisenkraut. Dieselbe Mischung, die Hilde mir gegen den Nebel gegeben hat. Großmutter hat sich jeden Morgen damit geschützt.",
-      "next": "elise_morning_resolve"
+      "next": "taste_cup_memory_choice"
     },
     "search_kitchen_hint": {
       "type": "narration",
       "text": "Ich öffne Schubladen und Dosen, bis ich zwischen alten Rezeptkarten einen Zettel finde: 'Frische Bündel kühl halten - hinter der losen Kellerwand'. Kein Kochhinweis. Ein Versteckhinweis.",
-      "next": "elise_morning_resolve"
+      "next": "search_kitchen_followup_choice"
     },
     "elise_morning_resolve": {
       "type": "narration",
@@ -329,12 +329,12 @@
     "stance_grounded_trust": {
       "type": "narration",
       "text": "Ich zwinge meinen Atem in einen Rhythmus und entscheide mich: Ich gehe Großmutters Weg weiter. Mit klarem Kopf.",
-      "next": "read_journal_7"
+      "next": "stance_grounded_trust_payoff"
     },
     "stance_forced_verify": {
       "type": "narration",
       "text": "Ich dränge die Panik beiseite und lese weiter. Wenn ich überleben will, muss ich alles verstehen - und jede Annahme testen.",
-      "next": "read_journal_7"
+      "next": "stance_forced_verify_payoff"
     },
     "read_journal_7": {
       "type": "narration",
@@ -436,6 +436,62 @@
     "scene_end": {
       "type": "scene_end",
       "next_file": "res://data/dialogue/act2/church_secrets.json"
+    },
+    "taste_cup_memory_choice": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Die Kräutermischung notieren und später mit Hildes Rezept abgleichen",
+          "next": "taste_cup_note_commit"
+        },
+        {
+          "text": "Den bitteren Nachgeschmack als Warnsignal im Körper verankern",
+          "next": "taste_cup_body_commit"
+        }
+      ]
+    },
+    "taste_cup_note_commit": {
+      "type": "narration",
+      "text": "Ich kritzle die Mischung auf die Rückseite von Großmutters Einkaufsliste. Kein sentimentales Andenken - ein Arbeitsprotokoll. Wenn Hilde dieselben Kräuter nennt, weiß ich, dass hier Methode hinter jedem Morgen steckte.",
+      "next": "elise_morning_resolve"
+    },
+    "taste_cup_body_commit": {
+      "type": "narration",
+      "text": "Ich lasse den bitteren Zug nicht wegatmen. Wenn mein Kopf später kippt, suche ich genau diesen Geschmack als Gegengewicht: Beifuß, Schafgarbe, Eisenkraut - hier, jetzt, Körper vor Panik.",
+      "next": "elise_morning_resolve"
+    },
+    "search_kitchen_followup_choice": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Den Versteckhinweis direkt am Kellerzugang markieren",
+          "next": "search_kitchen_mark_commit"
+        },
+        {
+          "text": "Den Zettel einstecken und niemandem davon erzählen",
+          "next": "search_kitchen_conceal_commit"
+        }
+      ]
+    },
+    "search_kitchen_mark_commit": {
+      "type": "narration",
+      "text": "Ich ritze mit dem Brotmesser ein kleines X in die Türzarge zum Keller. Später im Stress suche ich dann nicht, ich finde.",
+      "next": "elise_morning_resolve"
+    },
+    "search_kitchen_conceal_commit": {
+      "type": "narration",
+      "text": "Der Zettel verschwindet in meiner Jackentasche. Falls Otto oder Konrad hier auftauchen, sollen sie gar nicht erst wissen, wonach sie suchen müssen.",
+      "next": "elise_morning_resolve"
+    },
+    "stance_grounded_trust_payoff": {
+      "type": "narration",
+      "text": "Ich unterstreiche im Journal drei Sätze und schreibe nur ein Wort daneben: \"tragen\". Nicht alles beweisen - das Tragfähige zuerst umsetzen.",
+      "next": "read_journal_7"
+    },
+    "stance_forced_verify_payoff": {
+      "type": "narration",
+      "text": "Ich markiere jede Behauptung mit Randkürzeln: belegt, indirekt, offen. Wenn ich sterbe, soll wenigstens klar sein, worauf mein Plan gebaut war - und worauf nicht.",
+      "next": "read_journal_7"
     }
   }
 }

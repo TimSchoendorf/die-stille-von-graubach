@@ -420,7 +420,7 @@
       "entry_id": "ending_seal",
       "title": "Das Siegel",
       "content": "Das Bindungsritual gelang. Das Wesen schläft wieder, gehalten durch Gesang statt durch Blut. Kein erzwungenes Opfer mehr; die nächsten Jahre nutzen wir für ein freiwilliges, klares Nachfolge-Protokoll mit Zeugen, Stopprecht und Übergangs-Siegel für Ausfälle. Es hat mich gefragt: Versprochen? Und ich habe geantwortet: Versprochen.",
-      "next": "seal_anna_epilog"
+      "next": "choice_seal_daily_anchor"
     },
     "seal_anna_epilog": {
       "type": "narration",
@@ -685,6 +685,29 @@
       "flag": "ally_fallout_payoff_pending",
       "value": 0,
       "next": "check_ally_seal_georg"
+    },
+    "choice_seal_daily_anchor": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Ein festes Nachritual setzen (Protokoll schreiben, dann Kerze löschen)",
+          "next": "seal_daily_anchor_ritual"
+        },
+        {
+          "text": "Flexibel bleiben und nur auf akute Signale reagieren",
+          "next": "seal_daily_anchor_flexible"
+        }
+      ]
+    },
+    "seal_daily_anchor_ritual": {
+      "type": "narration",
+      "text": "Ich gebe dem Ende eine Form: schreiben, prüfen, erst dann schlafen. Kein Drama - nur Wiederholung, bis aus Überleben wieder Alltag wird.",
+      "next": "check_packed_seal"
+    },
+    "seal_daily_anchor_flexible": {
+      "type": "narration",
+      "text": "Ich halte die Struktur offen und reagiere auf den Tag statt auf ein starres Schema. Freiheit fühlt sich riskanter an - aber auch ehrlicher.",
+      "next": "check_packed_seal"
     }
   }
 }

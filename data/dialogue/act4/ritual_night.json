@@ -2290,12 +2290,12 @@
     "schoolhouse_command_choice_hold_payoff": {
       "type": "narration",
       "text": "Unten bleibt mein Takt sauber, oben hält Georg die Linie. Der Befehl kostet Vertrauen - aber er verhindert, dass Sorge zur Panik wird.",
-      "next": "check_promised_konrad_after_ritual_ritual"
+      "next": "check_georg_watch_school_ritual"
     },
     "schoolhouse_command_choice_tempo_payoff": {
       "type": "narration",
       "text": "Ich tue nichts außer zählen, und genau das stabilisiert den Kreis. Kein Heldensprung, kein Umweg - nur Disziplin, die uns beide am Leben hält.",
-      "next": "check_promised_konrad_after_ritual_ritual"
+      "next": "check_georg_watch_school_ritual"
     },
     "check_promised_konrad_after_ritual_ritual": {
       "type": "flag_check",
@@ -2344,6 +2344,18 @@
       "type": "narration",
       "text": "Ich höre das Summen und denke an den Namen, den ich nicht improvisieren musste: \"Georg.\" Der Gedanke an seine ruhige Linie oben zwingt meine Stimme unten in denselben Takt.",
       "next": "check_konrad_sacrifice"
+    },
+    "check_georg_watch_school_ritual": {
+      "type": "flag_check",
+      "flag": "asked_georg_watch_school",
+      "value": 1,
+      "true_next": "georg_watch_school_ritual_payoff",
+      "false_next": "check_promised_konrad_after_ritual_ritual"
+    },
+    "georg_watch_school_ritual_payoff": {
+      "type": "narration",
+      "text": "Dass wir gestern schon ein stilles Sicherungszeichen fürs Schulhaus gelegt haben, nimmt der Entscheidung heute die Schärfe. Kein Improvisieren mehr - nur den vorbereiteten Kanal nutzen oder bewusst schließen.",
+      "next": "check_promised_konrad_after_ritual_ritual"
     }
   }
 }

@@ -591,7 +591,7 @@
       "entry_id": "ending_sacrifice",
       "title": "Das Opfer",
       "content": "Ich habe Konrads Platz freiwillig übernommen, damit seine Strafe endet. Das Wesen und ich teilen nun einen Körper - aber nicht blind: als klares, widerrufbares Protokoll (kein ungefragter Zugriff, kein Zwang, jederzeit Stopp), offen dokumentiert und von Zeugen getragen. Fällt diese Struktur aus, greift sofort ein Übergangs-Siegel. Es ist nicht das Ende. Es ist der schwierige Anfang einer echten Koexistenz.",
-      "next": "check_packed_sacrifice"
+      "next": "choice_sacrifice_daily_anchor"
     },
     "check_packed_sacrifice": {
       "type": "flag_check",
@@ -717,6 +717,29 @@
     "scene_end": {
       "type": "scene_end",
       "next_file": "ending:sacrifice"
+    },
+    "choice_sacrifice_daily_anchor": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Ein festes Nachritual setzen (Protokoll schreiben, dann Kerze löschen)",
+          "next": "sacrifice_daily_anchor_ritual"
+        },
+        {
+          "text": "Flexibel bleiben und nur auf akute Signale reagieren",
+          "next": "sacrifice_daily_anchor_flexible"
+        }
+      ]
+    },
+    "sacrifice_daily_anchor_ritual": {
+      "type": "narration",
+      "text": "Ich gebe dem Ende eine Form: schreiben, prüfen, erst dann schlafen. Kein Drama - nur Wiederholung, bis aus Überleben wieder Alltag wird.",
+      "next": "check_packed_sacrifice"
+    },
+    "sacrifice_daily_anchor_flexible": {
+      "type": "narration",
+      "text": "Ich halte die Struktur offen und reagiere auf den Tag statt auf ein starres Schema. Freiheit fühlt sich riskanter an - aber auch ehrlicher.",
+      "next": "check_packed_sacrifice"
     }
   }
 }

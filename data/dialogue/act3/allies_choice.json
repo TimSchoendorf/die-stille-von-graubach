@@ -471,14 +471,14 @@
       "speaker": "elise",
       "expression": "determined",
       "text": "Beim zweiten Glockenschlag setzt du mit der Zweitstimme ein. Wenn ich wegrutsche, holst du mich damit zurück in den Takt.",
-      "next": "elise_hilde_chance"
+      "next": "hilde_counter_chant_payoff"
     },
     "hilde_single_voice_commit": {
       "type": "dialogue",
       "speaker": "elise",
       "expression": "thinking",
       "text": "Keine Zusatzebene. Wir halten die Route klar: eine Stimme, ein Takt, keine offenen Flanken.",
-      "next": "elise_hilde_chance"
+      "next": "hilde_single_voice_payoff"
     },
     "elise_hilde_chance": {
       "type": "dialogue",
@@ -1337,6 +1337,16 @@
       "expression": "thinking",
       "text": "Vier ein. Vier halten. Vier aus. So bleibe ich im Körper, auch wenn der Rest der Kammer mich wegziehen will.",
       "next": "ally_converge"
+    },
+    "hilde_counter_chant_payoff": {
+      "type": "narration",
+      "text": "Hilde tippt zweimal auf den Tisch: erster Glockenschlag, zweiter Glockenschlag, dann Einsatz. Wir proben den Übergang, bis er ohne Nachdenken sitzt.",
+      "next": "elise_hilde_chance"
+    },
+    "hilde_single_voice_payoff": {
+      "type": "narration",
+      "text": "Ich streiche die zweite Spur aus Hildes Skizze. Weniger Optionen, weniger Bruchstellen. Sie nickt knapp: \"Dann muss der eine Takt absolut sauber sein.\"",
+      "next": "elise_hilde_chance"
     }
   }
 }
