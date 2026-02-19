@@ -960,6 +960,29 @@
     "narration_revelation_2": {
       "type": "narration",
       "text": "Es wartet auf meine Antwort. Das älteste Wesen der Welt wartet auf die Worte einer Folkloristin aus Berlin.",
+      "next": "choice_revelation_grounding"
+    },
+    "choice_revelation_grounding": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Erst erden: Hand auf den Stein, Atem zählen, dann sprechen.",
+          "next": "revelation_grounding_grounded"
+        },
+        {
+          "text": "Direkt antworten, bevor der Moment wieder kippt.",
+          "next": "revelation_grounding_immediate"
+        }
+      ]
+    },
+    "revelation_grounding_grounded": {
+      "type": "narration",
+      "text": "Ich drücke die Hand in die kalte Spirale und zähle zwei Atemzüge, bevor ich den Mund öffne. Der Druck bleibt - aber meine Stimme gehört wieder mir.",
+      "next": "check_anchor_awareness"
+    },
+    "revelation_grounding_immediate": {
+      "type": "narration",
+      "text": "Ich lasse den Moment nicht erstarren und antworte sofort. Das Risiko ist hoch, aber ich zwinge das Gespräch in Bewegung, bevor die Stille wieder zur Falle wird.",
       "next": "check_anchor_awareness"
     },
     "check_anchor_awareness": {
@@ -1408,11 +1431,37 @@
       "flag": "ritual_pack_camera_hint",
       "value": 1,
       "true_next": "packed_camera_hint_choice",
-      "false_next": "choice_sacrifice_override"
+      "false_next": "choice_late_climax_agency"
     },
     "packed_camera_hint_choice": {
       "type": "narration",
       "text": "Im Sucher liegt ein kurzes Flackern über der leeren Zeile im Buch, genau dann, wenn Konrads Blick kippt. Das Timing ist der Hebel: erst halten, dann entscheiden. Nicht umgekehrt.",
+      "next": "choice_late_climax_agency"
+    },
+    "choice_late_climax_agency": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Konrad zuerst stabilisieren (Name-Ort-Jetzt), auch wenn ich dafür einen Herzschlag riskiere.",
+          "set_flags": {
+            "late_climax_stabilize": 1
+          },
+          "next": "late_climax_stabilize_result"
+        },
+        {
+          "text": "Kein Zusatzschritt - den schmalen Zeitkorridor sofort in die Grundsatzentscheidung umsetzen.",
+          "next": "late_climax_rush_result"
+        }
+      ]
+    },
+    "late_climax_stabilize_result": {
+      "type": "narration",
+      "text": "\"Konrad Müller. Unter der Kirche. Jetzt.\" Einmal, klar, ohne Zittern. Sein Blick findet mich für einen Moment - kurz, aber genug, um meine nächste Entscheidung wirklich zu meiner zu machen.",
+      "next": "choice_sacrifice_override"
+    },
+    "late_climax_rush_result": {
+      "type": "narration",
+      "text": "Ich lasse den Impuls, ihn noch einmal zu halten, bewusst los. Der Moment ist schmal wie eine Messerkante; ich nutze ihn, bevor die Kammer ihn wieder zuschlägt.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {
@@ -1423,13 +1472,47 @@
           "set_flags": {
             "chose_sacrifice": 1
           },
-          "next": "sacrifice_decision"
+          "next": "check_late_climax_sacrifice_context"
         },
         {
           "text": "Am Plan festhalten - Chance auf Rettung für alle, aber Konrad könnte daran zerbrechen",
-          "next": "plan_decision"
+          "next": "check_late_climax_plan_context"
         }
       ]
+    },
+    "check_late_climax_sacrifice_context": {
+      "type": "flag_check",
+      "flag": "late_climax_stabilize",
+      "value": 1,
+      "true_next": "late_climax_sacrifice_stabilized",
+      "false_next": "late_climax_sacrifice_rushed"
+    },
+    "late_climax_sacrifice_stabilized": {
+      "type": "narration",
+      "text": "Weil sein Blick gerade noch bei mir war, klingt mein Entschluss nicht wie Flucht, sondern wie Antwort.",
+      "next": "sacrifice_decision"
+    },
+    "late_climax_sacrifice_rushed": {
+      "type": "narration",
+      "text": "Ich entscheide im Sturzflug durch den Lärm. Kein Sicherheitsnetz - nur Verantwortung.",
+      "next": "sacrifice_decision"
+    },
+    "check_late_climax_plan_context": {
+      "type": "flag_check",
+      "flag": "late_climax_stabilize",
+      "value": 1,
+      "true_next": "late_climax_plan_stabilized",
+      "false_next": "late_climax_plan_rushed"
+    },
+    "late_climax_plan_stabilized": {
+      "type": "narration",
+      "text": "Ich halte den Plan nicht aus Kälte, sondern weil ich ihn ihm gerade noch ins Gesicht sagen konnte.",
+      "next": "plan_decision"
+    },
+    "late_climax_plan_rushed": {
+      "type": "narration",
+      "text": "Der Entschluss fällt hart und sofort. Wenn ich jetzt zögere, trifft der nächste Schlag uns beide unvorbereitet.",
+      "next": "plan_decision"
     },
     "sacrifice_decision": {
       "type": "dialogue",
@@ -1455,6 +1538,45 @@
     "narration_sacrifice_creature": {
       "type": "narration",
       "text": "DU BIST WIE SIE. DIE ALTE. SIE HÄTTE DASSELBE GETAN.",
+      "next": "choice_sacrifice_closure"
+    },
+    "choice_sacrifice_closure": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Konrad ein letztes klares Versprechen geben, bevor er geht.",
+          "next": "sacrifice_closure_konrad_line"
+        },
+        {
+          "text": "Dem Wesen die Bedingungen laut fixieren, bevor ich den Platz übernehme.",
+          "next": "sacrifice_closure_terms_line"
+        }
+      ]
+    },
+    "sacrifice_closure_konrad_line": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Hör mir zu, Konrad: Das ist kein Abschied ins Nichts. Du gehst heute hier raus, du schläfst morgen in deinem Bett, und wenn ich kippe, zieht die Stopp-Regel - sofort. Du lässt mich damit nicht allein.",
+      "next": "sacrifice_closure_konrad_reply"
+    },
+    "sacrifice_closure_konrad_reply": {
+      "type": "dialogue",
+      "speaker": "konrad",
+      "expression": "sad",
+      "text": "Ich lasse dich nicht verschwinden, Elise. Nicht so. Ich halte die Regel, Wort für Wort.",
+      "next": "sacrifice_closure_creature_ack"
+    },
+    "sacrifice_closure_terms_line": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Dann hör zu: kein Name ohne Zustimmung, kein Zugriff ohne mein Ja, und beim ersten Bruch greift das Rückfall-Siegel. Ich bleibe - aber nicht rechtlos.",
+      "next": "sacrifice_closure_creature_ack"
+    },
+    "sacrifice_closure_creature_ack": {
+      "type": "narration",
+      "text": "ICH HÖRE DEINE GRENZEN. ICH HÖRE DEIN BLEIBEN. KEIN SCHWEIGEN MEHR.",
       "next": "hide_konrad_sacrifice"
     },
     "hide_konrad_sacrifice": {
