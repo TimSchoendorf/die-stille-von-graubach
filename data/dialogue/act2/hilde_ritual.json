@@ -1,841 +1,860 @@
 {
-	"title": "Akt 2 - Die alten Wege",
-	"start": "bg_hilde",
-	"nodes": {
-		"bg_hilde": {
-			"type": "background",
-			"background": "hilde_cottage",
-			"transition": "fade",
-			"next": "snd_grandmother"
-		},
-		"snd_grandmother": {
-			"type": "sound",
-			"sound_type": "music",
-			"path": "grandmother.wav",
-			"next": "effect_hilde_mood"
-		},
-		"effect_hilde_mood": {
-			"type": "effect",
-			"effect": "vignette",
-			"params": {
-				"intensity": 0.2,
-				"duration": 1.0
-			},
-			"next": "narration_1"
-		},
-		"narration_1": {
-			"type": "narration",
-			"text": "Hildes Hütte liegt am Waldrand, halb verborgen zwischen alten Eichen. Es riecht nach Salbei, Kamille und etwas, das ich nicht benennen kann - erdiger, älter.",
-			"next": "narration_2"
-		},
-		"narration_2": {
-			"type": "narration",
-			"text": "Sie öffnet die Tür, bevor ich klopfe. Als hätte sie mich erwartet.",
-			"next": "show_hilde"
-		},
-		"show_hilde": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "wise",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_1"
-		},
-		"hilde_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Da bist du endlich. Margarethe hat gesagt, du würdest kommen. Setz dich. Der Tee ist fertig.",
-			"next": "elise_arrive"
-		},
-		"elise_arrive": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Sie haben mich erwartet? Woher wussten Sie, dass ich heute komme?",
-			"next": "hilde_expected"
-		},
-		"hilde_expected": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Dreißig Jahre lehren einen, die Zeichen zu lesen. Du hast Konrad getroffen, die Kirche besucht, das Journal gelesen. Der nächste Schritt war immer zu mir.",
-			"next": "narration_3"
-		},
-		"narration_3": {
-			"type": "narration",
-			"text": "In der Hütte hängen überall Kräuterbündel, Wurzeln, kleine Beutel. An den Wänden stehen Zeichen, die ich aus dem Folklore-Studium kenne: Schutzrunen, älter als jede Kirche.",
-			"next": "elise_runes"
-		},
-		"elise_runes": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Diese Runen an Ihren Wänden - die kenne ich. Germanisch, aber mit keltischen Elementen. Wir haben sie im dritten Semester behandelt.",
-			"next": "hilde_impressed"
-		},
-		"hilde_impressed": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_impressed_2"
-		},
-		"hilde_impressed_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Du hast gute Augen. Die meisten Leute sehen nur Kritzeleien. Deine Großmutter hat die auch sofort erkannt.",
-			"next": "elise_grandmother_question"
-		},
-		"elise_grandmother_question": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Hilde... wie war Großmutter in den letzten Jahren? War sie glücklich hier? Hatte sie Angst?",
-			"next": "hilde_personal"
-		},
-		"hilde_personal": {
-			"type": "narration",
-			"text": "Hilde hält inne. Ihre Hände umschließen die Teetasse fester.",
-			"next": "hilde_personal_2"
-		},
-		"hilde_personal_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Sie war... entschlossen. Nicht glücklich, nein. Aber auch nicht unglücklich. Sie hatte eine Aufgabe, und das gab ihr Kraft. In den letzten Monaten allerdings...",
-			"next": "hilde_personal_3"
-		},
-		"hilde_personal_3": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "warning",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_personal_4"
-		},
-		"hilde_personal_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "In den letzten Monaten wurde sie stiller. Sie wusste, dass die Zeit knapp wird. Und sie hatte Angst - nicht um sich. Um dich.",
-			"next": "elise_react_personal"
-		},
-		"elise_react_personal": {
-			"type": "narration",
-			"text": "Um mich. Dreißig Jahre lang hat sie an mich gedacht. An das Mädchen, dessen Name im Buch steht, noch bevor es geboren wurde.",
-			"next": "hilde_tea"
-		},
-		"hilde_tea": {
-			"type": "narration",
-			"text": "Hilde schenkt mir Tee ein. Die Flüssigkeit ist dunkelgrün, fast schwarz, und riecht nach Erde und Honig.",
-			"next": "elise_tea_skeptic"
-		},
-		"elise_tea_skeptic": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Was ist in dem Tee? Verzeihen Sie die Frage, aber nach allem, was ich hier erlebt habe...",
-			"next": "hilde_tea_laugh"
-		},
-		"hilde_tea_laugh": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Ha! Misstrauisch. Gut so. Baldrian, Melisse, Johanniskraut und ein bisschen Thymian. Kein Gift, kein Zauber. Nur Kräuter gegen die Angst.",
-			"next": "elise_tea_drink"
-		},
-		"elise_tea_drink": {
-			"type": "narration",
-			"text": "Ich trinke. Der Tee ist bitter, aber wärmend. Tatsächlich löst sich etwas in meiner Brust - eine Anspannung, die ich seit Tagen mit mir trage.",
-			"next": "hilde_teaches_intro"
-		},
-		"hilde_teaches_intro": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Deine Großmutter und ich haben dreißig Jahre zusammengearbeitet. Sie war die Kluge, ich die Geduldige. Zusammen haben wir fast alles herausgefunden.",
-			"next": "hilde_teaches_intro_2"
-		},
-		"hilde_teaches_intro_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Fast. Ein Stück fehlt noch. Dafür bist du hier. Es gibt drei Dinge, die du wissen musst - drei Komponenten des Siegels.",
-			"next": "elise_ready"
-		},
-		"elise_ready": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Dann zeigen Sie es mir. Alles.",
-			"next": "hilde_chant"
-		},
-
-		"hilde_chant": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "ritual",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_chant_1"
-		},
-		"hilde_chant_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "ritual",
-			"text": "Das Erste: der Gesang. Die alten Völker, die vor den Kelten hier lebten, kannten Töne, die das Wesen beruhigen. Nicht besiegen - beruhigen. Es zurück in den Schlaf singen.",
-			"next": "elise_chant_question"
-		},
-		"elise_chant_question": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Aus meinen Studien kenne ich Klangrituale bei den Germanen. Aber die waren zeremoniell. Meinen Sie, die Töne selbst haben eine... Wirkung?",
-			"next": "hilde_chant_confirm"
-		},
-		"hilde_chant_confirm": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Nicht die Töne allein. Die Resonanz. Hör zu.",
-			"next": "hilde_chant_2"
-		},
-		"hilde_chant_2": {
-			"type": "narration",
-			"text": "Hilde beginnt leise zu summen. Die Melodie ist einfach, fast ein Wiegenlied. Aber sie fühlt sich anders an - die Luft wird schwerer, wärmer.",
-			"next": "effect_chant"
-		},
-		"effect_chant": {
-			"type": "effect",
-			"effect": "desaturate",
-			"params": {
-				"amount": 0.3
-			},
-			"next": "hilde_chant_3"
-		},
-		"hilde_chant_3": {
-			"type": "narration",
-			"text": "Und dann - für einen kurzen Moment - hört das ferne Singen aus der Tiefe auf. Völlige Stille. Als würde die Erde den Atem anhalten.",
-			"next": "elise_chant_amazed"
-		},
-		"elise_chant_amazed": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "shocked",
-			"text": "Es hat aufgehört. Das Singen - es ist still!",
-			"next": "hilde_chant_4"
-		},
-		"hilde_chant_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Hörst du? Stille. Der Gesang wirkt. Aber ich bin alt. Meine Stimme wird nicht mehr reichen für das volle Ritual. Du musst ihn lernen.",
-			"next": "elise_chant_try"
-		},
-		"elise_chant_try": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Ich kann es versuchen. Aber ich bin keine Sängerin, Hilde.",
-			"next": "hilde_chant_teach"
-		},
-		"hilde_chant_teach": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Es geht nicht um Schönheit. Es geht um Absicht. Sing mit mir.",
-			"next": "narration_chant_try"
-		},
-		"narration_chant_try": {
-			"type": "narration",
-			"text": "Ich versuche, die Melodie nachzusummen. Meine Stimme ist unsicher, zittrig. Aber nach ein paar Takten finde ich den Rhythmus - und etwas antwortet.",
-			"next": "fx_chant_response"
-		},
-		"fx_chant_response": {
-			"type": "effect",
-			"effect": "slow_drift",
-			"params": {
-				"speed": 0.3,
-				"amount": 0.02
-			},
-			"next": "narration_chant_response"
-		},
-		"narration_chant_response": {
-			"type": "narration",
-			"text": "Tief unter uns, kaum spürbar, verschiebt sich etwas. Das Singen aus der Tiefe stockt - nur für einen Moment, aber es stockt. Es hat mich gehört.",
-			"next": "elise_chant_fear"
-		},
-		"elise_chant_fear": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Es hat reagiert. Es hat MICH gehört. Hilde, es weiß, dass ich hier bin!",
-			"next": "hilde_chant_calm"
-		},
-		"hilde_chant_calm": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Es wusste das schon vorher, Kind. Dein Name steht in seinem Buch. Aber jetzt weiß es, dass du SINGEN kannst. Das ist wichtig.",
-			"next": "choice_practice_chant"
-		},
-		"choice_practice_chant": {
-			"type": "choice",
-			"choices": [
-				{
-					"text": "Den Gesang üben - ich muss ihn beherrschen",
-					"set_flags": {
-						"practiced_chant": 1
-					},
-					"next": "practice_chant_success"
-				},
-				{
-					"text": "Später - ich brauche erst mehr Informationen",
-					"next": "skip_chant_practice"
-				}
-			]
-		},
-		"practice_chant_success": {
-			"type": "narration",
-			"text": "Ich übe die Melodie, wieder und wieder, bis sie sich in meine Knochen einprägt. Hilde korrigiert mich geduldig - ein Ton tiefer hier, ein Atemzug länger dort. Nach einer Stunde klingt es... richtig.",
-			"next": "set_learned_chant"
-		},
-		"set_learned_chant": {
-			"type": "set_flag",
-			"flag": "learned_chant",
-			"value": 1,
-			"next": "transition_to_sign"
-		},
-		"skip_chant_practice": {
-			"type": "narration",
-			"text": "Mir schwirrt der Kopf. Der Gesang, das Zeichen, der Anker - zu viel auf einmal. Ich muss erst verstehen, was das alles bedeutet, bevor ich es auswendig lerne.",
-			"next": "skip_chant_2"
-		},
-		"skip_chant_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Warte nicht zu lang, Kind. Der Gesang braucht Übung. Ohne ihn ist das Siegel nur ein leeres Versprechen.",
-			"next": "transition_to_sign"
-		},
-		"transition_to_sign": {
-			"type": "narration",
-			"text": "Hilde wartet, bis die Stille sich gelegt hat. Das Singen aus der Tiefe setzt zaghaft wieder ein - leiser als zuvor, als wäre es verunsichert. Dann spricht sie weiter.",
-			"next": "hilde_sign"
-		},
-
-		"hilde_sign": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "mysterious",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_sign_1"
-		},
-		"hilde_sign_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Das Zweite: das Zeichen der Erde. Es ist keine Markierung, die man zeichnet. Es ist ein Ort. Dort, wo das Wesen am nächsten an die Oberfläche kommt.",
-			"next": "elise_sign_question"
-		},
-		"elise_sign_question": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Die Kammer unter der Kirche. Dort, wo der Boden pulsiert.",
-			"next": "hilde_sign_2"
-		},
-		"hilde_sign_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"text": "Genau. In der Kammer gibt es einen Punkt, wo der Stein dünner ist. Dort spürt man den Herzschlag am deutlichsten. Deine Großmutter hat ihn gefunden.",
-			"next": "hilde_sign_3"
-		},
-		"hilde_sign_3": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"text": "Man muss genau dort stehen, wenn man den Gesang anstimmt. Sonst verpufft die Wirkung.",
-			"next": "elise_sign_react"
-		},
-		"elise_sign_react": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Direkt über dem Wesen stehen und singen. Das klingt... als würde man an eine Tür klopfen und hoffen, dass das, was dahinter lauert, nicht aufmacht.",
-			"next": "hilde_sign_honest"
-		},
-		"hilde_sign_honest": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "So ähnlich ist es auch. Der Gesang ist das Klopfen. Und ja - es könnte aufmachen.",
-			"next": "set_knows_sign"
-		},
-		"set_knows_sign": {
-			"type": "set_flag",
-			"flag": "knows_earth_sign",
-			"value": 1,
-			"next": "transition_to_anchor"
-		},
-		"transition_to_anchor": {
-			"type": "narration",
-			"text": "Hilde steht auf und geht zum Fenster. Draußen neigen sich die Bäume im Wind, als lauschten sie. Ihre Stimme wird leiser.",
-			"next": "hilde_anchor"
-		},
-
-		"hilde_anchor": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "warning",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_anchor_1"
-		},
-		"hilde_anchor_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Das Dritte: der Anker. Das ist der schwierigste Teil. Jemand muss als Verbindung zwischen unserer Welt und dem Wesen dienen.",
-			"next": "elise_anchor_question"
-		},
-		"elise_anchor_question": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "worried",
-			"text": "Was passiert mit dem Anker? Überlebt man das?",
-			"next": "hilde_anchor_hesitate"
-		},
-		"hilde_anchor_hesitate": {
-			"type": "narration",
-			"text": "Hilde zögert. Zum ersten Mal in diesem Gespräch weicht sie meinem Blick aus.",
-			"next": "hilde_anchor_2"
-		},
-		"hilde_anchor_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"text": "Margarethe wollte es selbst tun. Aber sie wurde zu alt, zu schwach. Als Anker muss man stark sein - im Geist, nicht im Körper.",
-			"next": "elise_anchor_press"
-		},
-		"elise_anchor_press": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Hilde. Sie haben meine Frage nicht beantwortet. Überlebt man es?",
-			"next": "hilde_anchor_truth"
-		},
-		"hilde_anchor_truth": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Margarethe hatte nur Fragmente - keine Gewissheit. Niemand hat den Anker je bis zum Ende getragen und danach noch klar darüber gesprochen. Wir wissen nur: Es kann dich töten. Oder dich zurücklassen, aber nicht mehr ganz als du selbst.",
-			"next": "narration_anchor_weight"
-		},
-		"narration_anchor_weight": {
-			"type": "narration",
-			"text": "Keine Gewissheit. Das heißt: Ich kann sterben. Oder überleben und mich dabei verlieren, Stück für Stück, wie Konrad. Ein Körper, der bleibt - und ein Ich, das langsam verblasst.",
-			"next": "choice_anchor_reaction"
-		},
-		"choice_anchor_reaction": {
-			"type": "choice",
-			"choices": [
-				{
-					"text": "Und wenn ich sterbe? Was passiert dann mit dem Wesen?",
-					"set_flags": {
-						"asked_about_death": 1
-					},
-					"next": "hilde_death_answer"
-				},
-				{
-					"text": "Großmutter wollte der Anker sein. Warum hat sie es nicht getan?",
-					"set_flags": {
-						"asked_about_margarethe_anchor": 1
-					},
-					"next": "hilde_margarethe_answer"
-				}
-			]
-		},
-		"hilde_death_answer": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Wenn der Anker stirbt, reißt die Verbindung. Das Siegel bricht. Das Wesen erwacht - verwirrt, wütend, hungrig. Deshalb muss der Anker stark sein. Und deshalb muss es jemand tun, der jung genug ist.",
-			"next": "hilde_death_answer_2"
-		},
-		"hilde_death_answer_2": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Also muss ich nicht nur überleben - ich muss LANGE überleben. Dreißig Jahre. Wie Großmutter.",
-			"next": "hilde_anchor_expr"
-		},
-		"hilde_margarethe_answer": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Sie wollte es. Bis zum Schluss. Aber ihr Körper hat nicht mehr mitgemacht. Der Anker braucht Kraft - nicht körperliche, geistige. Und Margarethes Geist war müde. Dreißig Jahre wach, dreißig Jahre wachsam.",
-			"next": "hilde_margarethe_answer_2"
-		},
-		"hilde_margarethe_answer_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Sie hat auf dich gewartet. Nicht weil du stärker bist. Weil du frisch bist. Weil du noch die Kraft hast, die sie verloren hat.",
-			"next": "hilde_anchor_expr"
-		},
-		"hilde_anchor_expr": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_anchor_5"
-		},
-		"hilde_anchor_5": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Elise... Margarethe glaubte, dass du der Anker sein könntest. Dein Name im Buch - es ist kein Fluch. Es ist eine Verbindung. Du bist dem Wesen schon nah.",
-			"next": "elise_anchor_horror"
-		},
-		"elise_anchor_horror": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "afraid",
-			"text": "Das heißt, die Kreatur KENNT mich? Sie weiß, wer ich bin?",
-			"next": "fx_anchor_vignette"
-		},
-		"fx_anchor_vignette": {
-			"type": "effect",
-			"effect": "vignette",
-			"params": {
-				"intensity": 0.4,
-				"duration": 0.8
-			},
-			"next": "hilde_anchor_knows"
-		},
-		"hilde_anchor_knows": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Es kennt deinen Namen. Es hat ihn selbst geschrieben - in einer Schrift, die kein Mensch lesen sollte. Ja, Kind. Es kennt dich.",
-			"next": "narration_anchor_existential"
-		},
-		"narration_anchor_existential": {
-			"type": "narration",
-			"text": "Ein Schauer läuft mir über den Rücken. Etwas unter der Erde, älter als die Menschheit, kennt meinen Namen. Hat ihn geschrieben, bevor ich geboren wurde. Was BIN ich für dieses Wesen?",
-			"next": "set_knows_anchor"
-		},
-		"set_knows_anchor": {
-			"type": "set_flag",
-			"flag": "knows_anchor_role",
-			"value": 1,
-			"next": "hilde_converge"
-		},
-
-		"hilde_converge": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "warning",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_warning_1"
-		},
-		"hilde_warning_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"text": "Aber höre mir gut zu, Kind. Es gibt jemanden, dem du nicht vertrauen darfst.",
-			"next": "elise_warning_guess"
-		},
-		"elise_warning_guess": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Otto Reinhardt. Der Bürgermeister.",
-			"next": "hilde_warning_surprised"
-		},
-		"hilde_warning_surprised": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Du bist schnell. Ja - Otto. Er ist der Hüter der alten Tradition. Er wird alles tun, um die Fütterung durchzusetzen. Und er hat Helfer.",
-			"next": "hilde_warning_effect"
-		},
-		"hilde_warning_effect": {
-			"type": "effect",
-			"effect": "flicker",
-			"params": {
-				"count": 3,
-				"interval": 0.15
-			},
-			"next": "hilde_warning_4"
-		},
-		"hilde_warning_4": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "angry",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_warning_5"
-		},
-		"hilde_warning_5": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Wenn er erfährt, was du vorhast - wenn er merkt, dass du Margarethes Arbeit fortsetzt - wird er handeln. Schnell und ohne Gewissen.",
-			"next": "elise_warning_react"
-		},
-		"elise_warning_react": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "determined",
-			"text": "Er hat meine Großmutter nicht aufhalten können. Mich wird er auch nicht aufhalten.",
-			"next": "hilde_warning_smile"
-		},
-		"hilde_warning_smile": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Du bist ihr ähnlicher, als du denkst.",
-			"next": "hilde_letter_1"
-		},
-		"hilde_letter_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Hilde... der Brief. Großmutters Brief. Wie konnte er mich in Berlin erreichen, wenn sie schon Tage tot war, als ich ankam?",
-			"next": "hilde_letter_2"
-		},
-		"hilde_letter_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Ah. Das war Margarethes letzter Zauber. Sie hat ihn vor Monaten geschrieben und mit einem Zeitbinder versehen - ein altes Ritual, das den Brief erst zustellt, wenn der Empfänger bereit ist.",
-			"next": "hilde_letter_3"
-		},
-		"hilde_letter_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "shocked",
-			"text": "Nicht wenn sie stirbt, sondern wenn ICH bereit bin? Das heißt, der Brief hat... auf mich gewartet?",
-			"next": "hilde_letter_4"
-		},
-		"hilde_letter_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Genau. Er hat auf den richtigen Moment gewartet. Den Moment, in dem du stark genug warst, nach Graubach zu kommen.",
-			"next": "hilde_creature_dual_1"
-		},
-		"hilde_creature_dual_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Und noch etwas, Kind. Über das Wesen. Die Alten haben die Fütterung erfunden - nicht die Kreatur. Sie haben ihre Einsamkeit als Hunger gedeutet und mit Blut geantwortet.",
-			"next": "hilde_creature_dual_2"
-		},
-		"hilde_creature_dual_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Vielleicht war das falsch. Vielleicht hätte ein Gespräch genügt.",
-			"next": "hilde_creature_dual_3"
-		},
-		"hilde_creature_dual_3": {
-			"type": "narration",
-			"text": "Hilde hält inne. In der Stille höre ich das ferne Singen - leiser als sonst, fast fragend.",
-			"next": "hilde_creature_dual_4"
-		},
-		"hilde_creature_dual_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Aber wer redet schon mit dem, was unter der Erde schläft?",
-			"next": "hilde_margarethe_death_1"
-		},
-		"hilde_margarethe_death_1": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Am Ende hat Margarethe es getan. Sie ist ein letztes Mal hinuntergegangen, in der Nacht vor ihrem Tod. Nicht zum Kämpfen. Zum Reden.",
-			"next": "hilde_margarethe_death_2"
-		},
-		"hilde_margarethe_death_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Sie ist zurückgekommen. Hat sich ins Bett gelegt, gelächelt und die Augen geschlossen. Sie ist im Schlaf gestorben, Kind. Friedlich. Es war ein Abschied, kein Opfer.",
-			"next": "hilde_margarethe_death_3"
-		},
-		"hilde_margarethe_death_3": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Aber Otto hat angedeutet, dass ihr Tod nicht natürlich war...",
-			"next": "hilde_margarethe_death_4"
-		},
-		"hilde_margarethe_death_4": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "angry",
-			"text": "Otto lügt. Das ist, was Otto tut. Er will dir Angst machen, damit du seine Fütterung akzeptierst. Glaub keinem Wort, das dieser Mann über Margarethe sagt.",
-			"next": "hilde_margarethe_1"
-		},
-		"hilde_margarethe_1": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "thinking",
-			"text": "Georg sagt, Großmutter hätte versagt. Dass ihr Ritual nicht funktioniert hat. Aber Sie klingen, als wüssten Sie etwas anderes.",
-			"next": "hilde_margarethe_2"
-		},
-		"hilde_margarethe_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "wise",
-			"text": "Georg glaubt, sie hätte versagt. Margarethe wollte es so. Sie hat ihm nur die Hälfte erzählt - zum Schutz.",
-			"next": "hilde_margarethe_3"
-		},
-		"hilde_margarethe_3": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "warning",
-			"text": "Wenn Otto wüsste, dass das Ritual vollständig ist, hätte er Georg längst... beseitigt.",
-			"next": "hilde_margarethe_4"
-		},
-		"hilde_margarethe_4": {
-			"type": "narration",
-			"text": "Hilde senkt die Stimme. Die Schatten in der Hütte scheinen dichter zu werden.",
-			"next": "hilde_margarethe_5"
-		},
-		"hilde_margarethe_5": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "mysterious",
-			"text": "Das vollständige Wissen liegt hier. Bei mir. Und jetzt bei dir.",
-			"next": "hilde_gift"
-		},
-
-		"hilde_gift": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "center",
-			"action": "show",
-			"next": "hilde_gift_1"
-		},
-		"hilde_gift_1": {
-			"type": "narration",
-			"text": "Hilde greift in ihre Schürze und drückt mir einen kleinen Beutel in die Hand. Darin sind getrocknete Kräuter und ein rundes Steinamulett mit einer eingeritzten Spirale.",
-			"next": "hilde_gift_2"
-		},
-		"hilde_gift_2": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Trag das bei dir. Es schützt nicht vor dem Wesen - nichts tut das. Aber es schützt vor seinen Träumen. Du wirst klarer denken können.",
-			"next": "elise_gift_react"
-		},
-		"elise_gift_react": {
-			"type": "dialogue",
-			"speaker": "elise",
-			"expression": "sad",
-			"text": "Danke, Hilde. Für alles. Dass Sie dreißig Jahre lang an Großmutters Seite waren.",
-			"next": "hilde_gift_personal"
-		},
-		"hilde_gift_personal": {
-			"type": "dialogue",
-			"speaker": "hilde",
-			"expression": "kind",
-			"text": "Margarethe war meine beste Freundin. Die einzige, die mich nie für verrückt gehalten hat. Und jetzt bist du hier, und ich bin nicht mehr allein damit.",
-			"next": "narration_gift_moment"
-		},
-		"narration_gift_moment": {
-			"type": "narration",
-			"text": "Ihre Augen glänzen. Dreißig Jahre hat sie dieses Geheimnis getragen, zusammen mit Großmutter. Und jetzt liegt die Last auf meinen Schultern.",
-			"next": "set_has_amulet"
-		},
-		"set_has_amulet": {
-			"type": "set_flag",
-			"flag": "has_amulet",
-			"value": 1,
-			"next": "journal_hilde"
-		},
-		"journal_hilde": {
-			"type": "journal",
-			"entry_id": "hilde_teaching",
-			"title": "Hildes Lehren",
-			"content": "Hilde lehrte mich die drei Komponenten des Bindungsrituals: 1) Den alten Gesang - älter als jede bekannte Sprache, beruhigt das Wesen. Ich habe es versucht und das Wesen reagierte. 2) Das Zeichen der Erde - ein Ort in der Kammer unter der Kirche, wo der Stein am dünnsten ist. 3) Der Anker - eine Person mit Verbindung zum Wesen. Ob man es überlebt, wusste nicht einmal Großmutter. Hilde warnte vor Otto Reinhardt.",
-			"next": "hide_hilde"
-		},
-		"hide_hilde": {
-			"type": "character",
-			"character": "hilde",
-			"expression": "kind",
-			"position": "center",
-			"action": "hide",
-			"next": "narration_evening"
-		},
-		"narration_evening": {
-			"type": "narration",
-			"text": "Als ich Hildes Hütte verlasse, fällt die Dämmerung ein. Der Wald ist näher als heute Morgen. Ich bin mir sicher.",
-			"next": "snd_forest_amb"
-		},
-		"snd_forest_amb": {
-			"type": "sound",
-			"sound_type": "ambience",
-			"path": "forest_night.wav",
-			"next": "effect_evening"
-		},
-		"effect_evening": {
-			"type": "effect",
-			"effect": "bg_corruption",
-			"params": {
-				"intensity": 0.2,
-				"duration": 2.0
-			},
-			"next": "narration_evening_2"
-		},
-		"narration_evening_2": {
-			"type": "narration",
-			"text": "Auf dem Rückweg höre ich Schritte hinter mir. Schwer, bedächtig. Ich drehe mich um - niemand da.",
-			"next": "elise_stalked"
-		},
-		"elise_stalked": {
-			"type": "narration",
-			"text": "Mein Herz hämmert. Zwischen den Bäumen hängt ein süßlicher Geruch, wie verwelkte Blumen. Die Schritte setzen wieder ein - näher diesmal.",
-			"next": "effect_stalked"
-		},
-		"effect_stalked": {
-			"type": "effect",
-			"effect": "flicker",
-			"params": {
-				"count": 4,
-				"interval": 0.12
-			},
-			"next": "narration_stalked_run"
-		},
-		"narration_stalked_run": {
-			"type": "narration",
-			"text": "Ich laufe. Die letzten Meter bis zur Straße renne ich. Erst im Licht der Laterne vor Großmutters Haus bleibe ich stehen, nach Atem ringend.",
-			"next": "narration_stalked_who"
-		},
-		"narration_stalked_who": {
-			"type": "narration",
-			"text": "Wer war das? Otto? Einer seiner Helfer? Oder etwas ganz anderes? Das Amulett in meiner Tasche fühlt sich warm an - als würde es arbeiten.",
-			"next": "snd_footsteps"
-		},
-		"snd_footsteps": {
-			"type": "sound",
-			"sound_type": "sfx",
-			"path": "footsteps_wood.wav",
-			"next": "scene_end"
-		},
-		"scene_end": {
-			"type": "scene_end",
-			"next_file": "res://data/dialogue/act2/the_book.json"
-		}
-	}
+  "title": "Akt 2 - Die alten Wege",
+  "start": "bg_hilde",
+  "nodes": {
+    "bg_hilde": {
+      "type": "background",
+      "background": "hilde_cottage",
+      "transition": "fade",
+      "next": "snd_grandmother"
+    },
+    "snd_grandmother": {
+      "type": "sound",
+      "sound_type": "music",
+      "path": "grandmother.wav",
+      "next": "effect_hilde_mood"
+    },
+    "effect_hilde_mood": {
+      "type": "effect",
+      "effect": "vignette",
+      "params": {
+        "intensity": 0.2,
+        "duration": 1.0
+      },
+      "next": "narration_1"
+    },
+    "narration_1": {
+      "type": "narration",
+      "text": "Hildes Hütte liegt am Waldrand, halb verborgen zwischen alten Eichen. Es riecht nach Salbei, Kamille und etwas, das ich nicht benennen kann - erdiger, älter.",
+      "next": "narration_2"
+    },
+    "narration_2": {
+      "type": "narration",
+      "text": "Sie öffnet die Tür, bevor ich klopfe. Als hätte sie mich erwartet.",
+      "next": "show_hilde"
+    },
+    "show_hilde": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "wise",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_1"
+    },
+    "hilde_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Da bist du endlich. Margarethe hat gesagt, du würdest kommen. Setz dich. Der Tee ist fertig.",
+      "next": "elise_arrive"
+    },
+    "elise_arrive": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Sie haben mich erwartet? Woher wussten Sie, dass ich heute komme?",
+      "next": "hilde_expected"
+    },
+    "hilde_expected": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Dreißig Jahre lehren einen, die Zeichen zu lesen. Du hast Konrad getroffen, die Kirche besucht, das Journal gelesen. Der nächste Schritt war immer zu mir.",
+      "next": "narration_3"
+    },
+    "narration_3": {
+      "type": "narration",
+      "text": "In der Hütte hängen überall Kräuterbündel, Wurzeln, kleine Beutel. An den Wänden stehen Zeichen, die ich aus dem Folklore-Studium kenne: Schutzrunen, älter als jede Kirche.",
+      "next": "elise_runes"
+    },
+    "elise_runes": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Diese Runen an Ihren Wänden - die kenne ich. Germanisch, aber mit keltischen Elementen. Wir haben sie im dritten Semester behandelt.",
+      "next": "hilde_impressed"
+    },
+    "hilde_impressed": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_impressed_2"
+    },
+    "hilde_impressed_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du hast gute Augen. Die meisten Leute sehen nur Kritzeleien. Deine Großmutter hat die auch sofort erkannt.",
+      "next": "elise_grandmother_question"
+    },
+    "elise_grandmother_question": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Hilde... wie war Großmutter in den letzten Jahren? War sie glücklich hier? Hatte sie Angst?",
+      "next": "hilde_personal"
+    },
+    "hilde_personal": {
+      "type": "narration",
+      "text": "Hilde hält inne. Ihre Hände umschließen die Teetasse fester.",
+      "next": "hilde_personal_2"
+    },
+    "hilde_personal_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Sie war... entschlossen. Nicht glücklich, nein. Aber auch nicht unglücklich. Sie hatte eine Aufgabe, und das gab ihr Kraft. In den letzten Monaten allerdings...",
+      "next": "hilde_personal_3"
+    },
+    "hilde_personal_3": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "warning",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_personal_4"
+    },
+    "hilde_personal_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "In den letzten Monaten wurde sie stiller. Sie wusste, dass die Zeit knapp wird. Und sie hatte Angst - nicht um sich. Um dich.",
+      "next": "elise_react_personal"
+    },
+    "elise_react_personal": {
+      "type": "narration",
+      "text": "Um mich. Dreißig Jahre lang hat sie an mich gedacht. An das Mädchen, dessen Name im Buch steht, noch bevor es geboren wurde.",
+      "next": "hilde_tea"
+    },
+    "hilde_tea": {
+      "type": "narration",
+      "text": "Hilde schenkt mir Tee ein. Die Flüssigkeit ist dunkelgrün, fast schwarz, und riecht nach Erde und Honig.",
+      "next": "elise_tea_skeptic"
+    },
+    "elise_tea_skeptic": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Was ist in dem Tee? Verzeihen Sie die Frage, aber nach allem, was ich hier erlebt habe...",
+      "next": "hilde_tea_laugh"
+    },
+    "hilde_tea_laugh": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Ha! Misstrauisch. Gut so. Baldrian, Melisse, Johanniskraut und ein bisschen Thymian. Kein Gift, kein Zauber. Nur Kräuter gegen die Angst.",
+      "next": "elise_tea_drink"
+    },
+    "elise_tea_drink": {
+      "type": "narration",
+      "text": "Ich trinke. Der Tee ist bitter, aber wärmend. Tatsächlich löst sich etwas in meiner Brust - eine Anspannung, die ich seit Tagen mit mir trage.",
+      "next": "hilde_teaches_intro"
+    },
+    "hilde_teaches_intro": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Deine Großmutter und ich haben dreißig Jahre zusammengearbeitet. Sie war die Kluge, ich die Geduldige. Zusammen haben wir fast alles herausgefunden.",
+      "next": "hilde_teaches_intro_2"
+    },
+    "hilde_teaches_intro_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Fast. Ein Stück fehlt noch. Dafür bist du hier. Es gibt drei Dinge, die du wissen musst - drei Komponenten des Siegels.",
+      "next": "elise_ready"
+    },
+    "elise_ready": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Dann zeigen Sie es mir. Alles.",
+      "next": "hilde_chant"
+    },
+    "hilde_chant": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "ritual",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_chant_1"
+    },
+    "hilde_chant_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "ritual",
+      "text": "Das Erste: der Gesang. Die alten Völker, die vor den Kelten hier lebten, kannten Töne, die das Wesen beruhigen. Nicht besiegen - beruhigen. Es zurück in den Schlaf singen.",
+      "next": "elise_chant_question"
+    },
+    "elise_chant_question": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Aus meinen Studien kenne ich Klangrituale bei den Germanen. Aber die waren zeremoniell. Meinen Sie, die Töne selbst haben eine... Wirkung?",
+      "next": "hilde_chant_confirm"
+    },
+    "hilde_chant_confirm": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Nicht die Töne allein. Die Resonanz. Hör zu.",
+      "next": "hilde_chant_2"
+    },
+    "hilde_chant_2": {
+      "type": "narration",
+      "text": "Hilde beginnt leise zu summen. Die Melodie ist einfach, fast ein Wiegenlied. Aber sie fühlt sich anders an - die Luft wird schwerer, wärmer.",
+      "next": "effect_chant"
+    },
+    "effect_chant": {
+      "type": "effect",
+      "effect": "desaturate",
+      "params": {
+        "amount": 0.3
+      },
+      "next": "hilde_chant_3"
+    },
+    "hilde_chant_3": {
+      "type": "narration",
+      "text": "Und dann - für einen kurzen Moment - hört das ferne Singen aus der Tiefe auf. Völlige Stille. Als würde die Erde den Atem anhalten.",
+      "next": "elise_chant_amazed"
+    },
+    "elise_chant_amazed": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "shocked",
+      "text": "Es hat aufgehört. Das Singen - es ist still!",
+      "next": "hilde_chant_4"
+    },
+    "hilde_chant_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Hörst du? Stille. Der Gesang wirkt. Aber ich bin alt. Meine Stimme wird nicht mehr reichen für das volle Ritual. Du musst ihn lernen.",
+      "next": "elise_chant_try"
+    },
+    "elise_chant_try": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Ich kann es versuchen. Aber ich bin keine Sängerin, Hilde.",
+      "next": "hilde_chant_teach"
+    },
+    "hilde_chant_teach": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Es geht nicht um Schönheit. Es geht um Absicht. Sing mit mir.",
+      "next": "narration_chant_try"
+    },
+    "narration_chant_try": {
+      "type": "narration",
+      "text": "Ich versuche, die Melodie nachzusummen. Meine Stimme ist unsicher, zittrig. Aber nach ein paar Takten finde ich den Rhythmus - und etwas antwortet.",
+      "next": "fx_chant_response"
+    },
+    "fx_chant_response": {
+      "type": "effect",
+      "effect": "slow_drift",
+      "params": {
+        "speed": 0.3,
+        "amount": 0.02
+      },
+      "next": "narration_chant_response"
+    },
+    "narration_chant_response": {
+      "type": "narration",
+      "text": "Tief unter uns, kaum spürbar, verschiebt sich etwas. Das Singen aus der Tiefe stockt - nur für einen Moment, aber es stockt. Es hat mich gehört.",
+      "next": "elise_chant_fear"
+    },
+    "elise_chant_fear": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Es hat reagiert. Es hat MICH gehört. Hilde, es weiß, dass ich hier bin!",
+      "next": "hilde_chant_calm"
+    },
+    "hilde_chant_calm": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Es wusste das schon vorher, Kind. Dein Name steht in seinem Buch. Aber jetzt weiß es, dass du SINGEN kannst. Das ist wichtig.",
+      "next": "choice_practice_chant"
+    },
+    "choice_practice_chant": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Den Gesang üben - ich muss ihn beherrschen",
+          "set_flags": {
+            "practiced_chant": 1
+          },
+          "next": "practice_chant_success"
+        },
+        {
+          "text": "Später - ich brauche erst mehr Informationen",
+          "next": "skip_chant_practice"
+        }
+      ]
+    },
+    "practice_chant_success": {
+      "type": "narration",
+      "text": "Ich übe die Melodie, wieder und wieder, bis sie sich in meine Knochen einprägt. Hilde korrigiert mich geduldig - ein Ton tiefer hier, ein Atemzug länger dort. Nach einer Stunde klingt es... richtig.",
+      "next": "set_learned_chant"
+    },
+    "set_learned_chant": {
+      "type": "set_flag",
+      "flag": "learned_chant",
+      "value": 1,
+      "next": "transition_to_sign"
+    },
+    "skip_chant_practice": {
+      "type": "narration",
+      "text": "Mir schwirrt der Kopf. Der Gesang, das Zeichen, der Anker - zu viel auf einmal. Ich muss erst verstehen, was das alles bedeutet, bevor ich es auswendig lerne.",
+      "next": "skip_chant_2"
+    },
+    "skip_chant_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Warte nicht zu lang, Kind. Der Gesang braucht Übung. Ohne ihn ist das Siegel nur ein leeres Versprechen.",
+      "next": "transition_to_sign"
+    },
+    "transition_to_sign": {
+      "type": "narration",
+      "text": "Hilde wartet, bis die Stille sich gelegt hat. Das Singen aus der Tiefe setzt zaghaft wieder ein - leiser als zuvor, als wäre es verunsichert. Dann spricht sie weiter.",
+      "next": "hilde_sign"
+    },
+    "hilde_sign": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "mysterious",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_sign_1"
+    },
+    "hilde_sign_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Das Zweite: das Zeichen der Erde. Es ist keine Markierung, die man zeichnet. Es ist ein Ort. Dort, wo das Wesen am nächsten an die Oberfläche kommt.",
+      "next": "elise_sign_question"
+    },
+    "elise_sign_question": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Die Kammer unter der Kirche. Dort, wo der Boden pulsiert.",
+      "next": "hilde_sign_2"
+    },
+    "hilde_sign_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "text": "Genau. In der Kammer gibt es einen Punkt, wo der Stein dünner ist. Dort spürt man den Herzschlag am deutlichsten. Deine Großmutter hat ihn gefunden.",
+      "next": "hilde_sign_3"
+    },
+    "hilde_sign_3": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "text": "Man muss genau dort stehen, wenn man den Gesang anstimmt. Sonst verpufft die Wirkung.",
+      "next": "elise_sign_react"
+    },
+    "elise_sign_react": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Direkt über dem Wesen stehen und singen. Das klingt... als würde man an eine Tür klopfen und hoffen, dass das, was dahinter lauert, nicht aufmacht.",
+      "next": "hilde_sign_honest"
+    },
+    "hilde_sign_honest": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "So ähnlich ist es auch. Der Gesang ist das Klopfen. Und ja - es könnte aufmachen.",
+      "next": "set_knows_sign"
+    },
+    "set_knows_sign": {
+      "type": "set_flag",
+      "flag": "knows_earth_sign",
+      "value": 1,
+      "next": "transition_to_anchor"
+    },
+    "transition_to_anchor": {
+      "type": "narration",
+      "text": "Hilde steht auf und geht zum Fenster. Draußen neigen sich die Bäume im Wind, als lauschten sie. Ihre Stimme wird leiser.",
+      "next": "hilde_anchor"
+    },
+    "hilde_anchor": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "warning",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_anchor_1"
+    },
+    "hilde_anchor_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Das Dritte: der Anker. Das ist der schwierigste Teil. Jemand muss als Verbindung zwischen unserer Welt und dem Wesen dienen.",
+      "next": "elise_anchor_question"
+    },
+    "elise_anchor_question": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "worried",
+      "text": "Was passiert mit dem Anker? Überlebt man das?",
+      "next": "hilde_anchor_hesitate"
+    },
+    "hilde_anchor_hesitate": {
+      "type": "narration",
+      "text": "Hilde zögert. Zum ersten Mal in diesem Gespräch weicht sie meinem Blick aus.",
+      "next": "hilde_anchor_2"
+    },
+    "hilde_anchor_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "text": "Margarethe wollte es selbst tun. Aber sie wurde zu alt, zu schwach. Als Anker muss man stark sein - im Geist, nicht im Körper.",
+      "next": "elise_anchor_press"
+    },
+    "elise_anchor_press": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Hilde. Sie haben meine Frage nicht beantwortet. Überlebt man es?",
+      "next": "hilde_anchor_truth"
+    },
+    "hilde_anchor_truth": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Margarethe hatte nur Fragmente - keine Gewissheit. Niemand hat den Anker je bis zum Ende getragen und danach noch klar darüber gesprochen. Wir wissen nur: Es kann dich töten. Oder dich zurücklassen, aber nicht mehr ganz als du selbst.",
+      "next": "narration_anchor_weight"
+    },
+    "narration_anchor_weight": {
+      "type": "narration",
+      "text": "Keine Gewissheit. Das heißt: Ich kann sterben. Oder überleben und mich dabei verlieren, Stück für Stück, wie Konrad. Ein Körper, der bleibt - und ein Ich, das langsam verblasst.",
+      "next": "choice_anchor_reaction"
+    },
+    "choice_anchor_reaction": {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Wenn ich als Anker scheitere: Was löse ich damit aus?",
+          "set_flags": {
+            "asked_about_death": 1
+          },
+          "next": "hilde_death_answer"
+        },
+        {
+          "text": "Warum sollte ich ein Risiko tragen, das selbst Großmutter nicht mehr tragen konnte?",
+          "set_flags": {
+            "asked_about_margarethe_anchor": 1
+          },
+          "next": "hilde_margarethe_answer"
+        }
+      ]
+    },
+    "hilde_death_answer": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Wenn der Anker stirbt, reißt die Verbindung. Das Siegel bricht. Das Wesen erwacht - verwirrt, wütend, hungrig. Deshalb muss der Anker stark sein. Und deshalb muss es jemand tun, der jung genug ist.",
+      "next": "hilde_death_answer_2"
+    },
+    "hilde_death_answer_2": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Also muss ich nicht nur überleben - ich muss LANGE überleben. Dreißig Jahre. Wie Großmutter.",
+      "next": "hilde_anchor_expr"
+    },
+    "hilde_margarethe_answer": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Sie wollte es. Bis zum Schluss. Aber ihr Körper hat nicht mehr mitgemacht. Der Anker braucht Kraft - nicht körperliche, geistige. Und Margarethes Geist war müde. Dreißig Jahre wach, dreißig Jahre wachsam.",
+      "next": "hilde_margarethe_answer_2"
+    },
+    "hilde_margarethe_answer_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Sie hat auf dich gewartet. Nicht weil du stärker bist. Weil du frisch bist. Weil du noch die Kraft hast, die sie verloren hat.",
+      "next": "hilde_anchor_expr"
+    },
+    "hilde_anchor_expr": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_anchor_5"
+    },
+    "hilde_anchor_5": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Elise... Margarethe glaubte, dass du der Anker sein könntest. Dein Name im Buch - es ist kein Fluch. Es ist eine Verbindung. Du bist dem Wesen schon nah.",
+      "next": "elise_anchor_horror"
+    },
+    "elise_anchor_horror": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "afraid",
+      "text": "Das heißt, die Kreatur KENNT mich? Sie weiß, wer ich bin?",
+      "next": "fx_anchor_vignette"
+    },
+    "fx_anchor_vignette": {
+      "type": "effect",
+      "effect": "vignette",
+      "params": {
+        "intensity": 0.4,
+        "duration": 0.8
+      },
+      "next": "hilde_anchor_knows"
+    },
+    "hilde_anchor_knows": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Es kennt deinen Namen. Es hat ihn selbst geschrieben - in einer Schrift, die kein Mensch lesen sollte. Ja, Kind. Es kennt dich.",
+      "next": "narration_anchor_existential"
+    },
+    "narration_anchor_existential": {
+      "type": "narration",
+      "text": "Ein Schauer läuft mir über den Rücken. Etwas unter der Erde, älter als die Menschheit, kennt meinen Namen. Hat ihn geschrieben, bevor ich geboren wurde. Was BIN ich für dieses Wesen?",
+      "next": "set_knows_anchor"
+    },
+    "set_knows_anchor": {
+      "type": "set_flag",
+      "flag": "knows_anchor_role",
+      "value": 1,
+      "next": "check_anchor_question_callback"
+    },
+    "check_anchor_question_callback": {
+      "type": "flag_check",
+      "flag": "asked_about_death",
+      "value": 1,
+      "true_next": "anchor_callback_death",
+      "false_next": "check_anchor_legacy_callback"
+    },
+    "check_anchor_legacy_callback": {
+      "type": "flag_check",
+      "flag": "asked_about_margarethe_anchor",
+      "value": 1,
+      "true_next": "anchor_callback_legacy",
+      "false_next": "hilde_converge"
+    },
+    "anchor_callback_death": {
+      "type": "narration",
+      "text": "Die Rechnung ist brutal klar: Als Anker muss ich nicht nur mutig sein, sondern über Jahre stabil bleiben. Ein einziger Zusammenbruch kann alles zerreißen.",
+      "next": "hilde_converge"
+    },
+    "anchor_callback_legacy": {
+      "type": "narration",
+      "text": "Großmutter hat den Weg vorbereitet, bis ihre Kraft endete. Wenn ich weitergehe, trage ich ihr Werk - aber auch ihr Risiko.",
+      "next": "hilde_converge"
+    },
+    "hilde_converge": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "warning",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_warning_1"
+    },
+    "hilde_warning_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "text": "Aber höre mir gut zu, Kind. Es gibt jemanden, dem du nicht vertrauen darfst.",
+      "next": "elise_warning_guess"
+    },
+    "elise_warning_guess": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Otto Reinhardt. Der Bürgermeister.",
+      "next": "hilde_warning_surprised"
+    },
+    "hilde_warning_surprised": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Du bist schnell. Ja - Otto. Er ist der Hüter der alten Tradition. Er wird alles tun, um die Fütterung durchzusetzen. Und er hat Helfer.",
+      "next": "hilde_warning_effect"
+    },
+    "hilde_warning_effect": {
+      "type": "effect",
+      "effect": "flicker",
+      "params": {
+        "count": 3,
+        "interval": 0.15
+      },
+      "next": "hilde_warning_4"
+    },
+    "hilde_warning_4": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "angry",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_warning_5"
+    },
+    "hilde_warning_5": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Wenn er erfährt, was du vorhast - wenn er merkt, dass du Margarethes Arbeit fortsetzt - wird er handeln. Schnell und ohne Gewissen.",
+      "next": "elise_warning_react"
+    },
+    "elise_warning_react": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "determined",
+      "text": "Er hat meine Großmutter nicht aufhalten können. Mich wird er auch nicht aufhalten.",
+      "next": "hilde_warning_smile"
+    },
+    "hilde_warning_smile": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Du bist ihr ähnlicher, als du denkst.",
+      "next": "hilde_letter_1"
+    },
+    "hilde_letter_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Hilde... der Brief. Großmutters Brief. Wie konnte er mich in Berlin erreichen, wenn sie schon Tage tot war, als ich ankam?",
+      "next": "hilde_letter_2"
+    },
+    "hilde_letter_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Ah. Das war Margarethes letzter Zauber. Sie hat ihn vor Monaten geschrieben und mit einem Zeitbinder versehen - ein altes Ritual, das den Brief erst zustellt, wenn der Empfänger bereit ist.",
+      "next": "hilde_letter_3"
+    },
+    "hilde_letter_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "shocked",
+      "text": "Nicht wenn sie stirbt, sondern wenn ICH bereit bin? Das heißt, der Brief hat... auf mich gewartet?",
+      "next": "hilde_letter_4"
+    },
+    "hilde_letter_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Genau. Er hat auf den richtigen Moment gewartet. Den Moment, in dem du stark genug warst, nach Graubach zu kommen.",
+      "next": "hilde_creature_dual_1"
+    },
+    "hilde_creature_dual_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Und noch etwas, Kind. Über das Wesen. Die Alten haben die Fütterung erfunden - nicht die Kreatur. Sie haben ihre Einsamkeit als Hunger gedeutet und mit Blut geantwortet.",
+      "next": "hilde_creature_dual_2"
+    },
+    "hilde_creature_dual_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Vielleicht war das falsch. Vielleicht hätte ein Gespräch genügt.",
+      "next": "hilde_creature_dual_3"
+    },
+    "hilde_creature_dual_3": {
+      "type": "narration",
+      "text": "Hilde hält inne. In der Stille höre ich das ferne Singen - leiser als sonst, fast fragend.",
+      "next": "hilde_creature_dual_4"
+    },
+    "hilde_creature_dual_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Aber wer redet schon mit dem, was unter der Erde schläft?",
+      "next": "hilde_margarethe_death_1"
+    },
+    "hilde_margarethe_death_1": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Am Ende hat Margarethe es getan. Sie ist ein letztes Mal hinuntergegangen, in der Nacht vor ihrem Tod. Nicht zum Kämpfen. Zum Reden.",
+      "next": "hilde_margarethe_death_2"
+    },
+    "hilde_margarethe_death_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Sie ist zurückgekommen. Hat sich ins Bett gelegt, gelächelt und die Augen geschlossen. Sie ist im Schlaf gestorben, Kind. Friedlich. Es war ein Abschied, kein Opfer.",
+      "next": "hilde_margarethe_death_3"
+    },
+    "hilde_margarethe_death_3": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Aber Otto hat angedeutet, dass ihr Tod nicht natürlich war...",
+      "next": "hilde_margarethe_death_4"
+    },
+    "hilde_margarethe_death_4": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "angry",
+      "text": "Otto lügt. Das ist, was Otto tut. Er will dir Angst machen, damit du seine Fütterung akzeptierst. Glaub keinem Wort, das dieser Mann über Margarethe sagt.",
+      "next": "hilde_margarethe_1"
+    },
+    "hilde_margarethe_1": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "thinking",
+      "text": "Georg sagt, Großmutter hätte versagt. Dass ihr Ritual nicht funktioniert hat. Aber Sie klingen, als wüssten Sie etwas anderes.",
+      "next": "hilde_margarethe_2"
+    },
+    "hilde_margarethe_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "wise",
+      "text": "Georg glaubt, sie hätte versagt. Margarethe wollte es so. Sie hat ihm nur die Hälfte erzählt - zum Schutz.",
+      "next": "hilde_margarethe_3"
+    },
+    "hilde_margarethe_3": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "warning",
+      "text": "Wenn Otto wüsste, dass das Ritual vollständig ist, hätte er Georg längst... beseitigt.",
+      "next": "hilde_margarethe_4"
+    },
+    "hilde_margarethe_4": {
+      "type": "narration",
+      "text": "Hilde senkt die Stimme. Die Schatten in der Hütte scheinen dichter zu werden.",
+      "next": "hilde_margarethe_5"
+    },
+    "hilde_margarethe_5": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "mysterious",
+      "text": "Das vollständige Wissen liegt hier. Bei mir. Und jetzt bei dir.",
+      "next": "hilde_gift"
+    },
+    "hilde_gift": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "center",
+      "action": "show",
+      "next": "hilde_gift_1"
+    },
+    "hilde_gift_1": {
+      "type": "narration",
+      "text": "Hilde greift in ihre Schürze und drückt mir einen kleinen Beutel in die Hand. Darin sind getrocknete Kräuter und ein rundes Steinamulett mit einer eingeritzten Spirale.",
+      "next": "hilde_gift_2"
+    },
+    "hilde_gift_2": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Trag das bei dir. Es schützt nicht vor dem Wesen - nichts tut das. Aber es schützt vor seinen Träumen. Du wirst klarer denken können.",
+      "next": "elise_gift_react"
+    },
+    "elise_gift_react": {
+      "type": "dialogue",
+      "speaker": "elise",
+      "expression": "sad",
+      "text": "Danke, Hilde. Für alles. Dass Sie dreißig Jahre lang an Großmutters Seite waren.",
+      "next": "hilde_gift_personal"
+    },
+    "hilde_gift_personal": {
+      "type": "dialogue",
+      "speaker": "hilde",
+      "expression": "kind",
+      "text": "Margarethe war meine beste Freundin. Die einzige, die mich nie für verrückt gehalten hat. Und jetzt bist du hier, und ich bin nicht mehr allein damit.",
+      "next": "narration_gift_moment"
+    },
+    "narration_gift_moment": {
+      "type": "narration",
+      "text": "Ihre Augen glänzen. Dreißig Jahre hat sie dieses Geheimnis getragen, zusammen mit Großmutter. Und jetzt liegt die Last auf meinen Schultern.",
+      "next": "set_has_amulet"
+    },
+    "set_has_amulet": {
+      "type": "set_flag",
+      "flag": "has_amulet",
+      "value": 1,
+      "next": "journal_hilde"
+    },
+    "journal_hilde": {
+      "type": "journal",
+      "entry_id": "hilde_teaching",
+      "title": "Hildes Lehren",
+      "content": "Hilde lehrte mich die drei Komponenten des Bindungsrituals: 1) Den alten Gesang - älter als jede bekannte Sprache, beruhigt das Wesen. Ich habe es versucht und das Wesen reagierte. 2) Das Zeichen der Erde - ein Ort in der Kammer unter der Kirche, wo der Stein am dünnsten ist. 3) Der Anker - eine Person mit Verbindung zum Wesen. Ob man es überlebt, wusste nicht einmal Großmutter. Hilde warnte vor Otto Reinhardt.",
+      "next": "hide_hilde"
+    },
+    "hide_hilde": {
+      "type": "character",
+      "character": "hilde",
+      "expression": "kind",
+      "position": "center",
+      "action": "hide",
+      "next": "narration_evening"
+    },
+    "narration_evening": {
+      "type": "narration",
+      "text": "Als ich Hildes Hütte verlasse, fällt die Dämmerung ein. Der Wald ist näher als heute Morgen. Ich bin mir sicher.",
+      "next": "snd_forest_amb"
+    },
+    "snd_forest_amb": {
+      "type": "sound",
+      "sound_type": "ambience",
+      "path": "forest_night.wav",
+      "next": "effect_evening"
+    },
+    "effect_evening": {
+      "type": "effect",
+      "effect": "bg_corruption",
+      "params": {
+        "intensity": 0.2,
+        "duration": 2.0
+      },
+      "next": "narration_evening_2"
+    },
+    "narration_evening_2": {
+      "type": "narration",
+      "text": "Auf dem Rückweg höre ich Schritte hinter mir. Schwer, bedächtig. Ich drehe mich um - niemand da.",
+      "next": "elise_stalked"
+    },
+    "elise_stalked": {
+      "type": "narration",
+      "text": "Mein Herz hämmert. Zwischen den Bäumen hängt ein süßlicher Geruch, wie verwelkte Blumen. Die Schritte setzen wieder ein - näher diesmal.",
+      "next": "effect_stalked"
+    },
+    "effect_stalked": {
+      "type": "effect",
+      "effect": "flicker",
+      "params": {
+        "count": 4,
+        "interval": 0.12
+      },
+      "next": "narration_stalked_run"
+    },
+    "narration_stalked_run": {
+      "type": "narration",
+      "text": "Ich laufe. Die letzten Meter bis zur Straße renne ich. Erst im Licht der Laterne vor Großmutters Haus bleibe ich stehen, nach Atem ringend.",
+      "next": "narration_stalked_who"
+    },
+    "narration_stalked_who": {
+      "type": "narration",
+      "text": "Wer war das? Otto? Einer seiner Helfer? Oder etwas ganz anderes? Das Amulett in meiner Tasche fühlt sich warm an - als würde es arbeiten.",
+      "next": "snd_footsteps"
+    },
+    "snd_footsteps": {
+      "type": "sound",
+      "sound_type": "sfx",
+      "path": "footsteps_wood.wav",
+      "next": "scene_end"
+    },
+    "scene_end": {
+      "type": "scene_end",
+      "next_file": "res://data/dialogue/act2/the_book.json"
+    }
+  }
 }

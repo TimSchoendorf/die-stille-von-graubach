@@ -308,29 +308,32 @@
     "elise_journal_react_4": {
       "type": "narration",
       "text": "1923. Mein Name stand in dem Buch, bevor ich geboren wurde. Das Wesen kannte mich, bevor es mich gab. Es hat auf MICH gewartet.",
-      "next": "choice_journal_composure"
+      "next": "choice_investigation_stance"
     },
-    "choice_journal_composure": {
+    "choice_investigation_stance": {
       "type": "choice",
       "choices": [
         {
-          "text": "Das Journal hinlegen und mich sammeln",
-          "next": "journal_composure_grounded"
+          "text": "Erst ruhiger werden, dann Großmutters Kurs übernehmen",
+          "set_flags": {
+            "investigation_trusts_grandmother": 1
+          },
+          "next": "stance_grounded_trust"
         },
         {
-          "text": "Sofort weiterlesen, trotz Zittern",
-          "next": "journal_composure_forced"
+          "text": "Trotz Angst weitermachen und alles kritisch gegenprüfen",
+          "next": "stance_forced_verify"
         }
       ]
     },
-    "journal_composure_grounded": {
+    "stance_grounded_trust": {
       "type": "narration",
-      "text": "Ich lege das Heft auf den Tisch. Drei Atemzüge. Hände auf Holz, Blick auf die Kante der Tischplatte, bis die Linien wieder stillstehen. Dann nehme ich das Journal wieder auf.",
+      "text": "Ich zwinge meinen Atem in einen Rhythmus und entscheide mich: Ich gehe Großmutters Weg weiter. Mit klarem Kopf.",
       "next": "read_journal_7"
     },
-    "journal_composure_forced": {
+    "stance_forced_verify": {
       "type": "narration",
-      "text": "Ich blättere weiter, bevor der Mut mich verlässt. Die Seiten rascheln unter meinen zitternden Fingern, die Worte springen - aber ich zwinge mich, jede Zeile zu lesen.",
+      "text": "Ich dränge die Panik beiseite und lese weiter. Wenn ich überleben will, muss ich alles verstehen - und jede Annahme testen.",
       "next": "read_journal_7"
     },
     "read_journal_7": {
@@ -376,29 +379,23 @@
     "elise_plan_3": {
       "type": "narration",
       "text": "Kann das funktionieren? Oder war Großmutter genauso verzweifelt wie ich und hat sich an jeden Strohhalm geklammert?",
-      "next": "choice_plan_attitude"
+      "next": "check_stance_grounded"
     },
-    "choice_plan_attitude": {
-      "type": "choice",
-      "choices": [
-        {
-          "text": "Ihr vertrauen - sie hatte dreißig Jahre Vorsprung",
-          "next": "narration_plan_trust"
-        },
-        {
-          "text": "Skeptisch bleiben - aber handeln",
-          "next": "narration_plan_pragmatic"
-        }
-      ]
+    "check_stance_grounded": {
+      "type": "flag_check",
+      "flag": "investigation_trusts_grandmother",
+      "value": 1,
+      "true_next": "narration_plan_trust",
+      "false_next": "narration_plan_pragmatic"
     },
     "narration_plan_trust": {
       "type": "narration",
-      "text": "Es ist der einzige Plan, den ich habe - und er ist ihrer. Großmutter hat dreißig Jahre Schlaf, Blut und Freunde dafür bezahlt. Wenn ich ihn fallenlasse, war ihr Opfer nur ein weiteres Grab.",
+      "text": "Ich entscheide mich, Großmutters Spur zu folgen. Nicht blind - aber mit Vertrauen in dreißig Jahre Arbeit. Wenn ich jetzt zögere, war all ihr Opfer nur Aufschub.",
       "next": "choice_next_step"
     },
     "narration_plan_pragmatic": {
       "type": "narration",
-      "text": "Vielleicht ist der Plan lückenhaft. Vielleicht war er nur ihre beste Wette. Aber Nichtstun ist sicherer Tod. Ich arbeite mit dem, was ich habe - und teste jeden Schritt.",
+      "text": "Ich halte mich an den Plan, aber ich prüfe jeden Schritt wie eine Feldstudie. Kein Aberglaube, keine Panik - nur Entscheidungen, die ich begründen kann.",
       "next": "choice_next_step"
     },
     "choice_next_step": {
