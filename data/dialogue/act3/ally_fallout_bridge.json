@@ -384,6 +384,11 @@
     "bridge_rehearsal_skip": {
       "type": "narration",
       "text": "Wir sparen uns die Probe. Niemand widerspricht laut, aber in den Pausen zwischen unseren Sätzen bleibt ein Rest Unsicherheit hängen, den ich erst unten wieder treffen werde.",
+      "next": "bridge_rehearsal_skip_cost"
+    },
+    "bridge_rehearsal_skip_cost": {
+      "type": "narration",
+      "text": "Als wir uns lösen, verwechsle ich für einen Herzschlag den abgesprochenen Takt und korrigiere erst auf Hilde Blick. Kein Drama - nur ein kurzer Fehler zur falschen Zeit. Genau dafür wäre die Probe da gewesen.",
       "next": "bridge_end"
     },
     "bridge_end": {
