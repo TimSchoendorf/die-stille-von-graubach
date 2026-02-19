@@ -409,13 +409,41 @@
       "flag": "questioned_voss",
       "value": 1,
       "true_next": "questioned_voss_memory",
-      "false_next": "elise_voss_visit_1"
+      "false_next": "check_voss_stance_callback"
     },
     "questioned_voss_memory": {
       "type": "dialogue",
       "speaker": "voss",
       "expression": "worried",
       "text": "Und Sie haben die richtigen Fragen gestellt. Nicht höflich, aber ehrlich. Ich schulde Ihnen Antworten, keine Ausflüchte.",
+      "next": "check_voss_stance_callback"
+    },
+    "check_voss_stance_callback": {
+      "type": "flag_check",
+      "flag": "defied_voss",
+      "value": 1,
+      "true_next": "voss_stance_callback_defied",
+      "false_next": "check_voss_stance_questioned_only"
+    },
+    "check_voss_stance_questioned_only": {
+      "type": "flag_check",
+      "flag": "questioned_voss",
+      "value": 1,
+      "true_next": "voss_stance_callback_questioned",
+      "false_next": "elise_voss_visit_1"
+    },
+    "voss_stance_callback_defied": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "warning",
+      "text": "Darum ein Vorschlag für morgen: Wenn ich in der Kammer zögere, geben Sie den Befehl - kurz, klar. Ich folge. Ihr Widerspruch auf dem Platz war kein Trotz. Es war Führung.",
+      "next": "elise_voss_visit_1"
+    },
+    "voss_stance_callback_questioned": {
+      "type": "dialogue",
+      "speaker": "voss",
+      "expression": "worried",
+      "text": "Und weil Sie mich damals nicht vom Reden davongekommen ließen, bekommen Sie jetzt etwas Konkretes: In der Kammer antworte ich auf jede Frage in einem Satz - kein Ausweichen mehr, auch wenn es weh tut.",
       "next": "elise_voss_visit_1"
     },
     "elise_voss_visit_1": {
