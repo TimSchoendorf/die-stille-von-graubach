@@ -652,6 +652,12 @@
     "packed_books_creature": {
       "type": "narration",
       "text": "DU TRÄGST WORTE. WORTE HABEN MACHT.",
+      "next": "set_packed_books_context_lock"
+    },
+    "set_packed_books_context_lock": {
+      "type": "set_flag",
+      "flag": "ritual_pack_books_context_lock",
+      "value": 1,
       "next": "effect_ritual_contact"
     },
     "check_packed_cross": {
@@ -664,6 +670,12 @@
     "packed_cross_narration": {
       "type": "narration",
       "text": "Das Kreuz meiner Mutter pulsiert in meiner Hand - nicht göttlich, aber... menschlich. Warm. Es schützt mich einen Moment lang vor der Überwältigung, als das Bewusstsein des Wesens über mich hinwegrollt.",
+      "next": "set_packed_cross_protection"
+    },
+    "set_packed_cross_protection": {
+      "type": "set_flag",
+      "flag": "ritual_pack_cross_protection",
+      "value": 1,
       "next": "effect_ritual_contact"
     },
     "check_packed_camera": {
@@ -676,6 +688,12 @@
     "packed_camera_narration": {
       "type": "narration",
       "text": "Durch das Objektiv der Kamera sehe ich es. Die Verbindung. Spiralen in der Luft, Lichtfäden zwischen den Steinen. Sichtbar, greifbar. Die Kamera zeigt, was das bloße Auge nicht fassen kann.",
+      "next": "set_packed_camera_hint"
+    },
+    "set_packed_camera_hint": {
+      "type": "set_flag",
+      "flag": "ritual_pack_camera_hint",
+      "value": 1,
       "next": "effect_ritual_contact"
     },
     "effect_ritual_contact": {
@@ -1365,12 +1383,36 @@
       "type": "flag_check",
       "flag": "ritual_signal_unsteady",
       "value": 1,
-      "true_next": "ritual_signal_unsteady_choice",
-      "false_next": "choice_sacrifice_override"
+      "true_next": "check_packed_books_context_lock_choice",
+      "false_next": "check_packed_camera_hint_choice"
+    },
+    "check_packed_books_context_lock_choice": {
+      "type": "flag_check",
+      "flag": "ritual_pack_books_context_lock",
+      "value": 1,
+      "true_next": "ritual_signal_books_context_lock_choice",
+      "false_next": "ritual_signal_unsteady_choice"
+    },
+    "ritual_signal_books_context_lock_choice": {
+      "type": "narration",
+      "text": "Ich reiße den Blick auf die markierte Passage in meinen Notizen: drei klare Schritte, kein Gedanke dazwischen. Der Lärm bleibt, aber er bekommt Klammern. Genug, um nicht im Geräusch zu versinken.",
+      "next": "check_packed_camera_hint_choice"
     },
     "ritual_signal_unsteady_choice": {
       "type": "narration",
       "text": "Mir fehlt der eintrainierte Takt. Die Kammer schreit, Konrad schwankt, und ich muss den Ablauf im Kopf zusammensetzen, während die Zeit davonläuft. Jede Option fühlt sich riskanter an.",
+      "next": "check_packed_camera_hint_choice"
+    },
+    "check_packed_camera_hint_choice": {
+      "type": "flag_check",
+      "flag": "ritual_pack_camera_hint",
+      "value": 1,
+      "true_next": "packed_camera_hint_choice",
+      "false_next": "choice_sacrifice_override"
+    },
+    "packed_camera_hint_choice": {
+      "type": "narration",
+      "text": "Im Sucher liegt ein kurzes Flackern über der leeren Zeile im Buch, genau dann, wenn Konrads Blick kippt. Das Timing ist der Hebel: erst halten, dann entscheiden. Nicht umgekehrt.",
       "next": "choice_sacrifice_override"
     },
     "choice_sacrifice_override": {
@@ -1675,7 +1717,19 @@
       "value": 15,
       "compare": "gte",
       "true_next": "courage_escape",
+      "false_next": "check_packed_cross_protection_escape"
+    },
+    "check_packed_cross_protection_escape": {
+      "type": "flag_check",
+      "flag": "ritual_pack_cross_protection",
+      "value": 1,
+      "true_next": "packed_cross_escape_protection",
       "false_next": "route_awakening"
+    },
+    "packed_cross_escape_protection": {
+      "type": "narration",
+      "text": "Meine Knie geben fast nach - bis sich das Kreuz in meine Handkante drückt, klein und hart und real. Kein Wunder, nur ein Halt. Gerade genug, um nicht stehenzubleiben. Ich finde den Tritt zur Treppe und reiße mich aus der Kammer.",
+      "next": "route_escape"
     },
     "courage_escape": {
       "type": "narration",
