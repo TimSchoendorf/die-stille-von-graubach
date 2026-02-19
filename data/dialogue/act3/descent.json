@@ -197,19 +197,19 @@
     "solo_chalk_route_descent_payoff": {
       "type": "narration",
       "text": "An den unteren Pfeilern blitzen meine eigenen Kreidepunkte auf. Keine Heldengeste, nur Navigation: Distanz zum Treppenansatz, Winkel zum Kreis, Rückweg falls der Boden kippt. Allein heißt heute: vorbereitet.",
-      "next": "check_ally_present"
+      "next": "check_rehearsed_signal_night6"
     },
     "check_solo_breath_descent": {
       "type": "flag_check",
       "flag": "solo_breath_protocol_prepared",
       "value": 1,
       "true_next": "solo_breath_descent_payoff",
-      "false_next": "check_ally_present"
+      "false_next": "check_rehearsed_signal_night6"
     },
     "solo_breath_descent_payoff": {
       "type": "narration",
       "text": "Das Dröhnen will meinen Puls übernehmen. Ich zwinge den alten Takt zurück: vier ein, vier halten, vier aus. Mit jedem Zyklus wird die Kammer nicht leiser - aber ich werde wieder steuerbar.",
-      "next": "check_ally_present"
+      "next": "check_rehearsed_signal_night6"
     },
     "check_rehearsed_signal_night6": {
       "type": "flag_check",

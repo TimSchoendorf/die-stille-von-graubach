@@ -2033,7 +2033,7 @@
       "type": "flag_check",
       "flag": "has_key",
       "value": 1,
-      "true_next": "narration_3",
+      "true_next": "effect_breathing",
       "false_next": "narration_3_no_key"
     },
     "narration_3_no_key": {
