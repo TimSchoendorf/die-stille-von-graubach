@@ -885,47 +885,107 @@
 		},
 		"route_next_location": {
 			"type": "narration",
-			"text": "Noch ist der Tag lang. Ich sollte mich weiter umsehen.",
-			"next": "check_visited_church"
+			"text": "Der Tag rennt mir davon. Wenn ich mich verzettele, tappe ich bei Einbruch der Dunkelheit blind durch Graubach. Ich kann heute nur noch einer Spur wirklich folgen.",
+			"next": "check_two_visited_church"
 		},
-		"check_visited_church": {
+		"check_two_visited_church": {
 			"type": "flag_check",
 			"flag": "explored_church",
 			"value": 1,
-			"true_next": "check_visited_hilde",
-			"false_next": "auto_set_church"
+			"true_next": "check_two_church_hilde",
+			"false_next": "check_two_no_church_hilde"
 		},
-		"auto_set_church": {
-			"type": "set_flag",
-			"flag": "explored_church",
-			"value": 1,
-			"next": "church_path"
-		},
-		"check_visited_hilde": {
+		"check_two_church_hilde": {
 			"type": "flag_check",
 			"flag": "explored_hilde",
 			"value": 1,
-			"true_next": "check_visited_school",
-			"false_next": "auto_set_hilde"
+			"true_next": "explore_converge",
+			"false_next": "check_two_church_school"
 		},
-		"auto_set_hilde": {
-			"type": "set_flag",
-			"flag": "explored_hilde",
-			"value": 1,
-			"next": "hilde_path"
-		},
-		"check_visited_school": {
+		"check_two_church_school": {
 			"type": "flag_check",
 			"flag": "explored_school",
 			"value": 1,
 			"true_next": "explore_converge",
-			"false_next": "auto_set_school"
+			"false_next": "choice_second_after_church"
 		},
-		"auto_set_school": {
-			"type": "set_flag",
+		"check_two_no_church_hilde": {
+			"type": "flag_check",
+			"flag": "explored_hilde",
+			"value": 1,
+			"true_next": "check_two_hilde_school",
+			"false_next": "check_two_only_school"
+		},
+		"check_two_hilde_school": {
+			"type": "flag_check",
 			"flag": "explored_school",
 			"value": 1,
-			"next": "school_path"
+			"true_next": "explore_converge",
+			"false_next": "choice_second_after_hilde"
+		},
+		"check_two_only_school": {
+			"type": "flag_check",
+			"flag": "explored_school",
+			"value": 1,
+			"true_next": "choice_second_after_school",
+			"false_next": "choice_explore"
+		},
+		"choice_second_after_church": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Zur Kräuterfrau gehen (Schutz und Großmutters alte Verbündete)",
+					"set_flags": {
+						"explored_hilde": 1
+					},
+					"next": "hilde_path"
+				},
+				{
+					"text": "Zum Schulhaus gehen (Konrad und die Spur der Nacht)",
+					"set_flags": {
+						"explored_school": 1
+					},
+					"next": "school_path"
+				}
+			]
+		},
+		"choice_second_after_hilde": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Zur Kirche gehen (Voss, Anna und das Geheimnis unter dem Altar)",
+					"set_flags": {
+						"explored_church": 1
+					},
+					"next": "church_path"
+				},
+				{
+					"text": "Zum Schulhaus gehen (Konrad und die Spur der Nacht)",
+					"set_flags": {
+						"explored_school": 1
+					},
+					"next": "school_path"
+				}
+			]
+		},
+		"choice_second_after_school": {
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Zur Kirche gehen (Voss, Anna und das Geheimnis unter dem Altar)",
+					"set_flags": {
+						"explored_church": 1
+					},
+					"next": "church_path"
+				},
+				{
+					"text": "Die Kräuterfrau besuchen (Schutz und Großmutters alte Verbündete)",
+					"set_flags": {
+						"explored_hilde": 1
+					},
+					"next": "hilde_path"
+				}
+			]
 		},
 		"explore_converge": {
 			"type": "effect",
@@ -947,7 +1007,7 @@
 		},
 		"narration_puzzle": {
 			"type": "narration",
-			"text": "Voss spricht vom 'Anderen' unter der Kirche. Anna sieht Spiralen um mich herum. Konrad HAT Spiralen auf der Hand. Und Hilde kennt die alten Wege. Alle reden in Andeutungen. Niemand sagt die ganze Wahrheit.",
+			"text": "Zwei Wege, zwei halbe Wahrheiten. Egal, wem ich zuhöre: Immer wieder dieselben Zeichen - Spiralen, Flüstern, Andeutungen über etwas unter der Kirche. Was mir noch fehlt, muss ich mir heute Abend bei Georg holen.",
 			"next": "converge_1"
 		},
 		"converge_1": {
