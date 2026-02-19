@@ -569,12 +569,12 @@
     },
     "narration_11": {
       "type": "narration",
-      "text": "Ich gehe. Durch den Wald, in die Nacht, zurück in eine Welt, die nichts von Graubach weiß. Eine Welt ohne Zeugen, weil wir unsere Regeln zu spät aus dem Flüstern ins Offene geholt haben.",
+      "text": "Ich gehe. Durch den Wald, in die Nacht, zurück in eine Welt, die nichts von Graubach weiß. Jeder Schritt tut weh, weil hinter mir mehr als ein Ort verschwunden ist. Erst danach trifft mich der nüchterne Satz: Es war eine Welt ohne Zeugen, weil wir unsere Regeln zu spät aus dem Flüstern ins Offene geholt haben.",
       "next": "narration_12"
     },
     "narration_12": {
       "type": "narration",
-      "text": "In meiner Tasche liegt Großmutters Journal. Der einzige Beweis, dass es real war. Ich kopiere jede Seite dreifach, hinterlege sie an getrennten Orten und schreibe dazu, was wir zu spät verstanden haben: Kein Ritual ohne klare Übergabe, kein Kontakt ohne Stopp-Regel, kein Plan ohne Zeugen.",
+      "text": "In meiner Tasche liegt Großmutters Journal. Der einzige Beweis, dass es real war. Ich drücke es an mich, bis das Zittern in meinen Händen nachlässt. Dann beginne ich mit dem, was bleibt: Ich kopiere jede Seite dreifach, hinterlege sie an getrennten Orten und schreibe dazu, was wir zu spät verstanden haben: Kein Ritual ohne klare Übergabe, kein Kontakt ohne Stopp-Regel, kein Plan ohne Zeugen.",
       "next": "check_epilog_georg"
     },
     "check_epilog_georg": {

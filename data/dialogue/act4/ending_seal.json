@@ -139,7 +139,7 @@
     },
     "narration_9": {
       "type": "narration",
-      "text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Genug Zeit, um Wissen offen weiterzugeben, mit klaren Regeln: freiwilliger Kontakt statt Zwang, widerrufbar mit einem Wort, dokumentiert mit Zeugen statt als Geheimwissen - und ein Übergangs-Siegel, falls niemand bereit ist.",
+      "text": "Das Siegel ist gesetzt. Nicht für immer - nichts ist für immer. Aber für dreißig Jahre. Ich lasse den Atem erst einmal ganz aus mir heraus, bevor ich an den Rest denke. Dann wird klar, was diese Frist jetzt von uns verlangt: Wissen offen weitergeben, mit klaren Regeln - freiwilliger Kontakt statt Zwang, widerrufbar mit einem Wort, dokumentiert mit Zeugen statt als Geheimwissen - und ein Übergangs-Siegel, falls niemand bereit ist.",
       "next": "narration_10"
     },
     "narration_10": {
@@ -354,7 +354,7 @@
     },
     "narration_12": {
       "type": "narration",
-      "text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. Nicht in dreißig Jahren. Vorher. Viel vorher - mit Protokollen, Verbündeten und einem Plan, der niemanden heimlich zum nächsten Anker macht.",
+      "text": "Ich werde nach Berlin zurückkehren. Mein Studium beenden. Aber ich werde wiederkommen. Nicht in dreißig Jahren. Vorher. Viel vorher. Erst weil ich dieses Versprechen fühle, kann ich es in Arbeit übersetzen: mit Protokollen, Verbündeten und einem Plan, der niemanden heimlich zum nächsten Anker macht.",
       "next": "narration_12b"
     },
     "narration_12b": {

@@ -657,7 +657,7 @@
     },
     "narration_truth_protocol": {
       "type": "narration",
-      "text": "Ich atme aus und setze Grenzen, bevor die Stille uns wieder verschluckt: Kein Zugriff auf ungefragte Gedanken. Kein Griff nach einem einzelnen Gefäß. Kontakt nur freiwillig, widerrufbar, mit klarer Übergabe. Die Regeln bleiben nicht zwischen uns im Dunkeln: Wir halten sie mit Zeugen fest, damit aus Mut kein Stolz wird. Und wenn niemand bereit ist, bleibt das Übergangs-Siegel aktiv.",
+      "text": "Ich atme aus. Das 'Danke' hängt noch zwischen uns wie ein warmer Nachhall, und einen Moment lang lasse ich genau das gelten. Dann setze ich Grenzen, bevor die Stille uns wieder verschluckt: Kein Zugriff auf ungefragte Gedanken. Kein Griff nach einem einzelnen Gefäß. Kontakt nur freiwillig, widerrufbar, mit klarer Übergabe. Die Regeln bleiben nicht zwischen uns im Dunkeln: Wir halten sie mit Zeugen fest, damit aus Mut kein Stolz wird. Und wenn niemand bereit ist, bleibt das Übergangs-Siegel aktiv.",
       "next": "narration_anchor_truth"
     },
     "check_sought_konrad_truth_memory": {
