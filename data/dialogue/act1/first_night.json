@@ -368,7 +368,8 @@
 				{
 					"text": "Nicht öffnen. Georg hat es gesagt.",
 					"set_flags": {
-						"opened_door": 0
+						"opened_door": 0,
+						"fortified_door_night1": 1
 					},
 					"next": "dont_open"
 				},
@@ -555,7 +556,7 @@
 		"dont_open": {
 			"type": "narration",
 			"text": "Nein. Georg hat es gesagt. Ich presse die Hand auf den Mund, um keinen Laut von mir zu geben.",
-			"next": "elise_thinks_closed"
+			"next": "dont_open_tactical_1"
 		},
 		"elise_thinks_closed": {
 			"type": "narration",
@@ -593,7 +594,7 @@
 		"dont_open_5": {
 			"type": "narration",
 			"text": "Durch den Spalt unter der Tür sehe ich einen Schatten. Er steht dort, geduldig, wartend. Minuten vergehen. Oder Stunden.",
-			"next": "dont_open_6"
+			"next": "dont_open_5b"
 		},
 		"dont_open_6": {
 			"type": "narration",
@@ -613,7 +614,7 @@
 		"converge_night_2": {
 			"type": "narration",
 			"text": "Irgendwann wird der Himmel draußen grau. Fahles Novemberlicht sickert durch die Ritzen der Fensterläden. Die Nacht ist vorbei.",
-			"next": "snd_stop_underground"
+			"next": "flag_check_fortified_door"
 		},
 		"snd_stop_underground": {
 			"type": "sound",
@@ -713,7 +714,9 @@
 				{
 					"text": "Trotzdem nicht öffnen",
 					"set_flags": {
-						"opened_door": 0
+						"opened_door": 0,
+						"questioned_door_visitor": 1,
+						"fortified_door_night1": 1
 					},
 					"next": "dont_open"
 				}
@@ -729,6 +732,44 @@
 			"type": "narration",
 			"text": "Ich schiebe den Riegel zurück. Die Tür geht auf. Kalte Nachtluft schlägt mir entgegen.",
 			"next": "elise_through_door_1"
+		},
+		"dont_open_tactical_1": {
+			"type": "narration",
+			"text": "Ich taste im Dunkeln nach dem Besenstiel hinter der Küchentür und verkeile ihn unter der Klinke. Dann schiebe ich den schweren Stuhl davor. Wenn ich schon nicht kämpfen kann, dann gewinne ich wenigstens Sekunden.",
+			"next": "dont_open_tactical_2"
+		},
+		"dont_open_tactical_2": {
+			"type": "narration",
+			"text": "Aus der Mehldose streue ich eine schmale Linie direkt hinter den Türspalt. Kindisch vielleicht. Aber falls jemand reinkommt, sehe ich Spuren. Ich zwinge meine Hände still zu bleiben, wie Großmutter es beim Nähen getan hat: einatmen auf vier, ausatmen auf sechs.",
+			"next": "elise_thinks_closed"
+		},
+		"dont_open_5b": {
+			"type": "narration",
+			"text": "Irgendwann knirscht es leise vor der Tür. Nicht wie ein Schritt auf Holz - eher wie Finger, die durch Mehl fahren. Ein langsames Halbkreisgeräusch, dann Stille.",
+			"next": "dont_open_5c"
+		},
+		"dont_open_5c": {
+			"type": "narration",
+			"text": "Ich starre auf die helle Linie am Boden, bis mir die Augen brennen. Erst als draußen wieder Schritte einsetzen, wage ich zu blinzeln.",
+			"next": "dont_open_6"
+		},
+		"flag_check_fortified_door": {
+			"type": "flag_check",
+			"flag": "fortified_door_night1",
+			"value": 1,
+			"true_next": "fortified_door_morning",
+			"false_next": "snd_stop_underground"
+		},
+		"fortified_door_morning": {
+			"type": "narration",
+			"text": "Als ich an der Tür den Stuhl wegziehe, liegt die Mehlspur nicht mehr gerade. Jemand hat in der Nacht eine Spirale hineingezogen - sauber, fast sorgfältig, genau auf der Schwelle. Von außen.",
+			"next": "set_flag_spiral_trace"
+		},
+		"set_flag_spiral_trace": {
+			"type": "set_flag",
+			"flag": "found_spiral_trace_night1",
+			"value": 1,
+			"next": "snd_stop_underground"
 		}
 	}
 }

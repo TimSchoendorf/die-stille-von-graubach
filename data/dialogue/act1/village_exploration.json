@@ -782,7 +782,7 @@
 			"speaker": "konrad",
 			"expression": "charming",
 			"text": "Als ich Licht in Margarethes Haus sah, wollte ich mich vergewissern, dass alles in Ordnung ist. Ihr Haus steht seit drei Tagen leer. Man wird... aufmerksam.",
-			"next": "konrad_day_7"
+			"next": "flag_check_spiral_trace"
 		},
 		"konrad_day_7": {
 			"type": "dialogue",
@@ -1314,6 +1314,25 @@
 		"scene_end": {
 			"type": "scene_end",
 			"next_file": "res://data/dialogue/act1/smithy_evening.json"
+		},
+		"flag_check_spiral_trace": {
+			"type": "flag_check",
+			"flag": "found_spiral_trace_night1",
+			"value": 1,
+			"true_next": "konrad_day_trace_1",
+			"false_next": "konrad_day_7"
+		},
+		"konrad_day_trace_1": {
+			"type": "dialogue",
+			"speaker": "konrad",
+			"expression": "charming",
+			"text": "Sie sehen aus, als hätten Sie kaum geschlafen. Manche Gäste verbarrikadieren in der ersten Nacht sogar die Tür. Graubach kann solche Reflexe wecken.",
+			"next": "elise_day_trace_2"
+		},
+		"elise_day_trace_2": {
+			"type": "narration",
+			"text": "Mein Nacken wird kalt. Von der Mehlspur habe ich niemandem erzählt. Trotzdem legt er das Wort \"verbarrikadieren\" auf die Zunge, als hätte er zugesehen.",
+			"next": "konrad_day_7"
 		}
 	}
 }
