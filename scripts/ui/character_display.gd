@@ -12,13 +12,58 @@ var _positions: Dictionary = {
 var _active_characters: Dictionary = {}
 var _texture_cache: Dictionary = {}  # path → Texture2D
 
-const SPRITE_WIDTH := 600
-const SPRITE_HEIGHT := 900
+var _sprite_width: float = 600.0
+var _sprite_height: float = 900.0
+
+# v2 files currently known to have missing alpha/channel issues -> force legacy fallback
+const _V2_FALLBACK_TO_LEGACY := {
+	"anna:afraid": true,
+	"elise:worried": true,
+	"georg:afraid": true,
+	"georg:angry": true,
+	"georg:determined": true,
+	"hilde:mysterious": true,
+	"konrad:possessed": true,
+	"konrad:sad": true,
+	"konrad:smiling": true,
+	"voss:warning": true,
+}
+
 const MAX_CACHE_SIZE := 30
 
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_recompute_layout()
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_RESIZED:
+		_recompute_layout()
+		for char_id in _active_characters.keys():
+			var entry: Dictionary = _active_characters[char_id]
+			var sprite: TextureRect = entry["sprite"]
+			sprite.custom_minimum_size = Vector2(_sprite_width, _sprite_height)
+			sprite.size = Vector2(_sprite_width, _sprite_height)
+			var target_pos: Vector2 = _positions.get(entry["position"], _positions["center"])
+			sprite.position = target_pos - Vector2(_sprite_width / 2.0, 0)
+
+
+func _recompute_layout() -> void:
+	var vp_size: Vector2 = get_viewport_rect().size
+	if vp_size.x <= 0 or vp_size.y <= 0:
+		vp_size = Vector2(1920, 1080)
+
+	# Responsive sizing keeps sprites fully in frame on smaller windows
+	_sprite_width = clamp(vp_size.x * 0.31, 420.0, 600.0)
+	_sprite_height = clamp(vp_size.y * 0.83, 620.0, 900.0)
+	var top_y := max(0.0, vp_size.y - _sprite_height)
+
+	_positions = {
+		"left": Vector2(vp_size.x * 0.18, top_y),
+		"center": Vector2(vp_size.x * 0.50, top_y),
+		"right": Vector2(vp_size.x * 0.82, top_y),
+	}
 
 
 func _load_cached(path: String) -> Texture2D:
@@ -34,9 +79,10 @@ func _load_cached(path: String) -> Texture2D:
 
 
 func _resolve_sprite_path(char_id: String, expression: String) -> String:
-	# Prefer v2 sprites when available, fallback to legacy assets
+	# Prefer v2 sprites when available, unless explicitly blacklisted for alpha quality issues
+	var quality_key := "%s:%s" % [char_id, expression]
 	var v2_path := "res://assets/sprites/characters/%s/%s_v2.png" % [char_id, expression]
-	if ResourceLoader.exists(v2_path):
+	if not _V2_FALLBACK_TO_LEGACY.has(quality_key) and ResourceLoader.exists(v2_path):
 		return v2_path
 
 	var path := "res://assets/sprites/characters/%s/%s.png" % [char_id, expression]
@@ -82,14 +128,14 @@ func show_character(char_id: String, expression: String, pos: String) -> void:
 		sprite.texture = _load_cached(sprite_path)
 	else:
 		# Placeholder: semi-transparent silhouette
-		sprite.custom_minimum_size = Vector2(SPRITE_WIDTH, SPRITE_HEIGHT)
+		sprite.custom_minimum_size = Vector2(_sprite_width, _sprite_height)
 
 	sprite.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	sprite.custom_minimum_size = Vector2(SPRITE_WIDTH, SPRITE_HEIGHT)
-	sprite.size = Vector2(SPRITE_WIDTH, SPRITE_HEIGHT)
+	sprite.custom_minimum_size = Vector2(_sprite_width, _sprite_height)
+	sprite.size = Vector2(_sprite_width, _sprite_height)
 
 	var target_pos: Vector2 = _positions.get(pos, _positions["center"])
-	sprite.position = target_pos - Vector2(SPRITE_WIDTH / 2.0, 0)
+	sprite.position = target_pos - Vector2(_sprite_width / 2.0, 0)
 
 	# Fade in
 	sprite.modulate.a = 0.0
@@ -127,7 +173,7 @@ func _move_character(char_id: String, new_pos: String) -> void:
 	var entry: Dictionary = _active_characters[char_id]
 	var sprite: TextureRect = entry["sprite"]
 	var target: Vector2 = _positions.get(new_pos, _positions["center"])
-	target -= Vector2(SPRITE_WIDTH / 2.0, 0)
+	target -= Vector2(_sprite_width / 2.0, 0)
 
 	var tween := create_tween()
 	tween.tween_property(sprite, "position", target, 0.4).set_ease(Tween.EASE_IN_OUT)
